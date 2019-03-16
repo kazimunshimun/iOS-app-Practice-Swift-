@@ -24,13 +24,6 @@ class WelcomeViewController: UIViewController {
         //timer.invalidate()
         
         //changeViewTimer.fire()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-        super.viewWillAppear(animated)
-        //timer = Timer(timeInterval: 5, target: self, selector: #selector(changeView), userInfo: nil, repeats: true)
-        
         Timer.scheduledTimer(timeInterval: 10,
                              target: self,
                              selector: #selector(self.changeView),
@@ -38,9 +31,18 @@ class WelcomeViewController: UIViewController {
                              repeats: true)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+        //timer = Timer(timeInterval: 5, target: self, selector: #selector(changeView), userInfo: nil, repeats: true)
+        
+        
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         super.viewWillDisappear(animated)
+        
     } 
     
     @objc func changeView() {
@@ -51,7 +53,8 @@ class WelcomeViewController: UIViewController {
             descriptionLabel.textColor = UIColor.white
         } else {
             isShowingBackground = true
-            backgroundImageView.image = UIImage.from(color: UIColor.white)
+            //backgroundImageView.image = UIImage.from(color: UIColor.white)
+            backgroundImageView.image = UIImage(named: "Splash_1")
             circleImageView.image = UIImage(named: "eclipse")
             descriptionLabel.textColor = UIColor.lightGray
         }

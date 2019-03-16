@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843EC949223CC82200AD2CA5 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */; };
+		843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */; };
+		843EC94D223CE80900AD2CA5 /* HideShowPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */; };
+		843EC94F223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */; };
 		84DBBA15223BECFD00B5C9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBBA14223BECFD00B5C9FF /* AppDelegate.swift */; };
 		84DBBA17223BECFD00B5C9FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBBA16223BECFD00B5C9FF /* ViewController.swift */; };
 		84DBBA1A223BECFD00B5C9FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DBBA18223BECFD00B5C9FF /* Main.storyboard */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
+		843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLineTextField.swift; sourceTree = "<group>"; };
+		843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideShowPasswordTextField.swift; sourceTree = "<group>"; };
+		843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordToggleVisibilityView.swift; sourceTree = "<group>"; };
 		84DBBA11223BECFD00B5C9FF /* Backpack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Backpack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DBBA14223BECFD00B5C9FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DBBA16223BECFD00B5C9FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +99,9 @@
 			children = (
 				84DBBA18223BECFD00B5C9FF /* Main.storyboard */,
 				84DBBA1D223BECFF00B5C9FF /* LaunchScreen.storyboard */,
+				843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */,
+				843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */,
+				843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,6 +118,7 @@
 			children = (
 				84DBBA2A223BF71300B5C9FF /* Poppins-ExtraBold.otf */,
 				84DBBA2C223BF8A800B5C9FF /* Poppins-Regular.otf */,
+				843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */,
 				84DBBA2E223BFA2A00B5C9FF /* Poppins-Bold.otf */,
 				84DBBA1B223BECFF00B5C9FF /* Assets.xcassets */,
 				84DBBA20223BECFF00B5C9FF /* Info.plist */,
@@ -175,6 +187,7 @@
 				84DBBA2F223BFA2A00B5C9FF /* Poppins-Bold.otf in Resources */,
 				84DBBA2B223BF73C00B5C9FF /* Poppins-ExtraBold.otf in Resources */,
 				84DBBA1F223BECFF00B5C9FF /* LaunchScreen.storyboard in Resources */,
+				843EC949223CC82200AD2CA5 /* Poppins-Medium.otf in Resources */,
 				84DBBA1C223BECFF00B5C9FF /* Assets.xcassets in Resources */,
 				84DBBA1A223BECFD00B5C9FF /* Main.storyboard in Resources */,
 				84DBBA2D223BF8A800B5C9FF /* Poppins-Regular.otf in Resources */,
@@ -189,10 +202,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				84DBBA33223C088700B5C9FF /* LoginViewController.swift in Sources */,
+				843EC94F223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift in Sources */,
 				84DBBA31223C083600B5C9FF /* WelcomeViewController.swift in Sources */,
+				843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */,
 				84DBBA17223BECFD00B5C9FF /* ViewController.swift in Sources */,
 				84DBBA15223BECFD00B5C9FF /* AppDelegate.swift in Sources */,
 				84DBBA35223C089300B5C9FF /* SignUpViewController.swift in Sources */,
+				843EC94D223CE80900AD2CA5 /* HideShowPasswordTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
