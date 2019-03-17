@@ -19,6 +19,9 @@
         <array key="Poppins-Regular.otf">
             <string>Poppins-Regular</string>
         </array>
+        <array key="Poppins-SemiBold.otf">
+            <string>Poppins-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -80,7 +83,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash_2" translatesAutoresizingMaskIntoConstraints="NO" id="HMt-A7-Vhk">
                                 <rect key="frame" x="0.0" y="44" width="375" height="631"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFQ-7I-UDE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFQ-7I-UDE" customClass="RoundedButton" customModule="Backpack" customModuleProvider="target">
                                 <rect key="frame" x="40" y="542" width="295" height="45"/>
                                 <color key="backgroundColor" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -92,15 +95,15 @@
                                     <color key="titleShadowColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="22"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="7GG-Vy-8uV" kind="show" id="S7g-P8-oJN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVm-5y-a5t">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVm-5y-a5t" customClass="RoundedButtonWithShadow" customModule="Backpack" customModuleProvider="target">
                                 <rect key="frame" x="40" y="477" width="295" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -111,41 +114,28 @@
                                     <color key="titleShadowColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="22"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
-                                        <color key="value" white="0.34614443512304249" alpha="0.24816484899328858" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                        <size key="value" width="0.0" height="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="AWH-jR-Y0l" kind="show" id="0dc-wz-3Q4"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel with people. Make new friends." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxa-5R-Uxk">
-                                <rect key="frame" x="86.5" y="284" width="202" height="14"/>
+                                <rect key="frame" x="76.5" y="294.5" width="222" height="17"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="backpack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKg-jK-FkJ">
-                                <rect key="frame" x="87" y="214" width="201.5" height="54"/>
+                                <rect key="frame" x="67.5" y="214" width="240.5" height="64.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="46"/>
                                 <color key="textColor" red="1" green="0.83529411764705885" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eclipse_yellow" translatesAutoresizingMaskIntoConstraints="NO" id="roC-1J-8ga">
-                                <rect key="frame" x="296" y="243" width="17" height="17"/>
+                                <rect key="frame" x="315.5" y="247.5" width="17" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="17" id="N8g-Gb-2LA"/>
                                     <constraint firstAttribute="height" constant="17" id="tkp-sa-A1a"/>
@@ -210,7 +200,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToO-Yq-uZb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToO-Yq-uZb" customClass="RoundedButton" customModule="Backpack" customModuleProvider="target">
                                 <rect key="frame" x="40" y="398" width="295" height="45"/>
                                 <color key="backgroundColor" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -222,10 +212,13 @@
                                     <color key="titleShadowColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="22"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="zUs-Uq-09P" kind="show" id="eya-ic-NHc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -258,6 +251,140 @@
             </objects>
             <point key="canvasLocation" x="2628" y="-23.838080959520241"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="NdA-iZ-27P">
+            <objects>
+                <viewController id="zUs-Uq-09P" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0uJ-1d-Zzw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wja-vu-K4c">
+                                <rect key="frame" x="40" y="84" width="239" height="112"/>
+                                <string key="text">Your phone
+number</string>
+                                <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DZe-da-LjR" customClass="BottomLineTextField" customModule="Backpack" customModuleProvider="target">
+                                <rect key="frame" x="40" y="276" width="295" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCF-P8-uPr" customClass="RoundedButtonWithBorder" customModule="Backpack" customModuleProvider="target">
+                                <rect key="frame" x="131.5" y="376" width="112" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="4qf-06-pPU"/>
+                                    <constraint firstAttribute="width" constant="112" id="IQy-aD-O9K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.25882352941176467" green="0.39215686274509803" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wja-vu-K4c" firstAttribute="top" secondItem="kW8-b5-hn6" secondAttribute="top" constant="20" id="3Nx-29-sqh"/>
+                            <constraint firstItem="DZe-da-LjR" firstAttribute="leading" secondItem="kW8-b5-hn6" secondAttribute="leading" constant="40" id="Crx-P7-8IN"/>
+                            <constraint firstItem="ZCF-P8-uPr" firstAttribute="centerX" secondItem="kW8-b5-hn6" secondAttribute="centerX" id="KVE-5O-8eK"/>
+                            <constraint firstItem="wja-vu-K4c" firstAttribute="leading" secondItem="kW8-b5-hn6" secondAttribute="leading" constant="40" id="M36-a2-FbB"/>
+                            <constraint firstItem="ZCF-P8-uPr" firstAttribute="top" secondItem="DZe-da-LjR" secondAttribute="bottom" constant="70" id="SXb-vM-TqU"/>
+                            <constraint firstItem="kW8-b5-hn6" firstAttribute="trailing" secondItem="DZe-da-LjR" secondAttribute="trailing" constant="40" id="laI-Z4-ENg"/>
+                            <constraint firstItem="DZe-da-LjR" firstAttribute="top" secondItem="wja-vu-K4c" secondAttribute="bottom" constant="80" id="oUy-0a-ddL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kW8-b5-hn6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ud-G4-0lB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3593" y="-24"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7Gd-uo-wYH">
+            <objects>
+                <viewController id="t1G-eA-Gjh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yx0-0S-Nvr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="backpack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN9-tq-oiF">
+                                <rect key="frame" x="135.5" y="162" width="104" height="28"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eclipse" translatesAutoresizingMaskIntoConstraints="NO" id="GgL-cQ-2cy">
+                                <rect key="frame" x="247" y="168" width="17" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="pvs-R2-wAh"/>
+                                    <constraint firstAttribute="width" constant="17" id="wzA-1w-0o4"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auS-2M-H2S">
+                                <rect key="frame" x="161" y="622" width="53" height="29"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                <state key="normal" title="Not you?">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fingerprint" translatesAutoresizingMaskIntoConstraints="NO" id="927-eV-Q1m">
+                                <rect key="frame" x="178.5" y="562" width="18" height="20"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Dv-nZ-6Rk">
+                                <rect key="frame" x="171" y="492" width="33" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_welcome_back" translatesAutoresizingMaskIntoConstraints="NO" id="0lV-ux-icm">
+                                <rect key="frame" x="137.5" y="376" width="100" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3y-jA-Qbr">
+                                <rect key="frame" x="134" y="326" width="107.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GgL-cQ-2cy" firstAttribute="leading" secondItem="BN9-tq-oiF" secondAttribute="trailing" constant="7.5" id="E5U-yo-9yh"/>
+                            <constraint firstItem="1Dv-nZ-6Rk" firstAttribute="centerX" secondItem="eLn-88-20K" secondAttribute="centerX" id="JZN-od-wHt"/>
+                            <constraint firstItem="1Dv-nZ-6Rk" firstAttribute="top" secondItem="0lV-ux-icm" secondAttribute="bottom" constant="16" id="LGt-zV-ean"/>
+                            <constraint firstItem="R3y-jA-Qbr" firstAttribute="centerX" secondItem="eLn-88-20K" secondAttribute="centerX" id="Quu-89-Xma"/>
+                            <constraint firstItem="auS-2M-H2S" firstAttribute="centerX" secondItem="eLn-88-20K" secondAttribute="centerX" id="S8h-Kn-1qf"/>
+                            <constraint firstItem="0lV-ux-icm" firstAttribute="centerX" secondItem="eLn-88-20K" secondAttribute="centerX" id="YCM-wy-1yc"/>
+                            <constraint firstItem="927-eV-Q1m" firstAttribute="top" secondItem="1Dv-nZ-6Rk" secondAttribute="bottom" constant="50" id="c7y-B9-rna"/>
+                            <constraint firstItem="auS-2M-H2S" firstAttribute="top" secondItem="927-eV-Q1m" secondAttribute="bottom" constant="40" id="dOn-ad-6Yc"/>
+                            <constraint firstItem="BN9-tq-oiF" firstAttribute="centerX" secondItem="eLn-88-20K" secondAttribute="centerX" id="f2O-e3-2DP"/>
+                            <constraint firstItem="0lV-ux-icm" firstAttribute="top" secondItem="R3y-jA-Qbr" secondAttribute="bottom" constant="30" id="gsd-Um-3iV"/>
+                            <constraint firstItem="BN9-tq-oiF" firstAttribute="top" secondItem="eLn-88-20K" secondAttribute="top" constant="142" id="kZZ-xF-GAq"/>
+                            <constraint firstItem="eLn-88-20K" firstAttribute="bottom" secondItem="auS-2M-H2S" secondAttribute="bottom" constant="16" id="rHL-hE-fym"/>
+                            <constraint firstItem="927-eV-Q1m" firstAttribute="centerX" secondItem="eLn-88-20K" secondAttribute="centerX" id="yeD-uE-oRz"/>
+                            <constraint firstItem="GgL-cQ-2cy" firstAttribute="firstBaseline" secondItem="BN9-tq-oiF" secondAttribute="firstBaseline" constant="-15" id="zFI-yS-ZMc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eLn-88-20K"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnV-CU-0WY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2626" y="-734"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="Gxv-LU-DsJ">
             <objects>
@@ -278,7 +405,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gop-lB-gg9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gop-lB-gg9" customClass="RoundedButton" customModule="Backpack" customModuleProvider="target">
                                 <rect key="frame" x="40" y="385" width="295" height="45"/>
                                 <color key="backgroundColor" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -290,8 +417,8 @@
                                     <color key="titleShadowColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="22"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
@@ -357,7 +484,10 @@
     </scenes>
     <resources>
         <image name="Splash_2" width="375" height="812"/>
+        <image name="eclipse" width="17" height="17"/>
         <image name="eclipse_yellow" width="17" height="17"/>
+        <image name="fingerprint" width="18" height="20"/>
+        <image name="profile_welcome_back" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="S7g-P8-oJN"/>

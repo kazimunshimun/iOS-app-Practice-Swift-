@@ -24,7 +24,7 @@ class BottomLineTextField: UITextField {
         self.backgroundColor = UIColor.clear
         
         let borderLine = UIView()
-        let height = 1.0
+        let height = 2.0
         borderLine.frame = CGRect(x: 0, y: Double(self.frame.height) - height, width: Double(self.frame.width), height: height)
         
         borderLine.backgroundColor = UIColor.lightGray
