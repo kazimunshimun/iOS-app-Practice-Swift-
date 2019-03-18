@@ -20,8 +20,8 @@ class RoundedButtonWithShadow: RoundedButton {
         shadowLayer.layer.shadowColor = UIColor.lightGray.cgColor
         shadowLayer.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: self.cornerRadius).cgPath
         shadowLayer.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-        shadowLayer.layer.shadowOpacity = 0.3
-        shadowLayer.layer.shadowRadius = 2
+        shadowLayer.layer.shadowOpacity = 0.4
+        shadowLayer.layer.shadowRadius = 3
         shadowLayer.layer.masksToBounds = true
         shadowLayer.clipsToBounds = false
         

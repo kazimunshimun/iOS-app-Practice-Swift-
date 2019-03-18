@@ -11,6 +11,8 @@
 		843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */; };
 		843EC94D223CE80900AD2CA5 /* HideShowPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */; };
 		843EC94F223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */; };
+		8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446A268223FF769007CC940 /* OnboardParentViewController.swift */; };
+		8446A26B223FF77F007CC940 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446A26A223FF77F007CC940 /* OnBoardingViewController.swift */; };
 		84BD3711223EA488004E098D /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84BD3710223EA488004E098D /* Poppins-SemiBold.otf */; };
 		84BD3713223EBACA004E098D /* RoundedButtonWithBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD3712223EBACA004E098D /* RoundedButtonWithBorder.swift */; };
 		84BD3715223EBB60004E098D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD3714223EBB60004E098D /* RoundedButton.swift */; };
@@ -33,6 +35,8 @@
 		843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLineTextField.swift; sourceTree = "<group>"; };
 		843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideShowPasswordTextField.swift; sourceTree = "<group>"; };
 		843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordToggleVisibilityView.swift; sourceTree = "<group>"; };
+		8446A268223FF769007CC940 /* OnboardParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardParentViewController.swift; sourceTree = "<group>"; };
+		8446A26A223FF77F007CC940 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		84BD3710223EA488004E098D /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
 		84BD3712223EBACA004E098D /* RoundedButtonWithBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonWithBorder.swift; sourceTree = "<group>"; };
 		84BD3714223EBB60004E098D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				84DBBA30223C083600B5C9FF /* WelcomeViewController.swift */,
 				84DBBA32223C088700B5C9FF /* LoginViewController.swift */,
 				84DBBA34223C089300B5C9FF /* SignUpViewController.swift */,
+				8446A268223FF769007CC940 /* OnboardParentViewController.swift */,
+				8446A26A223FF77F007CC940 /* OnBoardingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,10 +226,12 @@
 				84BD3713223EBACA004E098D /* RoundedButtonWithBorder.swift in Sources */,
 				84DBBA31223C083600B5C9FF /* WelcomeViewController.swift in Sources */,
 				843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */,
+				8446A26B223FF77F007CC940 /* OnBoardingViewController.swift in Sources */,
 				84BD3717223EBD65004E098D /* RoundedButtonWithShadow.swift in Sources */,
 				84DBBA17223BECFD00B5C9FF /* ViewController.swift in Sources */,
 				84DBBA15223BECFD00B5C9FF /* AppDelegate.swift in Sources */,
 				84DBBA35223C089300B5C9FF /* SignUpViewController.swift in Sources */,
+				8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */,
 				843EC94D223CE80900AD2CA5 /* HideShowPasswordTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
