@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843379CF22414F2B0080458A /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843379CE22414F2B0080458A /* Onboarding.storyboard */; };
+		843379D1224151240080458A /* TabMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843379D0224151240080458A /* TabMenu.storyboard */; };
 		843EC949223CC82200AD2CA5 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */; };
 		843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */; };
 		843EC94D223CE80900AD2CA5 /* HideShowPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		843379CE22414F2B0080458A /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		843379D0224151240080458A /* TabMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabMenu.storyboard; sourceTree = "<group>"; };
 		843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
 		843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLineTextField.swift; sourceTree = "<group>"; };
 		843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideShowPasswordTextField.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				84BD3712223EBACA004E098D /* RoundedButtonWithBorder.swift */,
 				84BD3714223EBB60004E098D /* RoundedButton.swift */,
 				84BD3716223EBD65004E098D /* RoundedButtonWithShadow.swift */,
+				843379CE22414F2B0080458A /* Onboarding.storyboard */,
+				843379D0224151240080458A /* TabMenu.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,6 +214,8 @@
 				84DBBA1F223BECFF00B5C9FF /* LaunchScreen.storyboard in Resources */,
 				843EC949223CC82200AD2CA5 /* Poppins-Medium.otf in Resources */,
 				84DBBA1C223BECFF00B5C9FF /* Assets.xcassets in Resources */,
+				843379CF22414F2B0080458A /* Onboarding.storyboard in Resources */,
+				843379D1224151240080458A /* TabMenu.storyboard in Resources */,
 				84DBBA1A223BECFD00B5C9FF /* Main.storyboard in Resources */,
 				84DBBA2D223BF8A800B5C9FF /* Poppins-Regular.otf in Resources */,
 			);
