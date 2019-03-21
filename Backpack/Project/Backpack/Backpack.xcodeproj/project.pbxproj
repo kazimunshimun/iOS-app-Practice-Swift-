@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842956232243F3C1002D88B8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842956222243F3C1002D88B8 /* MenuViewController.swift */; };
+		842956252243F4BE002D88B8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842956242243F4BE002D88B8 /* FeedViewController.swift */; };
+		842956272243F50D002D88B8 /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842956262243F50D002D88B8 /* MessagingViewController.swift */; };
+		842956292243F54A002D88B8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842956282243F54A002D88B8 /* ProfileViewController.swift */; };
+		8429562B2243F557002D88B8 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429562A2243F557002D88B8 /* TripsViewController.swift */; };
 		843379CF22414F2B0080458A /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843379CE22414F2B0080458A /* Onboarding.storyboard */; };
 		843379D1224151240080458A /* TabMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843379D0224151240080458A /* TabMenu.storyboard */; };
 		843EC949223CC82200AD2CA5 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */; };
@@ -33,6 +38,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		842956222243F3C1002D88B8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		842956242243F4BE002D88B8 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		842956262243F50D002D88B8 /* MessagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
+		842956282243F54A002D88B8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8429562A2243F557002D88B8 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		843379CE22414F2B0080458A /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		843379D0224151240080458A /* TabMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabMenu.storyboard; sourceTree = "<group>"; };
 		843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
@@ -108,6 +118,11 @@
 				84DBBA34223C089300B5C9FF /* SignUpViewController.swift */,
 				8446A268223FF769007CC940 /* OnboardParentViewController.swift */,
 				8446A26A223FF77F007CC940 /* OnBoardingViewController.swift */,
+				842956222243F3C1002D88B8 /* MenuViewController.swift */,
+				842956242243F4BE002D88B8 /* FeedViewController.swift */,
+				842956262243F50D002D88B8 /* MessagingViewController.swift */,
+				842956282243F54A002D88B8 /* ProfileViewController.swift */,
+				8429562A2243F557002D88B8 /* TripsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,9 +246,14 @@
 				84DBBA33223C088700B5C9FF /* LoginViewController.swift in Sources */,
 				84BD3715223EBB60004E098D /* RoundedButton.swift in Sources */,
 				843EC94F223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift in Sources */,
+				8429562B2243F557002D88B8 /* TripsViewController.swift in Sources */,
+				842956232243F3C1002D88B8 /* MenuViewController.swift in Sources */,
 				84BD3713223EBACA004E098D /* RoundedButtonWithBorder.swift in Sources */,
+				842956272243F50D002D88B8 /* MessagingViewController.swift in Sources */,
 				84DBBA31223C083600B5C9FF /* WelcomeViewController.swift in Sources */,
+				842956292243F54A002D88B8 /* ProfileViewController.swift in Sources */,
 				843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */,
+				842956252243F4BE002D88B8 /* FeedViewController.swift in Sources */,
 				8446A26B223FF77F007CC940 /* OnBoardingViewController.swift in Sources */,
 				84BD3717223EBD65004E098D /* RoundedButtonWithShadow.swift in Sources */,
 				84DBBA17223BECFD00B5C9FF /* ViewController.swift in Sources */,
