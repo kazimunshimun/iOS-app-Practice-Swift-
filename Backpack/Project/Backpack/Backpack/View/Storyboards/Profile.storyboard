@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Axu-JJ-Sss">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.otf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="JTx-4u-JeJ">
+            <objects>
+                <viewController id="Axu-JJ-Sss" customClass="ProfileViewController" customModule="Backpack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iuY-ba-6Kj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q18-gB-lZx">
+                                <rect key="frame" x="0.0" y="46" width="375" height="92"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wn-Lw-iXQ">
+                                        <rect key="frame" x="27" y="16" width="45" height="28"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Very Experienced" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4O7-MK-E1L">
+                                        <rect key="frame" x="27" y="44" width="87" height="14"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_user" translatesAutoresizingMaskIntoConstraints="NO" id="AI2-qi-ZnI">
+                                        <rect key="frame" x="300" y="22" width="50" height="50"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rating" translatesAutoresizingMaskIntoConstraints="NO" id="G97-r6-R35">
+                                        <rect key="frame" x="27" y="61" width="46" height="10"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="BQp-gh-Eeb"/>
+                                    <constraint firstItem="G97-r6-R35" firstAttribute="leading" secondItem="Q18-gB-lZx" secondAttribute="leading" constant="27" id="C0O-1c-rBt"/>
+                                    <constraint firstItem="1Wn-Lw-iXQ" firstAttribute="top" secondItem="Q18-gB-lZx" secondAttribute="top" constant="16" id="K9y-8k-S4p"/>
+                                    <constraint firstItem="4O7-MK-E1L" firstAttribute="top" secondItem="1Wn-Lw-iXQ" secondAttribute="bottom" id="Wh8-mK-Far"/>
+                                    <constraint firstItem="AI2-qi-ZnI" firstAttribute="top" secondItem="Q18-gB-lZx" secondAttribute="top" constant="22" id="bqY-wT-Rzw"/>
+                                    <constraint firstItem="4O7-MK-E1L" firstAttribute="leading" secondItem="Q18-gB-lZx" secondAttribute="leading" constant="27" id="hxQ-mm-77p"/>
+                                    <constraint firstAttribute="trailing" secondItem="AI2-qi-ZnI" secondAttribute="trailing" constant="25" id="irC-qp-je6"/>
+                                    <constraint firstItem="1Wn-Lw-iXQ" firstAttribute="leading" secondItem="Q18-gB-lZx" secondAttribute="leading" constant="27" id="qxZ-FH-OKu"/>
+                                    <constraint firstItem="G97-r6-R35" firstAttribute="top" secondItem="4O7-MK-E1L" secondAttribute="bottom" constant="3" id="zgM-l9-mR8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7k8-7U-avn" firstAttribute="trailing" secondItem="Q18-gB-lZx" secondAttribute="trailing" id="FfN-Ma-s1b"/>
+                            <constraint firstItem="Q18-gB-lZx" firstAttribute="leading" secondItem="7k8-7U-avn" secondAttribute="leading" id="S6W-hx-CfT"/>
+                            <constraint firstItem="Q18-gB-lZx" firstAttribute="top" secondItem="7k8-7U-avn" secondAttribute="top" constant="26" id="X5P-QI-7F9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7k8-7U-avn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="user_tab" selectedImage="user_tab_selected" id="RhA-Fc-EEy">
+                        <color key="badgeColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iOo-Yj-5xO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733.60000000000002" y="394.45277361319341"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="profile_user" width="50" height="50"/>
+        <image name="rating" width="46" height="10.5"/>
+        <image name="user_tab" width="16" height="18"/>
+        <image name="user_tab_selected" width="16" height="18"/>
+    </resources>
+</document>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6c2-C2-f7V">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.otf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Feed View Controller-->
+        <scene sceneID="8o3-ko-FUo">
+            <objects>
+                <viewController id="6c2-C2-f7V" customClass="FeedViewController" customModule="Backpack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fSy-Q8-vpn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traveling to?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yl-fE-fqF">
+                                <rect key="frame" x="25" y="50" width="134" height="28"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxT-bW-7KZ">
+                                <rect key="frame" x="335" y="50" width="24" height="24"/>
+                                <state key="normal" image="search"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rry-TH-HIa" customClass="RoundedButtonWithShadow" customModule="Backpack" customModuleProvider="target">
+                                <rect key="frame" x="16" y="88" width="343" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Uf9-YZ-IzO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Enter a name of a city you're traveling to">
+                                    <color key="titleColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rry-TH-HIa" firstAttribute="leading" secondItem="Ift-sX-Ogg" secondAttribute="leading" constant="16" id="8Ak-QO-PbG"/>
+                            <constraint firstItem="Ift-sX-Ogg" firstAttribute="trailing" secondItem="Rry-TH-HIa" secondAttribute="trailing" constant="16" id="CEQ-Ac-l3s"/>
+                            <constraint firstItem="Rry-TH-HIa" firstAttribute="top" secondItem="0Yl-fE-fqF" secondAttribute="bottom" constant="10" id="FXF-AX-At2"/>
+                            <constraint firstItem="YxT-bW-7KZ" firstAttribute="top" secondItem="Ift-sX-Ogg" secondAttribute="top" constant="30" id="Z8X-0X-TwY"/>
+                            <constraint firstItem="0Yl-fE-fqF" firstAttribute="top" secondItem="Ift-sX-Ogg" secondAttribute="top" constant="30" id="fmJ-C5-WD8"/>
+                            <constraint firstItem="Ift-sX-Ogg" firstAttribute="trailing" secondItem="YxT-bW-7KZ" secondAttribute="trailing" constant="16" id="noh-oT-PiO"/>
+                            <constraint firstItem="0Yl-fE-fqF" firstAttribute="leading" secondItem="Ift-sX-Ogg" secondAttribute="leading" constant="25" id="ygx-ES-9uz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ift-sX-Ogg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="home_tab" selectedImage="home_tab_selected" id="qz3-nu-Kzx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rrq-Jk-PzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733.60000000000002" y="-1612.4437781109445"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_tab" width="18.5" height="17"/>
+        <image name="home_tab_selected" width="24" height="24"/>
+        <image name="search" width="24" height="24"/>
+    </resources>
+</document>

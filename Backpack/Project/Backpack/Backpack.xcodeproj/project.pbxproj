@@ -20,6 +20,11 @@
 		843EC94F223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */; };
 		8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446A268223FF769007CC940 /* OnboardParentViewController.swift */; };
 		8446A26B223FF77F007CC940 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446A26A223FF77F007CC940 /* OnBoardingViewController.swift */; };
+		8456AF842244C0FC0009E68F /* RoundedViewWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456AF832244C0FC0009E68F /* RoundedViewWithShadow.swift */; };
+		8456AF862244C4BA0009E68F /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456AF852244C4BA0009E68F /* Trips.storyboard */; };
+		8456AF882244C5BC0009E68F /* Feeds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456AF872244C5BC0009E68F /* Feeds.storyboard */; };
+		8456AF8A2244C5C90009E68F /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456AF892244C5C90009E68F /* Messaging.storyboard */; };
+		8456AF8C2244C5D40009E68F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456AF8B2244C5D40009E68F /* Profile.storyboard */; };
 		84BD3711223EA488004E098D /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84BD3710223EA488004E098D /* Poppins-SemiBold.otf */; };
 		84BD3713223EBACA004E098D /* RoundedButtonWithBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD3712223EBACA004E098D /* RoundedButtonWithBorder.swift */; };
 		84BD3715223EBB60004E098D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD3714223EBB60004E098D /* RoundedButton.swift */; };
@@ -51,6 +56,11 @@
 		843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordToggleVisibilityView.swift; sourceTree = "<group>"; };
 		8446A268223FF769007CC940 /* OnboardParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardParentViewController.swift; sourceTree = "<group>"; };
 		8446A26A223FF77F007CC940 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		8456AF832244C0FC0009E68F /* RoundedViewWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewWithShadow.swift; sourceTree = "<group>"; };
+		8456AF852244C4BA0009E68F /* Trips.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trips.storyboard; sourceTree = "<group>"; };
+		8456AF872244C5BC0009E68F /* Feeds.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feeds.storyboard; sourceTree = "<group>"; };
+		8456AF892244C5C90009E68F /* Messaging.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messaging.storyboard; sourceTree = "<group>"; };
+		8456AF8B2244C5D40009E68F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		84BD3710223EA488004E098D /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
 		84BD3712223EBACA004E098D /* RoundedButtonWithBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonWithBorder.swift; sourceTree = "<group>"; };
 		84BD3714223EBB60004E098D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -81,6 +91,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8456AF8D2244C75A0009E68F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				84DBBA18223BECFD00B5C9FF /* Main.storyboard */,
+				84DBBA1D223BECFF00B5C9FF /* LaunchScreen.storyboard */,
+				843379CE22414F2B0080458A /* Onboarding.storyboard */,
+				843379D0224151240080458A /* TabMenu.storyboard */,
+				8456AF872244C5BC0009E68F /* Feeds.storyboard */,
+				8456AF852244C4BA0009E68F /* Trips.storyboard */,
+				8456AF892244C5C90009E68F /* Messaging.storyboard */,
+				8456AF8B2244C5D40009E68F /* Profile.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		84DBBA08223BECFD00B5C9FF = {
 			isa = PBXGroup;
 			children = (
@@ -130,16 +155,14 @@
 		84DBBA27223BED4B00B5C9FF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				84DBBA18223BECFD00B5C9FF /* Main.storyboard */,
-				84DBBA1D223BECFF00B5C9FF /* LaunchScreen.storyboard */,
+				8456AF8D2244C75A0009E68F /* Storyboards */,
 				843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */,
 				843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */,
 				843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */,
 				84BD3712223EBACA004E098D /* RoundedButtonWithBorder.swift */,
 				84BD3714223EBB60004E098D /* RoundedButton.swift */,
 				84BD3716223EBD65004E098D /* RoundedButtonWithShadow.swift */,
-				843379CE22414F2B0080458A /* Onboarding.storyboard */,
-				843379D0224151240080458A /* TabMenu.storyboard */,
+				8456AF832244C0FC0009E68F /* RoundedViewWithShadow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,9 +252,13 @@
 				84DBBA1F223BECFF00B5C9FF /* LaunchScreen.storyboard in Resources */,
 				843EC949223CC82200AD2CA5 /* Poppins-Medium.otf in Resources */,
 				84DBBA1C223BECFF00B5C9FF /* Assets.xcassets in Resources */,
+				8456AF882244C5BC0009E68F /* Feeds.storyboard in Resources */,
 				843379CF22414F2B0080458A /* Onboarding.storyboard in Resources */,
+				8456AF8A2244C5C90009E68F /* Messaging.storyboard in Resources */,
 				843379D1224151240080458A /* TabMenu.storyboard in Resources */,
+				8456AF862244C4BA0009E68F /* Trips.storyboard in Resources */,
 				84DBBA1A223BECFD00B5C9FF /* Main.storyboard in Resources */,
+				8456AF8C2244C5D40009E68F /* Profile.storyboard in Resources */,
 				84DBBA2D223BF8A800B5C9FF /* Poppins-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +284,7 @@
 				8446A26B223FF77F007CC940 /* OnBoardingViewController.swift in Sources */,
 				84BD3717223EBD65004E098D /* RoundedButtonWithShadow.swift in Sources */,
 				84DBBA17223BECFD00B5C9FF /* ViewController.swift in Sources */,
+				8456AF842244C0FC0009E68F /* RoundedViewWithShadow.swift in Sources */,
 				84DBBA15223BECFD00B5C9FF /* AppDelegate.swift in Sources */,
 				84DBBA35223C089300B5C9FF /* SignUpViewController.swift in Sources */,
 				8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */,

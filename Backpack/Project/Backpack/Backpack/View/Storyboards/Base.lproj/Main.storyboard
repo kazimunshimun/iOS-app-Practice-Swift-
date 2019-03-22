@@ -183,25 +183,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBM-KP-Hby" customClass="BottomLineTextField" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="150" width="295" height="30"/>
+                                <rect key="frame" x="40" y="194" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4N-Uq-XqC" customClass="BottomLineTextField" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="64" width="295" height="30"/>
+                                <rect key="frame" x="40" y="108" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Yf-hJ-IbG" customClass="HideShowPasswordTextField" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="236" width="295" height="30"/>
+                                <rect key="frame" x="40" y="280" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToO-Yq-uZb" customClass="RoundedButton" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="354" width="295" height="45"/>
+                                <rect key="frame" x="40" y="398" width="295" height="45"/>
                                 <color key="backgroundColor" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="cPU-bb-zGC"/>
@@ -260,7 +260,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wja-vu-K4c">
-                                <rect key="frame" x="40" y="40" width="239" height="112"/>
+                                <rect key="frame" x="40" y="84" width="239" height="112"/>
                                 <string key="text">Your phone
 number</string>
                                 <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="40"/>
@@ -268,13 +268,13 @@ number</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DZe-da-LjR" customClass="BottomLineTextField" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="232" width="295" height="30"/>
+                                <rect key="frame" x="40" y="276" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCF-P8-uPr" customClass="RoundedButtonWithBorder" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="131.5" y="332" width="112" height="45"/>
+                                <rect key="frame" x="131.5" y="376" width="112" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="4qf-06-pPU"/>
@@ -332,7 +332,7 @@ number</string>
                 <viewControllerPlaceholder storyboardName="TabMenu" id="R9l-2B-Idg" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAT-lY-Vvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4448" y="260"/>
+            <point key="canvasLocation" x="3398" y="257"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7Gd-uo-wYH">
@@ -413,19 +413,19 @@ number</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B9W-51-RgX" customClass="BottomLineTextField" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="64" width="295" height="30"/>
+                                <rect key="frame" x="40" y="108" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xNW-MO-Qyf" customClass="HideShowPasswordTextField" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="150" width="295" height="30"/>
+                                <rect key="frame" x="40" y="194" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gop-lB-gg9" customClass="RoundedButton" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="341" width="295" height="45"/>
+                                <rect key="frame" x="40" y="385" width="295" height="45"/>
                                 <color key="backgroundColor" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="hB3-7u-PLF"/>
@@ -440,9 +440,12 @@ number</string>
                                         <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="R9l-2B-Idg" kind="show" id="w29-ch-V5v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEi-aZ-zDr">
-                                <rect key="frame" x="225" y="196" width="110" height="29"/>
+                                <rect key="frame" x="225" y="240" width="110" height="29"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="12"/>
                                 <state key="normal" title="Forgot Password?"/>
                                 <connections>
@@ -512,7 +515,7 @@ number</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1K9-Pd-m16">
-                                <rect key="frame" x="40" y="40" width="278" height="112"/>
+                                <rect key="frame" x="40" y="84" width="278" height="112"/>
                                 <string key="text">Recover
 your account</string>
                                 <fontDescription key="fontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="40"/>
@@ -520,13 +523,13 @@ your account</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email, username or phone number " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k6o-fP-ury" customClass="BottomLineTextField" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="232" width="295" height="30"/>
+                                <rect key="frame" x="40" y="276" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyP-M3-2SV" customClass="RoundedButtonWithBorder" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="131.5" y="332" width="112" height="45"/>
+                                <rect key="frame" x="131.5" y="376" width="112" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="1uJ-EE-tef"/>
@@ -548,9 +551,6 @@ your account</string>
                                         <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="R9l-2B-Idg" kind="show" id="50O-0i-GLF"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -579,7 +579,7 @@ your account</string>
         <image name="profile_welcome_back" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kBn-G1-5Op"/>
+        <segue reference="S7g-P8-oJN"/>
         <segue reference="lp5-zJ-kjm"/>
     </inferredMetricsTieBreakers>
 </document>
