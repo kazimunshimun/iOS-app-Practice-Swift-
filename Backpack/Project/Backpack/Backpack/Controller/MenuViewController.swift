@@ -24,11 +24,11 @@ class MenuViewController: UITabBarController {
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-        super.viewWillDisappear(animated)
-        
-    } 
+//    override func viewWillDisappear(_ animated: Bool) {
+//        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+//        super.viewWillDisappear(animated)
+//        
+//    }
 
     /*
     // MARK: - Navigation
