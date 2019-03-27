@@ -24,6 +24,9 @@ class CreditCardInputViewController: UIViewController {
         }
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        navigationController!.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 

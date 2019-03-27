@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8413B41D224BDCB400DB001B /* AirlineChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413B41C224BDCB400DB001B /* AirlineChooserViewController.swift */; };
+		8413B41F224BDCDD00DB001B /* BookTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413B41E224BDCDD00DB001B /* BookTicketViewController.swift */; };
 		842956232243F3C1002D88B8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842956222243F3C1002D88B8 /* MenuViewController.swift */; };
 		842956252243F4BE002D88B8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842956242243F4BE002D88B8 /* FeedViewController.swift */; };
 		842956272243F50D002D88B8 /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842956262243F50D002D88B8 /* MessagingViewController.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8413B41C224BDCB400DB001B /* AirlineChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineChooserViewController.swift; sourceTree = "<group>"; };
+		8413B41E224BDCDD00DB001B /* BookTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTicketViewController.swift; sourceTree = "<group>"; };
 		842956222243F3C1002D88B8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		842956242243F4BE002D88B8 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		842956262243F50D002D88B8 /* MessagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				84BE6FBE224A993400201881 /* DestinationChooseViewController.swift */,
 				84BE6FC0224A9DA800201881 /* TripDetailsInputViewController.swift */,
 				84BE6FC2224A9E8B00201881 /* TIcketDateInputViewController.swift */,
+				8413B41C224BDCB400DB001B /* AirlineChooserViewController.swift */,
+				8413B41E224BDCDD00DB001B /* BookTicketViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,9 +318,11 @@
 				843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */,
 				84E180B12246A7C70043FEEC /* CollectionPickerView.swift in Sources */,
 				84BE6FBF224A993400201881 /* DestinationChooseViewController.swift in Sources */,
+				8413B41F224BDCDD00DB001B /* BookTicketViewController.swift in Sources */,
 				84E180B32246A8190043FEEC /* CollectionPickerViewFlowLayout.swift in Sources */,
 				842956252243F4BE002D88B8 /* FeedViewController.swift in Sources */,
 				8446A26B223FF77F007CC940 /* OnBoardingViewController.swift in Sources */,
+				8413B41D224BDCB400DB001B /* AirlineChooserViewController.swift in Sources */,
 				84BD3717223EBD65004E098D /* RoundedButtonWithShadow.swift in Sources */,
 				84BE6FC3224A9E8B00201881 /* TIcketDateInputViewController.swift in Sources */,
 				84BE6FB9224A0CF500201881 /* PassportDetailViewController.swift in Sources */,

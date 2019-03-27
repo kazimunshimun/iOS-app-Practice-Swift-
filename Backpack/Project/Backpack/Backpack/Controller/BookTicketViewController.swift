@@ -1,28 +1,19 @@
 //
-//  PassportDetailViewController.swift
+//  BookTicketViewController.swift
 //  Backpack
 //
-//  Created by Anik on 26/3/19.
+//  Created by Anik on 27/3/19.
 //  Copyright © 2019 A7Studio. All rights reserved.
 //
 
 import UIKit
 
-class PassportDetailViewController: UIViewController {
+class BookTicketViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-
-    @IBAction func saveDetailCheckBoxButtonClicked(_ sender: UIButton) {
-        if sender.isSelected {
-            sender.isSelected = false
-        } else {
-            sender.isSelected = true
-        }
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
