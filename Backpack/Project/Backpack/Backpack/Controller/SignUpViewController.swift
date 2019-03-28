@@ -16,7 +16,9 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func backButtonPressed(_ sender: Any) {
+        navigationController!.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 

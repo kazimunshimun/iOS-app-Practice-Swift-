@@ -1,14 +1,14 @@
 //
-//  LoginViewController.swift
+//  ForgotPasswordViewController.swift
 //  Backpack
 //
-//  Created by Anik on 15/3/19.
+//  Created by Anik on 28/3/19.
 //  Copyright © 2019 A7Studio. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class ForgotPasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

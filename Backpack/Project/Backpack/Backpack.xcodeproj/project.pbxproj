@@ -28,6 +28,8 @@
 		8456AF8A2244C5C90009E68F /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456AF892244C5C90009E68F /* Messaging.storyboard */; };
 		8456AF8C2244C5D40009E68F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456AF8B2244C5D40009E68F /* Profile.storyboard */; };
 		84AFE5FA224A067400505AA8 /* CreditCardInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFE5F9224A067400505AA8 /* CreditCardInputViewController.swift */; };
+		84B88FA3224D34B900DE8A11 /* PhoneNumberInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B88FA2224D34B900DE8A11 /* PhoneNumberInputViewController.swift */; };
+		84B88FA5224D34CC00DE8A11 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B88FA4224D34CC00DE8A11 /* ForgotPasswordViewController.swift */; };
 		84BD3711223EA488004E098D /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84BD3710223EA488004E098D /* Poppins-SemiBold.otf */; };
 		84BD3713223EBACA004E098D /* RoundedButtonWithBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD3712223EBACA004E098D /* RoundedButtonWithBorder.swift */; };
 		84BD3715223EBB60004E098D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD3714223EBB60004E098D /* RoundedButton.swift */; };
@@ -75,6 +77,8 @@
 		8456AF892244C5C90009E68F /* Messaging.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messaging.storyboard; sourceTree = "<group>"; };
 		8456AF8B2244C5D40009E68F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		84AFE5F9224A067400505AA8 /* CreditCardInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInputViewController.swift; sourceTree = "<group>"; };
+		84B88FA2224D34B900DE8A11 /* PhoneNumberInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberInputViewController.swift; sourceTree = "<group>"; };
+		84B88FA4224D34CC00DE8A11 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		84BD3710223EA488004E098D /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
 		84BD3712223EBACA004E098D /* RoundedButtonWithBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonWithBorder.swift; sourceTree = "<group>"; };
 		84BD3714223EBB60004E098D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -128,6 +132,22 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		84B88FA1224D306100DE8A11 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				8429562A2243F557002D88B8 /* TripsViewController.swift */,
+				84AFE5F9224A067400505AA8 /* CreditCardInputViewController.swift */,
+				84BE6FB8224A0CF500201881 /* PassportDetailViewController.swift */,
+				84BE6FBA224A5C5C00201881 /* TicketDetailViewController.swift */,
+				84BE6FBE224A993400201881 /* DestinationChooseViewController.swift */,
+				84BE6FC0224A9DA800201881 /* TripDetailsInputViewController.swift */,
+				84BE6FC2224A9E8B00201881 /* TIcketDateInputViewController.swift */,
+				8413B41C224BDCB400DB001B /* AirlineChooserViewController.swift */,
+				8413B41E224BDCDD00DB001B /* BookTicketViewController.swift */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
 		84DBBA08223BECFD00B5C9FF = {
 			isa = PBXGroup;
 			children = (
@@ -169,15 +189,9 @@
 				842956242243F4BE002D88B8 /* FeedViewController.swift */,
 				842956262243F50D002D88B8 /* MessagingViewController.swift */,
 				842956282243F54A002D88B8 /* ProfileViewController.swift */,
-				8429562A2243F557002D88B8 /* TripsViewController.swift */,
-				84AFE5F9224A067400505AA8 /* CreditCardInputViewController.swift */,
-				84BE6FB8224A0CF500201881 /* PassportDetailViewController.swift */,
-				84BE6FBA224A5C5C00201881 /* TicketDetailViewController.swift */,
-				84BE6FBE224A993400201881 /* DestinationChooseViewController.swift */,
-				84BE6FC0224A9DA800201881 /* TripDetailsInputViewController.swift */,
-				84BE6FC2224A9E8B00201881 /* TIcketDateInputViewController.swift */,
-				8413B41C224BDCB400DB001B /* AirlineChooserViewController.swift */,
-				8413B41E224BDCDD00DB001B /* BookTicketViewController.swift */,
+				84B88FA1224D306100DE8A11 /* Trips */,
+				84B88FA2224D34B900DE8A11 /* PhoneNumberInputViewController.swift */,
+				84B88FA4224D34CC00DE8A11 /* ForgotPasswordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -303,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B88FA5224D34CC00DE8A11 /* ForgotPasswordViewController.swift in Sources */,
 				84DBBA33223C088700B5C9FF /* LoginViewController.swift in Sources */,
 				84BD3715223EBB60004E098D /* RoundedButton.swift in Sources */,
 				843EC94F223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift in Sources */,
@@ -329,6 +344,7 @@
 				84DBBA17223BECFD00B5C9FF /* ViewController.swift in Sources */,
 				8456AF842244C0FC0009E68F /* RoundedViewWithShadow.swift in Sources */,
 				84DBBA15223BECFD00B5C9FF /* AppDelegate.swift in Sources */,
+				84B88FA3224D34B900DE8A11 /* PhoneNumberInputViewController.swift in Sources */,
 				84DBBA35223C089300B5C9FF /* SignUpViewController.swift in Sources */,
 				8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */,
 				84BE6FC1224A9DA800201881 /* TripDetailsInputViewController.swift in Sources */,
