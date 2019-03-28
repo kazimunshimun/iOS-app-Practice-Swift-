@@ -148,6 +148,20 @@
 			path = Trips;
 			sourceTree = "<group>";
 		};
+		84B88FA6224D414600DE8A11 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				84DBBA30223C083600B5C9FF /* WelcomeViewController.swift */,
+				84DBBA32223C088700B5C9FF /* LoginViewController.swift */,
+				84DBBA34223C089300B5C9FF /* SignUpViewController.swift */,
+				8446A268223FF769007CC940 /* OnboardParentViewController.swift */,
+				8446A26A223FF77F007CC940 /* OnBoardingViewController.swift */,
+				84B88FA2224D34B900DE8A11 /* PhoneNumberInputViewController.swift */,
+				84B88FA4224D34CC00DE8A11 /* ForgotPasswordViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		84DBBA08223BECFD00B5C9FF = {
 			isa = PBXGroup;
 			children = (
@@ -180,18 +194,12 @@
 			children = (
 				84DBBA14223BECFD00B5C9FF /* AppDelegate.swift */,
 				84DBBA16223BECFD00B5C9FF /* ViewController.swift */,
-				84DBBA30223C083600B5C9FF /* WelcomeViewController.swift */,
-				84DBBA32223C088700B5C9FF /* LoginViewController.swift */,
-				84DBBA34223C089300B5C9FF /* SignUpViewController.swift */,
-				8446A268223FF769007CC940 /* OnboardParentViewController.swift */,
-				8446A26A223FF77F007CC940 /* OnBoardingViewController.swift */,
+				84B88FA6224D414600DE8A11 /* Welcome */,
 				842956222243F3C1002D88B8 /* MenuViewController.swift */,
 				842956242243F4BE002D88B8 /* FeedViewController.swift */,
 				842956262243F50D002D88B8 /* MessagingViewController.swift */,
 				842956282243F54A002D88B8 /* ProfileViewController.swift */,
 				84B88FA1224D306100DE8A11 /* Trips */,
-				84B88FA2224D34B900DE8A11 /* PhoneNumberInputViewController.swift */,
-				84B88FA4224D34CC00DE8A11 /* ForgotPasswordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
