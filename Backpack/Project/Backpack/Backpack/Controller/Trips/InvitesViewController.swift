@@ -1,14 +1,14 @@
 //
-//  MenuViewController.swift
+//  InvitesViewController.swift
 //  Backpack
 //
-//  Created by Anik on 21/3/19.
+//  Created by Anik on 29/3/19.
 //  Copyright © 2019 A7Studio. All rights reserved.
 //
 
 import UIKit
 
-class MenuViewController: UITabBarController {
+class InvitesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,17 +16,9 @@ class MenuViewController: UITabBarController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-        super.viewWillAppear(animated)
+    @IBAction func backButtonPressed(_ sender: Any) {
+        navigationController!.popViewController(animated: true)
     }
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-//        super.viewWillDisappear(animated)
-//        
-//    }
-
     /*
     // MARK: - Navigation
 
