@@ -16,6 +16,8 @@
 		8429562B2243F557002D88B8 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429562A2243F557002D88B8 /* TripsViewController.swift */; };
 		843379CF22414F2B0080458A /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843379CE22414F2B0080458A /* Onboarding.storyboard */; };
 		843379D1224151240080458A /* TabMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843379D0224151240080458A /* TabMenu.storyboard */; };
+		84361F81224DE27F00766D04 /* TextInsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F80224DE27F00766D04 /* TextInsetTextField.swift */; };
+		84361F83224E095700766D04 /* AddTripsPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F82224E095700766D04 /* AddTripsPhotoViewController.swift */; };
 		843EC949223CC82200AD2CA5 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */; };
 		843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */; };
 		843EC94D223CE80900AD2CA5 /* HideShowPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */; };
@@ -65,6 +67,8 @@
 		8429562A2243F557002D88B8 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		843379CE22414F2B0080458A /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		843379D0224151240080458A /* TabMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabMenu.storyboard; sourceTree = "<group>"; };
+		84361F80224DE27F00766D04 /* TextInsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInsetTextField.swift; sourceTree = "<group>"; };
+		84361F82224E095700766D04 /* AddTripsPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripsPhotoViewController.swift; sourceTree = "<group>"; };
 		843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
 		843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLineTextField.swift; sourceTree = "<group>"; };
 		843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideShowPasswordTextField.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 				84BE6FC2224A9E8B00201881 /* TIcketDateInputViewController.swift */,
 				8413B41C224BDCB400DB001B /* AirlineChooserViewController.swift */,
 				8413B41E224BDCDD00DB001B /* BookTicketViewController.swift */,
+				84361F82224E095700766D04 /* AddTripsPhotoViewController.swift */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				84E180B02246A7C70043FEEC /* CollectionPickerView.swift */,
 				84E180B22246A8190043FEEC /* CollectionPickerViewFlowLayout.swift */,
 				84BE6FBC224A5E9800201881 /* RoundedView.swift */,
+				84361F80224DE27F00766D04 /* TextInsetTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 				843EC94F223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift in Sources */,
 				8429562B2243F557002D88B8 /* TripsViewController.swift in Sources */,
 				842956232243F3C1002D88B8 /* MenuViewController.swift in Sources */,
+				84361F83224E095700766D04 /* AddTripsPhotoViewController.swift in Sources */,
 				84BD3713223EBACA004E098D /* RoundedButtonWithBorder.swift in Sources */,
 				84AFE5FA224A067400505AA8 /* CreditCardInputViewController.swift in Sources */,
 				842956272243F50D002D88B8 /* MessagingViewController.swift in Sources */,
@@ -340,6 +347,7 @@
 				84BE6FBB224A5C5C00201881 /* TicketDetailViewController.swift in Sources */,
 				843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */,
 				84E180B12246A7C70043FEEC /* CollectionPickerView.swift in Sources */,
+				84361F81224DE27F00766D04 /* TextInsetTextField.swift in Sources */,
 				84BE6FBF224A993400201881 /* DestinationChooseViewController.swift in Sources */,
 				8413B41F224BDCDD00DB001B /* BookTicketViewController.swift in Sources */,
 				84E180B32246A8190043FEEC /* CollectionPickerViewFlowLayout.swift in Sources */,
