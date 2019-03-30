@@ -24,6 +24,11 @@
 		84361F8B224E8A7900766D04 /* RoundedCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F8A224E8A7900766D04 /* RoundedCornerImageView.swift */; };
 		84361F8D224E8DD200766D04 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F8C224E8DD200766D04 /* ChatTableViewCell.swift */; };
 		8437924E224F48BE009F730B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437924D224F48BE009F730B /* ChatViewController.swift */; };
+		84379252224FCE02009F730B /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84379250224FCE02009F730B /* FeedTableViewCell.swift */; };
+		84379253224FCE02009F730B /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84379251224FCE02009F730B /* FeedTableViewCell.xib */; };
+		84379256224FCE2B009F730B /* PopularDestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84379254224FCE2B009F730B /* PopularDestinationTableViewCell.swift */; };
+		84379257224FCE2B009F730B /* PopularDestinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84379255224FCE2B009F730B /* PopularDestinationTableViewCell.xib */; };
+		8437925A224FDD26009F730B /* TopLeftRightRadiusImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84379259224FDD26009F730B /* TopLeftRightRadiusImageView.swift */; };
 		843EC949223CC82200AD2CA5 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */; };
 		843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */; };
 		843EC94D223CE80900AD2CA5 /* HideShowPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */; };
@@ -81,6 +86,11 @@
 		84361F8A224E8A7900766D04 /* RoundedCornerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerImageView.swift; sourceTree = "<group>"; };
 		84361F8C224E8DD200766D04 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		8437924D224F48BE009F730B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		84379250224FCE02009F730B /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		84379251224FCE02009F730B /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		84379254224FCE2B009F730B /* PopularDestinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDestinationTableViewCell.swift; sourceTree = "<group>"; };
+		84379255224FCE2B009F730B /* PopularDestinationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularDestinationTableViewCell.xib; sourceTree = "<group>"; };
+		84379259224FDD26009F730B /* TopLeftRightRadiusImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopLeftRightRadiusImageView.swift; sourceTree = "<group>"; };
 		843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
 		843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLineTextField.swift; sourceTree = "<group>"; };
 		843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideShowPasswordTextField.swift; sourceTree = "<group>"; };
@@ -140,6 +150,18 @@
 				8437924D224F48BE009F730B /* ChatViewController.swift */,
 			);
 			path = Messaging;
+			sourceTree = "<group>";
+		};
+		84379258224FCE35009F730B /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				84361F8C224E8DD200766D04 /* ChatTableViewCell.swift */,
+				84379250224FCE02009F730B /* FeedTableViewCell.swift */,
+				84379251224FCE02009F730B /* FeedTableViewCell.xib */,
+				84379254224FCE2B009F730B /* PopularDestinationTableViewCell.swift */,
+				84379255224FCE2B009F730B /* PopularDestinationTableViewCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		8456AF8D2244C75A0009E68F /* Storyboards */ = {
@@ -236,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				8456AF8D2244C75A0009E68F /* Storyboards */,
+				84379258224FCE35009F730B /* TableViewCells */,
 				843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */,
 				843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */,
 				843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */,
@@ -248,7 +271,7 @@
 				84BE6FBC224A5E9800201881 /* RoundedView.swift */,
 				84361F80224DE27F00766D04 /* TextInsetTextField.swift */,
 				84361F8A224E8A7900766D04 /* RoundedCornerImageView.swift */,
-				84361F8C224E8DD200766D04 /* ChatTableViewCell.swift */,
+				84379259224FDD26009F730B /* TopLeftRightRadiusImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,11 +362,13 @@
 				84DBBA1F223BECFF00B5C9FF /* LaunchScreen.storyboard in Resources */,
 				843EC949223CC82200AD2CA5 /* Poppins-Medium.otf in Resources */,
 				84DBBA1C223BECFF00B5C9FF /* Assets.xcassets in Resources */,
+				84379253224FCE02009F730B /* FeedTableViewCell.xib in Resources */,
 				8456AF882244C5BC0009E68F /* Feeds.storyboard in Resources */,
 				843379CF22414F2B0080458A /* Onboarding.storyboard in Resources */,
 				8456AF8A2244C5C90009E68F /* Messaging.storyboard in Resources */,
 				843379D1224151240080458A /* TabMenu.storyboard in Resources */,
 				8456AF862244C4BA0009E68F /* Trips.storyboard in Resources */,
+				84379257224FCE2B009F730B /* PopularDestinationTableViewCell.xib in Resources */,
 				84DBBA1A223BECFD00B5C9FF /* Main.storyboard in Resources */,
 				8456AF8C2244C5D40009E68F /* Profile.storyboard in Resources */,
 				84DBBA2D223BF8A800B5C9FF /* Poppins-Regular.otf in Resources */,
@@ -369,6 +394,7 @@
 				84BD3713223EBACA004E098D /* RoundedButtonWithBorder.swift in Sources */,
 				84AFE5FA224A067400505AA8 /* CreditCardInputViewController.swift in Sources */,
 				842956272243F50D002D88B8 /* MessagingViewController.swift in Sources */,
+				84379256224FCE2B009F730B /* PopularDestinationTableViewCell.swift in Sources */,
 				84BE6FBD224A5E9800201881 /* RoundedView.swift in Sources */,
 				84DBBA31223C083600B5C9FF /* WelcomeViewController.swift in Sources */,
 				842956292243F54A002D88B8 /* ProfileViewController.swift in Sources */,
@@ -380,6 +406,7 @@
 				84361F81224DE27F00766D04 /* TextInsetTextField.swift in Sources */,
 				84BE6FBF224A993400201881 /* DestinationChooseViewController.swift in Sources */,
 				8413B41F224BDCDD00DB001B /* BookTicketViewController.swift in Sources */,
+				8437925A224FDD26009F730B /* TopLeftRightRadiusImageView.swift in Sources */,
 				84E180B32246A8190043FEEC /* CollectionPickerViewFlowLayout.swift in Sources */,
 				842956252243F4BE002D88B8 /* FeedViewController.swift in Sources */,
 				84361F8D224E8DD200766D04 /* ChatTableViewCell.swift in Sources */,
@@ -394,6 +421,7 @@
 				84B88FA3224D34B900DE8A11 /* PhoneNumberInputViewController.swift in Sources */,
 				84DBBA35223C089300B5C9FF /* SignUpViewController.swift in Sources */,
 				8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */,
+				84379252224FCE02009F730B /* FeedTableViewCell.swift in Sources */,
 				84BE6FC1224A9DA800201881 /* TripDetailsInputViewController.swift in Sources */,
 				843EC94D223CE80900AD2CA5 /* HideShowPasswordTextField.swift in Sources */,
 				84361F8B224E8A7900766D04 /* RoundedCornerImageView.swift in Sources */,
