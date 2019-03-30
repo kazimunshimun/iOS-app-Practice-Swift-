@@ -23,6 +23,7 @@
 		84361F89224E609E00766D04 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F88224E609E00766D04 /* Chat.swift */; };
 		84361F8B224E8A7900766D04 /* RoundedCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F8A224E8A7900766D04 /* RoundedCornerImageView.swift */; };
 		84361F8D224E8DD200766D04 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F8C224E8DD200766D04 /* ChatTableViewCell.swift */; };
+		8437924E224F48BE009F730B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437924D224F48BE009F730B /* ChatViewController.swift */; };
 		843EC949223CC82200AD2CA5 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */; };
 		843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */; };
 		843EC94D223CE80900AD2CA5 /* HideShowPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */; };
@@ -79,6 +80,7 @@
 		84361F88224E609E00766D04 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		84361F8A224E8A7900766D04 /* RoundedCornerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerImageView.swift; sourceTree = "<group>"; };
 		84361F8C224E8DD200766D04 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		8437924D224F48BE009F730B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
 		843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLineTextField.swift; sourceTree = "<group>"; };
 		843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideShowPasswordTextField.swift; sourceTree = "<group>"; };
@@ -131,6 +133,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8437924F224F4905009F730B /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				842956262243F50D002D88B8 /* MessagingViewController.swift */,
+				8437924D224F48BE009F730B /* ChatViewController.swift */,
+			);
+			path = Messaging;
+			sourceTree = "<group>";
+		};
 		8456AF8D2244C75A0009E68F /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,11 +223,11 @@
 				84DBBA14223BECFD00B5C9FF /* AppDelegate.swift */,
 				84DBBA16223BECFD00B5C9FF /* ViewController.swift */,
 				84B88FA6224D414600DE8A11 /* Welcome */,
+				8437924F224F4905009F730B /* Messaging */,
+				84B88FA1224D306100DE8A11 /* Trips */,
 				842956222243F3C1002D88B8 /* MenuViewController.swift */,
 				842956242243F4BE002D88B8 /* FeedViewController.swift */,
-				842956262243F50D002D88B8 /* MessagingViewController.swift */,
 				842956282243F54A002D88B8 /* ProfileViewController.swift */,
-				84B88FA1224D306100DE8A11 /* Trips */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -364,6 +375,7 @@
 				84BE6FBB224A5C5C00201881 /* TicketDetailViewController.swift in Sources */,
 				84361F89224E609E00766D04 /* Chat.swift in Sources */,
 				843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */,
+				8437924E224F48BE009F730B /* ChatViewController.swift in Sources */,
 				84E180B12246A7C70043FEEC /* CollectionPickerView.swift in Sources */,
 				84361F81224DE27F00766D04 /* TextInsetTextField.swift in Sources */,
 				84BE6FBF224A993400201881 /* DestinationChooseViewController.swift in Sources */,
