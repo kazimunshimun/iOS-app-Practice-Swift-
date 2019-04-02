@@ -16,6 +16,9 @@
         <array key="Poppins-Medium.otf">
             <string>Poppins-Medium</string>
         </array>
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Feed View Controller-->
@@ -52,6 +55,9 @@
                                         <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="8HN-Jc-Bvc" kind="show" id="8KG-Ze-FDY"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2We-Gh-AKu">
                                 <rect key="frame" x="0.0" y="137" width="375" height="530"/>
@@ -83,8 +89,73 @@
             </objects>
             <point key="canvasLocation" x="733.60000000000002" y="-1612.4437781109445"/>
         </scene>
+        <!--Search Feed View Controller-->
+        <scene sceneID="QSi-M8-KZr">
+            <objects>
+                <viewController id="8HN-Jc-Bvc" customClass="SearchFeedViewController" customModule="Backpack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eQ5-gW-0z5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rx6-Kh-0eA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdN-VU-zvJ">
+                                        <rect key="frame" x="6" y="13" width="44" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="Gc2-Mc-mkg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="arrow_back">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="8HN-Jc-Bvc" eventType="touchUpInside" id="odc-VG-aQm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pb-Oc-eEh">
+                                        <rect key="frame" x="335" y="13" width="24" height="24"/>
+                                        <state key="normal" image="filter"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9AK-Pd-epK">
+                                        <rect key="frame" x="58" y="15" width="269" height="20"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7Tk-jT-1pV"/>
+                                    <constraint firstItem="TdN-VU-zvJ" firstAttribute="centerY" secondItem="rx6-Kh-0eA" secondAttribute="centerY" id="8JM-S8-Q9Z"/>
+                                    <constraint firstItem="9AK-Pd-epK" firstAttribute="centerY" secondItem="rx6-Kh-0eA" secondAttribute="centerY" id="J34-eG-DdO"/>
+                                    <constraint firstItem="2Pb-Oc-eEh" firstAttribute="leading" secondItem="9AK-Pd-epK" secondAttribute="trailing" constant="8" id="Lup-MZ-hcx"/>
+                                    <constraint firstItem="2Pb-Oc-eEh" firstAttribute="centerY" secondItem="rx6-Kh-0eA" secondAttribute="centerY" id="QiF-gW-GxE"/>
+                                    <constraint firstItem="TdN-VU-zvJ" firstAttribute="leading" secondItem="rx6-Kh-0eA" secondAttribute="leading" constant="6" id="V1k-mR-UWs"/>
+                                    <constraint firstItem="9AK-Pd-epK" firstAttribute="leading" secondItem="TdN-VU-zvJ" secondAttribute="trailing" constant="8" id="oTv-jD-c6e"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Pb-Oc-eEh" secondAttribute="trailing" constant="16" id="yoh-tZ-IfB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rx6-Kh-0eA" firstAttribute="leading" secondItem="Qvd-XB-XZE" secondAttribute="leading" id="66g-5B-Cx2"/>
+                            <constraint firstItem="rx6-Kh-0eA" firstAttribute="top" secondItem="Qvd-XB-XZE" secondAttribute="top" id="FMA-X0-pQX"/>
+                            <constraint firstItem="Qvd-XB-XZE" firstAttribute="trailing" secondItem="rx6-Kh-0eA" secondAttribute="trailing" id="nsJ-s8-jzV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qvd-XB-XZE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvV-Bu-qny" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536.8" y="-1612.4437781109445"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="arrow_back" width="24" height="24"/>
+        <image name="filter" width="24" height="24"/>
         <image name="home_tab" width="18.5" height="17"/>
         <image name="home_tab_selected" width="24" height="24"/>
         <image name="search" width="24" height="24"/>

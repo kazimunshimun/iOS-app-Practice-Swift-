@@ -19,18 +19,30 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         feedTableView.dataSource = self
         
         feedTableView.register(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: "feedCell")
+        feedTableView.register(UINib(nibName: "PopularDestinationTableViewCell", bundle: nil), forCellReuseIdentifier: "popularDestinationCell")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2;
+        return 3;
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 420.0;
+        var cellWidth : CGFloat = 420.0;
+        if indexPath.row == 1 {
+            cellWidth = 260.0
+        }
+        return cellWidth;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedTableViewCell
+        var cell : UITableViewCell;
+        
+        if indexPath.row == 1 {
+            cell = tableView.dequeueReusableCell(withIdentifier: "popularDestinationCell") as! PopularDestinationTableViewCell
+        } else{
+            cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedTableViewCell
+        }
+        
         //cell.userNameLabel.text = "User name \(indexPath.row)"
         return cell;
     }

@@ -40,6 +40,7 @@
 		8456AF882244C5BC0009E68F /* Feeds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456AF872244C5BC0009E68F /* Feeds.storyboard */; };
 		8456AF8A2244C5C90009E68F /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456AF892244C5C90009E68F /* Messaging.storyboard */; };
 		8456AF8C2244C5D40009E68F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456AF8B2244C5D40009E68F /* Profile.storyboard */; };
+		848330922253A51400ABE48B /* SearchFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848330912253A51400ABE48B /* SearchFeedViewController.swift */; };
 		84AFE5FA224A067400505AA8 /* CreditCardInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFE5F9224A067400505AA8 /* CreditCardInputViewController.swift */; };
 		84B88FA3224D34B900DE8A11 /* PhoneNumberInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B88FA2224D34B900DE8A11 /* PhoneNumberInputViewController.swift */; };
 		84B88FA5224D34CC00DE8A11 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B88FA4224D34CC00DE8A11 /* ForgotPasswordViewController.swift */; };
@@ -102,6 +103,7 @@
 		8456AF872244C5BC0009E68F /* Feeds.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feeds.storyboard; sourceTree = "<group>"; };
 		8456AF892244C5C90009E68F /* Messaging.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messaging.storyboard; sourceTree = "<group>"; };
 		8456AF8B2244C5D40009E68F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		848330912253A51400ABE48B /* SearchFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeedViewController.swift; sourceTree = "<group>"; };
 		84AFE5F9224A067400505AA8 /* CreditCardInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInputViewController.swift; sourceTree = "<group>"; };
 		84B88FA2224D34B900DE8A11 /* PhoneNumberInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberInputViewController.swift; sourceTree = "<group>"; };
 		84B88FA4224D34CC00DE8A11 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				842956222243F3C1002D88B8 /* MenuViewController.swift */,
 				842956242243F4BE002D88B8 /* FeedViewController.swift */,
 				842956282243F54A002D88B8 /* ProfileViewController.swift */,
+				848330912253A51400ABE48B /* SearchFeedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				84BD3715223EBB60004E098D /* RoundedButton.swift in Sources */,
 				843EC94F223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift in Sources */,
 				8429562B2243F557002D88B8 /* TripsViewController.swift in Sources */,
+				848330922253A51400ABE48B /* SearchFeedViewController.swift in Sources */,
 				842956232243F3C1002D88B8 /* MenuViewController.swift in Sources */,
 				84361F87224E1D1E00766D04 /* InvitesViewController.swift in Sources */,
 				84361F83224E095700766D04 /* AddTripsPhotoViewController.swift in Sources */,
