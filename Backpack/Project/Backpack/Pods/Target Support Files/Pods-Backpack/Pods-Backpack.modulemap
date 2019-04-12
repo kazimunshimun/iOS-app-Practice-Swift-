@@ -1,0 +1,6 @@
+framework module Pods_Backpack {
+  umbrella header "Pods-Backpack-umbrella.h"
+
+  export *
+  module * { export * }
+}

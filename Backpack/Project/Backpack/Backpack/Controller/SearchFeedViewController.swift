@@ -10,9 +10,14 @@ import UIKit
 
 class SearchFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet weak var filterViewHeightConstrain: NSLayoutConstraint!
+    @IBOutlet weak var genderSelectionView: UIView!
+    @IBOutlet weak var ageRangeSelectionView: UIView!
     @IBOutlet weak var searchSegmentedControl: CustomSegmentedContrl!
     @IBOutlet weak var searchTableView: UITableView!
     
+    var isShowingFilter : Bool = true
     var isShowingPeople : Bool = false
     
     override func viewDidLoad() {
@@ -71,6 +76,22 @@ class SearchFeedViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBAction func backButtonPressed(_ sender: Any) {
         navigationController!.popViewController(animated: true)
+    }
+    
+    @IBAction func filterButtonPressed(_ sender: UIButton) {
+        if isShowingFilter {
+            isShowingFilter = false
+            filterButton.setImage(UIImage(named: "close"), for: .normal)
+            filterViewHeightConstrain.constant = 420
+            genderSelectionView.isHidden = false
+            ageRangeSelectionView.isHidden = false
+        } else {
+            filterButton.setImage(UIImage(named: "filter"), for: .normal)
+            isShowingFilter = true
+            filterViewHeightConstrain.constant = 110
+            genderSelectionView.isHidden = true
+            ageRangeSelectionView.isHidden = true
+        }
     }
     /*
     // MARK: - Navigation

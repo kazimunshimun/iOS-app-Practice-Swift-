@@ -345,6 +345,7 @@
 				84DBBA0D223BECFD00B5C9FF /* Sources */,
 				84DBBA0E223BECFD00B5C9FF /* Frameworks */,
 				84DBBA0F223BECFD00B5C9FF /* Resources */,
+				90912EFABA6EC2F09C0911F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -416,6 +417,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		90912EFABA6EC2F09C0911F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Backpack/Pods-Backpack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TTRangeSlider/TTRangeSlider.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTRangeSlider.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Backpack/Pods-Backpack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CFFC9D0DFD6FFD7148B3FB95 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

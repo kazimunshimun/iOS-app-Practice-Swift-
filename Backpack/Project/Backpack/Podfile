@@ -1,0 +1,10 @@
+platform :ios, '10.0'
+
+target 'Backpack' do
+
+  use_frameworks!
+
+    #pod 'XLPagerTabStrip', '~> 9.0'
+    pod “TTRangeSlider”
+
+end
