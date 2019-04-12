@@ -46,6 +46,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         //cell.userNameLabel.text = "User name \(indexPath.row)"
         return cell;
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Feeds", bundle: nil)
+        let fullPostViewController = storyBoard.instantiateViewController(withIdentifier: "fullPostView") as! PostFullViewController
+        self.show(fullPostViewController, sender: nil)
+        // self.performSegue(withIdentifier: "showChatView", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     /*
     // MARK: - Navigation
 

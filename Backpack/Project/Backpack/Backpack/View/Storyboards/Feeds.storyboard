@@ -339,13 +339,74 @@
             </objects>
             <point key="canvasLocation" x="1536.8" y="-1612.4437781109445"/>
         </scene>
+        <!--Post Full View Controller-->
+        <scene sceneID="j1R-G6-57G">
+            <objects>
+                <viewController storyboardIdentifier="fullPostView" id="ZXE-Zf-7B8" customClass="PostFullViewController" customModule="Backpack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LgA-0T-mZU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oliver" translatesAutoresizingMaskIntoConstraints="NO" id="tcg-UB-L0I">
+                                <rect key="frame" x="0.0" y="-24" width="375" height="492"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="492" id="hSm-oZ-n7x"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwl-sg-g7C">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9m-pp-aTo">
+                                        <rect key="frame" x="6" y="11" width="76" height="28"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="76" id="xBp-DS-Vdg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="back" image="white_back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="ZXE-Zf-7B8" eventType="touchUpInside" id="Im1-pf-dSZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="N9m-pp-aTo" firstAttribute="centerY" secondItem="qwl-sg-g7C" secondAttribute="centerY" id="BSB-5T-1gf"/>
+                                    <constraint firstItem="N9m-pp-aTo" firstAttribute="leading" secondItem="qwl-sg-g7C" secondAttribute="leading" constant="6" id="RY5-Nz-Qba"/>
+                                    <constraint firstAttribute="height" constant="50" id="kKi-bG-hul"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tcg-UB-L0I" firstAttribute="leading" secondItem="rdO-c5-30J" secondAttribute="leading" id="2WB-7h-tHO"/>
+                            <constraint firstItem="qwl-sg-g7C" firstAttribute="top" secondItem="rdO-c5-30J" secondAttribute="top" id="A46-oN-yO5"/>
+                            <constraint firstItem="rdO-c5-30J" firstAttribute="top" secondItem="tcg-UB-L0I" secondAttribute="top" constant="44" id="adW-BP-iJ7"/>
+                            <constraint firstItem="rdO-c5-30J" firstAttribute="trailing" secondItem="qwl-sg-g7C" secondAttribute="trailing" id="cg1-j5-k72"/>
+                            <constraint firstItem="qwl-sg-g7C" firstAttribute="leading" secondItem="rdO-c5-30J" secondAttribute="leading" id="hfQ-0H-VM4"/>
+                            <constraint firstItem="rdO-c5-30J" firstAttribute="trailing" secondItem="tcg-UB-L0I" secondAttribute="trailing" id="pzW-Vo-rzC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rdO-c5-30J"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0s-m5-8QR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2384.8000000000002" y="-1612.4437781109445"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow_back" width="24" height="24"/>
         <image name="filter" width="24" height="24"/>
         <image name="home_tab" width="18.5" height="17"/>
         <image name="home_tab_selected" width="24" height="24"/>
+        <image name="oliver" width="375" height="492"/>
         <image name="search" width="24" height="24"/>
+        <image name="white_back" width="24" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pAf-RV-qqL"/>
