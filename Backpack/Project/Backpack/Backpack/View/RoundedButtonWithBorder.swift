@@ -10,17 +10,17 @@ import UIKit
 
 @IBDesignable
 class RoundedButtonWithBorder: UIButton {
-    @IBInspectable public var borderColor:UIColor? {
+    @IBInspectable public var borderColor : UIColor? {
         didSet {
             layer.borderColor = borderColor?.cgColor
         }
     }
-    @IBInspectable public var borderWidth:CGFloat = 0 {
+    @IBInspectable public var borderWidth : CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth
         }
     }
-    @IBInspectable public var cornerRadius:CGFloat {
+    @IBInspectable public var cornerRadius : CGFloat {
         get {
             return layer.cornerRadius
         }

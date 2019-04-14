@@ -38,7 +38,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         var cell : UITableViewCell;
         
         if indexPath.row == 1 {
-            cell = tableView.dequeueReusableCell(withIdentifier: "popularDestinationCell") as! PopularDestinationTableViewCell
+            cell = tableView.dequeueReusableCell(withIdentifier: "popularCell2") as! PopularDestinationTableViewCell2
         } else{
             cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedTableViewCell
         }

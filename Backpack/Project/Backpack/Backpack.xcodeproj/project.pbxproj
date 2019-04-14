@@ -16,6 +16,9 @@
 		8429562B2243F557002D88B8 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429562A2243F557002D88B8 /* TripsViewController.swift */; };
 		843379CF22414F2B0080458A /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843379CE22414F2B0080458A /* Onboarding.storyboard */; };
 		843379D1224151240080458A /* TabMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843379D0224151240080458A /* TabMenu.storyboard */; };
+		8434637D22638D68005F77B0 /* PopularDestinationTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434637C22638D68005F77B0 /* PopularDestinationTableViewCell2.swift */; };
+		8434637F22639E70005F77B0 /* DestinationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434637E22639E70005F77B0 /* DestinationCollectionViewCell.swift */; };
+		843463812263A262005F77B0 /* PopularDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843463802263A262005F77B0 /* PopularDestination.swift */; };
 		8434DFD7225FAAFF0069CD1D /* CustomSegmentedContrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434DFD6225FAAFF0069CD1D /* CustomSegmentedContrl.swift */; };
 		8434DFDA225FAFD70069CD1D /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434DFD8225FAFD70069CD1D /* PeopleTableViewCell.swift */; };
 		8434DFDB225FAFD70069CD1D /* PeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8434DFD9225FAFD70069CD1D /* PeopleTableViewCell.xib */; };
@@ -85,6 +88,9 @@
 		8429562A2243F557002D88B8 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		843379CE22414F2B0080458A /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		843379D0224151240080458A /* TabMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabMenu.storyboard; sourceTree = "<group>"; };
+		8434637C22638D68005F77B0 /* PopularDestinationTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDestinationTableViewCell2.swift; sourceTree = "<group>"; };
+		8434637E22639E70005F77B0 /* DestinationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCollectionViewCell.swift; sourceTree = "<group>"; };
+		843463802263A262005F77B0 /* PopularDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDestination.swift; sourceTree = "<group>"; };
 		8434DFD6225FAAFF0069CD1D /* CustomSegmentedContrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedContrl.swift; sourceTree = "<group>"; };
 		8434DFD8225FAFD70069CD1D /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		8434DFD9225FAFD70069CD1D /* PeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleTableViewCell.xib; sourceTree = "<group>"; };
@@ -179,6 +185,8 @@
 				84379255224FCE2B009F730B /* PopularDestinationTableViewCell.xib */,
 				8434DFD8225FAFD70069CD1D /* PeopleTableViewCell.swift */,
 				8434DFD9225FAFD70069CD1D /* PeopleTableViewCell.xib */,
+				8434637C22638D68005F77B0 /* PopularDestinationTableViewCell2.swift */,
+				8434637E22639E70005F77B0 /* DestinationCollectionViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -313,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				84361F88224E609E00766D04 /* Chat.swift */,
+				843463802263A262005F77B0 /* PopularDestination.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -508,6 +517,8 @@
 				843B190A2261C43200F59395 /* RoundedCornerView.swift in Sources */,
 				84E180B12246A7C70043FEEC /* CollectionPickerView.swift in Sources */,
 				84361F81224DE27F00766D04 /* TextInsetTextField.swift in Sources */,
+				843463812263A262005F77B0 /* PopularDestination.swift in Sources */,
+				8434637D22638D68005F77B0 /* PopularDestinationTableViewCell2.swift in Sources */,
 				84BE6FBF224A993400201881 /* DestinationChooseViewController.swift in Sources */,
 				8413B41F224BDCDD00DB001B /* BookTicketViewController.swift in Sources */,
 				8437925A224FDD26009F730B /* TopLeftRightRadiusImageView.swift in Sources */,
@@ -526,6 +537,7 @@
 				84B88FA3224D34B900DE8A11 /* PhoneNumberInputViewController.swift in Sources */,
 				84DBBA35223C089300B5C9FF /* SignUpViewController.swift in Sources */,
 				8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */,
+				8434637F22639E70005F77B0 /* DestinationCollectionViewCell.swift in Sources */,
 				84379252224FCE02009F730B /* FeedTableViewCell.swift in Sources */,
 				84BE6FC1224A9DA800201881 /* TripDetailsInputViewController.swift in Sources */,
 				843EC94D223CE80900AD2CA5 /* HideShowPasswordTextField.swift in Sources */,
