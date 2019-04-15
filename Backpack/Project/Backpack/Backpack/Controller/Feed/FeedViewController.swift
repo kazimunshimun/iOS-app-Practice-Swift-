@@ -35,16 +35,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell : UITableViewCell;
         
         if indexPath.row == 1 {
-            cell = tableView.dequeueReusableCell(withIdentifier: "popularCell2") as! PopularDestinationTableViewCell2
+            let cell = tableView.dequeueReusableCell(withIdentifier: "popularCell2") as! PopularDestinationTableViewCell2
+            cell.destinationArray = [PopularDestination(image: "bali", name: "BALI"),
+                                     PopularDestination(image: "japan", name: "JAPAN"),PopularDestination(image: "finland", name: "FINLAND")]
+            return cell;
         } else{
-            cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedTableViewCell
+            return cell;
         }
-        
-        //cell.userNameLabel.text = "User name \(indexPath.row)"
-        return cell;
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

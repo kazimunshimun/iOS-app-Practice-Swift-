@@ -10,8 +10,7 @@ import UIKit
 
 class PopularDestinationTableViewCell2: UITableViewCell {
     
-    var destinationArray : [PopularDestination] = [PopularDestination(image: "bali", name: "BALI"),
-    PopularDestination(image: "japan", name: "JAPAN"),PopularDestination(image: "finland", name: "FINLAND")]
+    var destinationArray : [PopularDestination] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()

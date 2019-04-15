@@ -8,15 +8,26 @@
 
 import UIKit
 
-class TripsViewController: UIViewController {
+class TripsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    @IBOutlet weak var requestCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        requestCollectionView.delegate = self
+        requestCollectionView.dataSource = self
     }
     
-
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tripRequestCell", for: indexPath) as! TripRequestCollectionViewCell
+        return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
     /*
     // MARK: - Navigation
 
