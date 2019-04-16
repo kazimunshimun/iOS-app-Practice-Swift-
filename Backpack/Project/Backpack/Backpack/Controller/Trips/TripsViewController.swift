@@ -11,17 +11,26 @@ import UIKit
 class TripsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var requestCollectionView: UICollectionView!
+    @IBOutlet weak var invitesCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         requestCollectionView.delegate = self
         requestCollectionView.dataSource = self
+        
+        invitesCollectionView.delegate = self
+        invitesCollectionView.dataSource = self
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tripRequestCell", for: indexPath) as! TripRequestCollectionViewCell
-        return cell
+        if collectionView == requestCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tripRequestCell", for: indexPath) as! TripRequestCollectionViewCell
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "invitesCell", for: indexPath) as! TripRequestCollectionViewCell
+            return cell
+        }
     }
     
     
