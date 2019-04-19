@@ -295,6 +295,7 @@
                     </tabBarItem>
                     <size key="freeformSize" width="375" height="1014"/>
                     <connections>
+                        <outlet property="followersView" destination="HcG-mf-Ksj" id="fGN-ks-wHh"/>
                         <outlet property="tripsTableViewController" destination="X59-75-G6I" id="zEJ-gT-HF5"/>
                     </connections>
                 </viewController>
@@ -302,8 +303,88 @@
             </objects>
             <point key="canvasLocation" x="733.60000000000002" y="394.00299850074964"/>
         </scene>
+        <!--Follow View Controller-->
+        <scene sceneID="SKO-vV-spG">
+            <objects>
+                <viewController storyboardIdentifier="followController" id="A1j-az-x4l" customClass="FollowViewController" customModule="Backpack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8tq-fj-3CQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rO-rk-weh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6g-1V-Qt4">
+                                        <rect key="frame" x="6" y="13" width="76" height="24"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="76" id="rLS-At-AWq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="back" image="arrow_back">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="A1j-az-x4l" eventType="touchUpInside" id="uSC-G3-Rjh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DPE-7t-xb2"/>
+                                    <constraint firstItem="l6g-1V-Qt4" firstAttribute="centerY" secondItem="3rO-rk-weh" secondAttribute="centerY" id="YDv-r1-f8i"/>
+                                    <constraint firstItem="l6g-1V-Qt4" firstAttribute="leading" secondItem="3rO-rk-weh" secondAttribute="leading" constant="6" id="otF-Rx-pvf"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kri-6c-d8z">
+                                <rect key="frame" x="24" y="90" width="147" height="42"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="125 People are following Lisa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EL-v2-Sab">
+                                <rect key="frame" x="24" y="132" width="168" height="17"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                <color key="textColor" red="0.62352941176470589" green="0.62352941176470589" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ocm-G3-VKV">
+                                <rect key="frame" x="8" y="157" width="359" height="490"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hwB-vc-qdb" firstAttribute="bottom" secondItem="Ocm-G3-VKV" secondAttribute="bottom" constant="20" id="0eA-LQ-RFk"/>
+                            <constraint firstItem="hwB-vc-qdb" firstAttribute="trailing" secondItem="3rO-rk-weh" secondAttribute="trailing" id="26j-nV-MWr"/>
+                            <constraint firstItem="Ocm-G3-VKV" firstAttribute="leading" secondItem="hwB-vc-qdb" secondAttribute="leading" constant="8" id="8He-Aw-WeH"/>
+                            <constraint firstItem="3rO-rk-weh" firstAttribute="top" secondItem="hwB-vc-qdb" secondAttribute="top" id="Gh1-Ot-lBM"/>
+                            <constraint firstItem="Ocm-G3-VKV" firstAttribute="top" secondItem="3EL-v2-Sab" secondAttribute="bottom" constant="8" id="MNO-y3-f3J"/>
+                            <constraint firstItem="3rO-rk-weh" firstAttribute="leading" secondItem="hwB-vc-qdb" secondAttribute="leading" id="Ys5-HX-9QG"/>
+                            <constraint firstItem="3EL-v2-Sab" firstAttribute="leading" secondItem="hwB-vc-qdb" secondAttribute="leading" constant="24" id="h9S-c7-NeM"/>
+                            <constraint firstItem="Kri-6c-d8z" firstAttribute="leading" secondItem="hwB-vc-qdb" secondAttribute="leading" constant="24" id="iTv-EA-aN2"/>
+                            <constraint firstItem="hwB-vc-qdb" firstAttribute="trailing" secondItem="Ocm-G3-VKV" secondAttribute="trailing" constant="8" id="ocZ-19-5Ad"/>
+                            <constraint firstItem="3EL-v2-Sab" firstAttribute="top" secondItem="Kri-6c-d8z" secondAttribute="bottom" id="q01-03-525"/>
+                            <constraint firstItem="Kri-6c-d8z" firstAttribute="top" secondItem="3rO-rk-weh" secondAttribute="bottom" constant="20" id="vNM-c0-LJa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hwB-vc-qdb"/>
+                    </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="3EL-v2-Sab" id="PAe-pr-MPE"/>
+                        <outlet property="peopleTableView" destination="Ocm-G3-VKV" id="It0-uJ-eUx"/>
+                        <outlet property="titleLabel" destination="Kri-6c-d8z" id="Tpz-1A-YtL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RDx-YO-iRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661.5999999999999" y="237.93103448275863"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="arrow_back" width="24" height="24"/>
         <image name="profile_image_1" width="375" height="681"/>
         <image name="rating" width="46" height="10.5"/>
         <image name="user_tab" width="16" height="18"/>

@@ -10,6 +10,11 @@ import UIKit
 
 class PeopleTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var profileImageView: RoundedCornerImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var followButton: RoundedButtonWithBorder!
+    @IBOutlet weak var followedDoneButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

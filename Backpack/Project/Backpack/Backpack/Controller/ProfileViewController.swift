@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var followersView: UIView!
     @IBOutlet weak var tripsTableViewController: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         tripsTableViewController.delegate = self
         tripsTableViewController.dataSource = self
         tripsTableViewController.register(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: "feedCell")
+        
+        followersView.addTapGesture(tapNumber: 1, target: self, action: #selector(followersViewTouched))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,6 +44,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.show(fullPostViewController, sender: nil)
         // self.performSegue(withIdentifier: "showChatView", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    @objc func followersViewTouched() -> Void {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        let followViewController = storyBoard.instantiateViewController(withIdentifier: "followController")
+        self.show(followViewController, sender: nil)
     }
     /*
     // MARK: - Navigation
