@@ -77,6 +77,7 @@
 		84DBBA35223C089300B5C9FF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBBA34223C089300B5C9FF /* SignUpViewController.swift */; };
 		84E180B12246A7C70043FEEC /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E180B02246A7C70043FEEC /* CollectionPickerView.swift */; };
 		84E180B32246A8190043FEEC /* CollectionPickerViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E180B22246A8190043FEEC /* CollectionPickerViewFlowLayout.swift */; };
+		84FF5D6B2269FFDC009339E2 /* RoundedCornerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF5D6A2269FFDC009339E2 /* RoundedCornerScrollView.swift */; };
 		E6250BE742A2431B2461B0F2 /* Pods_Backpack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F4E11F25CD6C93FAE7C136 /* Pods_Backpack.framework */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 		84DBBA34223C089300B5C9FF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		84E180B02246A7C70043FEEC /* CollectionPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
 		84E180B22246A8190043FEEC /* CollectionPickerViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPickerViewFlowLayout.swift; sourceTree = "<group>"; };
+		84FF5D6A2269FFDC009339E2 /* RoundedCornerScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerScrollView.swift; sourceTree = "<group>"; };
 		93F4E11F25CD6C93FAE7C136 /* Pods_Backpack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Backpack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80AC28C4A7FC74443EE4010 /* Pods-Backpack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backpack.debug.xcconfig"; path = "Target Support Files/Pods-Backpack/Pods-Backpack.debug.xcconfig"; sourceTree = "<group>"; };
 		E809E55282AC32DFAF41A080 /* Pods-Backpack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backpack.release.xcconfig"; path = "Target Support Files/Pods-Backpack/Pods-Backpack.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843726742269FF3100F4C7B2 /* Rounded Views */ = {
+			isa = PBXGroup;
+			children = (
+				84379259224FDD26009F730B /* TopLeftRightRadiusImageView.swift */,
+				84BD3712223EBACA004E098D /* RoundedButtonWithBorder.swift */,
+				84BD3714223EBB60004E098D /* RoundedButton.swift */,
+				84BD3716223EBD65004E098D /* RoundedButtonWithShadow.swift */,
+				8456AF832244C0FC0009E68F /* RoundedViewWithShadow.swift */,
+				84BE6FBC224A5E9800201881 /* RoundedView.swift */,
+				84361F8A224E8A7900766D04 /* RoundedCornerImageView.swift */,
+				843B19092261C43200F59395 /* RoundedCornerView.swift */,
+				8439183A2264E6F2005D2BA9 /* RoundedBackgroundLabel.swift */,
+				84FF5D6A2269FFDC009339E2 /* RoundedCornerScrollView.swift */,
+			);
+			path = "Rounded Views";
+			sourceTree = "<group>";
+		};
 		8437924F224F4905009F730B /* Messaging */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,19 +325,11 @@
 				843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */,
 				843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */,
 				843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */,
-				84BD3712223EBACA004E098D /* RoundedButtonWithBorder.swift */,
-				84BD3714223EBB60004E098D /* RoundedButton.swift */,
-				84BD3716223EBD65004E098D /* RoundedButtonWithShadow.swift */,
-				8456AF832244C0FC0009E68F /* RoundedViewWithShadow.swift */,
+				843726742269FF3100F4C7B2 /* Rounded Views */,
 				84E180B02246A7C70043FEEC /* CollectionPickerView.swift */,
 				84E180B22246A8190043FEEC /* CollectionPickerViewFlowLayout.swift */,
-				84BE6FBC224A5E9800201881 /* RoundedView.swift */,
 				84361F80224DE27F00766D04 /* TextInsetTextField.swift */,
-				84361F8A224E8A7900766D04 /* RoundedCornerImageView.swift */,
-				84379259224FDD26009F730B /* TopLeftRightRadiusImageView.swift */,
 				8434DFD6225FAAFF0069CD1D /* CustomSegmentedContrl.swift */,
-				843B19092261C43200F59395 /* RoundedCornerView.swift */,
-				8439183A2264E6F2005D2BA9 /* RoundedBackgroundLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -543,6 +554,7 @@
 				8456AF842244C0FC0009E68F /* RoundedViewWithShadow.swift in Sources */,
 				84DBBA15223BECFD00B5C9FF /* AppDelegate.swift in Sources */,
 				84B88FA3224D34B900DE8A11 /* PhoneNumberInputViewController.swift in Sources */,
+				84FF5D6B2269FFDC009339E2 /* RoundedCornerScrollView.swift in Sources */,
 				84DBBA35223C089300B5C9FF /* SignUpViewController.swift in Sources */,
 				8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */,
 				8434637F22639E70005F77B0 /* DestinationCollectionViewCell.swift in Sources */,
