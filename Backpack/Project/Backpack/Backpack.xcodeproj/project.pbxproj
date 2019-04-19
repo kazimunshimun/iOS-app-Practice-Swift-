@@ -78,6 +78,7 @@
 		84E180B12246A7C70043FEEC /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E180B02246A7C70043FEEC /* CollectionPickerView.swift */; };
 		84E180B32246A8190043FEEC /* CollectionPickerViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E180B22246A8190043FEEC /* CollectionPickerViewFlowLayout.swift */; };
 		84FF5D6B2269FFDC009339E2 /* RoundedCornerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF5D6A2269FFDC009339E2 /* RoundedCornerScrollView.swift */; };
+		84FF5D6D226A11AD009339E2 /* ProfileTripsSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF5D6C226A11AD009339E2 /* ProfileTripsSegmentedControl.swift */; };
 		E6250BE742A2431B2461B0F2 /* Pods_Backpack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F4E11F25CD6C93FAE7C136 /* Pods_Backpack.framework */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +156,7 @@
 		84E180B02246A7C70043FEEC /* CollectionPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
 		84E180B22246A8190043FEEC /* CollectionPickerViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPickerViewFlowLayout.swift; sourceTree = "<group>"; };
 		84FF5D6A2269FFDC009339E2 /* RoundedCornerScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerScrollView.swift; sourceTree = "<group>"; };
+		84FF5D6C226A11AD009339E2 /* ProfileTripsSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTripsSegmentedControl.swift; sourceTree = "<group>"; };
 		93F4E11F25CD6C93FAE7C136 /* Pods_Backpack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Backpack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80AC28C4A7FC74443EE4010 /* Pods-Backpack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backpack.debug.xcconfig"; path = "Target Support Files/Pods-Backpack/Pods-Backpack.debug.xcconfig"; sourceTree = "<group>"; };
 		E809E55282AC32DFAF41A080 /* Pods-Backpack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Backpack.release.xcconfig"; path = "Target Support Files/Pods-Backpack/Pods-Backpack.release.xcconfig"; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 				84E180B22246A8190043FEEC /* CollectionPickerViewFlowLayout.swift */,
 				84361F80224DE27F00766D04 /* TextInsetTextField.swift */,
 				8434DFD6225FAAFF0069CD1D /* CustomSegmentedContrl.swift */,
+				84FF5D6C226A11AD009339E2 /* ProfileTripsSegmentedControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				84379256224FCE2B009F730B /* PopularDestinationTableViewCell.swift in Sources */,
 				84BE6FBD224A5E9800201881 /* RoundedView.swift in Sources */,
 				84DBBA31223C083600B5C9FF /* WelcomeViewController.swift in Sources */,
+				84FF5D6D226A11AD009339E2 /* ProfileTripsSegmentedControl.swift in Sources */,
 				842956292243F54A002D88B8 /* ProfileViewController.swift in Sources */,
 				84BE6FBB224A5C5C00201881 /* TicketDetailViewController.swift in Sources */,
 				84361F89224E609E00766D04 /* Chat.swift in Sources */,

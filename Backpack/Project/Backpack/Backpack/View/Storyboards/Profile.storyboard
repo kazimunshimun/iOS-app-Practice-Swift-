@@ -25,7 +25,7 @@
             <objects>
                 <viewController storyboardIdentifier="profileView" id="Axu-JJ-Sss" customClass="ProfileViewController" customModule="Backpack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iuY-ba-6Kj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1014"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image_1" translatesAutoresizingMaskIntoConstraints="NO" id="F9e-dV-vcz">
@@ -35,10 +35,10 @@
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8V3-XD-uMh">
-                                <rect key="frame" x="0.0" y="156" width="375" height="844"/>
+                                <rect key="frame" x="0.0" y="156" width="375" height="858"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEc-Q4-vUE" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="320" width="375" height="936"/>
+                                        <rect key="frame" x="0.0" y="320" width="375" height="950"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q18-gB-lZx">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
@@ -71,7 +71,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4F-Ux-ERy">
-                                                <rect key="frame" x="0.0" y="100" width="375" height="836"/>
+                                                <rect key="frame" x="0.0" y="100" width="375" height="850"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdJ-h0-3BV">
                                                         <rect key="frame" x="54" y="16" width="267" height="42"/>
@@ -188,11 +188,43 @@
                                                             <constraint firstItem="HcG-mf-Ksj" firstAttribute="top" secondItem="fdJ-h0-3BV" secondAttribute="top" id="oUi-zc-kh8"/>
                                                         </constraints>
                                                     </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sl-9g-MjT" customClass="ProfileTripsSegmentedControl" customModule="Backpack" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="66" width="359" height="60"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="4nK-MU-ABc"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                                <color key="value" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectorColor">
+                                                                <color key="value" red="0.22352941176470587" green="0.3529411764705882" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectorTextColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectorBackgroundColor">
+                                                                <color key="value" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X59-75-G6I">
+                                                        <rect key="frame" x="8" y="134" width="359" height="716"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </tableView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="X59-75-G6I" secondAttribute="bottom" id="B39-TW-OHL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="X59-75-G6I" secondAttribute="trailing" constant="8" id="IQP-FC-0Uz"/>
                                                     <constraint firstItem="fdJ-h0-3BV" firstAttribute="top" secondItem="u4F-Ux-ERy" secondAttribute="top" constant="16" id="J0J-di-hiy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7sl-9g-MjT" secondAttribute="trailing" constant="8" id="PWJ-Ff-fFa"/>
+                                                    <constraint firstItem="X59-75-G6I" firstAttribute="top" secondItem="7sl-9g-MjT" secondAttribute="bottom" constant="8" id="Ztd-9W-b6F"/>
+                                                    <constraint firstItem="7sl-9g-MjT" firstAttribute="leading" secondItem="u4F-Ux-ERy" secondAttribute="leading" constant="8" id="cDE-NY-j8Z"/>
                                                     <constraint firstItem="fdJ-h0-3BV" firstAttribute="centerX" secondItem="u4F-Ux-ERy" secondAttribute="centerX" id="j4W-zq-5QU"/>
+                                                    <constraint firstItem="X59-75-G6I" firstAttribute="leading" secondItem="u4F-Ux-ERy" secondAttribute="leading" constant="8" id="o0H-ow-pna"/>
+                                                    <constraint firstItem="7sl-9g-MjT" firstAttribute="top" secondItem="fdJ-h0-3BV" secondAttribute="bottom" constant="8" id="zvo-4x-BCt"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -261,7 +293,10 @@
                     <tabBarItem key="tabBarItem" title="" image="user_tab" selectedImage="user_tab_selected" id="RhA-Fc-EEy">
                         <color key="badgeColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="1014"/>
+                    <connections>
+                        <outlet property="tripsTableViewController" destination="X59-75-G6I" id="zEJ-gT-HF5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOo-Yj-5xO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
