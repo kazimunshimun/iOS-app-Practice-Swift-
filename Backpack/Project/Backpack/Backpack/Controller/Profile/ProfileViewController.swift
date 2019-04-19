@@ -11,6 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var followersView: UIView!
+    @IBOutlet weak var followingView: UIView!
     @IBOutlet weak var tripsTableViewController: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         tripsTableViewController.register(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: "feedCell")
         
         followersView.addTapGesture(tapNumber: 1, target: self, action: #selector(followersViewTouched))
+        followingView.addTapGesture(tapNumber: 1, target: self, action: #selector(followersViewTouched))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

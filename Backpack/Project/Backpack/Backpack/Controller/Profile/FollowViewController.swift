@@ -21,6 +21,7 @@ class FollowViewController: UIViewController, UITableViewDelegate, UITableViewDa
                               People(name: "Jennifer", imageName: "jennifer_pp", isFollwed: true),
                               People(name: "Travis", imageName: "travis_pp", isFollwed: false),
                               People(name: "Lisa", imageName: "lisa_pp", isFollwed: true)]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

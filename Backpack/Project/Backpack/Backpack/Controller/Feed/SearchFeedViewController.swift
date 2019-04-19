@@ -20,6 +20,14 @@ class SearchFeedViewController: UIViewController, UITableViewDelegate, UITableVi
     var isShowingFilter : Bool = true
     var isShowingPeople : Bool = false
     
+    let peoples : [People] = [People(name: "Jennifer", imageName: "jennifer_pp", isFollwed: true),
+                              People(name: "Alex", imageName: "alex_pp", isFollwed: false),
+                              People(name: "Lisa", imageName: "lisa_pp", isFollwed: false),
+                              People(name: "Sandra", imageName: "sandra_pp", isFollwed: true),
+                              People(name: "Mike", imageName: "mike_pp", isFollwed: false),
+                              People(name: "Travis", imageName: "travis_pp", isFollwed: false),
+                              People(name: "Lisa", imageName: "lisa_pp", isFollwed: true)]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,7 +57,13 @@ class SearchFeedViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3;
+        var rowCount : Int
+        if isShowingPeople {
+            rowCount = peoples.count
+        } else {
+            rowCount = 3
+        }
+        return rowCount;
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -61,17 +75,27 @@ class SearchFeedViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell : UITableViewCell;
+        //var cell : UITableViewCell;
         
         if isShowingPeople {
-            cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell") as! PeopleTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell") as! PeopleTableViewCell
+            let people = peoples[indexPath.row]
+            
+            cell.profileImageView?.image = UIImage(named: people.imageName)
+            cell.nameLabel.text = people.name
+            
+            if people.isFollwed {
+                cell.followedDoneButton.isHidden = false
+                cell.followButton.isHidden = true
+            } else {
+                cell.followedDoneButton.isHidden = true
+                cell.followButton.isHidden = false
+            }
+            return cell
         } else {
-            cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedTableViewCell
+            return cell
         }
-        
-        
-        //cell.userNameLabel.text = "User name \(indexPath.row)"
-        return cell;
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {

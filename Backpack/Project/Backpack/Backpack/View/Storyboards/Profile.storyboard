@@ -37,7 +37,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8V3-XD-uMh">
                                 <rect key="frame" x="0.0" y="156" width="375" height="858"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEc-Q4-vUE" userLabel="Content View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEc-Q4-vUE" userLabel="Content View" customClass="RoundedCornerView" customModule="Backpack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="320" width="375" height="950"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q18-gB-lZx">
@@ -238,6 +238,13 @@
                                             <constraint firstAttribute="trailing" secondItem="u4F-Ux-ERy" secondAttribute="trailing" id="uUM-vI-GnK"/>
                                             <constraint firstItem="u4F-Ux-ERy" firstAttribute="leading" secondItem="ZEc-Q4-vUE" secondAttribute="leading" id="xtS-aV-LTa"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -296,6 +303,7 @@
                     <size key="freeformSize" width="375" height="1014"/>
                     <connections>
                         <outlet property="followersView" destination="HcG-mf-Ksj" id="fGN-ks-wHh"/>
+                        <outlet property="followingView" destination="6uf-Fg-nMO" id="f3x-oE-OMo"/>
                         <outlet property="tripsTableViewController" destination="X59-75-G6I" id="zEJ-gT-HF5"/>
                     </connections>
                 </viewController>

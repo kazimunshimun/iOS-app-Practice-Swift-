@@ -320,8 +320,7 @@
 				84B88FA1224D306100DE8A11 /* Trips */,
 				8467334F2260995700EACAD9 /* Feed */,
 				842956222243F3C1002D88B8 /* MenuViewController.swift */,
-				842956282243F54A002D88B8 /* ProfileViewController.swift */,
-				84FF5D70226A230D009339E2 /* FollowViewController.swift */,
+				84FF5D74226A3AB3009339E2 /* Profile */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -367,6 +366,15 @@
 				84DBBA20223BECFF00B5C9FF /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		84FF5D74226A3AB3009339E2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				842956282243F54A002D88B8 /* ProfileViewController.swift */,
+				84FF5D70226A230D009339E2 /* FollowViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		AB85DBDD13EAECB64FF0BA5F /* Frameworks */ = {
