@@ -10,13 +10,26 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var followButton: RoundedButtonWithBorder!
+    @IBOutlet weak var settingsButton: RoundedButtonWithBorder!
+    @IBOutlet weak var profileScrollView: UIScrollView!
     @IBOutlet weak var followersView: UIView!
     @IBOutlet weak var followingView: UIView!
     @IBOutlet weak var tripsTableViewController: UITableView!
+    
+    var isOwnProfile : Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+        if isOwnProfile {
+            followButton.isHidden = true
+            settingsButton.isHidden = false
+        } else {
+            followButton.isHidden = false
+            settingsButton.isHidden = true
+        }
+        
         tripsTableViewController.delegate = self
         tripsTableViewController.dataSource = self
         tripsTableViewController.register(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: "feedCell")

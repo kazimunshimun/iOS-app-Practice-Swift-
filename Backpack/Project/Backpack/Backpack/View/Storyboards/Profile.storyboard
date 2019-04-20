@@ -273,12 +273,60 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gJ-L3-mM2" customClass="RoundedButtonWithBorder" customModule="Backpack" customModuleProvider="target">
+                                        <rect key="frame" x="287" y="9" width="72" height="32"/>
+                                        <color key="backgroundColor" red="0.22352941179999999" green="0.35294117650000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="4EE-wh-J9v"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
+                                        <state key="normal" title="Follow">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvg-Yo-O5E" customClass="RoundedButtonWithBorder" customModule="Backpack" customModuleProvider="target">
+                                        <rect key="frame" x="269" y="9" width="90" height="32"/>
+                                        <color key="backgroundColor" red="0.22352941179999999" green="0.35294117650000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="eoS-uw-1os"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8gJ-L3-mM2" secondAttribute="trailing" constant="16" id="67h-xP-0cO"/>
                                     <constraint firstItem="dZh-T1-tSV" firstAttribute="leading" secondItem="hGu-bh-6SL" secondAttribute="leading" constant="6" id="6ih-qf-Xt5"/>
                                     <constraint firstAttribute="height" constant="50" id="Gui-Xa-rQR"/>
+                                    <constraint firstItem="8gJ-L3-mM2" firstAttribute="centerY" secondItem="hGu-bh-6SL" secondAttribute="centerY" id="Mdm-dj-0Ue"/>
+                                    <constraint firstItem="uvg-Yo-O5E" firstAttribute="centerY" secondItem="hGu-bh-6SL" secondAttribute="centerY" id="YTE-j6-jF0"/>
                                     <constraint firstItem="dZh-T1-tSV" firstAttribute="centerY" secondItem="hGu-bh-6SL" secondAttribute="centerY" id="Zg1-IX-2Zu"/>
+                                    <constraint firstAttribute="trailing" secondItem="uvg-Yo-O5E" secondAttribute="trailing" constant="16" id="xc7-h9-oKT"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -302,8 +350,11 @@
                     </tabBarItem>
                     <size key="freeformSize" width="375" height="1014"/>
                     <connections>
+                        <outlet property="followButton" destination="8gJ-L3-mM2" id="z97-Fz-JAR"/>
                         <outlet property="followersView" destination="HcG-mf-Ksj" id="fGN-ks-wHh"/>
                         <outlet property="followingView" destination="6uf-Fg-nMO" id="f3x-oE-OMo"/>
+                        <outlet property="profileScrollView" destination="8V3-XD-uMh" id="6Jh-RP-1kd"/>
+                        <outlet property="settingsButton" destination="uvg-Yo-O5E" id="4su-Rn-xl4"/>
                         <outlet property="tripsTableViewController" destination="X59-75-G6I" id="zEJ-gT-HF5"/>
                     </connections>
                 </viewController>
