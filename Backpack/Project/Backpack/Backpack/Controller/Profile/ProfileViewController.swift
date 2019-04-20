@@ -32,7 +32,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         tripsTableViewController.delegate = self
         tripsTableViewController.dataSource = self
-        tripsTableViewController.register(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: "feedCell")
+        tripsTableViewController.register(UINib(nibName: "TripTableViewCell", bundle: nil), forCellReuseIdentifier: "profileTripCell")
+        tripsTableViewController.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         followersView.addTapGesture(tapNumber: 1, target: self, action: #selector(followersViewTouched))
         followingView.addTapGesture(tapNumber: 1, target: self, action: #selector(followersViewTouched))
@@ -49,7 +50,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "profileTripCell") as! TripTableViewCell
         return cell;
     }
     

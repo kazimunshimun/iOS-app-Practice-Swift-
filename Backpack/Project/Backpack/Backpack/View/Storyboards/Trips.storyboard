@@ -3076,7 +3076,7 @@ $ 279</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyz-ze-xK6">
-                                        <rect key="frame" x="263.5" y="11" width="95.5" height="28"/>
+                                        <rect key="frame" x="274.5" y="13.5" width="84.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -3098,7 +3098,7 @@ $ 279</string>
                                         <rect key="frame" x="16" y="14" width="13" height="13"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your trip to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-Vo-JIT">
-                                        <rect key="frame" x="37" y="12" width="71" height="17"/>
+                                        <rect key="frame" x="37" y="13.5" width="71" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="71" id="F3E-qm-glT"/>
                                         </constraints>
@@ -3107,7 +3107,7 @@ $ 279</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZD-9t-T9G">
-                                        <rect key="frame" x="108" y="12" width="35" height="17"/>
+                                        <rect key="frame" x="108" y="13.5" width="35" height="14"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="951-s2-hl8"/>
                                         </constraints>
