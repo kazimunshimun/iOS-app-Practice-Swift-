@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		84115669226B602E003BA479 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84115667226B602E003BA479 /* TripTableViewCell.swift */; };
 		8411566A226B602E003BA479 /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84115668226B602E003BA479 /* TripTableViewCell.xib */; };
+		8411566C226B8A8B003BA479 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411566B226B8A8B003BA479 /* CustomSwitch.swift */; };
+		8411566E226B8B11003BA479 /* CustomThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411566D226B8B11003BA479 /* CustomThumbView.swift */; };
 		8413B41D224BDCB400DB001B /* AirlineChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413B41C224BDCB400DB001B /* AirlineChooserViewController.swift */; };
 		8413B41F224BDCDD00DB001B /* BookTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413B41E224BDCDD00DB001B /* BookTicketViewController.swift */; };
 		842956232243F3C1002D88B8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842956222243F3C1002D88B8 /* MenuViewController.swift */; };
@@ -90,6 +92,8 @@
 /* Begin PBXFileReference section */
 		84115667226B602E003BA479 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		84115668226B602E003BA479 /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
+		8411566B226B8A8B003BA479 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
+		8411566D226B8B11003BA479 /* CustomThumbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThumbView.swift; sourceTree = "<group>"; };
 		8413B41C224BDCB400DB001B /* AirlineChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineChooserViewController.swift; sourceTree = "<group>"; };
 		8413B41E224BDCDD00DB001B /* BookTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTicketViewController.swift; sourceTree = "<group>"; };
 		842956222243F3C1002D88B8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -346,6 +350,8 @@
 				8434DFD6225FAAFF0069CD1D /* CustomSegmentedContrl.swift */,
 				84FF5D6C226A11AD009339E2 /* ProfileTripsSegmentedControl.swift */,
 				84FF5D6E226A21DA009339E2 /* UIViewExtension.swift */,
+				8411566B226B8A8B003BA479 /* CustomSwitch.swift */,
+				8411566D226B8B11003BA479 /* CustomThumbView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -537,6 +543,7 @@
 			files = (
 				8439183B2264E6F2005D2BA9 /* RoundedBackgroundLabel.swift in Sources */,
 				84361F85224E1D1200766D04 /* RequestsViewController.swift in Sources */,
+				8411566C226B8A8B003BA479 /* CustomSwitch.swift in Sources */,
 				8439183D2264ED34005D2BA9 /* TripRequestCollectionViewCell.swift in Sources */,
 				84B88FA5224D34CC00DE8A11 /* ForgotPasswordViewController.swift in Sources */,
 				84DBBA33223C088700B5C9FF /* LoginViewController.swift in Sources */,
@@ -568,6 +575,7 @@
 				84361F81224DE27F00766D04 /* TextInsetTextField.swift in Sources */,
 				843463812263A262005F77B0 /* PopularDestination.swift in Sources */,
 				8434637D22638D68005F77B0 /* PopularDestinationTableViewCell2.swift in Sources */,
+				8411566E226B8B11003BA479 /* CustomThumbView.swift in Sources */,
 				84BE6FBF224A993400201881 /* DestinationChooseViewController.swift in Sources */,
 				8413B41F224BDCDD00DB001B /* BookTicketViewController.swift in Sources */,
 				8437925A224FDD26009F730B /* TopLeftRightRadiusImageView.swift in Sources */,
