@@ -18,6 +18,8 @@
 		842956272243F50D002D88B8 /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842956262243F50D002D88B8 /* MessagingViewController.swift */; };
 		842956292243F54A002D88B8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842956282243F54A002D88B8 /* ProfileViewController.swift */; };
 		8429562B2243F557002D88B8 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429562A2243F557002D88B8 /* TripsViewController.swift */; };
+		84298805226CE476009DFA5E /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84298803226CE476009DFA5E /* FAQTableViewCell.swift */; };
+		84298806226CE476009DFA5E /* FAQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84298804226CE476009DFA5E /* FAQTableViewCell.xib */; };
 		8432B2C3226CB9BD00BFC22A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B2C2226CB9BD00BFC22A /* SettingsViewController.swift */; };
 		8432B2C5226CBBDD00BFC22A /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B2C4226CBBDD00BFC22A /* TermsViewController.swift */; };
 		8432B2C7226CBBEB00BFC22A /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B2C6226CBBEB00BFC22A /* PrivacyViewController.swift */; };
@@ -105,6 +107,8 @@
 		842956262243F50D002D88B8 /* MessagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
 		842956282243F54A002D88B8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8429562A2243F557002D88B8 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		84298803226CE476009DFA5E /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
+		84298804226CE476009DFA5E /* FAQTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAQTableViewCell.xib; sourceTree = "<group>"; };
 		8432B2C2226CB9BD00BFC22A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8432B2C4226CBBDD00BFC22A /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		8432B2C6226CBBEB00BFC22A /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 				8439183C2264ED34005D2BA9 /* TripRequestCollectionViewCell.swift */,
 				84115667226B602E003BA479 /* TripTableViewCell.swift */,
 				84115668226B602E003BA479 /* TripTableViewCell.xib */,
+				84298803226CE476009DFA5E /* FAQTableViewCell.swift */,
+				84298804226CE476009DFA5E /* FAQTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -483,6 +489,7 @@
 				84DBBA2B223BF73C00B5C9FF /* Poppins-ExtraBold.otf in Resources */,
 				84DBBA1F223BECFF00B5C9FF /* LaunchScreen.storyboard in Resources */,
 				8434DFDB225FAFD70069CD1D /* PeopleTableViewCell.xib in Resources */,
+				84298806226CE476009DFA5E /* FAQTableViewCell.xib in Resources */,
 				843EC949223CC82200AD2CA5 /* Poppins-Medium.otf in Resources */,
 				8411566A226B602E003BA479 /* TripTableViewCell.xib in Resources */,
 				84DBBA1C223BECFF00B5C9FF /* Assets.xcassets in Resources */,
@@ -603,6 +610,7 @@
 				84BE6FC3224A9E8B00201881 /* TIcketDateInputViewController.swift in Sources */,
 				84BE6FB9224A0CF500201881 /* PassportDetailViewController.swift in Sources */,
 				84DBBA17223BECFD00B5C9FF /* ViewController.swift in Sources */,
+				84298805226CE476009DFA5E /* FAQTableViewCell.swift in Sources */,
 				8456AF842244C0FC0009E68F /* RoundedViewWithShadow.swift in Sources */,
 				84DBBA15223BECFD00B5C9FF /* AppDelegate.swift in Sources */,
 				84FF5D6F226A21DA009339E2 /* UIViewExtension.swift in Sources */,

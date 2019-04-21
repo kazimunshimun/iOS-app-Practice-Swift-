@@ -1228,115 +1228,38 @@
                                     <constraint firstAttribute="trailing" secondItem="P0o-Oy-OHx" secondAttribute="trailing" constant="16" id="y23-63-sZb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Kw-ve-tVI" customClass="RoundedViewWithShadow" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="16" y="114" width="343" height="166"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How does this app protect my privacy?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbP-1y-KWG">
-                                        <rect key="frame" x="24" y="16" width="279" height="20"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7R-Q1-KaR">
-                                        <rect key="frame" x="24" y="52" width="295" height="98"/>
-                                        <string key="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of</string>
-                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                        <color key="textColor" red="0.62352941176470589" green="0.62352941176470589" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="h7R-Q1-KaR" firstAttribute="leading" secondItem="0Kw-ve-tVI" secondAttribute="leading" constant="24" id="EmU-6M-qNn"/>
-                                    <constraint firstAttribute="height" constant="166" id="cxn-tI-k48"/>
-                                    <constraint firstItem="QbP-1y-KWG" firstAttribute="top" secondItem="0Kw-ve-tVI" secondAttribute="top" constant="16" id="dYF-CA-Sg7"/>
-                                    <constraint firstItem="QbP-1y-KWG" firstAttribute="leading" secondItem="0Kw-ve-tVI" secondAttribute="leading" constant="24" id="iIy-3W-2Pg"/>
-                                    <constraint firstItem="h7R-Q1-KaR" firstAttribute="top" secondItem="QbP-1y-KWG" secondAttribute="bottom" constant="16" id="w3H-kO-HlM"/>
-                                    <constraint firstAttribute="trailing" secondItem="h7R-Q1-KaR" secondAttribute="trailing" constant="24" id="yTY-lx-KLi"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequently Asked Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izf-cm-mUu">
                                 <rect key="frame" x="16" y="78" width="202" height="20"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qb-ii-IE1" customClass="RoundedViewWithShadow" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="16" y="288" width="343" height="66"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Am I able to delete my account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="la1-jh-a8U">
-                                        <rect key="frame" x="24" y="23" width="230" height="20"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
-                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="smP-Fl-lfD">
+                                <rect key="frame" x="16" y="106" width="343" height="541"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="la1-jh-a8U" firstAttribute="centerY" secondItem="6qb-ii-IE1" secondAttribute="centerY" id="5t3-Hm-FxC"/>
-                                    <constraint firstAttribute="height" constant="66" id="Fll-Fc-Cgh"/>
-                                    <constraint firstItem="la1-jh-a8U" firstAttribute="leading" secondItem="6qb-ii-IE1" secondAttribute="leading" constant="24" id="Mk4-TN-Vsm"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ty2-gP-rqK" customClass="RoundedViewWithShadow" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="16" y="362" width="343" height="86"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oth-Tg-Sv4">
-                                        <rect key="frame" x="24" y="23.5" width="295" height="39.5"/>
-                                        <string key="text">What happens to my data if I delete my
-account</string>
-                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
-                                        <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="Oth-Tg-Sv4" firstAttribute="centerY" secondItem="Ty2-gP-rqK" secondAttribute="centerY" id="QQT-at-J1e"/>
-                                    <constraint firstAttribute="height" constant="86" id="Te4-5z-YKp"/>
-                                    <constraint firstItem="Oth-Tg-Sv4" firstAttribute="leading" secondItem="Ty2-gP-rqK" secondAttribute="leading" constant="24" id="Y6G-l3-FJV"/>
-                                    <constraint firstAttribute="trailing" secondItem="Oth-Tg-Sv4" secondAttribute="trailing" constant="24" id="gKe-wY-5vU"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4Xe-oz-XXY" firstAttribute="top" secondItem="z7f-bO-lUp" secondAttribute="top" id="2N5-dS-JHw"/>
                             <constraint firstItem="z7f-bO-lUp" firstAttribute="trailing" secondItem="4Xe-oz-XXY" secondAttribute="trailing" id="6Wq-cA-kDl"/>
-                            <constraint firstItem="z7f-bO-lUp" firstAttribute="trailing" secondItem="6qb-ii-IE1" secondAttribute="trailing" constant="16" id="ISU-Et-qBR"/>
                             <constraint firstItem="izf-cm-mUu" firstAttribute="top" secondItem="4Xe-oz-XXY" secondAttribute="bottom" constant="8" id="MOw-5k-MYv"/>
-                            <constraint firstItem="z7f-bO-lUp" firstAttribute="trailing" secondItem="0Kw-ve-tVI" secondAttribute="trailing" constant="16" id="Q8A-O2-Nsh"/>
-                            <constraint firstItem="6qb-ii-IE1" firstAttribute="leading" secondItem="z7f-bO-lUp" secondAttribute="leading" constant="16" id="RAU-YT-AhJ"/>
-                            <constraint firstItem="z7f-bO-lUp" firstAttribute="trailing" secondItem="Ty2-gP-rqK" secondAttribute="trailing" constant="16" id="TzP-JN-c2x"/>
-                            <constraint firstItem="Ty2-gP-rqK" firstAttribute="top" secondItem="6qb-ii-IE1" secondAttribute="bottom" constant="8" id="ZC2-sq-nWh"/>
-                            <constraint firstItem="0Kw-ve-tVI" firstAttribute="top" secondItem="izf-cm-mUu" secondAttribute="bottom" constant="16" id="eCg-5b-0qm"/>
+                            <constraint firstItem="smP-Fl-lfD" firstAttribute="leading" secondItem="z7f-bO-lUp" secondAttribute="leading" constant="16" id="Wic-lY-oBN"/>
+                            <constraint firstItem="z7f-bO-lUp" firstAttribute="bottom" secondItem="smP-Fl-lfD" secondAttribute="bottom" constant="20" id="bhF-tM-C9R"/>
                             <constraint firstItem="4Xe-oz-XXY" firstAttribute="leading" secondItem="z7f-bO-lUp" secondAttribute="leading" id="gI4-fE-hMJ"/>
-                            <constraint firstItem="6qb-ii-IE1" firstAttribute="top" secondItem="0Kw-ve-tVI" secondAttribute="bottom" constant="8" id="hZq-CT-0Om"/>
-                            <constraint firstItem="Ty2-gP-rqK" firstAttribute="leading" secondItem="z7f-bO-lUp" secondAttribute="leading" constant="16" id="jU9-Oc-FkN"/>
+                            <constraint firstItem="smP-Fl-lfD" firstAttribute="top" secondItem="izf-cm-mUu" secondAttribute="bottom" constant="8" id="p2V-By-Ayj"/>
                             <constraint firstItem="izf-cm-mUu" firstAttribute="leading" secondItem="z7f-bO-lUp" secondAttribute="leading" constant="16" id="pCl-tF-cCv"/>
-                            <constraint firstItem="0Kw-ve-tVI" firstAttribute="leading" secondItem="z7f-bO-lUp" secondAttribute="leading" constant="16" id="stC-OL-wiD"/>
+                            <constraint firstItem="z7f-bO-lUp" firstAttribute="trailing" secondItem="smP-Fl-lfD" secondAttribute="trailing" constant="16" id="wWU-Bv-XUF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z7f-bO-lUp"/>
                     </view>
+                    <connections>
+                        <outlet property="faqTableView" destination="smP-Fl-lfD" id="VNh-wk-oBe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xkf-cg-pCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3969" y="946"/>
+            <point key="canvasLocation" x="3968.8000000000002" y="945.87706146926541"/>
         </scene>
     </scenes>
     <resources>
