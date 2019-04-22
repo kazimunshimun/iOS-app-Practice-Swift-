@@ -1,17 +1,18 @@
 //
-//  FAQTableViewCell.swift
+//  FAQ2TableViewCell.swift
 //  Backpack
 //
-//  Created by Anik on 21/4/19.
+//  Created by Anik on 22/4/19.
 //  Copyright © 2019 A7Studio. All rights reserved.
 //
 
 import UIKit
 
-class FAQTableViewCell: UITableViewCell {
+class FAQ2TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,5 +23,5 @@ class FAQTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

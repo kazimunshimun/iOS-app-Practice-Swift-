@@ -60,6 +60,8 @@
 		8456AF8A2244C5C90009E68F /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456AF892244C5C90009E68F /* Messaging.storyboard */; };
 		8456AF8C2244C5D40009E68F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456AF8B2244C5D40009E68F /* Profile.storyboard */; };
 		8467334E2260994900EACAD9 /* PostFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467334D2260994900EACAD9 /* PostFullViewController.swift */; };
+		8473E84A226D92CF00F4D4DF /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473E849226D92CF00F4D4DF /* FAQ.swift */; };
+		8473E84C226D94C500F4D4DF /* FAQ2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473E84B226D94C500F4D4DF /* FAQ2TableViewCell.swift */; };
 		848330922253A51400ABE48B /* SearchFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848330912253A51400ABE48B /* SearchFeedViewController.swift */; };
 		84AFE5FA224A067400505AA8 /* CreditCardInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFE5F9224A067400505AA8 /* CreditCardInputViewController.swift */; };
 		84B88FA3224D34B900DE8A11 /* PhoneNumberInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B88FA2224D34B900DE8A11 /* PhoneNumberInputViewController.swift */; };
@@ -149,6 +151,8 @@
 		8456AF892244C5C90009E68F /* Messaging.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messaging.storyboard; sourceTree = "<group>"; };
 		8456AF8B2244C5D40009E68F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		8467334D2260994900EACAD9 /* PostFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFullViewController.swift; sourceTree = "<group>"; };
+		8473E849226D92CF00F4D4DF /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
+		8473E84B226D94C500F4D4DF /* FAQ2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ2TableViewCell.swift; sourceTree = "<group>"; };
 		848330912253A51400ABE48B /* SearchFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeedViewController.swift; sourceTree = "<group>"; };
 		84AFE5F9224A067400505AA8 /* CreditCardInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInputViewController.swift; sourceTree = "<group>"; };
 		84B88FA2224D34B900DE8A11 /* PhoneNumberInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberInputViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 				84115668226B602E003BA479 /* TripTableViewCell.xib */,
 				84298803226CE476009DFA5E /* FAQTableViewCell.swift */,
 				84298804226CE476009DFA5E /* FAQTableViewCell.xib */,
+				8473E84B226D94C500F4D4DF /* FAQ2TableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				84361F88224E609E00766D04 /* Chat.swift */,
 				843463802263A262005F77B0 /* PopularDestination.swift */,
 				84FF5D72226A26FA009339E2 /* People.swift */,
+				8473E849226D92CF00F4D4DF /* FAQ.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -579,6 +585,7 @@
 				84BD3713223EBACA004E098D /* RoundedButtonWithBorder.swift in Sources */,
 				84AFE5FA224A067400505AA8 /* CreditCardInputViewController.swift in Sources */,
 				842956272243F50D002D88B8 /* MessagingViewController.swift in Sources */,
+				8473E84C226D94C500F4D4DF /* FAQ2TableViewCell.swift in Sources */,
 				8432B2C7226CBBEB00BFC22A /* PrivacyViewController.swift in Sources */,
 				84379256224FCE2B009F730B /* PopularDestinationTableViewCell.swift in Sources */,
 				84BE6FBD224A5E9800201881 /* RoundedView.swift in Sources */,
@@ -619,6 +626,7 @@
 				84FF5D6B2269FFDC009339E2 /* RoundedCornerScrollView.swift in Sources */,
 				84DBBA35223C089300B5C9FF /* SignUpViewController.swift in Sources */,
 				8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */,
+				8473E84A226D92CF00F4D4DF /* FAQ.swift in Sources */,
 				8434637F22639E70005F77B0 /* DestinationCollectionViewCell.swift in Sources */,
 				84379252224FCE02009F730B /* FeedTableViewCell.swift in Sources */,
 				84BE6FC1224A9DA800201881 /* TripDetailsInputViewController.swift in Sources */,

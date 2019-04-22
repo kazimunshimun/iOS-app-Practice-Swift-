@@ -29,7 +29,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUB-3T-i0c" customClass="RoundedViewWithShadow" customModule="Backpack" customModuleProvider="target">
                         <rect key="frame" x="8" y="8" width="304" height="203.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How does this app protect my privacy?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORY-Qm-9qA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How does this app protect my privacy?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORY-Qm-9qA">
                                 <rect key="frame" x="16" y="16" width="280" height="20"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -67,6 +67,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="answerLabel" destination="6xZ-VU-pCP" id="yeM-Ht-hFE"/>
+                <outlet property="questionLabel" destination="ORY-Qm-9qA" id="oEG-QD-qfg"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </tableViewCell>
     </objects>
