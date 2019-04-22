@@ -38,8 +38,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "popularCell2") as! PopularDestinationTableViewCell2
-            cell.destinationArray = [PopularDestination(image: "bali", name: "BALI"),
-                                     PopularDestination(image: "japan", name: "JAPAN"),PopularDestination(image: "finland", name: "FINLAND")]
+            cell.destinationArray = [PopularDestination(image: "bali-1", name: "BALI"),
+                                     PopularDestination(image: "japan-1", name: "JAPAN"),
+                                     PopularDestination(image: "finland-1", name: "FINLAND"),
+                                     PopularDestination(image: "prague", name: "PRAGUE"),
+                                     PopularDestination(image: "italy", name: "ITALY"),
+                                     PopularDestination(image: "argentina", name: "ARGENTINA"),
+                                     PopularDestination(image: "bali_1", name: "BALI"),
+            ]
             return cell;
         } else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedTableViewCell

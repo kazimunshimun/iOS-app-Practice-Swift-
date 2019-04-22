@@ -105,10 +105,10 @@ class SearchFeedViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBAction func filterButtonPressed(_ sender: UIButton) {
         if isShowingFilter {
             isShowingFilter = false
-            filterButton.setImage(UIImage(named: "close"), for: .normal)
-            filterViewHeightConstrain.constant = 420
-            genderSelectionView.isHidden = false
-            ageRangeSelectionView.isHidden = false
+            self.filterButton.setImage(UIImage(named: "close"), for: .normal)
+            self.filterViewHeightConstrain.constant = 420
+            self.genderSelectionView.isHidden = false
+            self.ageRangeSelectionView.isHidden = false
         } else {
             filterButton.setImage(UIImage(named: "filter"), for: .normal)
             isShowingFilter = true

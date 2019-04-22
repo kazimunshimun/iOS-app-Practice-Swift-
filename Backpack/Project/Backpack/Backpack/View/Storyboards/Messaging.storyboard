@@ -52,13 +52,13 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0X-d5-AGT">
-                                <rect key="frame" x="25" y="137" width="62" height="28"/>
+                                <rect key="frame" x="25" y="145" width="62" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="93z-gW-0RY">
-                                <rect key="frame" x="16" y="173" width="343" height="474"/>
+                                <rect key="frame" x="16" y="189" width="343" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="chatReuseID" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatCell" rowHeight="80" id="vi6-35-62U" customClass="ChatTableViewCell" customModule="Backpack" customModuleProvider="target">
@@ -165,7 +165,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="93z-gW-0RY" firstAttribute="leading" secondItem="LdJ-Qw-Nkk" secondAttribute="leading" constant="16" id="076-ti-K00"/>
-                            <constraint firstItem="93z-gW-0RY" firstAttribute="top" secondItem="k0X-d5-AGT" secondAttribute="bottom" constant="8" id="59Q-0s-x7L"/>
+                            <constraint firstItem="93z-gW-0RY" firstAttribute="top" secondItem="k0X-d5-AGT" secondAttribute="bottom" constant="16" id="59Q-0s-x7L"/>
                             <constraint firstItem="k0X-d5-AGT" firstAttribute="leading" secondItem="LdJ-Qw-Nkk" secondAttribute="leading" constant="25" id="6OE-Pf-xKw"/>
                             <constraint firstItem="LdJ-Qw-Nkk" firstAttribute="bottom" secondItem="93z-gW-0RY" secondAttribute="bottom" constant="20" id="OWO-Eb-TwJ"/>
                             <constraint firstItem="LdJ-Qw-Nkk" firstAttribute="trailing" secondItem="93z-gW-0RY" secondAttribute="trailing" constant="16" id="ap8-Ys-q1k"/>
@@ -174,7 +174,7 @@
                             <constraint firstItem="wJ8-7e-RaV" firstAttribute="top" secondItem="LdJ-Qw-Nkk" secondAttribute="top" constant="30" id="pXK-rD-sAl"/>
                             <constraint firstItem="wJ8-7e-RaV" firstAttribute="leading" secondItem="LdJ-Qw-Nkk" secondAttribute="leading" constant="25" id="qSX-BZ-gts"/>
                             <constraint firstItem="LdJ-Qw-Nkk" firstAttribute="trailing" secondItem="nKq-9h-mB3" secondAttribute="trailing" constant="16" id="uBC-Zb-8Z5"/>
-                            <constraint firstItem="k0X-d5-AGT" firstAttribute="top" secondItem="nKq-9h-mB3" secondAttribute="bottom" constant="8" id="wUT-sb-ojf"/>
+                            <constraint firstItem="k0X-d5-AGT" firstAttribute="top" secondItem="nKq-9h-mB3" secondAttribute="bottom" constant="16" id="wUT-sb-ojf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LdJ-Qw-Nkk"/>
                     </view>
