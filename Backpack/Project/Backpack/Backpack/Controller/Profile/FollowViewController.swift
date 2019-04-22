@@ -10,9 +10,14 @@ import UIKit
 
 class FollowViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var profileNameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var peopleTableView: UITableView!
+    
+    var titleText: String = ""
+    var peopleNumber: Int = 0
+    var profileNameText: String = ""
     
     let peoples : [People] = [People(name: "Alex", imageName: "alex_pp", isFollwed: false),
                               People(name: "Sandra", imageName: "sandra_pp", isFollwed: false),
@@ -30,6 +35,14 @@ class FollowViewController: UIViewController, UITableViewDelegate, UITableViewDa
         peopleTableView.dataSource = self
         peopleTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         peopleTableView.register(UINib(nibName: "PeopleTableViewCell", bundle: nil), forCellReuseIdentifier: "peopleCell")
+        
+        titleLabel.text = titleText
+        profileNameLabel.text = profileNameText
+        if titleText == "Followers" {
+            numberLabel.text = "\(peopleNumber) People following \(profileNameText)"
+        } else {
+            numberLabel.text = "\(peopleNumber) People followed by \(profileNameText)"
+        }
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {

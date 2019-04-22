@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         tripsTableViewController.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         followersView.addTapGesture(tapNumber: 1, target: self, action: #selector(followersViewTouched))
-        followingView.addTapGesture(tapNumber: 1, target: self, action: #selector(followersViewTouched))
+        followingView.addTapGesture(tapNumber: 1, target: self, action: #selector(followingViewTouched))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,7 +64,19 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @objc func followersViewTouched() -> Void {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-        let followViewController = storyBoard.instantiateViewController(withIdentifier: "followController")
+        let followViewController = storyBoard.instantiateViewController(withIdentifier: "followController") as! FollowViewController
+        followViewController.peopleNumber = 125
+        followViewController.profileNameText = "Lisa"
+        followViewController.titleText = "Followers"
+        self.show(followViewController, sender: nil)
+    }
+    
+    @objc func followingViewTouched() -> Void {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        let followViewController = storyBoard.instantiateViewController(withIdentifier: "followController") as! FollowViewController
+        followViewController.peopleNumber = 150
+        followViewController.profileNameText = "Lisa"
+        followViewController.titleText = "Following"
         self.show(followViewController, sender: nil)
     }
     /*
