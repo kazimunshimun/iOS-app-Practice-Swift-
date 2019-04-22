@@ -22,10 +22,11 @@ class MessagingViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // Do any additional setup after loading the view.
         chatsTableView.delegate = self
         chatsTableView.dataSource = self
-        // Do any additional setup after loading the view.
+        
+       // self.showSpinner(onView: self.view)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

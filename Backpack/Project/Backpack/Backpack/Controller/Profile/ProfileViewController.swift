@@ -37,6 +37,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         followersView.addTapGesture(tapNumber: 1, target: self, action: #selector(followersViewTouched))
         followingView.addTapGesture(tapNumber: 1, target: self, action: #selector(followingViewTouched))
+        
+//        self.showSpinner(onView: self.view)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
