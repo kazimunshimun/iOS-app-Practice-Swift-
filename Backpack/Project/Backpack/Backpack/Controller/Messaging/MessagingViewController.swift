@@ -10,6 +10,14 @@ import UIKit
 
 class MessagingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    let chatPeoples: [Chat] = [Chat(id: "0", name: "Alex", lastMessage: "Hey when are you going?", lastMessageTime: "9:45AM", isActive: true, imageName: "alex_pp"),
+                               Chat(id: "0", name: "Sandra", lastMessage: "I would love to take this trip with", lastMessageTime: "9:45AM", isActive: false, imageName: "sandra_pp"),
+                               Chat(id: "0", name: "Lisa", lastMessage: "Sure, lets do it.", lastMessageTime: "9:45AM", isActive: false, imageName: "lisa_pp"),
+                               Chat(id: "0", name: "Mike", lastMessage: "Yes, it was an amazing experience", lastMessageTime: "9:45AM", isActive: false, imageName: "mike_pp"),
+                               Chat(id: "0", name: "Jennifer", lastMessage: "Loved it out there.", lastMessageTime: "9:45AM", isActive: false, imageName: "jennifer_pp"),
+                               Chat(id: "0", name: "Travis", lastMessage: "Can't wait to do it again", lastMessageTime: "9:45AM", isActive: false, imageName: "travis_pp"),
+    ]
+    
     @IBOutlet weak var chatsTableView: UITableView!
     
     override func viewDidLoad() {
@@ -21,17 +29,29 @@ class MessagingViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2;
+        return chatPeoples.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60.0;
+        return 80.0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let chatData = chatPeoples[indexPath.row]
         let cell = chatsTableView.dequeueReusableCell(withIdentifier: "chatCell") as! ChatTableViewCell
-        cell.userNameLabel.text = "User name \(indexPath.row)"
-        return cell;
+        cell.userNameLabel.text = chatData.name
+        cell.lastMessageLabel.text = chatData.lastMessage
+        cell.lastMessageTimeLabel.text = chatData.lastMessageTime
+        cell.userImageView.image = UIImage(named: chatData.imageName)
+        
+        if chatData.isActive {
+            cell.isActiveView.isHidden = false
+            cell.lastMessageLabel.textColor = UIColor.black
+        } else {
+            cell.isActiveView.isHidden = true
+            cell.lastMessageLabel.textColor = UIColor(red: 159.0 / 255.0, green: 159.0 / 255.0, blue: 159.0 / 255.0, alpha: 1.0)
+        }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

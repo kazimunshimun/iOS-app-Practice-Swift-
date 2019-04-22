@@ -14,6 +14,8 @@ class ChatTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var lastMessageLabel: UILabel!
     @IBOutlet weak var lastMessageTimeLabel: UILabel!
+    @IBOutlet weak var isActiveView: RoundedView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

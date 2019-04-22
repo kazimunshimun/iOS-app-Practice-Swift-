@@ -8,11 +8,11 @@
 
 import Foundation
 
-class Chats {
-    var id : String = ""
-    let name : String = ""
-    var lastMessage : String = ""
-    var lastMessageTime : String = ""
-    var isActive : Bool = false
-    
+struct Chat {
+    let id: String
+    let name: String
+    let lastMessage: String
+    let lastMessageTime: String
+    let isActive: Bool
+    let imageName: String
 }
