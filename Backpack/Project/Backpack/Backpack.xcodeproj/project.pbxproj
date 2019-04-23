@@ -32,6 +32,7 @@
 		8434DFD7225FAAFF0069CD1D /* CustomSegmentedContrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434DFD6225FAAFF0069CD1D /* CustomSegmentedContrl.swift */; };
 		8434DFDA225FAFD70069CD1D /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434DFD8225FAFD70069CD1D /* PeopleTableViewCell.swift */; };
 		8434DFDB225FAFD70069CD1D /* PeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8434DFD9225FAFD70069CD1D /* PeopleTableViewCell.xib */; };
+		8434FAFE226F69D3007C8D8A /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434FAFD226F69D3007C8D8A /* Trip.swift */; };
 		84361F81224DE27F00766D04 /* TextInsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F80224DE27F00766D04 /* TextInsetTextField.swift */; };
 		84361F83224E095700766D04 /* AddTripsPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F82224E095700766D04 /* AddTripsPhotoViewController.swift */; };
 		84361F85224E1D1200766D04 /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F84224E1D1200766D04 /* RequestsViewController.swift */; };
@@ -125,6 +126,7 @@
 		8434DFD6225FAAFF0069CD1D /* CustomSegmentedContrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedContrl.swift; sourceTree = "<group>"; };
 		8434DFD8225FAFD70069CD1D /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		8434DFD9225FAFD70069CD1D /* PeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleTableViewCell.xib; sourceTree = "<group>"; };
+		8434FAFD226F69D3007C8D8A /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		84361F80224DE27F00766D04 /* TextInsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInsetTextField.swift; sourceTree = "<group>"; };
 		84361F82224E095700766D04 /* AddTripsPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripsPhotoViewController.swift; sourceTree = "<group>"; };
 		84361F84224E1D1200766D04 /* RequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsViewController.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				843463802263A262005F77B0 /* PopularDestination.swift */,
 				84FF5D72226A26FA009339E2 /* People.swift */,
 				8473E849226D92CF00F4D4DF /* FAQ.swift */,
+				8434FAFD226F69D3007C8D8A /* Trip.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				848330922253A51400ABE48B /* SearchFeedViewController.swift in Sources */,
 				842956232243F3C1002D88B8 /* MenuViewController.swift in Sources */,
 				8432B2C5226CBBDD00BFC22A /* TermsViewController.swift in Sources */,
+				8434FAFE226F69D3007C8D8A /* Trip.swift in Sources */,
 				84361F87224E1D1E00766D04 /* InvitesViewController.swift in Sources */,
 				84361F83224E095700766D04 /* AddTripsPhotoViewController.swift in Sources */,
 				84BD3713223EBACA004E098D /* RoundedButtonWithBorder.swift in Sources */,

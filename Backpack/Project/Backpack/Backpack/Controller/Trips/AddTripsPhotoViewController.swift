@@ -19,6 +19,13 @@ class AddTripsPhotoViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: Any) {
         navigationController!.popViewController(animated: true)
     }
+    
+    @IBAction func doneButtonTouched(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "TabMenu", bundle: nil)
+        let tripTabViewController = storyBoard.instantiateViewController(withIdentifier: "tabMenuController") as! MenuViewController
+        tripTabViewController.selectedIndex = 2
+        UIApplication.shared.keyWindow?.rootViewController = tripTabViewController
+    }
     /*
     // MARK: - Navigation
 

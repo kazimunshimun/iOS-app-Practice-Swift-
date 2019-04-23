@@ -17,16 +17,20 @@ class SearchFeedViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var searchSegmentedControl: CustomSegmentedContrl!
     @IBOutlet weak var searchTableView: UITableView!
     
-    var isShowingFilter : Bool = true
-    var isShowingPeople : Bool = false
+    var isShowingFilter: Bool = true
+    var isShowingPeople: Bool = false
     
-    let peoples : [People] = [People(name: "Jennifer", imageName: "jennifer_pp", isFollwed: true),
+    let peoples: [People] = [People(name: "Jennifer", imageName: "jennifer_pp", isFollwed: true),
                               People(name: "Alex", imageName: "alex_pp", isFollwed: false),
                               People(name: "Lisa", imageName: "lisa_pp", isFollwed: false),
                               People(name: "Sandra", imageName: "sandra_pp", isFollwed: true),
                               People(name: "Mike", imageName: "mike_pp", isFollwed: false),
                               People(name: "Travis", imageName: "travis_pp", isFollwed: false),
                               People(name: "Lisa", imageName: "lisa_pp", isFollwed: true)]
+    
+    let trips: [Trip] = [Trip(people: People(name: "Jennifer", imageName: "jennifer_pp", isFollwed: true), postedTime: "2 hours ago", tripDuration: 7, tripLocation: "Bali", currentStatus: "ON TRIP", description: "", isLoved: true, isShared: false, tripImage: "trip_1"),
+                         Trip(people: People(name: "Lisa", imageName: "lisa_pp", isFollwed: true), postedTime: "5 hours ago", tripDuration: 12, tripLocation: "Finland", currentStatus: "IN 2 DAYS", description: "", isLoved: false, isShared: true, tripImage: "trip_2")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +65,7 @@ class SearchFeedViewController: UIViewController, UITableViewDelegate, UITableVi
         if isShowingPeople {
             rowCount = peoples.count
         } else {
-            rowCount = 3
+            rowCount = trips.count
         }
         return rowCount;
     }
@@ -93,7 +97,28 @@ class SearchFeedViewController: UIViewController, UITableViewDelegate, UITableVi
             }
             return cell
         } else {
+            let trip = trips[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedTableViewCell
+            cell.profileImageView.image = UIImage(named: trip.people.imageName)
+            cell.nameLabel.text = trip.people.name
+            cell.postedTimeLabel.text = trip.postedTime
+            cell.tripDurationLabel.text = "\(trip.tripDuration)"
+            cell.tripLocationLabel.text = trip.tripLocation
+            cell.tripCurrentStatusLabel.text = trip.currentStatus
+            if trip.isLoved {
+                cell.loveButton.setImage(UIImage(named: "heart_selected"), for: .normal)
+            } else {
+                cell.loveButton.setImage(UIImage(named: "heart_unselected"), for: .normal)
+            }
+            
+            if trip.isShared {
+                cell.sharedLabel.isHidden = false
+            } else {
+                cell.sharedLabel.isHidden = true
+            }
+            
+            cell.tripImageView.image = UIImage(named: trip.tripImage)
+            
             return cell
         }
     }

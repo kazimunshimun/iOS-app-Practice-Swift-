@@ -12,6 +12,9 @@
         <array key="Poppins-Bold.otf">
             <string>Poppins-Bold</string>
         </array>
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
         <array key="Poppins-Regular.otf">
             <string>Poppins-Regular</string>
         </array>
@@ -237,15 +240,37 @@ join me on this epic journey through American</string>
                                                 </constraints>
                                                 <state key="normal" image="ic_bookmark"/>
                                             </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yba-6S-nmp" customClass="RoundedButton" customModule="Backpack" customModuleProvider="target">
+                                                <rect key="frame" x="84" y="13" width="53" height="18"/>
+                                                <color key="backgroundColor" red="1" green="0.83529411760000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="18" id="LZH-QO-gmH"/>
+                                                    <constraint firstAttribute="width" constant="53" id="lxY-nw-MQJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="10"/>
+                                                <state key="normal" title="Shared">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.zPosition">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="aeV-kN-Kgl" firstAttribute="centerY" secondItem="bnz-z3-duB" secondAttribute="centerY" id="HpJ-vS-5M8"/>
+                                            <constraint firstItem="Yba-6S-nmp" firstAttribute="leading" secondItem="aeV-kN-Kgl" secondAttribute="trailing" constant="8" id="HtW-pJ-SCn"/>
                                             <constraint firstAttribute="trailing" secondItem="gb3-br-bSQ" secondAttribute="trailing" constant="8" id="Y9F-NJ-JbC"/>
                                             <constraint firstItem="8SF-sj-Npg" firstAttribute="centerY" secondItem="bnz-z3-duB" secondAttribute="centerY" id="i3Z-El-9eK"/>
                                             <constraint firstItem="gb3-br-bSQ" firstAttribute="centerY" secondItem="bnz-z3-duB" secondAttribute="centerY" id="nHm-e7-M8l"/>
                                             <constraint firstItem="aeV-kN-Kgl" firstAttribute="leading" secondItem="8SF-sj-Npg" secondAttribute="trailing" constant="8" id="tje-ml-yfm"/>
                                             <constraint firstItem="8SF-sj-Npg" firstAttribute="leading" secondItem="bnz-z3-duB" secondAttribute="leading" constant="8" id="uCt-ug-etA"/>
+                                            <constraint firstItem="Yba-6S-nmp" firstAttribute="centerY" secondItem="bnz-z3-duB" secondAttribute="centerY" id="xvF-k8-bma"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -314,6 +339,18 @@ join me on this epic journey through American</string>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="HjE-hE-UMX" id="b4h-3d-igB"/>
+                <outlet property="loveButton" destination="8SF-sj-Npg" id="uMh-eE-MpR"/>
+                <outlet property="nameLabel" destination="TZq-9J-sLN" id="W7l-62-U13"/>
+                <outlet property="postedTimeLabel" destination="4To-Uh-68u" id="WuQ-H4-2A2"/>
+                <outlet property="profileImageView" destination="lcd-1P-sy4" id="ybW-CA-Zhx"/>
+                <outlet property="sharedLabel" destination="Yba-6S-nmp" id="cDq-Gt-VC0"/>
+                <outlet property="tripCurrentStatusLabel" destination="yBD-tm-kjn" id="v1k-LG-biq"/>
+                <outlet property="tripDurationLabel" destination="NuP-Qd-chd" id="BkX-dT-bCI"/>
+                <outlet property="tripImageView" destination="Dxq-bv-Wer" id="cuo-Eq-EM3"/>
+                <outlet property="tripLocationLabel" destination="mCv-g9-071" id="GB1-JJ-hv3"/>
+            </connections>
             <point key="canvasLocation" x="132.80000000000001" y="310.34482758620692"/>
         </tableViewCell>
     </objects>
