@@ -13,6 +13,10 @@
 		8411566E226B8B11003BA479 /* CustomThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411566D226B8B11003BA479 /* CustomThumbView.swift */; };
 		8413B41D224BDCB400DB001B /* AirlineChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413B41C224BDCB400DB001B /* AirlineChooserViewController.swift */; };
 		8413B41F224BDCDD00DB001B /* BookTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413B41E224BDCDD00DB001B /* BookTicketViewController.swift */; };
+		841D8F4A226F8870009A37AE /* NewTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8F49226F8870009A37AE /* NewTrip.swift */; };
+		841D8F4C226F887D009A37AE /* TripInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8F4B226F887D009A37AE /* TripInfo.swift */; };
+		841D8F4E226F8886009A37AE /* FlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8F4D226F8886009A37AE /* FlightInfo.swift */; };
+		841D8F50226F8891009A37AE /* TicketInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8F4F226F8891009A37AE /* TicketInfo.swift */; };
 		842956232243F3C1002D88B8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842956222243F3C1002D88B8 /* MenuViewController.swift */; };
 		842956252243F4BE002D88B8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842956242243F4BE002D88B8 /* FeedViewController.swift */; };
 		842956272243F50D002D88B8 /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842956262243F50D002D88B8 /* MessagingViewController.swift */; };
@@ -107,6 +111,10 @@
 		8411566D226B8B11003BA479 /* CustomThumbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThumbView.swift; sourceTree = "<group>"; };
 		8413B41C224BDCB400DB001B /* AirlineChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlineChooserViewController.swift; sourceTree = "<group>"; };
 		8413B41E224BDCDD00DB001B /* BookTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTicketViewController.swift; sourceTree = "<group>"; };
+		841D8F49226F8870009A37AE /* NewTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTrip.swift; sourceTree = "<group>"; };
+		841D8F4B226F887D009A37AE /* TripInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInfo.swift; sourceTree = "<group>"; };
+		841D8F4D226F8886009A37AE /* FlightInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightInfo.swift; sourceTree = "<group>"; };
+		841D8F4F226F8891009A37AE /* TicketInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketInfo.swift; sourceTree = "<group>"; };
 		842956222243F3C1002D88B8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		842956242243F4BE002D88B8 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		842956262243F50D002D88B8 /* MessagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
@@ -391,6 +399,10 @@
 				84FF5D72226A26FA009339E2 /* People.swift */,
 				8473E849226D92CF00F4D4DF /* FAQ.swift */,
 				8434FAFD226F69D3007C8D8A /* Trip.swift */,
+				841D8F49226F8870009A37AE /* NewTrip.swift */,
+				841D8F4B226F887D009A37AE /* TripInfo.swift */,
+				841D8F4D226F8886009A37AE /* FlightInfo.swift */,
+				841D8F4F226F8891009A37AE /* TicketInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -610,6 +622,7 @@
 				843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */,
 				8437924E224F48BE009F730B /* ChatViewController.swift in Sources */,
 				843B190A2261C43200F59395 /* RoundedCornerView.swift in Sources */,
+				841D8F4E226F8886009A37AE /* FlightInfo.swift in Sources */,
 				84E180B12246A7C70043FEEC /* CollectionPickerView.swift in Sources */,
 				84FF5D73226A26FA009339E2 /* People.swift in Sources */,
 				84361F81224DE27F00766D04 /* TextInsetTextField.swift in Sources */,
@@ -627,7 +640,9 @@
 				8413B41D224BDCB400DB001B /* AirlineChooserViewController.swift in Sources */,
 				84BD3717223EBD65004E098D /* RoundedButtonWithShadow.swift in Sources */,
 				84BE6FC3224A9E8B00201881 /* TIcketDateInputViewController.swift in Sources */,
+				841D8F50226F8891009A37AE /* TicketInfo.swift in Sources */,
 				84BE6FB9224A0CF500201881 /* PassportDetailViewController.swift in Sources */,
+				841D8F4C226F887D009A37AE /* TripInfo.swift in Sources */,
 				84DBBA17223BECFD00B5C9FF /* ViewController.swift in Sources */,
 				84298805226CE476009DFA5E /* FAQTableViewCell.swift in Sources */,
 				8456AF842244C0FC0009E68F /* RoundedViewWithShadow.swift in Sources */,
@@ -640,6 +655,7 @@
 				8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */,
 				8473E84A226D92CF00F4D4DF /* FAQ.swift in Sources */,
 				8434637F22639E70005F77B0 /* DestinationCollectionViewCell.swift in Sources */,
+				841D8F4A226F8870009A37AE /* NewTrip.swift in Sources */,
 				84379252224FCE02009F730B /* FeedTableViewCell.swift in Sources */,
 				84BE6FC1224A9DA800201881 /* TripDetailsInputViewController.swift in Sources */,
 				84FF5D71226A230D009339E2 /* FollowViewController.swift in Sources */,
