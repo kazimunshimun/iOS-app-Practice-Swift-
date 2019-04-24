@@ -11,6 +11,14 @@ import Foundation
 struct TripInfo {
     let from: String
     let to: String
-    let visibility: String
-    let tripFor: String
+    let visibility: String?
+    let tripFor: String?
+    
+    init(from: String, to: String, visibility: String? = nil,
+         tripFor: String? = nil) {
+        self.from = from
+        self.to = to
+        self.visibility = visibility
+        self.tripFor = tripFor
+    }
 }

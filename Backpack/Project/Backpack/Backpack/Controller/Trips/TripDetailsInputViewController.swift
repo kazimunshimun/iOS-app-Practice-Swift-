@@ -10,6 +10,8 @@ import UIKit
 
 class TripDetailsInputViewController: UIViewController {
 
+    var newTrip: NewTrip = NewTrip()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -9,7 +9,16 @@
 import Foundation
 
 struct NewTrip {
-    let tripInfo: TripInfo
-    let flightInfo: FlightInfo
-    let ticketInfo: TicketInfo
+    var tripInfo: TripInfo?
+    let flightInfo: FlightInfo?
+    let ticketInfo: TicketInfo?
+    
+    init(trip: TripInfo? = nil,
+        flight: FlightInfo? = nil,
+        ticket: TicketInfo? = nil) {
+        
+        self.tripInfo = trip
+        self.flightInfo = flight
+        self.ticketInfo = ticket
+    }
 }
