@@ -10,12 +10,17 @@ import UIKit
 
 class TripDetailsInputViewController: UIViewController {
 
+    @IBOutlet weak var fromLabel: UILabel!
+    @IBOutlet weak var toLabel: UILabel!
+    
     var newTrip: NewTrip = NewTrip()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        fromLabel.text = newTrip.tripInfo?.from
+        toLabel.text = newTrip.tripInfo?.to
     }
     
 
