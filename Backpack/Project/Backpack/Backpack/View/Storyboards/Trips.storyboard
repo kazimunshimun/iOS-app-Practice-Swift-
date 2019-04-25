@@ -989,7 +989,7 @@ $ 279</string>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Eeb-Cq-7du">
                                                 <rect key="frame" x="16" y="12.5" width="16" height="16"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Departure date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jqk-Jk-XpX">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Departure date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jqk-Jk-XpX">
                                                 <rect key="frame" x="48" y="13.5" width="287" height="14"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
@@ -1017,7 +1017,7 @@ $ 279</string>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender_icon" translatesAutoresizingMaskIntoConstraints="NO" id="NSm-Qc-FX9">
                                                 <rect key="frame" x="16" y="12.5" width="16" height="16"/>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Return date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KwZ-qA-AZr">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Return date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KwZ-qA-AZr">
                                                 <rect key="frame" x="48" y="13.5" width="287" height="14"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
@@ -1081,7 +1081,7 @@ $ 279</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="tpt-Ah-Qrk" kind="show" id="3Rh-bq-GeE"/>
+                                            <segue destination="tpt-Ah-Qrk" kind="show" identifier="flightChooserSegue" id="3Rh-bq-GeE"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vep-kL-yGP">
@@ -1144,6 +1144,13 @@ $ 279</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qDC-rq-YUb"/>
                     </view>
+                    <connections>
+                        <outlet property="departureTextField" destination="Jqk-Jk-XpX" id="Qg0-fx-fPu"/>
+                        <outlet property="fromLabel" destination="gpu-G6-GzZ" id="sj2-3x-l42"/>
+                        <outlet property="returnDateTextField" destination="KwZ-qA-AZr" id="eKh-bz-WvV"/>
+                        <outlet property="ticketClassView" destination="N7u-hv-9gN" id="FfJ-e6-2Sx"/>
+                        <outlet property="toLabel" destination="g5P-z9-49Y" id="5j1-iV-nqf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFB-Nr-Edf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
