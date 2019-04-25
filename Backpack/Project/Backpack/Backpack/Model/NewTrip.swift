@@ -11,7 +11,7 @@ import Foundation
 struct NewTrip {
     var tripInfo: TripInfo?
     let flightInfo: FlightInfo?
-    let ticketInfo: TicketInfo?
+    var ticketInfo: TicketInfo?
     
     init(trip: TripInfo? = nil,
         flight: FlightInfo? = nil,

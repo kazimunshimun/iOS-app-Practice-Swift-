@@ -9,8 +9,21 @@
 import Foundation
 
 struct TicketInfo {
-    let ticketClass: String
-    let ticketFrom: String
-    let ticketTo: String
-    let ticketCost: String
+    var ticketClass: String?
+    var ticketFrom: String?
+    var ticketTo: String?
+    var ticketCost: String?
+    var departureDate: String?
+    var returnDate: String?
+    
+    init(ticketClass: String? = nil, ticketFrom: String? = nil, ticketTo: String? = nil,
+         ticketCost: String? = nil, departureDate: String? = nil,
+         returnDate: String? = nil) {
+        self.ticketClass = ticketClass
+        self.ticketFrom = ticketFrom
+        self.ticketTo = ticketTo
+        self.ticketCost = ticketCost
+        self.departureDate = departureDate
+        self.returnDate = returnDate
+    }
 }
