@@ -86,6 +86,7 @@
 		84BE6FBF224A993400201881 /* DestinationChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE6FBE224A993400201881 /* DestinationChooseViewController.swift */; };
 		84BE6FC1224A9DA800201881 /* TripDetailsInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE6FC0224A9DA800201881 /* TripDetailsInputViewController.swift */; };
 		84BE6FC3224A9E8B00201881 /* TIcketDateInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE6FC2224A9E8B00201881 /* TIcketDateInputViewController.swift */; };
+		84C4EF5E2272CD4100FE8CDF /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4EF5D2272CD4100FE8CDF /* SelectionViewController.swift */; };
 		84DBBA15223BECFD00B5C9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBBA14223BECFD00B5C9FF /* AppDelegate.swift */; };
 		84DBBA17223BECFD00B5C9FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBBA16223BECFD00B5C9FF /* ViewController.swift */; };
 		84DBBA1A223BECFD00B5C9FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DBBA18223BECFD00B5C9FF /* Main.storyboard */; };
@@ -187,6 +188,7 @@
 		84BE6FBE224A993400201881 /* DestinationChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationChooseViewController.swift; sourceTree = "<group>"; };
 		84BE6FC0224A9DA800201881 /* TripDetailsInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsInputViewController.swift; sourceTree = "<group>"; };
 		84BE6FC2224A9E8B00201881 /* TIcketDateInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIcketDateInputViewController.swift; sourceTree = "<group>"; };
+		84C4EF5D2272CD4100FE8CDF /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		84DBBA11223BECFD00B5C9FF /* Backpack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Backpack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DBBA14223BECFD00B5C9FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DBBA16223BECFD00B5C9FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -330,6 +332,16 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
+		84C4EF5C2272CCEC00FE8CDF /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				84FF5D6C226A11AD009339E2 /* ProfileTripsSegmentedControl.swift */,
+				840B5D3B2270CE160004FE29 /* VisibilitySegmentedControl.swift */,
+				840B5D3F2270D6ED0004FE29 /* TripKindSegmentedControl.swift */,
+			);
+			path = SegmentedControl;
+			sourceTree = "<group>";
+		};
 		84DBBA08223BECFD00B5C9FF = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +384,7 @@
 				84FF5D74226A3AB3009339E2 /* Profile */,
 				8473E84F226DEA5B00F4D4DF /* ActivityIndicatorControllerExtenstion.swift */,
 				84830A2E22721699005B67BA /* CalendarViewController.swift */,
+				84C4EF5D2272CD4100FE8CDF /* SelectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -389,13 +402,11 @@
 				84E180B22246A8190043FEEC /* CollectionPickerViewFlowLayout.swift */,
 				84361F80224DE27F00766D04 /* TextInsetTextField.swift */,
 				8434DFD6225FAAFF0069CD1D /* CustomSegmentedContrl.swift */,
-				84FF5D6C226A11AD009339E2 /* ProfileTripsSegmentedControl.swift */,
+				84C4EF5C2272CCEC00FE8CDF /* SegmentedControl */,
 				84FF5D6E226A21DA009339E2 /* UIViewExtension.swift */,
 				8411566B226B8A8B003BA479 /* CustomSwitch.swift */,
 				8411566D226B8B11003BA479 /* CustomThumbView.swift */,
 				8473E84D226DE9B400F4D4DF /* CustomAcitityIndicatorView.swift */,
-				840B5D3B2270CE160004FE29 /* VisibilitySegmentedControl.swift */,
-				840B5D3F2270D6ED0004FE29 /* TripKindSegmentedControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -615,6 +626,7 @@
 				84361F87224E1D1E00766D04 /* InvitesViewController.swift in Sources */,
 				84361F83224E095700766D04 /* AddTripsPhotoViewController.swift in Sources */,
 				84BD3713223EBACA004E098D /* RoundedButtonWithBorder.swift in Sources */,
+				84C4EF5E2272CD4100FE8CDF /* SelectionViewController.swift in Sources */,
 				84AFE5FA224A067400505AA8 /* CreditCardInputViewController.swift in Sources */,
 				8473E850226DEA5B00F4D4DF /* ActivityIndicatorControllerExtenstion.swift in Sources */,
 				842956272243F50D002D88B8 /* MessagingViewController.swift in Sources */,
