@@ -59,7 +59,7 @@ extension Date {
     
     func getTitleDateFC() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEE, MMM dd"
+        dateFormatter.dateFormat = "EEE dd MMM"
         return dateFormatter.string(from: self)
     }
 }

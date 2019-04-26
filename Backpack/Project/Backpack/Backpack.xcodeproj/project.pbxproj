@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		840B5D3C2270CE160004FE29 /* VisibilitySegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B5D3B2270CE160004FE29 /* VisibilitySegmentedControl.swift */; };
 		840B5D402270D6ED0004FE29 /* TripKindSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B5D3F2270D6ED0004FE29 /* TripKindSegmentedControl.swift */; };
+		840CDDB622730ADD002772BE /* HorizontalCustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CDDB522730ADD002772BE /* HorizontalCustomPickerView.swift */; };
 		84115669226B602E003BA479 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84115667226B602E003BA479 /* TripTableViewCell.swift */; };
 		8411566A226B602E003BA479 /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84115668226B602E003BA479 /* TripTableViewCell.xib */; };
 		8411566C226B8A8B003BA479 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411566B226B8A8B003BA479 /* CustomSwitch.swift */; };
@@ -111,6 +112,7 @@
 /* Begin PBXFileReference section */
 		840B5D3B2270CE160004FE29 /* VisibilitySegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibilitySegmentedControl.swift; sourceTree = "<group>"; };
 		840B5D3F2270D6ED0004FE29 /* TripKindSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripKindSegmentedControl.swift; sourceTree = "<group>"; };
+		840CDDB522730ADD002772BE /* HorizontalCustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCustomPickerView.swift; sourceTree = "<group>"; };
 		84115667226B602E003BA479 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		84115668226B602E003BA479 /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
 		8411566B226B8A8B003BA479 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 				8411566B226B8A8B003BA479 /* CustomSwitch.swift */,
 				8411566D226B8B11003BA479 /* CustomThumbView.swift */,
 				8473E84D226DE9B400F4D4DF /* CustomAcitityIndicatorView.swift */,
+				840CDDB522730ADD002772BE /* HorizontalCustomPickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				84FF5D6F226A21DA009339E2 /* UIViewExtension.swift in Sources */,
 				8432B2C3226CB9BD00BFC22A /* SettingsViewController.swift in Sources */,
 				84B88FA3224D34B900DE8A11 /* PhoneNumberInputViewController.swift in Sources */,
+				840CDDB622730ADD002772BE /* HorizontalCustomPickerView.swift in Sources */,
 				84FF5D6B2269FFDC009339E2 /* RoundedCornerScrollView.swift in Sources */,
 				84DBBA35223C089300B5C9FF /* SignUpViewController.swift in Sources */,
 				8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */,
