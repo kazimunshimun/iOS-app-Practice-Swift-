@@ -88,6 +88,7 @@
 		84BE6FC1224A9DA800201881 /* TripDetailsInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE6FC0224A9DA800201881 /* TripDetailsInputViewController.swift */; };
 		84BE6FC3224A9E8B00201881 /* TIcketDateInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE6FC2224A9E8B00201881 /* TIcketDateInputViewController.swift */; };
 		84C4EF5E2272CD4100FE8CDF /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4EF5D2272CD4100FE8CDF /* SelectionViewController.swift */; };
+		84D65DAE22741C5900C5CB08 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D65DAD22741C5900C5CB08 /* Airport.swift */; };
 		84DBBA15223BECFD00B5C9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBBA14223BECFD00B5C9FF /* AppDelegate.swift */; };
 		84DBBA17223BECFD00B5C9FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBBA16223BECFD00B5C9FF /* ViewController.swift */; };
 		84DBBA1A223BECFD00B5C9FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DBBA18223BECFD00B5C9FF /* Main.storyboard */; };
@@ -191,6 +192,7 @@
 		84BE6FC0224A9DA800201881 /* TripDetailsInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsInputViewController.swift; sourceTree = "<group>"; };
 		84BE6FC2224A9E8B00201881 /* TIcketDateInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIcketDateInputViewController.swift; sourceTree = "<group>"; };
 		84C4EF5D2272CD4100FE8CDF /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		84D65DAD22741C5900C5CB08 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		84DBBA11223BECFD00B5C9FF /* Backpack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Backpack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DBBA14223BECFD00B5C9FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DBBA16223BECFD00B5C9FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 				841D8F4B226F887D009A37AE /* TripInfo.swift */,
 				841D8F4D226F8886009A37AE /* FlightInfo.swift */,
 				841D8F4F226F8891009A37AE /* TicketInfo.swift */,
+				84D65DAD22741C5900C5CB08 /* Airport.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */,
 				840B5D402270D6ED0004FE29 /* TripKindSegmentedControl.swift in Sources */,
 				8473E84A226D92CF00F4D4DF /* FAQ.swift in Sources */,
+				84D65DAE22741C5900C5CB08 /* Airport.swift in Sources */,
 				8434637F22639E70005F77B0 /* DestinationCollectionViewCell.swift in Sources */,
 				841D8F4A226F8870009A37AE /* NewTrip.swift in Sources */,
 				84379252224FCE02009F730B /* FeedTableViewCell.swift in Sources */,

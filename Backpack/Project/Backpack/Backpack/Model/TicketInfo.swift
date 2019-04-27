@@ -13,14 +13,30 @@ struct TicketInfo {
     var ticketClass: String?
     var ticketFrom: String?
     var ticketTo: String?
-    var ticketCost: String?
+    var ticketCost: Int?
     var departureDate: String?
     var returnDate: String?
     var flightLength: String?
     var travelDate: String?
     
+    var airportFrom: Airport?
+    var airportTo: Airport?
+
+    var ticketCostFrom: Int?
+    var ticketCostTo: Int?
+    
+    var flightLengthReturn: String?
+    
+    var flightTimeFromStart: String?
+    var flightTimeFromEnd: String?
+    var flightTimeToStart: String?
+    var flightTimeToEnd: String?
+    
+    var returnDepartureDate: String?
+    var returnArrivalDate: String?
+    
     init(airlineName: String? = nil, ticketClass: String? = nil, ticketFrom: String? = nil, ticketTo: String? = nil,
-         ticketCost: String? = nil, departureDate: String? = nil,
+         ticketCost: Int? = nil, departureDate: String? = nil,
          returnDate: String? = nil,
          flightLength: String? = nil,
          travelDate: String? = nil) {

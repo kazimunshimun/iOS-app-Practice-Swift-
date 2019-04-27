@@ -19,14 +19,23 @@ class LoginViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: Any) {
         navigationController!.popViewController(animated: true)
     }
-    /*
+    
     // MARK: - Navigation
-
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        self.showSpinner(onView: self.view)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.removeSpinner()
+            let storyboard = UIStoryboard(name: "TabMenu", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "tabMenuController") as! MenuViewController
+            self.show(vc, sender: nil)
+        }
+        
+    }
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
+    
 
 }

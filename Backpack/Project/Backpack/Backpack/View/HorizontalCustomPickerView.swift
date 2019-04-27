@@ -45,7 +45,7 @@ extension HorizontalCustomPickerView: UIPickerViewDelegate {
         view.addSubview(dateLabel)
         
         let costLabel = UILabel(frame: CGRect(x: 0, y: 30, width: 100, height: 20))
-        costLabel.text = pickerData[row].ticketCost
+        costLabel.text = "$\(pickerData[row].ticketCost!)"
         costLabel.textAlignment = .center
         costLabel.textColor = .white
         costLabel.font = UIFont(name: "Poppins-Bold", size: 14)

@@ -30,7 +30,7 @@ class TripDetailsInputViewController: UIViewController, CalendarCallBack {
     
     var dateFor: DateFor = .none
     
-    var newTrip: NewTrip = NewTrip()
+    var newTrip: NewTrip!
     
     override func viewDidLoad() {
         super.viewDidLoad()

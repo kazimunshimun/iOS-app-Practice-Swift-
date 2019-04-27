@@ -18,7 +18,7 @@ class TIcketDateInputViewController: UIViewController, SelectionCallBack {
     @IBOutlet weak var classTextField: UITextField!
     
     
-    var newTrip: NewTrip = NewTrip()
+    var newTrip: NewTrip!
     let selectionData: [String] = ["Economy", "Primium Economy", "First", "Business"]
     
     override func viewDidLoad() {
