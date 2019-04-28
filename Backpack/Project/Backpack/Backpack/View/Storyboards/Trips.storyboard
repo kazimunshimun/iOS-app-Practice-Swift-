@@ -68,7 +68,7 @@
                                             <color key="titleColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="F5z-Hy-XKD" kind="show" id="JjH-l0-IP4"/>
+                                            <segue destination="F5z-Hy-XKD" kind="show" identifier="requestViewController" id="JjH-l0-IP4"/>
                                         </connections>
                                     </button>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o7x-Wp-cOI">
@@ -271,7 +271,7 @@
                                             <color key="titleColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Dcw-tF-qVl" kind="show" id="qsr-7T-ftS"/>
+                                            <segue destination="Dcw-tF-qVl" kind="show" identifier="inviteViewController" id="qsr-7T-ftS"/>
                                         </connections>
                                     </button>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ksu-Bi-jki">
@@ -284,7 +284,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="invitesCell" id="ZDf-64-pKX" customClass="TripRequestCollectionViewCell" customModule="Backpack" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="invitesCell" id="ZDf-64-pKX" customClass="TripInviteCollectionViewCell" customModule="Backpack" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="11" width="335" height="106"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -454,6 +454,17 @@
                                                     <constraint firstAttribute="trailing" secondItem="R2S-E9-Y2P" secondAttribute="trailing" id="vcN-Se-vfO"/>
                                                 </constraints>
                                                 <size key="customSize" width="335" height="106"/>
+                                                <connections>
+                                                    <outlet property="dateLabel" destination="hMy-4Q-9Yk" id="dxf-Ip-OnQ"/>
+                                                    <outlet property="daysLabel" destination="MxQ-N7-xHj" id="lpr-Fi-8x8"/>
+                                                    <outlet property="fromLabel" destination="BRQ-6y-yhG" id="miQ-IQ-qzc"/>
+                                                    <outlet property="messageLabel" destination="caD-0c-Jqe" id="0Gc-4Q-52c"/>
+                                                    <outlet property="messageNameLabel" destination="3nq-y5-Peg" id="WeC-AR-9bx"/>
+                                                    <outlet property="messageProfileImageView" destination="UL5-F4-2AG" id="m5D-6Z-LnR"/>
+                                                    <outlet property="profileImageView" destination="Asp-3g-cph" id="x2M-Fs-iWC"/>
+                                                    <outlet property="toLabel" destination="7RB-g3-v7H" id="pgt-ez-nfr"/>
+                                                    <outlet property="tripImageView" destination="GrK-ep-mDZ" id="CeR-jz-mJu"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>

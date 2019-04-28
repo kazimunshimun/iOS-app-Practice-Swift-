@@ -10,6 +10,7 @@ import UIKit
 
 class InvitesViewController: UIViewController {
 
+    var inviteData: [Request]!
     override func viewDidLoad() {
         super.viewDidLoad()
 

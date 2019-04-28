@@ -10,6 +10,7 @@ import UIKit
 
 class RequestsViewController: UIViewController {
 
+    var requestData: [Request]!
     override func viewDidLoad() {
         super.viewDidLoad()
 

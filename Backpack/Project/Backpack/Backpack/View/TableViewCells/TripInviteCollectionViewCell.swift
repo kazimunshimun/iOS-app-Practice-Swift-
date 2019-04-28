@@ -1,15 +1,14 @@
 //
-//  TripRequestCollectionViewCell.swift
+//  TripInviteCollectionViewCell.swift
 //  Backpack
 //
-//  Created by Anik on 15/4/19.
+//  Created by Anik on 28/4/19.
 //  Copyright © 2019 A7Studio. All rights reserved.
 //
 
 import UIKit
 
-class TripRequestCollectionViewCell: UICollectionViewCell {
-    
+class TripInviteCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var profileImageView: RoundedCornerImageView!
     @IBOutlet weak var tripImageView: UIImageView!
     @IBOutlet weak var daysLabel: RoundedBackgroundLabel!
