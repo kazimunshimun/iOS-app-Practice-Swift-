@@ -44,6 +44,20 @@ class DestinationChooseViewController: UIViewController {
         }
     }
     
+    @IBAction func returnKeyPressed(_ sender: Any) {
+        fromLabel.text = fromTextField.text
+    }
+    
+
+    @IBAction func returnKeyPressedTo(_ sender: Any) {
+        toLabel.text = toTextField.text
+        
+        if !fromTextField.text!.isEmpty {
+            durationLabel.isHidden = false
+            bestPriceLabel.isHidden = false
+            nextFlightLabel.isHidden = false
+        }
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

@@ -76,6 +76,7 @@
 		848330922253A51400ABE48B /* SearchFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848330912253A51400ABE48B /* SearchFeedViewController.swift */; };
 		84A742462275EE9F0073EE04 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A742452275EE9F0073EE04 /* Request.swift */; };
 		84A742482275FC320073EE04 /* TripInviteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A742472275FC320073EE04 /* TripInviteCollectionViewCell.swift */; };
+		84A7424A22760B730073EE04 /* HorizontalRequestPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7424922760B730073EE04 /* HorizontalRequestPickerView.swift */; };
 		84AFE5FA224A067400505AA8 /* CreditCardInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFE5F9224A067400505AA8 /* CreditCardInputViewController.swift */; };
 		84B88FA3224D34B900DE8A11 /* PhoneNumberInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B88FA2224D34B900DE8A11 /* PhoneNumberInputViewController.swift */; };
 		84B88FA5224D34CC00DE8A11 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B88FA4224D34CC00DE8A11 /* ForgotPasswordViewController.swift */; };
@@ -182,6 +183,7 @@
 		848330912253A51400ABE48B /* SearchFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeedViewController.swift; sourceTree = "<group>"; };
 		84A742452275EE9F0073EE04 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		84A742472275FC320073EE04 /* TripInviteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInviteCollectionViewCell.swift; sourceTree = "<group>"; };
+		84A7424922760B730073EE04 /* HorizontalRequestPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalRequestPickerView.swift; sourceTree = "<group>"; };
 		84AFE5F9224A067400505AA8 /* CreditCardInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardInputViewController.swift; sourceTree = "<group>"; };
 		84B88FA2224D34B900DE8A11 /* PhoneNumberInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberInputViewController.swift; sourceTree = "<group>"; };
 		84B88FA4224D34CC00DE8A11 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 				8411566D226B8B11003BA479 /* CustomThumbView.swift */,
 				8473E84D226DE9B400F4D4DF /* CustomAcitityIndicatorView.swift */,
 				840CDDB522730ADD002772BE /* HorizontalCustomPickerView.swift */,
+				84A7424922760B730073EE04 /* HorizontalRequestPickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				84115669226B602E003BA479 /* TripTableViewCell.swift in Sources */,
 				8429562B2243F557002D88B8 /* TripsViewController.swift in Sources */,
 				8434DFDA225FAFD70069CD1D /* PeopleTableViewCell.swift in Sources */,
+				84A7424A22760B730073EE04 /* HorizontalRequestPickerView.swift in Sources */,
 				848330922253A51400ABE48B /* SearchFeedViewController.swift in Sources */,
 				842956232243F3C1002D88B8 /* MenuViewController.swift in Sources */,
 				8432B2C5226CBBDD00BFC22A /* TermsViewController.swift in Sources */,

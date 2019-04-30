@@ -8,17 +8,43 @@
 
 import UIKit
 
-class RequestsViewController: UIViewController {
-
+class RequestsViewController: UIViewController, RequestPickerViewCallBack {
+    
+    @IBOutlet weak var requestPickerView: UIPickerView!
+    
     var requestData: [Request]!
+    
+    var requestHorizontalPicker: HorizontalRequestPickerView!
+    
+    var rotationAngle: CGFloat!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        rotationAngle = -90 * (.pi / 180)
+        requestHorizontalPicker = HorizontalRequestPickerView()
+        
+        requestHorizontalPicker.callBackDelegate = self
+        requestHorizontalPicker.requestData = requestData
+        
+        let y = requestPickerView.frame.origin.y
+        print("before pickerView x: \(requestPickerView.frame.origin.x) y: \(requestPickerView.frame.origin.y) width: \(requestPickerView.frame.width) height: \(requestPickerView.frame.height)")
+        requestPickerView.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        print("after pickerView x: \(requestPickerView.frame.origin.x) y: \(requestPickerView.frame.origin.y) width: \(requestPickerView.frame.width) height: \(requestPickerView.frame.height)")
+        requestPickerView.frame = CGRect(x: -100, y: y, width: 300, height: 350)
+        requestPickerView.delegate = requestHorizontalPicker
+        requestPickerView.dataSource = requestHorizontalPicker
+        
+        requestPickerView.selectRow(1, inComponent: 0, animated: false)
+        didSelectRequest(request: requestData[2], index: 2)
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
         navigationController!.popViewController(animated: true)
+    }
+    
+    func didSelectRequest(request: Request, index: Int) {
+        
     }
     /*
     // MARK: - Navigation
