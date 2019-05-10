@@ -13,7 +13,8 @@ var vSpinner : UIView?
 extension UIViewController {
     func showSpinner(onView : UIView) {
         let spinnerView = UIView.init(frame: onView.bounds)
-        spinnerView.backgroundColor = UIColor.init(red: 115.0 / 255.0, green: 115.0 / 255.0, blue: 115.0 / 255.0, alpha: 0.7)
+        spinnerView.backgroundColor = UIColor(white: 0.7, alpha: 0.8)
+        
        // let ai = UIActivityIndicatorView.init(style: .whiteLarge)
         let ai = CustomAcitityIndicatorView(frame: CGRect(x: 0, y: 0, width: 42, height: 42), image: UIImage(named: "spinner")!)
         ai.center = spinnerView.center
