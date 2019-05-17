@@ -77,9 +77,11 @@ class TripsViewController: UIViewController, UICollectionViewDelegate, UICollect
             requestViewController.requestData = requestData
         } else if segue.identifier == "destinationViewController"{
             
-        } else {
+        } else if segue.identifier == "inviteViewController" {
             let inviteViewController = segue.destination as! InvitesViewController
             inviteViewController.inviteData = inviteData
+        } else {
+            //extra
         }
         
     }

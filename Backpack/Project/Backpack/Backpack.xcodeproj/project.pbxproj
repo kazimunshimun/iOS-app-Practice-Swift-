@@ -62,6 +62,7 @@
 		843EC94F223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */; };
 		8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446A268223FF769007CC940 /* OnboardParentViewController.swift */; };
 		8446A26B223FF77F007CC940 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446A26A223FF77F007CC940 /* OnBoardingViewController.swift */; };
+		8448F1EB228E9087007601C6 /* AddPhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448F1EA228E9087007601C6 /* AddPhotosCollectionViewCell.swift */; };
 		8456AF842244C0FC0009E68F /* RoundedViewWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456AF832244C0FC0009E68F /* RoundedViewWithShadow.swift */; };
 		8456AF862244C4BA0009E68F /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456AF852244C4BA0009E68F /* Trips.storyboard */; };
 		8456AF882244C5BC0009E68F /* Feeds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456AF872244C5BC0009E68F /* Feeds.storyboard */; };
@@ -169,6 +170,7 @@
 		843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordToggleVisibilityView.swift; sourceTree = "<group>"; };
 		8446A268223FF769007CC940 /* OnboardParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardParentViewController.swift; sourceTree = "<group>"; };
 		8446A26A223FF77F007CC940 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		8448F1EA228E9087007601C6 /* AddPhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		8456AF832244C0FC0009E68F /* RoundedViewWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewWithShadow.swift; sourceTree = "<group>"; };
 		8456AF852244C4BA0009E68F /* Trips.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trips.storyboard; sourceTree = "<group>"; };
 		8456AF872244C5BC0009E68F /* Feeds.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feeds.storyboard; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				84298804226CE476009DFA5E /* FAQTableViewCell.xib */,
 				8473E84B226D94C500F4D4DF /* FAQ2TableViewCell.swift */,
 				84A742472275FC320073EE04 /* TripInviteCollectionViewCell.swift */,
+				8448F1EA228E9087007601C6 /* AddPhotosCollectionViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				84C4EF5E2272CD4100FE8CDF /* SelectionViewController.swift in Sources */,
 				84AFE5FA224A067400505AA8 /* CreditCardInputViewController.swift in Sources */,
 				8473E850226DEA5B00F4D4DF /* ActivityIndicatorControllerExtenstion.swift in Sources */,
+				8448F1EB228E9087007601C6 /* AddPhotosCollectionViewCell.swift in Sources */,
 				842956272243F50D002D88B8 /* MessagingViewController.swift in Sources */,
 				8473E84C226D94C500F4D4DF /* FAQ2TableViewCell.swift in Sources */,
 				8432B2C7226CBBEB00BFC22A /* PrivacyViewController.swift in Sources */,
