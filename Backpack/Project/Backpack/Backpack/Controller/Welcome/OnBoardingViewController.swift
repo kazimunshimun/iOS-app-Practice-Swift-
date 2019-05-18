@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol OnBoardingDelegate {
+    func numberOfPage(count: Int)
+    func selectedPageIndex(index: Int)
+}
+
 class OnBoardingViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
     enum PageViews: String {
@@ -17,7 +22,9 @@ class OnBoardingViewController: UIPageViewController, UIPageViewControllerDataSo
         case askOut
     }
     
-    fileprivate lazy var orderedViewController: [UIViewController] = {
+    var pageDelegate: OnBoardingDelegate? = nil
+    
+    lazy var orderedViewController: [UIViewController] = {
         return [self.getViewController(withIdentifier: PageViews.addTrips.rawValue),
                 self.getViewController(withIdentifier: PageViews.discover.rawValue),
                 self.getViewController(withIdentifier: PageViews.invites.rawValue),
@@ -32,15 +39,22 @@ class OnBoardingViewController: UIPageViewController, UIPageViewControllerDataSo
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewController.index(of: viewController) else { return nil }
         let previousIndex = viewControllerIndex - 1
-        guard previousIndex >= 0 else { return orderedViewController.last }
+        guard previousIndex >= 0 else {
+            //pageDelegate?.selectedPageIndex(index: orderedViewController.count - 1)
+            return orderedViewController.last
+        }
         guard orderedViewController.count > previousIndex else { return nil }
         return orderedViewController[previousIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewController.index(of: viewController) else { return nil }
+        pageDelegate?.selectedPageIndex(index: viewControllerIndex)
         let nextIndex = viewControllerIndex + 1
-        guard nextIndex < orderedViewController.count else { return orderedViewController.first }
+        guard nextIndex < orderedViewController.count else {
+            //pageDelegate?.selectedPageIndex(index: 0)
+            return orderedViewController.first
+        }
         guard orderedViewController.count > nextIndex else { return nil }
         return orderedViewController[nextIndex]
     }
@@ -60,14 +74,12 @@ class OnBoardingViewController: UIPageViewController, UIPageViewControllerDataSo
         self.dataSource = self
         self.delegate = self
         
+        pageDelegate?.numberOfPage(count: orderedViewController.count)
+        
         if let firstVC = orderedViewController.first {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
         }
     }
-    
-    
-    
-
     /*
     // MARK: - Navigation
 
