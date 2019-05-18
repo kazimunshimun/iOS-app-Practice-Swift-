@@ -264,28 +264,13 @@
 			path = Messaging;
 			sourceTree = "<group>";
 		};
-		84379258224FCE35009F730B /* TableViewCells */ = {
+		84379258224FCE35009F730B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				84361F8C224E8DD200766D04 /* ChatTableViewCell.swift */,
-				84379250224FCE02009F730B /* FeedTableViewCell.swift */,
-				84379251224FCE02009F730B /* FeedTableViewCell.xib */,
-				84379254224FCE2B009F730B /* PopularDestinationTableViewCell.swift */,
-				84379255224FCE2B009F730B /* PopularDestinationTableViewCell.xib */,
-				8434DFD8225FAFD70069CD1D /* PeopleTableViewCell.swift */,
-				8434DFD9225FAFD70069CD1D /* PeopleTableViewCell.xib */,
-				8434637C22638D68005F77B0 /* PopularDestinationTableViewCell2.swift */,
-				8434637E22639E70005F77B0 /* DestinationCollectionViewCell.swift */,
-				8439183C2264ED34005D2BA9 /* TripRequestCollectionViewCell.swift */,
-				84115667226B602E003BA479 /* TripTableViewCell.swift */,
-				84115668226B602E003BA479 /* TripTableViewCell.xib */,
-				84298803226CE476009DFA5E /* FAQTableViewCell.swift */,
-				84298804226CE476009DFA5E /* FAQTableViewCell.xib */,
-				8473E84B226D94C500F4D4DF /* FAQ2TableViewCell.swift */,
-				84A742472275FC320073EE04 /* TripInviteCollectionViewCell.swift */,
-				8448F1EA228E9087007601C6 /* AddPhotosCollectionViewCell.swift */,
+				8481DA44228FD525007C02DB /* TableView */,
+				8481DA45228FD537007C02DB /* CollectionView */,
 			);
-			path = TableViewCells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		8456AF8D2244C75A0009E68F /* Storyboards */ = {
@@ -311,6 +296,37 @@
 				8467334D2260994900EACAD9 /* PostFullViewController.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		8481DA44228FD525007C02DB /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				84361F8C224E8DD200766D04 /* ChatTableViewCell.swift */,
+				84379250224FCE02009F730B /* FeedTableViewCell.swift */,
+				84379251224FCE02009F730B /* FeedTableViewCell.xib */,
+				84379254224FCE2B009F730B /* PopularDestinationTableViewCell.swift */,
+				84379255224FCE2B009F730B /* PopularDestinationTableViewCell.xib */,
+				8434DFD8225FAFD70069CD1D /* PeopleTableViewCell.swift */,
+				8434DFD9225FAFD70069CD1D /* PeopleTableViewCell.xib */,
+				8434637C22638D68005F77B0 /* PopularDestinationTableViewCell2.swift */,
+				84115667226B602E003BA479 /* TripTableViewCell.swift */,
+				84115668226B602E003BA479 /* TripTableViewCell.xib */,
+				84298803226CE476009DFA5E /* FAQTableViewCell.swift */,
+				84298804226CE476009DFA5E /* FAQTableViewCell.xib */,
+				8473E84B226D94C500F4D4DF /* FAQ2TableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		8481DA45228FD537007C02DB /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				8434637E22639E70005F77B0 /* DestinationCollectionViewCell.swift */,
+				8439183C2264ED34005D2BA9 /* TripRequestCollectionViewCell.swift */,
+				84A742472275FC320073EE04 /* TripInviteCollectionViewCell.swift */,
+				8448F1EA228E9087007601C6 /* AddPhotosCollectionViewCell.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		84B88FA1224D306100DE8A11 /* Trips */ = {
@@ -407,7 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				8456AF8D2244C75A0009E68F /* Storyboards */,
-				84379258224FCE35009F730B /* TableViewCells */,
+				84379258224FCE35009F730B /* Cells */,
 				843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */,
 				843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */,
 				843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */,
