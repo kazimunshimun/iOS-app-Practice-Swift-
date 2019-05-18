@@ -329,6 +329,17 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		8481DA46228FD963007C02DB /* PickerViews */ = {
+			isa = PBXGroup;
+			children = (
+				84E180B02246A7C70043FEEC /* CollectionPickerView.swift */,
+				84E180B22246A8190043FEEC /* CollectionPickerViewFlowLayout.swift */,
+				840CDDB522730ADD002772BE /* HorizontalCustomPickerView.swift */,
+				84A7424922760B730073EE04 /* HorizontalRequestPickerView.swift */,
+			);
+			path = PickerViews;
+			sourceTree = "<group>";
+		};
 		84B88FA1224D306100DE8A11 /* Trips */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +376,7 @@
 		84C4EF5C2272CCEC00FE8CDF /* SegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
+				8434DFD6225FAAFF0069CD1D /* CustomSegmentedContrl.swift */,
 				84FF5D6C226A11AD009339E2 /* ProfileTripsSegmentedControl.swift */,
 				840B5D3B2270CE160004FE29 /* VisibilitySegmentedControl.swift */,
 				840B5D3F2270D6ED0004FE29 /* TripKindSegmentedControl.swift */,
@@ -428,17 +440,13 @@
 				843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */,
 				843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */,
 				843726742269FF3100F4C7B2 /* Rounded Views */,
-				84E180B02246A7C70043FEEC /* CollectionPickerView.swift */,
-				84E180B22246A8190043FEEC /* CollectionPickerViewFlowLayout.swift */,
+				8481DA46228FD963007C02DB /* PickerViews */,
 				84361F80224DE27F00766D04 /* TextInsetTextField.swift */,
-				8434DFD6225FAAFF0069CD1D /* CustomSegmentedContrl.swift */,
 				84C4EF5C2272CCEC00FE8CDF /* SegmentedControl */,
 				84FF5D6E226A21DA009339E2 /* UIViewExtension.swift */,
 				8411566B226B8A8B003BA479 /* CustomSwitch.swift */,
 				8411566D226B8B11003BA479 /* CustomThumbView.swift */,
 				8473E84D226DE9B400F4D4DF /* CustomAcitityIndicatorView.swift */,
-				840CDDB522730ADD002772BE /* HorizontalCustomPickerView.swift */,
-				84A7424922760B730073EE04 /* HorizontalRequestPickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

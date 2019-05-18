@@ -63,10 +63,15 @@ class AddTripsPhotoViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     @IBAction func doneButtonTouched(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "TabMenu", bundle: nil)
-        let tripTabViewController = storyBoard.instantiateViewController(withIdentifier: "tabMenuController") as! MenuViewController
-        tripTabViewController.selectedIndex = 2
-        UIApplication.shared.keyWindow?.rootViewController = tripTabViewController
+        self.showSpinner(onView: self.view, showText: true, position: .center)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.removeSpinner()
+            let storyBoard: UIStoryboard = UIStoryboard(name: "TabMenu", bundle: nil)
+            let tripTabViewController = storyBoard.instantiateViewController(withIdentifier: "tabMenuController") as! MenuViewController
+            tripTabViewController.selectedIndex = 2
+            UIApplication.shared.keyWindow?.rootViewController = tripTabViewController
+        }
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

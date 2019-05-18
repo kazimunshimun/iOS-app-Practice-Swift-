@@ -11,7 +11,7 @@ import UIKit
 class RoundedViewWithShadow: UIView {
 
     var shadowAdded: Bool = false
-    @IBInspectable public var cornerRadius:CGFloat {
+    @IBInspectable public var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }

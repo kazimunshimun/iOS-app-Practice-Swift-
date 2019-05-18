@@ -20,6 +20,10 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.showSpinner(onView: self.view, showText: true, position: .bottom)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.removeSpinner()
+        }
         //deactiveAccountView.addTapGesture(tapNumber: 1, target: self, action: #selector(followersViewTouched))
         termsView.addTapGesture(tapNumber: 1, target: self, action: #selector(termViewTouched))
         privacyView.addTapGesture(tapNumber: 1, target: self, action: #selector(privacyViewTouched))

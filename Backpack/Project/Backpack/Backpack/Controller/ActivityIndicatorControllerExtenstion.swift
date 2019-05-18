@@ -11,12 +11,12 @@ import UIKit
 var vSpinner : UIView?
 
 extension UIViewController {
-    func showSpinner(onView : UIView) {
+    func showSpinner(onView : UIView, showText: Bool, position: AcitvityIndicatorPosition) {
         let spinnerView = UIView.init(frame: onView.bounds)
         spinnerView.backgroundColor = UIColor(white: 0.7, alpha: 0.8)
         
        // let ai = UIActivityIndicatorView.init(style: .whiteLarge)
-        let ai = CustomAcitityIndicatorView(frame: CGRect(x: 0, y: 0, width: 42, height: 42), image: UIImage(named: "spinner")!)
+        let ai = CustomAcitityIndicatorView(frame: onView.frame, image: UIImage(named: "spinner")!, isWithText: showText, position: position)
         ai.center = spinnerView.center
         
         DispatchQueue.main.async {

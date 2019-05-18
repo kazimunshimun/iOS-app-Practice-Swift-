@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - Navigation
     @IBAction func loginButtonPressed(_ sender: Any) {
-        self.showSpinner(onView: self.view)
+        self.showSpinner(onView: self.view, showText: false, position: .center)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.removeSpinner()
             let storyboard = UIStoryboard(name: "TabMenu", bundle: nil)
