@@ -50,7 +50,7 @@ class OnboardParentViewController: UIViewController, OnBoardingDelegate {
     }
 
     @IBAction func skipButtonPressed(_ sender: Any) {
-        self.showSpinner(onView: self.view, showText: false, position: .center)
+        self.showSpinner(onView: self.view, showText: false, text: "", position: .center)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.removeSpinner()
             let storyboard = UIStoryboard(name: "TabMenu", bundle: nil)

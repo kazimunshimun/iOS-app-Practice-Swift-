@@ -20,7 +20,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.showSpinner(onView: self.view, showText: true, position: .bottom)
+        self.showSpinner(onView: self.view, showText: true, text: "Connection seems slow", position: .bottom)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.removeSpinner()
         }

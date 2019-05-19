@@ -18,19 +18,19 @@ class CustomAcitityIndicatorView: UIView {
     let textView = UILabel()
     var image =  UIImage()
     
-    init(frame: CGRect, image: UIImage, isWithText: Bool, position: AcitvityIndicatorPosition) {
+    init(frame: CGRect, image: UIImage, isWithText: Bool, text: String?, position: AcitvityIndicatorPosition) {
         super.init(frame: frame)
         
         self.image = image
         
         if position == .center {
-            layoutInMiddle(isWithText: isWithText)
+            layoutInMiddle(isWithText: isWithText, text: text)
         } else if position == .bottom {
             layoutInBottom(isWithText: isWithText)
         }
     }
     
-    private func layoutInMiddle(isWithText: Bool) {
+    private func layoutInMiddle(isWithText: Bool, text: String?) {
         let waitView = UIView()
         addSubview(waitView)
         
@@ -81,7 +81,7 @@ class CustomAcitityIndicatorView: UIView {
             reasonTextView.topAnchor.constraint(equalTo: pleaseWaitLabel.bottomAnchor, constant: 4).isActive = true
             reasonTextView.leftAnchor.constraint(equalTo: waitView.leftAnchor, constant: 16).isActive = true
             reasonTextView.rightAnchor.constraint(equalTo: waitView.rightAnchor, constant: -16).isActive = true
-            reasonTextView.text = "The connections seems to be slow"
+            reasonTextView.text = text
             reasonTextView.textAlignment = .center
             reasonTextView.font = UIFont(name: "Poppins-Regular", size: 12)
             reasonTextView.isEditable = false

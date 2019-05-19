@@ -63,7 +63,7 @@ class AddTripsPhotoViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     @IBAction func doneButtonTouched(_ sender: Any) {
-        self.showSpinner(onView: self.view, showText: true, position: .center)
+        self.showSpinner(onView: self.view, showText: true, text: "The connections seems to be slow", position: .center)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.removeSpinner()
             let storyBoard: UIStoryboard = UIStoryboard(name: "TabMenu", bundle: nil)
