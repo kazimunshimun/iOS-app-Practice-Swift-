@@ -712,8 +712,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qa-U1-tlW" customClass="RoundedCornerView" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="67.5" y="80" width="240" height="100"/>
-                                <color key="backgroundColor" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="67.5" y="50" width="240" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="35G-At-T4e"/>
                                     <constraint firstAttribute="width" constant="240" id="rhs-5n-53t"/>
@@ -729,8 +729,8 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5u-WF-2v8" customClass="RoundedCornerView" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="67.5" y="210" width="240" height="100"/>
-                                <color key="backgroundColor" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="67.5" y="170" width="240" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="I1n-aI-ov4"/>
                                     <constraint firstAttribute="width" constant="240" id="v2Y-wz-Cy1"/>
@@ -744,8 +744,8 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JW8-s4-jcn" customClass="RoundedCornerView" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="67.5" y="340" width="240" height="100"/>
-                                <color key="backgroundColor" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="67.5" y="290" width="240" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="LGP-ek-BbG"/>
                                     <constraint firstAttribute="width" constant="240" id="RRY-pm-nKa"/>
@@ -756,16 +756,33 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="NO"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="NO"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WT9-fq-dNv" customClass="RoundedCornerView" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="67.5" y="470" width="240" height="100"/>
+                                <rect key="frame" x="67.5" y="410" width="240" height="100"/>
                                 <color key="backgroundColor" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="ufw-Dj-BWy"/>
                                     <constraint firstAttribute="height" constant="100" id="wlf-M5-upL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEN-z6-HJK" customClass="RoundedCornerView" customModule="Backpack" customModuleProvider="target">
+                                <rect key="frame" x="67.5" y="526" width="240" height="100"/>
+                                <color key="backgroundColor" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="0df-VI-ZfV"/>
+                                    <constraint firstAttribute="height" constant="100" id="hEx-H3-3Lq"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
@@ -779,13 +796,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="WT9-fq-dNv" firstAttribute="top" secondItem="JW8-s4-jcn" secondAttribute="bottom" constant="30" id="20y-ud-gLd"/>
+                            <constraint firstItem="WT9-fq-dNv" firstAttribute="top" secondItem="JW8-s4-jcn" secondAttribute="bottom" constant="20" id="20y-ud-gLd"/>
                             <constraint firstItem="0Qa-U1-tlW" firstAttribute="centerX" secondItem="viY-5g-45l" secondAttribute="centerX" id="8Zo-HW-o1P"/>
-                            <constraint firstItem="JW8-s4-jcn" firstAttribute="top" secondItem="e5u-WF-2v8" secondAttribute="bottom" constant="30" id="Nxf-y5-WjM"/>
+                            <constraint firstItem="JW8-s4-jcn" firstAttribute="top" secondItem="e5u-WF-2v8" secondAttribute="bottom" constant="20" id="Nxf-y5-WjM"/>
                             <constraint firstItem="JW8-s4-jcn" firstAttribute="centerX" secondItem="viY-5g-45l" secondAttribute="centerX" id="PcA-Oi-dzL"/>
                             <constraint firstItem="e5u-WF-2v8" firstAttribute="centerX" secondItem="viY-5g-45l" secondAttribute="centerX" id="ZHK-OQ-Zei"/>
-                            <constraint firstItem="0Qa-U1-tlW" firstAttribute="top" secondItem="viY-5g-45l" secondAttribute="top" constant="60" id="gcO-lz-1gN"/>
-                            <constraint firstItem="e5u-WF-2v8" firstAttribute="top" secondItem="0Qa-U1-tlW" secondAttribute="bottom" constant="30" id="xyu-lk-W7F"/>
+                            <constraint firstItem="0Qa-U1-tlW" firstAttribute="top" secondItem="viY-5g-45l" secondAttribute="top" constant="30" id="gcO-lz-1gN"/>
+                            <constraint firstItem="FEN-z6-HJK" firstAttribute="centerX" secondItem="viY-5g-45l" secondAttribute="centerX" id="vaE-bO-DtH"/>
+                            <constraint firstItem="e5u-WF-2v8" firstAttribute="top" secondItem="0Qa-U1-tlW" secondAttribute="bottom" constant="20" id="xyu-lk-W7F"/>
+                            <constraint firstItem="FEN-z6-HJK" firstAttribute="top" secondItem="WT9-fq-dNv" secondAttribute="bottom" constant="16" id="ypP-9p-Xga"/>
                             <constraint firstItem="WT9-fq-dNv" firstAttribute="centerX" secondItem="viY-5g-45l" secondAttribute="centerX" id="zHE-OT-zSt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="viY-5g-45l"/>
