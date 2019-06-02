@@ -85,9 +85,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let trip: Trip
+        if indexPath.row > 1 {
+            trip = trips[indexPath.row - 1]
+        } else {
+            trip = trips[indexPath.row]
+        }
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Feeds", bundle: nil)
         let fullPostViewController = storyBoard.instantiateViewController(withIdentifier: "fullPostView") as! PostFullViewController
         self.show(fullPostViewController, sender: nil)
+        fullPostViewController.tripDetail = trip
         // self.performSegue(withIdentifier: "showChatView", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }

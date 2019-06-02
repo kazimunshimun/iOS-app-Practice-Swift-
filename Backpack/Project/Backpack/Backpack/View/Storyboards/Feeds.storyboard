@@ -698,6 +698,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rdO-c5-30J"/>
                     </view>
+                    <connections>
+                        <outlet property="isLovedTripButton" destination="oVt-0J-CbU" id="3R0-v6-i19"/>
+                        <outlet property="tripCreationDateLabel" destination="Kb4-jc-WWL" id="koB-bA-q7A"/>
+                        <outlet property="tripCurrentStatusLabel" destination="5YG-yl-1s7" id="d5d-Yb-9kK"/>
+                        <outlet property="tripDescriptionLabel" destination="kya-mL-eqX" id="w3d-Pj-lAy"/>
+                        <outlet property="tripImageView" destination="tcg-UB-L0I" id="Yfu-fy-bte"/>
+                        <outlet property="tripLocationLabel" destination="hAo-8P-39R" id="4V1-c7-jQh"/>
+                        <outlet property="tripUserImageView" destination="dSB-h4-0gG" id="unN-or-IES"/>
+                        <outlet property="tripUserNameLabel" destination="7Xs-Hc-QuW" id="bzt-qX-aBZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0s-m5-8QR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
