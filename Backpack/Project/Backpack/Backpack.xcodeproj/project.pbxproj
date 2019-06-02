@@ -75,6 +75,7 @@
 		8473E850226DEA5B00F4D4DF /* ActivityIndicatorControllerExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473E84F226DEA5B00F4D4DF /* ActivityIndicatorControllerExtenstion.swift */; };
 		84830A2F22721699005B67BA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84830A2E22721699005B67BA /* CalendarViewController.swift */; };
 		848330922253A51400ABE48B /* SearchFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848330912253A51400ABE48B /* SearchFeedViewController.swift */; };
+		84935D9022A3CE7F00061B75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84935D8F22A3CE7F00061B75 /* GoogleService-Info.plist */; };
 		84A742462275EE9F0073EE04 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A742452275EE9F0073EE04 /* Request.swift */; };
 		84A742482275FC320073EE04 /* TripInviteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A742472275FC320073EE04 /* TripInviteCollectionViewCell.swift */; };
 		84A7424A22760B730073EE04 /* HorizontalRequestPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7424922760B730073EE04 /* HorizontalRequestPickerView.swift */; };
@@ -183,6 +184,7 @@
 		8473E84F226DEA5B00F4D4DF /* ActivityIndicatorControllerExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorControllerExtenstion.swift; sourceTree = "<group>"; };
 		84830A2E22721699005B67BA /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		848330912253A51400ABE48B /* SearchFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeedViewController.swift; sourceTree = "<group>"; };
+		84935D8F22A3CE7F00061B75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84A742452275EE9F0073EE04 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		84A742472275FC320073EE04 /* TripInviteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInviteCollectionViewCell.swift; sourceTree = "<group>"; };
 		84A7424922760B730073EE04 /* HorizontalRequestPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalRequestPickerView.swift; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 				84BD3710223EA488004E098D /* Poppins-SemiBold.otf */,
 				84DBBA2E223BFA2A00B5C9FF /* Poppins-Bold.otf */,
 				84DBBA1B223BECFF00B5C9FF /* Assets.xcassets */,
+				84935D8F22A3CE7F00061B75 /* GoogleService-Info.plist */,
 				84DBBA20223BECFF00B5C9FF /* Info.plist */,
 			);
 			path = Resources;
@@ -590,6 +593,7 @@
 				8456AF862244C4BA0009E68F /* Trips.storyboard in Resources */,
 				84379257224FCE2B009F730B /* PopularDestinationTableViewCell.xib in Resources */,
 				84DBBA1A223BECFD00B5C9FF /* Main.storyboard in Resources */,
+				84935D9022A3CE7F00061B75 /* GoogleService-Info.plist in Resources */,
 				8456AF8C2244C5D40009E68F /* Profile.storyboard in Resources */,
 				84DBBA2D223BF8A800B5C9FF /* Poppins-Regular.otf in Resources */,
 			);
@@ -607,13 +611,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Backpack/Pods-Backpack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/TTRangeSlider/TTRangeSlider.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTRangeSlider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -6,5 +6,7 @@ target 'Backpack' do
 
     #pod 'XLPagerTabStrip', '~> 9.0'
     pod “TTRangeSlider”
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Auth'
 
 end

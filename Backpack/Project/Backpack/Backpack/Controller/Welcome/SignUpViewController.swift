@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: BottomLineTextField!
+    @IBOutlet weak var emailTextField: BottomLineTextField!
+    @IBOutlet weak var passwordTextField: HideShowPasswordTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +27,20 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpButtonPressed(_ sender: Any) {
         self.showSpinner(onView: self.view, showText: true, text: "", position: .center)
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { authResult, error in
+            // ...
+            if let error = error {
+                //strongSelf.showMessagePrompt(error.localizedDescription)
+                print(error.localizedDescription)
+                self.removeSpinner()
+                return
+            }
+            self.showPhoneNumberViewController()
+        }
+        
+    }
+    // MARK: - Navigation
+    func showPhoneNumberViewController() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.removeSpinner()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -29,7 +48,6 @@ class SignUpViewController: UIViewController {
             self.show(vc, sender: nil)
         }
     }
-    // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

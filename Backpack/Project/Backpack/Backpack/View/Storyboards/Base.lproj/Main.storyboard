@@ -185,7 +185,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUL-LS-pfT">
-                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twm-QE-sK6">
                                         <rect key="frame" x="6" y="13" width="76" height="24"/>
@@ -223,25 +223,25 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBM-KP-Hby" customClass="BottomLineTextField" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="240" width="295" height="30"/>
+                                <rect key="frame" x="40" y="196" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4N-Uq-XqC" customClass="BottomLineTextField" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="154" width="295" height="30"/>
+                                <rect key="frame" x="40" y="110" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Yf-hJ-IbG" customClass="HideShowPasswordTextField" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="326" width="295" height="30"/>
+                                <rect key="frame" x="40" y="282" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToO-Yq-uZb" customClass="RoundedButton" customModule="Backpack" customModuleProvider="target">
-                                <rect key="frame" x="40" y="444" width="295" height="45"/>
+                                <rect key="frame" x="40" y="400" width="295" height="45"/>
                                 <color key="backgroundColor" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="cPU-bb-zGC"/>
@@ -286,6 +286,11 @@
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="MBM-KP-Hby" id="1dR-bE-g1x"/>
+                        <outlet property="nameTextField" destination="v4N-Uq-XqC" id="5he-9h-VYp"/>
+                        <outlet property="passwordTextField" destination="3Yf-hJ-IbG" id="88K-mU-cMM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jlo-TA-AZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -580,6 +585,10 @@ number</string>
                         <viewLayoutGuide key="safeArea" id="MVl-89-x2g"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="emailTextFeild" destination="B9W-51-RgX" id="ddx-GO-b00"/>
+                        <outlet property="passwordTextField" destination="xNW-MO-Qyf" id="QU1-mn-nX3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKr-dW-EAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -707,6 +716,6 @@ your account</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="q4G-od-tBJ"/>
-        <segue reference="0dc-wz-3Q4"/>
+        <segue reference="lMz-5E-P8O"/>
     </inferredMetricsTieBreakers>
 </document>

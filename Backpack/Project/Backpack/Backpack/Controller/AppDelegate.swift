@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                NSAttributedString.Key.font: UIFont(name: "Poppins-Medium", size: 12)!,
 //                NSAttributedString.Key.foregroundColor: UIColor.white
 //            ], for: .normal)
+        FirebaseApp.configure()
         return true
     }
 

@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailTextFeild: BottomLineTextField!
+    @IBOutlet weak var passwordTextField: HideShowPasswordTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,19 +27,30 @@ class LoginViewController: UIViewController {
     // MARK: - Navigation
     @IBAction func loginButtonPressed(_ sender: Any) {
         self.showSpinner(onView: self.view, showText: false, text: "", position: .center)
+        Auth.auth().signIn(withEmail: emailTextFeild.text!, password: passwordTextField.text!) { [weak self] user, error in
+            guard let strongSelf = self else { return }
+            // ...
+            if let error = error {
+                //strongSelf.showMessagePrompt(error.localizedDescription)
+                print(error.localizedDescription)
+                strongSelf.removeSpinner()
+                return
+            }
+            strongSelf.showMenuViewController()
+        }
+    }
+    
+    // Mark: Navigation
+    func showMenuViewController() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.removeSpinner()
             let storyboard = UIStoryboard(name: "TabMenu", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "tabMenuController") as! MenuViewController
             self.show(vc, sender: nil)
         }
-        
     }
-    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
-    
-
 }
