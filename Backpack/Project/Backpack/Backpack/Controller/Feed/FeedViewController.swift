@@ -10,9 +10,11 @@ import UIKit
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let trips: [Trip] = [Trip(people: People(name: "Jennifer", imageName: "jennifer_pp", isFollwed: true), postedTime: "2 hours ago", tripDuration: 7, tripLocation: "Bali", currentStatus: "ON TRIP", description: "", isLoved: true, isShared: false, tripImage: "trip_3"),
-                         Trip(people: People(name: "Lisa", imageName: "lisa_pp", isFollwed: true), postedTime: "5 hours ago", tripDuration: 12, tripLocation: "Finland", currentStatus: "IN 2 DAYS", description: "", isLoved: false, isShared: true, tripImage: "trip_4"),
-                         Trip(people: People(name: "Sandra", imageName: "sandra_pp", isFollwed: true), postedTime: "6 hours ago", tripDuration: 9, tripLocation: "Japan", currentStatus: "ON TRIP", description: "", isLoved: true, isShared: true, tripImage: "trip_2")]
+//    let trips: [Trip] = [Trip(people: People(name: "Jennifer", imageName: "jennifer_pp", isFollwed: true), postedTime: "2 hours ago", tripDuration: 7, tripLocation: "Bali", currentStatus: "ON TRIP", description: "", isLoved: true, isShared: false, tripImage: "trip_3"),
+//                         Trip(people: People(name: "Lisa", imageName: "lisa_pp", isFollwed: true), postedTime: "5 hours ago", tripDuration: 12, tripLocation: "Finland", currentStatus: "IN 2 DAYS", description: "", isLoved: false, isShared: true, tripImage: "trip_4"),
+//                         Trip(people: People(name: "Sandra", imageName: "sandra_pp", isFollwed: true), postedTime: "6 hours ago", tripDuration: 9, tripLocation: "Japan", currentStatus: "ON TRIP", description: "", isLoved: true, isShared: true, tripImage: "trip_2")]
+    
+    var trips: [Trip] = []
     
     let popularDestination = [PopularDestination(image: "bali-1", name: "BALI"),
                        PopularDestination(image: "japan-1", name: "JAPAN"),
@@ -33,6 +35,19 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         feedTableView.register(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: "feedCell")
         feedTableView.register(UINib(nibName: "PopularDestinationTableViewCell", bundle: nil), forCellReuseIdentifier: "popularDestinationCell")
+        
+        loadFeedTrips()
+    }
+    
+    func loadFeedTrips() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            FeedData.shared.getFeeds() { feeds in
+                DispatchQueue.main.async {
+                    self.trips = feeds
+                    self.feedTableView.reloadData()
+                }
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,33 +69,39 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.destinationArray = popularDestination
             return cell;
         } else{
-            let trip: Trip
-            if indexPath.row > 1 {
-                trip = trips[indexPath.row - 1]
+            if trips.count > 0 {
+                let trip: Trip
+                if indexPath.row > 1 {
+                    trip = trips[indexPath.row - 1]
+                } else {
+                    trip = trips[indexPath.row]
+                }
+                let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedTableViewCell
+                cell.profileImageView.image = UIImage(named: trip.people.imageName)
+                cell.nameLabel.text = trip.people.name
+                cell.postedTimeLabel.text = trip.postedTime
+                cell.tripDurationLabel.text = "\(trip.tripDuration)"
+                cell.tripLocationLabel.text = trip.tripLocation
+                cell.tripCurrentStatusLabel.text = trip.currentStatus
+                if trip.isLoved {
+                    cell.loveButton.setImage(UIImage(named: "heart_selected"), for: .normal)
+                } else {
+                    cell.loveButton.setImage(UIImage(named: "heart_unselected"), for: .normal)
+                }
+                
+                if trip.isShared {
+                    cell.sharedLabel.isHidden = false
+                } else {
+                    cell.sharedLabel.isHidden = true
+                }
+                
+                cell.tripImageView.image = UIImage(named: trip.tripImage)
+                return cell;
             } else {
-                trip = trips[indexPath.row]
+                let cell = tableView.dequeueReusableCell(withIdentifier: "popularCell2") as! PopularDestinationTableViewCell2
+                cell.destinationArray = popularDestination
+                return cell;
             }
-            let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedTableViewCell
-            cell.profileImageView.image = UIImage(named: trip.people.imageName)
-            cell.nameLabel.text = trip.people.name
-            cell.postedTimeLabel.text = trip.postedTime
-            cell.tripDurationLabel.text = "\(trip.tripDuration)"
-            cell.tripLocationLabel.text = trip.tripLocation
-            cell.tripCurrentStatusLabel.text = trip.currentStatus
-            if trip.isLoved {
-                cell.loveButton.setImage(UIImage(named: "heart_selected"), for: .normal)
-            } else {
-                cell.loveButton.setImage(UIImage(named: "heart_unselected"), for: .normal)
-            }
-            
-            if trip.isShared {
-                cell.sharedLabel.isHidden = false
-            } else {
-                cell.sharedLabel.isHidden = true
-            }
-            
-            cell.tripImageView.image = UIImage(named: trip.tripImage)
-            return cell;
         }
     }
     

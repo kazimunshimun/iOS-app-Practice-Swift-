@@ -107,6 +107,10 @@
 		84DBBA35223C089300B5C9FF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBBA34223C089300B5C9FF /* SignUpViewController.swift */; };
 		84E180B12246A7C70043FEEC /* CollectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E180B02246A7C70043FEEC /* CollectionPickerView.swift */; };
 		84E180B32246A8190043FEEC /* CollectionPickerViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E180B22246A8190043FEEC /* CollectionPickerViewFlowLayout.swift */; };
+		84ED5ED622A4EFC700B7E487 /* TripData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED5ED522A4EFC700B7E487 /* TripData.swift */; };
+		84ED5ED822A4F04E00B7E487 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED5ED722A4F04E00B7E487 /* FeedData.swift */; };
+		84ED5EDB22A503CA00B7E487 /* ErrorDialogViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED5EDA22A503CA00B7E487 /* ErrorDialogViewControllerExtension.swift */; };
+		84ED5EDD22A5051C00B7E487 /* CustomAlertDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED5EDC22A5051C00B7E487 /* CustomAlertDialogView.swift */; };
 		84FF5D6B2269FFDC009339E2 /* RoundedCornerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF5D6A2269FFDC009339E2 /* RoundedCornerScrollView.swift */; };
 		84FF5D6D226A11AD009339E2 /* ProfileTripsSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF5D6C226A11AD009339E2 /* ProfileTripsSegmentedControl.swift */; };
 		84FF5D6F226A21DA009339E2 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF5D6E226A21DA009339E2 /* UIViewExtension.swift */; };
@@ -218,6 +222,10 @@
 		84DBBA34223C089300B5C9FF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		84E180B02246A7C70043FEEC /* CollectionPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPickerView.swift; sourceTree = "<group>"; };
 		84E180B22246A8190043FEEC /* CollectionPickerViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPickerViewFlowLayout.swift; sourceTree = "<group>"; };
+		84ED5ED522A4EFC700B7E487 /* TripData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripData.swift; sourceTree = "<group>"; };
+		84ED5ED722A4F04E00B7E487 /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
+		84ED5EDA22A503CA00B7E487 /* ErrorDialogViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDialogViewControllerExtension.swift; sourceTree = "<group>"; };
+		84ED5EDC22A5051C00B7E487 /* CustomAlertDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertDialogView.swift; sourceTree = "<group>"; };
 		84FF5D6A2269FFDC009339E2 /* RoundedCornerScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerScrollView.swift; sourceTree = "<group>"; };
 		84FF5D6C226A11AD009339E2 /* ProfileTripsSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTripsSegmentedControl.swift; sourceTree = "<group>"; };
 		84FF5D6E226A21DA009339E2 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -411,6 +419,7 @@
 				84DBBA26223BED4B00B5C9FF /* Controller */,
 				84DBBA28223BED4B00B5C9FF /* Model */,
 				84DBBA27223BED4B00B5C9FF /* View */,
+				84ED5ED922A4F05500B7E487 /* Data */,
 			);
 			path = Backpack;
 			sourceTree = "<group>";
@@ -429,6 +438,7 @@
 				8473E84F226DEA5B00F4D4DF /* ActivityIndicatorControllerExtenstion.swift */,
 				84830A2E22721699005B67BA /* CalendarViewController.swift */,
 				84C4EF5D2272CD4100FE8CDF /* SelectionViewController.swift */,
+				84ED5EDA22A503CA00B7E487 /* ErrorDialogViewControllerExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -449,6 +459,7 @@
 				8411566B226B8A8B003BA479 /* CustomSwitch.swift */,
 				8411566D226B8B11003BA479 /* CustomThumbView.swift */,
 				8473E84D226DE9B400F4D4DF /* CustomAcitityIndicatorView.swift */,
+				84ED5EDC22A5051C00B7E487 /* CustomAlertDialogView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -484,6 +495,15 @@
 				84DBBA20223BECFF00B5C9FF /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		84ED5ED922A4F05500B7E487 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				84ED5ED522A4EFC700B7E487 /* TripData.swift */,
+				84ED5ED722A4F04E00B7E487 /* FeedData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		84FF5D74226A3AB3009339E2 /* Profile */ = {
@@ -708,6 +728,7 @@
 				84BE6FBF224A993400201881 /* DestinationChooseViewController.swift in Sources */,
 				8413B41F224BDCDD00DB001B /* BookTicketViewController.swift in Sources */,
 				840B5D3C2270CE160004FE29 /* VisibilitySegmentedControl.swift in Sources */,
+				84ED5EDB22A503CA00B7E487 /* ErrorDialogViewControllerExtension.swift in Sources */,
 				8437925A224FDD26009F730B /* TopLeftRightRadiusImageView.swift in Sources */,
 				84E180B32246A8190043FEEC /* CollectionPickerViewFlowLayout.swift in Sources */,
 				8434DFD7225FAAFF0069CD1D /* CustomSegmentedContrl.swift in Sources */,
@@ -721,12 +742,15 @@
 				841D8F50226F8891009A37AE /* TicketInfo.swift in Sources */,
 				84BE6FB9224A0CF500201881 /* PassportDetailViewController.swift in Sources */,
 				841D8F4C226F887D009A37AE /* TripInfo.swift in Sources */,
+				84ED5ED622A4EFC700B7E487 /* TripData.swift in Sources */,
 				84DBBA17223BECFD00B5C9FF /* ViewController.swift in Sources */,
 				84298805226CE476009DFA5E /* FAQTableViewCell.swift in Sources */,
 				8456AF842244C0FC0009E68F /* RoundedViewWithShadow.swift in Sources */,
 				84830A2F22721699005B67BA /* CalendarViewController.swift in Sources */,
 				84DBBA15223BECFD00B5C9FF /* AppDelegate.swift in Sources */,
 				84FF5D6F226A21DA009339E2 /* UIViewExtension.swift in Sources */,
+				84ED5EDD22A5051C00B7E487 /* CustomAlertDialogView.swift in Sources */,
+				84ED5ED822A4F04E00B7E487 /* FeedData.swift in Sources */,
 				8432B2C3226CB9BD00BFC22A /* SettingsViewController.swift in Sources */,
 				84B88FA3224D34B900DE8A11 /* PhoneNumberInputViewController.swift in Sources */,
 				840CDDB622730ADD002772BE /* HorizontalCustomPickerView.swift in Sources */,

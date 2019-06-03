@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - Navigation
     @IBAction func loginButtonPressed(_ sender: Any) {
+        
         self.showSpinner(onView: self.view, showText: false, text: "", position: .center)
         Auth.auth().signIn(withEmail: emailTextFeild.text!, password: passwordTextField.text!) { [weak self] user, error in
             guard let strongSelf = self else { return }
@@ -34,10 +35,12 @@ class LoginViewController: UIViewController {
                 //strongSelf.showMessagePrompt(error.localizedDescription)
                 print(error.localizedDescription)
                 strongSelf.removeSpinner()
+                strongSelf.showErrorDialog(onView: strongSelf.view, title: "Error!", descriptionText: error.localizedDescription)
                 return
             }
             strongSelf.showMenuViewController()
         }
+ 
     }
     
     // Mark: Navigation

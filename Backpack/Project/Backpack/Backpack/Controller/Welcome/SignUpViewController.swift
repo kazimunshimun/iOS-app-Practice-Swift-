@@ -32,6 +32,7 @@ class SignUpViewController: UIViewController {
             if let error = error {
                 //strongSelf.showMessagePrompt(error.localizedDescription)
                 print(error.localizedDescription)
+                self.showErrorDialog(onView: self.view, title: "Error!", descriptionText: error.localizedDescription)
                 self.removeSpinner()
                 return
             }
