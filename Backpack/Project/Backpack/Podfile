@@ -5,7 +5,7 @@ target 'Backpack' do
   use_frameworks!
 
     #pod 'XLPagerTabStrip', '~> 9.0'
-    pod “TTRangeSlider”
+    pod 'TTRangeSlider'
     pod 'Firebase/Analytics'
     pod 'Firebase/Auth'
 

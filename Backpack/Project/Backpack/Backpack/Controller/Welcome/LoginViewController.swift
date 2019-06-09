@@ -18,6 +18,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        emailTextFeild.text = "anik1.bd@gmail.com"
+        passwordTextField.text = "demoPassword"
+        passwordTextField.isSecureTextEntry = true
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {

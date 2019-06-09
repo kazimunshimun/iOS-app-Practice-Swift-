@@ -33,6 +33,12 @@
 		8432B2C9226CBBF700BFC22A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B2C8226CBBF700BFC22A /* AboutViewController.swift */; };
 		843379CF22414F2B0080458A /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843379CE22414F2B0080458A /* Onboarding.storyboard */; };
 		843379D1224151240080458A /* TabMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843379D0224151240080458A /* TabMenu.storyboard */; };
+		84342D6622ABF41500D15142 /* MessageKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84342D6522ABF41500D15142 /* MessageKind.swift */; };
+		84342D6822ABF4AE00D15142 /* SenderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84342D6722ABF4AE00D15142 /* SenderType.swift */; };
+		84342D6B22ABF4EF00D15142 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84342D6A22ABF4EF00D15142 /* MessageType.swift */; };
+		84342D6D22ABF78000D15142 /* MessageUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84342D6C22ABF78000D15142 /* MessageUser.swift */; };
+		84342D7022ABF85900D15142 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84342D6F22ABF85900D15142 /* MessageData.swift */; };
+		84342D7222ABF99F00D15142 /* Lorem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84342D7122ABF99F00D15142 /* Lorem.swift */; };
 		8434637D22638D68005F77B0 /* PopularDestinationTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434637C22638D68005F77B0 /* PopularDestinationTableViewCell2.swift */; };
 		8434637F22639E70005F77B0 /* DestinationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434637E22639E70005F77B0 /* DestinationCollectionViewCell.swift */; };
 		843463812263A262005F77B0 /* PopularDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843463802263A262005F77B0 /* PopularDestination.swift */; };
@@ -40,7 +46,6 @@
 		8434DFDA225FAFD70069CD1D /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434DFD8225FAFD70069CD1D /* PeopleTableViewCell.swift */; };
 		8434DFDB225FAFD70069CD1D /* PeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8434DFD9225FAFD70069CD1D /* PeopleTableViewCell.xib */; };
 		8434FAFE226F69D3007C8D8A /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434FAFD226F69D3007C8D8A /* Trip.swift */; };
-		84361F81224DE27F00766D04 /* TextInsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F80224DE27F00766D04 /* TextInsetTextField.swift */; };
 		84361F83224E095700766D04 /* AddTripsPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F82224E095700766D04 /* AddTripsPhotoViewController.swift */; };
 		84361F85224E1D1200766D04 /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F84224E1D1200766D04 /* RequestsViewController.swift */; };
 		84361F87224E1D1E00766D04 /* InvitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84361F86224E1D1E00766D04 /* InvitesViewController.swift */; };
@@ -56,6 +61,7 @@
 		8439183B2264E6F2005D2BA9 /* RoundedBackgroundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439183A2264E6F2005D2BA9 /* RoundedBackgroundLabel.swift */; };
 		8439183D2264ED34005D2BA9 /* TripRequestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439183C2264ED34005D2BA9 /* TripRequestCollectionViewCell.swift */; };
 		843B190A2261C43200F59395 /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B19092261C43200F59395 /* RoundedCornerView.swift */; };
+		843E58B522AD6145005A931A /* TextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E58B422AD6145005A931A /* TextMessageCell.swift */; };
 		843EC949223CC82200AD2CA5 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */; };
 		843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */; };
 		843EC94D223CE80900AD2CA5 /* HideShowPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */; };
@@ -93,6 +99,7 @@
 		84BE6FC1224A9DA800201881 /* TripDetailsInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE6FC0224A9DA800201881 /* TripDetailsInputViewController.swift */; };
 		84BE6FC3224A9E8B00201881 /* TIcketDateInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE6FC2224A9E8B00201881 /* TIcketDateInputViewController.swift */; };
 		84C4EF5E2272CD4100FE8CDF /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4EF5D2272CD4100FE8CDF /* SelectionViewController.swift */; };
+		84C8E1DA22AAB56D0049EA57 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8E1D922AAB56D0049EA57 /* Message.swift */; };
 		84D65DAE22741C5900C5CB08 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D65DAD22741C5900C5CB08 /* Airport.swift */; };
 		84DBBA15223BECFD00B5C9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBBA14223BECFD00B5C9FF /* AppDelegate.swift */; };
 		84DBBA17223BECFD00B5C9FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBBA16223BECFD00B5C9FF /* ViewController.swift */; };
@@ -146,6 +153,12 @@
 		8432B2C8226CBBF700BFC22A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		843379CE22414F2B0080458A /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		843379D0224151240080458A /* TabMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabMenu.storyboard; sourceTree = "<group>"; };
+		84342D6522ABF41500D15142 /* MessageKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageKind.swift; sourceTree = "<group>"; };
+		84342D6722ABF4AE00D15142 /* SenderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderType.swift; sourceTree = "<group>"; };
+		84342D6A22ABF4EF00D15142 /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
+		84342D6C22ABF78000D15142 /* MessageUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageUser.swift; sourceTree = "<group>"; };
+		84342D6F22ABF85900D15142 /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
+		84342D7122ABF99F00D15142 /* Lorem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lorem.swift; sourceTree = "<group>"; };
 		8434637C22638D68005F77B0 /* PopularDestinationTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDestinationTableViewCell2.swift; sourceTree = "<group>"; };
 		8434637E22639E70005F77B0 /* DestinationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCollectionViewCell.swift; sourceTree = "<group>"; };
 		843463802263A262005F77B0 /* PopularDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDestination.swift; sourceTree = "<group>"; };
@@ -153,7 +166,6 @@
 		8434DFD8225FAFD70069CD1D /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		8434DFD9225FAFD70069CD1D /* PeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleTableViewCell.xib; sourceTree = "<group>"; };
 		8434FAFD226F69D3007C8D8A /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
-		84361F80224DE27F00766D04 /* TextInsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInsetTextField.swift; sourceTree = "<group>"; };
 		84361F82224E095700766D04 /* AddTripsPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripsPhotoViewController.swift; sourceTree = "<group>"; };
 		84361F84224E1D1200766D04 /* RequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsViewController.swift; sourceTree = "<group>"; };
 		84361F86224E1D1E00766D04 /* InvitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitesViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +181,7 @@
 		8439183A2264E6F2005D2BA9 /* RoundedBackgroundLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBackgroundLabel.swift; sourceTree = "<group>"; };
 		8439183C2264ED34005D2BA9 /* TripRequestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRequestCollectionViewCell.swift; sourceTree = "<group>"; };
 		843B19092261C43200F59395 /* RoundedCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
+		843E58B422AD6145005A931A /* TextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageCell.swift; sourceTree = "<group>"; };
 		843EC948223CC82200AD2CA5 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
 		843EC94A223CDA6200AD2CA5 /* BottomLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLineTextField.swift; sourceTree = "<group>"; };
 		843EC94C223CE80900AD2CA5 /* HideShowPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideShowPasswordTextField.swift; sourceTree = "<group>"; };
@@ -206,6 +219,7 @@
 		84BE6FC0224A9DA800201881 /* TripDetailsInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsInputViewController.swift; sourceTree = "<group>"; };
 		84BE6FC2224A9E8B00201881 /* TIcketDateInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIcketDateInputViewController.swift; sourceTree = "<group>"; };
 		84C4EF5D2272CD4100FE8CDF /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		84C8E1D922AAB56D0049EA57 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		84D65DAD22741C5900C5CB08 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		84DBBA11223BECFD00B5C9FF /* Backpack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Backpack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DBBA14223BECFD00B5C9FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -248,6 +262,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84342D6922ABF4C900D15142 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84342D6722ABF4AE00D15142 /* SenderType.swift */,
+				84342D6A22ABF4EF00D15142 /* MessageType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		84342D6E22ABF81C00D15142 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				84C8E1D922AAB56D0049EA57 /* Message.swift */,
+				84342D6522ABF41500D15142 /* MessageKind.swift */,
+				84342D6C22ABF78000D15142 /* MessageUser.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
 		843726742269FF3100F4C7B2 /* Rounded Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +368,7 @@
 				8439183C2264ED34005D2BA9 /* TripRequestCollectionViewCell.swift */,
 				84A742472275FC320073EE04 /* TripInviteCollectionViewCell.swift */,
 				8448F1EA228E9087007601C6 /* AddPhotosCollectionViewCell.swift */,
+				843E58B422AD6145005A931A /* TextMessageCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -420,6 +454,7 @@
 				84DBBA28223BED4B00B5C9FF /* Model */,
 				84DBBA27223BED4B00B5C9FF /* View */,
 				84ED5ED922A4F05500B7E487 /* Data */,
+				84342D6922ABF4C900D15142 /* Protocols */,
 			);
 			path = Backpack;
 			sourceTree = "<group>";
@@ -453,7 +488,6 @@
 				843EC94E223CE84600AD2CA5 /* PasswordToggleVisibilityView.swift */,
 				843726742269FF3100F4C7B2 /* Rounded Views */,
 				8481DA46228FD963007C02DB /* PickerViews */,
-				84361F80224DE27F00766D04 /* TextInsetTextField.swift */,
 				84C4EF5C2272CCEC00FE8CDF /* SegmentedControl */,
 				84FF5D6E226A21DA009339E2 /* UIViewExtension.swift */,
 				8411566B226B8A8B003BA479 /* CustomSwitch.swift */,
@@ -478,6 +512,7 @@
 				841D8F4F226F8891009A37AE /* TicketInfo.swift */,
 				84D65DAD22741C5900C5CB08 /* Airport.swift */,
 				84A742452275EE9F0073EE04 /* Request.swift */,
+				84342D6E22ABF81C00D15142 /* Message */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -502,6 +537,8 @@
 			children = (
 				84ED5ED522A4EFC700B7E487 /* TripData.swift */,
 				84ED5ED722A4F04E00B7E487 /* FeedData.swift */,
+				84342D6F22ABF85900D15142 /* MessageData.swift */,
+				84342D7122ABF99F00D15142 /* Lorem.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -703,6 +740,7 @@
 				84AFE5FA224A067400505AA8 /* CreditCardInputViewController.swift in Sources */,
 				8473E850226DEA5B00F4D4DF /* ActivityIndicatorControllerExtenstion.swift in Sources */,
 				8448F1EB228E9087007601C6 /* AddPhotosCollectionViewCell.swift in Sources */,
+				84342D6B22ABF4EF00D15142 /* MessageType.swift in Sources */,
 				842956272243F50D002D88B8 /* MessagingViewController.swift in Sources */,
 				8473E84C226D94C500F4D4DF /* FAQ2TableViewCell.swift in Sources */,
 				8432B2C7226CBBEB00BFC22A /* PrivacyViewController.swift in Sources */,
@@ -715,13 +753,13 @@
 				84361F89224E609E00766D04 /* Chat.swift in Sources */,
 				8467334E2260994900EACAD9 /* PostFullViewController.swift in Sources */,
 				843EC94B223CDA6200AD2CA5 /* BottomLineTextField.swift in Sources */,
+				84342D7222ABF99F00D15142 /* Lorem.swift in Sources */,
 				8437924E224F48BE009F730B /* ChatViewController.swift in Sources */,
 				843B190A2261C43200F59395 /* RoundedCornerView.swift in Sources */,
 				841D8F4E226F8886009A37AE /* FlightInfo.swift in Sources */,
 				84E180B12246A7C70043FEEC /* CollectionPickerView.swift in Sources */,
 				84FF5D73226A26FA009339E2 /* People.swift in Sources */,
 				84A742482275FC320073EE04 /* TripInviteCollectionViewCell.swift in Sources */,
-				84361F81224DE27F00766D04 /* TextInsetTextField.swift in Sources */,
 				843463812263A262005F77B0 /* PopularDestination.swift in Sources */,
 				8434637D22638D68005F77B0 /* PopularDestinationTableViewCell2.swift in Sources */,
 				8411566E226B8B11003BA479 /* CustomThumbView.swift in Sources */,
@@ -733,9 +771,12 @@
 				84E180B32246A8190043FEEC /* CollectionPickerViewFlowLayout.swift in Sources */,
 				8434DFD7225FAAFF0069CD1D /* CustomSegmentedContrl.swift in Sources */,
 				84A742462275EE9F0073EE04 /* Request.swift in Sources */,
+				84342D6822ABF4AE00D15142 /* SenderType.swift in Sources */,
+				84342D6D22ABF78000D15142 /* MessageUser.swift in Sources */,
 				842956252243F4BE002D88B8 /* FeedViewController.swift in Sources */,
 				84361F8D224E8DD200766D04 /* ChatTableViewCell.swift in Sources */,
 				8446A26B223FF77F007CC940 /* OnBoardingViewController.swift in Sources */,
+				84C8E1DA22AAB56D0049EA57 /* Message.swift in Sources */,
 				8413B41D224BDCB400DB001B /* AirlineChooserViewController.swift in Sources */,
 				84BD3717223EBD65004E098D /* RoundedButtonWithShadow.swift in Sources */,
 				84BE6FC3224A9E8B00201881 /* TIcketDateInputViewController.swift in Sources */,
@@ -747,6 +788,7 @@
 				84298805226CE476009DFA5E /* FAQTableViewCell.swift in Sources */,
 				8456AF842244C0FC0009E68F /* RoundedViewWithShadow.swift in Sources */,
 				84830A2F22721699005B67BA /* CalendarViewController.swift in Sources */,
+				84342D6622ABF41500D15142 /* MessageKind.swift in Sources */,
 				84DBBA15223BECFD00B5C9FF /* AppDelegate.swift in Sources */,
 				84FF5D6F226A21DA009339E2 /* UIViewExtension.swift in Sources */,
 				84ED5EDD22A5051C00B7E487 /* CustomAlertDialogView.swift in Sources */,
@@ -754,6 +796,7 @@
 				8432B2C3226CB9BD00BFC22A /* SettingsViewController.swift in Sources */,
 				84B88FA3224D34B900DE8A11 /* PhoneNumberInputViewController.swift in Sources */,
 				840CDDB622730ADD002772BE /* HorizontalCustomPickerView.swift in Sources */,
+				84342D7022ABF85900D15142 /* MessageData.swift in Sources */,
 				84FF5D6B2269FFDC009339E2 /* RoundedCornerScrollView.swift in Sources */,
 				84DBBA35223C089300B5C9FF /* SignUpViewController.swift in Sources */,
 				8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */,
@@ -763,6 +806,7 @@
 				8434637F22639E70005F77B0 /* DestinationCollectionViewCell.swift in Sources */,
 				841D8F4A226F8870009A37AE /* NewTrip.swift in Sources */,
 				84379252224FCE02009F730B /* FeedTableViewCell.swift in Sources */,
+				843E58B522AD6145005A931A /* TextMessageCell.swift in Sources */,
 				84BE6FC1224A9DA800201881 /* TripDetailsInputViewController.swift in Sources */,
 				84FF5D71226A230D009339E2 /* FollowViewController.swift in Sources */,
 				843EC94D223CE80900AD2CA5 /* HideShowPasswordTextField.swift in Sources */,

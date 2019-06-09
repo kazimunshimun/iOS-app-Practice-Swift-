@@ -58,7 +58,8 @@ class MessagingViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Messaging", bundle: nil)
         let chatViewController = storyBoard.instantiateViewController(withIdentifier: "chatView") as! ChatViewController
-        chatViewController.userName = "User name \(indexPath.row)"
+        //chatViewController.userName = "User name \(indexPath.row)"
+        chatViewController.chatData = chatPeoples[indexPath.row]
         self.show(chatViewController, sender: nil)
        // self.performSegue(withIdentifier: "showChatView", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
