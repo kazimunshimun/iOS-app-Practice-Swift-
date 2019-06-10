@@ -54,7 +54,15 @@ class ChatViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let message = messageList[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TextMessageCell", for: indexPath) as! TextMessageCell
-        cell.cellTopLabel.text = message.messageId
+        cell.cellTopLabel.text = message.sentDate
+        cell.userImageView.image = UIImage(named: message.user.imageName)
+        switch message.kind {
+        case .text(let text):
+            cell.messageLabel.text = text
+            
+        default:
+            break
+        }
         return cell
     }
     

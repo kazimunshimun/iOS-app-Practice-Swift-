@@ -12,4 +12,5 @@ import Foundation
 struct MessageUser: SenderType, Equatable {
     var senderId: String
     var displayName: String
+    var imageName: String
 }

@@ -11,22 +11,26 @@ import Foundation
 final internal class MessageData {
     static let shared = MessageData()
     
-    private init() {}
+    private let formatter = DateFormatter()
+    
+    private init() {
+        formatter.dateFormat = "MMM d, yyyy, h:mm a"
+    }
     
     enum MessageTypes: String, CaseIterable {
         case Text
         case AttributedText
     }
+
+    let jennifer = MessageUser(senderId: "000000", displayName: "Jennifer", imageName: "jennifer_pp")
+    let lisa = MessageUser(senderId: "000001", displayName: "Lisa", imageName: "lisa_pp")
+    let sandra = MessageUser(senderId: "000002", displayName: "Sandra", imageName: "sandra_pp")
+    let wu = MessageUser(senderId: "000003", displayName: "Wu Zhong", imageName: "sandra_pp")
     
-    let system = MessageUser(senderId: "000000", displayName: "System")
-    let nathan = MessageUser(senderId: "000001", displayName: "Nathan Tannar")
-    let steven = MessageUser(senderId: "000002", displayName: "Steven Deutsch")
-    let wu = MessageUser(senderId: "000003", displayName: "Wu Zhong")
-    
-    lazy var senders = [nathan, steven, wu]
+    lazy var senders = [jennifer, lisa, sandra]
     
     var currentSender: MessageUser {
-        return steven
+        return wu
     }
     
     var now = Date()
@@ -63,8 +67,9 @@ final internal class MessageData {
             let uniqueID = UUID().uuidString
             let user = senders.random()!
             let date = dateAddingRandomTime()
+            let dateString = formatter.string(from: date)
             let randomSentence = Lorem.sentence()
-            let message = Message(text: randomSentence, user: user, messageId: uniqueID, date: date)
+            let message = Message(text: randomSentence, user: user, messageId: uniqueID, date: dateString)
             messages.append(message)
         }
         completion(messages)

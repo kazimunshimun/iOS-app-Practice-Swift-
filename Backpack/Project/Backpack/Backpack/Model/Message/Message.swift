@@ -15,23 +15,23 @@ internal struct Message {
     var sender: SenderType {
         return user
     }
-    var sentDate: Date
+    var sentDate: String
     var kind: MessageKind
     
     var user: MessageUser
     
-    private init(kind: MessageKind, user: MessageUser, messageId: String, date: Date) {
+    private init(kind: MessageKind, user: MessageUser, messageId: String, date: String) {
         self.kind = kind
         self.user = user
         self.messageId = messageId
         self.sentDate = date
     }
     
-    init(text: String, user: MessageUser, messageId: String, date: Date) {
+    init(text: String, user: MessageUser, messageId: String, date: String) {
         self.init(kind: .text(text), user: user, messageId: messageId, date: date)
     }
     
-    init(attributedText: NSAttributedString, user: MessageUser, messageId: String, date: Date) {
+    init(attributedText: NSAttributedString, user: MessageUser, messageId: String, date: String) {
         self.init(kind: .attributedText(attributedText), user: user, messageId: messageId, date: date)
     }
 }
