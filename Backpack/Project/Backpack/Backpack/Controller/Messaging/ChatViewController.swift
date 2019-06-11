@@ -38,11 +38,13 @@ class ChatViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func loadMessages() {
         DispatchQueue.global(qos: .userInitiated).async {
             let count = 20
-            MessageData.shared.getMessages(count: count) { messages in
+            MessageData.shared.getMessages(count: count, senderName: self.chatData!.name) { messages in
                 DispatchQueue.main.async {
                     self.messageList = messages
                     self.chatCollectionView.reloadData()
                     //self.chatCollectionView.scrollToBottom()
+                    let collectionViewContentHeight = self.chatCollectionView.contentSize.height
+                    self.chatCollectionView.scrollRectToVisible(CGRect(x: 0.0, y: collectionViewContentHeight - 1.0, width: 1.0, height: 1.0), animated: true)
                 }
             }
         }
@@ -54,6 +56,7 @@ class ChatViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let message = messageList[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TextMessageCell", for: indexPath) as! TextMessageCell
+        cell.chatMessage = message
         cell.cellTopLabel.text = message.sentDate
         cell.userImageView.image = UIImage(named: message.user.imageName)
         switch message.kind {

@@ -39,33 +39,51 @@ class TextMessageCell: UICollectionViewCell {
         return containerView
     }()
     
+    let messageView = RoundedView()
+    let bottomView = UIView()
+    
     open var userImageView: RoundedCornerImageView = {
         let imageView = RoundedCornerImageView()
         imageView.cornerRadius = 15
         return imageView
     }()
     
+    var chatMessage: Message! {
+        didSet {
+            print("Text message cell data did set \(chatMessage.messageId)")
+            if chatMessage.isIncoming {
+                messageView.backgroundColor = UIColor(red: 233.0/255, green: 233.0/255, blue: 233.0/255, alpha: 1.0)
+                messageLabel.textColor = .black
+                userImageView.isHidden = false
+                messageLabel.leadingAnchor.constraint(equalTo: userImageView.trailingAnchor, constant: 16).isActive = true
+                messageLabel.widthAnchor.constraint(lessThanOrEqualTo: bottomView.widthAnchor, constant: -46).isActive = true
+            } else {
+                messageView.backgroundColor = UIColor(red: 57.0/255, green: 90.0/255, blue: 255.0/255, alpha: 1.0)
+                messageLabel.textColor = .white
+                userImageView.isHidden = true
+                
+                messageLabel.rightAnchor.constraint(equalTo: bottomView.rightAnchor, constant: -16).isActive = true
+                messageLabel.widthAnchor.constraint(lessThanOrEqualTo: bottomView.widthAnchor, constant: -46).isActive = true
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        self.contentView.addSubview(cellTopLabel)
-        //self.contentView.backgroundColor = .gray
-        
-       // let topView = UIView()
+
+        setupViewAndConstrints()
+
+    }
+    
+    func setupViewAndConstrints() {
         addSubview(cellTopLabel)
         
         cellTopLabel.translatesAutoresizingMaskIntoConstraints = false
         cellTopLabel.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
         cellTopLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
         cellTopLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
-        //topView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        //topView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        cellTopLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        //topView.widthAnchor.constraint(equalToConstant: contentView.frame.width).isActive = true
+        cellTopLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
-        //topView.backgroundColor = .red
-        
-        let bottomView = UIView()
         addSubview(bottomView)
         
         bottomView.translatesAutoresizingMaskIntoConstraints = false
@@ -83,26 +101,19 @@ class TextMessageCell: UICollectionViewCell {
         userImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         userImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
         
-        userImageView.backgroundColor = .blue
-        
-        let messageView = RoundedView()
         messageView.cornerRadius = 10
         bottomView.addSubview(messageView)
+        bottomView.addSubview(messageLabel)
         messageView.translatesAutoresizingMaskIntoConstraints = false
-        messageView.topAnchor.constraint(equalTo: bottomView.topAnchor, constant: 0).isActive = true
-        messageView.bottomAnchor.constraint(equalTo: bottomView.bottomAnchor, constant: 0).isActive = true
-        messageView.leftAnchor.constraint(equalTo: userImageView.rightAnchor, constant: 10).isActive = true
-        messageView.rightAnchor.constraint(equalTo: bottomView.rightAnchor, constant: 0).isActive = true
+        messageView.topAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -8).isActive = true
+        messageView.bottomAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 8).isActive = true
+        messageView.leftAnchor.constraint(equalTo: messageLabel.leftAnchor, constant: -8).isActive = true
+        messageView.rightAnchor.constraint(equalTo: messageLabel.rightAnchor, constant: 8).isActive = true
         //messageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
         //messageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
         
-        messageView.backgroundColor = UIColor(red: 233.0/255, green: 233.0/255, blue: 233.0/255, alpha: 1.0)
-        
-        messageView.addSubview(messageLabel)
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
-        messageLabel.bottomAnchor.constraint(equalTo: messageView.bottomAnchor, constant: -8).isActive = true
-        messageLabel.leftAnchor.constraint(equalTo: messageView.leftAnchor, constant: 8).isActive = true
-        messageLabel.rightAnchor.constraint(equalTo: messageView.rightAnchor, constant: -8).isActive = true
+        messageLabel.bottomAnchor.constraint(equalTo: bottomView.bottomAnchor, constant: -8).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
