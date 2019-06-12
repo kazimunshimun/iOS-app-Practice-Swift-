@@ -31,6 +31,7 @@
 		8432B2C5226CBBDD00BFC22A /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B2C4226CBBDD00BFC22A /* TermsViewController.swift */; };
 		8432B2C7226CBBEB00BFC22A /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B2C6226CBBEB00BFC22A /* PrivacyViewController.swift */; };
 		8432B2C9226CBBF700BFC22A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B2C8226CBBF700BFC22A /* AboutViewController.swift */; };
+		8432EB0C22B149DA009ECD87 /* ChatMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432EB0B22B149DA009ECD87 /* ChatMessageViewCell.swift */; };
 		843379CF22414F2B0080458A /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843379CE22414F2B0080458A /* Onboarding.storyboard */; };
 		843379D1224151240080458A /* TabMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843379D0224151240080458A /* TabMenu.storyboard */; };
 		84342D6622ABF41500D15142 /* MessageKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84342D6522ABF41500D15142 /* MessageKind.swift */; };
@@ -151,6 +152,7 @@
 		8432B2C4226CBBDD00BFC22A /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		8432B2C6226CBBEB00BFC22A /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		8432B2C8226CBBF700BFC22A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		8432EB0B22B149DA009ECD87 /* ChatMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageViewCell.swift; sourceTree = "<group>"; };
 		843379CE22414F2B0080458A /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		843379D0224151240080458A /* TabMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabMenu.storyboard; sourceTree = "<group>"; };
 		84342D6522ABF41500D15142 /* MessageKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageKind.swift; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 				84298803226CE476009DFA5E /* FAQTableViewCell.swift */,
 				84298804226CE476009DFA5E /* FAQTableViewCell.xib */,
 				8473E84B226D94C500F4D4DF /* FAQ2TableViewCell.swift */,
+				8432EB0B22B149DA009ECD87 /* ChatMessageViewCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -801,6 +804,7 @@
 				84DBBA35223C089300B5C9FF /* SignUpViewController.swift in Sources */,
 				8446A269223FF769007CC940 /* OnboardParentViewController.swift in Sources */,
 				840B5D402270D6ED0004FE29 /* TripKindSegmentedControl.swift in Sources */,
+				8432EB0C22B149DA009ECD87 /* ChatMessageViewCell.swift in Sources */,
 				8473E84A226D92CF00F4D4DF /* FAQ.swift in Sources */,
 				84D65DAE22741C5900C5CB08 /* Airport.swift in Sources */,
 				8434637F22639E70005F77B0 /* DestinationCollectionViewCell.swift in Sources */,

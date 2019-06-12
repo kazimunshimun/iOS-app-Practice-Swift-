@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ChatViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource/*UICollectionViewDelegate, UICollectionViewDataSource*/ {
     @IBOutlet weak var senderNameLabel: UILabel!
-    @IBOutlet weak var chatCollectionView: UICollectionView!
+   // @IBOutlet weak var chatCollectionView: UICollectionView!
     
-   // var userName : String = ""
+    @IBOutlet weak var chatTableView: UITableView!
+    // var userName : String = ""
     
     var chatData: Chat?
     
@@ -25,9 +26,13 @@ class ChatViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // Do any additional setup after loading the view.
         userNameLabel.text = chatData?.name
         
-        self.chatCollectionView.dataSource = self
-        self.chatCollectionView.delegate = self
-        self.chatCollectionView.register(TextMessageCell.self, forCellWithReuseIdentifier: "TextMessageCell")
+       // self.chatCollectionView.dataSource = self
+       // self.chatCollectionView.delegate = self
+       // self.chatCollectionView.register(TextMessageCell.self, forCellWithReuseIdentifier: "TextMessageCell")
+        
+        self.chatTableView.delegate = self
+        self.chatTableView.dataSource = self
+        self.chatTableView.register(ChatMessageViewCell.self, forCellReuseIdentifier: "ChatMessageViewCell")
         loadMessages()
     }
     
@@ -41,15 +46,48 @@ class ChatViewController: UIViewController, UICollectionViewDelegate, UICollecti
             MessageData.shared.getMessages(count: count, senderName: self.chatData!.name) { messages in
                 DispatchQueue.main.async {
                     self.messageList = messages
+                    self.chatTableView.reloadData()
+                    self.scrollToBottom()
+                    /*
                     self.chatCollectionView.reloadData()
                     //self.chatCollectionView.scrollToBottom()
                     let collectionViewContentHeight = self.chatCollectionView.contentSize.height
                     self.chatCollectionView.scrollRectToVisible(CGRect(x: 0.0, y: collectionViewContentHeight - 1.0, width: 1.0, height: 1.0), animated: true)
+ */
                 }
             }
         }
     }
     
+    //MARK: - TableView Delegate
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.messageList.count;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageViewCell", for: indexPath) as! ChatMessageViewCell
+    
+        let message = messageList[indexPath.row]
+        cell.chatMessage = message
+        cell.userImageView.image = UIImage(named: message.user.imageName)
+        
+        switch message.kind {
+        case .text(let text):
+            cell.messageLabel.text = text
+            
+        default:
+            break
+        }
+        return cell
+    }
+    
+    func scrollToBottom(){
+        let indexPath = IndexPath(row: self.messageList.count - 1, section: 0)
+        self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+    }
+    
+    /*
     // MARK: - CollectionView Delegate
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -81,6 +119,7 @@ class ChatViewController: UIViewController, UICollectionViewDelegate, UICollecti
             flowLayout.itemSize = CGSize(width: self.chatCollectionView.bounds.width, height: 120)
         }
     }
+ */
     /*
     // MARK: - Navigation
 

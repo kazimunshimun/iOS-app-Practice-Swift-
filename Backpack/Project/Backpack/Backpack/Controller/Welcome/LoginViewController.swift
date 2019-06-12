@@ -21,6 +21,8 @@ class LoginViewController: UIViewController {
         emailTextFeild.text = "anik1.bd@gmail.com"
         passwordTextField.text = "demoPassword"
         passwordTextField.isSecureTextEntry = true
+        
+        //showMenuViewController()
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
