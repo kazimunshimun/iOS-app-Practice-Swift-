@@ -68,7 +68,15 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageViewCell", for: indexPath) as! ChatMessageViewCell
     
-        let message = messageList[indexPath.row]
+        var message = messageList[indexPath.row]
+        
+        if indexPath.row + 1 < messageList.count {
+            let nextMessage = messageList[indexPath.row + 1]
+            if nextMessage.sender.senderId == message.sender.senderId {
+                message.isShoulShowSenderImage = false
+            }
+        }
+        
         cell.chatMessage = message
         cell.userImageView.image = UIImage(named: message.user.imageName)
         
@@ -79,6 +87,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         default:
             break
         }
+        
         return cell
     }
     

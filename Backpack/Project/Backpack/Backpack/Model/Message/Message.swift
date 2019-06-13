@@ -20,6 +20,7 @@ internal struct Message {
     
     var user: MessageUser
     var isIncoming: Bool
+    var isShoulShowSenderImage: Bool = true
     
     private init(kind: MessageKind, user: MessageUser, messageId: String, date: String, isIncoming: Bool) {
         self.kind = kind

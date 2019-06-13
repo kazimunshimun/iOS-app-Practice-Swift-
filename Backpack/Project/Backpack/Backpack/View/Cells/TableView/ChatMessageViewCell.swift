@@ -30,7 +30,12 @@ class ChatMessageViewCell: UITableViewCell {
                 trailingConstraintsForMessageLabel.isActive = false
                 leadingConstraintsForMessageLabel.isActive = true
                 
-                userImageView.isHidden = false
+                if chatMessage.isShoulShowSenderImage {
+                    userImageView.isHidden = false
+                } else {
+                    userImageView.isHidden = true
+                }
+                
             } else {
                 messageBackgroundView.backgroundColor = UIColor(red: 57.0/255, green: 90.0/255, blue: 255.0/255, alpha: 1.0)
                 messageLabel.textColor = .white
@@ -71,7 +76,7 @@ class ChatMessageViewCell: UITableViewCell {
         let constraintsForMessageLabel = [
             messageLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             messageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
-            messageLabel.widthAnchor.constraint(lessThanOrEqualTo: widthAnchor, constant: -80)]
+            messageLabel.widthAnchor.constraint(lessThanOrEqualTo: widthAnchor, constant: -90)]
         NSLayoutConstraint.activate(constraintsForMessageLabel)
         
         messageBackgroundView.translatesAutoresizingMaskIntoConstraints = false
