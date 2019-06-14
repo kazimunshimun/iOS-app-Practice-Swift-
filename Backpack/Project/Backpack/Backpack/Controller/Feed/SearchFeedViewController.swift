@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import TTRangeSlider
 
-class SearchFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SearchFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TTRangeSliderDelegate {
 
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var filterViewHeightConstrain: NSLayoutConstraint!
@@ -17,6 +18,8 @@ class SearchFeedViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var searchSegmentedControl: CustomSegmentedContrl!
     @IBOutlet weak var searchTableView: UITableView!
     
+    @IBOutlet weak var ageRangeSlider: TTRangeSlider!
+    @IBOutlet weak var ageRangeResultLabel: UILabel!
     var isShowingFilter: Bool = true
     var isShowingPeople: Bool = false
     
@@ -45,6 +48,12 @@ class SearchFeedViewController: UIViewController, UITableViewDelegate, UITableVi
         searchTableView.register(UINib(nibName: "PeopleTableViewCell", bundle: nil), forCellReuseIdentifier: "peopleCell")
         
         searchSegmentedControl.addTarget(self, action: #selector(onChangeOfSegment(_:)), for: .valueChanged)
+        
+        ageRangeSlider.delegate = self
+    }
+    
+    func rangeSlider(_ sender: TTRangeSlider!, didChangeSelectedMinimumValue selectedMinimum: Float, andMaximumValue selectedMaximum: Float) {
+        ageRangeResultLabel.text = "\(Int(selectedMinimum))-\(Int(selectedMaximum))"
     }
     
     @objc func onChangeOfSegment (_ sender : CustomSegmentedContrl) {

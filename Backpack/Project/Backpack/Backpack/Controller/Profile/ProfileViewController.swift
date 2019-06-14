@@ -15,13 +15,20 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var profileScrollView: UIScrollView!
     @IBOutlet weak var followersView: UIView!
     @IBOutlet weak var followingView: UIView!
+    @IBOutlet weak var tripSementedControl: ProfileTripsSegmentedControl!
     @IBOutlet weak var tripsTableViewController: UITableView!
     
     var isOwnProfile : Bool = true
     
+     var trips: [Trip] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        setupViews()
+    }
+    
+    func setupViews() {
         if isOwnProfile {
             followButton.isHidden = true
             settingsButton.isHidden = false
@@ -38,11 +45,51 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         followersView.addTapGesture(tapNumber: 1, target: self, action: #selector(followersViewTouched))
         followingView.addTapGesture(tapNumber: 1, target: self, action: #selector(followingViewTouched))
         
-//        self.showSpinner(onView: self.view)
+        loadCurrentTrips()
+        
+        tripSementedControl.addTarget(self, action: #selector(onChangeOfSegment(_:)), for: .valueChanged)
+    }
+    
+    @objc func onChangeOfSegment(_ sender: ProfileTripsSegmentedControl) {
+        
+        print("selecred segmented control value changed: \(sender.selectedSegmentIndex)")
+        switch sender.selectedSegmentIndex {
+        case 0:
+            loadCurrentTrips()
+            break
+        case 1:
+            loadPastTrips()
+            break
+        default:
+            break
+        }
+        
+    }
+    
+    func loadCurrentTrips() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            TripData.shared.getCurrentTrips(forUser: "Jennifer") { currentTrips in
+                DispatchQueue.main.async {
+                    self.trips = currentTrips
+                    self.tripsTableViewController.reloadData()
+                }
+            }
+        }
+    }
+    
+    func loadPastTrips() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            TripData.shared.getPastTrips(forUser: "Jennifer") { pastTrips in
+                DispatchQueue.main.async {
+                    self.trips = pastTrips
+                    self.tripsTableViewController.reloadData()
+                }
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3;
+        return self.trips.count;
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -53,12 +100,25 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "profileTripCell") as! TripTableViewCell
+        let trip: Trip
+        trip = trips[indexPath.row]
+        cell.profileImageView.image = UIImage(named: trip.people.imageName)
+        cell.nameLabel.text = trip.people.name
+        cell.postedTimeLabel.text = trip.postedTime
+        cell.tripDurationLabel.text = "\(trip.tripDuration)"
+        cell.tripLocationLabel.text = trip.tripLocation
+        cell.tripCurrentStatusLabel.text = trip.currentStatus
+        cell.tripImageView.image = UIImage(named: trip.tripImage)
         return cell;
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let trip: Trip
+        trip = trips[indexPath.row]
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Feeds", bundle: nil)
         let fullPostViewController = storyBoard.instantiateViewController(withIdentifier: "fullPostView") as! PostFullViewController
+        fullPostViewController.tripDetail = trip
         self.show(fullPostViewController, sender: nil)
         // self.performSegue(withIdentifier: "showChatView", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)

@@ -10,6 +10,17 @@ import UIKit
 
 class TripTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var profileImageView: RoundedCornerImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var postedTimeLabel: UILabel!
+    @IBOutlet weak var tripDurationLabel: RoundedBackgroundLabel!
+    @IBOutlet weak var tripLocationLabel: UILabel!
+    @IBOutlet weak var tripCurrentStatusLabel: UILabel!
+    @IBOutlet weak var tripStartLocation: UILabel!
+    @IBOutlet weak var tripDestinationLocation: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var tripImageView: TopLeftRightRadiusImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

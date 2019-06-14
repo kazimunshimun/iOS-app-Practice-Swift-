@@ -361,6 +361,7 @@
                         <outlet property="followingView" destination="6uf-Fg-nMO" id="f3x-oE-OMo"/>
                         <outlet property="profileScrollView" destination="8V3-XD-uMh" id="6Jh-RP-1kd"/>
                         <outlet property="settingsButton" destination="uvg-Yo-O5E" id="4su-Rn-xl4"/>
+                        <outlet property="tripSementedControl" destination="7sl-9g-MjT" id="ngq-wo-LA7"/>
                         <outlet property="tripsTableViewController" destination="X59-75-G6I" id="zEJ-gT-HF5"/>
                     </connections>
                 </viewController>

@@ -219,60 +219,25 @@
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ljB-1S-9UT" userLabel="Gender Selection View">
                                         <rect key="frame" x="8" y="53" width="351" height="128"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQg-0d-sXd" customClass="RoundedButtonWithShadow" customModule="Backpack" customModuleProvider="target">
-                                                <rect key="frame" x="145" y="50.5" width="61" height="27"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wI1-ev-MMn" customClass="VisibilitySegmentedControl" customModule="Backpack" customModuleProvider="target">
+                                                <rect key="frame" x="60" y="65" width="231" height="29"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="27" id="E4J-Yq-yL3"/>
-                                                    <constraint firstAttribute="width" constant="61" id="y8L-0Y-EWi"/>
+                                                    <constraint firstAttribute="height" constant="29" id="bgk-CI-Rel"/>
+                                                    <constraint firstAttribute="width" constant="231" id="hal-2Y-xdh"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="12"/>
-                                                <state key="normal" title="Female">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="titleShadowColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorTextColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorBackgroundColor">
+                                                        <color key="value" red="0.22352941179999999" green="0.35294117650000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6l5-sL-mfZ" customClass="RoundedButtonWithShadow" customModule="Backpack" customModuleProvider="target">
-                                                <rect key="frame" x="222" y="50.5" width="61" height="27"/>
-                                                <color key="backgroundColor" red="0.25873923300000001" green="0.39284884930000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="61" id="fAx-ID-K2s"/>
-                                                    <constraint firstAttribute="height" constant="27" id="uV6-vA-J8E"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="12"/>
-                                                <state key="normal" title="All">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="titleShadowColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0B-e1-0Bi" customClass="RoundedButtonWithShadow" customModule="Backpack" customModuleProvider="target">
-                                                <rect key="frame" x="68" y="50.5" width="61" height="27"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="61" id="dUa-HC-PUF"/>
-                                                    <constraint firstAttribute="height" constant="27" id="lLY-Hw-nWu"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="12"/>
-                                                <state key="normal" title="Male">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="titleShadowColor" red="0.62352941179999999" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e1-cR-uVd">
                                                 <rect key="frame" x="30" y="16" width="45.5" height="17"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="12"/>
@@ -282,15 +247,11 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="mQg-0d-sXd" firstAttribute="centerY" secondItem="ljB-1S-9UT" secondAttribute="centerY" id="KCW-XF-ei5"/>
-                                            <constraint firstItem="6l5-sL-mfZ" firstAttribute="leading" secondItem="mQg-0d-sXd" secondAttribute="trailing" constant="16" id="KXN-UO-Mue"/>
+                                            <constraint firstItem="wI1-ev-MMn" firstAttribute="centerX" secondItem="ljB-1S-9UT" secondAttribute="centerX" id="JcA-01-fkM"/>
                                             <constraint firstItem="2e1-cR-uVd" firstAttribute="top" secondItem="ljB-1S-9UT" secondAttribute="top" constant="16" id="L8g-sJ-3Op"/>
-                                            <constraint firstItem="I0B-e1-0Bi" firstAttribute="centerY" secondItem="ljB-1S-9UT" secondAttribute="centerY" id="MVm-mb-fS8"/>
-                                            <constraint firstItem="mQg-0d-sXd" firstAttribute="leading" secondItem="I0B-e1-0Bi" secondAttribute="trailing" constant="16" id="TIy-My-ARc"/>
                                             <constraint firstAttribute="height" constant="128" id="YIi-dG-bLe"/>
-                                            <constraint firstItem="6l5-sL-mfZ" firstAttribute="centerY" secondItem="ljB-1S-9UT" secondAttribute="centerY" id="eRZ-0b-Abg"/>
+                                            <constraint firstItem="wI1-ev-MMn" firstAttribute="top" secondItem="2e1-cR-uVd" secondAttribute="bottom" constant="32" id="irj-c3-7sE"/>
                                             <constraint firstItem="2e1-cR-uVd" firstAttribute="leading" secondItem="ljB-1S-9UT" secondAttribute="leading" constant="30" id="m2t-eL-pHa"/>
-                                            <constraint firstItem="mQg-0d-sXd" firstAttribute="centerX" secondItem="ljB-1S-9UT" secondAttribute="centerX" id="mfe-A4-xV2"/>
                                         </constraints>
                                     </view>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0i-Qf-3Oi" userLabel="Age Selection View">
@@ -409,7 +370,9 @@
                         <viewLayoutGuide key="safeArea" id="Qvd-XB-XZE"/>
                     </view>
                     <connections>
+                        <outlet property="ageRangeResultLabel" destination="87h-Po-v9Q" id="xmY-D1-JgU"/>
                         <outlet property="ageRangeSelectionView" destination="s0i-Qf-3Oi" id="EWe-VY-JWz"/>
+                        <outlet property="ageRangeSlider" destination="ikW-43-Nrj" id="jRh-LN-cLQ"/>
                         <outlet property="filterButton" destination="2Pb-Oc-eEh" id="5xF-pN-n3X"/>
                         <outlet property="filterViewHeightConstrain" destination="7Tk-jT-1pV" id="igZ-Xi-Hns"/>
                         <outlet property="genderSelectionView" destination="ljB-1S-9UT" id="MFb-LK-WDT"/>

@@ -24,7 +24,7 @@ class WelcomeViewController: UIViewController {
         //timer.invalidate()
         
         //changeViewTimer.fire()
-        Timer.scheduledTimer(timeInterval: 10,
+        Timer.scheduledTimer(timeInterval: 5,
                              target: self,
                              selector: #selector(self.changeView),
                              userInfo: nil,

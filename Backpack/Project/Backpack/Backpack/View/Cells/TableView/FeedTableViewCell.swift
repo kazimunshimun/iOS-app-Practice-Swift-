@@ -21,8 +21,6 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var sharedLabel: RoundedButton!
     @IBOutlet weak var tripImageView: TopLeftRightRadiusImageView!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

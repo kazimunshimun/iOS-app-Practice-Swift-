@@ -74,7 +74,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MzR-3z-cIT" customClass="RoundedViewWithShadow" customModule="Backpack" customModuleProvider="target">
                                 <rect key="frame" x="8" y="68" width="304" height="351.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash_2" translatesAutoresizingMaskIntoConstraints="NO" id="Cmf-oG-xlX">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash_2" translatesAutoresizingMaskIntoConstraints="NO" id="Cmf-oG-xlX" customClass="TopLeftRightRadiusImageView" customModule="Backpack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-7" width="304" height="140"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="140" id="0ak-se-8uZ"/>
@@ -295,6 +295,18 @@ join me on this epic journey through American</string>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="Lex-YI-kNZ" id="Mge-eL-aGv"/>
+                <outlet property="nameLabel" destination="SDG-pO-fs1" id="Ruc-rp-wr6"/>
+                <outlet property="postedTimeLabel" destination="BKV-BV-qRG" id="hTC-Hx-DMe"/>
+                <outlet property="profileImageView" destination="O6E-c3-nQn" id="MBd-Qe-CSo"/>
+                <outlet property="tripCurrentStatusLabel" destination="jez-OV-hRz" id="lET-Oj-gHc"/>
+                <outlet property="tripDestinationLocation" destination="UDM-Fw-ATe" id="4wi-Lc-5ay"/>
+                <outlet property="tripDurationLabel" destination="sbl-UI-63L" id="YlH-VZ-RzP"/>
+                <outlet property="tripImageView" destination="Cmf-oG-xlX" id="hAv-IL-dPP"/>
+                <outlet property="tripLocationLabel" destination="aAB-oT-SXc" id="f3z-4F-6N4"/>
+                <outlet property="tripStartLocation" destination="78T-w1-Mud" id="3dz-7h-Wg3"/>
+            </connections>
             <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
         </tableViewCell>
     </objects>

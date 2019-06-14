@@ -19,6 +19,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        passwordTextField.isSecureTextEntry = true
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
