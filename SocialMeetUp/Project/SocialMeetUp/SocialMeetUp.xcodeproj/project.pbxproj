@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23C90EAFB4F1D0639A852017 /* Pods_SocialMeetUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB9A1B809F0717EE37986B6 /* Pods_SocialMeetUp.framework */; };
+		84437C7C22B532D10048FC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84437C7B22B532D10048FC1F /* AppDelegate.swift */; };
+		84437C7E22B532D10048FC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84437C7D22B532D10048FC1F /* ViewController.swift */; };
+		84437C8122B532D10048FC1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84437C7F22B532D10048FC1F /* Main.storyboard */; };
+		84437C8322B532D40048FC1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84437C8222B532D40048FC1F /* Assets.xcassets */; };
+		84437C8622B532D40048FC1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84437C8422B532D40048FC1F /* LaunchScreen.storyboard */; };
+		84437C9122B54E540048FC1F /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84437C9022B54E540048FC1F /* RoundedCornerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		74D630A573A96EE9E6942F2D /* Pods-SocialMeetUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMeetUp.release.xcconfig"; path = "Target Support Files/Pods-SocialMeetUp/Pods-SocialMeetUp.release.xcconfig"; sourceTree = "<group>"; };
+		84437C7822B532D10048FC1F /* SocialMeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84437C7B22B532D10048FC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84437C7D22B532D10048FC1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84437C8022B532D10048FC1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84437C8222B532D40048FC1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84437C8522B532D40048FC1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84437C8722B532D40048FC1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84437C9022B54E540048FC1F /* RoundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedCornerView.swift; path = ../RoundedCornerView.swift; sourceTree = "<group>"; };
+		9AB9A1B809F0717EE37986B6 /* Pods_SocialMeetUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMeetUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28A43B886D34A4873A8D4C8 /* Pods-SocialMeetUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMeetUp.debug.xcconfig"; path = "Target Support Files/Pods-SocialMeetUp/Pods-SocialMeetUp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84437C7522B532D10048FC1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23C90EAFB4F1D0639A852017 /* Pods_SocialMeetUp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24809E80436AA4177FFA68D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AB9A1B809F0717EE37986B6 /* Pods_SocialMeetUp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69533A6CCBB850E7D1FA373B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E28A43B886D34A4873A8D4C8 /* Pods-SocialMeetUp.debug.xcconfig */,
+				74D630A573A96EE9E6942F2D /* Pods-SocialMeetUp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		84437C6F22B532D10048FC1F = {
+			isa = PBXGroup;
+			children = (
+				84437C7A22B532D10048FC1F /* SocialMeetUp */,
+				84437C7922B532D10048FC1F /* Products */,
+				69533A6CCBB850E7D1FA373B /* Pods */,
+				24809E80436AA4177FFA68D3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84437C7922B532D10048FC1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84437C7822B532D10048FC1F /* SocialMeetUp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84437C7A22B532D10048FC1F /* SocialMeetUp */ = {
+			isa = PBXGroup;
+			children = (
+				84437C9222B54E5B0048FC1F /* View */,
+				84437C8D22B5335F0048FC1F /* Controller */,
+				84437C8E22B533740048FC1F /* StoryBoard */,
+				84437C8F22B533870048FC1F /* Resources */,
+				84437C8722B532D40048FC1F /* Info.plist */,
+			);
+			path = SocialMeetUp;
+			sourceTree = "<group>";
+		};
+		84437C8D22B5335F0048FC1F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84437C7B22B532D10048FC1F /* AppDelegate.swift */,
+				84437C7D22B532D10048FC1F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84437C8E22B533740048FC1F /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				84437C7F22B532D10048FC1F /* Main.storyboard */,
+				84437C8422B532D40048FC1F /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		84437C8F22B533870048FC1F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84437C8222B532D40048FC1F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84437C9222B54E5B0048FC1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84437C9022B54E540048FC1F /* RoundedCornerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84437C7722B532D10048FC1F /* SocialMeetUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84437C8A22B532D40048FC1F /* Build configuration list for PBXNativeTarget "SocialMeetUp" */;
+			buildPhases = (
+				7A9B2E048D5FDCB85729F977 /* [CP] Check Pods Manifest.lock */,
+				84437C7422B532D10048FC1F /* Sources */,
+				84437C7522B532D10048FC1F /* Frameworks */,
+				84437C7622B532D10048FC1F /* Resources */,
+				04A7BE6A5DDE33E952A05007 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocialMeetUp;
+			productName = SocialMeetUp;
+			productReference = 84437C7822B532D10048FC1F /* SocialMeetUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84437C7022B532D10048FC1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = A7Studio;
+				TargetAttributes = {
+					84437C7722B532D10048FC1F = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 84437C7322B532D10048FC1F /* Build configuration list for PBXProject "SocialMeetUp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84437C6F22B532D10048FC1F;
+			productRefGroup = 84437C7922B532D10048FC1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84437C7722B532D10048FC1F /* SocialMeetUp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84437C7622B532D10048FC1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84437C8622B532D40048FC1F /* LaunchScreen.storyboard in Resources */,
+				84437C8322B532D40048FC1F /* Assets.xcassets in Resources */,
+				84437C8122B532D10048FC1F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04A7BE6A5DDE33E952A05007 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialMeetUp/Pods-SocialMeetUp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocialMeetUp/Pods-SocialMeetUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A9B2E048D5FDCB85729F977 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SocialMeetUp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84437C7422B532D10048FC1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84437C7E22B532D10048FC1F /* ViewController.swift in Sources */,
+				84437C7C22B532D10048FC1F /* AppDelegate.swift in Sources */,
+				84437C9122B54E540048FC1F /* RoundedCornerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84437C7F22B532D10048FC1F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84437C8022B532D10048FC1F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84437C8422B532D40048FC1F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84437C8522B532D40048FC1F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84437C8822B532D40048FC1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84437C8922B532D40048FC1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84437C8B22B532D40048FC1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E28A43B886D34A4873A8D4C8 /* Pods-SocialMeetUp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3EYUW49QFV;
+				INFOPLIST_FILE = SocialMeetUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.A7Studio.SocialMeetUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84437C8C22B532D40048FC1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74D630A573A96EE9E6942F2D /* Pods-SocialMeetUp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3EYUW49QFV;
+				INFOPLIST_FILE = SocialMeetUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.A7Studio.SocialMeetUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84437C7322B532D10048FC1F /* Build configuration list for PBXProject "SocialMeetUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84437C8822B532D40048FC1F /* Debug */,
+				84437C8922B532D40048FC1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84437C8A22B532D40048FC1F /* Build configuration list for PBXNativeTarget "SocialMeetUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84437C8B22B532D40048FC1F /* Debug */,
+				84437C8C22B532D40048FC1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84437C7022B532D10048FC1F /* Project object */;
+}
