@@ -8,16 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		23C90EAFB4F1D0639A852017 /* Pods_SocialMeetUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB9A1B809F0717EE37986B6 /* Pods_SocialMeetUp.framework */; };
+		842DDA7122B5594900CCBC76 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DDA7022B5594900CCBC76 /* RoundedCornerButton.swift */; };
+		842DDA7522B55EBE00CCBC76 /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DDA7422B55EBE00CCBC76 /* RoundedCornerView.swift */; };
 		84437C7C22B532D10048FC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84437C7B22B532D10048FC1F /* AppDelegate.swift */; };
 		84437C7E22B532D10048FC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84437C7D22B532D10048FC1F /* ViewController.swift */; };
 		84437C8122B532D10048FC1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84437C7F22B532D10048FC1F /* Main.storyboard */; };
 		84437C8322B532D40048FC1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84437C8222B532D40048FC1F /* Assets.xcassets */; };
 		84437C8622B532D40048FC1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84437C8422B532D40048FC1F /* LaunchScreen.storyboard */; };
-		84437C9122B54E540048FC1F /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84437C9022B54E540048FC1F /* RoundedCornerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		74D630A573A96EE9E6942F2D /* Pods-SocialMeetUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMeetUp.release.xcconfig"; path = "Target Support Files/Pods-SocialMeetUp/Pods-SocialMeetUp.release.xcconfig"; sourceTree = "<group>"; };
+		842DDA7022B5594900CCBC76 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
+		842DDA7422B55EBE00CCBC76 /* RoundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
 		84437C7822B532D10048FC1F /* SocialMeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84437C7B22B532D10048FC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84437C7D22B532D10048FC1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +28,6 @@
 		84437C8222B532D40048FC1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84437C8522B532D40048FC1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84437C8722B532D40048FC1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84437C9022B54E540048FC1F /* RoundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedCornerView.swift; path = ../RoundedCornerView.swift; sourceTree = "<group>"; };
 		9AB9A1B809F0717EE37986B6 /* Pods_SocialMeetUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMeetUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28A43B886D34A4873A8D4C8 /* Pods-SocialMeetUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMeetUp.debug.xcconfig"; path = "Target Support Files/Pods-SocialMeetUp/Pods-SocialMeetUp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,7 +58,6 @@
 				E28A43B886D34A4873A8D4C8 /* Pods-SocialMeetUp.debug.xcconfig */,
 				74D630A573A96EE9E6942F2D /* Pods-SocialMeetUp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -119,7 +120,8 @@
 		84437C9222B54E5B0048FC1F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				84437C9022B54E540048FC1F /* RoundedCornerView.swift */,
+				842DDA7422B55EBE00CCBC76 /* RoundedCornerView.swift */,
+				842DDA7022B5594900CCBC76 /* RoundedCornerButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,7 +252,8 @@
 			files = (
 				84437C7E22B532D10048FC1F /* ViewController.swift in Sources */,
 				84437C7C22B532D10048FC1F /* AppDelegate.swift in Sources */,
-				84437C9122B54E540048FC1F /* RoundedCornerView.swift in Sources */,
+				842DDA7122B5594900CCBC76 /* RoundedCornerButton.swift in Sources */,
+				842DDA7522B55EBE00CCBC76 /* RoundedCornerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

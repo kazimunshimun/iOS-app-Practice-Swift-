@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,116 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocialMeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcom_2" translatesAutoresizingMaskIntoConstraints="NO" id="2Yd-tB-o5A">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="682"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LmU-nf-FOo">
+                                <rect key="frame" x="32" y="598" width="382" height="224"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="src-Tg-5cp" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20"/>
+                                        <color key="backgroundColor" red="0.20784313730000001" green="0.14901960780000001" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="MhA-Kh-Bcv"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2e-cW-OLB" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="20" width="382" height="176"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TUTORIAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQs-Dr-m2x">
+                                                <rect key="frame" x="32" y="16" width="81" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-FF-2gv">
+                                                <rect key="frame" x="32" y="53" width="182" height="76.5"/>
+                                                <string key="text">Welcome to 
+Meet Up</string>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.20784313730000001" green="0.14901960780000001" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="EQs-Dr-m2x" firstAttribute="leading" secondItem="I2e-cW-OLB" secondAttribute="leading" constant="32" id="2xj-Zu-cX0"/>
+                                            <constraint firstAttribute="height" constant="176" id="LI1-8b-cLy"/>
+                                            <constraint firstItem="EQs-Dr-m2x" firstAttribute="top" secondItem="I2e-cW-OLB" secondAttribute="top" constant="16" id="Z4m-0M-PGB"/>
+                                            <constraint firstItem="C0s-FF-2gv" firstAttribute="top" secondItem="EQs-Dr-m2x" secondAttribute="bottom" constant="16" id="fkA-pV-0CU"/>
+                                            <constraint firstItem="C0s-FF-2gv" firstAttribute="leading" secondItem="I2e-cW-OLB" secondAttribute="leading" constant="32" id="msu-9o-PsC"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="80"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5L-Rp-VKz" customClass="RoundedCornerButton" customModule="SocialMeetUp" customModuleProvider="target">
+                                        <rect key="frame" x="209" y="168" width="173" height="56"/>
+                                        <color key="backgroundColor" red="0.83137254901960778" green="0.49803921568627452" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="REe-4r-51c"/>
+                                            <constraint firstAttribute="width" constant="173" id="YKT-BS-H6K"/>
+                                        </constraints>
+                                        <state key="normal" title="GET STARTED">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="224" id="MRB-5O-OgP"/>
+                                    <constraint firstItem="I2e-cW-OLB" firstAttribute="leading" secondItem="LmU-nf-FOo" secondAttribute="leading" id="NMR-sr-FYF"/>
+                                    <constraint firstItem="src-Tg-5cp" firstAttribute="leading" secondItem="LmU-nf-FOo" secondAttribute="leading" id="PQc-LK-qXc"/>
+                                    <constraint firstAttribute="bottom" secondItem="B5L-Rp-VKz" secondAttribute="bottom" id="URp-Aa-tLd"/>
+                                    <constraint firstAttribute="trailing" secondItem="src-Tg-5cp" secondAttribute="trailing" id="dXN-gv-uB3"/>
+                                    <constraint firstAttribute="trailing" secondItem="I2e-cW-OLB" secondAttribute="trailing" id="lMh-nI-nst"/>
+                                    <constraint firstItem="src-Tg-5cp" firstAttribute="top" secondItem="LmU-nf-FOo" secondAttribute="top" id="pgb-eE-Pwf"/>
+                                    <constraint firstAttribute="trailing" secondItem="B5L-Rp-VKz" secondAttribute="trailing" id="sjM-Op-JhL"/>
+                                    <constraint firstItem="I2e-cW-OLB" firstAttribute="top" secondItem="src-Tg-5cp" secondAttribute="bottom" id="yeE-NO-i58"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Yd-tB-o5A" secondAttribute="trailing" id="Jdh-gg-cQQ"/>
+                            <constraint firstItem="LmU-nf-FOo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Nhc-sd-ghx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LmU-nf-FOo" secondAttribute="trailing" id="Q2k-vb-BYj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LmU-nf-FOo" secondAttribute="bottom" constant="40" id="UKv-ND-CNb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="2Yd-tB-o5A" secondAttribute="top" constant="44" id="axy-F2-D6q"/>
+                            <constraint firstItem="2Yd-tB-o5A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lfW-Ng-SSv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Yd-tB-o5A" secondAttribute="bottom" constant="180" id="oTu-f5-k34"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="121.875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="welcom_2" width="620" height="929"/>
+    </resources>
 </document>
