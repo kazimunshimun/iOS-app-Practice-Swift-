@@ -1,21 +1,20 @@
 //
-//  MenuViewController.swift
+//  DropDownViewController.swift
 //  SocialMeetUp
 //
-//  Created by Anik on 16/6/19.
+//  Created by Anik on 18/6/19.
 //  Copyright © 2019 A7Studio. All rights reserved.
 //
 
 import UIKit
 
-class MenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class DropDownViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var menuCollectionView: UICollectionView!
-    
-    @IBOutlet weak var createNewButton: RoundedCornerButton!
-    
     var menuList: [Menu] = []
+    
+    let numberOfCellsPerRow: CGFloat = 1
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +23,12 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         menuCollectionView.delegate = self
         menuCollectionView.dataSource = self
         loadMenus()
-    }
-    
-    @IBAction func dropDownButtonClicked(_ sender: Any) {
-        print("show menu button pressed!")
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let fullPostViewController = storyBoard.instantiateViewController(withIdentifier: "dropDownMenu") as! DropDownViewController
-        self.show(fullPostViewController, sender: nil)
+        
+        if let flowLayout = menuCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            let horizontalSpacing = flowLayout.scrollDirection == .vertical ? flowLayout.minimumInteritemSpacing : flowLayout.minimumLineSpacing
+            let cellWidth = (view.frame.width - max(0, numberOfCellsPerRow - 1)*horizontalSpacing)/numberOfCellsPerRow
+            flowLayout.itemSize = CGSize(width: cellWidth, height: 90)
+        }
     }
     
     func loadMenus() {
@@ -48,12 +46,12 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let menu = menuList[indexPath.row]
         if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuProfileCell", for: indexPath) as! MenuProfileCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuProfileCell1", for: indexPath) as! MenuProfileCell
             cell.menuNameLabel.text = menu.name
             cell.menuImageView.image = UIImage(named: menu.image)
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCell", for: indexPath) as! MenuCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCell1", for: indexPath) as! MenuCell
             cell.menuNameLabel.text = menu.name
             cell.menuImageView.image = UIImage(named: menu.image)
             return cell
@@ -70,10 +68,7 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let menu = menuList[indexPath.row]
         print("selected index: \(indexPath.row) menu: \(menu.name)")
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-//        let fullPostViewController = storyBoard.instantiateViewController(withIdentifier: "dropDownMenu") as! DropDownViewController
-//        self.show(fullPostViewController, sender: nil)
-//        collectionView.deselectItem(at: indexPath, animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     /*
     // MARK: - Navigation
