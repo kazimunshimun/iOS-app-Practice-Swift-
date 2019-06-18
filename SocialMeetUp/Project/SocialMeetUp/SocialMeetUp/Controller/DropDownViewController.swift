@@ -68,7 +68,8 @@ class DropDownViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let menu = menuList[indexPath.row]
         print("selected index: \(indexPath.row) menu: \(menu.name)")
-        self.navigationController?.popViewController(animated: true)
+        //self.navigationController?.dismiss(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class MenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -29,8 +30,11 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBAction func dropDownButtonClicked(_ sender: Any) {
         print("show menu button pressed!")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let fullPostViewController = storyBoard.instantiateViewController(withIdentifier: "dropDownMenu") as! DropDownViewController
-        self.show(fullPostViewController, sender: nil)
+        let dropDownViewController = storyBoard.instantiateViewController(withIdentifier: "dropDownMenu") as! DropDownViewController
+        dropDownViewController.hero.isEnabled = true
+        dropDownViewController.hero.modalAnimationType = .selectBy(presenting: .slide(direction: .down), dismissing: .slide(direction: .up))
+        //self.show(dropDownViewController, sender: nil)
+        present(dropDownViewController, animated: true, completion: nil)
     }
     
     func loadMenus() {
