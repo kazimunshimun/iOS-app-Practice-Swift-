@@ -8,5 +8,5 @@ target 'SocialMeetUp' do
   # Pods for SocialMeetUp
         pod 'Firebase/Analytics'
         pod 'Firebase/Auth'
-        pod 'Hero'
+        #pod 'Hero'
 end

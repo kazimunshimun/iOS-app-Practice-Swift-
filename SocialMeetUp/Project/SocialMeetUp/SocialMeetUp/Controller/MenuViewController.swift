@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import Hero
+//import Hero
 
-class MenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MenuPageDelegate {
 
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var menuCollectionView: UICollectionView!
@@ -17,6 +17,8 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var createNewButton: RoundedCornerButton!
     
     var menuList: [Menu] = []
+    
+    var childViewController: ContainerViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +33,8 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         print("show menu button pressed!")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
         let dropDownViewController = storyBoard.instantiateViewController(withIdentifier: "dropDownMenu") as! DropDownViewController
-        dropDownViewController.hero.isEnabled = true
-        dropDownViewController.hero.modalAnimationType = .selectBy(presenting: .slide(direction: .down), dismissing: .slide(direction: .up))
+       // dropDownViewController.hero.isEnabled = true
+       // dropDownViewController.hero.modalAnimationType = .selectBy(presenting: .slide(direction: .down), dismissing: .slide(direction: .up))
         //self.show(dropDownViewController, sender: nil)
         present(dropDownViewController, animated: true, completion: nil)
     }
@@ -74,19 +76,21 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let menu = menuList[indexPath.row]
         print("selected index: \(indexPath.row) menu: \(menu.name)")
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-//        let fullPostViewController = storyBoard.instantiateViewController(withIdentifier: "dropDownMenu") as! DropDownViewController
-//        self.show(fullPostViewController, sender: nil)
-//        collectionView.deselectItem(at: indexPath, animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let onboardingViewController = segue.destination as?
+            ContainerViewController {
+            childViewController = onboardingViewController
+            onboardingViewController.pageDelegate = self
+        }
     }
-    */
-
+    
+    func numberOfPage(count: Int) {
+        //pageControl.numberOfPages = count
+    }
+    
+    func selectedPageIndex(index: Int) {
+        //pageControl.currentPage = index
+    }
 }
