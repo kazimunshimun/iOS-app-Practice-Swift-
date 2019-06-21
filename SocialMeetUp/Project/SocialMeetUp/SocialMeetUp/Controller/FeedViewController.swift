@@ -24,9 +24,10 @@ class FeedViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         
-        print("menu name: \(menuItem?.name)")
+        //print("menu name: \(menuItem?.name)")
         self.tableView.register(UINib(nibName: "FeedCell", bundle: nil), forCellReuseIdentifier: "feedCell")
         loadFeeds(feedType: FeedType(rawValue: menuItem!.name)!)
+        self.tableView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#9599B3")
     }
     
     func loadFeeds(feedType: FeedType) {
@@ -68,6 +69,9 @@ class FeedViewController: UITableViewController {
             //cell.backgroundColor = nextFeed.feedColor
         }
         
+        if indexPath.row == feedList.count - 1 {
+            cell.contentView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#9599B3")
+        }
         cell.timeDateLabel.text = "\(feed.timeDate.dayOfWeek) \(feed.timeDate.fromTime)"
         cell.titleLabel.text = feed.title
         cell.roundedBackgroundView.backgroundColor = feed.feedColor

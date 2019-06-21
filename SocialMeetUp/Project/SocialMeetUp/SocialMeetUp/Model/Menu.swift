@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct Menu {
     let id : String
     let image : String
     let name : String
-    let isSelected : Bool
+    var isSelected : Bool
+    let menuSelectedColor: UIColor
 }

@@ -16,6 +16,8 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var createNewButton: RoundedCornerButton!
     
+    var previosSelectedIndex: Int = -1
+    
     var menuList: [Menu] = []
     
     var childViewController: ContainerViewController?
@@ -57,11 +59,19 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuProfileCell", for: indexPath) as! MenuProfileCell
             cell.menuNameLabel.text = menu.name
             cell.menuImageView.image = UIImage(named: menu.image)
+            cell.menuBackgroundView.borderColor = menu.isSelected ? menu.menuSelectedColor : ColorUtils.hexStringToUIColor(hex: "#979797")
+            //cell.menuBackgroundView.alpha = menu.isSelected ? 1.0 : 0.30
+            cell.menuNameLabel.textColor = menu.isSelected ? .black : ColorUtils.hexStringToUIColor(hex: "#374750")
+            cell.menuNameLabel.alpha = menu.isSelected ? 1.0 : 0.56
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCell", for: indexPath) as! MenuCell
             cell.menuNameLabel.text = menu.name
             cell.menuImageView.image = UIImage(named: menu.image)
+            cell.menuBackgroundView.borderColor = menu.isSelected ? menu.menuSelectedColor : ColorUtils.hexStringToUIColor(hex: "#979797")
+            cell.menuBackgroundView.alpha = menu.isSelected ? 1.0 : 0.30
+            cell.menuNameLabel.textColor = menu.isSelected ? .black : ColorUtils.hexStringToUIColor(hex: "#374750")
+            cell.menuNameLabel.alpha = menu.isSelected ? 1.0 : 0.56
             return cell
         }
     }
@@ -92,5 +102,20 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func selectedPageIndex(index: Int) {
         //pageControl.currentPage = index
+        print("selected menu index: \(index) previous selected index \(previosSelectedIndex)")
+        if menuList.count > 0 {
+            let selectedMenu = menuList[index]
+            topView.backgroundColor = selectedMenu.menuSelectedColor
+            menuList[index].isSelected = true
+            if previosSelectedIndex == -1 {
+                previosSelectedIndex = index
+            }
+            
+            if previosSelectedIndex != index {
+                menuList[previosSelectedIndex].isSelected = false
+                previosSelectedIndex = index
+            }
+            self.menuCollectionView.reloadData()
+        }
     }
 }

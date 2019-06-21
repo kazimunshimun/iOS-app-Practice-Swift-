@@ -32,10 +32,12 @@ class ContainerViewController: UIPageViewController, UIPageViewControllerDataSou
         for n in 0..<self.menuList.count {
             if n == 0 {
                 let profileViewController = storyBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileViewController
+                profileViewController.view.tag = n
                 viewControllers.append(profileViewController)
             } else {
                 let feedViewController = storyBoard.instantiateViewController(withIdentifier: "feedTableView") as! FeedViewController
                 feedViewController.menuItem = self.menuList[n]
+                feedViewController.view.tag = n
                 viewControllers.append(feedViewController)
             }
         }
@@ -62,15 +64,25 @@ class ContainerViewController: UIPageViewController, UIPageViewControllerDataSou
             return nil
         }
         guard orderedViewController.count > previousIndex else { return nil }
+        //pageDelegate?.selectedPageIndex(index: previousIndex)
         return orderedViewController[previousIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewController.firstIndex(of: viewController) else { return nil }
-        pageDelegate?.selectedPageIndex(index: viewControllerIndex)
         let nextIndex = viewControllerIndex + 1
         guard orderedViewController.count > nextIndex else { return nil }
+        //pageDelegate?.selectedPageIndex(index: nextIndex)
         return orderedViewController[nextIndex]
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool)
+    {
+        if (!completed)
+        {
+            return
+        }
+        pageDelegate?.selectedPageIndex(index: pageViewController.viewControllers!.first!.view.tag)
     }
     
     override func viewDidLoad() {
