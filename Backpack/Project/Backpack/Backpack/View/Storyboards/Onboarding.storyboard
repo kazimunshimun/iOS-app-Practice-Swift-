@@ -159,7 +159,7 @@ join them on their trips.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ask_out" translatesAutoresizingMaskIntoConstraints="NO" id="Smr-LW-fcY">
-                                <rect key="frame" x="20" y="130" width="335.00000000000006" height="427"/>
+                                <rect key="frame" x="20" y="130" width="335" height="427"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Smr-LW-fcY" secondAttribute="height" multiplier="330:421" id="Wbs-eq-mkh"/>
                                 </constraints>

@@ -35,7 +35,7 @@ class ContainerViewController: UIPageViewController, UIPageViewControllerDataSou
                 viewControllers.append(profileViewController)
             } else {
                 let feedViewController = storyBoard.instantiateViewController(withIdentifier: "feedTableView") as! FeedViewController
-                feedViewController.titleData = self.menuList[n].name
+                feedViewController.menuItem = self.menuList[n]
                 viewControllers.append(feedViewController)
             }
         }

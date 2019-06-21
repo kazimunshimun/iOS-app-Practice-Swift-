@@ -10,7 +10,9 @@ import UIKit
 
 class FeedViewController: UITableViewController {
     
-    var titleData: String?
+    var menuItem: Menu?
+    
+    var feedList: [Feed] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,22 @@ class FeedViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        
+        print("menu name: \(menuItem?.name)")
+        self.tableView.register(UINib(nibName: "FeedCell", bundle: nil), forCellReuseIdentifier: "feedCell")
+        loadFeeds(feedType: FeedType(rawValue: menuItem!.name)!)
+    }
+    
+    func loadFeeds(feedType: FeedType) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            FeedData.shared.getFeeds(type: feedType) { feeds in
+                DispatchQueue.main.async {
+                    self.feedList = feeds
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -31,15 +49,28 @@ class FeedViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return feedList.count
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let cellWidth : CGFloat = 190.0;
+        return cellWidth;
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell", for: indexPath) as! FeedCell
 
+        let feed = feedList[indexPath.row]
         // Configure the cell...
-        cell.textLabel?.text = titleData
+        if indexPath.row + 1 < feedList.count {
+            let nextFeed = feedList[indexPath.row + 1]
+            cell.contentView.backgroundColor = nextFeed.feedColor
+            //cell.backgroundColor = nextFeed.feedColor
+        }
+        
+        cell.timeDateLabel.text = "\(feed.timeDate.dayOfWeek) \(feed.timeDate.fromTime)"
+        cell.titleLabel.text = feed.title
+        cell.roundedBackgroundView.backgroundColor = feed.feedColor
         return cell
     }
  
