@@ -34,6 +34,9 @@
 		8454B03322BD4ECD008923B3 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454B03122BD4ECD008923B3 /* FeedCell.swift */; };
 		8454B03422BD4ECD008923B3 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8454B03222BD4ECD008923B3 /* FeedCell.xib */; };
 		845B856B22BE2E0F00E1AF34 /* FeedWithTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B856A22BE2E0F00E1AF34 /* FeedWithTableViewController.swift */; };
+		84798AF522BE6E130001C241 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84798AF422BE6E130001C241 /* ProfileData.swift */; };
+		84798AF722BE6F850001C241 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84798AF622BE6F850001C241 /* Profile.swift */; };
+		84798AF922BE71BD0001C241 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84798AF822BE71BD0001C241 /* ProfileViewModel.swift */; };
 		84C6194E22B9397100535669 /* DropDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6194D22B9397100535669 /* DropDownViewController.swift */; };
 		84E6633222B68F6B00F2EDE3 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6633122B68F6B00F2EDE3 /* Menu.swift */; };
 		84E6633522B69B8200F2EDE3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6633422B69B8200F2EDE3 /* MenuViewController.swift */; };
@@ -73,6 +76,9 @@
 		8454B03122BD4ECD008923B3 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		8454B03222BD4ECD008923B3 /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 		845B856A22BE2E0F00E1AF34 /* FeedWithTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWithTableViewController.swift; sourceTree = "<group>"; };
+		84798AF422BE6E130001C241 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		84798AF622BE6F850001C241 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		84798AF822BE71BD0001C241 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		84C6194D22B9397100535669 /* DropDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownViewController.swift; sourceTree = "<group>"; };
 		84E6633122B68F6B00F2EDE3 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		84E6633422B69B8200F2EDE3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +124,7 @@
 			children = (
 				8433428322B68F0700B80F9D /* MenuData.swift */,
 				8454B01A22BD17E4008923B3 /* FeedData.swift */,
+				84798AF422BE6E130001C241 /* ProfileData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -217,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				8454B02922BD4985008923B3 /* FeedViewModel.swift */,
+				84798AF822BE71BD0001C241 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -239,6 +247,7 @@
 				8454B02022BD226B008923B3 /* Location.swift */,
 				8454B02222BD2282008923B3 /* Group.swift */,
 				8454B02422BD228B008923B3 /* Feed.swift */,
+				84798AF622BE6F850001C241 /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -387,6 +396,7 @@
 				8454B02322BD2282008923B3 /* Group.swift in Sources */,
 				84E6633C22B6AA3A00F2EDE3 /* RoundedBackgroundLabel.swift in Sources */,
 				8454B03322BD4ECD008923B3 /* FeedCell.swift in Sources */,
+				84798AF922BE71BD0001C241 /* ProfileViewModel.swift in Sources */,
 				8454B01F22BD2260008923B3 /* People.swift in Sources */,
 				845B856B22BE2E0F00E1AF34 /* FeedWithTableViewController.swift in Sources */,
 				840864B622BCC4F200D96406 /* ProfileViewController.swift in Sources */,
@@ -402,9 +412,11 @@
 				8454B02122BD226B008923B3 /* Location.swift in Sources */,
 				84E6633E22B6AC1400F2EDE3 /* MenuProfileCell.swift in Sources */,
 				842DDA7122B5594900CCBC76 /* RoundedCornerButton.swift in Sources */,
+				84798AF522BE6E130001C241 /* ProfileData.swift in Sources */,
 				8454B02722BD31F7008923B3 /* ColorUtils.swift in Sources */,
 				84E6633722B69E3F00F2EDE3 /* MenuCell.swift in Sources */,
 				8454B02A22BD4985008923B3 /* FeedViewModel.swift in Sources */,
+				84798AF722BE6F850001C241 /* Profile.swift in Sources */,
 				842DDA7522B55EBE00CCBC76 /* RoundedCornerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
