@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol DropdownMenuDelegate {
+    func selectedMenuIndex(index: IndexPath)
+}
+
 class DropDownViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var menuCollectionView: UICollectionView!
@@ -15,7 +19,7 @@ class DropDownViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     let numberOfCellsPerRow: CGFloat = 1
     
-    
+    var menuDelegate: DropdownMenuDelegate? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,6 +73,7 @@ class DropDownViewController: UIViewController, UICollectionViewDelegate, UIColl
         let menu = menuList[indexPath.row]
         print("selected index: \(indexPath.row) menu: \(menu.name)")
         //self.navigationController?.dismiss(animated: true)
+        menuDelegate?.selectedMenuIndex(index: indexPath)
         dismiss(animated: true, completion: nil)
     }
     /*

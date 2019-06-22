@@ -9,7 +9,7 @@
 import UIKit
 //import Hero
 
-class MenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MenuPageDelegate {
+class MenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MenuPageDelegate, DropdownMenuDelegate {
 
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var menuCollectionView: UICollectionView!
@@ -35,9 +35,7 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         print("show menu button pressed!")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
         let dropDownViewController = storyBoard.instantiateViewController(withIdentifier: "dropDownMenu") as! DropDownViewController
-       // dropDownViewController.hero.isEnabled = true
-       // dropDownViewController.hero.modalAnimationType = .selectBy(presenting: .slide(direction: .down), dismissing: .slide(direction: .up))
-        //self.show(dropDownViewController, sender: nil)
+        dropDownViewController.menuDelegate = self
         present(dropDownViewController, animated: true, completion: nil)
     }
     
@@ -85,7 +83,17 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let menu = menuList[indexPath.row]
-        print("selected index: \(indexPath.row) menu: \(menu.name)")
+        print("selected index: \(indexPath.row) menu: \(menu.name) previous: \(previosSelectedIndex)")
+        if let desiredVC = self.childViewController?.orderedViewController[indexPath.row] {
+            let pageDirection: UIPageViewController.NavigationDirection
+            if indexPath.row > previosSelectedIndex {
+                pageDirection = .forward
+            } else {
+                pageDirection = .reverse
+            }
+            childViewController?.setViewControllers([desiredVC], direction: pageDirection, animated: true, completion: nil)
+        }
+        selectedPageIndex(index: indexPath.row)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -116,6 +124,12 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 previosSelectedIndex = index
             }
             self.menuCollectionView.reloadData()
+            self.menuCollectionView.scrollToItem(at: IndexPath(row: index, section: 0), at: .centeredHorizontally, animated: true)
         }
+    }
+    
+    func selectedMenuIndex(index: IndexPath) {
+       // self.menuCollectionView.selectItem(at: index, animated: true, scrollPosition: .centeredHorizontally)
+       // self.collectionView(self.menuCollectionView, didSelectItemAt: index)
     }
 }

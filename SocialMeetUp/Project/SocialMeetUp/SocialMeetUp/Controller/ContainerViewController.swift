@@ -13,9 +13,8 @@ protocol MenuPageDelegate {
     func selectedPageIndex(index: Int)
 }
 
-class ContainerViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate  {
-    
-    
+class ContainerViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+
     var pageDelegate: MenuPageDelegate? = nil
     
     var menuList: [Menu] = []
