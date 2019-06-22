@@ -53,6 +53,14 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
     }
     
+    @IBAction func addNewButtonClicked(_ sender: Any) {
+        print("add new button clicked")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "CreateNew", bundle: nil)
+        let addNewViewController = storyBoard.instantiateViewController(withIdentifier: "addNew") as! AddNewViewController
+        present(addNewViewController, animated: true, completion: nil)
+    }
+    
+    
     // MARK: - Collection View Data Source
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let menu = menuList[indexPath.row]

@@ -37,6 +37,10 @@
 		84798AF522BE6E130001C241 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84798AF422BE6E130001C241 /* ProfileData.swift */; };
 		84798AF722BE6F850001C241 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84798AF622BE6F850001C241 /* Profile.swift */; };
 		84798AF922BE71BD0001C241 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84798AF822BE71BD0001C241 /* ProfileViewModel.swift */; };
+		84798AFB22BE8FAB0001C241 /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84798AFA22BE8FAB0001C241 /* AddNewViewController.swift */; };
+		84798AFD22BE8FD70001C241 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84798AFC22BE8FD70001C241 /* MessageViewController.swift */; };
+		84798AFF22BE90670001C241 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84798AFE22BE90670001C241 /* NotificationViewController.swift */; };
+		84798B0122BE90740001C241 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84798B0022BE90740001C241 /* FeedDetailViewController.swift */; };
 		84C6194E22B9397100535669 /* DropDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6194D22B9397100535669 /* DropDownViewController.swift */; };
 		84E6633222B68F6B00F2EDE3 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6633122B68F6B00F2EDE3 /* Menu.swift */; };
 		84E6633522B69B8200F2EDE3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6633422B69B8200F2EDE3 /* MenuViewController.swift */; };
@@ -79,6 +83,10 @@
 		84798AF422BE6E130001C241 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 		84798AF622BE6F850001C241 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		84798AF822BE71BD0001C241 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		84798AFA22BE8FAB0001C241 /* AddNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewViewController.swift; sourceTree = "<group>"; };
+		84798AFC22BE8FD70001C241 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		84798AFE22BE90670001C241 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		84798B0022BE90740001C241 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 		84C6194D22B9397100535669 /* DropDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownViewController.swift; sourceTree = "<group>"; };
 		84E6633122B68F6B00F2EDE3 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		84E6633422B69B8200F2EDE3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +182,10 @@
 				840864B522BCC4F200D96406 /* ProfileViewController.swift */,
 				840864B722BCC50500D96406 /* FeedViewController.swift */,
 				845B856A22BE2E0F00E1AF34 /* FeedWithTableViewController.swift */,
+				84798AFA22BE8FAB0001C241 /* AddNewViewController.swift */,
+				84798AFC22BE8FD70001C241 /* MessageViewController.swift */,
+				84798AFE22BE90670001C241 /* NotificationViewController.swift */,
+				84798B0022BE90740001C241 /* FeedDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -394,6 +406,7 @@
 				84437C7E22B532D10048FC1F /* ViewController.swift in Sources */,
 				8436817B22BCB56300E202E1 /* ContainerViewController.swift in Sources */,
 				8454B02322BD2282008923B3 /* Group.swift in Sources */,
+				84798AFD22BE8FD70001C241 /* MessageViewController.swift in Sources */,
 				84E6633C22B6AA3A00F2EDE3 /* RoundedBackgroundLabel.swift in Sources */,
 				8454B03322BD4ECD008923B3 /* FeedCell.swift in Sources */,
 				84798AF922BE71BD0001C241 /* ProfileViewModel.swift in Sources */,
@@ -405,9 +418,11 @@
 				8454B01D22BD2256008923B3 /* TimeDate.swift in Sources */,
 				8454B02522BD228B008923B3 /* Feed.swift in Sources */,
 				8454B01B22BD17E4008923B3 /* FeedData.swift in Sources */,
+				84798AFF22BE90670001C241 /* NotificationViewController.swift in Sources */,
 				840864B822BCC50500D96406 /* FeedViewController.swift in Sources */,
 				84437C7C22B532D10048FC1F /* AppDelegate.swift in Sources */,
 				84E6633522B69B8200F2EDE3 /* MenuViewController.swift in Sources */,
+				84798AFB22BE8FAB0001C241 /* AddNewViewController.swift in Sources */,
 				8433428422B68F0700B80F9D /* MenuData.swift in Sources */,
 				8454B02122BD226B008923B3 /* Location.swift in Sources */,
 				84E6633E22B6AC1400F2EDE3 /* MenuProfileCell.swift in Sources */,
@@ -418,6 +433,7 @@
 				8454B02A22BD4985008923B3 /* FeedViewModel.swift in Sources */,
 				84798AF722BE6F850001C241 /* Profile.swift in Sources */,
 				842DDA7522B55EBE00CCBC76 /* RoundedCornerView.swift in Sources */,
+				84798B0122BE90740001C241 /* FeedDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

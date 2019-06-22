@@ -230,6 +230,9 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addNewButtonClicked:" destination="qWy-fq-R2f" eventType="touchUpInside" id="Nwa-6J-Tqe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.58431372549019611" green="0.59999999999999998" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -465,7 +468,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xWG-Nb-dUZ">
-                                <rect key="frame" x="0.0" y="128" width="414" height="768"/>
+                                <rect key="frame" x="0.0" y="124" width="414" height="772"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -474,7 +477,7 @@
                             <constraint firstItem="xWG-Nb-dUZ" firstAttribute="bottom" secondItem="MWl-1e-2ga" secondAttribute="bottom" constant="34" id="Bfn-th-Ohw"/>
                             <constraint firstItem="xWG-Nb-dUZ" firstAttribute="leading" secondItem="MWl-1e-2ga" secondAttribute="leading" id="Ptm-Uo-qF6"/>
                             <constraint firstItem="MWl-1e-2ga" firstAttribute="trailing" secondItem="xWG-Nb-dUZ" secondAttribute="trailing" id="cPL-Na-xM5"/>
-                            <constraint firstItem="xWG-Nb-dUZ" firstAttribute="top" secondItem="MWl-1e-2ga" secondAttribute="top" constant="84" id="qx3-1a-lPM"/>
+                            <constraint firstItem="xWG-Nb-dUZ" firstAttribute="top" secondItem="MWl-1e-2ga" secondAttribute="top" constant="80" id="qx3-1a-lPM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MWl-1e-2ga"/>
                     </view>
@@ -493,6 +496,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wlM-Nw-lB0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="677" y="-559"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="GDL-m8-lBQ">
+            <objects>
+                <viewController storyboardIdentifier="notificationView" id="LU3-bE-u7Q" customClass="NotificationViewController" customModule="SocialMeetUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9vb-W9-55U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dck-wT-BoA">
+                                <rect key="frame" x="163" y="442.5" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dck-wT-BoA" firstAttribute="centerX" secondItem="LQa-oo-lxU" secondAttribute="centerX" id="ZtJ-5y-8U8"/>
+                            <constraint firstItem="Dck-wT-BoA" firstAttribute="centerY" secondItem="LQa-oo-lxU" secondAttribute="centerY" id="slK-DS-gYW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LQa-oo-lxU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfU-xI-HHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1511.5942028985507" y="-535.04464285714278"/>
+        </scene>
+        <!--Feed Detail View Controller-->
+        <scene sceneID="wB3-gc-keq">
+            <objects>
+                <viewController storyboardIdentifier="feedDetailView" id="vyC-qN-m0K" customClass="FeedDetailViewController" customModule="SocialMeetUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sBV-pD-HFH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDi-el-tMS">
+                                <rect key="frame" x="163.5" y="442.5" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TDi-el-tMS" firstAttribute="centerY" secondItem="4gn-Mf-vhe" secondAttribute="centerY" id="Pws-yf-w2j"/>
+                            <constraint firstItem="TDi-el-tMS" firstAttribute="centerX" secondItem="4gn-Mf-vhe" secondAttribute="centerX" id="mdF-FJ-WLQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4gn-Mf-vhe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dCb-OX-9Y9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2442" y="-535"/>
         </scene>
     </scenes>
     <resources>

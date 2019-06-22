@@ -69,6 +69,14 @@ class FeedWithTableViewController: UIViewController, UITableViewDelegate, UITabl
         cell.roundedBackgroundView.backgroundColor = feed.feedColor
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("feed detail request view clicked")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let feedDetailViewController = storyBoard.instantiateViewController(withIdentifier: "feedDetailView") as! FeedDetailViewController
+        show(feedDetailViewController, sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
     /*
     // Override to support conditional editing of the table view.
