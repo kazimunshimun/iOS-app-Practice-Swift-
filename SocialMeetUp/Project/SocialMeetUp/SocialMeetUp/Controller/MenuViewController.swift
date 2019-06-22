@@ -16,6 +16,8 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var createNewButton: RoundedCornerButton!
     
+    @IBOutlet weak var topConstraintForChildren: NSLayoutConstraint!
+    
     var previosSelectedIndex: Int = -1
     
     var menuList: [Menu] = []
@@ -45,6 +47,7 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 DispatchQueue.main.async {
                     self.menuList = menus
                     self.menuCollectionView.reloadData()
+                    self.collectionView(self.menuCollectionView, didSelectItemAt: IndexPath(row: 0, section: 0))
                 }
             }
         }
@@ -57,7 +60,7 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuProfileCell", for: indexPath) as! MenuProfileCell
             cell.menuNameLabel.text = menu.name
             cell.menuImageView.image = UIImage(named: menu.image)
-            cell.menuBackgroundView.borderColor = menu.isSelected ? menu.menuSelectedColor : ColorUtils.hexStringToUIColor(hex: "#979797")
+            //cell.menuBackgroundView.borderColor = menu.isSelected ? menu.menuSelectedColor : ColorUtils.hexStringToUIColor(hex: "#979797")
             //cell.menuBackgroundView.alpha = menu.isSelected ? 1.0 : 0.30
             cell.menuNameLabel.textColor = menu.isSelected ? .black : ColorUtils.hexStringToUIColor(hex: "#374750")
             cell.menuNameLabel.alpha = menu.isSelected ? 1.0 : 0.56
@@ -112,8 +115,17 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         //pageControl.currentPage = index
         print("selected menu index: \(index) previous selected index \(previosSelectedIndex)")
         if menuList.count > 0 {
+            /*
             let selectedMenu = menuList[index]
-            topView.backgroundColor = selectedMenu.menuSelectedColor
+            
+            if index == 0 {
+                topView.backgroundColor = .clear
+                //topConstraintForChildren.constant = -84
+            } else {
+                topView.backgroundColor = selectedMenu.menuSelectedColor
+                //topConstraintForChildren.constant = 0
+            }
+            */
             menuList[index].isSelected = true
             if previosSelectedIndex == -1 {
                 previosSelectedIndex = index
@@ -130,6 +142,6 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func selectedMenuIndex(index: IndexPath) {
        // self.menuCollectionView.selectItem(at: index, animated: true, scrollPosition: .centeredHorizontally)
-       // self.collectionView(self.menuCollectionView, didSelectItemAt: index)
+        self.collectionView(self.menuCollectionView, didSelectItemAt: index)
     }
 }

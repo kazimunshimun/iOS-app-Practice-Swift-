@@ -25,16 +25,15 @@ class ContainerViewController: UIPageViewController, UIPageViewControllerDataSou
         
         var viewControllers: [UIViewController] = []
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        
-        
         for n in 0..<self.menuList.count {
             if n == 0 {
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
                 let profileViewController = storyBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileViewController
                 profileViewController.view.tag = n
                 viewControllers.append(profileViewController)
             } else {
-                let feedViewController = storyBoard.instantiateViewController(withIdentifier: "feedTableView") as! FeedViewController
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+                let feedViewController = storyBoard.instantiateViewController(withIdentifier: "feedView") as! FeedWithTableViewController
                 feedViewController.menuItem = self.menuList[n]
                 feedViewController.view.tag = n
                 viewControllers.append(feedViewController)
