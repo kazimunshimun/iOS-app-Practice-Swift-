@@ -16,7 +16,10 @@ class NotificationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func backButtonClicked(_ sender: Any) {
+        navigationController!.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
