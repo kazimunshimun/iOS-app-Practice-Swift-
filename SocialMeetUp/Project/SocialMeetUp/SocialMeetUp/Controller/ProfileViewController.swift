@@ -68,7 +68,7 @@ class ProfileViewController: UIViewController {
     
     @IBAction func notificationButtonClicked(_ sender: Any) {
         print("notification button clicked")
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Messaging", bundle: nil)
         let notificationViewController = storyBoard.instantiateViewController(withIdentifier: "notificationView") as! NotificationViewController
         show(notificationViewController, sender: nil)
     }

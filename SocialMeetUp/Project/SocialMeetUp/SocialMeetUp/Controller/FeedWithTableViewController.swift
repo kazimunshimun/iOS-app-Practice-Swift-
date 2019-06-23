@@ -74,6 +74,7 @@ class FeedWithTableViewController: UIViewController, UITableViewDelegate, UITabl
         print("feed detail request view clicked")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
         let feedDetailViewController = storyBoard.instantiateViewController(withIdentifier: "feedDetailView") as! FeedDetailViewController
+        feedDetailViewController.feed = feedList[indexPath.row]
         show(feedDetailViewController, sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }

@@ -10,10 +10,20 @@ import UIKit
 
 class FeedDetailViewController: UIViewController {
 
+    var feed: Feed?
+    
+    @IBOutlet weak var topView: RoundedCornerView!
+    @IBOutlet weak var titleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        updateUI()
+    }
+    
+    func updateUI() {
+        topView.backgroundColor = feed?.feedColor
+        titleLabel.text = feed?.title
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
