@@ -63,17 +63,17 @@ final internal class FeedData {
                                  Location(name: "The Bay Department Store  (7 th Floor restaurant/cafeteria dining hall)", address: "585 Saint Catherine Street West, Montreal, QC", latitudeLogitude: CLLocation(latitude: 37.3, longitude: 22.9))]
     let hostedBy: [People] = [People(id: "001", name: "Joe", imageName: "joe"),
                               People(id: "002", name: "Paul", imageName: "paul"),
-                              People(id: "003", name: "Carl", imageName: "curl"),
-                              People(id: "004", name: "Jhon", imageName: "jhon"),
+                              People(id: "003", name: "Carl", imageName: "carl"),
+                              People(id: "004", name: "Jhon", imageName: "john"),
                               People(id: "005", name: "Marie", imageName: "marie"),
                               People(id: "006", name: "Elon", imageName: "elon"),
                               People(id: "007", name: "Blake", imageName: "blake"),
-                              People(id: "008", name: "Marie", imageName: "marie"),
-                              People(id: "009", name: "Elon", imageName: "elon"),
-                              People(id: "010", name: "Blake", imageName: "blake"),
+                              People(id: "008", name: "Dale", imageName: "dale"),
+                              People(id: "009", name: "Kat", imageName: "kat"),
+                              People(id: "010", name: "Mark", imageName: "mark"),
                               People(id: "011", name: "Mila", imageName: "mila"),
                               People(id: "012", name: "Adam", imageName: "adam"),
-                              People(id: "013", name: "Ema", imageName: "ema"),
+                              People(id: "013", name: "Ema", imageName: "profile_ava"),
                               People(id: "014", name: "Oliva", imageName: "oliva")]
     
     let costs: [String] = ["$ 21.00", "$ 12.00", "$ 19.00", "$ 25.00", "$ 14.00", "$ 19.99", "$ 49.99", "$ 9.99", "$ 19.99", "$ 30.00", "$ 9.99", "$ 3.00", "$ 19.00", "$ 25.00"]
@@ -131,11 +131,25 @@ final internal class FeedData {
                 
                 let color = feedColors[i]
                 
-                let feed = Feed(id: "\(i)", title: title, desccription: description, timeDate: timeDate, location: location, hostedBy: hostedBy[i], cost: cost, totalSpot: totalSpot, group: groups[i], joinedPeople: [], isGoing: false, feedType: feedType, feedColor: color)
+                let randomJoinedPeople = Int(Int(arc4random()) % Int(totalSpot) % hostedBy.count)
+                let joinedPeople = hostedBy[randomPick: randomJoinedPeople]
+                
+                let feed = Feed(id: "\(i)", title: title, desccription: description, timeDate: timeDate, location: location, hostedBy: hostedBy[i], cost: cost, totalSpot: totalSpot, group: groups[i], joinedPeople: joinedPeople, isGoing: false, feedType: feedType, feedColor: color)
                 feeds.append(feed)
             }
             
         }
         completion(feeds)
+    }
+}
+
+extension Array {
+    /// Picks `n` random elements (partial Fisher-Yates shuffle approach)
+    subscript (randomPick n: Int) -> [Element] {
+        var copy = self
+        for i in stride(from: count - 1, to: count - n - 1, by: -1) {
+            copy.swapAt(i, Int(arc4random_uniform(UInt32(i + 1))))
+        }
+        return Array(copy.suffix(n))
     }
 }

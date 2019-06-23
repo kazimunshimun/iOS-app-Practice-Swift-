@@ -468,13 +468,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xWG-Nb-dUZ">
-                                <rect key="frame" x="0.0" y="124" width="414" height="772"/>
+                                <rect key="frame" x="0.0" y="124" width="414" height="738"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xWG-Nb-dUZ" firstAttribute="bottom" secondItem="MWl-1e-2ga" secondAttribute="bottom" constant="34" id="Bfn-th-Ohw"/>
+                            <constraint firstItem="xWG-Nb-dUZ" firstAttribute="bottom" secondItem="MWl-1e-2ga" secondAttribute="bottom" id="Bfn-th-Ohw"/>
                             <constraint firstItem="xWG-Nb-dUZ" firstAttribute="leading" secondItem="MWl-1e-2ga" secondAttribute="leading" id="Ptm-Uo-qF6"/>
                             <constraint firstItem="MWl-1e-2ga" firstAttribute="trailing" secondItem="xWG-Nb-dUZ" secondAttribute="trailing" id="cPL-Na-xM5"/>
                             <constraint firstItem="xWG-Nb-dUZ" firstAttribute="top" secondItem="MWl-1e-2ga" secondAttribute="top" constant="80" id="qx3-1a-lPM"/>

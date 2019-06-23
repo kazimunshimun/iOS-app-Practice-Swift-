@@ -36,9 +36,85 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkB-7I-l6v">
                                 <rect key="frame" x="32" y="126.5" width="341" height="24"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFC-fB-gAm" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="0.0" width="24" height="24"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1zv-Mm-2ak" customClass="RoundedCornerImageView" customModule="SocialMeetUp" customModuleProvider="target">
+                                                <rect key="frame" x="2" y="2" width="20" height="20"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="1zv-Mm-2ak" secondAttribute="bottom" constant="2" id="RTQ-L8-NS4"/>
+                                            <constraint firstItem="1zv-Mm-2ak" firstAttribute="leading" secondItem="tFC-fB-gAm" secondAttribute="leading" constant="2" id="gdT-Ka-TnU"/>
+                                            <constraint firstAttribute="width" constant="24" id="h9i-tn-qkq"/>
+                                            <constraint firstItem="1zv-Mm-2ak" firstAttribute="top" secondItem="tFC-fB-gAm" secondAttribute="top" constant="2" id="job-wa-vbk"/>
+                                            <constraint firstAttribute="height" constant="24" id="qe1-TU-aoK"/>
+                                            <constraint firstAttribute="trailing" secondItem="1zv-Mm-2ak" secondAttribute="trailing" constant="2" id="yms-zQ-Pbp"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qW9-YJ-EDe" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="24" height="24"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3rF-Gb-TQE" customClass="RoundedCornerImageView" customModule="SocialMeetUp" customModuleProvider="target">
+                                                <rect key="frame" x="2" y="2" width="20" height="20"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="3rF-Gb-TQE" firstAttribute="top" secondItem="qW9-YJ-EDe" secondAttribute="top" constant="2" id="0wH-eM-tbf"/>
+                                            <constraint firstItem="3rF-Gb-TQE" firstAttribute="leading" secondItem="qW9-YJ-EDe" secondAttribute="leading" constant="2" id="1C9-Hq-pHU"/>
+                                            <constraint firstAttribute="height" constant="24" id="9T7-lv-R0I"/>
+                                            <constraint firstAttribute="bottom" secondItem="3rF-Gb-TQE" secondAttribute="bottom" constant="2" id="UpO-dl-yue"/>
+                                            <constraint firstAttribute="trailing" secondItem="3rF-Gb-TQE" secondAttribute="trailing" constant="2" id="aCB-Hv-YLk"/>
+                                            <constraint firstAttribute="width" constant="24" id="kVP-rJ-I8u"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paul, Carl &amp; 10 others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvC-dT-l7D">
+                                        <rect key="frame" x="58" y="4.5" width="121" height="15"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="UvC-dT-l7D" firstAttribute="leading" secondItem="1zv-Mm-2ak" secondAttribute="trailing" constant="9" id="7Yh-cB-VDw"/>
                                     <constraint firstAttribute="height" constant="24" id="BIQ-PE-h7U"/>
+                                    <constraint firstItem="qW9-YJ-EDe" firstAttribute="top" secondItem="DkB-7I-l6v" secondAttribute="top" id="V0d-1c-a3x"/>
+                                    <constraint firstItem="tFC-fB-gAm" firstAttribute="top" secondItem="DkB-7I-l6v" secondAttribute="top" id="ZIy-T1-vp5"/>
+                                    <constraint firstItem="qW9-YJ-EDe" firstAttribute="leading" secondItem="DkB-7I-l6v" secondAttribute="leading" constant="8" id="fa0-nG-y8w"/>
+                                    <constraint firstItem="UvC-dT-l7D" firstAttribute="centerY" secondItem="DkB-7I-l6v" secondAttribute="centerY" id="qi7-B5-Avd"/>
+                                    <constraint firstItem="tFC-fB-gAm" firstAttribute="leading" secondItem="qW9-YJ-EDe" secondAttribute="trailing" constant="-5" id="rPb-l3-Yuj"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -72,7 +148,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="ANu-u6-K47"/>
             <connections>
+                <outlet property="firstJoinedImageView" destination="3rF-Gb-TQE" id="DWt-D5-Hpr"/>
+                <outlet property="firstRoundedView" destination="qW9-YJ-EDe" id="Y78-Dz-xnp"/>
+                <outlet property="joinedCountLabel" destination="UvC-dT-l7D" id="pOK-H0-ZUL"/>
                 <outlet property="roundedBackgroundView" destination="L7V-7w-Sj2" id="Xh2-WG-qXE"/>
+                <outlet property="secondJoinedImageView" destination="1zv-Mm-2ak" id="fbq-Uo-91T"/>
+                <outlet property="secondRoundedView" destination="tFC-fB-gAm" id="A1j-PR-9TM"/>
                 <outlet property="timeDateLabel" destination="4MZ-Rc-J5L" id="1ks-5J-mma"/>
                 <outlet property="titleLabel" destination="Gyf-zx-VXr" id="wvW-14-GWd"/>
             </connections>

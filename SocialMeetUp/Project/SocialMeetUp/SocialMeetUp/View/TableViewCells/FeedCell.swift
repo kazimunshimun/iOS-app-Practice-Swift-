@@ -14,7 +14,13 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var timeDateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var firstJoinedImageView: RoundedCornerImageView!
+    @IBOutlet weak var secondJoinedImageView: RoundedCornerImageView!
     
+    @IBOutlet weak var firstRoundedView: RoundedCornerView!
+    @IBOutlet weak var secondRoundedView: RoundedCornerView!
+    
+    @IBOutlet weak var joinedCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

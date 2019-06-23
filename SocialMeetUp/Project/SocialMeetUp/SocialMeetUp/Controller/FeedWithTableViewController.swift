@@ -67,6 +67,30 @@ class FeedWithTableViewController: UIViewController, UITableViewDelegate, UITabl
         cell.timeDateLabel.text = "\(feed.timeDate.dayOfWeek) \(feed.timeDate.fromTime)"
         cell.titleLabel.text = feed.title
         cell.roundedBackgroundView.backgroundColor = feed.feedColor
+        
+        switch feed.joinedPeople.count {
+        case 0:
+            cell.joinedCountLabel.text = "Be the first to join"
+            cell.firstRoundedView.isHidden = true
+            cell.secondRoundedView.isHidden = true
+        case 1:
+            cell.joinedCountLabel.text = "\(feed.joinedPeople[0].name) joined"
+            cell.firstRoundedView.isHidden = false
+            cell.secondRoundedView.isHidden = true
+            cell.firstJoinedImageView.image = UIImage(named: feed.joinedPeople[0].imageName)
+        case 2:
+            cell.joinedCountLabel.text = "\(feed.joinedPeople[0].name) and \(feed.joinedPeople[1].name) joined"
+            cell.firstRoundedView.isHidden = false
+            cell.secondRoundedView.isHidden = false
+            cell.firstJoinedImageView.image = UIImage(named: feed.joinedPeople[0].imageName)
+            cell.secondJoinedImageView.image = UIImage(named: feed.joinedPeople[1].imageName)
+        default:
+            cell.joinedCountLabel.text = "\(feed.joinedPeople[0].name), \(feed.joinedPeople[1].name) and \(feed.joinedPeople.count - 2) others"
+            cell.firstRoundedView.isHidden = false
+            cell.secondRoundedView.isHidden = false
+            cell.firstJoinedImageView.image = UIImage(named: feed.joinedPeople[0].imageName)
+            cell.secondJoinedImageView.image = UIImage(named: feed.joinedPeople[1].imageName)
+        }
         return cell
     }
     
