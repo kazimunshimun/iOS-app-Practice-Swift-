@@ -115,6 +115,12 @@ final internal class FeedData {
                                  ColorUtils.hexStringToUIColor(hex: "#4666E5"),
                                  ColorUtils.hexStringToUIColor(hex: "#6CA0DC")]
     
+    let feedIcons: [String] = ["world_icon", "xd_icon", "beat_icon",
+                            "health_icon", "thermometer", "beat_icon", "beat_icon",
+                            "music_icon", "book_icon", "music_icon",
+                            "setup_icon", "world_icon",
+                            "book_iocn", "beat_icon"]
+    
     func getFeeds(type: FeedType,completion: ([Feed]) -> Void) {
         var feeds: [Feed] = []
         
@@ -134,7 +140,7 @@ final internal class FeedData {
                 let randomJoinedPeople = Int(Int(arc4random()) % Int(totalSpot) % hostedBy.count)
                 let joinedPeople = hostedBy[randomPick: randomJoinedPeople]
                 
-                let feed = Feed(id: "\(i)", title: title, desccription: description, timeDate: timeDate, location: location, hostedBy: hostedBy[i], cost: cost, totalSpot: totalSpot, group: groups[i], joinedPeople: joinedPeople, isGoing: false, feedType: feedType, feedColor: color)
+                let feed = Feed(id: "\(i)", title: title, desccription: description, timeDate: timeDate, location: location, hostedBy: hostedBy[i], cost: cost, totalSpot: totalSpot, group: groups[i], joinedPeople: joinedPeople, isGoing: false, feedType: feedType, feedColor: color, feedIcon: feedIcons[i])
                 feeds.append(feed)
             }
             

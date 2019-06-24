@@ -68,6 +68,8 @@ class FeedWithTableViewController: UIViewController, UITableViewDelegate, UITabl
         cell.titleLabel.text = feed.title
         cell.roundedBackgroundView.backgroundColor = feed.feedColor
         
+        cell.feedIconImageView.image = UIImage(named: feed.feedIcon)
+        
         switch feed.joinedPeople.count {
         case 0:
             cell.joinedCountLabel.text = "Be the first to join"

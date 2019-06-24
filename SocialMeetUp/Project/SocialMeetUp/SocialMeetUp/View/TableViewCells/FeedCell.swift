@@ -21,6 +21,8 @@ class FeedCell: UITableViewCell {
     @IBOutlet weak var secondRoundedView: RoundedCornerView!
     
     @IBOutlet weak var joinedCountLabel: UILabel!
+    @IBOutlet weak var feedIconImageView: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

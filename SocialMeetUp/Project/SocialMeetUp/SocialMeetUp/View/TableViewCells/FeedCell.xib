@@ -117,14 +117,19 @@
                                     <constraint firstItem="tFC-fB-gAm" firstAttribute="leading" secondItem="qW9-YJ-EDe" secondAttribute="trailing" constant="-5" id="rPb-l3-Yuj"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Xcw-1y-lqG">
+                                <rect key="frame" x="290.5" y="84.5" width="58.5" height="53.500000000000014"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.58431372550000005" green="0.59999999999999998" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Gyf-zx-VXr" firstAttribute="top" secondItem="4MZ-Rc-J5L" secondAttribute="bottom" constant="8" id="2YB-cv-Zqt"/>
                             <constraint firstItem="4MZ-Rc-J5L" firstAttribute="top" secondItem="L7V-7w-Sj2" secondAttribute="top" constant="32" id="3CO-pw-eua"/>
+                            <constraint firstAttribute="trailing" secondItem="Xcw-1y-lqG" secondAttribute="trailing" constant="32" id="78H-Kx-GoC"/>
                             <constraint firstAttribute="trailing" secondItem="DkB-7I-l6v" secondAttribute="trailing" constant="8" id="9rC-RW-Whf"/>
                             <constraint firstItem="Gyf-zx-VXr" firstAttribute="leading" secondItem="L7V-7w-Sj2" secondAttribute="leading" constant="32" id="kAu-8z-bPB"/>
                             <constraint firstItem="4MZ-Rc-J5L" firstAttribute="leading" secondItem="L7V-7w-Sj2" secondAttribute="leading" constant="32" id="nq1-J1-d36"/>
+                            <constraint firstItem="Xcw-1y-lqG" firstAttribute="centerY" secondItem="L7V-7w-Sj2" secondAttribute="centerY" constant="16" id="o2W-ca-Jq2"/>
                             <constraint firstAttribute="trailing" secondItem="Gyf-zx-VXr" secondAttribute="trailing" constant="8" id="qe5-U3-wcd"/>
                             <constraint firstItem="DkB-7I-l6v" firstAttribute="leading" secondItem="L7V-7w-Sj2" secondAttribute="leading" constant="32" id="rd0-BY-iig"/>
                             <constraint firstAttribute="bottom" secondItem="DkB-7I-l6v" secondAttribute="bottom" constant="40" id="tIO-TZ-dXB"/>
@@ -148,6 +153,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="ANu-u6-K47"/>
             <connections>
+                <outlet property="feedIconImageView" destination="Xcw-1y-lqG" id="0uN-xO-qHT"/>
                 <outlet property="firstJoinedImageView" destination="3rF-Gb-TQE" id="DWt-D5-Hpr"/>
                 <outlet property="firstRoundedView" destination="qW9-YJ-EDe" id="Y78-Dz-xnp"/>
                 <outlet property="joinedCountLabel" destination="UvC-dT-l7D" id="pOK-H0-ZUL"/>
@@ -160,4 +166,7 @@
             <point key="canvasLocation" x="176.08695652173915" y="97.767857142857139"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="book_icon" width="58.5" height="53.5"/>
+    </resources>
 </document>

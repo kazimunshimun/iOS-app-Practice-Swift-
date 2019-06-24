@@ -24,4 +24,6 @@ struct Feed {
     
     let feedType: FeedType
     let feedColor: UIColor
+    
+    let feedIcon: String
 }
