@@ -64,27 +64,30 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messaging" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivE-CM-APy">
-                                <rect key="frame" x="165.5" y="442.5" width="83" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tOH-zN-cHl">
+                                <rect key="frame" x="0.0" y="156" width="414" height="740"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.54117647058823526" green="0.33725490196078434" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="tOH-zN-cHl" firstAttribute="leading" secondItem="TDV-Xk-mT0" secondAttribute="leading" id="N9h-MH-nay"/>
                             <constraint firstItem="TDV-Xk-mT0" firstAttribute="trailing" secondItem="xsR-oQ-bWj" secondAttribute="trailing" id="Srs-yL-eBs"/>
-                            <constraint firstItem="ivE-CM-APy" firstAttribute="centerX" secondItem="TDV-Xk-mT0" secondAttribute="centerX" id="Viq-1o-1vK"/>
+                            <constraint firstItem="tOH-zN-cHl" firstAttribute="bottom" secondItem="TDV-Xk-mT0" secondAttribute="bottom" constant="34" id="UuY-U8-ZMg"/>
                             <constraint firstItem="TDV-Xk-mT0" firstAttribute="top" secondItem="xsR-oQ-bWj" secondAttribute="top" constant="44" id="Xjm-1f-geK"/>
+                            <constraint firstItem="TDV-Xk-mT0" firstAttribute="trailing" secondItem="tOH-zN-cHl" secondAttribute="trailing" id="gRb-nP-Ohd"/>
                             <constraint firstItem="xsR-oQ-bWj" firstAttribute="leading" secondItem="TDV-Xk-mT0" secondAttribute="leading" id="k2i-VT-g40"/>
-                            <constraint firstItem="ivE-CM-APy" firstAttribute="centerY" secondItem="TDV-Xk-mT0" secondAttribute="centerY" id="vjP-Sg-9i4"/>
+                            <constraint firstItem="tOH-zN-cHl" firstAttribute="top" secondItem="xsR-oQ-bWj" secondAttribute="bottom" id="w79-Pi-rvB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TDV-Xk-mT0"/>
                     </view>
+                    <connections>
+                        <outlet property="messageTableView" destination="tOH-zN-cHl" id="2qR-3l-Ggw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eD1-i4-EFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-517" y="86"/>
+            <point key="canvasLocation" x="-517.39130434782612" y="85.714285714285708"/>
         </scene>
         <!--Notification View Controller-->
         <scene sceneID="hoK-Yo-5gZ">
@@ -130,27 +133,30 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tb3-jv-AKE">
-                                <rect key="frame" x="163" y="442.5" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gXO-bx-p80">
+                                <rect key="frame" x="0.0" y="154" width="414" height="742"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.83137254900000002" green="0.49803921569999998" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="heW-Mi-yuc" firstAttribute="trailing" secondItem="FQt-tj-f2H" secondAttribute="trailing" id="2l6-z4-JHk"/>
-                            <constraint firstItem="Tb3-jv-AKE" firstAttribute="centerX" secondItem="heW-Mi-yuc" secondAttribute="centerX" id="Exb-4f-azl"/>
-                            <constraint firstItem="Tb3-jv-AKE" firstAttribute="centerY" secondItem="heW-Mi-yuc" secondAttribute="centerY" id="xWP-cQ-XKf"/>
+                            <constraint firstItem="gXO-bx-p80" firstAttribute="top" secondItem="FQt-tj-f2H" secondAttribute="bottom" constant="-2" id="EQk-qv-Qza"/>
+                            <constraint firstItem="heW-Mi-yuc" firstAttribute="trailing" secondItem="gXO-bx-p80" secondAttribute="trailing" id="NPf-Sa-tC4"/>
+                            <constraint firstItem="gXO-bx-p80" firstAttribute="bottom" secondItem="heW-Mi-yuc" secondAttribute="bottom" constant="34" id="OrW-IL-Ruz"/>
+                            <constraint firstItem="gXO-bx-p80" firstAttribute="leading" secondItem="heW-Mi-yuc" secondAttribute="leading" id="hbW-4S-GDZ"/>
                             <constraint firstItem="heW-Mi-yuc" firstAttribute="top" secondItem="FQt-tj-f2H" secondAttribute="top" constant="44" id="xcL-N2-cR5"/>
                             <constraint firstItem="FQt-tj-f2H" firstAttribute="leading" secondItem="heW-Mi-yuc" secondAttribute="leading" id="xzC-M3-ZLI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="heW-Mi-yuc"/>
                     </view>
+                    <connections>
+                        <outlet property="notificationTableView" destination="gXO-bx-p80" id="qYq-Pj-t5F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVu-m6-Tia" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="86"/>
+            <point key="canvasLocation" x="531.8840579710145" y="85.714285714285708"/>
         </scene>
     </scenes>
     <resources>
