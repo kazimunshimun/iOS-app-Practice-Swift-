@@ -119,7 +119,7 @@ final internal class FeedData {
                             "health_icon", "thermometer", "beat_icon", "beat_icon",
                             "music_icon", "book_icon", "music_icon",
                             "setup_icon", "world_icon",
-                            "book_iocn", "beat_icon"]
+                            "book_icon", "beat_icon"]
     
     func getFeeds(type: FeedType,completion: ([Feed]) -> Void) {
         var feeds: [Feed] = []

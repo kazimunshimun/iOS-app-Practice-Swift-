@@ -13,15 +13,34 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="notificationCell" rowHeight="100" id="shD-gY-Uf9" customClass="NotificationCell" customModule="SocialMeetUp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="368" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="shD-gY-Uf9" id="3cT-nT-QBG">
-                <rect key="frame" x="0.0" y="0.0" width="368" height="99.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="393" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSJ-wh-VsE" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="368" height="99.5"/>
+                        <rect key="frame" x="-1" y="0.0" width="394" height="99.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ze9-kd-jmV" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
+                                <rect key="frame" x="1" y="0.0" width="393" height="98.5"/>
+                                <color key="backgroundColor" red="0.83137254900000002" green="0.49803921569999998" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="80"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.58431372550000005" green="0.59999999999999998" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ze9-kd-jmV" firstAttribute="top" secondItem="wSJ-wh-VsE" secondAttribute="top" id="CCy-zb-C8b"/>
+                            <constraint firstAttribute="bottom" secondItem="Ze9-kd-jmV" secondAttribute="bottom" constant="1" id="CqW-Gi-ieg"/>
+                            <constraint firstAttribute="trailing" secondItem="Ze9-kd-jmV" secondAttribute="trailing" id="Uww-4L-6rN"/>
+                            <constraint firstItem="Ze9-kd-jmV" firstAttribute="leading" secondItem="wSJ-wh-VsE" secondAttribute="leading" constant="1" id="l7e-sR-HdL"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="80"/>
@@ -31,7 +50,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQo-tQ-6IX" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
-                        <rect key="frame" x="16" y="30" width="40" height="40"/>
+                        <rect key="frame" x="32" y="30" width="40" height="40"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-se-hEv" customClass="RoundedCornerImageView" customModule="SocialMeetUp" customModuleProvider="target">
                                 <rect key="frame" x="2" y="2" width="36" height="36"/>
@@ -62,13 +81,13 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oZ-e3-aIS">
-                        <rect key="frame" x="64" y="22" width="288" height="17"/>
+                        <rect key="frame" x="80" y="22" width="297" height="17"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGE-iq-hzd">
-                        <rect key="frame" x="64" y="45" width="31" height="15"/>
+                        <rect key="frame" x="80" y="45" width="31" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -79,12 +98,12 @@
                     <constraint firstItem="HGE-iq-hzd" firstAttribute="top" secondItem="1oZ-e3-aIS" secondAttribute="bottom" constant="6" id="4pL-bi-nLU"/>
                     <constraint firstAttribute="trailing" secondItem="wSJ-wh-VsE" secondAttribute="trailing" id="7gZ-pK-tOO"/>
                     <constraint firstItem="HGE-iq-hzd" firstAttribute="leading" secondItem="1oZ-e3-aIS" secondAttribute="leading" id="URZ-CJ-nZC"/>
-                    <constraint firstItem="pQo-tQ-6IX" firstAttribute="leading" secondItem="3cT-nT-QBG" secondAttribute="leading" constant="16" id="awY-g0-nxe"/>
+                    <constraint firstItem="pQo-tQ-6IX" firstAttribute="leading" secondItem="3cT-nT-QBG" secondAttribute="leading" constant="32" id="awY-g0-nxe"/>
                     <constraint firstItem="1oZ-e3-aIS" firstAttribute="top" secondItem="pQo-tQ-6IX" secondAttribute="top" constant="-8" id="deC-df-maj"/>
                     <constraint firstItem="wSJ-wh-VsE" firstAttribute="top" secondItem="3cT-nT-QBG" secondAttribute="top" id="eew-oQ-dR2"/>
                     <constraint firstAttribute="bottom" secondItem="wSJ-wh-VsE" secondAttribute="bottom" id="hM4-k0-opc"/>
                     <constraint firstItem="1oZ-e3-aIS" firstAttribute="leading" secondItem="6Mb-se-hEv" secondAttribute="trailing" constant="10" id="kmE-4f-FJ7"/>
-                    <constraint firstItem="wSJ-wh-VsE" firstAttribute="leading" secondItem="3cT-nT-QBG" secondAttribute="leading" id="pO4-B1-UBo"/>
+                    <constraint firstItem="wSJ-wh-VsE" firstAttribute="leading" secondItem="3cT-nT-QBG" secondAttribute="leading" constant="-1" id="pO4-B1-UBo"/>
                     <constraint firstItem="pQo-tQ-6IX" firstAttribute="centerY" secondItem="3cT-nT-QBG" secondAttribute="centerY" id="rMq-GO-8zE"/>
                     <constraint firstAttribute="trailing" secondItem="1oZ-e3-aIS" secondAttribute="trailing" constant="16" id="sRm-gZ-Dp7"/>
                 </constraints>
@@ -92,11 +111,11 @@
             <viewLayoutGuide key="safeArea" id="O1H-Cf-4Vf"/>
             <connections>
                 <outlet property="profileImageView" destination="6Mb-se-hEv" id="te7-vr-ZLL"/>
-                <outlet property="roundedCornerView" destination="wSJ-wh-VsE" id="Y2H-ck-2AR"/>
+                <outlet property="roundedCornerView" destination="Ze9-kd-jmV" id="PRw-Qf-BQZ"/>
                 <outlet property="timeAgoLabel" destination="HGE-iq-hzd" id="Xf7-Am-Hhh"/>
                 <outlet property="titleLabel" destination="1oZ-e3-aIS" id="2Lc-tz-RPC"/>
             </connections>
-            <point key="canvasLocation" x="82.608695652173921" y="36.160714285714285"/>
+            <point key="canvasLocation" x="100.72463768115942" y="36.160714285714285"/>
         </tableViewCell>
     </objects>
 </document>

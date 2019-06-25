@@ -19,6 +19,10 @@
 		8433428422B68F0700B80F9D /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433428322B68F0700B80F9D /* MenuData.swift */; };
 		84334D4622BFCFDB007BB0B2 /* RoundedCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84334D4522BFCFDB007BB0B2 /* RoundedCornerImageView.swift */; };
 		8436817B22BCB56300E202E1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436817A22BCB56300E202E1 /* ContainerViewController.swift */; };
+		8436EF1D22C28933006EB24E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436EF1C22C28933006EB24E /* Message.swift */; };
+		8436EF1F22C2893E006EB24E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436EF1E22C2893E006EB24E /* Notification.swift */; };
+		8436EF2122C28CDD006EB24E /* NotificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436EF2022C28CDD006EB24E /* NotificationData.swift */; };
+		8436EF2322C28CEA006EB24E /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436EF2222C28CEA006EB24E /* MessageData.swift */; };
 		84377BE122C1204B0077990B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84377BDF22C1204B0077990B /* MessageCell.swift */; };
 		84377BE222C1204B0077990B /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84377BE022C1204B0077990B /* MessageCell.xib */; };
 		84377BE422C1205B0077990B /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84377BE322C1205B0077990B /* NotificationCell.swift */; };
@@ -68,6 +72,10 @@
 		8433428322B68F0700B80F9D /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuData.swift; path = ../MenuData.swift; sourceTree = "<group>"; };
 		84334D4522BFCFDB007BB0B2 /* RoundedCornerImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerImageView.swift; sourceTree = "<group>"; };
 		8436817A22BCB56300E202E1 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		8436EF1C22C28933006EB24E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8436EF1E22C2893E006EB24E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		8436EF2022C28CDD006EB24E /* NotificationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationData.swift; sourceTree = "<group>"; };
+		8436EF2222C28CEA006EB24E /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		84377BDF22C1204B0077990B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		84377BE022C1204B0077990B /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		84377BE322C1205B0077990B /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
@@ -143,6 +151,8 @@
 				8433428322B68F0700B80F9D /* MenuData.swift */,
 				8454B01A22BD17E4008923B3 /* FeedData.swift */,
 				84798AF422BE6E130001C241 /* ProfileData.swift */,
+				8436EF2022C28CDD006EB24E /* NotificationData.swift */,
+				8436EF2222C28CEA006EB24E /* MessageData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -275,6 +285,8 @@
 				8454B02222BD2282008923B3 /* Group.swift */,
 				8454B02422BD228B008923B3 /* Feed.swift */,
 				84798AF622BE6F850001C241 /* Profile.swift */,
+				8436EF1C22C28933006EB24E /* Message.swift */,
+				8436EF1E22C2893E006EB24E /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -427,6 +439,7 @@
 				84E6633C22B6AA3A00F2EDE3 /* RoundedBackgroundLabel.swift in Sources */,
 				8454B03322BD4ECD008923B3 /* FeedCell.swift in Sources */,
 				84798AF922BE71BD0001C241 /* ProfileViewModel.swift in Sources */,
+				8436EF2122C28CDD006EB24E /* NotificationData.swift in Sources */,
 				8454B01F22BD2260008923B3 /* People.swift in Sources */,
 				845B856B22BE2E0F00E1AF34 /* FeedWithTableViewController.swift in Sources */,
 				840864B622BCC4F200D96406 /* ProfileViewController.swift in Sources */,
@@ -436,11 +449,14 @@
 				84377BE122C1204B0077990B /* MessageCell.swift in Sources */,
 				84334D4622BFCFDB007BB0B2 /* RoundedCornerImageView.swift in Sources */,
 				8454B01D22BD2256008923B3 /* TimeDate.swift in Sources */,
+				8436EF1F22C2893E006EB24E /* Notification.swift in Sources */,
 				8454B02522BD228B008923B3 /* Feed.swift in Sources */,
 				8454B01B22BD17E4008923B3 /* FeedData.swift in Sources */,
 				84798AFF22BE90670001C241 /* NotificationViewController.swift in Sources */,
 				840864B822BCC50500D96406 /* FeedViewController.swift in Sources */,
+				8436EF1D22C28933006EB24E /* Message.swift in Sources */,
 				84437C7C22B532D10048FC1F /* AppDelegate.swift in Sources */,
+				8436EF2322C28CEA006EB24E /* MessageData.swift in Sources */,
 				84E6633522B69B8200F2EDE3 /* MenuViewController.swift in Sources */,
 				84798AFB22BE8FAB0001C241 /* AddNewViewController.swift in Sources */,
 				8433428422B68F0700B80F9D /* MenuData.swift in Sources */,
