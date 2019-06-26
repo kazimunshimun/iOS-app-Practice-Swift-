@@ -84,13 +84,13 @@
                         <rect key="frame" x="80" y="30" width="315" height="14"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="St9-qr-aml">
-                                <rect key="frame" x="0.0" y="-0.5" width="227" height="15"/>
+                                <rect key="frame" x="0.0" y="-0.5" width="219" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.5607843137254902" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKk-hb-exk">
-                                <rect key="frame" x="235" y="-0.5" width="80" height="15"/>
+                                <rect key="frame" x="227" y="-0.5" width="80" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="7h3-a7-fjK"/>
                                 </constraints>
@@ -103,7 +103,7 @@
                         <constraints>
                             <constraint firstItem="vKk-hb-exk" firstAttribute="leading" secondItem="St9-qr-aml" secondAttribute="trailing" constant="8" id="GbM-XD-MBU"/>
                             <constraint firstItem="St9-qr-aml" firstAttribute="leading" secondItem="dAM-5H-ufe" secondAttribute="leading" id="R1Q-dd-9jK"/>
-                            <constraint firstAttribute="trailing" secondItem="vKk-hb-exk" secondAttribute="trailing" id="R7R-mr-aPc"/>
+                            <constraint firstAttribute="trailing" secondItem="vKk-hb-exk" secondAttribute="trailing" constant="8" id="R7R-mr-aPc"/>
                             <constraint firstItem="St9-qr-aml" firstAttribute="centerY" secondItem="dAM-5H-ufe" secondAttribute="centerY" id="Xz9-rt-KwM"/>
                             <constraint firstAttribute="height" constant="14" id="hrg-HN-GYC"/>
                             <constraint firstItem="vKk-hb-exk" firstAttribute="centerY" secondItem="dAM-5H-ufe" secondAttribute="centerY" id="zZt-mt-Jny"/>
@@ -113,13 +113,13 @@
                         <rect key="frame" x="80" y="55" width="315" height="37"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3q-9T-3sf">
-                                <rect key="frame" x="0.0" y="0.0" width="277" height="17"/>
+                                <rect key="frame" x="0.0" y="0.0" width="269" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wW7-20-TQD" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
-                                <rect key="frame" x="285" y="0.0" width="22" height="22"/>
+                                <rect key="frame" x="277" y="0.0" width="22" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLe-9r-9oK">
                                         <rect key="frame" x="7" y="2.5" width="8" height="17"/>
@@ -153,7 +153,7 @@
                             <constraint firstItem="wW7-20-TQD" firstAttribute="top" secondItem="rUm-rA-Y5n" secondAttribute="top" id="H9r-HC-GJK"/>
                             <constraint firstItem="y3q-9T-3sf" firstAttribute="leading" secondItem="rUm-rA-Y5n" secondAttribute="leading" id="ISS-fi-IUU"/>
                             <constraint firstItem="y3q-9T-3sf" firstAttribute="top" secondItem="rUm-rA-Y5n" secondAttribute="top" id="dOc-Re-Kao"/>
-                            <constraint firstAttribute="trailing" secondItem="wW7-20-TQD" secondAttribute="trailing" constant="8" id="j3K-M1-LcG"/>
+                            <constraint firstAttribute="trailing" secondItem="wW7-20-TQD" secondAttribute="trailing" constant="16" id="j3K-M1-LcG"/>
                         </constraints>
                     </view>
                 </subviews>

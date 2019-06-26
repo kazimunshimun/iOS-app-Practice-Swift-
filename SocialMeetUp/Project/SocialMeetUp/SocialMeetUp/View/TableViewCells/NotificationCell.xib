@@ -81,7 +81,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oZ-e3-aIS">
-                        <rect key="frame" x="80" y="22" width="297" height="17"/>
+                        <rect key="frame" x="80" y="22" width="289" height="17"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -105,7 +105,7 @@
                     <constraint firstItem="1oZ-e3-aIS" firstAttribute="leading" secondItem="6Mb-se-hEv" secondAttribute="trailing" constant="10" id="kmE-4f-FJ7"/>
                     <constraint firstItem="wSJ-wh-VsE" firstAttribute="leading" secondItem="3cT-nT-QBG" secondAttribute="leading" constant="-1" id="pO4-B1-UBo"/>
                     <constraint firstItem="pQo-tQ-6IX" firstAttribute="centerY" secondItem="3cT-nT-QBG" secondAttribute="centerY" id="rMq-GO-8zE"/>
-                    <constraint firstAttribute="trailing" secondItem="1oZ-e3-aIS" secondAttribute="trailing" constant="16" id="sRm-gZ-Dp7"/>
+                    <constraint firstAttribute="trailing" secondItem="1oZ-e3-aIS" secondAttribute="trailing" constant="24" id="sRm-gZ-Dp7"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="O1H-Cf-4Vf"/>
