@@ -312,6 +312,7 @@
 				84437C7522B532D10048FC1F /* Frameworks */,
 				84437C7622B532D10048FC1F /* Resources */,
 				04A7BE6A5DDE33E952A05007 /* [CP] Embed Pods Frameworks */,
+				59B4DE378809983558032A92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -400,6 +401,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocialMeetUp/Pods-SocialMeetUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59B4DE378809983558032A92 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialMeetUp/Pods-SocialMeetUp-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocialMeetUp/Pods-SocialMeetUp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7A9B2E048D5FDCB85729F977 /* [CP] Check Pods Manifest.lock */ = {
