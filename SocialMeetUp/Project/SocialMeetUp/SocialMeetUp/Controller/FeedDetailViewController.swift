@@ -134,8 +134,16 @@ class FeedDetailViewController: UIViewController {
     }
     
     func updateLocationView() {
-        let camera = GMSCameraPosition.camera(withLatitude: feed.location.latitudeLogitude.coordinate.latitude, longitude: feed.location.latitudeLogitude.coordinate.longitude, zoom: 10.0)
+        let camera = GMSCameraPosition.camera(withLatitude: feed.location.latitudeLogitude.coordinate.latitude, longitude: feed.location.latitudeLogitude.coordinate.longitude, zoom: 14.0)
         mapView.camera = camera
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: feed.location.latitudeLogitude.coordinate.latitude, longitude: feed.location.latitudeLogitude.coordinate.longitude)
+        marker.title = feed.location.name
+        marker.snippet = feed.location.address
+        marker.icon = UIImage(named: "map_pin")
+        marker.map = mapView
+        
         locationNameLabel.text = feed.location.name
         locationAddressLabel.text = feed.location.address
 
