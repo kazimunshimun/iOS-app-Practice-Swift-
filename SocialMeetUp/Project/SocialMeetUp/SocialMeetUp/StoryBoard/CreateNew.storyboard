@@ -332,6 +332,9 @@
                                         <real key="value" value="26"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continueButtonClicked:" destination="EqB-Y2-ehK" eventType="touchUpInside" id="i0S-De-QXu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.074509803920000006" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
@@ -349,6 +352,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1qZ-mZ-76F"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="nxk-rT-XK0" id="sRj-NM-h6H"/>
+                        <outlet property="groupNameTextField" destination="xxE-gV-acp" id="VGJ-VC-EfE"/>
+                        <outlet property="interestView" destination="vMj-oo-zvJ" id="fQY-RM-kaE"/>
+                        <outlet property="locationNameLabel" destination="Cu2-Lh-R1m" id="iyY-HB-mYq"/>
+                        <outlet property="locationRoundedCornerView" destination="Qi2-DY-yUd" id="fDY-0T-AwW"/>
+                        <outlet property="mapView" destination="xgD-l8-JYH" id="YnW-yS-rvX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSr-NW-ZLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
