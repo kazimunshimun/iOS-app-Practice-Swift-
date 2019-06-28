@@ -46,6 +46,7 @@ class FeedDetailViewController: UIViewController {
     @IBOutlet weak var locationNameLabel: UILabel!
     @IBOutlet weak var locationAddressLabel: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var locationRoundedView: RoundedCornerView!
     
     //Cost View
     @IBOutlet weak var costLabel: UILabel!
@@ -64,13 +65,24 @@ class FeedDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("viewDidLoad called")
         // Do any additional setup after loading the view.
         updateUI()
     }
     
+    /*
+    override func loadView() {
+        print("load view called")
+    }
+    */
+    
+    override func viewDidLayoutSubviews() {
+        locationRoundedView.topRight = true
+        locationRoundedView.bottomLeft = true
+    }
+    
     func updateUI() {
-        topView.backgroundColor = feed?.feedColor
+        topView.backgroundColor = feed.feedColor
         titleLabel.text = feed.title
         
         updateJoinedByView()

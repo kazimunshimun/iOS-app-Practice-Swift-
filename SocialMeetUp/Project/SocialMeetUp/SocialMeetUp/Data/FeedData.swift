@@ -80,21 +80,21 @@ final internal class FeedData {
     let costs: [String] = ["$ 21.00", "$ 12.00", "$ 19.00", "$ 25.00", "$ 14.00", "$ 19.99", "$ 49.99", "$ 9.99", "$ 19.99", "$ 30.00", "$ 9.99", "$ 3.00", "$ 19.00", "$ 25.00"]
     let totalSpots: [Int] = [60, 50, 20, 15, 30, 35, 45, 40, 10, 15, 20, 10, 20, 30, 35]
     
-    let groups: [Group] = [Group(id: "0001", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0002", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0003", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0004", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0005", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0006", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0007", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0008", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0009", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0010", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0011", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0010", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0011", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0010", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true),
-                           Group(id: "0011", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoda", isPublic: true)]
+    let groups: [Group] = [Group(id: "0001", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0002", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0003", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0004", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0005", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0006", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0007", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0008", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0009", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0010", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0011", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0010", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0011", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0010", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true),
+                           Group(id: "0011", name: "Easy And Gentle Yoga", address: "Montreal, QC", groupImage: "yoga_icon", isPublic: true)]
     let joinedPeoples: [People] = []
     
     let feedTypes: [FeedType] = [.TRENDING, .TRENDING, .TRENDING,

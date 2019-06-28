@@ -10,5 +10,6 @@ target 'SocialMeetUp' do
         pod 'Firebase/Auth'
         pod 'GoogleMaps'
         pod 'GooglePlaces'
+        pod 'SkyFloatingLabelTextField', '~> 3.0'
         #pod 'Hero'
 end

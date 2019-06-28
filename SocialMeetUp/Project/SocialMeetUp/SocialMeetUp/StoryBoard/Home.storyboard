@@ -601,8 +601,8 @@
                                                                     <constraint firstItem="rxD-jJ-Vs6" firstAttribute="top" secondItem="dwv-mg-XM6" secondAttribute="top" id="wdn-I4-S63"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wH-iu-Zv3" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
-                                                                <rect key="frame" x="56" y="76" width="260" height="116"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wH-iu-Zv3" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
+                                                                <rect key="frame" x="56" y="76" width="302" height="116"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sko-Rt-MVL" customClass="GMSMapView">
                                                                         <rect key="frame" x="0.0" y="0.0" width="302" height="116"/>
@@ -622,8 +622,7 @@
                                                                         <real key="value" value="60"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="NO"/>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
-                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="NO"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
@@ -1153,6 +1152,7 @@ Get to know your local community and neighbours better by joining our Yoga famil
                         <outlet property="liveChatView" destination="fzB-JY-M79" id="WgI-b2-Ba9"/>
                         <outlet property="locationAddressLabel" destination="clh-Vb-SCk" id="aaO-dL-jmI"/>
                         <outlet property="locationNameLabel" destination="rxD-jJ-Vs6" id="RTh-IQ-1r4"/>
+                        <outlet property="locationRoundedView" destination="2wH-iu-Zv3" id="fWj-dI-dS3"/>
                         <outlet property="mapView" destination="Sko-Rt-MVL" id="in0-WB-RHH"/>
                         <outlet property="noJoinButton" destination="Hzg-9A-xB5" id="xrb-RC-kQ3"/>
                         <outlet property="peopleCountLabel" destination="Rjh-s6-mVz" id="Qz9-ht-ZTV"/>

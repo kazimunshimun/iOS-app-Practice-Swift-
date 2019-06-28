@@ -16,7 +16,10 @@ class AddNewViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func backButtonClicked(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
