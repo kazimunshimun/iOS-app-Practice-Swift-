@@ -19,6 +19,8 @@
 		8433428422B68F0700B80F9D /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433428322B68F0700B80F9D /* MenuData.swift */; };
 		84334D4622BFCFDB007BB0B2 /* RoundedCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84334D4522BFCFDB007BB0B2 /* RoundedCornerImageView.swift */; };
 		8436817B22BCB56300E202E1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436817A22BCB56300E202E1 /* ContainerViewController.swift */; };
+		8436C2B422C63DBD00CA8A16 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436C2B322C63DBD00CA8A16 /* ChatViewController.swift */; };
+		8436C2B622C64B1200CA8A16 /* BottomLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436C2B522C64B1200CA8A16 /* BottomLineTextField.swift */; };
 		8436EF1D22C28933006EB24E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436EF1C22C28933006EB24E /* Message.swift */; };
 		8436EF1F22C2893E006EB24E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436EF1E22C2893E006EB24E /* Notification.swift */; };
 		8436EF2122C28CDD006EB24E /* NotificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436EF2022C28CDD006EB24E /* NotificationData.swift */; };
@@ -72,6 +74,8 @@
 		8433428322B68F0700B80F9D /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuData.swift; path = ../MenuData.swift; sourceTree = "<group>"; };
 		84334D4522BFCFDB007BB0B2 /* RoundedCornerImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerImageView.swift; sourceTree = "<group>"; };
 		8436817A22BCB56300E202E1 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		8436C2B322C63DBD00CA8A16 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		8436C2B522C64B1200CA8A16 /* BottomLineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomLineTextField.swift; sourceTree = "<group>"; };
 		8436EF1C22C28933006EB24E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8436EF1E22C2893E006EB24E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		8436EF2022C28CDD006EB24E /* NotificationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationData.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 				84798AFC22BE8FD70001C241 /* MessageViewController.swift */,
 				84798AFE22BE90670001C241 /* NotificationViewController.swift */,
 				84798B0022BE90740001C241 /* FeedDetailViewController.swift */,
+				8436C2B322C63DBD00CA8A16 /* ChatViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 		84437C9222B54E5B0048FC1F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8436C2B522C64B1200CA8A16 /* BottomLineTextField.swift */,
 				84334D4522BFCFDB007BB0B2 /* RoundedCornerImageView.swift */,
 				84E6633B22B6AA3A00F2EDE3 /* RoundedBackgroundLabel.swift */,
 				84E6633922B6A5CA00F2EDE3 /* RoundedButtonWithBorder.swift */,
@@ -476,6 +482,7 @@
 				84377BE122C1204B0077990B /* MessageCell.swift in Sources */,
 				84334D4622BFCFDB007BB0B2 /* RoundedCornerImageView.swift in Sources */,
 				8454B01D22BD2256008923B3 /* TimeDate.swift in Sources */,
+				8436C2B422C63DBD00CA8A16 /* ChatViewController.swift in Sources */,
 				8436EF1F22C2893E006EB24E /* Notification.swift in Sources */,
 				8454B02522BD228B008923B3 /* Feed.swift in Sources */,
 				8454B01B22BD17E4008923B3 /* FeedData.swift in Sources */,
@@ -487,6 +494,7 @@
 				84E6633522B69B8200F2EDE3 /* MenuViewController.swift in Sources */,
 				84798AFB22BE8FAB0001C241 /* AddNewViewController.swift in Sources */,
 				8433428422B68F0700B80F9D /* MenuData.swift in Sources */,
+				8436C2B622C64B1200CA8A16 /* BottomLineTextField.swift in Sources */,
 				8454B02122BD226B008923B3 /* Location.swift in Sources */,
 				84E6633E22B6AC1400F2EDE3 /* MenuProfileCell.swift in Sources */,
 				842DDA7122B5594900CCBC76 /* RoundedCornerButton.swift in Sources */,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9CE-Xf-6zO">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,17 +9,22 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Message View Controller-->
         <scene sceneID="ElD-NV-Vm9">
             <objects>
                 <viewController storyboardIdentifier="messageView" id="9CE-Xf-6zO" customClass="MessageViewController" customModule="SocialMeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y8D-iZ-YEC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsR-oQ-bWj" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0S-bA-d1b">
                                         <rect key="frame" x="16" y="48" width="44" height="44"/>
@@ -33,7 +38,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwK-Ak-Yv4">
-                                        <rect key="frame" x="346" y="48" width="44" height="44"/>
+                                        <rect key="frame" x="307" y="48" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="FfH-M3-fOb"/>
                                             <constraint firstAttribute="width" constant="44" id="pV6-2d-utV"/>
@@ -65,7 +70,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tOH-zN-cHl">
-                                <rect key="frame" x="0.0" y="156" width="414" height="740"/>
+                                <rect key="frame" x="0.0" y="156" width="375" height="656"/>
                                 <color key="backgroundColor" red="0.54117647058823526" green="0.33725490196078434" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
@@ -94,11 +99,11 @@
             <objects>
                 <viewController storyboardIdentifier="notificationView" id="4K7-2b-R2j" customClass="NotificationViewController" customModule="SocialMeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eV5-Nq-i6I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQt-tj-f2H" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yk6-wX-KRt">
                                         <rect key="frame" x="16" y="48" width="44" height="44"/>
@@ -134,7 +139,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gXO-bx-p80">
-                                <rect key="frame" x="0.0" y="154" width="414" height="742"/>
+                                <rect key="frame" x="0.0" y="154" width="375" height="658"/>
                                 <color key="backgroundColor" red="0.83137254901960778" green="0.49803921568627452" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
@@ -158,9 +163,145 @@
             </objects>
             <point key="canvasLocation" x="531.8840579710145" y="85.714285714285708"/>
         </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="PUm-M0-Ijv">
+            <objects>
+                <viewController storyboardIdentifier="chatView" id="jfD-dC-pop" customClass="ChatViewController" customModule="SocialMeetUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ytl-Ei-dSg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCT-yu-eyc">
+                                <rect key="frame" x="0.0" y="714" width="375" height="98"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U57-cw-SKS" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
+                                        <rect key="frame" x="-48" y="-48" width="112" height="112"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOQ-gN-jaE">
+                                                <rect key="frame" x="68" y="68" width="24" height="24"/>
+                                                <state key="normal" image="send_icon"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.29411764705882354" green="0.31764705882352939" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="112" id="Mfu-yo-xvJ"/>
+                                            <constraint firstAttribute="width" constant="112" id="V89-Y6-yQa"/>
+                                            <constraint firstAttribute="trailing" secondItem="kOQ-gN-jaE" secondAttribute="trailing" constant="20" id="tgp-bj-yHG"/>
+                                            <constraint firstAttribute="bottom" secondItem="kOQ-gN-jaE" secondAttribute="bottom" constant="20" id="uU3-ug-4Y6"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="56"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Say Something…" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yec-gr-ctE" customClass="BottomLineTextField" customModule="SocialMeetUp" customModuleProvider="target">
+                                        <rect key="frame" x="80" y="18" width="241" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1z-1r-y4x">
+                                        <rect key="frame" x="329" y="13" width="30" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9O1-wI-EAd"/>
+                                            <constraint firstAttribute="width" constant="30" id="uU4-S9-2k5"/>
+                                        </constraints>
+                                        <state key="normal" image="mic"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.58431372549019611" green="0.59999999999999998" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="yec-gr-ctE" firstAttribute="leading" secondItem="U57-cw-SKS" secondAttribute="trailing" constant="16" id="5VA-ID-qbl"/>
+                                    <constraint firstAttribute="height" constant="98" id="H6c-hq-LvF"/>
+                                    <constraint firstItem="U57-cw-SKS" firstAttribute="top" secondItem="BCT-yu-eyc" secondAttribute="top" constant="-48" id="VDH-da-bdb"/>
+                                    <constraint firstItem="K1z-1r-y4x" firstAttribute="centerY" secondItem="yec-gr-ctE" secondAttribute="centerY" id="Ww8-1s-Mrc"/>
+                                    <constraint firstAttribute="trailing" secondItem="K1z-1r-y4x" secondAttribute="trailing" constant="16" id="ZRs-Bg-2JL"/>
+                                    <constraint firstItem="K1z-1r-y4x" firstAttribute="leading" secondItem="yec-gr-ctE" secondAttribute="trailing" constant="8" id="em1-Fx-u52"/>
+                                    <constraint firstItem="yec-gr-ctE" firstAttribute="bottom" secondItem="U57-cw-SKS" secondAttribute="bottom" constant="-16" id="he1-ji-dN1"/>
+                                    <constraint firstItem="U57-cw-SKS" firstAttribute="leading" secondItem="BCT-yu-eyc" secondAttribute="leading" constant="-48" id="xOB-GP-aOe"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lep-xS-SA1">
+                                <rect key="frame" x="0.0" y="175" width="375" height="539"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="okJ-YU-hep" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9m-Ih-1ca">
+                                        <rect key="frame" x="16" y="48" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="Y9w-z2-shm"/>
+                                            <constraint firstAttribute="height" constant="44" id="z2Y-7l-5Mv"/>
+                                        </constraints>
+                                        <state key="normal" image="icons_back"/>
+                                        <connections>
+                                            <action selector="backButtonClicked:" destination="jfD-dC-pop" eventType="touchUpInside" id="Fa5-K1-dry"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Chat" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZS-2N-vrI">
+                                        <rect key="frame" x="60" y="92" width="283" height="31.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yoga and Meditation for Beginners" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnD-RK-kxp">
+                                        <rect key="frame" x="60" y="131.33333333333334" width="245" height="14.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" red="0.25098039220000001" green="0.1960784314" blue="0.28627450980000002" alpha="0.4791579279" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4ZS-2N-vrI" secondAttribute="trailing" constant="32" id="1k0-g3-MRW"/>
+                                    <constraint firstItem="4ZS-2N-vrI" firstAttribute="top" secondItem="R9m-Ih-1ca" secondAttribute="bottom" id="9bR-SA-3l5"/>
+                                    <constraint firstItem="R9m-Ih-1ca" firstAttribute="leading" secondItem="okJ-YU-hep" secondAttribute="leading" constant="16" id="AHM-Ld-Wz3"/>
+                                    <constraint firstAttribute="trailing" secondItem="SnD-RK-kxp" secondAttribute="trailing" constant="70" id="ENE-KE-1ds"/>
+                                    <constraint firstItem="SnD-RK-kxp" firstAttribute="top" secondItem="4ZS-2N-vrI" secondAttribute="bottom" constant="8" id="It2-S6-X9t"/>
+                                    <constraint firstItem="R9m-Ih-1ca" firstAttribute="top" secondItem="okJ-YU-hep" secondAttribute="top" constant="48" id="MbM-Mv-4SP"/>
+                                    <constraint firstAttribute="height" constant="175" id="d4l-5f-pcI"/>
+                                    <constraint firstItem="4ZS-2N-vrI" firstAttribute="leading" secondItem="R9m-Ih-1ca" secondAttribute="trailing" id="yGy-Qb-0zX"/>
+                                    <constraint firstItem="SnD-RK-kxp" firstAttribute="leading" secondItem="4ZS-2N-vrI" secondAttribute="leading" id="z8h-94-RjH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="80"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20784313730000001" green="0.14901960780000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="okJ-YU-hep" firstAttribute="leading" secondItem="Y65-AO-4eJ" secondAttribute="leading" id="74H-5e-A7m"/>
+                            <constraint firstItem="BCT-yu-eyc" firstAttribute="leading" secondItem="Y65-AO-4eJ" secondAttribute="leading" id="CdC-pJ-mBT"/>
+                            <constraint firstItem="okJ-YU-hep" firstAttribute="trailing" secondItem="Y65-AO-4eJ" secondAttribute="trailing" id="Edu-DC-qqY"/>
+                            <constraint firstItem="Y65-AO-4eJ" firstAttribute="top" secondItem="okJ-YU-hep" secondAttribute="top" constant="44" id="LXs-Zf-pSa"/>
+                            <constraint firstItem="lep-xS-SA1" firstAttribute="leading" secondItem="Y65-AO-4eJ" secondAttribute="leading" id="WOj-Wj-Ff3"/>
+                            <constraint firstItem="Y65-AO-4eJ" firstAttribute="trailing" secondItem="lep-xS-SA1" secondAttribute="trailing" id="lSE-nR-SAk"/>
+                            <constraint firstItem="lep-xS-SA1" firstAttribute="top" secondItem="okJ-YU-hep" secondAttribute="bottom" id="q2z-WV-hnu"/>
+                            <constraint firstItem="Y65-AO-4eJ" firstAttribute="trailing" secondItem="BCT-yu-eyc" secondAttribute="trailing" id="q8l-hN-41Q"/>
+                            <constraint firstItem="Y65-AO-4eJ" firstAttribute="bottom" secondItem="BCT-yu-eyc" secondAttribute="bottom" constant="-34" id="qIp-fN-pWm"/>
+                            <constraint firstItem="BCT-yu-eyc" firstAttribute="top" secondItem="lep-xS-SA1" secondAttribute="bottom" id="rFH-9P-7nZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y65-AO-4eJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="chatTableView" destination="lep-xS-SA1" id="cMh-4g-Zee"/>
+                        <outlet property="topicLabel" destination="SnD-RK-kxp" id="eLg-bY-Tcx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMX-eZ-HRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717.5999999999999" y="85.714285714285722"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icons_back" width="24" height="24"/>
+        <image name="mic" width="16" height="24"/>
         <image name="search" width="18" height="18"/>
+        <image name="send_icon" width="24" height="24"/>
     </resources>
 </document>

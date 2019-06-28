@@ -215,10 +215,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qi2-DY-yUd" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
-                                                        <rect key="frame" x="36" y="56" width="299" height="116"/>
+                                                        <rect key="frame" x="36" y="56" width="283" height="116"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgD-l8-JYH" customClass="GMSMapView">
-                                                                <rect key="frame" x="0.0" y="0.0" width="299" height="116"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="283" height="116"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                         </subviews>
@@ -242,7 +242,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="1aW-pg-VQP" firstAttribute="leading" secondItem="dSs-1v-Uq9" secondAttribute="leading" id="BZk-N3-tom"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Qi2-DY-yUd" secondAttribute="trailing" id="FNw-6t-ARG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Qi2-DY-yUd" secondAttribute="trailing" constant="16" id="FNw-6t-ARG"/>
                                                     <constraint firstItem="LdQ-og-SCl" firstAttribute="top" secondItem="1aW-pg-VQP" secondAttribute="top" id="LlP-rM-i8s"/>
                                                     <constraint firstItem="Qi2-DY-yUd" firstAttribute="top" secondItem="LdQ-og-SCl" secondAttribute="bottom" constant="8" id="Pzx-LY-460"/>
                                                     <constraint firstItem="LdQ-og-SCl" firstAttribute="leading" secondItem="1aW-pg-VQP" secondAttribute="trailing" constant="12" id="ZKY-Rk-LVd"/>

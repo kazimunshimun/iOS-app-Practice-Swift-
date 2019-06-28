@@ -171,6 +171,17 @@ class FeedDetailViewController: UIViewController {
     
     func updateLiveChatView() {
         
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.checkAction))
+        self.liveChatView.addGestureRecognizer(gesture)
+    }
+    
+    @objc func checkAction(sender : UITapGestureRecognizer) {
+        // Do what you want
+        print("Chat view clicked")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Messaging", bundle: nil)
+        let chatViewController = storyBoard.instantiateViewController(withIdentifier: "chatView") as! ChatViewController
+        chatViewController.topic = feed.title
+        self.show(chatViewController, sender: nil)
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
