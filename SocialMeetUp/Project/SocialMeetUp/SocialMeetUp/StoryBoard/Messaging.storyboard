@@ -138,7 +138,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gXO-bx-p80">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gXO-bx-p80">
                                 <rect key="frame" x="0.0" y="154" width="375" height="658"/>
                                 <color key="backgroundColor" red="0.83137254901960778" green="0.49803921568627452" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
@@ -223,7 +223,7 @@
                                     <constraint firstItem="U57-cw-SKS" firstAttribute="leading" secondItem="BCT-yu-eyc" secondAttribute="leading" constant="-48" id="xOB-GP-aOe"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lep-xS-SA1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lep-xS-SA1">
                                 <rect key="frame" x="0.0" y="175" width="375" height="539"/>
                                 <color key="backgroundColor" red="0.20784313730000001" green="0.14901960780000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -245,7 +245,7 @@
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNR-HK-9nz">
                                                     <rect key="frame" x="56" y="60" width="287" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

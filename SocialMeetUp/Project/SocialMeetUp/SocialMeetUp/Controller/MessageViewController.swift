@@ -69,14 +69,16 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.titleLabel.text = message.title
         cell.timeAgoLabel.text = message.sentTimeAgo
         
+        var cellBackgroundColor: UIColor
         if message.isRead {
-            cell.roundedCornerView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#241332")
+            cellBackgroundColor = ColorUtils.hexStringToUIColor(hex: "#241332")
             cell.unreadMessageView.isHidden = true
         } else {
-            cell.roundedCornerView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#8A56AC")
+            cellBackgroundColor = ColorUtils.hexStringToUIColor(hex: "#8A56AC")
             cell.unreadMessageView.isHidden = false
             cell.unreadMessageCountLabel.text = "\(message.unreadMessageCount)"
         }
+        cell.roundedCornerView.backgroundColor = cellBackgroundColor
         
         if indexPath.row + 1 < messageList.count {
             let nextMessage = messageList[indexPath.row + 1]
@@ -88,7 +90,23 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
         
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = cellBackgroundColor
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("feed detail request view clicked")
+        let message = messageList[indexPath.row]
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Messaging", bundle: nil)
+        let chatViewController = storyBoard.instantiateViewController(withIdentifier: "chatView") as! ChatViewController
+        chatViewController.topic = message.title
+        chatViewController.hostedBy = message.sender
+        self.show(chatViewController, sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     /*

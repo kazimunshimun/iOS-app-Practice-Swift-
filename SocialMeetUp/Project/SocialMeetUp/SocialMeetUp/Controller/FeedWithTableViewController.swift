@@ -93,6 +93,11 @@ class FeedWithTableViewController: UIViewController, UITableViewDelegate, UITabl
             cell.firstJoinedImageView.image = UIImage(named: feed.joinedPeople[0].imageName)
             cell.secondJoinedImageView.image = UIImage(named: feed.joinedPeople[1].imageName)
         }
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = feed.feedColor
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
     }
     

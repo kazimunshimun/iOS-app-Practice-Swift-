@@ -143,7 +143,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="L7V-7w-Sj2" secondAttribute="bottom" constant="-1" id="AgP-Vj-YV2"/>
                     <constraint firstItem="L7V-7w-Sj2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HZV-sK-a5Y"/>
@@ -151,6 +151,7 @@
                     <constraint firstItem="L7V-7w-Sj2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Yu7-dY-a9e"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="ANu-u6-K47"/>
             <connections>
                 <outlet property="feedIconImageView" destination="Xcw-1y-lqG" id="0uN-xO-qHT"/>
