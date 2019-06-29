@@ -128,7 +128,9 @@ final internal class FeedData {
                 let randomJoinedPeople = Int(Int(arc4random()) % Int(totalSpot) % hostedBy.count)
                 let joinedPeople = hostedBy[randomPick: randomJoinedPeople]
                 
-                let feed = Feed(id: "\(i)", title: title, desccription: description, timeDate: timeDate, location: location, hostedBy: hostedBy[i], cost: cost, totalSpot: totalSpot, group: groups[i], joinedPeople: joinedPeople, isGoing: false, feedType: feedType, feedColor: color, feedIcon: feedIcons[i])
+                let isGoing = randomJoinedPeople % 2 == 0
+                
+                let feed = Feed(id: "\(i)", title: title, desccription: description, timeDate: timeDate, location: location, hostedBy: hostedBy[i], cost: cost, totalSpot: totalSpot, group: groups[i], joinedPeople: joinedPeople, isGoing: isGoing, feedType: feedType, feedColor: color, feedIcon: feedIcons[i])
                 feeds.append(feed)
             }
             

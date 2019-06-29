@@ -897,8 +897,8 @@ Get to know your local community and neighbours better by joining our Yoga famil
                                                                 <color key="textColor" red="0.59999999999999998" green="0.5607843137254902" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGh-NK-u5V">
-                                                                <rect key="frame" x="61.999999999999993" y="16" width="94.333333333333314" height="17"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you going ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGh-NK-u5V">
+                                                                <rect key="frame" x="61.999999999999993" y="16" width="106.33333333333331" height="17"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -938,6 +938,9 @@ Get to know your local community and neighbours better by joining our Yoga famil
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="34"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
@@ -1147,6 +1150,7 @@ Get to know your local community and neighbours better by joining our Yoga famil
                         <outlet property="groupLocationLabel" destination="aJo-be-ecd" id="6zl-Dr-E8B"/>
                         <outlet property="groupNameLabel" destination="h1L-mg-KYF" id="T0i-Oc-pEv"/>
                         <outlet property="hostedByLabel" destination="Wu9-Rw-p1j" id="7PK-bd-xAu"/>
+                        <outlet property="joinBackgroundView" destination="weC-4x-Osg" id="3Z9-s1-bT3"/>
                         <outlet property="joinQuestionLabel" destination="GGh-NK-u5V" id="vZ7-pT-Css"/>
                         <outlet property="joinedCountLabel" destination="79B-fP-v2p" id="fMY-JT-lyp"/>
                         <outlet property="liveChatView" destination="fzB-JY-M79" id="WgI-b2-Ba9"/>

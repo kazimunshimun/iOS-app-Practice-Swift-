@@ -31,6 +31,7 @@ class FeedDetailViewController: UIViewController {
     @IBOutlet weak var groupLocationLabel: UILabel!
     
     //Join request view
+    @IBOutlet weak var joinBackgroundView: RoundedButtonWithBorder!
     @IBOutlet weak var joinQuestionLabel: UILabel!
     @IBOutlet weak var spotLeftLabel: UILabel!
     @IBOutlet weak var noJoinButton: UIButton!
@@ -129,18 +130,33 @@ class FeedDetailViewController: UIViewController {
     func updateJoinInfoView() {
         if feed.isGoing {
             spotLeftLabel.text = "Edit"
+            joinBackgroundView.backgroundColor = .clear
+            joinQuestionLabel.textColor = .black
+            noJoinButton.isHidden = true
+            yesJoinButton.setImage(UIImage(named: "yes_colored"), for: .disabled)
+            yesJoinButton.isEnabled = false
         } else {
             spotLeftLabel.text = "\(feed.totalSpot - feed.joinedPeople.count) spots left"
+            joinBackgroundView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#352641")
         }
     }
     
     func updateTimeDateView() {
+        let customDateFormatter = DateFormatter()
+        let weekday = NSCalendar.current.component(.weekday, from: Date())
+        let today = customDateFormatter.weekdaySymbols[weekday - 1]
+        /*
         if feed.timeDate.isToday {
             dayOfWeekLabel.text = "Today"
         } else {
             dayOfWeekLabel.text = feed.timeDate.dayOfWeek
         }
-        
+        */
+        if today.caseInsensitiveCompare(feed.timeDate.dayOfWeek) == .orderedSame {
+            dayOfWeekLabel.text = "Today"
+        } else {
+            dayOfWeekLabel.text = feed.timeDate.dayOfWeek
+        }
         fromToTimeLabel.text = "\(feed.timeDate.fromTime) - \(feed.timeDate.toTime)"
         timeDescriptionLabel.text = "Every week on \(feed.timeDate.dayOfWeek)"
     }
@@ -170,7 +186,30 @@ class FeedDetailViewController: UIViewController {
     }
     
     func updateLiveChatView() {
-        
+
+        switch feed?.joinedPeople.count {
+        case 0:
+            peopleCountLabel.text = "be first to join"
+            chatFirstRoundedView.isHidden = true
+            chatSecondRoundedView.isHidden = true
+        case 1:
+            peopleCountLabel.text = "& \(feed.joinedPeople.count - 1) others"
+            chatFirstRoundedView.isHidden = false
+            chatSecondRoundedView.isHidden = true
+            chatFirstImageView.image = UIImage(named: feed.joinedPeople[0].imageName)
+        case 2:
+            peopleCountLabel.text = "& \(feed.joinedPeople.count - 2) others"
+            chatFirstRoundedView.isHidden = false
+            chatSecondRoundedView.isHidden = false
+            chatFirstImageView.image = UIImage(named: feed.joinedPeople[0].imageName)
+            chatSecondImageView.image = UIImage(named: feed.joinedPeople[1].imageName)
+        default:
+            peopleCountLabel.text = "& \(feed.joinedPeople.count - 2) others"
+            chatFirstRoundedView.isHidden = false
+            chatSecondRoundedView.isHidden = false
+            chatFirstImageView.image = UIImage(named: feed.joinedPeople[0].imageName)
+            chatSecondImageView.image = UIImage(named: feed.joinedPeople[1].imageName)
+        }
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.checkAction))
         self.liveChatView.addGestureRecognizer(gesture)
     }
@@ -191,11 +230,11 @@ class FeedDetailViewController: UIViewController {
     
     
     @IBAction func joinButtonClicked(_ sender: Any) {
-    
+        print("Join button cliced")
     }
     
     @IBAction func rejectButtonClicked(_ sender: Any) {
-        
+        print("reject button cliced")
     }
     
     @IBAction func readMoreButtonClicked(_ sender: Any) {
