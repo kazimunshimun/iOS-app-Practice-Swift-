@@ -886,7 +886,7 @@ Get to know your local community and neighbours better by joining our Yoga famil
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="weC-4x-Osg" customClass="RoundedButtonWithBorder" customModule="SocialMeetUp" customModuleProvider="target">
-                                                        <rect key="frame" x="53" y="162" width="308" height="68"/>
+                                                        <rect key="frame" x="40" y="162" width="334" height="68"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit_1" translatesAutoresizingMaskIntoConstraints="NO" id="yVZ-Fl-4mw">
                                                                 <rect key="frame" x="24" y="23" width="22" height="22"/>
@@ -904,14 +904,14 @@ Get to know your local community and neighbours better by joining our Yoga famil
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr4-mm-qNr">
-                                                                <rect key="frame" x="252" y="14" width="40" height="40"/>
+                                                                <rect key="frame" x="278" y="14" width="40" height="40"/>
                                                                 <state key="normal" image="yes_icon_gray"/>
                                                                 <connections>
                                                                     <action selector="joinButtonClicked:" destination="vyC-qN-m0K" eventType="touchUpInside" id="iwK-H3-2mb"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzg-9A-xB5">
-                                                                <rect key="frame" x="204" y="14" width="40" height="40"/>
+                                                                <rect key="frame" x="230" y="14" width="40" height="40"/>
                                                                 <state key="normal" image="no_icon"/>
                                                                 <connections>
                                                                     <action selector="rejectButtonClicked:" destination="vyC-qN-m0K" eventType="touchUpInside" id="H6a-JV-x2L"/>
@@ -948,7 +948,7 @@ Get to know your local community and neighbours better by joining our Yoga famil
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="weC-4x-Osg" firstAttribute="top" secondItem="zxm-XQ-jPH" secondAttribute="bottom" constant="24" id="1Gl-4u-3Yt"/>
-                                                    <constraint firstItem="weC-4x-Osg" firstAttribute="leading" secondItem="e1n-Fz-SGt" secondAttribute="leading" constant="53" id="4Fl-P4-9a9"/>
+                                                    <constraint firstItem="weC-4x-Osg" firstAttribute="leading" secondItem="e1n-Fz-SGt" secondAttribute="leading" constant="40" id="4Fl-P4-9a9"/>
                                                     <constraint firstItem="BfD-Wg-su9" firstAttribute="top" secondItem="e1n-Fz-SGt" secondAttribute="top" constant="100" id="G4x-Ai-mFO"/>
                                                     <constraint firstItem="aJo-be-ecd" firstAttribute="top" secondItem="h1L-mg-KYF" secondAttribute="bottom" constant="8" id="LJB-RX-LAO"/>
                                                     <constraint firstItem="h1L-mg-KYF" firstAttribute="leading" secondItem="BfD-Wg-su9" secondAttribute="trailing" constant="8" id="UZX-gD-4rn"/>
@@ -957,7 +957,7 @@ Get to know your local community and neighbours better by joining our Yoga famil
                                                     <constraint firstItem="BfD-Wg-su9" firstAttribute="leading" secondItem="e1n-Fz-SGt" secondAttribute="leading" constant="53" id="io5-fn-1KU"/>
                                                     <constraint firstAttribute="trailing" secondItem="h1L-mg-KYF" secondAttribute="trailing" constant="53" id="o8j-vu-BQP"/>
                                                     <constraint firstItem="h1L-mg-KYF" firstAttribute="top" secondItem="BfD-Wg-su9" secondAttribute="top" id="odh-dY-aUl"/>
-                                                    <constraint firstAttribute="trailing" secondItem="weC-4x-Osg" secondAttribute="trailing" constant="53" id="qxt-Cu-bZ3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="weC-4x-Osg" secondAttribute="trailing" constant="40" id="qxt-Cu-bZ3"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

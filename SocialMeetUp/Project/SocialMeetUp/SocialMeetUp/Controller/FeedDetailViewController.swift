@@ -231,6 +231,7 @@ class FeedDetailViewController: UIViewController {
     
     @IBAction func joinButtonClicked(_ sender: Any) {
         print("Join button cliced")
+        self.showCountDialog(onView: self.view)
     }
     
     @IBAction func rejectButtonClicked(_ sender: Any) {
