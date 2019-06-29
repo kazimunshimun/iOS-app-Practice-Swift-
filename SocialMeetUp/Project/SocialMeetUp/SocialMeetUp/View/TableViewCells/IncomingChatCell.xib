@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="incomingCell" rowHeight="179" id="KGk-i7-Jjw" customClass="IncomingChatCell" customModule="SocialMeetUp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="178.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJl-uM-wqR" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="52" width="288" height="118.5"/>
+                        <color key="backgroundColor" red="0.54117647058823526" green="0.33725490196078434" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="80"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUU-bm-c18">
+                        <rect key="frame" x="32" y="60" width="232" height="102.5"/>
+                        <string key="text">Of course it’s safe to visit, but visitors just 
+have to have street smarts and their wits about them more so than in almost any other major city in the world. </string>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1d-wd-1Ch">
+                        <rect key="frame" x="32" y="22" width="200" height="22"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijt-33-nii" customClass="RoundedCornerView" customModule="SocialMeetUp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vK9-mh-rtv" customClass="RoundedCornerImageView" customModule="SocialMeetUp" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="2" width="18" height="18"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="vK9-mh-rtv" firstAttribute="top" secondItem="ijt-33-nii" secondAttribute="top" constant="2" id="6gi-Yg-0bd"/>
+                                    <constraint firstAttribute="height" constant="22" id="Ace-8h-TE8"/>
+                                    <constraint firstItem="vK9-mh-rtv" firstAttribute="leading" secondItem="ijt-33-nii" secondAttribute="leading" constant="2" id="dws-ji-IWx"/>
+                                    <constraint firstAttribute="width" constant="22" id="ffg-fG-Ang"/>
+                                    <constraint firstAttribute="trailing" secondItem="vK9-mh-rtv" secondAttribute="trailing" constant="2" id="k7b-3l-WTa"/>
+                                    <constraint firstAttribute="bottom" secondItem="vK9-mh-rtv" secondAttribute="bottom" constant="2" id="wAq-Q7-fdK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qc8-zQ-hKv">
+                                <rect key="frame" x="30" y="3" width="34" height="16"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qc8-zQ-hKv" firstAttribute="leading" secondItem="ijt-33-nii" secondAttribute="trailing" constant="8" id="1s2-P5-fxh"/>
+                            <constraint firstAttribute="height" constant="22" id="BYJ-0V-olN"/>
+                            <constraint firstAttribute="width" constant="200" id="KgP-IC-DKQ"/>
+                            <constraint firstItem="ijt-33-nii" firstAttribute="leading" secondItem="m1d-wd-1Ch" secondAttribute="leading" id="Pvb-6f-JQo"/>
+                            <constraint firstItem="ijt-33-nii" firstAttribute="centerY" secondItem="m1d-wd-1Ch" secondAttribute="centerY" id="d8g-cS-s7J"/>
+                            <constraint firstItem="qc8-zQ-hKv" firstAttribute="centerY" secondItem="ijt-33-nii" secondAttribute="centerY" id="hDa-L6-MjI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="JJl-uM-wqR" secondAttribute="trailing" constant="32" id="1JO-IV-LFe"/>
+                    <constraint firstItem="JJl-uM-wqR" firstAttribute="bottom" secondItem="bUU-bm-c18" secondAttribute="bottom" constant="8" id="9p0-ki-Hgz"/>
+                    <constraint firstItem="JJl-uM-wqR" firstAttribute="top" secondItem="bUU-bm-c18" secondAttribute="top" constant="-8" id="AlD-mL-FuC"/>
+                    <constraint firstItem="JJl-uM-wqR" firstAttribute="top" secondItem="m1d-wd-1Ch" secondAttribute="bottom" constant="8" id="L6o-qJ-C2O"/>
+                    <constraint firstItem="m1d-wd-1Ch" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="UoZ-Ma-YYQ"/>
+                    <constraint firstItem="bUU-bm-c18" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="bYJ-tA-hbg"/>
+                    <constraint firstAttribute="trailing" secondItem="bUU-bm-c18" secondAttribute="trailing" constant="56" id="kqh-gP-X2B"/>
+                    <constraint firstItem="bUU-bm-c18" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="60" id="pYk-qT-uDd"/>
+                    <constraint firstAttribute="bottom" secondItem="bUU-bm-c18" secondAttribute="bottom" constant="16" id="qdG-q8-L8t"/>
+                    <constraint firstItem="JJl-uM-wqR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sVs-eD-tjI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="chatTextCell" destination="bUU-bm-c18" id="m7B-DE-wuy"/>
+                <outlet property="senderImageView" destination="vK9-mh-rtv" id="5C4-eE-TVJ"/>
+                <outlet property="senderNameLabel" destination="qc8-zQ-hKv" id="Lqh-XH-CFd"/>
+                <outlet property="textBackgroundView" destination="JJl-uM-wqR" id="8F3-V6-En4"/>
+            </connections>
+            <point key="canvasLocation" x="160.86956521739131" y="134.26339285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

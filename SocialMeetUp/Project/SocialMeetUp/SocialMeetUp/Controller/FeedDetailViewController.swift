@@ -181,6 +181,7 @@ class FeedDetailViewController: UIViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Messaging", bundle: nil)
         let chatViewController = storyBoard.instantiateViewController(withIdentifier: "chatView") as! ChatViewController
         chatViewController.topic = feed.title
+        chatViewController.hostedBy = feed.hostedBy
         self.show(chatViewController, sender: nil)
     }
     
