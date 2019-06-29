@@ -12,7 +12,7 @@ import UIKit
 var guestCountView : UIView?
 
 extension UIViewController {
-    func showCountDialog(onView : UIView) {
+    func showCountDialog(onView : UIView, maxCount: Int) {
         let countView = UIView.init(frame: onView.bounds)
        // countView.backgroundColor = UIColor(white: 0.95, alpha: 0.95)
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
@@ -22,7 +22,7 @@ extension UIViewController {
         countView.addSubview(blurEffectView)
         
         // let ai = UIActivityIndicatorView.init(style: .whiteLarge)
-        let cv = GuestCountView(frame: onView.bounds)
+        let cv = GuestCountView(frame: onView.bounds, highestStepCount: maxCount)
         cv.center = countView.center
         countView.addSubview(cv)
         onView.addSubview(countView)
@@ -31,7 +31,7 @@ extension UIViewController {
         //ai.okButton.addTarget(self, action: #selector(pressed(sender:)), for: .touchUpInside)
     }
     
-    func removeErrorDialog() {
+    func removeCountDialog() {
         DispatchQueue.main.async {
             guestCountView?.removeFromSuperview()
             guestCountView = nil
@@ -39,6 +39,6 @@ extension UIViewController {
     }
     
     @objc func pressed(sender: UIButton!) {
-        removeErrorDialog()
+        removeCountDialog()
     }
 }

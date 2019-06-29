@@ -54,7 +54,6 @@
 		8454B03322BD4ECD008923B3 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454B03122BD4ECD008923B3 /* FeedCell.swift */; };
 		8454B03422BD4ECD008923B3 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8454B03222BD4ECD008923B3 /* FeedCell.xib */; };
 		845B856B22BE2E0F00E1AF34 /* FeedWithTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B856A22BE2E0F00E1AF34 /* FeedWithTableViewController.swift */; };
-		845C7D2322C7B3E700872F27 /* GuestCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845C7D2222C7B3E700872F27 /* GuestCountView.xib */; };
 		845C7D2522C7B5B300872F27 /* GuestCountViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C7D2422C7B5B300872F27 /* GuestCountViewControllerExtension.swift */; };
 		845C7D2722C7B5EC00872F27 /* GuestCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C7D2622C7B5EC00872F27 /* GuestCountView.swift */; };
 		84798AF522BE6E130001C241 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84798AF422BE6E130001C241 /* ProfileData.swift */; };
@@ -123,7 +122,6 @@
 		8454B03122BD4ECD008923B3 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		8454B03222BD4ECD008923B3 /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 		845B856A22BE2E0F00E1AF34 /* FeedWithTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWithTableViewController.swift; sourceTree = "<group>"; };
-		845C7D2222C7B3E700872F27 /* GuestCountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestCountView.xib; sourceTree = "<group>"; };
 		845C7D2422C7B5B300872F27 /* GuestCountViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCountViewControllerExtension.swift; sourceTree = "<group>"; };
 		845C7D2622C7B5EC00872F27 /* GuestCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCountView.swift; sourceTree = "<group>"; };
 		84798AF422BE6E130001C241 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 				842DDA7022B5594900CCBC76 /* RoundedCornerButton.swift */,
 				84E6633822B69E4300F2EDE3 /* CollectionViewCells */,
 				8454B02E22BD4E7A008923B3 /* TableViewCells */,
-				845C7D2222C7B3E700872F27 /* GuestCountView.xib */,
 				845C7D2422C7B5B300872F27 /* GuestCountViewControllerExtension.swift */,
 				845C7D2622C7B5EC00872F27 /* GuestCountView.swift */,
 			);
@@ -415,7 +412,6 @@
 				84437C8122B532D10048FC1F /* Main.storyboard in Resources */,
 				84377BE622C120B50077990B /* NotificationCell.xib in Resources */,
 				8433427C22B679EF00B80F9D /* Home.storyboard in Resources */,
-				845C7D2322C7B3E700872F27 /* GuestCountView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
