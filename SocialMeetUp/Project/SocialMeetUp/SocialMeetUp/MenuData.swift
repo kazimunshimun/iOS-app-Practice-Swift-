@@ -15,9 +15,6 @@ final internal class MenuData {
     let menuImageNames = ["profile_ava", "trending_menu", "health_menu", "music_menu", "sports_menu", "learning_menu"]
     let menuSelectedColors: [UIColor] = [ColorUtils.hexStringToUIColor(hex: "#241332"), ColorUtils.hexStringToUIColor(hex: "#D47FA6"), ColorUtils.hexStringToUIColor(hex: "#B4C55B"), ColorUtils.hexStringToUIColor(hex: "#4EBDEF"), ColorUtils.hexStringToUIColor(hex: "#132641"), ColorUtils.hexStringToUIColor(hex: "#4666E5")]
     
-    /*
-    ColorUtils.hexStringToUIColor(hex: "#4666E5"), ColorUtils.hexStringToUIColor(hex: "#D47FA6"), ColorUtils.hexStringToUIColor(hex: "#B4C55B"), ColorUtils.hexStringToUIColor(hex: "#4EBDEF"), ColorUtils.hexStringToUIColor(hex: "#132641"), ColorUtils.hexStringToUIColor(hex: "#4666E5")
-    */
     static let shared = MenuData()
     
     func getMenus(completion: ([Menu]) -> Void) {

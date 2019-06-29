@@ -62,20 +62,6 @@ final internal class FeedData {
                                  Location(name: "The Bay Department Store  (7 th Floor restaurant/cafeteria dining hall)", address: "585 Saint Catherine Street West, Montreal, QC", latitudeLogitude: CLLocation(latitude: 45.5303, longitude: -73.749)),
                                  Location(name: "The Bay Department Store  (7 th Floor restaurant/cafeteria dining hall)", address: "585 Saint Catherine Street West, Montreal, QC", latitudeLogitude: CLLocation(latitude: 45.5303, longitude: -73.749)),
                                  Location(name: "The Bay Department Store  (7 th Floor restaurant/cafeteria dining hall)", address: "585 Saint Catherine Street West, Montreal, QC", latitudeLogitude: CLLocation(latitude: 45.5303, longitude: -73.749))]
-    let hostedBy: [People] = [People(id: "001", name: "Joe", imageName: "joe"),
-                              People(id: "002", name: "Paul", imageName: "paul"),
-                              People(id: "003", name: "Carl", imageName: "carl"),
-                              People(id: "004", name: "Jhon", imageName: "john"),
-                              People(id: "005", name: "Marie", imageName: "marie"),
-                              People(id: "006", name: "Elon", imageName: "elon"),
-                              People(id: "007", name: "Blake", imageName: "blake"),
-                              People(id: "008", name: "Dale", imageName: "dale"),
-                              People(id: "009", name: "Kat", imageName: "kat"),
-                              People(id: "010", name: "Mark", imageName: "mark"),
-                              People(id: "011", name: "Mila", imageName: "mila"),
-                              People(id: "012", name: "Adam", imageName: "adam"),
-                              People(id: "013", name: "Ema", imageName: "profile_ava"),
-                              People(id: "014", name: "Oliva", imageName: "oliva")]
     
     let costs: [String] = ["$ 21.00", "$ 12.00", "$ 19.00", "$ 25.00", "$ 14.00", "$ 19.99", "$ 49.99", "$ 9.99", "$ 19.99", "$ 30.00", "$ 9.99", "$ 3.00", "$ 19.00", "$ 25.00"]
     let totalSpots: [Int] = [60, 50, 20, 15, 30, 35, 45, 40, 10, 15, 20, 10, 20, 30, 35]
@@ -124,6 +110,7 @@ final internal class FeedData {
     
     func getFeeds(type: FeedType,completion: ([Feed]) -> Void) {
         var feeds: [Feed] = []
+        let hostedBy: [People] = PeopleData.shared.getPeople()
         
         for i in 0..<titles.count {
             let feedType = feedTypes[i]
