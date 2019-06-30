@@ -17,10 +17,10 @@ struct Feed {
     let location: Location
     let hostedBy: People
     let cost: String
-    let totalSpot: Int
+    var totalSpot: Int
     let group: Group
-    let joinedPeople: [People]
-    let isGoing: Bool
+    var joinedPeople: [People]
+    var isGoing: Bool
     
     let feedType: FeedType
     let feedColor: UIColor

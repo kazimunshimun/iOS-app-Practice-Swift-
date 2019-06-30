@@ -29,4 +29,13 @@ final internal class PeopleData {
     func getPeople() -> [People] {
         return senders
     }
+    
+    func getPeople(withCount: Int) -> [People]{
+        var peoples: [People] = []
+        
+        for _ in 0..<withCount {
+            peoples.append(senders.random()!)
+        }
+        return peoples
+    }
 }

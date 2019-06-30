@@ -28,23 +28,23 @@ class GuestCountView: UIView {
     }
     
     private func setUpViewAndConstraints() {
-        let errorView = UIView()
-        addSubview(errorView)
+        let countView = UIView()
+        addSubview(countView)
         
-        errorView.translatesAutoresizingMaskIntoConstraints = false
-        errorView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        errorView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -60).isActive = true
-        errorView.heightAnchor.constraint(equalToConstant: 500).isActive = true
-        errorView.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        countView.translatesAutoresizingMaskIntoConstraints = false
+        countView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        countView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -60).isActive = true
+        countView.heightAnchor.constraint(equalToConstant: 500).isActive = true
+        countView.widthAnchor.constraint(equalToConstant: 300).isActive = true
         
-        errorView.backgroundColor = .clear
+        countView.backgroundColor = .clear
         
         let roundedCornerView = UIView()
-        errorView.addSubview(roundedCornerView)
+        countView.addSubview(roundedCornerView)
         roundedCornerView.translatesAutoresizingMaskIntoConstraints = false
-        roundedCornerView.topAnchor.constraint(equalTo: errorView.topAnchor, constant: 24).isActive = true
-        roundedCornerView.leftAnchor.constraint(equalTo: errorView.leftAnchor, constant: 20).isActive = true
-        roundedCornerView.rightAnchor.constraint(equalTo: errorView.rightAnchor, constant: -20).isActive = true
+        roundedCornerView.topAnchor.constraint(equalTo: countView.topAnchor, constant: 24).isActive = true
+        roundedCornerView.leftAnchor.constraint(equalTo: countView.leftAnchor, constant: 20).isActive = true
+        roundedCornerView.rightAnchor.constraint(equalTo: countView.rightAnchor, constant: -20).isActive = true
         roundedCornerView.heightAnchor.constraint(equalToConstant: 300).isActive = true
         roundedCornerView.backgroundColor = .clear
         
@@ -101,12 +101,12 @@ class GuestCountView: UIView {
         countLabel.font = UIFont.systemFont(ofSize: 42, weight: .regular)
         countLabel.textAlignment = .center
         
-        errorView.addSubview(nextButton)
+        countView.addSubview(nextButton)
         
         nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.bottomAnchor.constraint(equalTo: errorView.bottomAnchor, constant: -20).isActive = true
-        nextButton.leftAnchor.constraint(equalTo: errorView.leftAnchor).isActive = true
-        nextButton.rightAnchor.constraint(equalTo: errorView.rightAnchor).isActive = true
+        nextButton.bottomAnchor.constraint(equalTo: countView.bottomAnchor, constant: -20).isActive = true
+        nextButton.leftAnchor.constraint(equalTo: countView.leftAnchor).isActive = true
+        nextButton.rightAnchor.constraint(equalTo: countView.rightAnchor).isActive = true
         nextButton.heightAnchor.constraint(equalToConstant: 52).isActive = true
         nextButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#8A56AC")
         nextButton.setTitle("NEXT", for: .normal)

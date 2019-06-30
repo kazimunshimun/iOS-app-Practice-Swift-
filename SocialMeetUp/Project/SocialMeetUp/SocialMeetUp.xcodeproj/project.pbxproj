@@ -18,6 +18,15 @@
 		8433428222B67ABE00B80F9D /* Messaging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8433428122B67ABE00B80F9D /* Messaging.storyboard */; };
 		8433428422B68F0700B80F9D /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433428322B68F0700B80F9D /* MenuData.swift */; };
 		84334D4622BFCFDB007BB0B2 /* RoundedCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84334D4522BFCFDB007BB0B2 /* RoundedCornerImageView.swift */; };
+		84355C6622C8FBE000B14050 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84355C6522C8FBE000B14050 /* SuccessView.swift */; };
+		84355C6822C90FA100B14050 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84355C6722C90FA100B14050 /* AlertMessage.swift */; };
+		84355C7022C925A600B14050 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84355C6922C925A600B14050 /* Montserrat-Regular.ttf */; };
+		84355C7122C925A600B14050 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84355C6A22C925A600B14050 /* Montserrat-BoldItalic.ttf */; };
+		84355C7222C925A600B14050 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84355C6B22C925A600B14050 /* Montserrat-Light.ttf */; };
+		84355C7322C925A600B14050 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84355C6C22C925A600B14050 /* Montserrat-Medium.ttf */; };
+		84355C7422C925A600B14050 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84355C6D22C925A600B14050 /* Montserrat-Bold.ttf */; };
+		84355C7522C925A600B14050 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84355C6E22C925A600B14050 /* Montserrat-SemiBold.ttf */; };
+		84355C7622C925A600B14050 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84355C6F22C925A600B14050 /* Montserrat-MediumItalic.ttf */; };
 		8436817B22BCB56300E202E1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436817A22BCB56300E202E1 /* ContainerViewController.swift */; };
 		8436C2B422C63DBD00CA8A16 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436C2B322C63DBD00CA8A16 /* ChatViewController.swift */; };
 		8436C2B622C64B1200CA8A16 /* BottomLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436C2B522C64B1200CA8A16 /* BottomLineTextField.swift */; };
@@ -54,7 +63,7 @@
 		8454B03322BD4ECD008923B3 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454B03122BD4ECD008923B3 /* FeedCell.swift */; };
 		8454B03422BD4ECD008923B3 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8454B03222BD4ECD008923B3 /* FeedCell.xib */; };
 		845B856B22BE2E0F00E1AF34 /* FeedWithTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B856A22BE2E0F00E1AF34 /* FeedWithTableViewController.swift */; };
-		845C7D2522C7B5B300872F27 /* GuestCountViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C7D2422C7B5B300872F27 /* GuestCountViewControllerExtension.swift */; };
+		845C7D2522C7B5B300872F27 /* AlertViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C7D2422C7B5B300872F27 /* AlertViewControllerExtension.swift */; };
 		845C7D2722C7B5EC00872F27 /* GuestCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C7D2622C7B5EC00872F27 /* GuestCountView.swift */; };
 		84798AF522BE6E130001C241 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84798AF422BE6E130001C241 /* ProfileData.swift */; };
 		84798AF722BE6F850001C241 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84798AF622BE6F850001C241 /* Profile.swift */; };
@@ -84,6 +93,15 @@
 		8433428122B67ABE00B80F9D /* Messaging.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messaging.storyboard; sourceTree = "<group>"; };
 		8433428322B68F0700B80F9D /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuData.swift; path = ../MenuData.swift; sourceTree = "<group>"; };
 		84334D4522BFCFDB007BB0B2 /* RoundedCornerImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerImageView.swift; sourceTree = "<group>"; };
+		84355C6522C8FBE000B14050 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		84355C6722C90FA100B14050 /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		84355C6922C925A600B14050 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		84355C6A22C925A600B14050 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		84355C6B22C925A600B14050 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		84355C6C22C925A600B14050 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		84355C6D22C925A600B14050 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		84355C6E22C925A600B14050 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		84355C6F22C925A600B14050 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
 		8436817A22BCB56300E202E1 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		8436C2B322C63DBD00CA8A16 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8436C2B522C64B1200CA8A16 /* BottomLineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomLineTextField.swift; sourceTree = "<group>"; };
@@ -122,7 +140,7 @@
 		8454B03122BD4ECD008923B3 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		8454B03222BD4ECD008923B3 /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 		845B856A22BE2E0F00E1AF34 /* FeedWithTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWithTableViewController.swift; sourceTree = "<group>"; };
-		845C7D2422C7B5B300872F27 /* GuestCountViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCountViewControllerExtension.swift; sourceTree = "<group>"; };
+		845C7D2422C7B5B300872F27 /* AlertViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewControllerExtension.swift; sourceTree = "<group>"; };
 		845C7D2622C7B5EC00872F27 /* GuestCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCountView.swift; sourceTree = "<group>"; };
 		84798AF422BE6E130001C241 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 		84798AF622BE6F850001C241 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -183,6 +201,20 @@
 				843742AF22C74B4700F0AFC9 /* PeopleData.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		84355C7722C925AE00B14050 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				84355C6D22C925A600B14050 /* Montserrat-Bold.ttf */,
+				84355C6A22C925A600B14050 /* Montserrat-BoldItalic.ttf */,
+				84355C6B22C925A600B14050 /* Montserrat-Light.ttf */,
+				84355C6C22C925A600B14050 /* Montserrat-Medium.ttf */,
+				84355C6F22C925A600B14050 /* Montserrat-MediumItalic.ttf */,
+				84355C6922C925A600B14050 /* Montserrat-Regular.ttf */,
+				84355C6E22C925A600B14050 /* Montserrat-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		84437C6F22B532D10048FC1F = {
@@ -255,6 +287,7 @@
 		84437C8F22B533870048FC1F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				84355C7722C925AE00B14050 /* Fonts */,
 				84437C8222B532D40048FC1F /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -271,8 +304,9 @@
 				842DDA7022B5594900CCBC76 /* RoundedCornerButton.swift */,
 				84E6633822B69E4300F2EDE3 /* CollectionViewCells */,
 				8454B02E22BD4E7A008923B3 /* TableViewCells */,
-				845C7D2422C7B5B300872F27 /* GuestCountViewControllerExtension.swift */,
+				845C7D2422C7B5B300872F27 /* AlertViewControllerExtension.swift */,
 				845C7D2622C7B5EC00872F27 /* GuestCountView.swift */,
+				84355C6522C8FBE000B14050 /* SuccessView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,6 +360,7 @@
 				8436EF1C22C28933006EB24E /* Message.swift */,
 				8436EF1E22C2893E006EB24E /* Notification.swift */,
 				843742B122C74F2200F0AFC9 /* Chat.swift */,
+				84355C6722C90FA100B14050 /* AlertMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -400,17 +435,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84355C7622C925A600B14050 /* Montserrat-MediumItalic.ttf in Resources */,
+				84355C7222C925A600B14050 /* Montserrat-Light.ttf in Resources */,
 				843742BA22C7634000F0AFC9 /* OutgoingChatCell.xib in Resources */,
 				843742C022C7718100F0AFC9 /* IncomingChatCell.xib in Resources */,
 				8433428022B67A0600B80F9D /* Profile.storyboard in Resources */,
 				8454B03422BD4ECD008923B3 /* FeedCell.xib in Resources */,
 				84437C8622B532D40048FC1F /* LaunchScreen.storyboard in Resources */,
+				84355C7522C925A600B14050 /* Montserrat-SemiBold.ttf in Resources */,
 				8433427E22B679FD00B80F9D /* CreateNew.storyboard in Resources */,
+				84355C7022C925A600B14050 /* Montserrat-Regular.ttf in Resources */,
 				84377BE222C1204B0077990B /* MessageCell.xib in Resources */,
+				84355C7122C925A600B14050 /* Montserrat-BoldItalic.ttf in Resources */,
+				84355C7422C925A600B14050 /* Montserrat-Bold.ttf in Resources */,
 				84437C8322B532D40048FC1F /* Assets.xcassets in Resources */,
 				8433428222B67ABE00B80F9D /* Messaging.storyboard in Resources */,
 				84437C8122B532D10048FC1F /* Main.storyboard in Resources */,
 				84377BE622C120B50077990B /* NotificationCell.xib in Resources */,
+				84355C7322C925A600B14050 /* Montserrat-Medium.ttf in Resources */,
 				8433427C22B679EF00B80F9D /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,13 +553,14 @@
 				8436EF2122C28CDD006EB24E /* NotificationData.swift in Sources */,
 				8454B01F22BD2260008923B3 /* People.swift in Sources */,
 				845B856B22BE2E0F00E1AF34 /* FeedWithTableViewController.swift in Sources */,
-				845C7D2522C7B5B300872F27 /* GuestCountViewControllerExtension.swift in Sources */,
+				845C7D2522C7B5B300872F27 /* AlertViewControllerExtension.swift in Sources */,
 				840864B622BCC4F200D96406 /* ProfileViewController.swift in Sources */,
 				84C6194E22B9397100535669 /* DropDownViewController.swift in Sources */,
 				84E6633A22B6A5CA00F2EDE3 /* RoundedButtonWithBorder.swift in Sources */,
 				84377BE422C1205B0077990B /* NotificationCell.swift in Sources */,
 				84377BE122C1204B0077990B /* MessageCell.swift in Sources */,
 				843742B222C74F2200F0AFC9 /* Chat.swift in Sources */,
+				84355C6622C8FBE000B14050 /* SuccessView.swift in Sources */,
 				84334D4622BFCFDB007BB0B2 /* RoundedCornerImageView.swift in Sources */,
 				8454B01D22BD2256008923B3 /* TimeDate.swift in Sources */,
 				8436C2B422C63DBD00CA8A16 /* ChatViewController.swift in Sources */,
@@ -536,6 +579,7 @@
 				8436EF2322C28CEA006EB24E /* MessageData.swift in Sources */,
 				84E6633522B69B8200F2EDE3 /* MenuViewController.swift in Sources */,
 				84798AFB22BE8FAB0001C241 /* AddNewViewController.swift in Sources */,
+				84355C6822C90FA100B14050 /* AlertMessage.swift in Sources */,
 				8433428422B68F0700B80F9D /* MenuData.swift in Sources */,
 				8436C2B622C64B1200CA8A16 /* BottomLineTextField.swift in Sources */,
 				8454B02122BD226B008923B3 /* Location.swift in Sources */,

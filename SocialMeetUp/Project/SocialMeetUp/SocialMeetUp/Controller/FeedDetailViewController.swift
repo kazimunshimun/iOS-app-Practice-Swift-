@@ -232,6 +232,8 @@ class FeedDetailViewController: UIViewController {
     @IBAction func joinButtonClicked(_ sender: Any) {
         print("Join button cliced")
         self.showCountDialog(onView: self.view, maxCount: feed.totalSpot - feed.joinedPeople.count - 1)
+        //self.get
+        //self.cv.
     }
     
     @IBAction func rejectButtonClicked(_ sender: Any) {
@@ -241,7 +243,51 @@ class FeedDetailViewController: UIViewController {
     @IBAction func readMoreButtonClicked(_ sender: Any) {
     }
     
+    var guestCountView : UIView?
+    var cv : GuestCountView?
     
+    func showCountDialog(onView : UIView, maxCount: Int) {
+        let countView = UIView.init(frame: onView.bounds)
+        // countView.backgroundColor = UIColor(white: 0.95, alpha: 0.95)
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        countView.addSubview(blurEffectView)
+        
+        cv = GuestCountView(frame: onView.bounds, highestStepCount: maxCount)
+        cv!.center = countView.center
+        countView.addSubview(cv!)
+        onView.addSubview(countView)
+        guestCountView = countView
+        
+        cv?.nextButton.addTarget(self, action: #selector(pressed(sender:)), for: .touchUpInside)
+    }
+    
+    func removeCountDialog() {
+        DispatchQueue.main.async {
+            self.guestCountView?.removeFromSuperview()
+            self.guestCountView = nil
+        }
+    }
+    
+    func getGuestCount() -> Int {
+        return cv!.stepCount
+    }
+    
+    @objc func pressed(sender: UIButton!) {
+        let guestCount = getGuestCount()
+        print("guest count: \(guestCount)")
+        removeCountDialog()
+        feed.isGoing = true
+        let newPeople: [People] = PeopleData.shared.getPeople(withCount: guestCount + 1)
+        feed.joinedPeople.append(contentsOf: newPeople)
+        updateJoinInfoView()
+        updateLiveChatView()
+        updateJoinedByView()
+        let alertInfo = AlertMessage(title: "You +\(guestCount) guest are going!", description: "\(dayOfWeekLabel.text!) \(feed.timeDate.fromTime) - \(feed.timeDate.toTime)", groupImage: feed.group.groupImage, message: feed.title)
+        self.showSuccessDialog(onView: self.view, alertInfo: alertInfo)
+    }
     /*
     // MARK: - Navigation
 
