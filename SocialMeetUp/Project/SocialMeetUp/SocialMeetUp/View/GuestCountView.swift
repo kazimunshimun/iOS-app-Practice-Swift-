@@ -55,7 +55,7 @@ class GuestCountView: UIView {
         titleLabel.centerXAnchor.constraint(equalTo: roundedCornerView.centerXAnchor).isActive = true
         titleLabel.text = "Bringing guests?"
         titleLabel.textColor = .white
-        titleLabel.font = UIFont.systemFont(ofSize: 26, weight: .bold)
+        titleLabel.font = UIFont(name: "Montserrat-Bold", size: 26)
         titleLabel.textAlignment = .center
         
         let stepperView = UIView()
@@ -98,7 +98,7 @@ class GuestCountView: UIView {
         countLabel.centerXAnchor.constraint(equalTo: stepperView.centerXAnchor).isActive = true
         countLabel.text = "\(stepCount)"
         countLabel.textColor = .white
-        countLabel.font = UIFont.systemFont(ofSize: 42, weight: .regular)
+        countLabel.font = UIFont(name: "Montserrat-Regular", size: 42)
         countLabel.textAlignment = .center
         
         countView.addSubview(nextButton)
@@ -110,7 +110,7 @@ class GuestCountView: UIView {
         nextButton.heightAnchor.constraint(equalToConstant: 52).isActive = true
         nextButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#8A56AC")
         nextButton.setTitle("NEXT", for: .normal)
-        nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        nextButton.titleLabel?.font = UIFont(name: "Montserrat-SemiBold", size: 14)
         nextButton.cornerRadius = 26
         
     }

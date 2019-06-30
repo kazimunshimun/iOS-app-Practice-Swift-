@@ -82,7 +82,7 @@ class ChatMessageViewCell: UITableViewCell {
         messageBackgroundView.cornerRadius = 40
         
         messageLabel.numberOfLines = 0
-        messageLabel.font = UIFont(name: "Poppins-Medium", size: 12)
+        messageLabel.font = UIFont(name: "Montserrat-Medium", size: 12)
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         let constraintsForMessageLabel = [
             messageLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),

@@ -53,7 +53,7 @@ class SuccessView: UIView {
         titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         titleLabel.text = alertInfo.title
         titleLabel.textColor = .white
-        titleLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        titleLabel.font = UIFont(name: "Montserrat-Bold", size: 24)
         titleLabel.textAlignment = .center
         
         let groupView = UIView()
@@ -81,7 +81,7 @@ class SuccessView: UIView {
         descriptionLabel.leftAnchor.constraint(equalTo: roundedImageView.rightAnchor, constant: 8).isActive = true
         descriptionLabel.text = alertInfo.description
         descriptionLabel.textColor = UIColor(white: 1.0, alpha: 0.6)
-        descriptionLabel.font = UIFont.systemFont(ofSize: 11, weight: .semibold)
+        descriptionLabel.font = UIFont(name: "Montserrat-SemiBold", size: 11)
         
         let groupNameLabel = UILabel()
         groupView.addSubview(groupNameLabel)
@@ -92,7 +92,7 @@ class SuccessView: UIView {
         groupNameLabel.text = alertInfo.message
         groupNameLabel.numberOfLines = 0
         groupNameLabel.textColor = .white
-        groupNameLabel.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        groupNameLabel.font = UIFont(name: "Montserrat-Medium", size: 14)
         
         successView.addSubview(doneButton)
         
@@ -103,7 +103,7 @@ class SuccessView: UIView {
         doneButton.heightAnchor.constraint(equalToConstant: 52).isActive = true
         doneButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#8A56AC")
         doneButton.setTitle("DONE", for: .normal)
-        doneButton.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        doneButton.titleLabel?.font = UIFont(name: "Montserrat-SemiBold", size: 14)
         doneButton.cornerRadius = 26
         
         successView.addSubview(shareButton)
@@ -116,7 +116,7 @@ class SuccessView: UIView {
         shareButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#9599B3")
         shareButton.setTitle("TELL FRIENDS", for: .normal)
         shareButton.setImage(UIImage(named: "share_icon"), for: .normal)
-        shareButton.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        shareButton.titleLabel?.font = UIFont(name: "Montserrat-SemiBold", size: 14)
         shareButton.cornerRadius = 26
         
     }
