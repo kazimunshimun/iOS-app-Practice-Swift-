@@ -676,20 +676,19 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbo-PO-w33">
-                                                        <rect key="frame" x="0.0" y="507" width="414" height="180"/>
+                                                        <rect key="frame" x="0.0" y="507" width="414" height="150"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="nXU-bh-tPR">
                                                                 <rect key="frame" x="20" y="0.0" width="24" height="24"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hosted by Joe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wu9-Rw-p1j">
-                                                                <rect key="frame" x="52" y="4" width="104" height="18"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hosted by Joe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wu9-Rw-p1j">
+                                                                <rect key="frame" x="52" y="3" width="104" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1A-Rb-7iU">
-                                                                <rect key="frame" x="20" y="55.999999999999993" width="362" height="85.333333333333314"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1A-Rb-7iU">
+                                                                <rect key="frame" x="20" y="56" width="362" height="51.333333333333343"/>
                                                                 <string key="text">New to Yoga, or looking to take your mat to practice in new places?
 
 Get to know your local community and neighbours better by joining our Yoga family.</string>
@@ -698,7 +697,7 @@ Get to know your local community and neighbours better by joining our Yoga famil
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-iB-RQD">
-                                                                <rect key="frame" x="20" y="149.33333333333337" width="67" height="27"/>
+                                                                <rect key="frame" x="20" y="115.33333333333337" width="67" height="27"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
                                                                 <state key="normal" title="Read more">
                                                                     <color key="titleColor" red="0.83137254901960778" green="0.49803921568627452" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
@@ -710,8 +709,10 @@ Get to know your local community and neighbours better by joining our Yoga famil
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
+                                                            <constraint firstItem="Wu9-Rw-p1j" firstAttribute="centerY" secondItem="nXU-bh-tPR" secondAttribute="centerY" id="Ci1-2w-Hkj"/>
                                                             <constraint firstItem="6cp-iB-RQD" firstAttribute="leading" secondItem="Mbo-PO-w33" secondAttribute="leading" constant="20" id="Oha-Az-4LJ"/>
-                                                            <constraint firstAttribute="height" constant="180" id="Sbm-wc-ueN"/>
+                                                            <constraint firstItem="Wu9-Rw-p1j" firstAttribute="leading" secondItem="nXU-bh-tPR" secondAttribute="trailing" constant="8" id="RCe-cl-JBb"/>
+                                                            <constraint firstAttribute="height" constant="150" id="Sbm-wc-ueN"/>
                                                             <constraint firstItem="nXU-bh-tPR" firstAttribute="top" secondItem="Mbo-PO-w33" secondAttribute="top" id="UAs-jW-2X6"/>
                                                             <constraint firstItem="q1A-Rb-7iU" firstAttribute="top" secondItem="nXU-bh-tPR" secondAttribute="bottom" constant="32" id="dQk-3w-pFL"/>
                                                             <constraint firstAttribute="trailing" secondItem="q1A-Rb-7iU" secondAttribute="trailing" constant="32" id="ebP-EZ-mjK"/>
@@ -721,7 +722,7 @@ Get to know your local community and neighbours better by joining our Yoga famil
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4f5-05-l0u">
-                                                        <rect key="frame" x="0.0" y="719" width="414" height="64"/>
+                                                        <rect key="frame" x="0.0" y="689" width="414" height="64"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_icon" translatesAutoresizingMaskIntoConstraints="NO" id="2Po-cp-Dnf">
                                                                 <rect key="frame" x="20" y="0.0" width="24" height="24"/>

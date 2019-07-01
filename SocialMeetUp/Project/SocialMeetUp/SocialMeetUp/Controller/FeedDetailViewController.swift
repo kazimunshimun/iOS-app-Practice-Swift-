@@ -183,6 +183,7 @@ class FeedDetailViewController: UIViewController {
     
     func updateHostView() {
         hostedByLabel.text = "Hosted by \(feed.hostedBy.name)"
+        descriptionLabel.text = feed.desccription
     }
     
     func updateLiveChatView() {
@@ -232,8 +233,6 @@ class FeedDetailViewController: UIViewController {
     @IBAction func joinButtonClicked(_ sender: Any) {
         print("Join button cliced")
         self.showCountDialog(onView: self.view, maxCount: feed.totalSpot - feed.joinedPeople.count - 1)
-        //self.get
-        //self.cv.
     }
     
     @IBAction func rejectButtonClicked(_ sender: Any) {
@@ -241,6 +240,7 @@ class FeedDetailViewController: UIViewController {
     }
     
     @IBAction func readMoreButtonClicked(_ sender: Any) {
+        self.showReadMoreDialog(onView: self.view, text: feed.desccription)
     }
     
     var guestCountView : UIView?

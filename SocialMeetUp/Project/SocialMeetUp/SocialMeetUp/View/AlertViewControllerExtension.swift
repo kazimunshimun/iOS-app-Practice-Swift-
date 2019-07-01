@@ -41,4 +41,27 @@ extension UIViewController {
     @objc func doneClicked(sender: UIButton!) {
         removeSuccessDialog()
     }
+    
+    func showReadMoreDialog(onView : UIView, text: String) {
+        let sView = UIView.init(frame: onView.bounds)
+        // countView.backgroundColor = UIColor(white: 0.95, alpha: 0.95)
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        sView.addSubview(blurEffectView)
+        
+        let sv = ReadMoreView(frame: onView.bounds, text: text)
+        sv.center = sView.center
+        sView.addSubview(sv)
+        onView.addSubview(sView)
+        successView = sView
+        
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.removeReadMoreView))
+        sView.addGestureRecognizer(gesture)
+    }
+    
+    @objc func removeReadMoreView(sender : UITapGestureRecognizer) {
+        removeSuccessDialog()
+    }
 }
