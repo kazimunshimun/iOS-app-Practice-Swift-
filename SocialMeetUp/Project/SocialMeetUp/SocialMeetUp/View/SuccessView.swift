@@ -12,6 +12,7 @@ class SuccessView: UIView {
     let shareButton = RoundedButtonWithBorder()
     let doneButton = RoundedButtonWithBorder()
     var alertInfo: AlertMessage = AlertMessage(title: "")
+    let roundedView = RoundedCornerView()
     
     
     init(frame: CGRect, alertData: AlertMessage) {
@@ -65,14 +66,29 @@ class SuccessView: UIView {
         groupView.widthAnchor.constraint(equalToConstant: 300).isActive = true
         groupView.backgroundColor = .clear
         
+        groupView.addSubview(roundedView)
+        roundedView.translatesAutoresizingMaskIntoConstraints = false
+        roundedView.topAnchor.constraint(equalTo: groupView.topAnchor, constant: 8).isActive = true
+        roundedView.leftAnchor.constraint(equalTo: groupView.leftAnchor, constant: 8).isActive = true
+        roundedView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        roundedView.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        roundedView.backgroundColor = .white
+        roundedView.cornerRadius = 35
+        
         let roundedImageView = RoundedCornerImageView()
         groupView.addSubview(roundedImageView)
         roundedImageView.translatesAutoresizingMaskIntoConstraints = false
-        roundedImageView.topAnchor.constraint(equalTo: groupView.topAnchor, constant: 8).isActive = true
-        roundedImageView.leftAnchor.constraint(equalTo: groupView.leftAnchor, constant: 8).isActive = true
+        roundedImageView.topAnchor.constraint(equalTo: groupView.topAnchor, constant: 9).isActive = true
+        roundedImageView.leftAnchor.constraint(equalTo: groupView.leftAnchor, constant: 9).isActive = true
         roundedImageView.heightAnchor.constraint(equalToConstant: 68).isActive = true
         roundedImageView.widthAnchor.constraint(equalToConstant: 68).isActive = true
-        roundedImageView.image = UIImage(named: alertInfo.groupImage!)
+        roundedImageView.cornerRadius = 34
+        if alertInfo.groupImage == nil {
+            roundedImageView.image = UIImage(named: alertInfo.groupImageName!)
+        } else {
+            roundedImageView.image = alertInfo.groupImage!
+        }
+        
         
         let descriptionLabel = UILabel()
         groupView.addSubview(descriptionLabel)
@@ -119,5 +135,12 @@ class SuccessView: UIView {
         shareButton.titleLabel?.font = UIFont(name: "Montserrat-SemiBold", size: 14)
         shareButton.cornerRadius = 26
         
+    }
+    
+    override func draw(_ rect: CGRect) {
+        roundedView.bottomLeft = true
+        roundedView.bottomRight = true
+        roundedView.topLeft = true
+        roundedView.topRight = true
     }
 }

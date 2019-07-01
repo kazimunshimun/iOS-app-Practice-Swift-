@@ -285,7 +285,7 @@ class FeedDetailViewController: UIViewController {
         updateJoinInfoView()
         updateLiveChatView()
         updateJoinedByView()
-        let alertInfo = AlertMessage(title: "You +\(guestCount) guest are going!", description: "\(dayOfWeekLabel.text!) \(feed.timeDate.fromTime) - \(feed.timeDate.toTime)", groupImage: feed.group.groupImage, message: feed.title)
+        let alertInfo = AlertMessage(title: "You +\(guestCount) guest are going!", description: "\(dayOfWeekLabel.text!) \(feed.timeDate.fromTime) - \(feed.timeDate.toTime)", groupImageName: feed.group.groupImage, message: feed.title)
         self.showSuccessDialog(onView: self.view, alertInfo: alertInfo)
     }
     /*

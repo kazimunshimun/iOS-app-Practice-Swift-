@@ -40,6 +40,7 @@ extension UIViewController {
     
     @objc func doneClicked(sender: UIButton!) {
         removeSuccessDialog()
+        dismiss(animated: true, completion: nil)
     }
     
     func showReadMoreDialog(onView : UIView, text: String) {

@@ -7,18 +7,21 @@
 //
 
 import Foundation
+import UIKit
 
 struct AlertMessage {
     let title: String?
     let description: String?
-    let groupImage: String?
+    let groupImageName: String?
     let message: String?
+    let groupImage: UIImage?
     
-    init(title: String, description: String? = nil, groupImage: String? = nil, message: String? = nil) {
+    init(title: String, description: String? = nil, groupImageName: String? = nil, message: String? = nil, groupImage: UIImage? = nil) {
         self.title = title
         self.description = description
-        self.groupImage = groupImage
+        self.groupImageName = groupImageName
         self.message = message
+        self.groupImage = groupImage
     }
     
 }
