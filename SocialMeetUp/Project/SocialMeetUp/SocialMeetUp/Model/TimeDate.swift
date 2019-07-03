@@ -12,5 +12,4 @@ struct TimeDate {
     let dayOfWeek: String
     let fromTime: String
     let toTime: String
-    let isToday: Bool
 }
