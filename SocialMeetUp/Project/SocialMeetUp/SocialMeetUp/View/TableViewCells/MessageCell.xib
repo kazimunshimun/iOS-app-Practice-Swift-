@@ -115,7 +115,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUm-rA-Y5n">
-                        <rect key="frame" x="80" y="55" width="315" height="37"/>
+                        <rect key="frame" x="80" y="52" width="315" height="37"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3q-9T-3sf">
                                 <rect key="frame" x="0.0" y="0.0" width="269" height="17.5"/>
@@ -171,7 +171,7 @@
                     <constraint firstItem="KMx-ZW-gXs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-1" id="O89-yz-SWh"/>
                     <constraint firstAttribute="trailing" secondItem="dAM-5H-ufe" secondAttribute="trailing" constant="16" id="Pe8-QX-Sno"/>
                     <constraint firstItem="qX3-fj-V6n" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QK5-mF-fS7"/>
-                    <constraint firstItem="rUm-rA-Y5n" firstAttribute="top" secondItem="dAM-5H-ufe" secondAttribute="bottom" constant="11" id="Rla-aI-9io"/>
+                    <constraint firstItem="rUm-rA-Y5n" firstAttribute="top" secondItem="dAM-5H-ufe" secondAttribute="bottom" constant="8" id="Rla-aI-9io"/>
                     <constraint firstItem="dAM-5H-ufe" firstAttribute="top" secondItem="qX3-fj-V6n" secondAttribute="top" id="gkA-pV-PCn"/>
                     <constraint firstItem="qX3-fj-V6n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="ltS-fR-s0O"/>
                     <constraint firstItem="rUm-rA-Y5n" firstAttribute="leading" secondItem="dAM-5H-ufe" secondAttribute="leading" id="ogJ-wS-qmX"/>

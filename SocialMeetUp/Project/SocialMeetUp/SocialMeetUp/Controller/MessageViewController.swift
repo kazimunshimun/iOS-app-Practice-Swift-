@@ -8,50 +8,45 @@
 
 import UIKit
 
-class MessageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    var messageList: [Message] = []
+class MessageViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var messageTableView: UITableView!
+    
+    let dataSource = MessageDataSource()
+    lazy var viewModel : MessageViewModel = {
+        let viewModel = MessageViewModel(dataSource: dataSource)
+        return viewModel
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupViews()
+    }
+    
+    func setupViews() {
         self.messageTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "messageCell")
         self.messageTableView.delegate = self
-        self.messageTableView.dataSource = self
+        self.messageTableView.dataSource = self.dataSource
         
-        loadMessages()
+        self.dataSource.data.addAndNotify(observer: self) { [weak self] _ in
+            self?.messageTableView.reloadData()
+            if (self?.dataSource.data.value.count)! > 0 {
+                let nextMessage = self?.dataSource.data.value[0]
+                
+                if nextMessage!.isRead {
+                    self?.view.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#241332")
+                } else {
+                    self?.view.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#8A56AC")
+                }
+            }
+        }
+        self.viewModel.fetchMessages()
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
         navigationController!.popViewController(animated: true)
-    }
-    
-    func loadMessages() {
-        DispatchQueue.global(qos: .userInitiated).async {
-            MessageData.shared.getMessages() { messages in
-                DispatchQueue.main.async {
-                    self.messageList = messages
-                    self.messageTableView.reloadData()
-                    
-                    if messages.count > 0 {
-                        let nextMessage = messages[0]
-                        
-                        if nextMessage.isRead {
-                            self.view.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#241332")
-                        } else {
-                            self.view.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#8A56AC")
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return messageList.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -59,48 +54,9 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cellWidth;
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageCell
-
-        let message = messageList[indexPath.row]
-        
-        cell.profileImageView.image = UIImage(named: message.sender.imageName)
-        cell.nameLabel.text = message.sender.name
-        cell.titleLabel.text = message.title
-        cell.timeAgoLabel.text = message.sentTimeAgo
-        
-        var cellBackgroundColor: UIColor
-        if message.isRead {
-            cellBackgroundColor = ColorUtils.hexStringToUIColor(hex: "#241332")
-            cell.unreadMessageView.isHidden = true
-        } else {
-            cellBackgroundColor = ColorUtils.hexStringToUIColor(hex: "#8A56AC")
-            cell.unreadMessageView.isHidden = false
-            cell.unreadMessageCountLabel.text = "\(message.unreadMessageCount)"
-        }
-        cell.roundedCornerView.backgroundColor = cellBackgroundColor
-        
-        if indexPath.row + 1 < messageList.count {
-            let nextMessage = messageList[indexPath.row + 1]
-            
-            if nextMessage.isRead {
-                cell.contentView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#241332")
-            } else {
-                cell.contentView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#8A56AC")
-            }
-        }
-        
-        
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = cellBackgroundColor
-        cell.selectedBackgroundView = backgroundView
-        
-        return cell
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("feed detail request view clicked")
-        let message = messageList[indexPath.row]
+        let message = self.dataSource.data.value[indexPath.row]
         let storyBoard: UIStoryboard = UIStoryboard(name: "Messaging", bundle: nil)
         let chatViewController = storyBoard.instantiateViewController(withIdentifier: "chatView") as! ChatViewController
         chatViewController.topic = message.title

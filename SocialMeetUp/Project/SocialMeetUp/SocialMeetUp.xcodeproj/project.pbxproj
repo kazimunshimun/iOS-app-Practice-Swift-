@@ -50,6 +50,9 @@
 		84377BE622C120B50077990B /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84377BE522C120B50077990B /* NotificationCell.xib */; };
 		843D84FD22CD092E001344CE /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D84FC22CD092E001344CE /* DynamicValue.swift */; };
 		843D84FF22CD0A75001344CE /* FeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D84FE22CD0A75001344CE /* FeedDataSource.swift */; };
+		843D850122CD13B2001344CE /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D850022CD13B2001344CE /* GenericDataSource.swift */; };
+		843D850322CD1411001344CE /* MessageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D850222CD1411001344CE /* MessageDataSource.swift */; };
+		843D850522CD14D6001344CE /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D850422CD14D6001344CE /* MessageViewModel.swift */; };
 		84437C7C22B532D10048FC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84437C7B22B532D10048FC1F /* AppDelegate.swift */; };
 		84437C7E22B532D10048FC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84437C7D22B532D10048FC1F /* ViewController.swift */; };
 		84437C8122B532D10048FC1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84437C7F22B532D10048FC1F /* Main.storyboard */; };
@@ -128,6 +131,9 @@
 		84377BE522C120B50077990B /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
 		843D84FC22CD092E001344CE /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
 		843D84FE22CD0A75001344CE /* FeedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataSource.swift; sourceTree = "<group>"; };
+		843D850022CD13B2001344CE /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		843D850222CD1411001344CE /* MessageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDataSource.swift; sourceTree = "<group>"; };
+		843D850422CD14D6001344CE /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		84437C7822B532D10048FC1F /* SocialMeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84437C7B22B532D10048FC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84437C7D22B532D10048FC1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -332,6 +338,9 @@
 				8454B02922BD4985008923B3 /* FeedViewModel.swift */,
 				84798AF822BE71BD0001C241 /* ProfileViewModel.swift */,
 				843D84FE22CD0A75001344CE /* FeedDataSource.swift */,
+				843D850022CD13B2001344CE /* GenericDataSource.swift */,
+				843D850222CD1411001344CE /* MessageDataSource.swift */,
+				843D850422CD14D6001344CE /* MessageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -556,6 +565,7 @@
 				84437C7E22B532D10048FC1F /* ViewController.swift in Sources */,
 				8436817B22BCB56300E202E1 /* ContainerViewController.swift in Sources */,
 				8454B02322BD2282008923B3 /* Group.swift in Sources */,
+				843D850522CD14D6001344CE /* MessageViewModel.swift in Sources */,
 				84798AFD22BE8FD70001C241 /* MessageViewController.swift in Sources */,
 				843D84FD22CD092E001344CE /* DynamicValue.swift in Sources */,
 				84E6633C22B6AA3A00F2EDE3 /* RoundedBackgroundLabel.swift in Sources */,
@@ -568,6 +578,7 @@
 				840864B622BCC4F200D96406 /* ProfileViewController.swift in Sources */,
 				84C6194E22B9397100535669 /* DropDownViewController.swift in Sources */,
 				84E6633A22B6A5CA00F2EDE3 /* RoundedButtonWithBorder.swift in Sources */,
+				843D850122CD13B2001344CE /* GenericDataSource.swift in Sources */,
 				84377BE422C1205B0077990B /* NotificationCell.swift in Sources */,
 				84377BE122C1204B0077990B /* MessageCell.swift in Sources */,
 				843742B222C74F2200F0AFC9 /* Chat.swift in Sources */,
@@ -597,6 +608,7 @@
 				84E6633E22B6AC1400F2EDE3 /* MenuProfileCell.swift in Sources */,
 				843742B922C7634000F0AFC9 /* OutgoingChatCell.swift in Sources */,
 				842DDA7122B5594900CCBC76 /* RoundedCornerButton.swift in Sources */,
+				843D850322CD1411001344CE /* MessageDataSource.swift in Sources */,
 				843D84FF22CD0A75001344CE /* FeedDataSource.swift in Sources */,
 				84798AF522BE6E130001C241 /* ProfileData.swift in Sources */,
 				8454B02722BD31F7008923B3 /* ColorUtils.swift in Sources */,

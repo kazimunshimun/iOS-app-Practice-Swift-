@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedWithTableViewController: UIViewController, UITableViewDelegate/*, UITableViewDataSource*/{
+class FeedWithTableViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var feedTableView: UITableView!
     

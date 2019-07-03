@@ -28,7 +28,7 @@ final internal class MessageData {
             }
             let message = Message(id: "00\(i)", people: senders[i], title: title, sentTimeAgo: timeAgo[i], isRead: isRead)
             if !isRead {
-                message.unreadMessageCount = (11 + i) % 5
+                message.unreadMessageCount = Int(arc4random()) % 19
             }
             messages.append(message)
             

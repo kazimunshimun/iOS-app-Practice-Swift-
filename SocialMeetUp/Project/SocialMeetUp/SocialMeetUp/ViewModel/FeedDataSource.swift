@@ -9,10 +9,6 @@
 import Foundation
 import UIKit
 
-class GenericDataSource<T> : NSObject {
-    var data: DynamicValue<[T]> = DynamicValue([])
-}
-
 class FeedDataSource : GenericDataSource<Feed>, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
