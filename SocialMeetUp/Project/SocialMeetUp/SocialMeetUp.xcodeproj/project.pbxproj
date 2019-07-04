@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		23C90EAFB4F1D0639A852017 /* Pods_SocialMeetUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB9A1B809F0717EE37986B6 /* Pods_SocialMeetUp.framework */; };
 		840864B622BCC4F200D96406 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840864B522BCC4F200D96406 /* ProfileViewController.swift */; };
-		840864B822BCC50500D96406 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840864B722BCC50500D96406 /* FeedViewController.swift */; };
 		842DDA7122B5594900CCBC76 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DDA7022B5594900CCBC76 /* RoundedCornerButton.swift */; };
 		842DDA7522B55EBE00CCBC76 /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DDA7422B55EBE00CCBC76 /* RoundedCornerView.swift */; };
 		8432EE3B22CA5A2E00EFEDE0 /* ReadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432EE3A22CA5A2E00EFEDE0 /* ReadMoreView.swift */; };
@@ -57,6 +56,8 @@
 		843D850922CD1D80001344CE /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D850822CD1D80001344CE /* NotificationViewModel.swift */; };
 		844032EE22CE3F54003F9B53 /* ChatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844032ED22CE3F54003F9B53 /* ChatDataSource.swift */; };
 		844032F022CE3F66003F9B53 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844032EF22CE3F66003F9B53 /* ChatViewModel.swift */; };
+		844032F222CE5514003F9B53 /* MenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844032F122CE5514003F9B53 /* MenuDataSource.swift */; };
+		844032F422CE551F003F9B53 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844032F322CE551F003F9B53 /* MenuViewModel.swift */; };
 		84437C7C22B532D10048FC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84437C7B22B532D10048FC1F /* AppDelegate.swift */; };
 		84437C7E22B532D10048FC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84437C7D22B532D10048FC1F /* ViewController.swift */; };
 		84437C8122B532D10048FC1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84437C7F22B532D10048FC1F /* Main.storyboard */; };
@@ -94,7 +95,6 @@
 /* Begin PBXFileReference section */
 		74D630A573A96EE9E6942F2D /* Pods-SocialMeetUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMeetUp.release.xcconfig"; path = "Target Support Files/Pods-SocialMeetUp/Pods-SocialMeetUp.release.xcconfig"; sourceTree = "<group>"; };
 		840864B522BCC4F200D96406 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		840864B722BCC50500D96406 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		842DDA7022B5594900CCBC76 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
 		842DDA7422B55EBE00CCBC76 /* RoundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
 		8432EE3A22CA5A2E00EFEDE0 /* ReadMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMoreView.swift; sourceTree = "<group>"; };
@@ -142,6 +142,8 @@
 		843D850822CD1D80001344CE /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		844032ED22CE3F54003F9B53 /* ChatDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataSource.swift; sourceTree = "<group>"; };
 		844032EF22CE3F66003F9B53 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		844032F122CE5514003F9B53 /* MenuDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDataSource.swift; sourceTree = "<group>"; };
+		844032F322CE551F003F9B53 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		84437C7822B532D10048FC1F /* SocialMeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84437C7B22B532D10048FC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84437C7D22B532D10048FC1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -280,7 +282,6 @@
 				84C6194D22B9397100535669 /* DropDownViewController.swift */,
 				8436817A22BCB56300E202E1 /* ContainerViewController.swift */,
 				840864B522BCC4F200D96406 /* ProfileViewController.swift */,
-				840864B722BCC50500D96406 /* FeedViewController.swift */,
 				845B856A22BE2E0F00E1AF34 /* FeedWithTableViewController.swift */,
 				84798AFA22BE8FAB0001C241 /* AddNewViewController.swift */,
 				84798AFC22BE8FD70001C241 /* MessageViewController.swift */,
@@ -353,6 +354,8 @@
 				843D850822CD1D80001344CE /* NotificationViewModel.swift */,
 				844032ED22CE3F54003F9B53 /* ChatDataSource.swift */,
 				844032EF22CE3F66003F9B53 /* ChatViewModel.swift */,
+				844032F122CE5514003F9B53 /* MenuDataSource.swift */,
+				844032F322CE551F003F9B53 /* MenuViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -511,6 +515,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,6 +591,7 @@
 				84798AF922BE71BD0001C241 /* ProfileViewModel.swift in Sources */,
 				8436EF2122C28CDD006EB24E /* NotificationData.swift in Sources */,
 				8454B01F22BD2260008923B3 /* People.swift in Sources */,
+				844032F422CE551F003F9B53 /* MenuViewModel.swift in Sources */,
 				845B856B22BE2E0F00E1AF34 /* FeedWithTableViewController.swift in Sources */,
 				845C7D2522C7B5B300872F27 /* AlertViewControllerExtension.swift in Sources */,
 				840864B622BCC4F200D96406 /* ProfileViewController.swift in Sources */,
@@ -608,7 +614,6 @@
 				843742AE22C74B3E00F0AFC9 /* ChatData.swift in Sources */,
 				8454B01B22BD17E4008923B3 /* FeedData.swift in Sources */,
 				84798AFF22BE90670001C241 /* NotificationViewController.swift in Sources */,
-				840864B822BCC50500D96406 /* FeedViewController.swift in Sources */,
 				8436EF1D22C28933006EB24E /* Message.swift in Sources */,
 				845C7D2722C7B5EC00872F27 /* GuestCountView.swift in Sources */,
 				84437C7C22B532D10048FC1F /* AppDelegate.swift in Sources */,
@@ -628,6 +633,7 @@
 				843D84FF22CD0A75001344CE /* FeedDataSource.swift in Sources */,
 				84798AF522BE6E130001C241 /* ProfileData.swift in Sources */,
 				8454B02722BD31F7008923B3 /* ColorUtils.swift in Sources */,
+				844032F222CE5514003F9B53 /* MenuDataSource.swift in Sources */,
 				84E6633722B69E3F00F2EDE3 /* MenuCell.swift in Sources */,
 				8454B02A22BD4985008923B3 /* FeedViewModel.swift in Sources */,
 				84798AF722BE6F850001C241 /* Profile.swift in Sources */,

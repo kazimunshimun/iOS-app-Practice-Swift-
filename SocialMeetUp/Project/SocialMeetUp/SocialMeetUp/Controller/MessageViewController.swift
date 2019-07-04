@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import ViewAnimator
 
 class MessageViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var messageTableView: UITableView!
+    private let animations = [AnimationType.from(direction: .top, offset: 30.0)]
     
     let dataSource = MessageDataSource()
     lazy var viewModel : MessageViewModel = {
@@ -41,6 +43,8 @@ class MessageViewController: UIViewController, UITableViewDelegate {
                     self?.view.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#8A56AC")
                 }
             }
+            UIView.animate(views: (self?.messageTableView.visibleCells)!, animations: self!.animations, completion: nil)
+            
         }
         self.viewModel.fetchMessages()
     }

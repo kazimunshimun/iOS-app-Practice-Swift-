@@ -9,7 +9,6 @@
 import UIKit
 
 protocol MenuPageDelegate {
-    func numberOfPage(count: Int)
     func selectedPageIndex(index: Int)
 }
 
@@ -89,8 +88,6 @@ class ContainerViewController: UIPageViewController, UIPageViewControllerDataSou
         // Do any additional setup after loading the view.
         self.dataSource = self
         self.delegate = self
-        
-        pageDelegate?.numberOfPage(count: orderedViewController.count)
         
         if let firstVC = orderedViewController.first {
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)

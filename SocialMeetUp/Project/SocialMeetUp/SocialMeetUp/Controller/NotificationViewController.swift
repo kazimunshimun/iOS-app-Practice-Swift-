@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import ViewAnimator
 
 class NotificationViewController: UIViewController, UITableViewDelegate {
 
-   // var notifications: [Notifiation] = []
+    private let animations = [AnimationType.from(direction: .top, offset: 30.0)]
+
     let dataSource = NotificationDataSource()
     lazy var viewModel : NotificationViewModel = {
         let viewModel = NotificationViewModel(dataSource: dataSource)
@@ -41,6 +43,7 @@ class NotificationViewController: UIViewController, UITableViewDelegate {
                 } else {
                     self?.view.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#D47FA6")
                 }
+                UIView.animate(views: (self?.notificationTableView.visibleCells)!, animations: self!.animations, completion: nil)
             }
         }
         self.viewModel.fetchNotifiations()

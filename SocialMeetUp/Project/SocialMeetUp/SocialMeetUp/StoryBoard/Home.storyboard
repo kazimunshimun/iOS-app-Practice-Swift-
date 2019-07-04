@@ -300,7 +300,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyd-rj-2hW" customClass="RoundedButtonWithBorder" customModule="SocialMeetUp" customModuleProvider="target">
-                                                    <rect key="frame" x="7.6666666666666679" y="8" width="48" height="48"/>
+                                                    <rect key="frame" x="8" y="8" width="48" height="48"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trending_menu" translatesAutoresizingMaskIntoConstraints="NO" id="IBE-g3-pKX">
                                                             <rect key="frame" x="13" y="17.666666666666668" width="22" height="13"/>
@@ -327,7 +327,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JK-zK-zGZ" customClass="RoundedBackgroundLabel" customModule="SocialMeetUp" customModuleProvider="target">
-                                                    <rect key="frame" x="35" y="0.0" width="24" height="20"/>
+                                                    <rect key="frame" x="35.666666666666664" y="0.0" width="24" height="20"/>
                                                     <color key="backgroundColor" red="0.58431372550000005" green="0.59999999999999998" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="Hcr-3f-as7"/>
@@ -343,7 +343,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tr-gl-3I2">
-                                                    <rect key="frame" x="19" y="63.999999999999993" width="25.333333333333329" height="14.666666666666664"/>
+                                                    <rect key="frame" x="19.333333333333336" y="63.999999999999993" width="25.333333333333336" height="14.666666666666664"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -374,7 +374,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lr-rM-7sh" customClass="RoundedButtonWithBorder" customModule="SocialMeetUp" customModuleProvider="target">
-                                                    <rect key="frame" x="8.6666666666666643" y="8" width="48" height="48"/>
+                                                    <rect key="frame" x="8" y="8" width="48" height="48"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trending_menu" translatesAutoresizingMaskIntoConstraints="NO" id="GXJ-CJ-XjE">
                                                             <rect key="frame" x="14" y="18.666666666666668" width="20" height="11"/>
@@ -405,7 +405,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRENDING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAA-3U-OEw">
-                                                    <rect key="frame" x="2.0000000000000036" y="63.999999999999993" width="61.333333333333343" height="13.666666666666664"/>
+                                                    <rect key="frame" x="1.3333333333333321" y="63.999999999999993" width="61.333333333333343" height="13.666666666666664"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -445,34 +445,6 @@
             </objects>
             <point key="canvasLocation" x="676.81159420289862" y="138.61607142857142"/>
         </scene>
-        <!--Feed View Controller-->
-        <scene sceneID="vne-IP-V6x">
-            <objects>
-                <tableViewController storyboardIdentifier="feedTableView" id="JEZ-q4-AGd" customClass="FeedViewController" customModule="SocialMeetUp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KNV-LG-9Ng">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="B6o-dU-2L7">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B6o-dU-2L7" id="1cz-o5-9AA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="JEZ-q4-AGd" id="IDg-uW-v67"/>
-                            <outlet property="delegate" destination="JEZ-q4-AGd" id="uHf-bs-idK"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSf-rr-SPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1514" y="139"/>
-        </scene>
         <!--Feed With Table View Controller-->
         <scene sceneID="O8x-cl-OAF">
             <objects>
@@ -501,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mpq-g4-j7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2442.0289855072465" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1561" y="138"/>
         </scene>
         <!--Container View Controller-->
         <scene sceneID="egP-JQ-eiM">

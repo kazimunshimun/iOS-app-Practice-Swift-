@@ -7,10 +7,12 @@
 //
 
 import UIKit
-//import Hero
+import ViewAnimator
 
 class MenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MenuPageDelegate, DropdownMenuDelegate {
 
+    private let animations = [AnimationType.from(direction: .right, offset: 30.0)]
+    
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var menuCollectionView: UICollectionView!
     
@@ -48,6 +50,8 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     self.menuList = menus
                     self.menuCollectionView.reloadData()
                     self.collectionView(self.menuCollectionView, didSelectItemAt: IndexPath(row: 0, section: 0))
+    
+                    UIView.animate(views: self.menuCollectionView.visibleCells, animations: self.animations, completion: nil)
                 }
             }
         }
@@ -115,25 +119,10 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
     }
     
-    func numberOfPage(count: Int) {
-        //pageControl.numberOfPages = count
-    }
-    
     func selectedPageIndex(index: Int) {
         //pageControl.currentPage = index
         print("selected menu index: \(index) previous selected index \(previosSelectedIndex)")
         if menuList.count > 0 {
-            /*
-            let selectedMenu = menuList[index]
-            
-            if index == 0 {
-                topView.backgroundColor = .clear
-                //topConstraintForChildren.constant = -84
-            } else {
-                topView.backgroundColor = selectedMenu.menuSelectedColor
-                //topConstraintForChildren.constant = 0
-            }
-            */
             menuList[index].isSelected = true
             if previosSelectedIndex == -1 {
                 previosSelectedIndex = index
@@ -149,7 +138,6 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func selectedMenuIndex(index: IndexPath) {
-       // self.menuCollectionView.selectItem(at: index, animated: true, scrollPosition: .centeredHorizontally)
         self.collectionView(self.menuCollectionView, didSelectItemAt: index)
     }
 }

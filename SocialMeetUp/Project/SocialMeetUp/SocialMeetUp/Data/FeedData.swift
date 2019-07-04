@@ -88,8 +88,8 @@ final internal class FeedData {
                                 .MUSIC, .MUSIC, .MUSIC, .SPORTS, .SPORTS, .LEARNING, .LEARNING]
     
     let feedColors: [UIColor] = [ColorUtils.hexStringToUIColor(hex: "#D47FA6"),
-                                 ColorUtils.hexStringToUIColor(hex: "#8A56AC"),
                                  ColorUtils.hexStringToUIColor(hex: "#241332"),
+                                 ColorUtils.hexStringToUIColor(hex: "#8A56AC"),
                                  ColorUtils.hexStringToUIColor(hex: "#B4C55B"),
                                  ColorUtils.hexStringToUIColor(hex: "#417623"),
                                  ColorUtils.hexStringToUIColor(hex: "#52912E"),

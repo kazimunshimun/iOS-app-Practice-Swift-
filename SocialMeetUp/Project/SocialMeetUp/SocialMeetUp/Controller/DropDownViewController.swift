@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ViewAnimator
 
 protocol DropdownMenuDelegate {
     func selectedMenuIndex(index: IndexPath)
@@ -14,6 +15,8 @@ protocol DropdownMenuDelegate {
 
 class DropDownViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    private let animations = [AnimationType.from(direction: .right, offset: 30.0)]
+    
     @IBOutlet weak var menuCollectionView: UICollectionView!
     var menuList: [Menu] = []
     
@@ -44,6 +47,7 @@ class DropDownViewController: UIViewController, UICollectionViewDelegate, UIColl
                 }
             }
         }
+        UIView.animate(views: self.menuCollectionView.visibleCells, animations: self.animations, completion: nil)
     }
     
     // MARK: - Collection View Data Source
@@ -76,14 +80,5 @@ class DropDownViewController: UIViewController, UICollectionViewDelegate, UIColl
         menuDelegate?.selectedMenuIndex(index: indexPath)
         dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

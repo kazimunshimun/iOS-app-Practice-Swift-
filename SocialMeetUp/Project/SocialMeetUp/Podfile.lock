@@ -70,6 +70,7 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - SkyFloatingLabelTextField (3.7.0)
+  - ViewAnimator (2.5.1)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -77,6 +78,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - SkyFloatingLabelTextField (~> 3.0)
+  - ViewAnimator
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -93,6 +95,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - nanopb
     - SkyFloatingLabelTextField
+    - ViewAnimator
 
 SPEC CHECKSUMS:
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
@@ -108,7 +111,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
+  ViewAnimator: 173932c659a43c5a15c665878750d92801ae2cf1
 
-PODFILE CHECKSUM: ecd92896ce36ef5126ebc001f6ddfda82aa35c48
+PODFILE CHECKSUM: 450622b4b4299282c004f83ba1fcec67304a77f9
 
 COCOAPODS: 1.6.0

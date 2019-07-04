@@ -90,22 +90,11 @@ class AddNewViewController: UIViewController, UIImagePickerControllerDelegate, U
         let groupName = groupNameTextField.text
         let alertInfo = AlertMessage(title: "Group Created", description: locationNameLabel.text!, groupImageName: "", message: groupName, groupImage: groupImage)
         self.showSuccessDialog(onView: self.view, alertInfo: alertInfo)
-        
-        //dismiss(animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         groupImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
