@@ -55,6 +55,8 @@
 		843D850522CD14D6001344CE /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D850422CD14D6001344CE /* MessageViewModel.swift */; };
 		843D850722CD1D49001344CE /* NotificationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D850622CD1D49001344CE /* NotificationDataSource.swift */; };
 		843D850922CD1D80001344CE /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D850822CD1D80001344CE /* NotificationViewModel.swift */; };
+		844032EE22CE3F54003F9B53 /* ChatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844032ED22CE3F54003F9B53 /* ChatDataSource.swift */; };
+		844032F022CE3F66003F9B53 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844032EF22CE3F66003F9B53 /* ChatViewModel.swift */; };
 		84437C7C22B532D10048FC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84437C7B22B532D10048FC1F /* AppDelegate.swift */; };
 		84437C7E22B532D10048FC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84437C7D22B532D10048FC1F /* ViewController.swift */; };
 		84437C8122B532D10048FC1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84437C7F22B532D10048FC1F /* Main.storyboard */; };
@@ -138,6 +140,8 @@
 		843D850422CD14D6001344CE /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		843D850622CD1D49001344CE /* NotificationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDataSource.swift; sourceTree = "<group>"; };
 		843D850822CD1D80001344CE /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		844032ED22CE3F54003F9B53 /* ChatDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataSource.swift; sourceTree = "<group>"; };
+		844032EF22CE3F66003F9B53 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		84437C7822B532D10048FC1F /* SocialMeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84437C7B22B532D10048FC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84437C7D22B532D10048FC1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -347,6 +351,8 @@
 				843D850422CD14D6001344CE /* MessageViewModel.swift */,
 				843D850622CD1D49001344CE /* NotificationDataSource.swift */,
 				843D850822CD1D80001344CE /* NotificationViewModel.swift */,
+				844032ED22CE3F54003F9B53 /* ChatDataSource.swift */,
+				844032EF22CE3F66003F9B53 /* ChatViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -571,6 +577,7 @@
 				84437C7E22B532D10048FC1F /* ViewController.swift in Sources */,
 				8436817B22BCB56300E202E1 /* ContainerViewController.swift in Sources */,
 				8454B02322BD2282008923B3 /* Group.swift in Sources */,
+				844032F022CE3F66003F9B53 /* ChatViewModel.swift in Sources */,
 				843D850522CD14D6001344CE /* MessageViewModel.swift in Sources */,
 				84798AFD22BE8FD70001C241 /* MessageViewController.swift in Sources */,
 				843D84FD22CD092E001344CE /* DynamicValue.swift in Sources */,
@@ -593,6 +600,7 @@
 				84334D4622BFCFDB007BB0B2 /* RoundedCornerImageView.swift in Sources */,
 				8454B01D22BD2256008923B3 /* TimeDate.swift in Sources */,
 				8436C2B422C63DBD00CA8A16 /* ChatViewController.swift in Sources */,
+				844032EE22CE3F54003F9B53 /* ChatDataSource.swift in Sources */,
 				843742BF22C7718100F0AFC9 /* IncomingChatCell.swift in Sources */,
 				8436EF1F22C2893E006EB24E /* Notification.swift in Sources */,
 				8454B02522BD228B008923B3 /* Feed.swift in Sources */,

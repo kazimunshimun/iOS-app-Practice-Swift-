@@ -145,13 +145,7 @@ class FeedDetailViewController: UIViewController {
         let customDateFormatter = DateFormatter()
         let weekday = NSCalendar.current.component(.weekday, from: Date())
         let today = customDateFormatter.weekdaySymbols[weekday - 1]
-        /*
-        if feed.timeDate.isToday {
-            dayOfWeekLabel.text = "Today"
-        } else {
-            dayOfWeekLabel.text = feed.timeDate.dayOfWeek
-        }
-        */
+
         if today.caseInsensitiveCompare(feed.timeDate.dayOfWeek) == .orderedSame {
             dayOfWeekLabel.text = "Today"
         } else {

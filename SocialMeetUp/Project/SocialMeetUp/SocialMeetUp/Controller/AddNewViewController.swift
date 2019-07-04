@@ -68,19 +68,6 @@ class AddNewViewController: UIViewController, UIImagePickerControllerDelegate, U
                     self.locationNameLabel.text = "\(gmsResultFirst.locality!), \(gmsResultFirst.administrativeArea!)"
                 }
             }
-        //print(marker.position)
-        /*
-         let gmsAddress: GMSAddress = gmsReverseGeocodeResponse.firstResult()
-         print("\ncoordinate.latitude=\(gmsAddress.coordinate.latitude)")
-         print("coordinate.longitude=\(gmsAddress.coordinate.longitude)")
-         print("thoroughfare=\(gmsAddress.thoroughfare)")
-         print("locality=\(gmsAddress.locality)")
-         print("subLocality=\(gmsAddress.subLocality)")
-         print("administrativeArea=\(gmsAddress.administrativeArea)")
-         print("postalCode=\(gmsAddress.postalCode)")
-         print("country=\(gmsAddress.country)")
-         print("lines=\(gmsAddress.lines)")
- */
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
