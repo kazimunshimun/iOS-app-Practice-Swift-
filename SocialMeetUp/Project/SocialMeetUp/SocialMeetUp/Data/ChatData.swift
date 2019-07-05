@@ -11,7 +11,9 @@ import Foundation
 final internal class ChatData {
     static let shared = ChatData()
     
-    let titles: [String] = ["Hello", "what is the best time to visit Rio de Janeiro?", "March is one of the best months to visit Rio. You can enjoy the beach and many of the attractions. ", "And what about Carnival time?", "Oh sure, late February or first days of March, a reason why accommodation fetches its highest  prices. ", "but is it safe?", "Of course it’s safe to visit, but visitors just have to have street smarts and their wits about them more so than in almost any other major city in the world. ", "Hi everyone!", "Thank you very much", "you got it!", "Talk to you later.", "Good bye"]
+    let titles: [String] = ["Hello", "what is the best time to visit Rio de Janeiro?", "March is one of the best months to visit Rio. You can enjoy the beach and many of the attractions.", "And what about Carnival time?", "Oh sure, late February or first days of March, a reason why accommodation fetches its highest  prices.", "but is it safe?", "Of course it’s safe to visit, but visitors just have to have street smarts and their wits about them more so than in almost any other major city in the world.", "Thank you very much", "you got it!", "Talk to you later.", "Good bye"]
+    
+    let isSenderList: [Bool] = [true, true, false, true, false, true, false, true, false, true, false]
     
     var currentSender: People {
         return People(id: "013", name: "Ema Poter", imageName: "profile_ava")
@@ -35,7 +37,8 @@ final internal class ChatData {
         for i in 0..<titles.count {
             let title = titles[i]
             let user = sendersOnlyTwo.random()!
-            let isIncoming = user.name == senderName
+            //let isIncoming = user.name == senderName
+            let isIncoming = isSenderList[i]
             let chat = Chat(id: "00\(i)", profile: user, text: title, isIncoming: isIncoming)
             chats.append(chat)
         }

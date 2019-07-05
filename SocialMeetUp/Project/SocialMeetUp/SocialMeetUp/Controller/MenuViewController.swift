@@ -33,6 +33,12 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         menuCollectionView.delegate = self
         menuCollectionView.dataSource = self
         loadMenus()
+        
+        self.showSpinner(onView: self.view)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+            [weak self] in
+            self?.removeSpinner()
+        }
     }
     
     @IBAction func dropDownButtonClicked(_ sender: Any) {
@@ -54,6 +60,26 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     UIView.animate(views: self.menuCollectionView.visibleCells, animations: self.animations, completion: nil)
                 }
             }
+        }
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeDown.direction = .down
+        self.view.addGestureRecognizer(swipeDown)
+    }
+    
+    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
+        if gesture.direction == UISwipeGestureRecognizer.Direction.right {
+            print("Swipe Right")
+        }
+        else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
+            print("Swipe Left")
+        }
+        else if gesture.direction == UISwipeGestureRecognizer.Direction.up {
+            print("Swipe Up")
+        }
+        else if gesture.direction == UISwipeGestureRecognizer.Direction.down {
+            print("Swipe Down")
+            dropDownButtonClicked(NSObject())
         }
     }
     

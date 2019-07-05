@@ -8,9 +8,10 @@
 
 import UIKit
 import GoogleMaps
+import LTMorphingLabel
 
 
-class FeedDetailViewController: UIViewController {
+class FeedDetailViewController: UIViewController, LTMorphingLabelDelegate {
 
     var feed: Feed!
     
@@ -32,7 +33,10 @@ class FeedDetailViewController: UIViewController {
     
     //Join request view
     @IBOutlet weak var joinBackgroundView: RoundedButtonWithBorder!
-    @IBOutlet weak var joinQuestionLabel: UILabel!
+    
+    @IBOutlet weak var joinQuestionLabel: LTMorphingLabel!
+    
+    
     @IBOutlet weak var spotLeftLabel: UILabel!
     @IBOutlet weak var noJoinButton: UIButton!
     @IBOutlet weak var yesJoinButton: UIButton!
@@ -86,6 +90,8 @@ class FeedDetailViewController: UIViewController {
         topView.backgroundColor = feed.feedColor
         titleLabel.text = feed.title
         
+        joinQuestionLabel.delegate = self
+        
         updateJoinedByView()
         updateGroupInfoView()
         updateJoinInfoView()
@@ -135,9 +141,24 @@ class FeedDetailViewController: UIViewController {
             noJoinButton.isHidden = true
             yesJoinButton.setImage(UIImage(named: "yes_colored"), for: .disabled)
             yesJoinButton.isEnabled = false
+            
+            joinQuestionLabel.text = "You are going!"
+            joinQuestionLabel.pause()
+            joinQuestionLabel.morphingEffect = .evaporate
+            joinQuestionLabel.morphingEnabled = true
+            updateJoinQuestionLabel()
+            
+            //joinQuestionLabel.start()
         } else {
             spotLeftLabel.text = "\(feed.totalSpot - feed.joinedPeople.count) spots left"
             joinBackgroundView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#352641")
+        }
+    }
+    
+    func updateJoinQuestionLabel() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            [weak self] in
+            self?.joinQuestionLabel.unpause()
         }
     }
     
@@ -188,12 +209,12 @@ class FeedDetailViewController: UIViewController {
             chatFirstRoundedView.isHidden = true
             chatSecondRoundedView.isHidden = true
         case 1:
-            peopleCountLabel.text = "& \(feed.joinedPeople.count - 1) others"
+            peopleCountLabel.text = "joined"
             chatFirstRoundedView.isHidden = false
             chatSecondRoundedView.isHidden = true
             chatFirstImageView.image = UIImage(named: feed.joinedPeople[0].imageName)
         case 2:
-            peopleCountLabel.text = "& \(feed.joinedPeople.count - 2) others"
+            peopleCountLabel.text = "joined"
             chatFirstRoundedView.isHidden = false
             chatSecondRoundedView.isHidden = false
             chatFirstImageView.image = UIImage(named: feed.joinedPeople[0].imageName)
@@ -276,11 +297,13 @@ class FeedDetailViewController: UIViewController {
         feed.isGoing = true
         let newPeople: [People] = PeopleData.shared.getPeople(withCount: guestCount + 1)
         feed.joinedPeople.append(contentsOf: newPeople)
-        updateJoinInfoView()
+        
         updateLiveChatView()
         updateJoinedByView()
         let alertInfo = AlertMessage(title: "You +\(guestCount) guest are going!", description: "\(dayOfWeekLabel.text!) \(feed.timeDate.fromTime) - \(feed.timeDate.toTime)", groupImageName: feed.group.groupImage, message: feed.title)
         self.showSuccessDialog(onView: self.view, alertInfo: alertInfo)
+        
+        updateJoinInfoView()
     }
     /*
     // MARK: - Navigation

@@ -46,18 +46,50 @@ class FeedDataSource : GenericDataSource<Feed>, UITableViewDataSource {
             cell.firstRoundedView.isHidden = true
             cell.secondRoundedView.isHidden = true
         case 1:
-            cell.joinedCountLabel.text = "\(feed.joinedPeople[0].name) joined"
+            var firstName: String
+            if let first = feed.joinedPeople[0].name.components(separatedBy: " ").first {
+                firstName = first
+            } else {
+                firstName = feed.joinedPeople[0].name
+            }
+            cell.joinedCountLabel.text = "\(firstName) joined"
             cell.firstRoundedView.isHidden = false
             cell.secondRoundedView.isHidden = true
             cell.firstJoinedImageView.image = UIImage(named: feed.joinedPeople[0].imageName)
         case 2:
-            cell.joinedCountLabel.text = "\(feed.joinedPeople[0].name) and \(feed.joinedPeople[1].name) joined"
+            var firstName1: String
+            if let first = feed.joinedPeople[0].name.components(separatedBy: " ").first {
+                firstName1 = first
+            } else {
+                firstName1 = feed.joinedPeople[0].name
+            }
+            
+            var firstName2: String
+            if let first = feed.joinedPeople[1].name.components(separatedBy: " ").first {
+                firstName2 = first
+            } else {
+                firstName2 = feed.joinedPeople[1].name
+            }
+            cell.joinedCountLabel.text = "\(firstName1) and \(firstName2) joined"
             cell.firstRoundedView.isHidden = false
             cell.secondRoundedView.isHidden = false
             cell.firstJoinedImageView.image = UIImage(named: feed.joinedPeople[0].imageName)
             cell.secondJoinedImageView.image = UIImage(named: feed.joinedPeople[1].imageName)
         default:
-            cell.joinedCountLabel.text = "\(feed.joinedPeople[0].name), \(feed.joinedPeople[1].name) and \(feed.joinedPeople.count - 2) others"
+            var firstName1: String
+            if let first = feed.joinedPeople[0].name.components(separatedBy: " ").first {
+                firstName1 = first
+            } else {
+                firstName1 = feed.joinedPeople[0].name
+            }
+            
+            var firstName2: String
+            if let first = feed.joinedPeople[1].name.components(separatedBy: " ").first {
+                firstName2 = first
+            } else {
+                firstName2 = feed.joinedPeople[1].name
+            }
+            cell.joinedCountLabel.text = "\(firstName1), \(firstName2) and \(feed.joinedPeople.count - 2) others"
             cell.firstRoundedView.isHidden = false
             cell.secondRoundedView.isHidden = false
             cell.firstJoinedImageView.image = UIImage(named: feed.joinedPeople[0].imageName)

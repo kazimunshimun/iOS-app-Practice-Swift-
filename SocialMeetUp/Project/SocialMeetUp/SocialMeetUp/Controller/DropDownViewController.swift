@@ -44,10 +44,11 @@ class DropDownViewController: UIViewController, UICollectionViewDelegate, UIColl
                 DispatchQueue.main.async {
                     self.menuList = menus
                     self.menuCollectionView.reloadData()
+                    UIView.animate(views: self.menuCollectionView.visibleCells, animations: self.animations, completion: nil)
                 }
             }
         }
-        UIView.animate(views: self.menuCollectionView.visibleCells, animations: self.animations, completion: nil)
+        
     }
     
     // MARK: - Collection View Data Source

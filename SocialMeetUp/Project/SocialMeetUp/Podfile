@@ -12,5 +12,6 @@ target 'SocialMeetUp' do
         pod 'GooglePlaces'
         pod 'SkyFloatingLabelTextField', '~> 3.0'
         pod 'ViewAnimator'
+        pod 'LTMorphingLabel'
         #pod 'Hero'
 end

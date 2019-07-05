@@ -62,7 +62,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0HK-mt-cjX" customClass="RoundedButtonWithBorder" customModule="SocialMeetUp" customModuleProvider="target">
-                                                                    <rect key="frame" x="7.6666666666666679" y="8" width="48" height="48"/>
+                                                                    <rect key="frame" x="8" y="8" width="48" height="48"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trending_menu" translatesAutoresizingMaskIntoConstraints="NO" id="rcL-XP-PKY">
                                                                             <rect key="frame" x="13" y="17.666666666666668" width="22" height="13"/>
@@ -89,7 +89,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N74-zh-ZZd" customClass="RoundedBackgroundLabel" customModule="SocialMeetUp" customModuleProvider="target">
-                                                                    <rect key="frame" x="39" y="0.0" width="24" height="20"/>
+                                                                    <rect key="frame" x="40" y="0.0" width="24" height="20"/>
                                                                     <color key="backgroundColor" red="0.58431372550000005" green="0.59999999999999998" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20" id="CPA-zO-rKB"/>
@@ -105,7 +105,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c40-BK-zJm">
-                                                                    <rect key="frame" x="19" y="63.999999999999993" width="25.333333333333329" height="13.666666666666664"/>
+                                                                    <rect key="frame" x="19.333333333333336" y="63.999999999999993" width="25.333333333333336" height="13.666666666666664"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="11"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -136,7 +136,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaI-6U-ecY" customClass="RoundedButtonWithBorder" customModule="SocialMeetUp" customModuleProvider="target">
-                                                                    <rect key="frame" x="7.6666666666666679" y="8" width="48" height="48"/>
+                                                                    <rect key="frame" x="8" y="8" width="48" height="48"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trending_menu" translatesAutoresizingMaskIntoConstraints="NO" id="A6e-Bi-SfA">
                                                                             <rect key="frame" x="14" y="18.666666666666668" width="20" height="11"/>
@@ -167,7 +167,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRENDING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEK-N4-lbN">
-                                                                    <rect key="frame" x="1" y="63.999999999999993" width="61.333333333333336" height="13.666666666666664"/>
+                                                                    <rect key="frame" x="1.3333333333333321" y="63.999999999999993" width="61.333333333333343" height="13.666666666666664"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="11"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -867,7 +867,7 @@ Get to know your local community and neighbours better by joining our Yoga famil
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJo-be-ecd">
-                                                        <rect key="frame" x="101" y="125.33333333333333" width="33.333333333333343" height="13.666666666666671"/>
+                                                        <rect key="frame" x="101" y="121.33333333333336" width="33.333333333333343" height="13.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
                                                         <color key="textColor" red="0.25098039215686274" green="0.19607843137254902" blue="0.28627450980392155" alpha="0.4812552432885906" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -884,11 +884,23 @@ Get to know your local community and neighbours better by joining our Yoga famil
                                                                 <color key="textColor" red="0.59999999999999998" green="0.5607843137254902" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you going ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGh-NK-u5V">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you going ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGh-NK-u5V" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                                                 <rect key="frame" x="61.999999999999993" y="15.999999999999998" width="115.33333333333331" height="17.333333333333329"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="morphingEnabled" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="morphingProgress">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="morphingDuration">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="morphingCharacterDelay">
+                                                                        <real key="value" value="0.0"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr4-mm-qNr">
                                                                 <rect key="frame" x="278" y="14" width="40" height="40"/>
@@ -937,7 +949,7 @@ Get to know your local community and neighbours better by joining our Yoga famil
                                                     <constraint firstItem="weC-4x-Osg" firstAttribute="top" secondItem="zxm-XQ-jPH" secondAttribute="bottom" constant="24" id="1Gl-4u-3Yt"/>
                                                     <constraint firstItem="weC-4x-Osg" firstAttribute="leading" secondItem="e1n-Fz-SGt" secondAttribute="leading" constant="40" id="4Fl-P4-9a9"/>
                                                     <constraint firstItem="BfD-Wg-su9" firstAttribute="top" secondItem="e1n-Fz-SGt" secondAttribute="top" constant="100" id="G4x-Ai-mFO"/>
-                                                    <constraint firstItem="aJo-be-ecd" firstAttribute="top" secondItem="h1L-mg-KYF" secondAttribute="bottom" constant="8" id="LJB-RX-LAO"/>
+                                                    <constraint firstItem="aJo-be-ecd" firstAttribute="top" secondItem="h1L-mg-KYF" secondAttribute="bottom" constant="4" id="LJB-RX-LAO"/>
                                                     <constraint firstItem="h1L-mg-KYF" firstAttribute="leading" secondItem="BfD-Wg-su9" secondAttribute="trailing" constant="8" id="UZX-gD-4rn"/>
                                                     <constraint firstAttribute="height" constant="258" id="WK5-8z-uWv"/>
                                                     <constraint firstItem="aJo-be-ecd" firstAttribute="leading" secondItem="h1L-mg-KYF" secondAttribute="leading" id="cBB-Xu-TLU"/>
@@ -1138,7 +1150,7 @@ Get to know your local community and neighbours better by joining our Yoga famil
                         <outlet property="groupNameLabel" destination="h1L-mg-KYF" id="T0i-Oc-pEv"/>
                         <outlet property="hostedByLabel" destination="Wu9-Rw-p1j" id="7PK-bd-xAu"/>
                         <outlet property="joinBackgroundView" destination="weC-4x-Osg" id="3Z9-s1-bT3"/>
-                        <outlet property="joinQuestionLabel" destination="GGh-NK-u5V" id="vZ7-pT-Css"/>
+                        <outlet property="joinQuestionLabel" destination="GGh-NK-u5V" id="RiI-uJ-y8e"/>
                         <outlet property="joinedCountLabel" destination="79B-fP-v2p" id="fMY-JT-lyp"/>
                         <outlet property="liveChatView" destination="fzB-JY-M79" id="WgI-b2-Ba9"/>
                         <outlet property="locationAddressLabel" destination="clh-Vb-SCk" id="aaO-dL-jmI"/>
