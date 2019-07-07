@@ -1,4 +1,4 @@
-# Backpack(Swift)
+# Social Meetup(Swift)
 UI downloaded from (https://www.behance.net/gallery/72907227/Meetio-UI-Kit)
 
 Technology   |  Used
