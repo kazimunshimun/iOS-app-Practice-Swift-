@@ -1,0 +1,6 @@
+framework module Pods_Navigo {
+  umbrella header "Pods-Navigo-umbrella.h"
+
+  export *
+  module * { export * }
+}

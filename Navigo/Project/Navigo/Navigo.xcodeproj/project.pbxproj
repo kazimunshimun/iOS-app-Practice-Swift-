@@ -12,9 +12,12 @@
 		84BFB3D922D4E1B20076A9B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BFB3D722D4E1B20076A9B4 /* Main.storyboard */; };
 		84BFB3DB22D4E1B40076A9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BFB3DA22D4E1B40076A9B4 /* Assets.xcassets */; };
 		84BFB3DE22D4E1B40076A9B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BFB3DC22D4E1B40076A9B4 /* LaunchScreen.storyboard */; };
+		F50E6B6A6F505136A6367AFF /* Pods_Navigo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4846F9870B2CA7EB3BBB9AFC /* Pods_Navigo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2240C505B361CEA6C604314F /* Pods-Navigo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Navigo.debug.xcconfig"; path = "Target Support Files/Pods-Navigo/Pods-Navigo.debug.xcconfig"; sourceTree = "<group>"; };
+		4846F9870B2CA7EB3BBB9AFC /* Pods_Navigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Navigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BFB3D022D4E1B20076A9B4 /* Navigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BFB3D322D4E1B20076A9B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BFB3D522D4E1B20076A9B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		84BFB3DA22D4E1B40076A9B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84BFB3DD22D4E1B40076A9B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84BFB3DF22D4E1B40076A9B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A116099ED29998CB6EFC73ED /* Pods-Navigo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Navigo.release.xcconfig"; path = "Target Support Files/Pods-Navigo/Pods-Navigo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F50E6B6A6F505136A6367AFF /* Pods_Navigo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FE5F3B790CD623B211D799D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2240C505B361CEA6C604314F /* Pods-Navigo.debug.xcconfig */,
+				A116099ED29998CB6EFC73ED /* Pods-Navigo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		415F82AF3E1FB69E3A74E1BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4846F9870B2CA7EB3BBB9AFC /* Pods_Navigo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84BFB3C722D4E1B20076A9B4 = {
 			isa = PBXGroup;
 			children = (
 				84BFB3D222D4E1B20076A9B4 /* Navigo */,
 				84BFB3D122D4E1B20076A9B4 /* Products */,
+				2FE5F3B790CD623B211D799D /* Pods */,
+				415F82AF3E1FB69E3A74E1BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84BFB3E222D4E1B40076A9B4 /* Build configuration list for PBXNativeTarget "Navigo" */;
 			buildPhases = (
+				6FC1E56444882058FC45847E /* [CP] Check Pods Manifest.lock */,
 				84BFB3CC22D4E1B20076A9B4 /* Sources */,
 				84BFB3CD22D4E1B20076A9B4 /* Frameworks */,
 				84BFB3CE22D4E1B20076A9B4 /* Resources */,
+				9BD506C9776C60A49BEC605C /* [CP] Embed Pods Frameworks */,
+				4FE3DD33A16FC0A4DB8330E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FE3DD33A16FC0A4DB8330E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Navigo/Pods-Navigo-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Navigo/Pods-Navigo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FC1E56444882058FC45847E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Navigo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BD506C9776C60A49BEC605C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Navigo/Pods-Navigo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Navigo/Pods-Navigo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84BFB3CC22D4E1B20076A9B4 /* Sources */ = {
@@ -280,6 +382,7 @@
 		};
 		84BFB3E322D4E1B40076A9B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2240C505B361CEA6C604314F /* Pods-Navigo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +401,7 @@
 		};
 		84BFB3E422D4E1B40076A9B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A116099ED29998CB6EFC73ED /* Pods-Navigo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
