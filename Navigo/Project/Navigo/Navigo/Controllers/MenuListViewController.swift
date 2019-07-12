@@ -33,6 +33,8 @@ class MenuListViewController: MenuViewController, UITableViewDelegate, UITableVi
         //MenuWithImageCell
         self.menuTableView.delegate = self
         self.menuTableView.dataSource = self
+        
+        self.menuTableView.selectRow(at: IndexPath(row: 0, section: 0), animated: false, scrollPosition: .none)
     }
     
     @objc func profileViewTouched() -> Void {
@@ -42,6 +44,8 @@ class MenuListViewController: MenuViewController, UITableViewDelegate, UITableVi
 
         menuContainerViewController.selectContentViewController(menuContainerViewController.contentViewControllers[0])
         menuContainerViewController.hideSideMenu()
+        
+        self.menuTableView.deselectRow(at: self.menuTableView.indexPathForSelectedRow ?? IndexPath(row: 0, section: 0), animated: false)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

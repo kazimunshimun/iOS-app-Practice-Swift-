@@ -50,11 +50,12 @@ class MenuHostViewController: MenuContainerViewController {
         contentList.append(placesViewController)
         
         let aboutStoryBoard: UIStoryboard = UIStoryboard(name: "About", bundle: nil)
-        let aboutViewController = aboutStoryBoard.instantiateViewController(withIdentifier: "aboutView")
-        contentList.append(aboutViewController)
         
         let contactViewController = aboutStoryBoard.instantiateViewController(withIdentifier: "contactView")
         contentList.append(contactViewController)
+        
+        let aboutViewController = aboutStoryBoard.instantiateViewController(withIdentifier: "aboutView")
+        contentList.append(aboutViewController)
         
         let privacyViewController = aboutStoryBoard.instantiateViewController(withIdentifier: "privacyView")
         contentList.append(privacyViewController)
