@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="D5w-dS-AZU">
+            <objects>
+                <viewController storyboardIdentifier="homeView" id="77B-ZO-q42" customClass="HomeViewController" customModule="Navigo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="73f-Wz-anZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgd-hW-iFh">
+                                <rect key="frame" x="184" y="442.5" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYS-7e-JHK">
+                                <rect key="frame" x="20" y="44" width="374" height="52"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXQ-e0-5ZA">
+                                        <rect key="frame" x="19" y="14" width="24" height="24"/>
+                                        <state key="normal" image="menu_icon"/>
+                                        <connections>
+                                            <action selector="menuButtonClicked:" destination="77B-ZO-q42" eventType="touchUpInside" id="Aom-U9-7R7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="JXQ-e0-5ZA" firstAttribute="centerY" secondItem="NYS-7e-JHK" secondAttribute="centerY" id="Ia2-n5-hVA"/>
+                                    <constraint firstAttribute="height" constant="52" id="TSC-XB-zvK"/>
+                                    <constraint firstItem="JXQ-e0-5ZA" firstAttribute="leading" secondItem="NYS-7e-JHK" secondAttribute="leading" constant="19" id="Tyg-i2-bfv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NYS-7e-JHK" firstAttribute="leading" secondItem="P8r-c0-wFm" secondAttribute="leading" constant="20" id="HXF-yi-4gK"/>
+                            <constraint firstItem="NYS-7e-JHK" firstAttribute="top" secondItem="P8r-c0-wFm" secondAttribute="top" id="LgU-lk-95w"/>
+                            <constraint firstItem="P8r-c0-wFm" firstAttribute="trailing" secondItem="NYS-7e-JHK" secondAttribute="trailing" constant="20" id="NPU-E6-8DP"/>
+                            <constraint firstItem="Dgd-hW-iFh" firstAttribute="centerX" secondItem="P8r-c0-wFm" secondAttribute="centerX" id="mWD-yJ-ew6"/>
+                            <constraint firstItem="Dgd-hW-iFh" firstAttribute="centerY" secondItem="P8r-c0-wFm" secondAttribute="centerY" id="qjv-KT-jj2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P8r-c0-wFm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Czb-Ss-MrQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191.30434782608697" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu_icon" width="24" height="24"/>
+    </resources>
+</document>
