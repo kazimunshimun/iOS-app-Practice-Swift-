@@ -14,6 +14,11 @@ class Nearby: UIViewController, Panelable {
     @IBOutlet weak var headerHeight: NSLayoutConstraint!
     @IBOutlet weak var headerPanel: UIView!
     
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var fullLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var topMultiColorView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +26,11 @@ class Nearby: UIViewController, Panelable {
     }
     
 
+    public func updateTopView(isBottom: Bool) {
+        bottomView.isHidden = isBottom
+        fullLabel.isHidden = !isBottom
+        backButton.setImage(isBottom ? UIImage(named: "back_icon") : UIImage(named: "up_icon"), for: .normal)
+    }
     /*
     // MARK: - Navigation
 

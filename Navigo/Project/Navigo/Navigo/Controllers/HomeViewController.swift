@@ -13,16 +13,17 @@ import Panels
 class HomeViewController: UIViewController, SideMenuItemContent {
 
     lazy var panelManager = Panels(target: self)
+    var panel = UIStoryboard.instantiatePanel(identifier: "Nearby") as! Nearby
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         //let homeStoryBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
         let screenSize: CGRect = UIScreen.main.bounds
-        let panel = UIStoryboard.instantiatePanel(identifier: "Nearby")
-        let panelConfiguration = PanelConfiguration(size: .custom(screenSize.height - 84))
         
+        let panelConfiguration = PanelConfiguration(size: .custom(screenSize.height - 84))
         // To present the panel
+        panelManager.delegate = self
         panelManager.show(panel: panel, config: panelConfiguration)
     }
     
@@ -30,14 +31,22 @@ class HomeViewController: UIViewController, SideMenuItemContent {
     @IBAction func menuButtonClicked(_ sender: Any) {
         showSideMenu()
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+extension HomeViewController: PanelNotifications {
+    func panelDidPresented() {
+        //print("Panel is presented")
+        panel.updateTopView(isBottom: false)
     }
-    */
-
+    
+    func panelDidCollapse() {
+        //print("Panel did collapse")
+        panel.updateTopView(isBottom: false)
+    }
+    
+    func panelDidOpen() {
+        //print("Panel did open")
+        panel.updateTopView(isBottom: true)
+    }
 }
