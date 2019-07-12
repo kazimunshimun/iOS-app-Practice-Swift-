@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		842B8F9222D8C3CF00CD4F7F /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9122D8C3CF00CD4F7F /* ColorUtils.swift */; };
 		842B8F9522D8C40C00CD4F7F /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9422D8C40C00CD4F7F /* RoundedCornerView.swift */; };
+		842B8F9722D8CCFB00CD4F7F /* BookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9622D8CCFB00CD4F7F /* BookingsViewController.swift */; };
+		842B8F9922D8CD0600CD4F7F /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9822D8CD0600CD4F7F /* PlacesViewController.swift */; };
+		842B8F9B22D8CD1300CD4F7F /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9A22D8CD1300CD4F7F /* ContactViewController.swift */; };
+		842B8F9D22D8CD2100CD4F7F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9C22D8CD2100CD4F7F /* AboutViewController.swift */; };
+		842B8F9F22D8CD3300CD4F7F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9E22D8CD3300CD4F7F /* ProfileViewController.swift */; };
+		842B8FA122D8CD4F00CD4F7F /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8FA022D8CD4F00CD4F7F /* PrivacyViewController.swift */; };
+		842B8FA322D8CD8A00CD4F7F /* Bookings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B8FA222D8CD8A00CD4F7F /* Bookings.storyboard */; };
+		842B8FA522D8CD9600CD4F7F /* Places.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B8FA422D8CD9600CD4F7F /* Places.storyboard */; };
+		842B8FA722D8CDA200CD4F7F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B8FA622D8CDA200CD4F7F /* Profile.storyboard */; };
+		842B8FA922D8CDAB00CD4F7F /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B8FA822D8CDAB00CD4F7F /* About.storyboard */; };
 		84931BB122D89A270002165B /* MenuHostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84931BB022D89A270002165B /* MenuHostViewController.swift */; };
 		84931BB322D8A2E30002165B /* MenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84931BB222D8A2E30002165B /* MenuListViewController.swift */; };
 		84931BB922D8AA290002165B /* MenuWithImageAndTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84931BB722D8AA290002165B /* MenuWithImageAndTextCell.swift */; };
@@ -30,6 +40,16 @@
 		4846F9870B2CA7EB3BBB9AFC /* Pods_Navigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Navigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		842B8F9122D8C3CF00CD4F7F /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		842B8F9422D8C40C00CD4F7F /* RoundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
+		842B8F9622D8CCFB00CD4F7F /* BookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsViewController.swift; sourceTree = "<group>"; };
+		842B8F9822D8CD0600CD4F7F /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		842B8F9A22D8CD1300CD4F7F /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		842B8F9C22D8CD2100CD4F7F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		842B8F9E22D8CD3300CD4F7F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		842B8FA022D8CD4F00CD4F7F /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		842B8FA222D8CD8A00CD4F7F /* Bookings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookings.storyboard; sourceTree = "<group>"; };
+		842B8FA422D8CD9600CD4F7F /* Places.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Places.storyboard; sourceTree = "<group>"; };
+		842B8FA622D8CDA200CD4F7F /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		842B8FA822D8CDAB00CD4F7F /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		84931BB022D89A270002165B /* MenuHostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHostViewController.swift; sourceTree = "<group>"; };
 		84931BB222D8A2E30002165B /* MenuListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListViewController.swift; sourceTree = "<group>"; };
 		84931BB722D8AA290002165B /* MenuWithImageAndTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuWithImageAndTextCell.swift; path = ../MenuWithImageAndTextCell.swift; sourceTree = "<group>"; };
@@ -91,6 +111,10 @@
 				84BFB3D722D4E1B20076A9B4 /* Main.storyboard */,
 				84BFB3DC22D4E1B40076A9B4 /* LaunchScreen.storyboard */,
 				84931BC022D8B08E0002165B /* Home.storyboard */,
+				842B8FA222D8CD8A00CD4F7F /* Bookings.storyboard */,
+				842B8FA422D8CD9600CD4F7F /* Places.storyboard */,
+				842B8FA622D8CDA200CD4F7F /* Profile.storyboard */,
+				842B8FA822D8CDAB00CD4F7F /* About.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -111,6 +135,12 @@
 				84931BB022D89A270002165B /* MenuHostViewController.swift */,
 				84931BB222D8A2E30002165B /* MenuListViewController.swift */,
 				84931BC222D8B1640002165B /* HomeViewController.swift */,
+				842B8F9622D8CCFB00CD4F7F /* BookingsViewController.swift */,
+				842B8F9822D8CD0600CD4F7F /* PlacesViewController.swift */,
+				842B8F9A22D8CD1300CD4F7F /* ContactViewController.swift */,
+				842B8F9C22D8CD2100CD4F7F /* AboutViewController.swift */,
+				842B8F9E22D8CD3300CD4F7F /* ProfileViewController.swift */,
+				842B8FA022D8CD4F00CD4F7F /* PrivacyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -227,10 +257,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842B8FA522D8CD9600CD4F7F /* Places.storyboard in Resources */,
+				842B8FA322D8CD8A00CD4F7F /* Bookings.storyboard in Resources */,
 				84BFB3DE22D4E1B40076A9B4 /* LaunchScreen.storyboard in Resources */,
 				84931BBA22D8AA290002165B /* MenuWithImageAndTextCell.xib in Resources */,
 				84931BBF22D8AA480002165B /* MenuWithImageCell.xib in Resources */,
 				84931BC122D8B08E0002165B /* Home.storyboard in Resources */,
+				842B8FA922D8CDAB00CD4F7F /* About.storyboard in Resources */,
+				842B8FA722D8CDA200CD4F7F /* Profile.storyboard in Resources */,
 				84BFB3DB22D4E1B40076A9B4 /* Assets.xcassets in Resources */,
 				84BFB3D922D4E1B20076A9B4 /* Main.storyboard in Resources */,
 			);
@@ -324,12 +358,18 @@
 			files = (
 				842B8F9222D8C3CF00CD4F7F /* ColorUtils.swift in Sources */,
 				84BFB3D622D4E1B20076A9B4 /* ViewController.swift in Sources */,
+				842B8FA122D8CD4F00CD4F7F /* PrivacyViewController.swift in Sources */,
 				84BFB3D422D4E1B20076A9B4 /* AppDelegate.swift in Sources */,
+				842B8F9922D8CD0600CD4F7F /* PlacesViewController.swift in Sources */,
+				842B8F9F22D8CD3300CD4F7F /* ProfileViewController.swift in Sources */,
 				84931BC322D8B1640002165B /* HomeViewController.swift in Sources */,
+				842B8F9B22D8CD1300CD4F7F /* ContactViewController.swift in Sources */,
 				84931BB122D89A270002165B /* MenuHostViewController.swift in Sources */,
 				842B8F9522D8C40C00CD4F7F /* RoundedCornerView.swift in Sources */,
+				842B8F9722D8CCFB00CD4F7F /* BookingsViewController.swift in Sources */,
 				84931BB322D8A2E30002165B /* MenuListViewController.swift in Sources */,
 				84931BB922D8AA290002165B /* MenuWithImageAndTextCell.swift in Sources */,
+				842B8F9D22D8CD2100CD4F7F /* AboutViewController.swift in Sources */,
 				84931BBE22D8AA480002165B /* MenuWithImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

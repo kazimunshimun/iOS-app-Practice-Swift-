@@ -179,6 +179,7 @@
                     </view>
                     <connections>
                         <outlet property="menuTableView" destination="FVu-Qz-ih1" id="MeF-YJ-hPa"/>
+                        <outlet property="profileView" destination="kdo-cS-LdQ" id="00B-fr-Gdc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ih5-FC-CF3" userLabel="First Responder" sceneMemberID="firstResponder"/>

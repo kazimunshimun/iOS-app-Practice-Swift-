@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Places View Controller-->
+        <scene sceneID="ITh-qi-mAx">
+            <objects>
+                <viewController storyboardIdentifier="placesView" id="TCs-cC-XTk" customClass="PlacesViewController" customModule="Navigo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xrB-Ag-KtL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Places" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTZ-TT-b1E">
+                                <rect key="frame" x="181.5" y="442.5" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uz-vL-bDs">
+                                <rect key="frame" x="20" y="44" width="374" height="52"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ4-Oq-CoB">
+                                        <rect key="frame" x="19" y="14" width="24" height="24"/>
+                                        <state key="normal" image="menu_icon"/>
+                                        <connections>
+                                            <action selector="menuButtonClicked:" destination="TCs-cC-XTk" eventType="touchUpInside" id="PTZ-FZ-3a2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="QJ4-Oq-CoB" firstAttribute="centerY" secondItem="9uz-vL-bDs" secondAttribute="centerY" id="JRm-lV-sfi"/>
+                                    <constraint firstItem="QJ4-Oq-CoB" firstAttribute="leading" secondItem="9uz-vL-bDs" secondAttribute="leading" constant="19" id="Jl2-Wr-AHC"/>
+                                    <constraint firstAttribute="height" constant="52" id="LVa-lA-wof"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9uz-vL-bDs" firstAttribute="leading" secondItem="4gj-j8-bq6" secondAttribute="leading" constant="20" id="9hu-eO-PLr"/>
+                            <constraint firstItem="CTZ-TT-b1E" firstAttribute="centerX" secondItem="4gj-j8-bq6" secondAttribute="centerX" id="P1f-ZV-Z2n"/>
+                            <constraint firstItem="4gj-j8-bq6" firstAttribute="trailing" secondItem="9uz-vL-bDs" secondAttribute="trailing" constant="20" id="clj-5i-hlU"/>
+                            <constraint firstItem="CTZ-TT-b1E" firstAttribute="centerY" secondItem="4gj-j8-bq6" secondAttribute="centerY" id="eB8-b7-bgV"/>
+                            <constraint firstItem="9uz-vL-bDs" firstAttribute="top" secondItem="4gj-j8-bq6" secondAttribute="top" id="umX-Rx-Fk1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4gj-j8-bq6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEk-u1-yXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="91" y="68"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu_icon" width="24" height="24"/>
+    </resources>
+</document>

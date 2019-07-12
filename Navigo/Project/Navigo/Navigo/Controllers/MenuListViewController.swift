@@ -15,6 +15,8 @@ class MenuListViewController: MenuViewController, UITableViewDelegate, UITableVi
     let menuList = ["Home", "Bookings", "Places", "Contact Us", "About Us"]
     let menuImageNameList = ["home_icon", "booking_icon", "places3_icon", "contact_icon", "about_icon", "privacy_icon"]
     
+    @IBOutlet weak var profileView: RoundedCornerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,9 @@ class MenuListViewController: MenuViewController, UITableViewDelegate, UITableVi
     }
     
     func setupMenuList() {
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.profileViewTouched))
+        profileView.addGestureRecognizer(gesture)
+        
         self.menuTableView.register(UINib(nibName: "MenuWithImageAndTextCell", bundle: nil), forCellReuseIdentifier: "menuImageTextCell")
         
         self.menuTableView.register(UINib(nibName: "MenuWithImageCell", bundle: nil), forCellReuseIdentifier: "menuImageCell")
@@ -30,8 +35,21 @@ class MenuListViewController: MenuViewController, UITableViewDelegate, UITableVi
         self.menuTableView.dataSource = self
     }
     
+    @objc func profileViewTouched() -> Void {
+        guard let menuContainerViewController = self.menuContainerViewController else {
+            return
+        }
+
+        menuContainerViewController.selectContentViewController(menuContainerViewController.contentViewControllers[0])
+        menuContainerViewController.hideSideMenu()
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        guard let menuContainerViewController = self.menuContainerViewController else {
+            return
+        }
+    menuContainerViewController.selectContentViewController(menuContainerViewController.contentViewControllers[indexPath.row + 1])
+        menuContainerViewController.hideSideMenu()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

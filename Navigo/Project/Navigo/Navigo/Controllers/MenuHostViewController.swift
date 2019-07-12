@@ -22,7 +22,7 @@ class MenuHostViewController: MenuContainerViewController {
         self.menuViewController = self.storyboard?.instantiateViewController(withIdentifier: "menuView") as? MenuViewController
         
         self.contentViewControllers = contentControllers()
-        self.selectContentViewController(contentViewControllers.first!)
+        self.selectContentViewController(contentViewControllers[1])
         self.currentItemOptions.cornerRadius = 12.0
         
         let screenSize: CGRect = UIScreen.main.bounds
@@ -32,9 +32,33 @@ class MenuHostViewController: MenuContainerViewController {
 
     private func contentControllers() -> [UIViewController] {
         var contentList = [UIViewController]()
-        let hometoryBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let homeViewController = hometoryBoard.instantiateViewController(withIdentifier: "homeView") 
+        
+        let profileStoryBoard: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+        let profileViewController = profileStoryBoard.instantiateViewController(withIdentifier: "profileView")
+        contentList.append(profileViewController)
+        
+        let homeStoryBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let homeViewController = homeStoryBoard.instantiateViewController(withIdentifier: "homeView")
         contentList.append(homeViewController)
+        
+        let bookingStoryBoard: UIStoryboard = UIStoryboard(name: "Bookings", bundle: nil)
+        let bookingViewController = bookingStoryBoard.instantiateViewController(withIdentifier: "bookingsView")
+        contentList.append(bookingViewController)
+        
+        let placesStoryBoard: UIStoryboard = UIStoryboard(name: "Places", bundle: nil)
+        let placesViewController = placesStoryBoard.instantiateViewController(withIdentifier: "placesView")
+        contentList.append(placesViewController)
+        
+        let aboutStoryBoard: UIStoryboard = UIStoryboard(name: "About", bundle: nil)
+        let aboutViewController = aboutStoryBoard.instantiateViewController(withIdentifier: "aboutView")
+        contentList.append(aboutViewController)
+        
+        let contactViewController = aboutStoryBoard.instantiateViewController(withIdentifier: "contactView")
+        contentList.append(contactViewController)
+        
+        let privacyViewController = aboutStoryBoard.instantiateViewController(withIdentifier: "privacyView")
+        contentList.append(privacyViewController)
+        
         return contentList
     }
 }
