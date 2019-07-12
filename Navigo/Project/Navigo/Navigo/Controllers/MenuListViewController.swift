@@ -9,14 +9,55 @@
 import UIKit
 import InteractiveSideMenu
 
-class MenuListViewController: MenuViewController {
+class MenuListViewController: MenuViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var menuTableView: UITableView!
+    let menuList = ["Home", "Bookings", "Places", "Contact Us", "About Us"]
+    let menuImageNameList = ["home_icon", "booking_icon", "places3_icon", "contact_icon", "about_icon", "privacy_icon"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupMenuList()
+    }
+    
+    func setupMenuList() {
+        self.menuTableView.register(UINib(nibName: "MenuWithImageAndTextCell", bundle: nil), forCellReuseIdentifier: "menuImageTextCell")
+        
+        self.menuTableView.register(UINib(nibName: "MenuWithImageCell", bundle: nil), forCellReuseIdentifier: "menuImageCell")
+        //MenuWithImageCell
+        self.menuTableView.delegate = self
+        self.menuTableView.dataSource = self
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       // let cellWidth : CGFloat = 64.0;
+        let cellWidth : CGFloat = 80.0;
+        return cellWidth;
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuImageNameList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /*
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuImageTextCell", for: indexPath) as! MenuWithImageAndTextCell
+        cell.menuImageView.image = UIImage(named: menuImageNameList[indexPath.row])
+        cell.menuNameLabel.text = menuList[indexPath.row]
+        */
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuImageCell", for: indexPath) as! MenuWithImageCell
+        cell.menuImageView.image = UIImage(named: menuImageNameList[indexPath.row])
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#454F63")
+        cell.selectedBackgroundView = backgroundView
+        
+        return cell
+    }
 
 }
