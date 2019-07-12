@@ -8,13 +8,22 @@
 
 import UIKit
 import InteractiveSideMenu
+import Panels
 
 class HomeViewController: UIViewController, SideMenuItemContent {
 
+    lazy var panelManager = Panels(target: self)
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //let homeStoryBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let screenSize: CGRect = UIScreen.main.bounds
+        let panel = UIStoryboard.instantiatePanel(identifier: "Nearby")
+        let panelConfiguration = PanelConfiguration(size: .custom(screenSize.height - 84))
+        
+        // To present the panel
+        panelManager.show(panel: panel, config: panelConfiguration)
     }
     
 

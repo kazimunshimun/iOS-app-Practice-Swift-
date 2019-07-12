@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZI3-81-IQd">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nearby-->
+        <scene sceneID="fbb-WI-KHF">
+            <objects>
+                <viewController storyboardIdentifier="nearby" id="ZI3-81-IQd" customClass="Nearby" customModule="Navigo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A6N-jL-o4C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtx-Fy-XDD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="86"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILT-mI-UPN">
+                                        <rect key="frame" x="19" y="31" width="24" height="24"/>
+                                        <state key="normal" image="up_icon"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27058823529999998" green="0.30980392159999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ILT-mI-UPN" firstAttribute="centerY" secondItem="qtx-Fy-XDD" secondAttribute="centerY" id="Y24-F0-ypz"/>
+                                    <constraint firstAttribute="height" constant="86" id="ibH-xX-Ytk"/>
+                                    <constraint firstItem="ILT-mI-UPN" firstAttribute="leading" secondItem="qtx-Fy-XDD" secondAttribute="leading" constant="19" id="sg2-tU-50v"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Near By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3U3-By-XmN">
+                                <rect key="frame" x="176.5" y="442.5" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OAb-9X-Ehc" firstAttribute="trailing" secondItem="qtx-Fy-XDD" secondAttribute="trailing" id="EM6-G6-W1G"/>
+                            <constraint firstItem="qtx-Fy-XDD" firstAttribute="top" secondItem="OAb-9X-Ehc" secondAttribute="top" id="QPy-cI-uT0"/>
+                            <constraint firstItem="3U3-By-XmN" firstAttribute="centerX" secondItem="OAb-9X-Ehc" secondAttribute="centerX" id="Zl8-zg-aAO"/>
+                            <constraint firstItem="3U3-By-XmN" firstAttribute="centerY" secondItem="OAb-9X-Ehc" secondAttribute="centerY" id="eLr-8d-bzc"/>
+                            <constraint firstItem="qtx-Fy-XDD" firstAttribute="leading" secondItem="OAb-9X-Ehc" secondAttribute="leading" id="gj1-Jr-tpr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OAb-9X-Ehc"/>
+                    </view>
+                    <connections>
+                        <outlet property="headerHeight" destination="ibH-xX-Ytk" id="how-Jc-aGc"/>
+                        <outlet property="headerPanel" destination="qtx-Fy-XDD" id="SbS-kv-7bC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VN8-wR-C1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611.59420289855075" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="up_icon" width="24" height="24"/>
+    </resources>
+</document>
