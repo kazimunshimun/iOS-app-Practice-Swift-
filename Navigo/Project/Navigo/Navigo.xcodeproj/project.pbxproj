@@ -21,6 +21,9 @@
 		842B8FA922D8CDAB00CD4F7F /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B8FA822D8CDAB00CD4F7F /* About.storyboard */; };
 		842B8FAB22D8E4B600CD4F7F /* Nearby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8FAA22D8E4B600CD4F7F /* Nearby.swift */; };
 		842B8FAD22D8E75800CD4F7F /* Nearby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B8FAC22D8E75800CD4F7F /* Nearby.storyboard */; };
+		8438CD9822D9DC710086F3D7 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438CD9722D9DC710086F3D7 /* CategoryCell.swift */; };
+		8438CD9A22D9DF090086F3D7 /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438CD9922D9DF090086F3D7 /* PlacesCell.swift */; };
+		8438CD9D22D9DFB00086F3D7 /* PlacesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438CD9C22D9DFB00086F3D7 /* PlacesEntity.swift */; };
 		84931BB122D89A270002165B /* MenuHostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84931BB022D89A270002165B /* MenuHostViewController.swift */; };
 		84931BB322D8A2E30002165B /* MenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84931BB222D8A2E30002165B /* MenuListViewController.swift */; };
 		84931BB922D8AA290002165B /* MenuWithImageAndTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84931BB722D8AA290002165B /* MenuWithImageAndTextCell.swift */; };
@@ -54,6 +57,9 @@
 		842B8FA822D8CDAB00CD4F7F /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		842B8FAA22D8E4B600CD4F7F /* Nearby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nearby.swift; sourceTree = "<group>"; };
 		842B8FAC22D8E75800CD4F7F /* Nearby.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Nearby.storyboard; sourceTree = "<group>"; };
+		8438CD9722D9DC710086F3D7 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		8438CD9922D9DF090086F3D7 /* PlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCell.swift; sourceTree = "<group>"; };
+		8438CD9C22D9DFB00086F3D7 /* PlacesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesEntity.swift; sourceTree = "<group>"; };
 		84931BB022D89A270002165B /* MenuHostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHostViewController.swift; sourceTree = "<group>"; };
 		84931BB222D8A2E30002165B /* MenuListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListViewController.swift; sourceTree = "<group>"; };
 		84931BB722D8AA290002165B /* MenuWithImageAndTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuWithImageAndTextCell.swift; path = ../MenuWithImageAndTextCell.swift; sourceTree = "<group>"; };
@@ -109,6 +115,22 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		8438CD9B22D9DF130086F3D7 /* CollectionVIewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8438CD9922D9DF090086F3D7 /* PlacesCell.swift */,
+			);
+			path = CollectionVIewCell;
+			sourceTree = "<group>";
+		};
+		8438CD9E22D9DFBB0086F3D7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8438CD9C22D9DFB00086F3D7 /* PlacesEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		84931BAC22D873E10002165B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +178,7 @@
 			children = (
 				842B8F9422D8C40C00CD4F7F /* RoundedCornerView.swift */,
 				84931BBB22D8AA2F0002165B /* TableViewCell */,
+				8438CD9B22D9DF130086F3D7 /* CollectionVIewCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +190,7 @@
 				84931BB822D8AA290002165B /* MenuWithImageAndTextCell.xib */,
 				84931BBC22D8AA480002165B /* MenuWithImageCell.swift */,
 				84931BBD22D8AA480002165B /* MenuWithImageCell.xib */,
+				8438CD9722D9DC710086F3D7 /* CategoryCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -198,6 +222,7 @@
 				84931BAC22D873E10002165B /* Storyboards */,
 				84931BAD22D873FF0002165B /* Resources */,
 				84BFB3DF22D4E1B40076A9B4 /* Info.plist */,
+				8438CD9E22D9DFBB0086F3D7 /* Entity */,
 			);
 			path = Navigo;
 			sourceTree = "<group>";
@@ -373,10 +398,13 @@
 				84931BC322D8B1640002165B /* HomeViewController.swift in Sources */,
 				842B8F9B22D8CD1300CD4F7F /* ContactViewController.swift in Sources */,
 				84931BB122D89A270002165B /* MenuHostViewController.swift in Sources */,
+				8438CD9D22D9DFB00086F3D7 /* PlacesEntity.swift in Sources */,
 				842B8F9522D8C40C00CD4F7F /* RoundedCornerView.swift in Sources */,
 				842B8F9722D8CCFB00CD4F7F /* BookingsViewController.swift in Sources */,
 				84931BB322D8A2E30002165B /* MenuListViewController.swift in Sources */,
 				84931BB922D8AA290002165B /* MenuWithImageAndTextCell.swift in Sources */,
+				8438CD9822D9DC710086F3D7 /* CategoryCell.swift in Sources */,
+				8438CD9A22D9DF090086F3D7 /* PlacesCell.swift in Sources */,
 				842B8F9D22D8CD2100CD4F7F /* AboutViewController.swift in Sources */,
 				84931BBE22D8AA480002165B /* MenuWithImageCell.swift in Sources */,
 			);

@@ -37,15 +37,22 @@ extension HomeViewController: PanelNotifications {
     func panelDidPresented() {
         //print("Panel is presented")
         panel.updateTopView(isBottom: false)
+        self.view.backgroundColor = .white
     }
     
     func panelDidCollapse() {
         //print("Panel did collapse")
         panel.updateTopView(isBottom: false)
+        self.view.backgroundColor = .white
     }
     
     func panelDidOpen() {
         //print("Panel did open")
         panel.updateTopView(isBottom: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            [weak self] in
+            self?.view.backgroundColor = self?.panel.view.backgroundColor
+        }
+        
     }
 }
