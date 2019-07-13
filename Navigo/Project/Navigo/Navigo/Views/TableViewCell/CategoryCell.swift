@@ -12,14 +12,14 @@ class CategoryCell: UITableViewCell {
 
     @IBOutlet weak var categoryName: UILabel!
     var placesArray : [PlacesEntity] = []
-    
+    var nearByVC: UIViewController?
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
 
 }
 
-extension CategoryCell : UICollectionViewDataSource {
+extension CategoryCell : UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "placesCell", for: indexPath) as! PlacesCell
         cell.imageView.image = UIImage(named: placesArray[indexPath.row].imageName)
@@ -33,4 +33,10 @@ extension CategoryCell : UICollectionViewDataSource {
         return placesArray.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("collection view item selected")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Nearby", bundle: nil)
+        let detailViewController = storyBoard.instantiateViewController(withIdentifier: "placeDetailView") as! PlaceDetailViewController
+        nearByVC?.show(detailViewController, sender: nil)
+    }
 }

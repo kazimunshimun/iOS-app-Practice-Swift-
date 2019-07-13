@@ -57,6 +57,7 @@ class Nearby: UIViewController, Panelable, UITableViewDelegate, UITableViewDataS
         let initalIndex = indexPath.row * 3
         let finalIndex = initalIndex + 3
         cell.placesArray = Array(places[initalIndex..<finalIndex])
+        cell.nearByVC = self
         return cell
     }
     
