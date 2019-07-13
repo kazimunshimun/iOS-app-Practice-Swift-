@@ -10,15 +10,22 @@ import UIKit
 
 class PlaceDetailViewController: UIViewController {
 
+    @IBOutlet weak var mapParentView: RoundedCornerView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
 
     @IBAction func backButtonClicked(_ sender: Any) {
         navigationController!.popViewController(animated: true)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        mapParentView.topRight = true
+        mapParentView.topLeft = true
+        mapParentView.bottomRight = true
+        mapParentView.bottomLeft = true
     }
     /*
     // MARK: - Navigation
