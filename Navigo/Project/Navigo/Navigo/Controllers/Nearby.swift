@@ -16,8 +16,8 @@ class Nearby: UIViewController, Panelable {
     
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var fullLabel: UILabel!
-    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var topMultiColorView: UIView!
+    @IBOutlet weak var indicatorImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,16 +29,8 @@ class Nearby: UIViewController, Panelable {
     public func updateTopView(isBottom: Bool) {
         bottomView.isHidden = isBottom
         fullLabel.isHidden = !isBottom
-        backButton.setImage(isBottom ? UIImage(named: "back_icon") : UIImage(named: "up_icon"), for: .normal)
+        //topMultiColorView.isHidden = isBottom ? true : false
+        indicatorImageView.image = isBottom ? UIImage(named: "back_icon") : UIImage(named: "up_icon")
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

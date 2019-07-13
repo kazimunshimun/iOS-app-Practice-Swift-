@@ -17,16 +17,15 @@ class HomeViewController: UIViewController, SideMenuItemContent {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        //let homeStoryBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let screenSize: CGRect = UIScreen.main.bounds
-        
-        let panelConfiguration = PanelConfiguration(size: .custom(screenSize.height - 84))
-        // To present the panel
+        setupPanelView()
+    }
+    
+    func setupPanelView() {
+        var panelConfiguration = PanelConfiguration(size: .fullScreen)
+        panelConfiguration.enclosedNavigationBar = false
         panelManager.delegate = self
         panelManager.show(panel: panel, config: panelConfiguration)
     }
-    
 
     @IBAction func menuButtonClicked(_ sender: Any) {
         showSideMenu()
