@@ -42,17 +42,21 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
                                   PlacesEntity(categoryID: 0, placeID: 1, name: "Pho Montreal", imageName: "soup_place_1", distance: 2.2, rating: 4.5, isShowing: false), PlacesEntity(categoryID: 0, placeID: 2, name: "Rigolati", imageName: "soup_place_2", distance: 1.2, rating: 4.0, isShowing: false), PlacesEntity(categoryID: 0, placeID: 3, name: "Dae Jang Geum", imageName: "soup_place_3", distance: 4.2, rating: 4.3, isShowing: false),
                                   PlacesEntity(categoryID: 0, placeID: 1, name: "Time Out", imageName: "burger_place_1", distance: 2.2, rating: 4.5, isShowing: false), PlacesEntity(categoryID: 0, placeID: 2, name: "Tree House", imageName: "burger_place_2", distance: 1.2, rating: 4.0, isShowing: false), PlacesEntity(categoryID: 0, placeID: 3, name: "Cozy Sizzler", imageName: "burger_place_3", distance: 4.2, rating: 4.3, isShowing: false)]
 
+    
+    @IBOutlet weak var searchTextCrossButton: UIButton!
     @IBOutlet weak var searchResultView: UIView!
     @IBOutlet weak var searchCollectionView: UICollectionView!
     @IBOutlet weak var searchTextField: UITextField!
     
     
     lazy var panelManager = Panels(target: self)
+    var panelConfiguration = PanelConfiguration(size: .fullScreen)
     var panel = UIStoryboard.instantiatePanel(identifier: "Nearby") as! Nearby
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.currentPage = 0
+        searchTextCrossButton.isHidden = true
         searchTextField.delegate = self
         setupPanelView()
         //setupLayout()
@@ -64,7 +68,6 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     }
     
     func setupPanelView() {
-        var panelConfiguration = PanelConfiguration(size: .fullScreen)
         panelConfiguration.enclosedNavigationBar = false
         panelManager.delegate = self
         panelManager.show(panel: panel, config: panelConfiguration)
@@ -74,13 +77,22 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         showSideMenu()
     }
     
+    @IBAction func searchDeleteButtonClicked(_ sender: Any) {
+        searchTextCrossButton.isHidden = true
+        searchTextField.text = ""
+        searchResultView.isHidden = true
+        panelManager.show(panel: panel, config: panelConfiguration)
+    }
+    
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         panelManager.dismiss()
+        searchTextCrossButton.isHidden = false
         return true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchResultView.isHidden = false
+        textField.resignFirstResponder()
         return true
     }
 

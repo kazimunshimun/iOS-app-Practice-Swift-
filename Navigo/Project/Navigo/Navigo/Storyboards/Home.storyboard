@@ -37,21 +37,30 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where to?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3U0-9e-qPz">
-                                        <rect key="frame" x="76" y="17.5" width="290" height="17"/>
+                                        <rect key="frame" x="76" y="18" width="258" height="17"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ml4-Jw-7nj">
+                                        <rect key="frame" x="342" y="14" width="24" height="24"/>
+                                        <state key="normal" image="cross_icon"/>
+                                        <connections>
+                                            <action selector="searchDeleteButtonClicked:" destination="77B-ZO-q42" eventType="touchUpInside" id="oRY-K7-4kU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="3U0-9e-qPz" firstAttribute="leading" secondItem="yny-EC-lV0" secondAttribute="trailing" constant="16" id="BI1-qr-DA1"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ml4-Jw-7nj" secondAttribute="trailing" constant="8" id="Ccr-yu-m2N"/>
                                     <constraint firstItem="3U0-9e-qPz" firstAttribute="centerY" secondItem="NYS-7e-JHK" secondAttribute="centerY" id="Gob-t3-wJd"/>
                                     <constraint firstItem="JXQ-e0-5ZA" firstAttribute="centerY" secondItem="NYS-7e-JHK" secondAttribute="centerY" id="Ia2-n5-hVA"/>
                                     <constraint firstItem="yny-EC-lV0" firstAttribute="leading" secondItem="JXQ-e0-5ZA" secondAttribute="trailing" constant="16" id="Iup-vk-IM4"/>
+                                    <constraint firstItem="Ml4-Jw-7nj" firstAttribute="leading" secondItem="3U0-9e-qPz" secondAttribute="trailing" constant="8" id="MMB-Tn-2vw"/>
+                                    <constraint firstItem="Ml4-Jw-7nj" firstAttribute="centerY" secondItem="NYS-7e-JHK" secondAttribute="centerY" id="Ojs-0E-x2u"/>
                                     <constraint firstAttribute="height" constant="52" id="TSC-XB-zvK"/>
                                     <constraint firstItem="JXQ-e0-5ZA" firstAttribute="leading" secondItem="NYS-7e-JHK" secondAttribute="leading" constant="19" id="Tyg-i2-bfv"/>
-                                    <constraint firstAttribute="trailing" secondItem="3U0-9e-qPz" secondAttribute="trailing" constant="8" id="aZJ-9T-IfU"/>
                                     <constraint firstItem="yny-EC-lV0" firstAttribute="centerY" secondItem="JXQ-e0-5ZA" secondAttribute="centerY" id="sbC-WZ-GQf"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -195,6 +204,7 @@
                     <connections>
                         <outlet property="searchCollectionView" destination="Twb-Vp-ar2" id="csy-QL-xXA"/>
                         <outlet property="searchResultView" destination="INW-pC-PWt" id="cgT-XB-TJM"/>
+                        <outlet property="searchTextCrossButton" destination="Ml4-Jw-7nj" id="zQY-IC-sFf"/>
                         <outlet property="searchTextField" destination="3U0-9e-qPz" id="Wnt-qB-Uap"/>
                     </connections>
                 </viewController>
@@ -204,6 +214,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cross_icon" width="24" height="24"/>
         <image name="menu_icon" width="24" height="24"/>
         <image name="sushi_place_1" width="152" height="172"/>
     </resources>
