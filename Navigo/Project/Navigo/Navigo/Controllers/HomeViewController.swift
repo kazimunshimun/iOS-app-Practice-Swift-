@@ -16,8 +16,16 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     fileprivate var currentPage: Int = 0 {
         didSet {
             print("current page set: \(self.currentPage)")
+            places[self.currentPage].isShowing = true
+            self.searchCollectionView.reloadData()
+            if previousPage != -1 {
+                places[self.previousPage].isShowing = false
+            }
+            previousPage = self.currentPage
         }
     }
+    
+    var previousPage: Int = -1;
     
     fileprivate var pageSize: CGSize {
         let layout = self.searchCollectionView.collectionViewLayout as! UPCarouselFlowLayout
@@ -30,9 +38,9 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         return pageSize
     }
     
-    let places: [PlacesEntity] = [PlacesEntity(categoryID: 0, placeID: 1, name: "Sushi Place", imageName: "sushi_place_1", distance: 2.2, rating: 4.5), PlacesEntity(categoryID: 0, placeID: 2, name: "Nom Nom", imageName: "sushi_place_2", distance: 1.2, rating: 4.0), PlacesEntity(categoryID: 0, placeID: 3, name: "Palace", imageName: "sushi_place_3", distance: 4.2, rating: 4.3),
-                                  PlacesEntity(categoryID: 0, placeID: 1, name: "Pho Montreal", imageName: "soup_place_1", distance: 2.2, rating: 4.5), PlacesEntity(categoryID: 0, placeID: 2, name: "Rigolati", imageName: "soup_place_2", distance: 1.2, rating: 4.0), PlacesEntity(categoryID: 0, placeID: 3, name: "Dae Jang Geum", imageName: "soup_place_3", distance: 4.2, rating: 4.3),
-                                  PlacesEntity(categoryID: 0, placeID: 1, name: "Time Out", imageName: "burger_place_1", distance: 2.2, rating: 4.5), PlacesEntity(categoryID: 0, placeID: 2, name: "Tree House", imageName: "burger_place_2", distance: 1.2, rating: 4.0), PlacesEntity(categoryID: 0, placeID: 3, name: "Cozy Sizzler", imageName: "burger_place_3", distance: 4.2, rating: 4.3)]
+    var places: [PlacesEntity] = [PlacesEntity(categoryID: 0, placeID: 1, name: "Sushi Place", imageName: "sushi_place_1", distance: 2.2, rating: 4.5, isShowing: false), PlacesEntity(categoryID: 0, placeID: 2, name: "Nom Nom", imageName: "sushi_place_2", distance: 1.2, rating: 4.0, isShowing: false), PlacesEntity(categoryID: 0, placeID: 3, name: "Palace", imageName: "sushi_place_3", distance: 4.2, rating: 4.3, isShowing: false),
+                                  PlacesEntity(categoryID: 0, placeID: 1, name: "Pho Montreal", imageName: "soup_place_1", distance: 2.2, rating: 4.5, isShowing: false), PlacesEntity(categoryID: 0, placeID: 2, name: "Rigolati", imageName: "soup_place_2", distance: 1.2, rating: 4.0, isShowing: false), PlacesEntity(categoryID: 0, placeID: 3, name: "Dae Jang Geum", imageName: "soup_place_3", distance: 4.2, rating: 4.3, isShowing: false),
+                                  PlacesEntity(categoryID: 0, placeID: 1, name: "Time Out", imageName: "burger_place_1", distance: 2.2, rating: 4.5, isShowing: false), PlacesEntity(categoryID: 0, placeID: 2, name: "Tree House", imageName: "burger_place_2", distance: 1.2, rating: 4.0, isShowing: false), PlacesEntity(categoryID: 0, placeID: 3, name: "Cozy Sizzler", imageName: "burger_place_3", distance: 4.2, rating: 4.3, isShowing: false)]
 
     @IBOutlet weak var searchResultView: UIView!
     @IBOutlet weak var searchCollectionView: UICollectionView!
@@ -47,6 +55,12 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         self.currentPage = 0
         searchTextField.delegate = self
         setupPanelView()
+        //setupLayout()
+    }
+    
+    fileprivate func setupLayout() {
+        let layout = self.searchCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+        layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 200)
     }
     
     func setupPanelView() {
@@ -84,7 +98,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         }
         */
         print("cell for row current page: \(self.currentPage) and index path: \(indexPath.row)")
-        if indexPath.row == currentPage {
+        if places[indexPath.row].isShowing {
             cell.infoView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#3ACCE1")
         } else {
             cell.infoView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#353A50")

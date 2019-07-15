@@ -15,4 +15,6 @@ struct PlacesEntity {
     let imageName: String
     let distance: Float
     let rating: Float
+    var isShowing: Bool = false
+    
 }
