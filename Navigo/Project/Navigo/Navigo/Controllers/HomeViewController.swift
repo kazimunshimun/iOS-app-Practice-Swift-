@@ -9,14 +9,43 @@
 import UIKit
 import InteractiveSideMenu
 import Panels
+import UPCarouselFlowLayout
 
-class HomeViewController: UIViewController, SideMenuItemContent {
+class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    fileprivate var currentPage: Int = 0 {
+        didSet {
+            print("current page set: \(self.currentPage)")
+        }
+    }
+    
+    fileprivate var pageSize: CGSize {
+        let layout = self.searchCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+        var pageSize = layout.itemSize
+        if layout.scrollDirection == .horizontal {
+            pageSize.width += layout.minimumLineSpacing
+        } else {
+            pageSize.height += layout.minimumLineSpacing
+        }
+        return pageSize
+    }
+    
+    let places: [PlacesEntity] = [PlacesEntity(categoryID: 0, placeID: 1, name: "Sushi Place", imageName: "sushi_place_1", distance: 2.2, rating: 4.5), PlacesEntity(categoryID: 0, placeID: 2, name: "Nom Nom", imageName: "sushi_place_2", distance: 1.2, rating: 4.0), PlacesEntity(categoryID: 0, placeID: 3, name: "Palace", imageName: "sushi_place_3", distance: 4.2, rating: 4.3),
+                                  PlacesEntity(categoryID: 0, placeID: 1, name: "Pho Montreal", imageName: "soup_place_1", distance: 2.2, rating: 4.5), PlacesEntity(categoryID: 0, placeID: 2, name: "Rigolati", imageName: "soup_place_2", distance: 1.2, rating: 4.0), PlacesEntity(categoryID: 0, placeID: 3, name: "Dae Jang Geum", imageName: "soup_place_3", distance: 4.2, rating: 4.3),
+                                  PlacesEntity(categoryID: 0, placeID: 1, name: "Time Out", imageName: "burger_place_1", distance: 2.2, rating: 4.5), PlacesEntity(categoryID: 0, placeID: 2, name: "Tree House", imageName: "burger_place_2", distance: 1.2, rating: 4.0), PlacesEntity(categoryID: 0, placeID: 3, name: "Cozy Sizzler", imageName: "burger_place_3", distance: 4.2, rating: 4.3)]
 
+    @IBOutlet weak var searchResultView: UIView!
+    @IBOutlet weak var searchCollectionView: UICollectionView!
+    @IBOutlet weak var searchTextField: UITextField!
+    
+    
     lazy var panelManager = Panels(target: self)
     var panel = UIStoryboard.instantiatePanel(identifier: "Nearby") as! Nearby
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.currentPage = 0
+        searchTextField.delegate = self
         setupPanelView()
     }
     
@@ -30,7 +59,57 @@ class HomeViewController: UIViewController, SideMenuItemContent {
     @IBAction func menuButtonClicked(_ sender: Any) {
         showSideMenu()
     }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        panelManager.dismiss()
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchResultView.isHidden = false
+        return true
+    }
 
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "places", for: indexPath) as! PlacesCell
+        cell.imageView.image = UIImage(named: places[indexPath.row].imageName)
+        cell.nameLabel.text = places[indexPath.row].name
+        cell.infoLabel.text = "\(places[indexPath.row].distance)mi, \(places[indexPath.row].rating) stars"
+        
+        /*
+        if cell.isSelected {
+         
+        } else {
+            cell.infoView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#353A50")
+        }
+        */
+        print("cell for row current page: \(self.currentPage) and index path: \(indexPath.row)")
+        if indexPath.row == currentPage {
+            cell.infoView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#3ACCE1")
+        } else {
+            cell.infoView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#353A50")
+        }
+        return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return places.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("collection view item selected")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Nearby", bundle: nil)
+        let detailViewController = storyBoard.instantiateViewController(withIdentifier: "placeDetailView") as! PlaceDetailViewController
+        self.show(detailViewController, sender: nil)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let layout = self.searchCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+        let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize.width : self.pageSize.height
+        let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
+        currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
+    }
 }
 
 extension HomeViewController: PanelNotifications {

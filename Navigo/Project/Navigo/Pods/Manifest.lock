@@ -71,6 +71,7 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Panels (2.1.0)
+  - UPCarouselFlowLayout (1.1.2)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -79,6 +80,7 @@ DEPENDENCIES:
   - GooglePlaces
   - InteractiveSideMenu
   - Panels
+  - UPCarouselFlowLayout
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -96,6 +98,7 @@ SPEC REPOS:
     - InteractiveSideMenu
     - nanopb
     - Panels
+    - UPCarouselFlowLayout
 
 SPEC CHECKSUMS:
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
@@ -112,7 +115,8 @@ SPEC CHECKSUMS:
   InteractiveSideMenu: d503a508c6d62a4d5d4372d9fb9e1795637a8e45
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Panels: cfafe2d0f92387f393a3b5e827af9ffffe46b073
+  UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
 
-PODFILE CHECKSUM: 495074a8df0becaaeafb96c4941d9f0699091092
+PODFILE CHECKSUM: 2095b0513c353b40b2f1fecbf6d421d56733ad71
 
 COCOAPODS: 1.6.0

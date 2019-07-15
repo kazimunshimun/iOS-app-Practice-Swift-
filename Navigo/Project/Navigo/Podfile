@@ -12,4 +12,5 @@ target 'Navigo' do
     pod 'GooglePlaces'
     pod 'Panels'
     pod 'InteractiveSideMenu'
+    pod 'UPCarouselFlowLayout'
 end
