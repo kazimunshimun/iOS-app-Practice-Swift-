@@ -17,7 +17,6 @@ class Nearby: UIViewController, Panelable, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var topColorView: RoundedCornerView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var fullLabel: UILabel!
-    @IBOutlet weak var topMultiColorView: UIView!
     @IBOutlet weak var indicatorImageView: UIImageView!
     @IBOutlet weak var nearbyTableView: UITableView!
     
@@ -45,7 +44,7 @@ class Nearby: UIViewController, Panelable, UITableViewDelegate, UITableViewDataS
     public func updateTopView(isBottom: Bool) {
         bottomView.isHidden = isBottom
         fullLabel.isHidden = !isBottom
-        topMultiColorView.isHidden = isBottom ? true : false
+        topColorView.isHidden = isBottom ? true : false
         indicatorImageView.image = isBottom ? UIImage(named: "back_icon") : UIImage(named: "up_icon")
     }
     
