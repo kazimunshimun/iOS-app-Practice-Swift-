@@ -47,11 +47,12 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     @IBOutlet weak var searchResultView: UIView!
     @IBOutlet weak var searchCollectionView: UICollectionView!
     @IBOutlet weak var searchTextField: UITextField!
-    
+    @IBOutlet weak var topView: RoundedViewWithShadow!
     
     lazy var panelManager = Panels(target: self)
     var panelConfiguration = PanelConfiguration(size: .fullScreen)
     var panel = UIStoryboard.instantiatePanel(identifier: "Nearby") as! Nearby
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -143,17 +144,23 @@ extension HomeViewController: PanelNotifications {
         //print("Panel is presented")
         panel.updateTopView(isBottom: false)
         self.view.backgroundColor = .white
+        topView.isHidden = false
+        topView.showShadow()
     }
     
     func panelDidCollapse() {
         //print("Panel did collapse")
         panel.updateTopView(isBottom: false)
         self.view.backgroundColor = .white
+        topView.isHidden = false
+        topView.showShadow()
     }
     
     func panelDidOpen() {
         //print("Panel did open")
         panel.updateTopView(isBottom: true)
+        topView.isHidden = true
+        topView.hideShadow()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             [weak self] in
             self?.view.backgroundColor = self?.panel.view.backgroundColor

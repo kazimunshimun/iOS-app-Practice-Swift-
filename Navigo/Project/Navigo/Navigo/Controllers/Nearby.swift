@@ -14,6 +14,7 @@ class Nearby: UIViewController, Panelable, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var headerHeight: NSLayoutConstraint!
     @IBOutlet weak var headerPanel: UIView!
     
+    @IBOutlet weak var topColorView: RoundedCornerView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var fullLabel: UILabel!
     @IBOutlet weak var topMultiColorView: UIView!
@@ -29,6 +30,11 @@ class Nearby: UIViewController, Panelable, UITableViewDelegate, UITableViewDataS
         super.viewDidLoad()
 
         updateViews()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        topColorView.topLeft = true
+        topColorView.topRight = true
     }
     
     func updateViews() {

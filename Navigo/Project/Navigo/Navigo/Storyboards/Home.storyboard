@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYS-7e-JHK" customClass="RoundedCornerView" customModule="Navigo" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYS-7e-JHK" customClass="RoundedViewWithShadow" customModule="Navigo" customModuleProvider="target">
                                 <rect key="frame" x="20" y="44" width="374" height="52"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXQ-e0-5ZA">
@@ -37,7 +37,7 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where to?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3U0-9e-qPz">
-                                        <rect key="frame" x="76" y="18" width="258" height="17"/>
+                                        <rect key="frame" x="76" y="17.5" width="258" height="17"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="search"/>
@@ -67,14 +67,10 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAy-8u-Qen" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="104" width="414" height="792"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="INW-pC-PWt">
@@ -189,13 +185,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="P8r-c0-wFm" firstAttribute="trailing" secondItem="INW-pC-PWt" secondAttribute="trailing" id="5DX-ZN-o4j"/>
+                            <constraint firstItem="cAy-8u-Qen" firstAttribute="top" secondItem="P8r-c0-wFm" secondAttribute="top" id="AKt-FL-DTD"/>
                             <constraint firstItem="INW-pC-PWt" firstAttribute="leading" secondItem="P8r-c0-wFm" secondAttribute="leading" id="CPx-W5-ghq"/>
                             <constraint firstItem="cAy-8u-Qen" firstAttribute="leading" secondItem="P8r-c0-wFm" secondAttribute="leading" id="EzH-B5-8EK"/>
                             <constraint firstItem="NYS-7e-JHK" firstAttribute="leading" secondItem="P8r-c0-wFm" secondAttribute="leading" constant="20" id="HXF-yi-4gK"/>
                             <constraint firstItem="P8r-c0-wFm" firstAttribute="trailing" secondItem="cAy-8u-Qen" secondAttribute="trailing" id="ILi-QT-Gpt"/>
                             <constraint firstItem="NYS-7e-JHK" firstAttribute="top" secondItem="P8r-c0-wFm" secondAttribute="top" id="LgU-lk-95w"/>
                             <constraint firstItem="P8r-c0-wFm" firstAttribute="trailing" secondItem="NYS-7e-JHK" secondAttribute="trailing" constant="20" id="NPU-E6-8DP"/>
-                            <constraint firstItem="cAy-8u-Qen" firstAttribute="top" secondItem="NYS-7e-JHK" secondAttribute="bottom" constant="8" id="PIg-H4-M9v"/>
                             <constraint firstItem="P8r-c0-wFm" firstAttribute="bottom" secondItem="INW-pC-PWt" secondAttribute="bottom" id="m4q-8t-BcG"/>
                             <constraint firstItem="cAy-8u-Qen" firstAttribute="bottom" secondItem="P8r-c0-wFm" secondAttribute="bottom" constant="34" id="n55-M2-pq8"/>
                         </constraints>
@@ -206,6 +202,7 @@
                         <outlet property="searchResultView" destination="INW-pC-PWt" id="cgT-XB-TJM"/>
                         <outlet property="searchTextCrossButton" destination="Ml4-Jw-7nj" id="zQY-IC-sFf"/>
                         <outlet property="searchTextField" destination="3U0-9e-qPz" id="Wnt-qB-Uap"/>
+                        <outlet property="topView" destination="NYS-7e-JHK" id="nXf-RO-twe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Czb-Ss-MrQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
