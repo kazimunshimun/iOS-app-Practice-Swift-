@@ -13,7 +13,7 @@ import UPCarouselFlowLayout
 import CoreLocation
 import GoogleMaps
 
-class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, VisitPlaceDelegate {
     
     fileprivate var currentPage: Int = 0 {
         didSet {
@@ -159,6 +159,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         let detailViewController = storyBoard.instantiateViewController(withIdentifier: "placeDetailView") as! PlaceDetailViewController
         let place = places[indexPath.row]
         detailViewController.place = place
+        detailViewController.placeDelegate = self
         self.present(detailViewController, animated: true, completion: nil)
         //self.show(detailViewController, sender: nil)
     }
@@ -168,6 +169,10 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize.width : self.pageSize.height
         let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
         currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
+    }
+    
+    func goToPlace(place: PlacesEntity) {
+        print("go there button clicked")
     }
 }
 

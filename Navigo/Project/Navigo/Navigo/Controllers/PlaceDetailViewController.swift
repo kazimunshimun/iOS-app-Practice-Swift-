@@ -9,11 +9,17 @@
 import UIKit
 import GoogleMaps
 
+protocol VisitPlaceDelegate {
+    func goToPlace(place: PlacesEntity)
+}
+
 class PlaceDetailViewController: UIViewController {
 
     @IBOutlet weak var mapParentView: RoundedCornerView!
     @IBOutlet weak var mapView: GMSMapView!
     var place: PlacesEntity!
+    
+    var placeDelegate: VisitPlaceDelegate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +50,12 @@ class PlaceDetailViewController: UIViewController {
         marker.snippet = place.name
         marker.icon = UIImage(named: "resturent_marker")
         marker.map = mapView
+    }
+    
+    
+    @IBAction func goThereButtonClicked(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        placeDelegate?.goToPlace(place: place)
     }
     /*
     // MARK: - Navigation

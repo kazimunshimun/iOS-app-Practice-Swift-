@@ -40,6 +40,7 @@ extension CategoryCell : UICollectionViewDataSource, UICollectionViewDelegate {
         let place = placesArray[indexPath.row]
         let detailViewController = storyBoard.instantiateViewController(withIdentifier: "placeDetailView") as! PlaceDetailViewController
         detailViewController.place = place
+        //detailViewController.placeDelegate = nearByVC
         //nearByVC?.show(detailViewController, sender: nil)
         nearByVC?.present(detailViewController, animated: true, completion: nil)
     }
