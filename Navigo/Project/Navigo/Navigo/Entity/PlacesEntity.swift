@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct PlacesEntity {
     let categoryID: Int
@@ -16,5 +17,5 @@ struct PlacesEntity {
     let distance: Float
     let rating: Float
     var isShowing: Bool = false
-    
+    let location: CLLocation
 }

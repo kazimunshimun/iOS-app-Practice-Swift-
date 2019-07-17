@@ -21,10 +21,11 @@ class CategoryCell: UITableViewCell {
 
 extension CategoryCell : UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let place = placesArray[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "placesCell", for: indexPath) as! PlacesCell
-        cell.imageView.image = UIImage(named: placesArray[indexPath.row].imageName)
-        cell.nameLabel.text = placesArray[indexPath.row].name
-        cell.infoLabel.text = "\(placesArray[indexPath.row].distance)mi, \(placesArray[indexPath.row].rating) stars"
+        cell.imageView.image = UIImage(named: place.imageName)
+        cell.nameLabel.text = place.name
+        cell.infoLabel.text = "\(place.distance)mi, \(place.rating) stars"
         return cell
     }
     
@@ -36,7 +37,10 @@ extension CategoryCell : UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("collection view item selected")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Nearby", bundle: nil)
+        let place = placesArray[indexPath.row]
         let detailViewController = storyBoard.instantiateViewController(withIdentifier: "placeDetailView") as! PlaceDetailViewController
-        nearByVC?.show(detailViewController, sender: nil)
+        detailViewController.place = place
+        //nearByVC?.show(detailViewController, sender: nil)
+        nearByVC?.present(detailViewController, animated: true, completion: nil)
     }
 }

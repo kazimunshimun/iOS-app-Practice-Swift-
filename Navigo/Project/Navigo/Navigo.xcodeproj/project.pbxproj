@@ -226,9 +226,9 @@
 				84931BB622D8A5770002165B /* Views */,
 				84931BAE22D874160002165B /* Controllers */,
 				84931BAC22D873E10002165B /* Storyboards */,
+				8438CD9E22D9DFBB0086F3D7 /* Entity */,
 				84931BAD22D873FF0002165B /* Resources */,
 				84BFB3DF22D4E1B40076A9B4 /* Info.plist */,
-				8438CD9E22D9DFBB0086F3D7 /* Entity */,
 			);
 			path = Navigo;
 			sourceTree = "<group>";

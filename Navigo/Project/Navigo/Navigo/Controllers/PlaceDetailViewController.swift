@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class PlaceDetailViewController: UIViewController {
 
     @IBOutlet weak var mapParentView: RoundedCornerView!
+    @IBOutlet weak var mapView: GMSMapView!
+    var place: PlacesEntity!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        updateViews()
     }
 
     @IBAction func backButtonClicked(_ sender: Any) {
-        navigationController!.popViewController(animated: true)
+        //navigationController!.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -26,6 +32,18 @@ class PlaceDetailViewController: UIViewController {
         mapParentView.topLeft = true
         mapParentView.bottomRight = true
         mapParentView.bottomLeft = true
+    }
+    
+    func updateViews() {
+        let camera = GMSCameraPosition.camera(withLatitude: place.location.coordinate.latitude, longitude: place.location.coordinate.longitude, zoom: 16.0)
+        mapView.camera = camera
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: place.location.coordinate.latitude, longitude: place.location.coordinate.longitude)
+        marker.title = place.name
+        marker.snippet = place.name
+        marker.icon = UIImage(named: "resturent_marker")
+        marker.map = mapView
     }
     /*
     // MARK: - Navigation

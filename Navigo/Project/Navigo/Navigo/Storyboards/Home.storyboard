@@ -198,6 +198,7 @@
                         <viewLayoutGuide key="safeArea" id="P8r-c0-wFm"/>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="cAy-8u-Qen" id="Su3-BJ-CVe"/>
                         <outlet property="searchCollectionView" destination="Twb-Vp-ar2" id="csy-QL-xXA"/>
                         <outlet property="searchResultView" destination="INW-pC-PWt" id="cgT-XB-TJM"/>
                         <outlet property="searchTextCrossButton" destination="Ml4-Jw-7nj" id="zQY-IC-sFf"/>
