@@ -15,6 +15,11 @@ protocol VisitPlaceDelegate {
 
 class PlaceDetailViewController: UIViewController {
 
+    @IBOutlet weak var placeNameLabel: UILabel!
+    @IBOutlet weak var reviewCountLabel: UILabel!
+    @IBOutlet weak var resturentImageView: UIImageView!
+    
+    
     @IBOutlet weak var mapParentView: RoundedCornerView!
     @IBOutlet weak var mapView: GMSMapView!
     var place: PlacesEntity!
@@ -41,6 +46,9 @@ class PlaceDetailViewController: UIViewController {
     }
     
     func updateViews() {
+        placeNameLabel.text = place.name
+        resturentImageView.image = UIImage(named: place.imageName)
+        
         let camera = GMSCameraPosition.camera(withLatitude: place.location.coordinate.latitude, longitude: place.location.coordinate.longitude, zoom: 16.0)
         mapView.camera = camera
         

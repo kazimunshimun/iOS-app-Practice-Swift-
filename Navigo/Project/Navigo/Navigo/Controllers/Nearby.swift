@@ -26,6 +26,7 @@ class Nearby: UIViewController, Panelable, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var fullLabel: UILabel!
     @IBOutlet weak var indicatorImageView: UIImageView!
     @IBOutlet weak var nearbyTableView: UITableView!
+    @IBOutlet weak var nearbyCountLabel: UILabel!
     
     var places: [PlacesEntity] = [PlacesEntity(categoryID: 0, placeID: 1, name: "Sushi Place", imageName: "sushi_place_1", distance: 2.2, rating: 4.5, isShowing: false, location: CLLocation(latitude: 51.4976549, longitude: -0.2117534)), PlacesEntity(categoryID: 0, placeID: 2, name: "Nom Nom", imageName: "sushi_place_2", distance: 1.2, rating: 4.0, isShowing: false, location: CLLocation(latitude: 51.4970644, longitude: -0.2126093)), PlacesEntity(categoryID: 0, placeID: 3, name: "Palace", imageName: "sushi_place_3", distance: 4.2, rating: 4.3, isShowing: false, location: CLLocation(latitude: 51.4962299, longitude: -0.2106902)),
                                   PlacesEntity(categoryID: 0, placeID: 1, name: "Pho Montreal", imageName: "soup_place_1", distance: 2.2, rating: 4.5, isShowing: false, location: CLLocation(latitude: 51.4958147, longitude: -0.2086598)), PlacesEntity(categoryID: 0, placeID: 2, name: "Rigolati", imageName: "soup_place_2", distance: 1.2, rating: 4.0, isShowing: false, location: CLLocation(latitude: 51.4971387, longitude: -0.2130881)), PlacesEntity(categoryID: 0, placeID: 3, name: "Dae Jang Geum", imageName: "soup_place_3", distance: 4.2, rating: 4.3, isShowing: false, location: CLLocation(latitude: 51.4960969, longitude: -0.2087144)),
@@ -46,6 +47,7 @@ class Nearby: UIViewController, Panelable, UITableViewDelegate, UITableViewDataS
     func updateViews() {
         nearbyTableView.delegate = self
         nearbyTableView.dataSource = self
+        nearbyCountLabel.text = "\(places.count)"
     }
     
     public func updateTopView(isBottom: Bool) {

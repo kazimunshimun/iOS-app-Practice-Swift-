@@ -308,6 +308,7 @@
                         <outlet property="headerHeight" destination="ibH-xX-Ytk" id="how-Jc-aGc"/>
                         <outlet property="headerPanel" destination="qtx-Fy-XDD" id="Y7Z-TR-YhN"/>
                         <outlet property="indicatorImageView" destination="4k3-gS-rMk" id="jrQ-ov-dft"/>
+                        <outlet property="nearbyCountLabel" destination="vH7-39-ZgS" id="lmf-2v-MZI"/>
                         <outlet property="nearbyTableView" destination="zQn-Nh-u8e" id="fK6-hC-pK5"/>
                         <outlet property="topColorView" destination="PcK-pm-JID" id="Nb7-Vz-3Ev"/>
                     </connections>
@@ -553,6 +554,9 @@
                     <connections>
                         <outlet property="mapParentView" destination="OBz-C8-M6r" id="0Bj-uh-PMh"/>
                         <outlet property="mapView" destination="fSp-vT-4cz" id="k63-m0-bon"/>
+                        <outlet property="placeNameLabel" destination="eHQ-Ef-GNG" id="uKi-KX-k9x"/>
+                        <outlet property="resturentImageView" destination="8QV-QR-mqS" id="LwD-BX-zUA"/>
+                        <outlet property="reviewCountLabel" destination="uAU-kZ-gz0" id="lUr-tY-hVY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nas-sY-baQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
