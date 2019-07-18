@@ -12,7 +12,8 @@ class CategoryCell: UITableViewCell {
 
     @IBOutlet weak var categoryName: UILabel!
     var placesArray : [PlacesEntity] = []
-    var nearByVC: UIViewController?
+    var nearByVC: Nearby?
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -40,7 +41,7 @@ extension CategoryCell : UICollectionViewDataSource, UICollectionViewDelegate {
         let place = placesArray[indexPath.row]
         let detailViewController = storyBoard.instantiateViewController(withIdentifier: "placeDetailView") as! PlaceDetailViewController
         detailViewController.place = place
-        //detailViewController.placeDelegate = nearByVC
+        detailViewController.placeDelegate = nearByVC
         //nearByVC?.show(detailViewController, sender: nil)
         nearByVC?.present(detailViewController, animated: true, completion: nil)
     }

@@ -10,8 +10,14 @@ import Panels
 import UIKit
 import CoreLocation
 
-class Nearby: UIViewController, Panelable, UITableViewDelegate, UITableViewDataSource {
+protocol VisitNearByPlaceDelegate {
+    func goToNearByPlace(place: PlacesEntity)
+}
 
+class Nearby: UIViewController, Panelable, UITableViewDelegate, UITableViewDataSource, VisitPlaceDelegate {
+
+    var placeDelegate: VisitNearByPlaceDelegate? = nil
+    
     @IBOutlet weak var headerHeight: NSLayoutConstraint!
     @IBOutlet weak var headerPanel: UIView!
     
@@ -69,6 +75,11 @@ class Nearby: UIViewController, Panelable, UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func goToPlace(place: PlacesEntity) {
+        print("go to place from nearby vc")
+        placeDelegate?.goToNearByPlace(place: place)
     }
 
 }

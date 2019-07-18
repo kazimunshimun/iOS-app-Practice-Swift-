@@ -13,7 +13,7 @@ import UPCarouselFlowLayout
 import CoreLocation
 import GoogleMaps
 
-class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, VisitPlaceDelegate {
+class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, VisitPlaceDelegate, VisitNearByPlaceDelegate {
     
     fileprivate var currentPage: Int = 0 {
         didSet {
@@ -88,6 +88,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     func setupPanelView() {
         panelConfiguration.enclosedNavigationBar = false
         panelManager.delegate = self
+        panel.placeDelegate = self
         panelManager.show(panel: panel, config: panelConfiguration)
     }
 
@@ -173,6 +174,24 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     
     func goToPlace(place: PlacesEntity) {
         print("go there button clicked")
+        //hide collection view of resturent
+        searchResultView.isHidden = true
+        //show only the place selected in map
+        //show select ride option
+    }
+    
+    func goToNearByPlace(place: PlacesEntity) {
+        panelManager.dismiss()
+        updateSearchView()
+        print("go there button clicked")
+        //show the place selected on map
+        // show select ride option
+    }
+    
+    func updateSearchView() {
+        self.view.backgroundColor = .white
+        topView.isHidden = false
+        topView.showShadow()
     }
 }
 
@@ -180,17 +199,13 @@ extension HomeViewController: PanelNotifications {
     func panelDidPresented() {
         //print("Panel is presented")
         panel.updateTopView(isBottom: false)
-        self.view.backgroundColor = .white
-        topView.isHidden = false
-        topView.showShadow()
+        updateSearchView()
     }
     
     func panelDidCollapse() {
         //print("Panel did collapse")
         panel.updateTopView(isBottom: false)
-        self.view.backgroundColor = .white
-        topView.isHidden = false
-        topView.showShadow()
+        updateSearchView()
     }
     
     func panelDidOpen() {
