@@ -33,4 +33,13 @@ public class ColorUtils {
         )
     }
     
+    static func colorRGB (_ redColor: Float, _ greenColor: Float, _ blueColor: Float) -> UIColor {
+        return UIColor(
+            red: CGFloat(redColor / 255.0),
+            green: CGFloat(greenColor / 255.0),
+            blue: CGFloat(blueColor / 255.0),
+            alpha: CGFloat(1.0)
+        )
+    }
+    
 }

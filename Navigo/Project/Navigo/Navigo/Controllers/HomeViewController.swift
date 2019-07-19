@@ -15,7 +15,25 @@ import GoogleMaps
 
 class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, VisitPlaceDelegate, VisitNearByPlaceDelegate {
     
+    enum ShowingPanel {
+        case nearby
+        case ride
+        case onTrip
+    }
     
+    enum ShowingRide : Int {
+        case car = 0
+        case ride = 1
+        case publicTrasport = 2
+        case none = 3
+    }
+    
+    enum RideCompany : Int {
+        case taxi = 0
+        case ridy = 1
+        case autoM = 2
+        case none = 3
+    }
     
     fileprivate var currentPage: Int = 0 {
         didSet {
@@ -52,6 +70,9 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     
     var placesMarker: [GMSMarker] = []
 
+    var nowShowingPanel: ShowingPanel = .nearby
+    var nowShowingRide: ShowingRide = .none
+    var nowRideCompay: RideCompany = .none
     
     @IBOutlet weak var searchTextCrossButton: UIButton!
     @IBOutlet weak var searchResultView: UIView!
@@ -62,11 +83,26 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var mapTopConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var rideShareMultiColorView: RoundedCornerView!
+    @IBOutlet weak var rideShareView: UIView!
+    @IBOutlet weak var rideShareHeightContraint: NSLayoutConstraint!
+    
+    //ride option
+    @IBOutlet weak var carView: RoundedCornerView!
+    @IBOutlet weak var rideView: RoundedCornerView!
+    @IBOutlet weak var publicTrasportView: RoundedCornerView!
+    //sharing option
+    @IBOutlet weak var taxiView: RoundedCornerView!
+    @IBOutlet weak var ridyView: RoundedCornerView!
+    @IBOutlet weak var autoMView: RoundedCornerView!
+    
+    @IBOutlet weak var callButton: UIButton!
+    
     lazy var panelManager = Panels(target: self)
     var panelConfiguration = PanelConfiguration(size: .fullScreen)
     var panel = UIStoryboard.instantiatePanel(identifier: "Nearby") as! Nearby
     var panelForRideChooser = UIStoryboard.instantiatePanel(identifier: "Home") as! RideChooser
-    var panelConfigurationHalf = PanelConfiguration(size: .half)
+    var panelConfigurationHalf = PanelConfiguration(size: .custom(332))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +111,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         searchTextCrossButton.isHidden = true
         searchTextField.delegate = self
         setupPanelView()
+        setupRideViewListener()
         //setupLayout()
         
     }
@@ -88,6 +125,90 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     fileprivate func setupLayout() {
         let layout = self.searchCollectionView.collectionViewLayout as! UPCarouselFlowLayout
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 200)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        rideShareMultiColorView.topLeft = true
+        rideShareMultiColorView.topRight = true
+    }
+    
+    func setupRideViewListener() {
+        let carGesture = UITapGestureRecognizer(target: self, action:  #selector(self.ownCarSelected))
+        carView.addGestureRecognizer(carGesture)
+        
+        let rideGesture = UITapGestureRecognizer(target: self, action:  #selector(self.rideShareSelected))
+        rideShareView.addGestureRecognizer(rideGesture)
+        
+        let tranportGesture = UITapGestureRecognizer(target: self, action:  #selector(self.publicTransportSelected))
+        publicTrasportView.addGestureRecognizer(tranportGesture)
+        
+        
+        let taxiGesture = UITapGestureRecognizer(target: self, action:  #selector(self.taxiSelected))
+        taxiView.addGestureRecognizer(taxiGesture)
+        
+        let ridyGesture = UITapGestureRecognizer(target: self, action:  #selector(self.ridySelected))
+        ridyView.addGestureRecognizer(ridyGesture)
+        
+        let autoMGesture = UITapGestureRecognizer(target: self, action:  #selector(self.autoMSelected))
+        autoMView.addGestureRecognizer(autoMGesture)
+    }
+    
+    @objc func ownCarSelected() {
+        print("car selected")
+        nowShowingRide = .car
+        carView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
+        updateRideOptionView()
+        rideShareHeightContraint.constant = 172
+    }
+    
+    @objc func rideShareSelected() {
+        print("ride share selected")
+        nowShowingRide = .ride
+        rideView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
+        updateRideOptionView()
+        rideShareHeightContraint.constant = 404
+    }
+    
+    @objc func publicTransportSelected() {
+        print("public transport selected")
+        nowShowingRide = .publicTrasport
+        publicTrasportView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
+        updateRideOptionView()
+        rideShareHeightContraint.constant = 172
+        //454F63
+    }
+    
+    @objc func taxiSelected() {
+        print("car selected")
+        nowRideCompay = .taxi
+        carView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "FFC400")
+        //updateRideOptionView()
+    }
+    
+    @objc func ridySelected() {
+        print("ride share selected")
+        nowRideCompay = .ridy
+        rideView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
+        //updateRideOptionView()
+    }
+    
+    @objc func autoMSelected() {
+        print("public transport selected")
+        nowRideCompay = .autoM
+        publicTrasportView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
+        //updateRideOptionView()
+    }
+    
+    @IBAction func callButtonClicked(_ sender: Any) {
+        
+    }
+    
+    func updateRideOptionView() {
+        var rideList = [carView, rideView, publicTrasportView]
+        rideList.remove(at: nowShowingRide.rawValue)
+        for ride in rideList {
+            ride?.backgroundColor = ColorUtils.hexStringToUIColor(hex: "454B63")
+        }
     }
     
     func setupPanelView() {
@@ -191,10 +312,12 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         searchResultView.isHidden = true
         //show only the place selected in map
         //show select ride option
+        showRideChooserView()
     }
     
     func goToNearByPlace(place: PlacesEntity) {
         panelManager.dismiss()
+        nowShowingPanel = .ride
         updateSearchView()
         print("go there button clicked")
         //show the place selected on map
@@ -209,10 +332,14 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     }
     
     func showRideChooserView(){
+        rideShareView.isHidden = false
+        rideShareHeightContraint.constant = 172
+        /*
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             [weak self] in
             self?.panelManager.show(panel: self!.panelForRideChooser, config: self!.panelConfigurationHalf)
         }
+ */
         
     }
 }
@@ -220,27 +347,32 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
 extension HomeViewController: PanelNotifications {
     func panelDidPresented() {
         //print("Panel is presented")
-        panel.updateTopView(isBottom: false)
-        updateSearchView()
+        if self.nowShowingPanel == .nearby {
+            panel.updateTopView(isBottom: false)
+            updateSearchView()
+        }
     }
     
     func panelDidCollapse() {
         //print("Panel did collapse")
-        panel.updateTopView(isBottom: false)
-        updateSearchView()
-        self.mapTopConstraint.constant = -44
+        if self.nowShowingPanel == .nearby {
+            panel.updateTopView(isBottom: false)
+            updateSearchView()
+            self.mapTopConstraint.constant = -44
+        }
     }
     
     func panelDidOpen() {
         //print("Panel did open")
-        panel.updateTopView(isBottom: true)
-        topView.isHidden = true
-        topView.hideShadow()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            [weak self] in
-            self?.view.backgroundColor = self?.panel.view.backgroundColor
-            self?.mapTopConstraint.constant = 0
+        if self.nowShowingPanel == .nearby {
+            panel.updateTopView(isBottom: true)
+            topView.isHidden = true
+            topView.hideShadow()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                [weak self] in
+                self?.view.backgroundColor = self?.panel.view.backgroundColor
+                self?.mapTopConstraint.constant = 0
+            }
         }
-        
     }
 }
