@@ -15,27 +15,23 @@ import GoogleMaps
 
 class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, VisitPlaceDelegate, VisitNearByPlaceDelegate {
     
+    
+    
     fileprivate var currentPage: Int = 0 {
         didSet {
             print("current page set: \(self.currentPage)")
-            places[self.currentPage].isShowing = true
-            self.searchCollectionView.reloadData()
-            if previousPage != -1 {
-                places[self.previousPage].isShowing = false
-                mapView.animate(to: GMSCameraPosition(latitude: places[self.currentPage].location.coordinate.latitude, longitude: places[self.currentPage].location.coordinate.longitude, zoom: 16.0))
-                //let marker = placesMarker[self.currentPage]
+            if places.count > 0 {
+                places[self.currentPage].isShowing = true
                 placesMarker[self.currentPage].icon = UIImage(named: "resturent_marker")
-                placesMarker[self.previousPage].icon = UIImage(named: "unselected_marker")
-                /*
-                let marker = GMSMarker()
-                marker.position = CLLocationCoordinate2D(latitude: places[self.currentPage].location.coordinate.latitude, longitude: places[self.currentPage].location.coordinate.longitude)
-                marker.title = places[self.currentPage].name
-                marker.snippet = places[self.currentPage].name
-                marker.icon = UIImage(named: "resturent_marker")
-                marker.map = mapView
- */
+                self.searchCollectionView.reloadData()
+                if previousPage != -1 {
+                    places[self.previousPage].isShowing = false
+                    mapView.animate(to: GMSCameraPosition(latitude: places[self.currentPage].location.coordinate.latitude, longitude: places[self.currentPage].location.coordinate.longitude, zoom: 16.0))
+                    //let marker = placesMarker[self.currentPage]
+                    placesMarker[self.previousPage].icon = UIImage(named: "unselected_marker")
+                }
+                previousPage = self.currentPage
             }
-            previousPage = self.currentPage
         }
     }
     
@@ -52,11 +48,9 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         return pageSize
     }
     
+    var places: [PlacesEntity] = []
+    
     var placesMarker: [GMSMarker] = []
-
-    var places: [PlacesEntity] = [PlacesEntity(categoryID: 0, placeID: 1, name: "Sushi Place", imageName: "sushi_place_1", distance: 2.2, rating: 4.5, isShowing: false, location: CLLocation(latitude: 51.4976549, longitude: -0.2117534)), PlacesEntity(categoryID: 0, placeID: 2, name: "Nom Nom", imageName: "sushi_place_2", distance: 1.2, rating: 4.0, isShowing: false, location: CLLocation(latitude: 51.4970644, longitude: -0.2126093)), PlacesEntity(categoryID: 0, placeID: 3, name: "Palace", imageName: "sushi_place_3", distance: 4.2, rating: 4.3, isShowing: false, location: CLLocation(latitude: 51.4962299, longitude: -0.2106902)),
-                                  PlacesEntity(categoryID: 0, placeID: 1, name: "Pho Montreal", imageName: "soup_place_1", distance: 2.2, rating: 4.5, isShowing: false, location: CLLocation(latitude: 51.4958147, longitude: -0.2086598)), PlacesEntity(categoryID: 0, placeID: 2, name: "Rigolati", imageName: "soup_place_2", distance: 1.2, rating: 4.0, isShowing: false, location: CLLocation(latitude: 51.4971387, longitude: -0.2130881)), PlacesEntity(categoryID: 0, placeID: 3, name: "Dae Jang Geum", imageName: "soup_place_3", distance: 4.2, rating: 4.3, isShowing: false, location: CLLocation(latitude: 51.4960969, longitude: -0.2087144)),
-                                  PlacesEntity(categoryID: 0, placeID: 1, name: "Time Out", imageName: "burger_place_1", distance: 2.2, rating: 4.5, isShowing: false, location: CLLocation(latitude: 51.4979636, longitude: -0.2074568)), PlacesEntity(categoryID: 0, placeID: 2, name: "Tree House", imageName: "burger_place_2", distance: 1.2, rating: 4.0, isShowing: false, location: CLLocation(latitude: 51.4948706, longitude: -0.211411)), PlacesEntity(categoryID: 0, placeID: 3, name: "Cozy Sizzler", imageName: "burger_place_3", distance: 4.2, rating: 4.3, isShowing: false, location: CLLocation(latitude: 51.494379, longitude: -0.2103103))]
 
     
     @IBOutlet weak var searchTextCrossButton: UIButton!
@@ -66,9 +60,13 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     @IBOutlet weak var topView: RoundedViewWithShadow!
     
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var mapTopConstraint: NSLayoutConstraint!
+    
     lazy var panelManager = Panels(target: self)
     var panelConfiguration = PanelConfiguration(size: .fullScreen)
     var panel = UIStoryboard.instantiatePanel(identifier: "Nearby") as! Nearby
+    var panelForRideChooser = UIStoryboard.instantiatePanel(identifier: "Home") as! RideChooser
+    var panelConfigurationHalf = PanelConfiguration(size: .half)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +76,13 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         searchTextField.delegate = self
         setupPanelView()
         //setupLayout()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let camera = GMSCameraPosition.camera(withLatitude: 51.494379, longitude: -0.2103103, zoom: 14.0)
+        mapView.camera = camera
     }
     
     fileprivate func setupLayout() {
@@ -110,9 +115,17 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchResultView.isHidden = false
         textField.resignFirstResponder()
-        updateMapView()
+        DispatchQueue.global(qos: .userInitiated).async {
+            PlaceData.shared.getPlaces() { places in
+                DispatchQueue.main.async {
+                    self.places = places
+                    self.searchResultView.isHidden = false
+                    self.searchCollectionView.reloadData()
+                    self.updateMapView()
+                }
+            }
+        }
         return true
     }
     
@@ -186,12 +199,21 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         print("go there button clicked")
         //show the place selected on map
         // show select ride option
+        showRideChooserView()
     }
     
     func updateSearchView() {
         self.view.backgroundColor = .white
         topView.isHidden = false
         topView.showShadow()
+    }
+    
+    func showRideChooserView(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            [weak self] in
+            self?.panelManager.show(panel: self!.panelForRideChooser, config: self!.panelConfigurationHalf)
+        }
+        
     }
 }
 
@@ -206,6 +228,7 @@ extension HomeViewController: PanelNotifications {
         //print("Panel did collapse")
         panel.updateTopView(isBottom: false)
         updateSearchView()
+        self.mapTopConstraint.constant = -44
     }
     
     func panelDidOpen() {
@@ -216,6 +239,7 @@ extension HomeViewController: PanelNotifications {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             [weak self] in
             self?.view.backgroundColor = self?.panel.view.backgroundColor
+            self?.mapTopConstraint.constant = 0
         }
         
     }

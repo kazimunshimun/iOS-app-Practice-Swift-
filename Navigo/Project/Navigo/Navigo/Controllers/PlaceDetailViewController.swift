@@ -32,6 +32,11 @@ class PlaceDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         updateViews()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateLocationMarker()
+    }
 
     @IBAction func backButtonClicked(_ sender: Any) {
         //navigationController!.popViewController(animated: true)
@@ -48,7 +53,9 @@ class PlaceDetailViewController: UIViewController {
     func updateViews() {
         placeNameLabel.text = place.name
         resturentImageView.image = UIImage(named: place.imageName)
-        
+    }
+    
+    func updateLocationMarker() {
         let camera = GMSCameraPosition.camera(withLatitude: place.location.coordinate.latitude, longitude: place.location.coordinate.longitude, zoom: 16.0)
         mapView.camera = camera
         
@@ -59,7 +66,6 @@ class PlaceDetailViewController: UIViewController {
         marker.icon = UIImage(named: "resturent_marker")
         marker.map = mapView
     }
-    
     
     @IBAction func goThereButtonClicked(_ sender: Any) {
         dismiss(animated: true, completion: nil)

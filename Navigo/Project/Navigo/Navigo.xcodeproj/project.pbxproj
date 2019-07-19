@@ -22,6 +22,8 @@
 		842B8FA922D8CDAB00CD4F7F /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B8FA822D8CDAB00CD4F7F /* About.storyboard */; };
 		842B8FAB22D8E4B600CD4F7F /* Nearby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8FAA22D8E4B600CD4F7F /* Nearby.swift */; };
 		842B8FAD22D8E75800CD4F7F /* Nearby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B8FAC22D8E75800CD4F7F /* Nearby.storyboard */; };
+		8436DFE922E197F900BEBDD2 /* RideChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436DFE822E197F900BEBDD2 /* RideChooser.swift */; };
+		8436DFEE22E19D7600BEBDD2 /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436DFED22E19D7600BEBDD2 /* PlaceData.swift */; };
 		8438CD9822D9DC710086F3D7 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438CD9722D9DC710086F3D7 /* CategoryCell.swift */; };
 		8438CD9A22D9DF090086F3D7 /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438CD9922D9DF090086F3D7 /* PlacesCell.swift */; };
 		8438CD9D22D9DFB00086F3D7 /* PlacesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438CD9C22D9DFB00086F3D7 /* PlacesEntity.swift */; };
@@ -60,6 +62,8 @@
 		842B8FA822D8CDAB00CD4F7F /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		842B8FAA22D8E4B600CD4F7F /* Nearby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nearby.swift; sourceTree = "<group>"; };
 		842B8FAC22D8E75800CD4F7F /* Nearby.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Nearby.storyboard; sourceTree = "<group>"; };
+		8436DFE822E197F900BEBDD2 /* RideChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideChooser.swift; sourceTree = "<group>"; };
+		8436DFED22E19D7600BEBDD2 /* PlaceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
 		8438CD9722D9DC710086F3D7 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		8438CD9922D9DF090086F3D7 /* PlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCell.swift; sourceTree = "<group>"; };
 		8438CD9C22D9DFB00086F3D7 /* PlacesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesEntity.swift; sourceTree = "<group>"; };
@@ -119,6 +123,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		8436DFEC22E19D3800BEBDD2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8436DFED22E19D7600BEBDD2 /* PlaceData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		8438CD9B22D9DF130086F3D7 /* CollectionVIewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +186,7 @@
 				842B8FA022D8CD4F00CD4F7F /* PrivacyViewController.swift */,
 				842B8FAA22D8E4B600CD4F7F /* Nearby.swift */,
 				84151DCD22DA2D0F005E7964 /* PlaceDetailViewController.swift */,
+				8436DFE822E197F900BEBDD2 /* RideChooser.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -227,6 +240,7 @@
 				84931BAE22D874160002165B /* Controllers */,
 				84931BAC22D873E10002165B /* Storyboards */,
 				8438CD9E22D9DFBB0086F3D7 /* Entity */,
+				8436DFEC22E19D3800BEBDD2 /* Data */,
 				84931BAD22D873FF0002165B /* Resources */,
 				84BFB3DF22D4E1B40076A9B4 /* Info.plist */,
 			);
@@ -408,7 +422,9 @@
 				84931BB122D89A270002165B /* MenuHostViewController.swift in Sources */,
 				8438CD9D22D9DFB00086F3D7 /* PlacesEntity.swift in Sources */,
 				842B8F9522D8C40C00CD4F7F /* RoundedCornerView.swift in Sources */,
+				8436DFEE22E19D7600BEBDD2 /* PlaceData.swift in Sources */,
 				842B8F9722D8CCFB00CD4F7F /* BookingsViewController.swift in Sources */,
+				8436DFE922E197F900BEBDD2 /* RideChooser.swift in Sources */,
 				84931BB322D8A2E30002165B /* MenuListViewController.swift in Sources */,
 				84931BB922D8AA290002165B /* MenuWithImageAndTextCell.swift in Sources */,
 				8438CD9822D9DC710086F3D7 /* CategoryCell.swift in Sources */,
