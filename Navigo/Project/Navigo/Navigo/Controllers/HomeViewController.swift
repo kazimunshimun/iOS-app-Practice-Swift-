@@ -167,6 +167,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         rideView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
         updateRideOptionView()
         rideShareHeightContraint.constant = 404
+        updateRideComapnyView()
     }
     
     @objc func publicTransportSelected() {
@@ -181,22 +182,38 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     @objc func taxiSelected() {
         print("car selected")
         nowRideCompay = .taxi
-        carView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "FFC400")
+        updateRideComapnyView()
+        taxiView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "FFC400")
+        callButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "FFC400")
+        callButton.setTitle("CALL TAXI", for: .normal)
         //updateRideOptionView()
     }
     
     @objc func ridySelected() {
         print("ride share selected")
         nowRideCompay = .ridy
-        rideView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
+        updateRideComapnyView()
+        ridyView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "D461EE")
+        callButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "D461EE")
+        callButton.setTitle("CALL RIDY", for: .normal)
         //updateRideOptionView()
     }
     
     @objc func autoMSelected() {
         print("public transport selected")
         nowRideCompay = .autoM
-        publicTrasportView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
+        updateRideComapnyView()
+        autoMView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "00C3EE")
+        callButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "00C3EE")
+        callButton.setTitle("CALL AutoM", for: .normal)
         //updateRideOptionView()
+    }
+    
+    func updateRideComapnyView() {
+        let rideCompanyList = [taxiView, ridyView, autoMView]
+        for ride in rideCompanyList {
+            ride?.backgroundColor = ColorUtils.hexStringToUIColor(hex: "454B63")
+        }
     }
     
     @IBAction func callButtonClicked(_ sender: Any) {
