@@ -175,6 +175,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         callButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
         callButton.isEnabled = false
         updateRideComapnyView()
+        focusUserOnMap()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
             UIView.animate(withDuration: 0.25, animations: {
                 self.rideShareHeightContraint.constant = 404
@@ -198,6 +199,11 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         //454F63
     }
     
+    func focusUserOnMap() {
+        //51.4876549, -0.2217534
+        mapView.animate(to: GMSCameraPosition(latitude: 51.4876549, longitude: -0.2217534, zoom: 16.0))
+    }
+    
     @objc func taxiSelected() {
         print("car selected")
         nowRideCompay = .taxi
@@ -207,7 +213,22 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         callButton.setTitle("CALL TAXI", for: .normal)
         callButton.isEnabled = true
         //show taxis
+        mapView.clear()
+        showProfileAvatarInMap()
+        showTaxisAround()
         //updateRideOptionView()
+    }
+    
+    func showTaxisAround() {
+        
+        let car1 = addMarkerToMap(title: "taxi", snippet: "", location: CLLocationCoordinate2D(latitude: 51.484253, longitude: -0.219813), markerImageName: "taxi_icon")
+        let car2 = addMarkerToMap(title: "taxi", snippet: "", location: CLLocationCoordinate2D(latitude: 51.484487, longitude: -0.222559), markerImageName: "taxi_icon")
+        let car3 = addMarkerToMap(title: "taxi", snippet: "", location: CLLocationCoordinate2D(latitude: 51.488449, longitude: -0.222736), markerImageName: "taxi_icon")
+        car2.rotation = CLLocationDegrees(exactly: -25)!
+        car1.map = mapView
+        car2.map = mapView
+        car3.map = mapView
+        
     }
     
     @objc func ridySelected() {
@@ -219,7 +240,22 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         callButton.setTitle("CALL RIDY", for: .normal)
         callButton.isEnabled = true
         //show ridy cars
+        mapView.clear()
+        showProfileAvatarInMap()
+        showRidysAround()
         //updateRideOptionView()
+    }
+    
+    func showRidysAround() {
+        let car1 = addMarkerToMap(title: "ridy", snippet: "", location: CLLocationCoordinate2D(latitude: 51.486378, longitude: -0.224088), markerImageName: "ridy_icon")
+        let car2 = addMarkerToMap(title: "ridy", snippet: "", location: CLLocationCoordinate2D(latitude: 51.488195, longitude: -0.220730), markerImageName: "ridy_icon")
+        let car3 = addMarkerToMap(title: "ridy", snippet: "", location: CLLocationCoordinate2D(latitude: 51.486866, longitude: -0.218005), markerImageName: "ridy_icon")
+        car1.rotation = CLLocationDegrees(exactly: -25)!
+        car2.rotation = CLLocationDegrees(exactly: 65)!
+        car3.rotation = CLLocationDegrees(exactly: -20)!
+        car1.map = mapView
+        car2.map = mapView
+        car3.map = mapView
     }
     
     @objc func autoMSelected() {
@@ -231,7 +267,24 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         callButton.setTitle("CALL AutoM", for: .normal)
         callButton.isEnabled = true
         //show autoM cars
+        mapView.clear()
+        showProfileAvatarInMap()
+        showAutoMsAround()
         //updateRideOptionView()
+    }
+    
+    func showAutoMsAround() {
+        let car1 = addMarkerToMap(title: "autoM", snippet: "", location: CLLocationCoordinate2D(latitude: 51.488823, longitude: -0.218788), markerImageName: "autoM_icon")
+        let car2 = addMarkerToMap(title: "autoM", snippet: "", location: CLLocationCoordinate2D(latitude: 51.487006, longitude: -0.218160), markerImageName: "autoM_icon")
+        let car3 = addMarkerToMap(title: "autoM", snippet: "", location: CLLocationCoordinate2D(latitude: 51.486899, longitude: -0.221175), markerImageName: "autoM_icon")
+        
+        car1.rotation = CLLocationDegrees(exactly: -25)!
+        car2.rotation = CLLocationDegrees(exactly: 65)!
+        car3.rotation = CLLocationDegrees(exactly: -30)!
+        
+        car1.map = mapView
+        car2.map = mapView
+        car3.map = mapView
     }
     
     func updateRideComapnyView() {
