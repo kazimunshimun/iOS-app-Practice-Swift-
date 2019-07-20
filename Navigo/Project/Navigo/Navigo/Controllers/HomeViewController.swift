@@ -186,6 +186,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         taxiView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "FFC400")
         callButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "FFC400")
         callButton.setTitle("CALL TAXI", for: .normal)
+        //show taxis
         //updateRideOptionView()
     }
     
@@ -196,6 +197,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         ridyView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "D461EE")
         callButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "D461EE")
         callButton.setTitle("CALL RIDY", for: .normal)
+        //show ridy cars
         //updateRideOptionView()
     }
     
@@ -206,6 +208,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         autoMView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "00C3EE")
         callButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "00C3EE")
         callButton.setTitle("CALL AutoM", for: .normal)
+        //show autoM cars
         //updateRideOptionView()
     }
     
@@ -328,7 +331,9 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         //hide collection view of resturent
         searchResultView.isHidden = true
         //show only the place selected in map
+        showPlaceInMap(place: place)
         //show select ride option
+        nowShowingPanel = .ride
         showRideChooserView()
     }
     
@@ -338,8 +343,21 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         updateSearchView()
         print("go there button clicked")
         //show the place selected on map
+        showPlaceInMap(place: place)
         // show select ride option
         showRideChooserView()
+    }
+    
+    func showPlaceInMap(place: PlacesEntity) {
+        mapView.clear()
+        let camera = GMSCameraPosition.camera(withLatitude: place.location.coordinate.latitude, longitude: place.location.coordinate.longitude, zoom: 16.0)
+        mapView.camera = camera
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: place.location.coordinate.latitude, longitude: place.location.coordinate.longitude)
+        marker.title = place.name
+        marker.snippet = place.name
+        marker.icon = UIImage(named: "resturent_marker")
+        marker.map = mapView
     }
     
     func updateSearchView() {
