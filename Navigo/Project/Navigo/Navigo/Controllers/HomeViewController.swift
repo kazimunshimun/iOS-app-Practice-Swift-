@@ -137,7 +137,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         carView.addGestureRecognizer(carGesture)
         
         let rideGesture = UITapGestureRecognizer(target: self, action:  #selector(self.rideShareSelected))
-        rideShareView.addGestureRecognizer(rideGesture)
+        rideView.addGestureRecognizer(rideGesture)
         
         let tranportGesture = UITapGestureRecognizer(target: self, action:  #selector(self.publicTransportSelected))
         publicTrasportView.addGestureRecognizer(tranportGesture)
@@ -158,7 +158,12 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         nowShowingRide = .car
         carView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
         updateRideOptionView()
-        rideShareHeightContraint.constant = 172
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.rideShareHeightContraint.constant = 172
+                self.view.layoutIfNeeded()
+            })
+        }
     }
     
     @objc func rideShareSelected() {
@@ -166,8 +171,16 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         nowShowingRide = .ride
         rideView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
         updateRideOptionView()
-        rideShareHeightContraint.constant = 404
+        
+        callButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
+        callButton.isEnabled = false
         updateRideComapnyView()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.rideShareHeightContraint.constant = 404
+                self.view.layoutIfNeeded()
+            })
+        }
     }
     
     @objc func publicTransportSelected() {
@@ -175,7 +188,13 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         nowShowingRide = .publicTrasport
         publicTrasportView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
         updateRideOptionView()
-        rideShareHeightContraint.constant = 172
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.rideShareHeightContraint.constant = 172
+                self.view.layoutIfNeeded()
+            })
+        }
         //454F63
     }
     
@@ -186,6 +205,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         taxiView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "FFC400")
         callButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "FFC400")
         callButton.setTitle("CALL TAXI", for: .normal)
+        callButton.isEnabled = true
         //show taxis
         //updateRideOptionView()
     }
@@ -197,6 +217,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         ridyView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "D461EE")
         callButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "D461EE")
         callButton.setTitle("CALL RIDY", for: .normal)
+        callButton.isEnabled = true
         //show ridy cars
         //updateRideOptionView()
     }
@@ -208,6 +229,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         autoMView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "00C3EE")
         callButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "00C3EE")
         callButton.setTitle("CALL AutoM", for: .normal)
+        callButton.isEnabled = true
         //show autoM cars
         //updateRideOptionView()
     }
@@ -250,7 +272,12 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        panelManager.dismiss()
+        if nowShowingPanel == .nearby {
+            panelManager.dismiss()
+        } else if nowShowingPanel == .ride {
+            rideShareView.isHidden = true
+        }
+        
         searchTextCrossButton.isHidden = false
         return true
     }
@@ -276,11 +303,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
             let camera = GMSCameraPosition.camera(withLatitude: firstPlace.location.coordinate.latitude, longitude: firstPlace.location.coordinate.longitude, zoom: 16.0)
             mapView.camera = camera
             for place in places {
-                let marker = GMSMarker()
-                marker.position = CLLocationCoordinate2D(latitude: place.location.coordinate.latitude, longitude: place.location.coordinate.longitude)
-                marker.title = place.name
-                marker.snippet = place.name
-                marker.icon = UIImage(named: "unselected_marker")
+                let marker = addMarkerToMap(title: place.name, snippet: "", location: CLLocationCoordinate2D(latitude: place.location.coordinate.latitude, longitude: place.location.coordinate.longitude), markerImageName: "unselected_marker")
                 marker.map = mapView
                 placesMarker.append(marker)
             }
@@ -330,8 +353,11 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         print("go there button clicked")
         //hide collection view of resturent
         searchResultView.isHidden = true
+        //hide/disable search bar textfield
         //show only the place selected in map
         showPlaceInMap(place: place)
+        //show profile avatar
+        showProfileAvatarInMap()
         //show select ride option
         nowShowingPanel = .ride
         showRideChooserView()
@@ -342,8 +368,11 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         nowShowingPanel = .ride
         updateSearchView()
         print("go there button clicked")
+        //hide/disable search bar textfield
         //show the place selected on map
         showPlaceInMap(place: place)
+        //show profile avatar
+        showProfileAvatarInMap()
         // show select ride option
         showRideChooserView()
     }
@@ -352,11 +381,12 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         mapView.clear()
         let camera = GMSCameraPosition.camera(withLatitude: place.location.coordinate.latitude, longitude: place.location.coordinate.longitude, zoom: 16.0)
         mapView.camera = camera
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: place.location.coordinate.latitude, longitude: place.location.coordinate.longitude)
-        marker.title = place.name
-        marker.snippet = place.name
-        marker.icon = UIImage(named: "resturent_marker")
+        let marker = addMarkerToMap(title: place.name, snippet: "", location: CLLocationCoordinate2D(latitude: place.location.coordinate.latitude, longitude: place.location.coordinate.longitude), markerImageName: "resturent_marker")
+        marker.map = mapView
+    }
+    
+    func showProfileAvatarInMap() {
+        let marker = addMarkerToMap(title: "You", snippet: "", location: CLLocationCoordinate2D(latitude: 51.4876549, longitude: -0.2217534), markerImageName: "avatar_icon")
         marker.map = mapView
     }
     
@@ -367,8 +397,16 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     }
     
     func showRideChooserView(){
+        self.mapTopConstraint.constant = -44
         rideShareView.isHidden = false
-        rideShareHeightContraint.constant = 172
+        self.rideShareHeightContraint.constant = 0
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.rideShareHeightContraint.constant = 172
+                self.view.layoutIfNeeded()
+            })
+        }
+        //rideShareHeightContraint.constant = 172
         /*
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             [weak self] in
@@ -376,6 +414,15 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         }
  */
         
+    }
+    
+    func addMarkerToMap(title: String, snippet: String, location: CLLocationCoordinate2D, markerImageName: String) -> GMSMarker {
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+        marker.title = title
+        marker.snippet = snippet
+        marker.icon = UIImage(named: markerImageName)
+        return marker
     }
 }
 

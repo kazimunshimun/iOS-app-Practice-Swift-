@@ -18,12 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc8-vS-H4L">
-                                <rect key="frame" x="142.5" y="464.5" width="129" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcom_back" translatesAutoresizingMaskIntoConstraints="NO" id="lBf-9x-8xV">
+                                <rect key="frame" x="0.0" y="-2" width="414" height="944"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiC-ze-pdX">
                                 <rect key="frame" x="30" y="810" width="354" height="52"/>
                                 <color key="backgroundColor" red="0.22745098039215686" green="0.80000000000000004" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,11 +37,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fc8-vS-H4L" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5MJ-9T-LK3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="lBf-9x-8xV" secondAttribute="top" constant="90" id="6Oh-Jf-TxB"/>
                             <constraint firstItem="FiC-ze-pdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CfL-i2-203"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FiC-ze-pdX" secondAttribute="bottom" id="Cg8-bh-d55"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FiC-ze-pdX" secondAttribute="trailing" constant="30" id="VQO-OR-2Sr"/>
-                            <constraint firstItem="fc8-vS-H4L" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a46-a7-c4P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lBf-9x-8xV" secondAttribute="trailing" id="cgh-tq-ics"/>
+                            <constraint firstItem="lBf-9x-8xV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f45-DH-x97"/>
+                            <constraint firstItem="lBf-9x-8xV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="80" id="j5x-Ku-dxO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -207,5 +206,6 @@
     </scenes>
     <resources>
         <image name="user_image" width="64" height="64"/>
+        <image name="welcom_back" width="375" height="812"/>
     </resources>
 </document>
