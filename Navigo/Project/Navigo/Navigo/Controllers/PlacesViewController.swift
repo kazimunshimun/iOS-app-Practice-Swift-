@@ -11,23 +11,33 @@ import InteractiveSideMenu
 
 class PlacesViewController: UIViewController, SideMenuItemContent {
 
+    @IBOutlet weak var tripTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.tripTableView.register(UINib(nibName: "TripsCell", bundle: nil), forCellReuseIdentifier: "tripCell")
+        self.tripTableView.delegate = self
+        self.tripTableView.dataSource = self
     }
     
     @IBAction func menuButtonClicked(_ sender: Any) {
         showSideMenu()
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 190.0
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath) as! TripsCell
+        return cell
+    }
 }
