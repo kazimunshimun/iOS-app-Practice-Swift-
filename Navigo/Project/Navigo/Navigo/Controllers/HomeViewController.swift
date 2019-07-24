@@ -87,6 +87,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     @IBOutlet weak var rideShareView: UIView!
     @IBOutlet weak var rideShareHeightContraint: NSLayoutConstraint!
     
+    @IBOutlet weak var rideShareViewHeightConstraint: NSLayoutConstraint!
     //ride option
     @IBOutlet weak var carView: RoundedCornerView!
     @IBOutlet weak var rideView: RoundedCornerView!
@@ -158,9 +159,13 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         nowShowingRide = .car
         carView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
         updateRideOptionView()
+        callButton.setTitle("START", for: .normal)
+        callButton.isEnabled = true
+        callButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
             UIView.animate(withDuration: 0.25, animations: {
-                self.rideShareHeightContraint.constant = 172
+                self.rideShareHeightContraint.constant = 248
+                self.rideShareViewHeightConstraint.constant = 0
                 self.view.layoutIfNeeded()
             })
         }
@@ -179,6 +184,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
             UIView.animate(withDuration: 0.25, animations: {
                 self.rideShareHeightContraint.constant = 404
+                self.rideShareViewHeightConstraint.constant = 156
                 self.view.layoutIfNeeded()
             })
         }
@@ -189,10 +195,14 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         nowShowingRide = .publicTrasport
         publicTrasportView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
         updateRideOptionView()
+        callButton.setTitle("START", for: .normal)
+        callButton.isEnabled = true
+        callButton.backgroundColor = ColorUtils.hexStringToUIColor(hex: "576276")
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
             UIView.animate(withDuration: 0.25, animations: {
-                self.rideShareHeightContraint.constant = 172
+                self.rideShareHeightContraint.constant = 248
+                self.rideShareViewHeightConstraint.constant = 0
                 self.view.layoutIfNeeded()
             })
         }
@@ -453,9 +463,11 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         self.mapTopConstraint.constant = -44
         rideShareView.isHidden = false
         self.rideShareHeightContraint.constant = 0
+        self.rideShareViewHeightConstraint.constant = 0
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
             UIView.animate(withDuration: 0.25, animations: {
-                self.rideShareHeightContraint.constant = 172
+                self.rideShareHeightContraint.constant = 248
+                self.rideShareViewHeightConstraint.constant = 0
                 self.view.layoutIfNeeded()
             })
         }

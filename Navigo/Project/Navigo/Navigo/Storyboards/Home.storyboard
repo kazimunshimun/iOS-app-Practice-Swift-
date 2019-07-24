@@ -611,6 +611,7 @@
                         <outlet property="rideShareHeightContraint" destination="eg5-l4-Baz" id="ce8-IZ-xPP"/>
                         <outlet property="rideShareMultiColorView" destination="alr-qI-NhW" id="c4S-MF-grH"/>
                         <outlet property="rideShareView" destination="Xjj-xC-JlL" id="hG0-dl-457"/>
+                        <outlet property="rideShareViewHeightConstraint" destination="6YU-9k-yXL" id="wJy-Ak-JDl"/>
                         <outlet property="rideView" destination="KKC-5o-N9y" id="Qi5-zr-mi4"/>
                         <outlet property="ridyView" destination="9ls-Rp-N9w" id="lVC-rh-MwH"/>
                         <outlet property="searchCollectionView" destination="Twb-Vp-ar2" id="csy-QL-xXA"/>
