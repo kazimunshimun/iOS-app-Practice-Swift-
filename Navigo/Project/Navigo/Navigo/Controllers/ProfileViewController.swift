@@ -11,6 +11,9 @@ import InteractiveSideMenu
 
 class ProfileViewController: UIViewController, SideMenuItemContent {
 
+    @IBOutlet weak var contentView: RoundedCornerView!
+    @IBOutlet weak var profileMenuView: RoundedCornerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +22,18 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
     
     @IBAction func menuButtonClicked(_ sender: Any) {
         showSideMenu()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        contentView.topLeft = true
+        contentView.topRight = true
+        
+        profileMenuView.topLeft = true
+        profileMenuView.topRight = true
+        profileMenuView.bottomLeft = true
+        profileMenuView.bottomRight = true
+        
     }
     /*
     // MARK: - Navigation
