@@ -105,6 +105,8 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     var panelForRideChooser = UIStoryboard.instantiatePanel(identifier: "Home") as! RideChooser
     var panelConfigurationHalf = PanelConfiguration(size: .custom(332))
     
+    var selectedPlace: PlacesEntity?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -121,6 +123,17 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         super.viewWillAppear(animated)
         let camera = GMSCameraPosition.camera(withLatitude: 51.494379, longitude: -0.2103103, zoom: 14.0)
         mapView.camera = camera
+        do {
+            // Set the map style by passing the URL of the local file.
+            if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
+                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+            } else {
+                NSLog("Unable to find style.json")
+            }
+        } catch {
+            NSLog("One or more of the map styles failed to load. \(error)")
+        }
+
     }
     
     fileprivate func setupLayout() {
@@ -224,8 +237,10 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         callButton.isEnabled = true
         //show taxis
         mapView.clear()
+        showPlaceInMap(place: selectedPlace!)
         showProfileAvatarInMap()
         showTaxisAround()
+        focusUserOnMap()
         //updateRideOptionView()
     }
     
@@ -251,8 +266,10 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         callButton.isEnabled = true
         //show ridy cars
         mapView.clear()
+        showPlaceInMap(place: selectedPlace!)
         showProfileAvatarInMap()
         showRidysAround()
+        focusUserOnMap()
         //updateRideOptionView()
     }
     
@@ -278,8 +295,10 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         callButton.isEnabled = true
         //show autoM cars
         mapView.clear()
+        showPlaceInMap(place: selectedPlace!)
         showProfileAvatarInMap()
         showAutoMsAround()
+        focusUserOnMap()
         //updateRideOptionView()
     }
     
@@ -418,6 +437,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         searchResultView.isHidden = true
         //hide/disable search bar textfield
         //show only the place selected in map
+        selectedPlace = place
         showPlaceInMap(place: place)
         //show profile avatar
         showProfileAvatarInMap()
@@ -429,6 +449,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     func goToNearByPlace(place: PlacesEntity) {
         panelManager.dismiss()
         nowShowingPanel = .ride
+        selectedPlace = place
         updateSearchView()
         print("go there button clicked")
         //hide/disable search bar textfield

@@ -28,6 +28,7 @@
 		8438CD9A22D9DF090086F3D7 /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438CD9922D9DF090086F3D7 /* PlacesCell.swift */; };
 		8438CD9D22D9DFB00086F3D7 /* PlacesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438CD9C22D9DFB00086F3D7 /* PlacesEntity.swift */; };
 		843A532B22DE177A00DA9C85 /* RoundedViewWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A532A22DE177A00DA9C85 /* RoundedViewWithShadow.swift */; };
+		846DBA2622EC2BB0006FA695 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 846DBA2522EC2BB0006FA695 /* style.json */; };
 		8490186422E6152C00E7048F /* TripsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490186222E6152C00E7048F /* TripsCell.swift */; };
 		8490186522E6152C00E7048F /* TripsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8490186322E6152C00E7048F /* TripsCell.xib */; };
 		84931BB122D89A270002165B /* MenuHostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84931BB022D89A270002165B /* MenuHostViewController.swift */; };
@@ -70,6 +71,7 @@
 		8438CD9922D9DF090086F3D7 /* PlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCell.swift; sourceTree = "<group>"; };
 		8438CD9C22D9DFB00086F3D7 /* PlacesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesEntity.swift; sourceTree = "<group>"; };
 		843A532A22DE177A00DA9C85 /* RoundedViewWithShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedViewWithShadow.swift; sourceTree = "<group>"; };
+		846DBA2522EC2BB0006FA695 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		8490186222E6152C00E7048F /* TripsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsCell.swift; sourceTree = "<group>"; };
 		8490186322E6152C00E7048F /* TripsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripsCell.xib; sourceTree = "<group>"; };
 		84931BB022D89A270002165B /* MenuHostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHostViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				8436DFEC22E19D3800BEBDD2 /* Data */,
 				84931BAD22D873FF0002165B /* Resources */,
 				84BFB3DF22D4E1B40076A9B4 /* Info.plist */,
+				846DBA2522EC2BB0006FA695 /* style.json */,
 			);
 			path = Navigo;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			files = (
 				842B8FA522D8CD9600CD4F7F /* Places.storyboard in Resources */,
 				842B8FA322D8CD8A00CD4F7F /* Bookings.storyboard in Resources */,
+				846DBA2622EC2BB0006FA695 /* style.json in Resources */,
 				84BFB3DE22D4E1B40076A9B4 /* LaunchScreen.storyboard in Resources */,
 				842B8FAD22D8E75800CD4F7F /* Nearby.storyboard in Resources */,
 				8490186522E6152C00E7048F /* TripsCell.xib in Resources */,
