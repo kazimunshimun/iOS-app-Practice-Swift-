@@ -182,6 +182,13 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
                 self.view.layoutIfNeeded()
             })
         }
+        
+        mapView.clear()
+        showPlaceInMap(place: selectedPlace!)
+        showProfileAvatarInMap()
+        focusUserOnMap()
+        
+        showDirectionBetweenTwoLocation(source: userLocation, destination: (selectedPlace?.location.coordinate)!)
     }
     
     @objc func rideShareSelected() {
@@ -219,12 +226,17 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
                 self.view.layoutIfNeeded()
             })
         }
-        //454F63
+        mapView.clear()
+        showPlaceInMap(place: selectedPlace!)
+        showProfileAvatarInMap()
+        focusUserOnMap()
     }
+    
+    let userLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 51.4876549, longitude: -0.2217534)
     
     func focusUserOnMap() {
         //51.4876549, -0.2217534
-        mapView.animate(to: GMSCameraPosition(latitude: 51.4876549, longitude: -0.2217534, zoom: 16.0))
+        mapView.animate(to: GMSCameraPosition(latitude: userLocation.latitude, longitude: userLocation.longitude, zoom: 16.0))
     }
     
     @objc func taxiSelected() {
@@ -324,7 +336,10 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     }
     
     @IBAction func callButtonClicked(_ sender: Any) {
-        
+        print("call button clicked. \(nowShowingRide.rawValue)")
+        if nowShowingRide == .ride {
+            print("ride selected \(nowRideCompay.rawValue)")
+        }
     }
     
     func updateRideOptionView() {
@@ -509,6 +524,64 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         marker.snippet = snippet
         marker.icon = UIImage(named: markerImageName)
         return marker
+    }
+    
+    func showDirectionBetweenTwoLocation(source: CLLocationCoordinate2D, destination: CLLocationCoordinate2D) {
+        let session = URLSession.shared
+        
+        let url = URL(string: "https://maps.googleapis.com/maps/api/directions/json?origin=\(source.latitude),\(source.longitude)&destination=\(destination.latitude),\(destination.longitude)&sensor=false&mode=driving&key=AIzaSyA-2M_CQqkeHa0LC-Y6P5GgcJNlvXbY7H8")!
+        
+        let task = session.dataTask(with: url, completionHandler: {
+            (data, response, error) in
+            
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            guard let jsonResult = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any] else {
+                print("error in JSONSerialization")
+                return
+            }
+            
+            let jsonResponse = jsonResult
+            
+            guard let routes = jsonResponse["routes"] as? [Any] else {
+                return
+            }
+            
+            if routes.count > 0 {
+                guard let route = routes[0] as? [String: Any] else {
+                    return
+                }
+                
+                guard let overview_polyline = route["overview_polyline"] as? [String: Any] else {
+                    return
+                }
+                
+                guard let polyLineString = overview_polyline["points"] as? String else {
+                    return
+                }
+                
+                //Call this method to draw path on map
+                self.drawPath(with: polyLineString)
+            }
+            
+        })
+        task.resume()
+    }
+    
+    private func drawPath(with points : String){
+        
+        DispatchQueue.main.async {
+            
+            let path = GMSPath(fromEncodedPath: points)
+            let polyline = GMSPolyline(path: path)
+            polyline.strokeWidth = 3.0
+            polyline.strokeColor = .red
+            polyline.map = self.mapView
+            
+        }
     }
 }
 
