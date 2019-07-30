@@ -99,6 +99,10 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     
     @IBOutlet weak var callButton: UIButton!
     
+    
+    @IBOutlet weak var rideAndDriverView: UIView!
+    @IBOutlet weak var driverViewHeightConstraint: NSLayoutConstraint!
+    
     lazy var panelManager = Panels(target: self)
     var panelConfiguration = PanelConfiguration(size: .fullScreen)
     var panel = UIStoryboard.instantiatePanel(identifier: "Nearby") as! Nearby
@@ -339,6 +343,23 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         print("call button clicked. \(nowShowingRide.rawValue)")
         if nowShowingRide == .ride {
             print("ride selected \(nowRideCompay.rawValue)")
+            //hide ride button
+            //show driver view
+            //rideShareView.isHidden = true
+            driverViewHeightConstraint.constant = 0
+            rideAndDriverView.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.rideShareHeightContraint.constant = 0
+                    self.driverViewHeightConstraint.constant = 304
+                    self.view.layoutIfNeeded()
+                    self.rideShareView.isHidden = true
+                })
+            }
+            //show driver marker on map
+            // show driver to user route on map
+            showDirectionBetweenTwoLocation(source: userLocation, destination: CLLocationCoordinate2D(latitude: 51.486378, longitude: -0.224088))
+            
         }
     }
     
@@ -582,6 +603,10 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
             polyline.map = self.mapView
             
         }
+    }
+    
+    
+    @IBAction func cancelRideButtonClicked(_ sender: Any) {
     }
 }
 
