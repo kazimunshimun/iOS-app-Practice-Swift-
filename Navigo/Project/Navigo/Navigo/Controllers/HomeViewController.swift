@@ -110,8 +110,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     lazy var panelManager = Panels(target: self)
     var panelConfiguration = PanelConfiguration(size: .fullScreen)
     var panel = UIStoryboard.instantiatePanel(identifier: "Nearby") as! Nearby
-    var panelForRideChooser = UIStoryboard.instantiatePanel(identifier: "Home") as! RideChooser
-    var panelConfigurationHalf = PanelConfiguration(size: .custom(332))
+    var panelForOnTrip = UIStoryboard.instantiatePanel(identifier: "Home") as! OnTripViewController
     
     var selectedPlace: PlacesEntity?
     
@@ -375,12 +374,12 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     }
     
     var driverArrivalTimeRemainingCounter = 4
-    var timer = Timer()
+    var timerForDriver = Timer()
     
     fileprivate func startDriverArrivalTimer() {
-        timer.invalidate() // just in case this button is tapped multiple times
+        timerForDriver.invalidate() // just in case this button is tapped multiple times
         // start the timer
-        timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(driverTimerAction), userInfo: nil, repeats: true)
+        timerForDriver = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(driverTimerAction), userInfo: nil, repeats: true)
     }
     
     @objc func driverTimerAction() {
@@ -388,11 +387,16 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
             driverArrivalTimeRemainingCounter -= 1
             driverArrivalTimeLabel.text = "\(driverArrivalTimeRemainingCounter) min away"
         } else {
-            timer.invalidate()
+            timerForDriver.invalidate()
+            //show onTrip view
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                [weak self] in
+                self?.panelManager.show(panel: self!.panelForOnTrip, config: self!.panelConfiguration)
+                self?.panelManager.expandPanel()
+                self?.panelManager.collapsePanel()
+            }
             //hide driver view
             hideDriverView()
-            
-            //show onTrip view
         }
         
     }
@@ -409,7 +413,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     }
     
     @IBAction func cancelRideButtonClicked(_ sender: Any) {
-        timer.invalidate()
+        timerForDriver.invalidate()
         hideDriverView()
         rideShareView.isHidden = false
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
@@ -636,51 +640,6 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
             }
  */
         }
-    }
-    
-    func showDirectionBetweenTwoLocation(source: CLLocationCoordinate2D, destination: CLLocationCoordinate2D) {
-        let session = URLSession.shared
-        
-        let url = URL(string: "https://maps.googleapis.com/maps/api/directions/json?origin=\(source.latitude),\(source.longitude)&destination=\(destination.latitude),\(destination.longitude)&sensor=false&mode=driving&key=AIzaSyA-2M_CQqkeHa0LC-Y6P5GgcJNlvXbY7H8")!
-        
-        let task = session.dataTask(with: url, completionHandler: {
-            (data, response, error) in
-            
-            guard error == nil else {
-                print(error!.localizedDescription)
-                return
-            }
-            
-            guard let jsonResult = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any] else {
-                print("error in JSONSerialization")
-                return
-            }
-            
-            let jsonResponse = jsonResult
-            
-            guard let routes = jsonResponse["routes"] as? [Any] else {
-                return
-            }
-            
-            if routes.count > 0 {
-                guard let route = routes[0] as? [String: Any] else {
-                    return
-                }
-                
-                guard let overview_polyline = route["overview_polyline"] as? [String: Any] else {
-                    return
-                }
-                
-                guard let polyLineString = overview_polyline["points"] as? String else {
-                    return
-                }
-                
-                //Call this method to draw path on map
-                self.drawPath(with: polyLineString)
-            }
-            
-        })
-        task.resume()
     }
     
     private func drawPath(with points : String){
