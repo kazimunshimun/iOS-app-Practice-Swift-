@@ -326,16 +326,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9H4-E7-Ldj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="384"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="370"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sushi_place_1" translatesAutoresizingMaskIntoConstraints="NO" id="8QV-QR-mqS">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="384"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="370"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlay" translatesAutoresizingMaskIntoConstraints="NO" id="AXl-U2-dKF">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="384"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="370"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yaF-hU-2rT">
-                                        <rect key="frame" x="0.0" y="268" width="414" height="108"/>
+                                        <rect key="frame" x="0.0" y="254" width="414" height="108"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHQ-Ef-GNG">
                                                 <rect key="frame" x="24" y="8" width="86" height="48"/>
@@ -393,7 +393,7 @@
                                     <constraint firstAttribute="bottom" secondItem="8QV-QR-mqS" secondAttribute="bottom" id="77d-sL-GXo"/>
                                     <constraint firstAttribute="bottom" secondItem="AXl-U2-dKF" secondAttribute="bottom" id="Bvy-rn-uvF"/>
                                     <constraint firstAttribute="trailing" secondItem="XfH-W2-zlA" secondAttribute="trailing" constant="20" id="LWm-JY-9PP"/>
-                                    <constraint firstAttribute="height" constant="384" id="Owc-xN-ojP"/>
+                                    <constraint firstAttribute="height" constant="370" id="Owc-xN-ojP"/>
                                     <constraint firstAttribute="trailing" secondItem="AXl-U2-dKF" secondAttribute="trailing" id="SdO-cX-2xY"/>
                                     <constraint firstItem="XfH-W2-zlA" firstAttribute="top" secondItem="9H4-E7-Ldj" secondAttribute="top" constant="52" id="jgp-jc-oEA"/>
                                     <constraint firstAttribute="trailing" secondItem="yaF-hU-2rT" secondAttribute="trailing" id="jht-V1-Upv"/>
@@ -407,13 +407,13 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Gi-I9-Brp">
-                                <rect key="frame" x="0.0" y="384" width="414" height="418"/>
+                                <rect key="frame" x="0.0" y="370" width="414" height="432"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7Y-ME-LA6">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="418"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lM4-dv-0uJ">
-                                                <rect key="frame" x="24" y="32" width="366" height="122"/>
+                                                <rect key="frame" x="24" y="32" width="366" height="114"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9x-zL-34M">
                                                         <rect key="frame" x="0.0" y="40" width="366" height="49"/>
@@ -439,7 +439,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="46o-9q-956" firstAttribute="leading" secondItem="lM4-dv-0uJ" secondAttribute="leading" id="3I2-te-4uO"/>
-                                                    <constraint firstAttribute="bottom" secondItem="46o-9q-956" secondAttribute="bottom" constant="16" id="FXt-Cr-bfx"/>
+                                                    <constraint firstAttribute="bottom" secondItem="46o-9q-956" secondAttribute="bottom" constant="8" id="FXt-Cr-bfx"/>
                                                     <constraint firstItem="46o-9q-956" firstAttribute="top" secondItem="Y9x-zL-34M" secondAttribute="bottom" constant="16" id="J5i-xD-gKC"/>
                                                     <constraint firstItem="Y9x-zL-34M" firstAttribute="top" secondItem="aDR-mR-fJl" secondAttribute="bottom" constant="16" id="KgC-tW-LW2"/>
                                                     <constraint firstItem="aDR-mR-fJl" firstAttribute="leading" secondItem="lM4-dv-0uJ" secondAttribute="leading" id="Mvc-iE-OeV"/>
@@ -450,14 +450,14 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8E4-G0-bQk">
-                                                <rect key="frame" x="24" y="162" width="366" height="69"/>
+                                                <rect key="frame" x="24" y="146" width="366" height="60"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbA-Xy-8G0">
-                                                        <rect key="frame" x="0.0" y="8.5" width="52" height="52"/>
+                                                        <rect key="frame" x="0.0" y="4" width="52" height="52"/>
                                                         <state key="normal" image="call_icon"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1 (828) 832-4256" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHN-iU-iFO">
-                                                        <rect key="frame" x="68" y="25" width="131" height="19"/>
+                                                        <rect key="frame" x="68" y="20.5" width="131" height="19"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -465,7 +465,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="69" id="HDi-Kz-P9c"/>
+                                                    <constraint firstAttribute="height" constant="60" id="HDi-Kz-P9c"/>
                                                     <constraint firstItem="kHN-iU-iFO" firstAttribute="leading" secondItem="GbA-Xy-8G0" secondAttribute="trailing" constant="16" id="Uz3-XE-Xb0"/>
                                                     <constraint firstItem="kHN-iU-iFO" firstAttribute="centerY" secondItem="GbA-Xy-8G0" secondAttribute="centerY" id="aQc-zT-xTj"/>
                                                     <constraint firstItem="GbA-Xy-8G0" firstAttribute="leading" secondItem="8E4-G0-bQk" secondAttribute="leading" id="d40-7M-sxD"/>
@@ -473,7 +473,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBz-C8-M6r" customClass="RoundedCornerView" customModule="Navigo" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="239" width="366" height="128"/>
+                                                <rect key="frame" x="24" y="214" width="366" height="128"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSp-vT-4cz" customClass="GMSMapView">
                                                         <rect key="frame" x="0.0" y="0.0" width="366" height="128"/>
@@ -504,7 +504,7 @@
                                             <constraint firstAttribute="trailing" secondItem="lM4-dv-0uJ" secondAttribute="trailing" constant="24" id="42S-AQ-Nld"/>
                                             <constraint firstItem="lM4-dv-0uJ" firstAttribute="top" secondItem="N7Y-ME-LA6" secondAttribute="top" constant="32" id="IZw-Pe-fp9"/>
                                             <constraint firstAttribute="trailing" secondItem="8E4-G0-bQk" secondAttribute="trailing" constant="24" id="J6L-m4-TN2"/>
-                                            <constraint firstItem="8E4-G0-bQk" firstAttribute="top" secondItem="lM4-dv-0uJ" secondAttribute="bottom" constant="8" id="KfN-1c-ffe"/>
+                                            <constraint firstItem="8E4-G0-bQk" firstAttribute="top" secondItem="lM4-dv-0uJ" secondAttribute="bottom" id="KfN-1c-ffe"/>
                                             <constraint firstItem="OBz-C8-M6r" firstAttribute="leading" secondItem="N7Y-ME-LA6" secondAttribute="leading" constant="24" id="hcQ-X6-xUp"/>
                                             <constraint firstAttribute="height" constant="418" id="nF6-4f-9CU"/>
                                             <constraint firstItem="OBz-C8-M6r" firstAttribute="top" secondItem="8E4-G0-bQk" secondAttribute="bottom" constant="8" id="op5-v4-YyV"/>
@@ -522,7 +522,7 @@
                                     <constraint firstItem="N7Y-ME-LA6" firstAttribute="width" secondItem="2Gi-I9-Brp" secondAttribute="width" id="raj-5l-8oe"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cur-Ka-QMt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cur-Ka-QMt" customClass="RoundedButton" customModule="Navigo" customModuleProvider="target">
                                 <rect key="frame" x="30" y="810" width="354" height="52"/>
                                 <color key="backgroundColor" red="0.2274509804" green="0.80000000000000004" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -531,6 +531,11 @@
                                 <state key="normal" title="GO THERE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="goThereButtonClicked:" destination="UKz-9D-lc7" eventType="touchUpInside" id="QYZ-jO-MIp"/>
                                 </connections>

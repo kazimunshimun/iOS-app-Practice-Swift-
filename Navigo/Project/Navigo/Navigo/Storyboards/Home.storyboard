@@ -168,8 +168,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3C-ba-4dp">
                                                 <rect key="frame" x="24" y="56" width="366" height="81"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="driver_icon" translatesAutoresizingMaskIntoConstraints="NO" id="0Xv-XH-VMe">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="driver_icon" translatesAutoresizingMaskIntoConstraints="NO" id="0Xv-XH-VMe" customClass="RoundedImageView" customModule="Navigo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="16.5" width="48" height="48"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alexa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ceu-8Q-V2N">
                                                         <rect key="frame" x="64" y="16.5" width="36" height="19"/>
@@ -177,7 +182,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHR-yF-1GP">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHR-yF-1GP" customClass="RoundedButton" customModule="Navigo" customModuleProvider="target">
                                                         <rect key="frame" x="303" y="20.5" width="40" height="40"/>
                                                         <color key="backgroundColor" red="0.20784313725490194" green="0.22745098039215686" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -185,8 +190,13 @@
                                                             <constraint firstAttribute="width" constant="40" id="kFP-I2-bdb"/>
                                                         </constraints>
                                                         <state key="normal" image="envelope_icon"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbE-tY-pdv">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbE-tY-pdv" customClass="RoundedButton" customModule="Navigo" customModuleProvider="target">
                                                         <rect key="frame" x="255" y="20.5" width="40" height="40"/>
                                                         <color key="backgroundColor" red="0.20784313730000001" green="0.2274509804" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -194,6 +204,11 @@
                                                             <constraint firstAttribute="height" constant="40" id="bZk-uG-AfV"/>
                                                         </constraints>
                                                         <state key="normal" image="phone_icon"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5 stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iG3-Ng-O5M">
                                                         <rect key="frame" x="64" y="43.5" width="54" height="17"/>
@@ -244,8 +259,13 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wt3-sA-Tv0">
                                                 <rect key="frame" x="24" y="8" width="366" height="81"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_icon" translatesAutoresizingMaskIntoConstraints="NO" id="k4D-fi-8fJ">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_icon" translatesAutoresizingMaskIntoConstraints="NO" id="k4D-fi-8fJ" customClass="RoundedImageView" customModule="Navigo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="16.5" width="48" height="48"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audi S7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VY-fB-zYG">
                                                         <rect key="frame" x="64" y="16.5" width="49" height="19"/>
@@ -294,7 +314,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fY-eg-tr4">
                                         <rect key="frame" x="0.0" y="225" width="414" height="76"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7e-xl-5FJ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7e-xl-5FJ" customClass="RoundedButton" customModule="Navigo" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="8" width="366" height="52"/>
                                                 <color key="backgroundColor" red="0.26666666666666666" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -303,6 +323,11 @@
                                                 <state key="normal" title="CANCEL">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="cancelRideButtonClicked:" destination="77B-ZO-q42" eventType="touchUpInside" id="1ks-Mq-yDN"/>
                                                 </connections>
@@ -803,7 +828,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6Z-k2-naI">
                                         <rect key="frame" x="0.0" y="328" width="414" height="76"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCy-ol-9hb">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCy-ol-9hb" customClass="RoundedButton" customModule="Navigo" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="0.0" width="366" height="52"/>
                                                 <color key="backgroundColor" red="0.2274509804" green="0.80000000000000004" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -812,6 +837,11 @@
                                                 <state key="normal" title="CALL TAXI">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="callButtonClicked:" destination="77B-ZO-q42" eventType="touchUpInside" id="4A7-8f-cds"/>
                                                 </connections>
@@ -866,6 +896,8 @@
                         <outlet property="autoMView" destination="LxJ-53-OG1" id="NYr-wX-Sdd"/>
                         <outlet property="callButton" destination="DCy-ol-9hb" id="ZFQ-ng-yeL"/>
                         <outlet property="carView" destination="0aw-hu-d91" id="gXZ-UL-Hmw"/>
+                        <outlet property="driverArrivalTimeLabel" destination="S4n-mq-KyX" id="d8Z-d9-Avw"/>
+                        <outlet property="driverMultiColorView" destination="sCF-vj-F4s" id="xXh-nE-qwy"/>
                         <outlet property="driverViewHeightConstraint" destination="hiC-J0-Y3K" id="yqj-4R-Say"/>
                         <outlet property="mapTopConstraint" destination="AKt-FL-DTD" id="Eby-xL-m4A"/>
                         <outlet property="mapView" destination="cAy-8u-Qen" id="Su3-BJ-CVe"/>

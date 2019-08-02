@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.0.0-beta.6)
   - Firebase/Analytics (6.3.0):
     - Firebase/Core
   - Firebase/Auth (6.3.0):
@@ -74,6 +75,7 @@ PODS:
   - UPCarouselFlowLayout (1.1.2)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.5)
   - Firebase/Analytics
   - Firebase/Auth
   - GoogleMaps
@@ -84,6 +86,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -101,6 +104,7 @@ SPEC REPOS:
     - UPCarouselFlowLayout
 
 SPEC CHECKSUMS:
+  Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
   FirebaseAnalytics: 470ddab7253b21ad5a40bebd4a9903d7ae19386a
   FirebaseAuth: 7fa2cc010b93770831a4e7a60651b52c3b8d111a
@@ -117,6 +121,6 @@ SPEC CHECKSUMS:
   Panels: cfafe2d0f92387f393a3b5e827af9ffffe46b073
   UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
 
-PODFILE CHECKSUM: 2095b0513c353b40b2f1fecbf6d421d56733ad71
+PODFILE CHECKSUM: 6325f63020d3d198b137dc0b9341eaa77c82ec56
 
 COCOAPODS: 1.6.0

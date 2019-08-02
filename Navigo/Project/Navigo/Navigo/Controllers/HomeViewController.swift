@@ -12,6 +12,7 @@ import Panels
 import UPCarouselFlowLayout
 import CoreLocation
 import GoogleMaps
+import Alamofire
 
 class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, VisitPlaceDelegate, VisitNearByPlaceDelegate {
     
@@ -100,8 +101,11 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     @IBOutlet weak var callButton: UIButton!
     
     
+    @IBOutlet weak var driverMultiColorView: RoundedCornerView!
     @IBOutlet weak var rideAndDriverView: UIView!
     @IBOutlet weak var driverViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var driverArrivalTimeLabel: UILabel!
+    
     
     lazy var panelManager = Panels(target: self)
     var panelConfiguration = PanelConfiguration(size: .fullScreen)
@@ -148,6 +152,9 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     override func viewDidLayoutSubviews() {
         rideShareMultiColorView.topLeft = true
         rideShareMultiColorView.topRight = true
+        
+        driverMultiColorView.topLeft = true
+        driverMultiColorView.topRight = true
     }
     
     func setupRideViewListener() {
@@ -192,7 +199,8 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         showProfileAvatarInMap()
         focusUserOnMap()
         
-        showDirectionBetweenTwoLocation(source: userLocation, destination: (selectedPlace?.location.coordinate)!)
+        //showDirectionBetweenTwoLocation(source: userLocation, destination: (selectedPlace?.location.coordinate)!)
+        directionBetweenLocation(sourceLocation: userLocation, destinationLocation: (selectedPlace?.location.coordinate)!)
     }
     
     @objc func rideShareSelected() {
@@ -354,13 +362,37 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
                     self.driverViewHeightConstraint.constant = 304
                     self.view.layoutIfNeeded()
                     self.rideShareView.isHidden = true
+                    self.driverArrivalTimeRemainingCounter = 4
                 })
             }
             //show driver marker on map
             // show driver to user route on map
-            showDirectionBetweenTwoLocation(source: userLocation, destination: CLLocationCoordinate2D(latitude: 51.486378, longitude: -0.224088))
+            //showDirectionBetweenTwoLocation(source: userLocation, destination: CLLocationCoordinate2D(latitude: 51.486378, longitude: -0.224088))
+            directionBetweenLocation(sourceLocation: userLocation, destinationLocation: CLLocationCoordinate2D(latitude: 51.486378, longitude: -0.224088))
+            startDriverArrivalTimer()
             
         }
+    }
+    
+    var driverArrivalTimeRemainingCounter = 4
+    var timer = Timer()
+    
+    fileprivate func startDriverArrivalTimer() {
+        timer.invalidate() // just in case this button is tapped multiple times
+        // start the timer
+        timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(driverTimerAction), userInfo: nil, repeats: true)
+    }
+    
+    @objc func driverTimerAction() {
+        if driverArrivalTimeRemainingCounter > 0 {
+            driverArrivalTimeRemainingCounter -= 1
+            driverArrivalTimeLabel.text = "\(driverArrivalTimeRemainingCounter) min away"
+        } else {
+            timer.invalidate()
+            //hide driver view
+            //show onTrip view
+        }
+        
     }
     
     func updateRideOptionView() {
@@ -545,6 +577,39 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         marker.snippet = snippet
         marker.icon = UIImage(named: markerImageName)
         return marker
+    }
+    
+    fileprivate func directionBetweenLocation(sourceLocation: CLLocationCoordinate2D, destinationLocation: CLLocationCoordinate2D) {
+        let origin = "\(sourceLocation.latitude),\(sourceLocation.longitude)"
+        let destination = "\(destinationLocation.latitude),\(destinationLocation.longitude)"
+        
+        //let url = "http://router.project-osrm.org/route/v1/driving/\(origin);\(destination)?overview=false"
+        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=AIzaSyA-2M_CQqkeHa0LC-Y6P5GgcJNlvXbY7H8"
+        
+        AF.request(url).responseJSON { response in
+            print(response.request!)  // original URL request
+            print(response.response!) // HTTP URL response
+            print(response.data!)     // server data
+            print(response.result)   // result of response serialization
+            /*
+            do {
+                let json = try JSON(data: response.data!)
+                let routes = json["routes"].arrayValue
+                
+                for route in routes
+                {
+                    let routeOverviewPolyline = route["overview_polyline"].dictionary
+                    let points = routeOverviewPolyline?["points"]?.stringValue
+                    let path = GMSPath.init(fromEncodedPath: points!)
+                    let polyline = GMSPolyline.init(path: path)
+                    polyline.map = self.MapView
+                }
+            }
+            catch {
+                print("ERROR: not working")
+            }
+ */
+        }
     }
     
     func showDirectionBetweenTwoLocation(source: CLLocationCoordinate2D, destination: CLLocationCoordinate2D) {
