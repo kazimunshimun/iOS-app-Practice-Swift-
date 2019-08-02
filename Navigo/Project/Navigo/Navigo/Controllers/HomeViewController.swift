@@ -390,9 +390,35 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         } else {
             timer.invalidate()
             //hide driver view
+            hideDriverView()
+            
             //show onTrip view
         }
         
+    }
+    
+    fileprivate func hideDriverView() {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.driverViewHeightConstraint.constant = 0
+                self.view.layoutIfNeeded()
+            }, completion: { (finished: Bool) in
+                self.rideAndDriverView.isHidden = true
+            })
+        }
+    }
+    
+    @IBAction func cancelRideButtonClicked(_ sender: Any) {
+        timer.invalidate()
+        hideDriverView()
+        rideShareView.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.rideShareHeightContraint.constant = 404
+                self.rideAndDriverView.isHidden = true
+                self.view.layoutIfNeeded()
+            })
+        }
     }
     
     func updateRideOptionView() {
@@ -670,9 +696,6 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         }
     }
     
-    
-    @IBAction func cancelRideButtonClicked(_ sender: Any) {
-    }
 }
 
 extension HomeViewController: PanelNotifications {
