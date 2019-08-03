@@ -10,6 +10,7 @@
 		84151DCE22DA2D0F005E7964 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84151DCD22DA2D0F005E7964 /* PlaceDetailViewController.swift */; };
 		841C60CC22F5E153005D19E6 /* MusicEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C60CB22F5E153005D19E6 /* MusicEntity.swift */; };
 		841C60CE22F5E15D005D19E6 /* NewsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C60CD22F5E15D005D19E6 /* NewsEntity.swift */; };
+		841C60D022F5F717005D19E6 /* DriverRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C60CF22F5F717005D19E6 /* DriverRatingView.swift */; };
 		842B8F9222D8C3CF00CD4F7F /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9122D8C3CF00CD4F7F /* ColorUtils.swift */; };
 		842B8F9522D8C40C00CD4F7F /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9422D8C40C00CD4F7F /* RoundedCornerView.swift */; };
 		842B8F9722D8CCFB00CD4F7F /* BookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9622D8CCFB00CD4F7F /* BookingsViewController.swift */; };
@@ -62,6 +63,7 @@
 		84151DCD22DA2D0F005E7964 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		841C60CB22F5E153005D19E6 /* MusicEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicEntity.swift; sourceTree = "<group>"; };
 		841C60CD22F5E15D005D19E6 /* NewsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEntity.swift; sourceTree = "<group>"; };
+		841C60CF22F5F717005D19E6 /* DriverRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRatingView.swift; sourceTree = "<group>"; };
 		842B8F9122D8C3CF00CD4F7F /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		842B8F9422D8C40C00CD4F7F /* RoundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
 		842B8F9622D8CCFB00CD4F7F /* BookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				842B8F9422D8C40C00CD4F7F /* RoundedCornerView.swift */,
 				84BFE9B922F42D6200ADA24C /* RoundedImageView.swift */,
 				84BFE9BB22F42E5100ADA24C /* RoundedButton.swift */,
+				841C60CF22F5F717005D19E6 /* DriverRatingView.swift */,
 				84931BBB22D8AA2F0002165B /* TableViewCell */,
 				8438CD9B22D9DF130086F3D7 /* CollectionVIewCell */,
 			);
@@ -473,6 +476,7 @@
 				843D06BB22F5992800FF039F /* MusicCell.swift in Sources */,
 				842B8F9722D8CCFB00CD4F7F /* BookingsViewController.swift in Sources */,
 				843D06B922F5960B00FF039F /* OnTripCategoryCell.swift in Sources */,
+				841C60D022F5F717005D19E6 /* DriverRatingView.swift in Sources */,
 				8436DFE922E197F900BEBDD2 /* RideChooser.swift in Sources */,
 				84931BB322D8A2E30002165B /* MenuListViewController.swift in Sources */,
 				84931BB922D8AA290002165B /* MenuWithImageAndTextCell.swift in Sources */,

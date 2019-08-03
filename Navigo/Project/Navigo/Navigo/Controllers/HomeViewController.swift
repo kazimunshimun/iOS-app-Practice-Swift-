@@ -392,7 +392,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 [weak self] in
                 self?.nowShowingPanel = .onTrip
-                self?.panelForOnTrip.tripTimeRemainingCounter = 121
+                self?.panelForOnTrip.tripTimeRemainingCounter = 21
                 self?.panelForOnTrip.onTripDelegate = self
                 self?.panelManager.show(panel: self!.panelForOnTrip, config: self!.panelConfiguration)
                 self?.panelManager.expandPanel()
@@ -434,8 +434,9 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
                 self.mapTopConstraint.constant = -44
             }
             panelManager.dismiss(completion: {
-                self.nowShowingPanel = .nearby
-                self.setupPanelView()
+                self.showDriverRatingDialog(onView: self.view)
+                //self.nowShowingPanel = .nearby
+                //self.setupPanelView()
             })
         } else {
             panelManager.show(panel: panel, config: panelConfiguration)
@@ -726,5 +727,23 @@ extension HomeViewController: PanelNotifications {
             self.view.backgroundColor = self.panelForOnTrip.view.backgroundColor
             panelForOnTrip.updateTopView(isBottom: true)
         }
+    }
+}
+
+extension HomeViewController {
+    func showDriverRatingDialog(onView : UIView) {
+        let sView = UIView.init(frame: onView.bounds)
+        sView.backgroundColor = UIColor(white: 1.0, alpha: 0.72)
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        //sView.addSubview(blurEffectView)
+        
+        let sv = DriverRatingView(frame: onView.bounds)
+        sv.center = sView.center
+        sView.addSubview(sv)
+        onView.addSubview(sView)
+        
     }
 }

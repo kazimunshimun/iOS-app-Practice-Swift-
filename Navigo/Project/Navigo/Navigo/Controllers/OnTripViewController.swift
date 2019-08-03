@@ -55,6 +55,7 @@ class OnTripViewController: UIViewController, Panelable {
         timerForTrip.invalidate() // just in case this button is tapped multiple times
         // start the timer
         timerForTrip = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(tripTimerAction), userInfo: nil, repeats: true)
+        RunLoop.main.add(timerForTrip, forMode: RunLoop.Mode.common)
     }
     
     @objc func tripTimerAction() {
@@ -97,9 +98,6 @@ class OnTripViewController: UIViewController, Panelable {
         onTripDescriptionLabel.isHidden = isBottom ? true : false
         progressBar.isHidden = isBottom ? false : true
     }
-    
-    
-
 }
 
 extension OnTripViewController: UITableViewDelegate, UITableViewDataSource {
