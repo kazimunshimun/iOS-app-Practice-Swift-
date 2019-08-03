@@ -14,7 +14,7 @@ import CoreLocation
 import GoogleMaps
 import Alamofire
 
-class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, VisitPlaceDelegate, VisitNearByPlaceDelegate {
+class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, VisitPlaceDelegate, VisitNearByPlaceDelegate, OnTripDelegate {
     
     enum ShowingPanel {
         case nearby
@@ -391,6 +391,9 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
             //show onTrip view
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 [weak self] in
+                self?.nowShowingPanel = .onTrip
+                self?.panelForOnTrip.tripTimeRemainingCounter = 571
+                self?.panelForOnTrip.onTripDelegate = self
                 self?.panelManager.show(panel: self!.panelForOnTrip, config: self!.panelConfiguration)
                 self?.panelManager.expandPanel()
                 self?.panelManager.collapsePanel()
@@ -425,6 +428,17 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         }
     }
     
+    func tripFinished() {
+        if nowShowingPanel == .onTrip {
+            panelManager.dismiss(completion: {
+                self.nowShowingPanel = .nearby
+                self.setupPanelView()
+            })
+        } else {
+            panelManager.show(panel: panel, config: panelConfiguration)
+        }
+    }
+    
     func updateRideOptionView() {
         var rideList = [carView, rideView, publicTrasportView]
         rideList.remove(at: nowShowingRide.rawValue)
@@ -448,7 +462,15 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         searchTextCrossButton.isHidden = true
         searchTextField.text = ""
         searchResultView.isHidden = true
-        panelManager.show(panel: panel, config: panelConfiguration)
+        if nowShowingPanel == .onTrip {
+            panelManager.dismiss(completion: {
+                self.nowShowingPanel = .nearby
+                self.setupPanelView()
+            })
+        } else {
+            panelManager.show(panel: panel, config: panelConfiguration)
+        }
+
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -663,6 +685,8 @@ extension HomeViewController: PanelNotifications {
         if self.nowShowingPanel == .nearby {
             panel.updateTopView(isBottom: false)
             updateSearchView()
+        } else if self.nowShowingPanel == .onTrip {
+            panelForOnTrip.updateTopView(isBottom: false)
         }
     }
     
@@ -672,6 +696,9 @@ extension HomeViewController: PanelNotifications {
             panel.updateTopView(isBottom: false)
             updateSearchView()
             self.mapTopConstraint.constant = -44
+        } else if self.nowShowingPanel == .onTrip {
+            self.mapTopConstraint.constant = -44
+            panelForOnTrip.updateTopView(isBottom: false)
         }
     }
     
@@ -686,6 +713,10 @@ extension HomeViewController: PanelNotifications {
                 self?.view.backgroundColor = self?.panel.view.backgroundColor
                 self?.mapTopConstraint.constant = 0
             }
+        } else if self.nowShowingPanel == .onTrip {
+            self.mapTopConstraint.constant = 0
+            self.view.backgroundColor = self.panelForOnTrip.view.backgroundColor
+            panelForOnTrip.updateTopView(isBottom: true)
         }
     }
 }

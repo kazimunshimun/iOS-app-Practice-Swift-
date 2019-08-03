@@ -9,8 +9,14 @@
 import Panels
 import UIKit
 
+protocol OnTripDelegate {
+    func tripFinished()
+}
+
 class OnTripViewController: UIViewController, Panelable {
 
+    var onTripDelegate: OnTripDelegate? = nil
+    
     @IBOutlet weak var headerHeight: NSLayoutConstraint!
     @IBOutlet weak var headerPanel: UIView!
     
@@ -56,9 +62,21 @@ class OnTripViewController: UIViewController, Panelable {
         } else {
             timerForTrip.invalidate()
             //go back to basic callback
-            
+            onTripDelegate?.tripFinished()
         }
         
+    }
+    
+    public func updateTopView(isBottom: Bool) {
+        
+        onTripMultiColorView.isHidden = isBottom ? true : false
+        upButton.image = isBottom ? UIImage(named: "back_icon") : UIImage(named: "up_icon")
+        titleTopConstraint.constant = isBottom ? 56 : 24
+        titleLeadingConstraint.constant = isBottom ? 24 : 60
+        
+        onTripTitleLabel.font = isBottom ? UIFont(name: "HelveticaNeue-CondensedBold", size: 40) : UIFont(name: "HelveticaNeue-CondensedBold", size: 16)
+        onTripDurationLabel.font = isBottom ? UIFont(name: "HelveticaNeue-Regular", size: 16) : UIFont(name: "HelveticaNeue-Regular", size: 14)
+        onTripDescriptionLabel.isHidden = isBottom ? true : false
     }
     /*
     // MARK: - Navigation
