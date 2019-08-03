@@ -10,4 +10,9 @@ import UIKit
 
 class NewsCell: UICollectionViewCell {
     
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var repoterNameLabel: UILabel!
+    @IBOutlet weak var detailTextLabel: UILabel!
+    @IBOutlet weak var imageView: RoundedImageView!
+    
 }

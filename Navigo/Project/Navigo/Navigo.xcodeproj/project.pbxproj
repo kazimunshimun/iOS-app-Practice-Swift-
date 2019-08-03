@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		84151DCE22DA2D0F005E7964 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84151DCD22DA2D0F005E7964 /* PlaceDetailViewController.swift */; };
+		841C60CC22F5E153005D19E6 /* MusicEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C60CB22F5E153005D19E6 /* MusicEntity.swift */; };
+		841C60CE22F5E15D005D19E6 /* NewsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C60CD22F5E15D005D19E6 /* NewsEntity.swift */; };
 		842B8F9222D8C3CF00CD4F7F /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9122D8C3CF00CD4F7F /* ColorUtils.swift */; };
 		842B8F9522D8C40C00CD4F7F /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9422D8C40C00CD4F7F /* RoundedCornerView.swift */; };
 		842B8F9722D8CCFB00CD4F7F /* BookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9622D8CCFB00CD4F7F /* BookingsViewController.swift */; };
@@ -58,6 +60,8 @@
 		2240C505B361CEA6C604314F /* Pods-Navigo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Navigo.debug.xcconfig"; path = "Target Support Files/Pods-Navigo/Pods-Navigo.debug.xcconfig"; sourceTree = "<group>"; };
 		4846F9870B2CA7EB3BBB9AFC /* Pods_Navigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Navigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84151DCD22DA2D0F005E7964 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		841C60CB22F5E153005D19E6 /* MusicEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicEntity.swift; sourceTree = "<group>"; };
+		841C60CD22F5E15D005D19E6 /* NewsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEntity.swift; sourceTree = "<group>"; };
 		842B8F9122D8C3CF00CD4F7F /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		842B8F9422D8C40C00CD4F7F /* RoundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
 		842B8F9622D8CCFB00CD4F7F /* BookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				8438CD9C22D9DFB00086F3D7 /* PlacesEntity.swift */,
+				841C60CB22F5E153005D19E6 /* MusicEntity.swift */,
+				841C60CD22F5E15D005D19E6 /* NewsEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -454,6 +460,8 @@
 				84BFB3D422D4E1B20076A9B4 /* AppDelegate.swift in Sources */,
 				8490186422E6152C00E7048F /* TripsCell.swift in Sources */,
 				842B8F9922D8CD0600CD4F7F /* PlacesViewController.swift in Sources */,
+				841C60CE22F5E15D005D19E6 /* NewsEntity.swift in Sources */,
+				841C60CC22F5E153005D19E6 /* MusicEntity.swift in Sources */,
 				842B8FAB22D8E4B600CD4F7F /* Nearby.swift in Sources */,
 				842B8F9F22D8CD3300CD4F7F /* ProfileViewController.swift in Sources */,
 				84931BC322D8B1640002165B /* HomeViewController.swift in Sources */,

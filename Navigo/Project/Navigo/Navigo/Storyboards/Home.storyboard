@@ -1160,6 +1160,11 @@
                                                                 <constraint firstItem="RFu-6K-mEX" firstAttribute="top" secondItem="hzU-ba-mGs" secondAttribute="top" id="hP0-7I-OMc"/>
                                                                 <constraint firstItem="RFu-6K-mEX" firstAttribute="leading" secondItem="hzU-ba-mGs" secondAttribute="leading" id="zBZ-Z0-y7B"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="y7a-2k-7If" id="yV0-5h-p5o"/>
+                                                                <outlet property="musicianLabel" destination="kWn-54-ann" id="38O-3Q-aC8"/>
+                                                                <outlet property="name" destination="Frk-Nx-xi3" id="gIw-32-M6b"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                     <connections>
@@ -1291,6 +1296,12 @@
                                                                 <constraint firstItem="440-9A-Pdz" firstAttribute="top" secondItem="efK-Ub-bQt" secondAttribute="top" id="w9F-5d-qoB"/>
                                                             </constraints>
                                                             <size key="customSize" width="340" height="144"/>
+                                                            <connections>
+                                                                <outlet property="dateLabel" destination="88C-xc-Wzp" id="j41-EP-GNR"/>
+                                                                <outlet property="detailTextLabel" destination="aNv-xp-4He" id="LI2-QY-dUZ"/>
+                                                                <outlet property="imageView" destination="qaw-E2-ghR" id="8vd-lR-cVN"/>
+                                                                <outlet property="repoterNameLabel" destination="gLO-ps-9Ie" id="CUL-5U-sTS"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                     <connections>
