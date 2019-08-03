@@ -392,7 +392,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 [weak self] in
                 self?.nowShowingPanel = .onTrip
-                self?.panelForOnTrip.tripTimeRemainingCounter = 571
+                self?.panelForOnTrip.tripTimeRemainingCounter = 121
                 self?.panelForOnTrip.onTripDelegate = self
                 self?.panelManager.show(panel: self!.panelForOnTrip, config: self!.panelConfiguration)
                 self?.panelManager.expandPanel()
@@ -430,6 +430,9 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     
     func tripFinished() {
         if nowShowingPanel == .onTrip {
+            if self.panelManager.isExpanded {
+                self.mapTopConstraint.constant = -44
+            }
             panelManager.dismiss(completion: {
                 self.nowShowingPanel = .nearby
                 self.setupPanelView()
@@ -452,6 +455,11 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         panelManager.delegate = self
         panel.placeDelegate = self
         panelManager.show(panel: panel, config: panelConfiguration)
+        
+//        nowShowingPanel = .onTrip
+//        self.panelForOnTrip.tripTimeRemainingCounter = 121
+//        self.panelForOnTrip.onTripDelegate = self
+//        self.panelManager.show(panel: self.panelForOnTrip, config: self.panelConfiguration)
     }
 
     @IBAction func menuButtonClicked(_ sender: Any) {

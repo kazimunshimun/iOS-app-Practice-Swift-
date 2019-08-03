@@ -28,6 +28,8 @@
 		8438CD9A22D9DF090086F3D7 /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438CD9922D9DF090086F3D7 /* PlacesCell.swift */; };
 		8438CD9D22D9DFB00086F3D7 /* PlacesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438CD9C22D9DFB00086F3D7 /* PlacesEntity.swift */; };
 		843A532B22DE177A00DA9C85 /* RoundedViewWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A532A22DE177A00DA9C85 /* RoundedViewWithShadow.swift */; };
+		843D06B922F5960B00FF039F /* OnTripCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D06B822F5960B00FF039F /* OnTripCategoryCell.swift */; };
+		843D06BB22F5992800FF039F /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D06BA22F5992800FF039F /* MusicCell.swift */; };
 		846DBA2622EC2BB0006FA695 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 846DBA2522EC2BB0006FA695 /* style.json */; };
 		8477797B22F48F3D001F9867 /* OnTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477797A22F48F3D001F9867 /* OnTripViewController.swift */; };
 		8490186422E6152C00E7048F /* TripsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490186222E6152C00E7048F /* TripsCell.swift */; };
@@ -40,6 +42,8 @@
 		84931BBF22D8AA480002165B /* MenuWithImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84931BBD22D8AA480002165B /* MenuWithImageCell.xib */; };
 		84931BC122D8B08E0002165B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84931BC022D8B08E0002165B /* Home.storyboard */; };
 		84931BC322D8B1640002165B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84931BC222D8B1640002165B /* HomeViewController.swift */; };
+		84BDE57C22F5AABD0080AB1B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDE57B22F5AABD0080AB1B /* NewsCell.swift */; };
+		84BDE57E22F5D0FE0080AB1B /* OnTripCategoryNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDE57D22F5D0FE0080AB1B /* OnTripCategoryNewsCell.swift */; };
 		84BFB3D422D4E1B20076A9B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB3D322D4E1B20076A9B4 /* AppDelegate.swift */; };
 		84BFB3D622D4E1B20076A9B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB3D522D4E1B20076A9B4 /* ViewController.swift */; };
 		84BFB3D922D4E1B20076A9B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BFB3D722D4E1B20076A9B4 /* Main.storyboard */; };
@@ -74,6 +78,8 @@
 		8438CD9922D9DF090086F3D7 /* PlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCell.swift; sourceTree = "<group>"; };
 		8438CD9C22D9DFB00086F3D7 /* PlacesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesEntity.swift; sourceTree = "<group>"; };
 		843A532A22DE177A00DA9C85 /* RoundedViewWithShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedViewWithShadow.swift; sourceTree = "<group>"; };
+		843D06B822F5960B00FF039F /* OnTripCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTripCategoryCell.swift; sourceTree = "<group>"; };
+		843D06BA22F5992800FF039F /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		846DBA2522EC2BB0006FA695 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		8477797A22F48F3D001F9867 /* OnTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTripViewController.swift; sourceTree = "<group>"; };
 		8490186222E6152C00E7048F /* TripsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsCell.swift; sourceTree = "<group>"; };
@@ -86,6 +92,8 @@
 		84931BBD22D8AA480002165B /* MenuWithImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuWithImageCell.xib; sourceTree = "<group>"; };
 		84931BC022D8B08E0002165B /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		84931BC222D8B1640002165B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		84BDE57B22F5AABD0080AB1B /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		84BDE57D22F5D0FE0080AB1B /* OnTripCategoryNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTripCategoryNewsCell.swift; sourceTree = "<group>"; };
 		84BFB3D022D4E1B20076A9B4 /* Navigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BFB3D322D4E1B20076A9B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BFB3D522D4E1B20076A9B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				8438CD9922D9DF090086F3D7 /* PlacesCell.swift */,
+				843D06BA22F5992800FF039F /* MusicCell.swift */,
+				84BDE57B22F5AABD0080AB1B /* NewsCell.swift */,
 			);
 			path = CollectionVIewCell;
 			sourceTree = "<group>";
@@ -227,6 +237,8 @@
 				8438CD9722D9DC710086F3D7 /* CategoryCell.swift */,
 				8490186222E6152C00E7048F /* TripsCell.swift */,
 				8490186322E6152C00E7048F /* TripsCell.xib */,
+				843D06B822F5960B00FF039F /* OnTripCategoryCell.swift */,
+				84BDE57D22F5D0FE0080AB1B /* OnTripCategoryNewsCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -433,9 +445,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				842B8F9222D8C3CF00CD4F7F /* ColorUtils.swift in Sources */,
+				84BDE57E22F5D0FE0080AB1B /* OnTripCategoryNewsCell.swift in Sources */,
 				84BFE9BA22F42D6200ADA24C /* RoundedImageView.swift in Sources */,
 				8477797B22F48F3D001F9867 /* OnTripViewController.swift in Sources */,
 				84BFB3D622D4E1B20076A9B4 /* ViewController.swift in Sources */,
+				84BDE57C22F5AABD0080AB1B /* NewsCell.swift in Sources */,
 				842B8FA122D8CD4F00CD4F7F /* PrivacyViewController.swift in Sources */,
 				84BFB3D422D4E1B20076A9B4 /* AppDelegate.swift in Sources */,
 				8490186422E6152C00E7048F /* TripsCell.swift in Sources */,
@@ -448,7 +462,9 @@
 				8438CD9D22D9DFB00086F3D7 /* PlacesEntity.swift in Sources */,
 				842B8F9522D8C40C00CD4F7F /* RoundedCornerView.swift in Sources */,
 				8436DFEE22E19D7600BEBDD2 /* PlaceData.swift in Sources */,
+				843D06BB22F5992800FF039F /* MusicCell.swift in Sources */,
 				842B8F9722D8CCFB00CD4F7F /* BookingsViewController.swift in Sources */,
+				843D06B922F5960B00FF039F /* OnTripCategoryCell.swift in Sources */,
 				8436DFE922E197F900BEBDD2 /* RideChooser.swift in Sources */,
 				84931BB322D8A2E30002165B /* MenuListViewController.swift in Sources */,
 				84931BB922D8AA290002165B /* MenuWithImageAndTextCell.swift in Sources */,
