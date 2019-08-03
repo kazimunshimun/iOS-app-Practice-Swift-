@@ -26,15 +26,20 @@ class OnTripViewController: UIViewController, Panelable {
     @IBOutlet weak var onTripDescriptionLabel: UILabel!
     @IBOutlet weak var onTripDurationLabel: UILabel!
     
+    @IBOutlet weak var progressBar: UIProgressView!
+    
     @IBOutlet weak var titleLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleTopConstraint: NSLayoutConstraint!
     
     var tripTimeRemainingCounter = 571
     var timerForTrip = Timer()
     
+    var initialTotalTime : Int = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initialTotalTime = tripTimeRemainingCounter
         // Do any additional setup after loading the view.
         startDriverArrivalTimer()
     }
@@ -59,6 +64,9 @@ class OnTripViewController: UIViewController, Panelable {
             }
             
             onTripDurationLabel.text = "\(min):\(secString)"
+            
+            let progress = 1 - (Float(tripTimeRemainingCounter) / Float(initialTotalTime))
+            progressBar.setProgress(progress, animated: true)
         } else {
             timerForTrip.invalidate()
             //go back to basic callback
@@ -77,6 +85,7 @@ class OnTripViewController: UIViewController, Panelable {
         onTripTitleLabel.font = isBottom ? UIFont(name: "HelveticaNeue-CondensedBold", size: 40) : UIFont(name: "HelveticaNeue-CondensedBold", size: 16)
         onTripDurationLabel.font = isBottom ? UIFont(name: "HelveticaNeue-Regular", size: 16) : UIFont(name: "HelveticaNeue-Regular", size: 14)
         onTripDescriptionLabel.isHidden = isBottom ? true : false
+        progressBar.isHidden = isBottom ? false : true
     }
     /*
     // MARK: - Navigation

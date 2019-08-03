@@ -930,7 +930,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAT-aD-Cu3">
-                                <rect key="frame" x="0.0" y="44" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="126"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JiL-EU-c8a" customClass="RoundedCornerView" customModule="Navigo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-6" width="414" height="24"/>
@@ -1037,9 +1037,19 @@
                                             <constraint firstAttribute="height" constant="24" id="sOn-kc-yXR"/>
                                         </constraints>
                                     </imageView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hzd-7f-MmB">
+                                        <rect key="frame" x="24" y="120" width="366" height="6"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="6" id="5eB-yg-Jmc"/>
+                                        </constraints>
+                                        <color key="progressTintColor" red="0.22745098039215686" green="0.80000000000000004" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="trackTintColor" white="1" alpha="0.19" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1647058824" green="0.18039215689999999" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Hzd-7f-MmB" firstAttribute="top" secondItem="mAT-aD-Cu3" secondAttribute="top" constant="120" id="24z-6s-Nei"/>
+                                    <constraint firstItem="Hzd-7f-MmB" firstAttribute="leading" secondItem="mAT-aD-Cu3" secondAttribute="leading" constant="24" id="2gx-qa-QWr"/>
                                     <constraint firstItem="YpD-jr-2Si" firstAttribute="leading" secondItem="mAT-aD-Cu3" secondAttribute="leading" constant="20" id="451-gu-z03"/>
                                     <constraint firstItem="JiL-EU-c8a" firstAttribute="top" secondItem="mAT-aD-Cu3" secondAttribute="top" constant="-6" id="BLA-mO-24i"/>
                                     <constraint firstAttribute="trailing" secondItem="JiL-EU-c8a" secondAttribute="trailing" id="ItI-vS-BLy"/>
@@ -1050,12 +1060,13 @@
                                     <constraint firstItem="JiL-EU-c8a" firstAttribute="leading" secondItem="mAT-aD-Cu3" secondAttribute="leading" id="WgQ-sV-jf4"/>
                                     <constraint firstItem="YpD-jr-2Si" firstAttribute="top" secondItem="mAT-aD-Cu3" secondAttribute="top" constant="24" id="Zbr-zv-XH3"/>
                                     <constraint firstItem="arY-xe-Ddb" firstAttribute="top" secondItem="mAT-aD-Cu3" secondAttribute="top" constant="24" id="efg-RN-5F4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hzd-7f-MmB" secondAttribute="trailing" constant="24" id="gfr-82-0tU"/>
                                     <constraint firstItem="fsh-vb-vqH" firstAttribute="top" secondItem="arY-xe-Ddb" secondAttribute="bottom" constant="8" id="sz9-m3-2ox"/>
-                                    <constraint firstAttribute="height" constant="120" id="td7-Zq-eEK"/>
+                                    <constraint firstAttribute="height" constant="126" id="td7-Zq-eEK"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vk-Pz-vKd">
-                                <rect key="frame" x="0.0" y="164" width="414" height="732"/>
+                                <rect key="frame" x="0.0" y="170" width="414" height="726"/>
                                 <color key="backgroundColor" red="0.16470588235294117" green="0.1803921568627451" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -1078,6 +1089,7 @@
                         <outlet property="onTripDurationLabel" destination="biX-41-ySq" id="o8W-r3-p1V"/>
                         <outlet property="onTripMultiColorView" destination="JiL-EU-c8a" id="mqx-fJ-Bql"/>
                         <outlet property="onTripTitleLabel" destination="arY-xe-Ddb" id="iu6-ox-AjW"/>
+                        <outlet property="progressBar" destination="Hzd-7f-MmB" id="yCu-x6-AhX"/>
                         <outlet property="titleLeadingConstraint" destination="U9W-ta-l63" id="0w1-3i-cBY"/>
                         <outlet property="titleTopConstraint" destination="efg-RN-5F4" id="3bV-r9-MQU"/>
                         <outlet property="upButton" destination="YpD-jr-2Si" id="qfs-tp-hAW"/>
