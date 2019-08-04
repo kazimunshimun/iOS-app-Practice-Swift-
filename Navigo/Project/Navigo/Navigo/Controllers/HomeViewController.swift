@@ -114,6 +114,8 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     
     var selectedPlace: PlacesEntity?
     
+    var driverPriceAndRatingView : UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -745,5 +747,18 @@ extension HomeViewController {
         sView.addSubview(sv)
         onView.addSubview(sView)
         
+        driverPriceAndRatingView = sView
+        
+        sv.submitButton.addTarget(self, action: #selector(submitClicked(sender:)), for: .touchUpInside)
+    }
+    
+    @objc func submitClicked(sender: UIButton!) {
+        DispatchQueue.main.async {
+            self.driverPriceAndRatingView?.removeFromSuperview()
+            self.driverPriceAndRatingView = nil
+            
+            self.nowShowingPanel = .nearby
+            self.setupPanelView()
+        }
     }
 }

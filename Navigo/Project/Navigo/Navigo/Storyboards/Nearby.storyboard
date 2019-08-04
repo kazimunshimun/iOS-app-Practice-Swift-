@@ -343,29 +343,46 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Foq-cG-B2t">
-                                                <rect key="frame" x="24" y="64" width="161" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="161" id="Q3A-FW-iPg"/>
-                                                    <constraint firstAttribute="height" constant="29" id="fEJ-gM-mM6"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAU-kZ-gz0">
-                                                <rect key="frame" x="201" y="70.5" width="34.5" height="16.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAU-kZ-gz0">
+                                                <rect key="frame" x="140" y="63.5" width="67" height="17"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="0.65328754194630867" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tzp-ML-flX" customClass="CosmosView" customModule="Cosmos">
+                                                <rect key="frame" x="24" y="64" width="104" height="16"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="CpC-8j-wjj"/>
+                                                    <constraint firstAttribute="width" constant="104" id="h2U-5z-x9q"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="star_filled"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star_empty"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                        <real key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="eHQ-Ef-GNG" firstAttribute="leading" secondItem="yaF-hU-2rT" secondAttribute="leading" constant="24" id="Epm-w2-Cfx"/>
+                                            <constraint firstItem="Tzp-ML-flX" firstAttribute="leading" secondItem="eHQ-Ef-GNG" secondAttribute="leading" id="F5Z-l3-v0A"/>
                                             <constraint firstItem="eHQ-Ef-GNG" firstAttribute="top" secondItem="yaF-hU-2rT" secondAttribute="top" constant="8" id="Inp-x9-phG"/>
                                             <constraint firstAttribute="height" constant="108" id="PLI-Nb-tb5"/>
-                                            <constraint firstItem="Foq-cG-B2t" firstAttribute="leading" secondItem="yaF-hU-2rT" secondAttribute="leading" constant="24" id="PoH-8C-DE5"/>
-                                            <constraint firstItem="uAU-kZ-gz0" firstAttribute="centerY" secondItem="Foq-cG-B2t" secondAttribute="centerY" id="SlI-XU-DUg"/>
-                                            <constraint firstItem="uAU-kZ-gz0" firstAttribute="leading" secondItem="Foq-cG-B2t" secondAttribute="trailing" constant="16" id="XWK-qp-3V7"/>
-                                            <constraint firstItem="Foq-cG-B2t" firstAttribute="top" secondItem="eHQ-Ef-GNG" secondAttribute="bottom" constant="8" id="kxM-dM-MBi"/>
+                                            <constraint firstItem="uAU-kZ-gz0" firstAttribute="centerY" secondItem="Tzp-ML-flX" secondAttribute="centerY" id="k4E-N6-NKL"/>
+                                            <constraint firstItem="Tzp-ML-flX" firstAttribute="top" secondItem="eHQ-Ef-GNG" secondAttribute="bottom" constant="8" id="l1c-2h-Cnd"/>
+                                            <constraint firstItem="uAU-kZ-gz0" firstAttribute="leading" secondItem="Tzp-ML-flX" secondAttribute="trailing" constant="12" id="phf-Xl-Muf"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfH-W2-zlA">
@@ -573,6 +590,8 @@
         <image name="back_icon" width="24" height="24"/>
         <image name="call_icon" width="52" height="52"/>
         <image name="overlay" width="375" height="340"/>
+        <image name="star_empty" width="24" height="24"/>
+        <image name="star_filled" width="24" height="24"/>
         <image name="sushi_place_1" width="152" height="172"/>
         <image name="up_icon" width="24" height="24"/>
     </resources>
