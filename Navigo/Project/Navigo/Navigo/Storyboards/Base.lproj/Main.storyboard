@@ -23,7 +23,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiC-ze-pdX" customClass="RoundedButton" customModule="Navigo" customModuleProvider="target">
                                 <rect key="frame" x="30" y="810" width="354" height="52"/>
-                                <color key="backgroundColor" red="0.22745098039215686" green="0.80000000000000004" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.25907653570175171" green="0.83329540491104126" blue="0.90621370077133179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="iQi-zk-L3j"/>
                                 </constraints>

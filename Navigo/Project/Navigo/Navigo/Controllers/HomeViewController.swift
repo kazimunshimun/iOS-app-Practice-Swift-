@@ -199,7 +199,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         focusUserOnMap()
         
         //showDirectionBetweenTwoLocation(source: userLocation, destination: (selectedPlace?.location.coordinate)!)
-        directionBetweenLocation(sourceLocation: userLocation, destinationLocation: (selectedPlace?.location.coordinate)!)
+        //directionBetweenLocation(sourceLocation: userLocation, destinationLocation: (selectedPlace?.location.coordinate)!)
     }
     
     @objc func rideShareSelected() {
@@ -367,7 +367,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
             //show driver marker on map
             // show driver to user route on map
             //showDirectionBetweenTwoLocation(source: userLocation, destination: CLLocationCoordinate2D(latitude: 51.486378, longitude: -0.224088))
-            directionBetweenLocation(sourceLocation: userLocation, destinationLocation: CLLocationCoordinate2D(latitude: 51.486378, longitude: -0.224088))
+          //  directionBetweenLocation(sourceLocation: userLocation, destinationLocation: CLLocationCoordinate2D(latitude: 51.486378, longitude: -0.224088))
             startDriverArrivalTimer()
             
         }
@@ -392,7 +392,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 [weak self] in
                 self?.nowShowingPanel = .onTrip
-                self?.panelForOnTrip.tripTimeRemainingCounter = 21
+                self?.panelForOnTrip.tripTimeRemainingCounter = 11
                 self?.panelForOnTrip.onTripDelegate = self
                 self?.panelManager.show(panel: self!.panelForOnTrip, config: self!.panelConfiguration)
                 self?.panelManager.expandPanel()
