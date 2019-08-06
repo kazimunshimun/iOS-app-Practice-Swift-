@@ -114,12 +114,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpX-u2-edF">
-                                <rect key="frame" x="179" y="442.5" width="56" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAi-4I-Umr">
                                 <rect key="frame" x="20" y="44" width="374" height="52"/>
                                 <subviews>
@@ -139,21 +133,185 @@
                                     <constraint firstItem="Fey-qd-l2a" firstAttribute="centerY" secondItem="eAi-4I-Umr" secondAttribute="centerY" id="fUX-Jo-ako"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yD-V1-jY5">
+                                <rect key="frame" x="24" y="104" width="96.5" height="47.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" red="0.27058823529999998" green="0.30980392159999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMS-0z-ZuM">
+                                <rect key="frame" x="20" y="159" width="374" height="1"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="VUH-hy-ePS"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kac-og-n9Q">
+                                <rect key="frame" x="20" y="168" width="374" height="694"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Article 1">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27058823529411763" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="HelveticaNeue-CondensedBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.27058823529411763" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Who May Use the Services">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27058823529411763" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-CondensedBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.27058823529411763" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">When one door of happiness closes, another opens, but often we look so long at the closed door that we do not see the one that has been opened for us. </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.47058823529411764" green="0.51764705882352935" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.27058823529411763" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.27058823529411763" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="• Step 1: ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27058823529411763" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-CondensedBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" firstLineHeadIndent="20" headIndent="20" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">You may use the Services only if you agree to form a binding contract with us and are not a person barred from receiving services under the laws of the applicable jurisdiction. </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.47058823529411764" green="0.51764705882352935" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" firstLineHeadIndent="20" headIndent="20" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.27058823529411763" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" firstLineHeadIndent="20" headIndent="20" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="• Step 2: ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27058823529411763" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-CondensedBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" firstLineHeadIndent="20" headIndent="20" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Our Privacy Policy describes how we handle the information you provide to us when you use our Services.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.47058823529411764" green="0.51764705882352935" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" firstLineHeadIndent="20" headIndent="20" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.27058823529411763" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" firstLineHeadIndent="20" headIndent="20" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Privacy
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.27058823529411763" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="19" name="HelveticaNeue-CondensedBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">When one door of happiness closes, another opens, but often we look so long at the closed door that we do not see the one that has been opened for us. </string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.47058823529411764" green="0.51764705882352935" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" paragraphSpacingBefore="18" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eAi-4I-Umr" firstAttribute="top" secondItem="IP4-NN-erP" secondAttribute="top" id="5Yy-Ck-g6U"/>
-                            <constraint firstItem="LpX-u2-edF" firstAttribute="centerX" secondItem="IP4-NN-erP" secondAttribute="centerX" id="Cgj-Xi-gRx"/>
+                            <constraint firstItem="IP4-NN-erP" firstAttribute="bottom" secondItem="kac-og-n9Q" secondAttribute="bottom" id="7M9-oa-gzp"/>
+                            <constraint firstItem="IP4-NN-erP" firstAttribute="trailing" secondItem="HMS-0z-ZuM" secondAttribute="trailing" constant="20" id="AXB-6L-leQ"/>
+                            <constraint firstItem="HMS-0z-ZuM" firstAttribute="top" secondItem="2yD-V1-jY5" secondAttribute="bottom" constant="7.5" id="Bkq-mb-3AW"/>
                             <constraint firstItem="eAi-4I-Umr" firstAttribute="leading" secondItem="IP4-NN-erP" secondAttribute="leading" constant="20" id="ECf-9O-dsx"/>
                             <constraint firstItem="IP4-NN-erP" firstAttribute="trailing" secondItem="eAi-4I-Umr" secondAttribute="trailing" constant="20" id="Tz4-Q3-xe5"/>
-                            <constraint firstItem="LpX-u2-edF" firstAttribute="centerY" secondItem="IP4-NN-erP" secondAttribute="centerY" id="Y0N-Qn-Nsn"/>
+                            <constraint firstItem="IP4-NN-erP" firstAttribute="trailing" secondItem="kac-og-n9Q" secondAttribute="trailing" constant="20" id="ch3-OU-2Nr"/>
+                            <constraint firstItem="kac-og-n9Q" firstAttribute="top" secondItem="HMS-0z-ZuM" secondAttribute="bottom" constant="8" id="f7c-T1-Kax"/>
+                            <constraint firstItem="kac-og-n9Q" firstAttribute="leading" secondItem="IP4-NN-erP" secondAttribute="leading" constant="20" id="fQ5-SM-tBU"/>
+                            <constraint firstItem="2yD-V1-jY5" firstAttribute="leading" secondItem="IP4-NN-erP" secondAttribute="leading" constant="24" id="t6m-1A-iIF"/>
+                            <constraint firstItem="HMS-0z-ZuM" firstAttribute="leading" secondItem="IP4-NN-erP" secondAttribute="leading" constant="20" id="uCA-Ww-qo2"/>
+                            <constraint firstItem="2yD-V1-jY5" firstAttribute="top" secondItem="eAi-4I-Umr" secondAttribute="bottom" constant="8" id="zMQ-Bq-0pU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IP4-NN-erP"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LvG-lV-egN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1797" y="68"/>
+            <point key="canvasLocation" x="1795.6521739130437" y="67.633928571428569"/>
         </scene>
     </scenes>
     <resources>
