@@ -41,9 +41,38 @@ class BookingsViewController: UIViewController, SideMenuItemContent {
                 DispatchQueue.main.async {
                     self.bookings = bookings
                     self.bookingTableView.reloadData()
+                    self.addBookingPlacesInMap()
                 }
             }
         }
+    }
+    
+    func mapCameraFocusOnFirstBooking(booking: BookingEntity) {
+        mapView.animate(to: GMSCameraPosition(latitude: booking.location.coordinate.latitude, longitude: booking.location.coordinate.longitude, zoom: 16.0))
+    }
+    
+    func addBookingPlacesInMap() {
+        mapCameraFocusOnFirstBooking(booking: bookings[0])
+        for place in bookings {
+            var markerImage = ""
+            if place.type == .meeting {
+                markerImage = "meeting_icon"
+            } else {
+                markerImage = "dinner_icon"
+            }
+            
+            let marker = addMarkerToMap(title: place.name, snippet: "", location: CLLocationCoordinate2D(latitude: place.location.coordinate.latitude, longitude: place.location.coordinate.longitude), markerImageName: markerImage)
+            marker.map = mapView
+        }
+    }
+    
+    func addMarkerToMap(title: String, snippet: String, location: CLLocationCoordinate2D, markerImageName: String) -> GMSMarker {
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+        marker.title = title
+        marker.snippet = snippet
+        marker.icon = UIImage(named: markerImageName)
+        return marker
     }
     
     func updateMap() {
@@ -70,7 +99,8 @@ class BookingsViewController: UIViewController, SideMenuItemContent {
 
 extension BookingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        mapCameraFocusOnFirstBooking(booking: bookings[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
