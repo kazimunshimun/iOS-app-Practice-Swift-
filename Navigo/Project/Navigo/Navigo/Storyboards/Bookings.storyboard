@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6t-rd-L2m">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTs-W1-xP3">
                                         <rect key="frame" x="40" y="60" width="20" height="22"/>
@@ -40,22 +40,22 @@
                                     <constraint firstItem="rta-LR-C7k" firstAttribute="leading" secondItem="yTs-W1-xP3" secondAttribute="trailing" constant="16" id="4FR-lF-Qhp"/>
                                     <constraint firstItem="rta-LR-C7k" firstAttribute="centerY" secondItem="yTs-W1-xP3" secondAttribute="centerY" id="Mvy-ID-tZK"/>
                                     <constraint firstItem="yTs-W1-xP3" firstAttribute="top" secondItem="Q6t-rd-L2m" secondAttribute="top" constant="60" id="hIn-1R-b6c"/>
-                                    <constraint firstAttribute="height" constant="110" id="jup-RC-2nQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="jup-RC-2nQ"/>
                                     <constraint firstItem="yTs-W1-xP3" firstAttribute="leading" secondItem="Q6t-rd-L2m" secondAttribute="leading" constant="40" id="qQ6-Ar-8jr"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9t-Kj-efH" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="110" width="414" height="280"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="280"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="mMT-7e-TEw"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xm8-xt-MRo" customClass="RoundedCornerView" customModule="Navigo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="374" width="414" height="522"/>
+                                <rect key="frame" x="0.0" y="364" width="414" height="532"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dP8-9a-0hR">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="522"/>
+                                        <rect key="frame" x="16" y="16" width="398" height="516"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                 </subviews>

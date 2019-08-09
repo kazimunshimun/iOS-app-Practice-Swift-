@@ -43,7 +43,6 @@ class Nearby: UIViewController, Panelable, UITableViewDelegate, UITableViewDataS
     }
     
     func updateViews() {
-        
         DispatchQueue.global(qos: .userInitiated).async {
             PlaceData.shared.getPlaces() { places in
                 DispatchQueue.main.async {

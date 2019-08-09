@@ -22,23 +22,47 @@
                         <rect key="frame" x="20" y="0.0" width="32" height="32"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGb-Du-cqi">
-                        <rect key="frame" x="60" y="9" width="23.5" height="14"/>
+                        <rect key="frame" x="92" y="9" width="23.5" height="14"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" red="0.58431372549019611" green="0.61568627450980395" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meeting at Mile-End" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq7-l3-x28">
-                        <rect key="frame" x="60" y="31" width="128" height="19"/>
+                        <rect key="frame" x="92" y="31" width="128" height="19"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
                         <color key="textColor" red="0.27058823529999998" green="0.30980392159999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFI-P2-29U">
-                        <rect key="frame" x="60" y="55" width="129" height="38"/>
-                        <color key="backgroundColor" red="0.58431372550000005" green="0.61568627450000002" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="92" y="60" width="129" height="38"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PQY-pc-heK" customClass="RoundedImageView" customModule="Navigo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="hvo-rE-0Jn"/>
+                                    <constraint firstAttribute="height" constant="38" id="tCZ-Bw-ClT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zyh-d0-Jo9" customClass="RoundedImageView" customModule="Navigo" customModuleProvider="target">
+                                <rect key="frame" x="45" y="0.0" width="38" height="38"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VRj-We-2FC" customClass="RoundedImageView" customModule="Navigo" customModuleProvider="target">
+                                <rect key="frame" x="91" y="0.0" width="38" height="38"/>
+                            </imageView>
+                        </subviews>
                         <constraints>
+                            <constraint firstItem="zyh-d0-Jo9" firstAttribute="width" secondItem="PQY-pc-heK" secondAttribute="width" id="5zS-5k-r1t"/>
+                            <constraint firstItem="VRj-We-2FC" firstAttribute="height" secondItem="zyh-d0-Jo9" secondAttribute="height" id="6GV-Og-QHN"/>
                             <constraint firstAttribute="height" constant="38" id="9UK-Kz-DV0"/>
+                            <constraint firstItem="zyh-d0-Jo9" firstAttribute="leading" secondItem="PQY-pc-heK" secondAttribute="trailing" constant="7" id="ClJ-ce-LDp"/>
+                            <constraint firstItem="zyh-d0-Jo9" firstAttribute="height" secondItem="PQY-pc-heK" secondAttribute="height" id="Dlt-Rm-axo"/>
+                            <constraint firstItem="PQY-pc-heK" firstAttribute="top" secondItem="cFI-P2-29U" secondAttribute="top" id="MwJ-LB-4GC"/>
+                            <constraint firstItem="VRj-We-2FC" firstAttribute="width" secondItem="zyh-d0-Jo9" secondAttribute="width" id="Rh5-M8-wkT"/>
+                            <constraint firstItem="VRj-We-2FC" firstAttribute="leading" secondItem="zyh-d0-Jo9" secondAttribute="trailing" constant="8" id="YWU-nq-Gme"/>
+                            <constraint firstItem="VRj-We-2FC" firstAttribute="centerY" secondItem="zyh-d0-Jo9" secondAttribute="centerY" id="cd1-UB-Qe0"/>
+                            <constraint firstItem="zyh-d0-Jo9" firstAttribute="centerY" secondItem="PQY-pc-heK" secondAttribute="centerY" id="dOc-mk-T0u"/>
                             <constraint firstAttribute="width" constant="129" id="l5Z-fV-Qvf"/>
+                            <constraint firstItem="PQY-pc-heK" firstAttribute="leading" secondItem="cFI-P2-29U" secondAttribute="leading" id="ygK-R3-NOM"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lje-LO-Av1">
@@ -56,14 +80,22 @@
                     <constraint firstAttribute="bottom" secondItem="Lje-LO-Av1" secondAttribute="bottom" id="Mol-4r-RNW"/>
                     <constraint firstItem="oGb-Du-cqi" firstAttribute="centerY" secondItem="PFc-eg-2hb" secondAttribute="centerY" id="ZX4-LE-EAg"/>
                     <constraint firstItem="cFI-P2-29U" firstAttribute="leading" secondItem="Uq7-l3-x28" secondAttribute="leading" id="eXH-5E-8w9"/>
-                    <constraint firstItem="oGb-Du-cqi" firstAttribute="leading" secondItem="PFc-eg-2hb" secondAttribute="trailing" constant="8" id="nw3-wn-gKT"/>
+                    <constraint firstItem="oGb-Du-cqi" firstAttribute="leading" secondItem="PFc-eg-2hb" secondAttribute="trailing" constant="40" id="nw3-wn-gKT"/>
                     <constraint firstItem="Uq7-l3-x28" firstAttribute="top" secondItem="oGb-Du-cqi" secondAttribute="bottom" constant="8" id="q2M-lv-vKH"/>
                     <constraint firstItem="PFc-eg-2hb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="t6r-D4-Fil"/>
-                    <constraint firstItem="cFI-P2-29U" firstAttribute="top" secondItem="Uq7-l3-x28" secondAttribute="bottom" constant="5" id="xdV-oI-cz1"/>
+                    <constraint firstItem="cFI-P2-29U" firstAttribute="top" secondItem="Uq7-l3-x28" secondAttribute="bottom" constant="10" id="xdV-oI-cz1"/>
                     <constraint firstItem="Lje-LO-Av1" firstAttribute="centerX" secondItem="PFc-eg-2hb" secondAttribute="centerX" id="xpD-cF-xvE"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="image1View" destination="PQY-pc-heK" id="f4P-WQ-bhc"/>
+                <outlet property="image2View" destination="zyh-d0-Jo9" id="Kq0-2F-x7c"/>
+                <outlet property="image3View" destination="VRj-We-2FC" id="t9c-vq-g9E"/>
+                <outlet property="nameLabel" destination="Uq7-l3-x28" id="jbD-86-zIg"/>
+                <outlet property="timeLabel" destination="oGb-Du-cqi" id="pUJ-24-Gw2"/>
+                <outlet property="typeImageView" destination="PFc-eg-2hb" id="I1c-ov-sne"/>
+            </connections>
             <point key="canvasLocation" x="38.405797101449281" y="58.928571428571423"/>
         </tableViewCell>
     </objects>

@@ -10,6 +10,13 @@ import UIKit
 
 class BookingCell: UITableViewCell {
 
+    @IBOutlet weak var typeImageView: UIImageView!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var image1View: RoundedImageView!
+    @IBOutlet weak var image2View: RoundedImageView!
+    @IBOutlet weak var image3View: RoundedImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

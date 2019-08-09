@@ -16,11 +16,14 @@ class BookingsViewController: UIViewController, SideMenuItemContent {
     @IBOutlet weak var roundedParentView: RoundedCornerView!
     @IBOutlet weak var bookingTableView: UITableView!
     
+    var bookings: [BookingEntity] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         updateMap()
+        updateViews()
         
         self.bookingTableView.register(UINib(nibName: "BookingCell", bundle: nil), forCellReuseIdentifier: "bookingCell")
         self.bookingTableView.delegate = self
@@ -30,6 +33,17 @@ class BookingsViewController: UIViewController, SideMenuItemContent {
     override func viewDidLayoutSubviews() {
         roundedParentView.topLeft = true
         roundedParentView.topRight = true
+    }
+    
+    func updateViews() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            BookingData.shared.getBookings() { bookings in
+                DispatchQueue.main.async {
+                    self.bookings = bookings
+                    self.bookingTableView.reloadData()
+                }
+            }
+        }
     }
     
     func updateMap() {
@@ -65,13 +79,32 @@ extension BookingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return bookings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookingCell", for: indexPath) as! BookingCell
-        
-        
+        if bookings.count > 0 {
+            let booking = self.bookings[indexPath.row]
+            cell.timeLabel.text = booking.timeDate
+            if booking.type == .meeting {
+                cell.typeImageView.image = UIImage(named: "meeting_icon")
+                cell.image1View.cornerRadius = 19
+                cell.image2View.cornerRadius = 19
+                cell.image3View.cornerRadius = 19
+            } else {
+                cell.typeImageView.image = UIImage(named: "dinner_icon")
+                cell.image1View.cornerRadius = 8
+                cell.image2View.cornerRadius = 8
+                cell.image3View.cornerRadius = 8
+            }
+            
+            let typeString: String = booking.type.rawValue
+            cell.nameLabel.text = "\(typeString.uppercased()) at \(booking.name)"
+            cell.image1View.image = UIImage(named: booking.imagesName[0])
+            cell.image2View.image = UIImage(named: booking.imagesName[1])
+            cell.image3View.image = UIImage(named: booking.imagesName[2])
+        }
         return cell
     }
 }
