@@ -371,17 +371,17 @@ PRIVATE</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9r-QN-Ho4" customClass="RoundedCornerView" customModule="Navigo" customModuleProvider="target">
-                                <rect key="frame" x="32" y="384" width="350" height="128"/>
+                                <rect key="frame" x="32" y="384" width="350" height="200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2l-g7-WSd" customClass="GMSMapView">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="M2l-g7-WSd" secondAttribute="bottom" id="4Pj-0V-6wz"/>
-                                    <constraint firstAttribute="height" constant="128" id="9Lo-CE-YZb"/>
+                                    <constraint firstAttribute="height" constant="200" id="9Lo-CE-YZb"/>
                                     <constraint firstAttribute="trailing" secondItem="M2l-g7-WSd" secondAttribute="trailing" id="ART-Eh-g5o"/>
                                     <constraint firstItem="M2l-g7-WSd" firstAttribute="top" secondItem="c9r-QN-Ho4" secondAttribute="top" id="bqK-Z4-3pe"/>
                                     <constraint firstItem="M2l-g7-WSd" firstAttribute="leading" secondItem="c9r-QN-Ho4" secondAttribute="leading" id="qTz-xk-JZl"/>

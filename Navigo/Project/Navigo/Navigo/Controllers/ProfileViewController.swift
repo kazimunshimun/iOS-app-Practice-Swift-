@@ -25,7 +25,6 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
     }
     
     override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
         contentView.topLeft = true
         contentView.topRight = true
         

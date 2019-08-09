@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +19,36 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcom_back" translatesAutoresizingMaskIntoConstraints="NO" id="lBf-9x-8xV">
                                 <rect key="frame" x="0.0" y="-2" width="414" height="944"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7Z-UI-Zve">
+                                <rect key="frame" x="20" y="569" width="374" height="193"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="Wea-BX-Edy"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Welcome to Navigo
+</string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="1" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="52" name="HelveticaNeue-CondensedBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="The best way to navigate your world and discover new places. Let's get started!">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="1" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiC-ze-pdX" customClass="RoundedButton" customModule="Navigo" customModuleProvider="target">
                                 <rect key="frame" x="30" y="810" width="354" height="52"/>
                                 <color key="backgroundColor" red="0.25907653570175171" green="0.83329540491104126" blue="0.90621370077133179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,9 +73,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="lBf-9x-8xV" secondAttribute="top" constant="90" id="6Oh-Jf-TxB"/>
                             <constraint firstItem="FiC-ze-pdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CfL-i2-203"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FiC-ze-pdX" secondAttribute="bottom" id="Cg8-bh-d55"/>
+                            <constraint firstItem="L7Z-UI-Zve" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FCs-j1-Fqe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FiC-ze-pdX" secondAttribute="trailing" constant="30" id="VQO-OR-2Sr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lBf-9x-8xV" secondAttribute="trailing" id="cgh-tq-ics"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L7Z-UI-Zve" secondAttribute="trailing" constant="20" id="d1X-74-3pD"/>
                             <constraint firstItem="lBf-9x-8xV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f45-DH-x97"/>
+                            <constraint firstItem="FiC-ze-pdX" firstAttribute="top" secondItem="L7Z-UI-Zve" secondAttribute="bottom" constant="48" id="iX2-k7-jYA"/>
                             <constraint firstItem="lBf-9x-8xV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="80" id="j5x-Ku-dxO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -87,7 +118,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdo-cS-LdQ" customClass="RoundedCornerView" customModule="Navigo" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="64" height="64"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_image" translatesAutoresizingMaskIntoConstraints="NO" id="OFx-n8-Iuw">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_photo" translatesAutoresizingMaskIntoConstraints="NO" id="OFx-n8-Iuw">
                                                 <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSm-UO-pg9" customClass="RoundedCornerView" customModule="Navigo" customModuleProvider="target">
@@ -210,7 +241,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="user_image" width="64" height="64"/>
+        <image name="profile_photo" width="375" height="340"/>
         <image name="welcom_back" width="375" height="812"/>
     </resources>
 </document>
