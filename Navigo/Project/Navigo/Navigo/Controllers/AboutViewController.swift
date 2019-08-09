@@ -11,10 +11,25 @@ import InteractiveSideMenu
 
 class AboutViewController: UIViewController, SideMenuItemContent {
 
+    @IBOutlet weak var descriptionView: RoundedCornerView!
+    @IBOutlet weak var infoView: RoundedCornerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        descriptionView.topLeft = true
+        descriptionView.topRight = true
+        descriptionView.bottomLeft = true
+        descriptionView.bottomRight = true
+        
+        infoView.topLeft = true
+        infoView.topRight = true
+        infoView.bottomLeft = true
+        infoView.bottomRight = true
     }
     
     @IBAction func menuButtonClicked(_ sender: Any) {
