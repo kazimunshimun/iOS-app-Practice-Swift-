@@ -9,7 +9,7 @@
 import UIKit
 import InteractiveSideMenu
 
-class MenuListViewController: MenuViewController, UITableViewDelegate, UITableViewDataSource {
+class MenuListViewController: MenuViewController {
 
     @IBOutlet weak var menuTableView: UITableView!
     let menuList = ["Home", "Bookings", "Places", "Contact Us", "About Us"]
@@ -47,17 +47,20 @@ class MenuListViewController: MenuViewController, UITableViewDelegate, UITableVi
         
         self.menuTableView.deselectRow(at: self.menuTableView.indexPathForSelectedRow ?? IndexPath(row: 0, section: 0), animated: false)
     }
-    
+
+}
+
+extension MenuListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let menuContainerViewController = self.menuContainerViewController else {
             return
         }
-    menuContainerViewController.selectContentViewController(menuContainerViewController.contentViewControllers[indexPath.row + 1])
+        menuContainerViewController.selectContentViewController(menuContainerViewController.contentViewControllers[indexPath.row + 1])
         menuContainerViewController.hideSideMenu()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       // let cellWidth : CGFloat = 64.0;
+        // let cellWidth : CGFloat = 64.0;
         let cellWidth : CGFloat = 80.0;
         return cellWidth;
     }
@@ -67,11 +70,6 @@ class MenuListViewController: MenuViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        /*
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuImageTextCell", for: indexPath) as! MenuWithImageAndTextCell
-        cell.menuImageView.image = UIImage(named: menuImageNameList[indexPath.row])
-        cell.menuNameLabel.text = menuList[indexPath.row]
-        */
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuImageCell", for: indexPath) as! MenuWithImageCell
         cell.menuImageView.image = UIImage(named: menuImageNameList[indexPath.row])
         
@@ -81,5 +79,4 @@ class MenuListViewController: MenuViewController, UITableViewDelegate, UITableVi
         
         return cell
     }
-
 }

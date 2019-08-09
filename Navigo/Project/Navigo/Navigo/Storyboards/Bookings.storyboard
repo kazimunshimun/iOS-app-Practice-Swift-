@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTs-W1-xP3">
-                                        <rect key="frame" x="40" y="60" width="24" height="24"/>
+                                        <rect key="frame" x="40" y="60" width="20" height="22"/>
                                         <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="side_white"/>
                                         <connections>
@@ -29,13 +29,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rta-LR-C7k">
-                                        <rect key="frame" x="80" y="57.5" width="89" height="29"/>
+                                        <rect key="frame" x="76" y="56.5" width="89" height="29"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.27058823529999998" green="0.30980392159999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.16470588235294117" green="0.1803921568627451" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="rta-LR-C7k" firstAttribute="leading" secondItem="yTs-W1-xP3" secondAttribute="trailing" constant="16" id="4FR-lF-Qhp"/>
                                     <constraint firstItem="rta-LR-C7k" firstAttribute="centerY" secondItem="yTs-W1-xP3" secondAttribute="centerY" id="Mvy-ID-tZK"/>
@@ -54,7 +54,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xm8-xt-MRo" customClass="RoundedCornerView" customModule="Navigo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="374" width="414" height="522"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dP8-9a-0hR">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dP8-9a-0hR">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="522"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
@@ -62,8 +62,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="dP8-9a-0hR" secondAttribute="bottom" id="9pA-Yh-hel"/>
-                                    <constraint firstItem="dP8-9a-0hR" firstAttribute="top" secondItem="Xm8-xt-MRo" secondAttribute="top" id="Ise-hk-QVZ"/>
-                                    <constraint firstItem="dP8-9a-0hR" firstAttribute="leading" secondItem="Xm8-xt-MRo" secondAttribute="leading" id="g6W-ED-zYf"/>
+                                    <constraint firstItem="dP8-9a-0hR" firstAttribute="top" secondItem="Xm8-xt-MRo" secondAttribute="top" constant="16" id="Ise-hk-QVZ"/>
+                                    <constraint firstItem="dP8-9a-0hR" firstAttribute="leading" secondItem="Xm8-xt-MRo" secondAttribute="leading" constant="16" id="g6W-ED-zYf"/>
                                     <constraint firstAttribute="trailing" secondItem="dP8-9a-0hR" secondAttribute="trailing" id="ucR-Jz-utg"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -90,6 +90,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pSh-aV-EvZ"/>
                     </view>
+                    <connections>
+                        <outlet property="bookingTableView" destination="dP8-9a-0hR" id="Du0-3n-KMI"/>
+                        <outlet property="mapView" destination="H9t-Kj-efH" id="nsC-sG-eZR"/>
+                        <outlet property="roundedParentView" destination="Xm8-xt-MRo" id="ZRk-hk-kee"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSD-CM-N70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
