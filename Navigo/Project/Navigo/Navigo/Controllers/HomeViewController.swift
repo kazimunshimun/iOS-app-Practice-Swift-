@@ -14,7 +14,7 @@ import CoreLocation
 import GoogleMaps
 import Alamofire
 
-class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, VisitPlaceDelegate, VisitNearByPlaceDelegate, OnTripDelegate {
+class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDelegate, VisitPlaceDelegate, VisitNearByPlaceDelegate, OnTripDelegate {
     
     enum ShowingPanel {
         case nearby
@@ -523,37 +523,6 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         }
         
     }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "places", for: indexPath) as! PlacesCell
-        let place = places[indexPath.row]
-        cell.imageView.image = UIImage(named: place.imageName)
-        cell.nameLabel.text = place.name
-        cell.infoLabel.text = "\(place.distance)mi, \(place.rating) stars"
-        
-        if places[indexPath.row].isShowing {
-            cell.infoView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#3ACCE1")
-        } else {
-            cell.infoView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#353A50")
-        }
-        return cell
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return places.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("collection view item selected")
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Nearby", bundle: nil)
-        let detailViewController = storyBoard.instantiateViewController(withIdentifier: "placeDetailView") as! PlaceDetailViewController
-        let place = places[indexPath.row]
-        detailViewController.place = place
-        detailViewController.placeDelegate = self
-        self.present(detailViewController, animated: true, completion: nil)
-        //self.show(detailViewController, sender: nil)
-    }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let layout = self.searchCollectionView.collectionViewLayout as! UPCarouselFlowLayout
@@ -760,5 +729,38 @@ extension HomeViewController {
             self.nowShowingPanel = .nearby
             self.setupPanelView()
         }
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "places", for: indexPath) as! PlacesCell
+        let place = places[indexPath.row]
+        cell.imageView.image = UIImage(named: place.imageName)
+        cell.nameLabel.text = place.name
+        cell.infoLabel.text = "\(place.distance)mi, \(place.rating) stars"
+        
+        if places[indexPath.row].isShowing {
+            cell.infoView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#3ACCE1")
+        } else {
+            cell.infoView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "#353A50")
+        }
+        return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return places.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("collection view item selected")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Nearby", bundle: nil)
+        let detailViewController = storyBoard.instantiateViewController(withIdentifier: "placeDetailView") as! PlaceDetailViewController
+        let place = places[indexPath.row]
+        detailViewController.place = place
+        detailViewController.placeDelegate = self
+        self.present(detailViewController, animated: true, completion: nil)
+        //self.show(detailViewController, sender: nil)
     }
 }

@@ -13,6 +13,8 @@ class AboutViewController: UIViewController, SideMenuItemContent {
 
     @IBOutlet weak var descriptionView: RoundedCornerView!
     @IBOutlet weak var infoView: RoundedCornerView!
+    @IBOutlet weak var creatorCollectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,19 +32,26 @@ class AboutViewController: UIViewController, SideMenuItemContent {
         infoView.topRight = true
         infoView.bottomLeft = true
         infoView.bottomRight = true
+        
+        let indexPath = IndexPath(item: 1, section: 0)
+        self.creatorCollectionView.scrollToItem(at: indexPath, at: [.centeredVertically, .centeredHorizontally], animated: true)
     }
     
     @IBAction func menuButtonClicked(_ sender: Any) {
         showSideMenu()
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+extension AboutViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "creatorCell", for: indexPath) as! CreatorCell
+        
+        return cell
     }
-    */
-
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
 }

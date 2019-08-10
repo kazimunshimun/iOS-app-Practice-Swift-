@@ -25,6 +25,7 @@
 		842B8FA922D8CDAB00CD4F7F /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B8FA822D8CDAB00CD4F7F /* About.storyboard */; };
 		842B8FAB22D8E4B600CD4F7F /* Nearby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8FAA22D8E4B600CD4F7F /* Nearby.swift */; };
 		842B8FAD22D8E75800CD4F7F /* Nearby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B8FAC22D8E75800CD4F7F /* Nearby.storyboard */; };
+		8436A8C022FE93CB00A7D77B /* CreatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436A8BF22FE93CB00A7D77B /* CreatorCell.swift */; };
 		8436DFE922E197F900BEBDD2 /* RideChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436DFE822E197F900BEBDD2 /* RideChooser.swift */; };
 		8436DFEE22E19D7600BEBDD2 /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436DFED22E19D7600BEBDD2 /* PlaceData.swift */; };
 		8438CD9822D9DC710086F3D7 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438CD9722D9DC710086F3D7 /* CategoryCell.swift */; };
@@ -82,6 +83,7 @@
 		842B8FA822D8CDAB00CD4F7F /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		842B8FAA22D8E4B600CD4F7F /* Nearby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nearby.swift; sourceTree = "<group>"; };
 		842B8FAC22D8E75800CD4F7F /* Nearby.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Nearby.storyboard; sourceTree = "<group>"; };
+		8436A8BF22FE93CB00A7D77B /* CreatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorCell.swift; sourceTree = "<group>"; };
 		8436DFE822E197F900BEBDD2 /* RideChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideChooser.swift; sourceTree = "<group>"; };
 		8436DFED22E19D7600BEBDD2 /* PlaceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
 		8438CD9722D9DC710086F3D7 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				8438CD9922D9DF090086F3D7 /* PlacesCell.swift */,
 				843D06BA22F5992800FF039F /* MusicCell.swift */,
 				84BDE57B22F5AABD0080AB1B /* NewsCell.swift */,
+				8436A8BF22FE93CB00A7D77B /* CreatorCell.swift */,
 			);
 			path = CollectionVIewCell;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				842B8FA122D8CD4F00CD4F7F /* PrivacyViewController.swift in Sources */,
 				84BFB3D422D4E1B20076A9B4 /* AppDelegate.swift in Sources */,
 				8490186422E6152C00E7048F /* TripsCell.swift in Sources */,
+				8436A8C022FE93CB00A7D77B /* CreatorCell.swift in Sources */,
 				842B8F9922D8CD0600CD4F7F /* PlacesViewController.swift in Sources */,
 				841C60CE22F5E15D005D19E6 /* NewsEntity.swift in Sources */,
 				841C60CC22F5E153005D19E6 /* MusicEntity.swift in Sources */,
