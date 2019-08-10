@@ -107,6 +107,10 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     @IBOutlet weak var driverArrivalTimeLabel: UILabel!
     
     
+    @IBOutlet weak var sourceToDestinationView: UIView!
+    @IBOutlet weak var destinationLabel: UILabel!
+    
+    
     lazy var panelManager = Panels(target: self)
     var panelConfiguration = PanelConfiguration(size: .fullScreen)
     var panel = UIStoryboard.instantiatePanel(identifier: "Nearby") as! Nearby
@@ -454,11 +458,17 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     }
     
     func setupPanelView() {
+        mapView.clear()
         panelConfiguration.enclosedNavigationBar = false
         panelManager.delegate = self
         panel.placeDelegate = self
         panelManager.show(panel: panel, config: panelConfiguration)
         
+        searchTextField.isHidden = false
+        searchTextCrossButton.isHidden = false
+        //show source to destination View
+        sourceToDestinationView.isHidden = true
+        destinationLabel.text = ""
 //        nowShowingPanel = .onTrip
 //        self.panelForOnTrip.tripTimeRemainingCounter = 121
 //        self.panelForOnTrip.onTripDelegate = self
@@ -536,6 +546,11 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         //hide collection view of resturent
         searchResultView.isHidden = true
         //hide/disable search bar textfield
+        searchTextField.isHidden = true
+        searchTextCrossButton.isHidden = true
+        //show source to destination View
+        sourceToDestinationView.isHidden = false
+        destinationLabel.text = place.name
         //show only the place selected in map
         selectedPlace = place
         showPlaceInMap(place: place)
@@ -553,6 +568,11 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         updateSearchView()
         print("go there button clicked")
         //hide/disable search bar textfield
+        searchTextField.isHidden = true
+        searchTextCrossButton.isHidden = true
+        //show source to destination View
+        sourceToDestinationView.isHidden = false
+        destinationLabel.text = place.name
         //show the place selected on map
         showPlaceInMap(place: place)
         //show profile avatar

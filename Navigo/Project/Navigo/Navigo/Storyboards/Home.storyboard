@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -49,6 +48,39 @@
                                             <action selector="searchDeleteButtonClicked:" destination="77B-ZO-q42" eventType="touchUpInside" id="oRY-K7-4kU"/>
                                         </connections>
                                     </button>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-sM-nbX">
+                                        <rect key="frame" x="68" y="8" width="259" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyC-vk-vk0">
+                                                <rect key="frame" x="8" y="8.6666666666666643" width="86.666666666666671" height="19"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" red="0.47058823529411764" green="0.51764705882352935" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="VgW-y4-SFi">
+                                                <rect key="frame" x="103" y="11" width="8" height="14"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOa-Zb-aKu">
+                                                <rect key="frame" x="119" y="8.6666666666666643" width="132" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="132" id="XtN-Y5-GIS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" red="0.47058823529999999" green="0.51764705879999995" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="MOa-Zb-aKu" firstAttribute="centerY" secondItem="VgW-y4-SFi" secondAttribute="centerY" id="7AN-Pj-Cqr"/>
+                                            <constraint firstItem="VgW-y4-SFi" firstAttribute="leading" secondItem="AyC-vk-vk0" secondAttribute="trailing" constant="8.3333333333333286" id="A03-ee-ath"/>
+                                            <constraint firstAttribute="height" constant="36" id="RS6-8U-L2i"/>
+                                            <constraint firstItem="VgW-y4-SFi" firstAttribute="centerY" secondItem="AyC-vk-vk0" secondAttribute="centerY" id="Szr-3P-7jK"/>
+                                            <constraint firstItem="AyC-vk-vk0" firstAttribute="leading" secondItem="HRm-sM-nbX" secondAttribute="leading" constant="8" id="ppT-u7-P2z"/>
+                                            <constraint firstItem="AyC-vk-vk0" firstAttribute="centerY" secondItem="HRm-sM-nbX" secondAttribute="centerY" id="uPN-kD-U5b"/>
+                                            <constraint firstItem="MOa-Zb-aKu" firstAttribute="leading" secondItem="VgW-y4-SFi" secondAttribute="trailing" constant="8" id="zOJ-3r-fwb"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -57,10 +89,13 @@
                                     <constraint firstItem="3U0-9e-qPz" firstAttribute="centerY" secondItem="NYS-7e-JHK" secondAttribute="centerY" id="Gob-t3-wJd"/>
                                     <constraint firstItem="JXQ-e0-5ZA" firstAttribute="centerY" secondItem="NYS-7e-JHK" secondAttribute="centerY" id="Ia2-n5-hVA"/>
                                     <constraint firstItem="yny-EC-lV0" firstAttribute="leading" secondItem="JXQ-e0-5ZA" secondAttribute="trailing" constant="16" id="Iup-vk-IM4"/>
+                                    <constraint firstAttribute="trailing" secondItem="HRm-sM-nbX" secondAttribute="trailing" constant="8" id="JUg-kv-m9j"/>
                                     <constraint firstItem="Ml4-Jw-7nj" firstAttribute="leading" secondItem="3U0-9e-qPz" secondAttribute="trailing" constant="8" id="MMB-Tn-2vw"/>
                                     <constraint firstItem="Ml4-Jw-7nj" firstAttribute="centerY" secondItem="NYS-7e-JHK" secondAttribute="centerY" id="Ojs-0E-x2u"/>
                                     <constraint firstAttribute="height" constant="52" id="TSC-XB-zvK"/>
                                     <constraint firstItem="JXQ-e0-5ZA" firstAttribute="leading" secondItem="NYS-7e-JHK" secondAttribute="leading" constant="19" id="Tyg-i2-bfv"/>
+                                    <constraint firstItem="HRm-sM-nbX" firstAttribute="centerY" secondItem="NYS-7e-JHK" secondAttribute="centerY" id="Z8H-kn-nvF"/>
+                                    <constraint firstItem="HRm-sM-nbX" firstAttribute="leading" secondItem="yny-EC-lV0" secondAttribute="trailing" constant="8" id="dkp-NY-E4S"/>
                                     <constraint firstItem="yny-EC-lV0" firstAttribute="centerY" secondItem="JXQ-e0-5ZA" secondAttribute="centerY" id="sbC-WZ-GQf"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -896,6 +931,7 @@
                         <outlet property="autoMView" destination="LxJ-53-OG1" id="NYr-wX-Sdd"/>
                         <outlet property="callButton" destination="DCy-ol-9hb" id="ZFQ-ng-yeL"/>
                         <outlet property="carView" destination="0aw-hu-d91" id="gXZ-UL-Hmw"/>
+                        <outlet property="destinationLabel" destination="MOa-Zb-aKu" id="yNK-MJ-T2t"/>
                         <outlet property="driverArrivalTimeLabel" destination="S4n-mq-KyX" id="d8Z-d9-Avw"/>
                         <outlet property="driverMultiColorView" destination="sCF-vj-F4s" id="xXh-nE-qwy"/>
                         <outlet property="driverViewHeightConstraint" destination="hiC-J0-Y3K" id="yqj-4R-Say"/>
@@ -913,13 +949,14 @@
                         <outlet property="searchResultView" destination="INW-pC-PWt" id="cgT-XB-TJM"/>
                         <outlet property="searchTextCrossButton" destination="Ml4-Jw-7nj" id="zQY-IC-sFf"/>
                         <outlet property="searchTextField" destination="3U0-9e-qPz" id="Wnt-qB-Uap"/>
+                        <outlet property="sourceToDestinationView" destination="HRm-sM-nbX" id="Eog-Vt-IzX"/>
                         <outlet property="taxiView" destination="JLi-3L-DHI" id="xnV-0J-CmD"/>
                         <outlet property="topView" destination="NYS-7e-JHK" id="nXf-RO-twe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Czb-Ss-MrQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191.30434782608697" y="71.651785714285708"/>
+            <point key="canvasLocation" x="-192.80000000000001" y="70.935960591133011"/>
         </scene>
         <!--On Trip View Controller-->
         <scene sceneID="h5j-bV-x2J">
@@ -1365,6 +1402,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow" width="8" height="14"/>
         <image name="car_icon" width="48" height="48"/>
         <image name="cross_icon" width="24" height="24"/>
         <image name="driver_icon" width="48" height="48"/>
