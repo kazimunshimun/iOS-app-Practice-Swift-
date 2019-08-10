@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class RoundedViewWithShadow: UIView {
 
     var shadowAdded: Bool = false

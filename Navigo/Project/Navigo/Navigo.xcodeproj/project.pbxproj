@@ -26,6 +26,8 @@
 		842B8FAB22D8E4B600CD4F7F /* Nearby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8FAA22D8E4B600CD4F7F /* Nearby.swift */; };
 		842B8FAD22D8E75800CD4F7F /* Nearby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B8FAC22D8E75800CD4F7F /* Nearby.storyboard */; };
 		8436A8C022FE93CB00A7D77B /* CreatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436A8BF22FE93CB00A7D77B /* CreatorCell.swift */; };
+		8436A8C222FE9C6500A7D77B /* CreatorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436A8C122FE9C6500A7D77B /* CreatorData.swift */; };
+		8436A8C422FE9C7200A7D77B /* CreatorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436A8C322FE9C7200A7D77B /* CreatorEntity.swift */; };
 		8436DFE922E197F900BEBDD2 /* RideChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436DFE822E197F900BEBDD2 /* RideChooser.swift */; };
 		8436DFEE22E19D7600BEBDD2 /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436DFED22E19D7600BEBDD2 /* PlaceData.swift */; };
 		8438CD9822D9DC710086F3D7 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438CD9722D9DC710086F3D7 /* CategoryCell.swift */; };
@@ -84,6 +86,8 @@
 		842B8FAA22D8E4B600CD4F7F /* Nearby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nearby.swift; sourceTree = "<group>"; };
 		842B8FAC22D8E75800CD4F7F /* Nearby.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Nearby.storyboard; sourceTree = "<group>"; };
 		8436A8BF22FE93CB00A7D77B /* CreatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorCell.swift; sourceTree = "<group>"; };
+		8436A8C122FE9C6500A7D77B /* CreatorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorData.swift; sourceTree = "<group>"; };
+		8436A8C322FE9C7200A7D77B /* CreatorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorEntity.swift; sourceTree = "<group>"; };
 		8436DFE822E197F900BEBDD2 /* RideChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideChooser.swift; sourceTree = "<group>"; };
 		8436DFED22E19D7600BEBDD2 /* PlaceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
 		8438CD9722D9DC710086F3D7 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			children = (
 				8436DFED22E19D7600BEBDD2 /* PlaceData.swift */,
 				846AA8F422FDB7FD00ADEA1A /* BookingData.swift */,
+				8436A8C122FE9C6500A7D77B /* CreatorData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				841C60CB22F5E153005D19E6 /* MusicEntity.swift */,
 				841C60CD22F5E15D005D19E6 /* NewsEntity.swift */,
 				846AA8F222FDB6CB00ADEA1A /* BookingEntity.swift */,
+				8436A8C322FE9C7200A7D77B /* CreatorEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -474,6 +480,7 @@
 				846AA8F322FDB6CB00ADEA1A /* BookingEntity.swift in Sources */,
 				842B8F9222D8C3CF00CD4F7F /* ColorUtils.swift in Sources */,
 				84BDE57E22F5D0FE0080AB1B /* OnTripCategoryNewsCell.swift in Sources */,
+				8436A8C422FE9C7200A7D77B /* CreatorEntity.swift in Sources */,
 				84BFE9BA22F42D6200ADA24C /* RoundedImageView.swift in Sources */,
 				8477797B22F48F3D001F9867 /* OnTripViewController.swift in Sources */,
 				84BFB3D622D4E1B20076A9B4 /* ViewController.swift in Sources */,
@@ -483,6 +490,7 @@
 				8490186422E6152C00E7048F /* TripsCell.swift in Sources */,
 				8436A8C022FE93CB00A7D77B /* CreatorCell.swift in Sources */,
 				842B8F9922D8CD0600CD4F7F /* PlacesViewController.swift in Sources */,
+				8436A8C222FE9C6500A7D77B /* CreatorData.swift in Sources */,
 				841C60CE22F5E15D005D19E6 /* NewsEntity.swift in Sources */,
 				841C60CC22F5E153005D19E6 /* MusicEntity.swift in Sources */,
 				842B8FAB22D8E4B600CD4F7F /* Nearby.swift in Sources */,

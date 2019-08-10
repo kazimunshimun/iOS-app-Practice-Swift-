@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@IBDesignable
 class RoundedImageView: UIImageView {
     @IBInspectable public var cornerRadius:CGFloat {
         get {

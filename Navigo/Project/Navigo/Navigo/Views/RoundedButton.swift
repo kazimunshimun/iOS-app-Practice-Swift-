@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+
+@IBDesignable
 class RoundedButton: UIButton {
     @IBInspectable public var cornerRadius:CGFloat {
         get {

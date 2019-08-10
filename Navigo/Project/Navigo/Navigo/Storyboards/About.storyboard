@@ -43,11 +43,11 @@
                                     <constraint firstItem="h3t-kI-D9J" firstAttribute="leading" secondItem="7Hk-Of-OmP" secondAttribute="leading" constant="19" id="tMh-ui-fR9"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JLr-xV-F27">
-                                <rect key="frame" x="0.0" y="104" width="414" height="260"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JLr-xV-F27">
+                                <rect key="frame" x="0.0" y="104" width="414" height="240"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="260" id="plY-Qp-joR"/>
+                                    <constraint firstAttribute="height" constant="240" id="plY-Qp-joR"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="3uV-bn-LcL" customClass="UPCarouselFlowLayout" customModule="UPCarouselFlowLayout">
                                     <size key="itemSize" width="260" height="220"/>
@@ -68,7 +68,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="creatorCell" id="t05-wE-chP" customClass="CreatorCell" customModule="Navigo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="20" width="260" height="220"/>
+                                        <rect key="frame" x="0.0" y="10" width="260" height="220"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="260" height="220"/>
@@ -96,7 +96,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.15454593120805368" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="xyw-kX-ilm" firstAttribute="top" secondItem="UI3-yb-lCQ" secondAttribute="top" constant="8" id="0Wo-Fs-vVa"/>
                                                                 <constraint firstItem="EjZ-ve-yk6" firstAttribute="top" secondItem="xyw-kX-ilm" secondAttribute="bottom" constant="7" id="2Qd-iU-iPo"/>
@@ -148,13 +148,13 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of the Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSp-Zg-vFH">
-                                <rect key="frame" x="20" y="380" width="176" height="19"/>
+                                <rect key="frame" x="20" y="360" width="176" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ft7-rP-jpq" customClass="RoundedCornerView" customModule="Navigo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="415" width="378" height="130"/>
+                                <rect key="frame" x="20" y="395" width="378" height="130"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -167,14 +167,14 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjg-dG-McT">
-                                <rect key="frame" x="36" y="431" width="346" height="98"/>
+                                <rect key="frame" x="36" y="411" width="346" height="98"/>
                                 <string key="text">Navigo is a learning experience company that publishes ideas and teachings by the best authors in personal growth, wellbeing, spirituality, productivity, mindfulness and more – and combines them with cutting-edge sophisticated learning technology within engaged and supportive communities.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" red="0.58431372550000005" green="0.61568627450000002" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zlt-xd-3GR" customClass="RoundedCornerView" customModule="Navigo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="561" width="378" height="180"/>
+                                <rect key="frame" x="20" y="541" width="378" height="180"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oza-d9-uJs">
                                         <rect key="frame" x="16" y="8" width="94" height="164"/>
