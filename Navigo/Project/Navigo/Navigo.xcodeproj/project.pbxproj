@@ -40,6 +40,7 @@
 		8443C35C22FD808A00C192BA /* BookingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8443C35A22FD808A00C192BA /* BookingCell.xib */; };
 		844DB2FD230041CC00A3B616 /* TripEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DB2FC230041CC00A3B616 /* TripEntity.swift */; };
 		844DB2FF2300472100A3B616 /* TripData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DB2FE2300472100A3B616 /* TripData.swift */; };
+		844DB30123005E5200A3B616 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DB30023005E5200A3B616 /* PostCell.swift */; };
 		846AA8F322FDB6CB00ADEA1A /* BookingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AA8F222FDB6CB00ADEA1A /* BookingEntity.swift */; };
 		846AA8F522FDB7FD00ADEA1A /* BookingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AA8F422FDB7FD00ADEA1A /* BookingData.swift */; };
 		846BB73F22FFF53600E761EC /* RideData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB73E22FFF53600E761EC /* RideData.swift */; };
@@ -104,6 +105,7 @@
 		8443C35A22FD808A00C192BA /* BookingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingCell.xib; sourceTree = "<group>"; };
 		844DB2FC230041CC00A3B616 /* TripEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEntity.swift; sourceTree = "<group>"; };
 		844DB2FE2300472100A3B616 /* TripData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripData.swift; sourceTree = "<group>"; };
+		844DB30023005E5200A3B616 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		846AA8F222FDB6CB00ADEA1A /* BookingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingEntity.swift; sourceTree = "<group>"; };
 		846AA8F422FDB7FD00ADEA1A /* BookingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingData.swift; sourceTree = "<group>"; };
 		846BB73E22FFF53600E761EC /* RideData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideData.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				843D06BA22F5992800FF039F /* MusicCell.swift */,
 				84BDE57B22F5AABD0080AB1B /* NewsCell.swift */,
 				8436A8BF22FE93CB00A7D77B /* CreatorCell.swift */,
+				844DB30023005E5200A3B616 /* PostCell.swift */,
 			);
 			path = CollectionVIewCell;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				846BB73F22FFF53600E761EC /* RideData.swift in Sources */,
 				84BFB3D422D4E1B20076A9B4 /* AppDelegate.swift in Sources */,
 				8490186422E6152C00E7048F /* TripsCell.swift in Sources */,
+				844DB30123005E5200A3B616 /* PostCell.swift in Sources */,
 				8436A8C022FE93CB00A7D77B /* CreatorCell.swift in Sources */,
 				842B8F9922D8CD0600CD4F7F /* PlacesViewController.swift in Sources */,
 				8436A8C222FE9C6500A7D77B /* CreatorData.swift in Sources */,
