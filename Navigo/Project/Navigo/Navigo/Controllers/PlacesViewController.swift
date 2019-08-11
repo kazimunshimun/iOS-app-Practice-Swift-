@@ -11,13 +11,63 @@ import InteractiveSideMenu
 
 class PlacesViewController: UIViewController, SideMenuItemContent {
 
+    enum SelectedTab: Int {
+        case history = 0
+        case upcoming = 1
+    }
+    
+    var nowSelectedTab: SelectedTab = .history
+    
     @IBOutlet weak var tripTableView: UITableView!
+    @IBOutlet weak var historyLabel: UILabel!
+    @IBOutlet weak var upcomingLabel: UILabel!
+    @IBOutlet weak var selectedViewLeading: NSLayoutConstraint!
+    @IBOutlet weak var historyView: UIView!
+    @IBOutlet weak var upcomingView: UIView!
+    @IBOutlet weak var tabIndicatorView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tripTableView.register(UINib(nibName: "TripsCell", bundle: nil), forCellReuseIdentifier: "tripCell")
         self.tripTableView.delegate = self
         self.tripTableView.dataSource = self
+        
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.historyViewClicked))
+        historyView.addGestureRecognizer(gesture)
+        let gesture2 = UITapGestureRecognizer(target: self, action:  #selector(self.upcomingViewClicked))
+        upcomingView.addGestureRecognizer(gesture2)
+
+    }
+    
+    @objc func historyViewClicked() {
+        if nowSelectedTab == .history {
+            return
+        }
+        nowSelectedTab = .history
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.selectedViewLeading.constant = 0
+                self.historyLabel.textColor = .black
+                self.upcomingLabel.textColor = ColorUtils.colorRGB(166, 173, 187)
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    
+    @objc func upcomingViewClicked() {
+        if nowSelectedTab == .upcoming {
+            return
+        }
+        nowSelectedTab = .upcoming
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.selectedViewLeading.constant = self.tabIndicatorView.frame.width
+                self.historyLabel.textColor = ColorUtils.colorRGB(166, 173, 187)
+                self.upcomingLabel.textColor = .black
+                self.view.layoutIfNeeded()
+            })
+        }
     }
     
     @IBAction func menuButtonClicked(_ sender: Any) {

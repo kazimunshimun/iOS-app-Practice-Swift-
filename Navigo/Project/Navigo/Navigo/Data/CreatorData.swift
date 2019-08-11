@@ -15,8 +15,8 @@ final internal class CreatorData {
                  "UI/UX Engineer", "Software Engineer", "QA Engineer"]
     let names = ["Kat Hope", "Mark Gomez", "Ema Poter",
                  "Adam Thomas", "Oliva Johnson"]
-    let imageNames = ["profile_photo", "user_image", "driver_icon",
-                      "user_image", "Avatar"]
+    let imageNames = ["profile_photo", "blake", "driver_icon",
+                      "grant", "Avatar"]
     
     func getCreators(completion: ([CreatorEntity]) -> Void) {
         var creatorList: [CreatorEntity] = []
