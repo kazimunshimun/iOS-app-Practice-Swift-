@@ -40,6 +40,8 @@
 		8443C35C22FD808A00C192BA /* BookingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8443C35A22FD808A00C192BA /* BookingCell.xib */; };
 		846AA8F322FDB6CB00ADEA1A /* BookingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AA8F222FDB6CB00ADEA1A /* BookingEntity.swift */; };
 		846AA8F522FDB7FD00ADEA1A /* BookingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AA8F422FDB7FD00ADEA1A /* BookingData.swift */; };
+		846BB73F22FFF53600E761EC /* RideData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB73E22FFF53600E761EC /* RideData.swift */; };
+		846BB74122FFF55000E761EC /* RideEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB74022FFF55000E761EC /* RideEntity.swift */; };
 		846DBA2622EC2BB0006FA695 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 846DBA2522EC2BB0006FA695 /* style.json */; };
 		8477797B22F48F3D001F9867 /* OnTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477797A22F48F3D001F9867 /* OnTripViewController.swift */; };
 		8490186422E6152C00E7048F /* TripsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490186222E6152C00E7048F /* TripsCell.swift */; };
@@ -100,6 +102,8 @@
 		8443C35A22FD808A00C192BA /* BookingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingCell.xib; sourceTree = "<group>"; };
 		846AA8F222FDB6CB00ADEA1A /* BookingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingEntity.swift; sourceTree = "<group>"; };
 		846AA8F422FDB7FD00ADEA1A /* BookingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingData.swift; sourceTree = "<group>"; };
+		846BB73E22FFF53600E761EC /* RideData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideData.swift; sourceTree = "<group>"; };
+		846BB74022FFF55000E761EC /* RideEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideEntity.swift; sourceTree = "<group>"; };
 		846DBA2522EC2BB0006FA695 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		8477797A22F48F3D001F9867 /* OnTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTripViewController.swift; sourceTree = "<group>"; };
 		8490186222E6152C00E7048F /* TripsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsCell.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				8436DFED22E19D7600BEBDD2 /* PlaceData.swift */,
 				846AA8F422FDB7FD00ADEA1A /* BookingData.swift */,
 				8436A8C122FE9C6500A7D77B /* CreatorData.swift */,
+				846BB73E22FFF53600E761EC /* RideData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				841C60CD22F5E15D005D19E6 /* NewsEntity.swift */,
 				846AA8F222FDB6CB00ADEA1A /* BookingEntity.swift */,
 				8436A8C322FE9C7200A7D77B /* CreatorEntity.swift */,
+				846BB74022FFF55000E761EC /* RideEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -477,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846BB74122FFF55000E761EC /* RideEntity.swift in Sources */,
 				846AA8F322FDB6CB00ADEA1A /* BookingEntity.swift in Sources */,
 				842B8F9222D8C3CF00CD4F7F /* ColorUtils.swift in Sources */,
 				84BDE57E22F5D0FE0080AB1B /* OnTripCategoryNewsCell.swift in Sources */,
@@ -486,6 +493,7 @@
 				84BFB3D622D4E1B20076A9B4 /* ViewController.swift in Sources */,
 				84BDE57C22F5AABD0080AB1B /* NewsCell.swift in Sources */,
 				842B8FA122D8CD4F00CD4F7F /* PrivacyViewController.swift in Sources */,
+				846BB73F22FFF53600E761EC /* RideData.swift in Sources */,
 				84BFB3D422D4E1B20076A9B4 /* AppDelegate.swift in Sources */,
 				8490186422E6152C00E7048F /* TripsCell.swift in Sources */,
 				8436A8C022FE93CB00A7D77B /* CreatorCell.swift in Sources */,

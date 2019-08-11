@@ -14,6 +14,13 @@ import CoreLocation
 import GoogleMaps
 import Alamofire
 
+enum RideCompany : Int {
+    case taxi = 0
+    case ridy = 1
+    case autoM = 2
+    case none = 3
+}
+
 class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDelegate, VisitPlaceDelegate, VisitNearByPlaceDelegate, OnTripDelegate {
     
     enum ShowingPanel {
@@ -26,13 +33,6 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         case car = 0
         case ride = 1
         case publicTrasport = 2
-        case none = 3
-    }
-    
-    enum RideCompany : Int {
-        case taxi = 0
-        case ridy = 1
-        case autoM = 2
         case none = 3
     }
     
@@ -268,21 +268,23 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         mapView.clear()
         showPlaceInMap(place: selectedPlace!)
         showProfileAvatarInMap()
-        showTaxisAround()
+        showSelectedRide(company: .taxi)
         focusUserOnMap()
         //updateRideOptionView()
     }
     
-    func showTaxisAround() {
-        
-        let car1 = addMarkerToMap(title: "taxi", snippet: "", location: CLLocationCoordinate2D(latitude: 51.484253, longitude: -0.219813), markerImageName: "taxi_icon")
-        let car2 = addMarkerToMap(title: "taxi", snippet: "", location: CLLocationCoordinate2D(latitude: 51.484487, longitude: -0.222559), markerImageName: "taxi_icon")
-        let car3 = addMarkerToMap(title: "taxi", snippet: "", location: CLLocationCoordinate2D(latitude: 51.488449, longitude: -0.222736), markerImageName: "taxi_icon")
-        car2.rotation = CLLocationDegrees(exactly: -25)!
-        car1.map = mapView
-        car2.map = mapView
-        car3.map = mapView
-        
+    func showSelectedRide(company: RideCompany) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            RideData.shared.getRides(company: company) { rides in
+                DispatchQueue.main.async {
+                    for ride in rides {
+                        let car = self.addMarkerToMap(title: ride.title, snippet: "", location: ride.location, markerImageName: ride.markerImagesName)
+                        car.rotation = ride.rotation
+                        car.map = self.mapView
+                    }
+                }
+            }
+        }
     }
     
     @objc func ridySelected() {
@@ -297,21 +299,9 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         mapView.clear()
         showPlaceInMap(place: selectedPlace!)
         showProfileAvatarInMap()
-        showRidysAround()
+        showSelectedRide(company: .ridy)
         focusUserOnMap()
         //updateRideOptionView()
-    }
-    
-    func showRidysAround() {
-        let car1 = addMarkerToMap(title: "ridy", snippet: "", location: CLLocationCoordinate2D(latitude: 51.486378, longitude: -0.224088), markerImageName: "ridy_icon")
-        let car2 = addMarkerToMap(title: "ridy", snippet: "", location: CLLocationCoordinate2D(latitude: 51.488195, longitude: -0.220730), markerImageName: "ridy_icon")
-        let car3 = addMarkerToMap(title: "ridy", snippet: "", location: CLLocationCoordinate2D(latitude: 51.486866, longitude: -0.218005), markerImageName: "ridy_icon")
-        car1.rotation = CLLocationDegrees(exactly: -25)!
-        car2.rotation = CLLocationDegrees(exactly: 65)!
-        car3.rotation = CLLocationDegrees(exactly: -20)!
-        car1.map = mapView
-        car2.map = mapView
-        car3.map = mapView
     }
     
     @objc func autoMSelected() {
@@ -326,23 +316,9 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         mapView.clear()
         showPlaceInMap(place: selectedPlace!)
         showProfileAvatarInMap()
-        showAutoMsAround()
+        showSelectedRide(company: .autoM)
         focusUserOnMap()
         //updateRideOptionView()
-    }
-    
-    func showAutoMsAround() {
-        let car1 = addMarkerToMap(title: "autoM", snippet: "", location: CLLocationCoordinate2D(latitude: 51.488823, longitude: -0.218788), markerImageName: "autoM_icon")
-        let car2 = addMarkerToMap(title: "autoM", snippet: "", location: CLLocationCoordinate2D(latitude: 51.487006, longitude: -0.218160), markerImageName: "autoM_icon")
-        let car3 = addMarkerToMap(title: "autoM", snippet: "", location: CLLocationCoordinate2D(latitude: 51.486899, longitude: -0.221175), markerImageName: "autoM_icon")
-        
-        car1.rotation = CLLocationDegrees(exactly: -25)!
-        car2.rotation = CLLocationDegrees(exactly: 65)!
-        car3.rotation = CLLocationDegrees(exactly: -30)!
-        
-        car1.map = mapView
-        car2.map = mapView
-        car3.map = mapView
     }
     
     func updateRideComapnyView() {
@@ -371,6 +347,19 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
                 })
             }
             //show driver marker on map
+            mapView.clear()
+            showPlaceInMap(place: selectedPlace!)
+            showProfileAvatarInMap()
+            focusUserOnMap()
+            DispatchQueue.global(qos: .userInitiated).async {
+                RideData.shared.getSelectedRide(company: self.nowRideCompay) { ride in
+                    DispatchQueue.main.async {
+                        let car = self.addMarkerToMap(title: ride.title, snippet: "", location: ride.location, markerImageName: ride.markerImagesName)
+                        car.rotation = ride.rotation
+                        car.map = self.mapView
+                    }
+                }
+            }
             // show driver to user route on map
             //showDirectionBetweenTwoLocation(source: userLocation, destination: CLLocationCoordinate2D(latitude: 51.486378, longitude: -0.224088))
           //  directionBetweenLocation(sourceLocation: userLocation, destinationLocation: CLLocationCoordinate2D(latitude: 51.486378, longitude: -0.224088))
@@ -379,6 +368,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
         }
     }
     
+    //MARK: Driver
     var driverArrivalTimeRemainingCounter = 4
     var timerForDriver = Timer()
     
@@ -478,6 +468,8 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     @IBAction func menuButtonClicked(_ sender: Any) {
         showSideMenu()
     }
+    
+    //MARK: Search
     
     @IBAction func searchDeleteButtonClicked(_ sender: Any) {
         searchTextCrossButton.isHidden = true
