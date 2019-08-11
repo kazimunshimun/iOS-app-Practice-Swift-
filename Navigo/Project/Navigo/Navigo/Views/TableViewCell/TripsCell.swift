@@ -19,11 +19,12 @@ class TripsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.layoutIfNeeded()
+        
         locationBackgroundView.topLeft = true
         locationBackgroundView.topRight = true
         locationBackgroundView.bottomLeft = true
         locationBackgroundView.bottomRight = true
+        self.layoutIfNeeded()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
