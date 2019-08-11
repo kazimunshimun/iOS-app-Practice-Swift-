@@ -26,6 +26,7 @@ class PlacesViewController: UIViewController, SideMenuItemContent {
     @IBOutlet weak var upcomingView: UIView!
     @IBOutlet weak var tabIndicatorView: UIView!
     
+    var placeList: [TripEntity] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,7 +38,31 @@ class PlacesViewController: UIViewController, SideMenuItemContent {
         historyView.addGestureRecognizer(gesture)
         let gesture2 = UITapGestureRecognizer(target: self, action:  #selector(self.upcomingViewClicked))
         upcomingView.addGestureRecognizer(gesture2)
+        
+        updateHistoryViews()
 
+    }
+    
+    func updateHistoryViews() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            TripData.shared.getHistoryTrips() { trips in
+                DispatchQueue.main.async {
+                    self.placeList = trips
+                    self.tripTableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    func updateUpcomingViews() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            TripData.shared.getUpcomingTrips() { trips in
+                DispatchQueue.main.async {
+                    self.placeList = trips
+                    self.tripTableView.reloadData()
+                }
+            }
+        }
     }
     
     @objc func historyViewClicked() {
@@ -45,6 +70,7 @@ class PlacesViewController: UIViewController, SideMenuItemContent {
             return
         }
         nowSelectedTab = .history
+        updateHistoryViews()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
             UIView.animate(withDuration: 0.25, animations: {
                 self.selectedViewLeading.constant = 0
@@ -60,6 +86,7 @@ class PlacesViewController: UIViewController, SideMenuItemContent {
             return
         }
         nowSelectedTab = .upcoming
+        updateUpcomingViews()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.1) {
             UIView.animate(withDuration: 0.25, animations: {
                 self.selectedViewLeading.constant = self.tabIndicatorView.frame.width
@@ -83,11 +110,17 @@ extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return placeList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath) as! TripsCell
+        if placeList.count > 0 {
+            let place = placeList[indexPath.row]
+            cell.dateAndTImeLabel.text = place.dateAndTime
+            cell.pickupLabel.text = place.pickupLocationName
+            cell.destinationLabel.text = place.destinationLocationName
+        }
         return cell
     }
 }

@@ -38,6 +38,8 @@
 		843D06BB22F5992800FF039F /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D06BA22F5992800FF039F /* MusicCell.swift */; };
 		8443C35B22FD808A00C192BA /* BookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443C35922FD808A00C192BA /* BookingCell.swift */; };
 		8443C35C22FD808A00C192BA /* BookingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8443C35A22FD808A00C192BA /* BookingCell.xib */; };
+		844DB2FD230041CC00A3B616 /* TripEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DB2FC230041CC00A3B616 /* TripEntity.swift */; };
+		844DB2FF2300472100A3B616 /* TripData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DB2FE2300472100A3B616 /* TripData.swift */; };
 		846AA8F322FDB6CB00ADEA1A /* BookingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AA8F222FDB6CB00ADEA1A /* BookingEntity.swift */; };
 		846AA8F522FDB7FD00ADEA1A /* BookingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AA8F422FDB7FD00ADEA1A /* BookingData.swift */; };
 		846BB73F22FFF53600E761EC /* RideData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BB73E22FFF53600E761EC /* RideData.swift */; };
@@ -100,6 +102,8 @@
 		843D06BA22F5992800FF039F /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		8443C35922FD808A00C192BA /* BookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingCell.swift; sourceTree = "<group>"; };
 		8443C35A22FD808A00C192BA /* BookingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingCell.xib; sourceTree = "<group>"; };
+		844DB2FC230041CC00A3B616 /* TripEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEntity.swift; sourceTree = "<group>"; };
+		844DB2FE2300472100A3B616 /* TripData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripData.swift; sourceTree = "<group>"; };
 		846AA8F222FDB6CB00ADEA1A /* BookingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingEntity.swift; sourceTree = "<group>"; };
 		846AA8F422FDB7FD00ADEA1A /* BookingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingData.swift; sourceTree = "<group>"; };
 		846BB73E22FFF53600E761EC /* RideData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideData.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				846AA8F422FDB7FD00ADEA1A /* BookingData.swift */,
 				8436A8C122FE9C6500A7D77B /* CreatorData.swift */,
 				846BB73E22FFF53600E761EC /* RideData.swift */,
+				844DB2FE2300472100A3B616 /* TripData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				846AA8F222FDB6CB00ADEA1A /* BookingEntity.swift */,
 				8436A8C322FE9C7200A7D77B /* CreatorEntity.swift */,
 				846BB74022FFF55000E761EC /* RideEntity.swift */,
+				844DB2FC230041CC00A3B616 /* TripEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				8477797B22F48F3D001F9867 /* OnTripViewController.swift in Sources */,
 				84BFB3D622D4E1B20076A9B4 /* ViewController.swift in Sources */,
 				84BDE57C22F5AABD0080AB1B /* NewsCell.swift in Sources */,
+				844DB2FD230041CC00A3B616 /* TripEntity.swift in Sources */,
 				842B8FA122D8CD4F00CD4F7F /* PrivacyViewController.swift in Sources */,
 				846BB73F22FFF53600E761EC /* RideData.swift in Sources */,
 				84BFB3D422D4E1B20076A9B4 /* AppDelegate.swift in Sources */,
@@ -516,6 +523,7 @@
 				846AA8F522FDB7FD00ADEA1A /* BookingData.swift in Sources */,
 				8436DFE922E197F900BEBDD2 /* RideChooser.swift in Sources */,
 				84931BB322D8A2E30002165B /* MenuListViewController.swift in Sources */,
+				844DB2FF2300472100A3B616 /* TripData.swift in Sources */,
 				84931BB922D8AA290002165B /* MenuWithImageAndTextCell.swift in Sources */,
 				8438CD9822D9DC710086F3D7 /* CategoryCell.swift in Sources */,
 				8438CD9A22D9DF090086F3D7 /* PlacesCell.swift in Sources */,

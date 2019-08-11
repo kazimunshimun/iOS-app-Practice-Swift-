@@ -11,7 +11,11 @@ import UIKit
 class TripsCell: UITableViewCell {
 
     
+    @IBOutlet weak var dateAndTImeLabel: UILabel!
     @IBOutlet weak var locationBackgroundView: RoundedCornerView!
+    @IBOutlet weak var pickupLabel: UILabel!
+    @IBOutlet weak var destinationLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
