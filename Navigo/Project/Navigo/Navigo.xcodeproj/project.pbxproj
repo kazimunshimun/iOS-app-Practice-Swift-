@@ -11,6 +11,18 @@
 		841C60CC22F5E153005D19E6 /* MusicEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C60CB22F5E153005D19E6 /* MusicEntity.swift */; };
 		841C60CE22F5E15D005D19E6 /* NewsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C60CD22F5E15D005D19E6 /* NewsEntity.swift */; };
 		841C60D022F5F717005D19E6 /* DriverRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C60CF22F5F717005D19E6 /* DriverRatingView.swift */; };
+		841D4F212301CD9800FA7E79 /* FMBlurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D4F182301CD9800FA7E79 /* FMBlurable.swift */; };
+		841D4F222301CD9800FA7E79 /* CBBaseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D4F192301CD9800FA7E79 /* CBBaseHeader.swift */; };
+		841D4F232301CD9800FA7E79 /* CBTitleBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D4F1A2301CD9800FA7E79 /* CBTitleBlock.swift */; };
+		841D4F242301CD9800FA7E79 /* CBBaseGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D4F1B2301CD9800FA7E79 /* CBBaseGridCell.swift */; };
+		841D4F252301CD9800FA7E79 /* Title.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841D4F1C2301CD9800FA7E79 /* Title.xib */; };
+		841D4F262301CD9800FA7E79 /* CBSmoothScrollLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D4F1D2301CD9800FA7E79 /* CBSmoothScrollLayout.swift */; };
+		841D4F272301CD9800FA7E79 /* CBBaseMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D4F1E2301CD9800FA7E79 /* CBBaseMenu.swift */; };
+		841D4F282301CD9800FA7E79 /* CBViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D4F1F2301CD9800FA7E79 /* CBViewAnimator.swift */; };
+		841D4F292301CD9800FA7E79 /* UIColor+Decompose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D4F202301CD9800FA7E79 /* UIColor+Decompose.swift */; };
+		841D4F2C2301CE0600FA7E79 /* Menu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841D4F2A2301CE0600FA7E79 /* Menu.xib */; };
+		841D4F2D2301CE0600FA7E79 /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841D4F2B2301CE0600FA7E79 /* Header.xib */; };
+		841D4F2F2301CFF600FA7E79 /* ProfileSmoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D4F2E2301CFF600FA7E79 /* ProfileSmoothViewController.swift */; };
 		842B8F9222D8C3CF00CD4F7F /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9122D8C3CF00CD4F7F /* ColorUtils.swift */; };
 		842B8F9522D8C40C00CD4F7F /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9422D8C40C00CD4F7F /* RoundedCornerView.swift */; };
 		842B8F9722D8CCFB00CD4F7F /* BookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B8F9622D8CCFB00CD4F7F /* BookingsViewController.swift */; };
@@ -76,6 +88,18 @@
 		841C60CB22F5E153005D19E6 /* MusicEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicEntity.swift; sourceTree = "<group>"; };
 		841C60CD22F5E15D005D19E6 /* NewsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEntity.swift; sourceTree = "<group>"; };
 		841C60CF22F5F717005D19E6 /* DriverRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRatingView.swift; sourceTree = "<group>"; };
+		841D4F182301CD9800FA7E79 /* FMBlurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMBlurable.swift; sourceTree = "<group>"; };
+		841D4F192301CD9800FA7E79 /* CBBaseHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBBaseHeader.swift; sourceTree = "<group>"; };
+		841D4F1A2301CD9800FA7E79 /* CBTitleBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBTitleBlock.swift; sourceTree = "<group>"; };
+		841D4F1B2301CD9800FA7E79 /* CBBaseGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBBaseGridCell.swift; sourceTree = "<group>"; };
+		841D4F1C2301CD9800FA7E79 /* Title.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Title.xib; sourceTree = "<group>"; };
+		841D4F1D2301CD9800FA7E79 /* CBSmoothScrollLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBSmoothScrollLayout.swift; sourceTree = "<group>"; };
+		841D4F1E2301CD9800FA7E79 /* CBBaseMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBBaseMenu.swift; sourceTree = "<group>"; };
+		841D4F1F2301CD9800FA7E79 /* CBViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBViewAnimator.swift; sourceTree = "<group>"; };
+		841D4F202301CD9800FA7E79 /* UIColor+Decompose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Decompose.swift"; sourceTree = "<group>"; };
+		841D4F2A2301CE0600FA7E79 /* Menu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Menu.xib; sourceTree = "<group>"; };
+		841D4F2B2301CE0600FA7E79 /* Header.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
+		841D4F2E2301CFF600FA7E79 /* ProfileSmoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSmoothViewController.swift; sourceTree = "<group>"; };
 		842B8F9122D8C3CF00CD4F7F /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		842B8F9422D8C40C00CD4F7F /* RoundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
 		842B8F9622D8CCFB00CD4F7F /* BookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsViewController.swift; sourceTree = "<group>"; };
@@ -165,9 +189,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		841D4F172301CD9800FA7E79 /* SmoothScroll */ = {
+			isa = PBXGroup;
+			children = (
+				841D4F182301CD9800FA7E79 /* FMBlurable.swift */,
+				841D4F192301CD9800FA7E79 /* CBBaseHeader.swift */,
+				841D4F1A2301CD9800FA7E79 /* CBTitleBlock.swift */,
+				841D4F1B2301CD9800FA7E79 /* CBBaseGridCell.swift */,
+				841D4F1C2301CD9800FA7E79 /* Title.xib */,
+				841D4F1D2301CD9800FA7E79 /* CBSmoothScrollLayout.swift */,
+				841D4F1E2301CD9800FA7E79 /* CBBaseMenu.swift */,
+				841D4F1F2301CD9800FA7E79 /* CBViewAnimator.swift */,
+				841D4F202301CD9800FA7E79 /* UIColor+Decompose.swift */,
+			);
+			path = SmoothScroll;
+			sourceTree = "<group>";
+		};
 		842B8F9322D8C3D400CD4F7F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				841D4F172301CD9800FA7E79 /* SmoothScroll */,
 				842B8F9122D8C3CF00CD4F7F /* ColorUtils.swift */,
 			);
 			path = Utils;
@@ -252,6 +293,7 @@
 				84151DCD22DA2D0F005E7964 /* PlaceDetailViewController.swift */,
 				8436DFE822E197F900BEBDD2 /* RideChooser.swift */,
 				8477797A22F48F3D001F9867 /* OnTripViewController.swift */,
+				841D4F2E2301CFF600FA7E79 /* ProfileSmoothViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,6 +301,8 @@
 		84931BB622D8A5770002165B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				841D4F2B2301CE0600FA7E79 /* Header.xib */,
+				841D4F2A2301CE0600FA7E79 /* Menu.xib */,
 				843A532A22DE177A00DA9C85 /* RoundedViewWithShadow.swift */,
 				842B8F9422D8C40C00CD4F7F /* RoundedCornerView.swift */,
 				84BFE9B922F42D6200ADA24C /* RoundedImageView.swift */,
@@ -387,6 +431,7 @@
 				8443C35C22FD808A00C192BA /* BookingCell.xib in Resources */,
 				842B8FA322D8CD8A00CD4F7F /* Bookings.storyboard in Resources */,
 				846DBA2622EC2BB0006FA695 /* style.json in Resources */,
+				841D4F2D2301CE0600FA7E79 /* Header.xib in Resources */,
 				84BFB3DE22D4E1B40076A9B4 /* LaunchScreen.storyboard in Resources */,
 				842B8FAD22D8E75800CD4F7F /* Nearby.storyboard in Resources */,
 				8490186522E6152C00E7048F /* TripsCell.xib in Resources */,
@@ -395,7 +440,9 @@
 				84931BC122D8B08E0002165B /* Home.storyboard in Resources */,
 				842B8FA922D8CDAB00CD4F7F /* About.storyboard in Resources */,
 				842B8FA722D8CDA200CD4F7F /* Profile.storyboard in Resources */,
+				841D4F252301CD9800FA7E79 /* Title.xib in Resources */,
 				84BFB3DB22D4E1B40076A9B4 /* Assets.xcassets in Resources */,
+				841D4F2C2301CE0600FA7E79 /* Menu.xib in Resources */,
 				84BFB3D922D4E1B20076A9B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,11 +541,15 @@
 			files = (
 				846BB74122FFF55000E761EC /* RideEntity.swift in Sources */,
 				846AA8F322FDB6CB00ADEA1A /* BookingEntity.swift in Sources */,
+				841D4F292301CD9800FA7E79 /* UIColor+Decompose.swift in Sources */,
 				842B8F9222D8C3CF00CD4F7F /* ColorUtils.swift in Sources */,
 				84BDE57E22F5D0FE0080AB1B /* OnTripCategoryNewsCell.swift in Sources */,
 				8436A8C422FE9C7200A7D77B /* CreatorEntity.swift in Sources */,
+				841D4F242301CD9800FA7E79 /* CBBaseGridCell.swift in Sources */,
 				84BFE9BA22F42D6200ADA24C /* RoundedImageView.swift in Sources */,
+				841D4F262301CD9800FA7E79 /* CBSmoothScrollLayout.swift in Sources */,
 				8477797B22F48F3D001F9867 /* OnTripViewController.swift in Sources */,
+				841D4F272301CD9800FA7E79 /* CBBaseMenu.swift in Sources */,
 				84BFB3D622D4E1B20076A9B4 /* ViewController.swift in Sources */,
 				84BDE57C22F5AABD0080AB1B /* NewsCell.swift in Sources */,
 				844DB2FD230041CC00A3B616 /* TripEntity.swift in Sources */,
@@ -507,6 +558,7 @@
 				84BFB3D422D4E1B20076A9B4 /* AppDelegate.swift in Sources */,
 				8490186422E6152C00E7048F /* TripsCell.swift in Sources */,
 				844DB30123005E5200A3B616 /* PostCell.swift in Sources */,
+				841D4F282301CD9800FA7E79 /* CBViewAnimator.swift in Sources */,
 				8436A8C022FE93CB00A7D77B /* CreatorCell.swift in Sources */,
 				842B8F9922D8CD0600CD4F7F /* PlacesViewController.swift in Sources */,
 				8436A8C222FE9C6500A7D77B /* CreatorData.swift in Sources */,
@@ -515,6 +567,7 @@
 				842B8FAB22D8E4B600CD4F7F /* Nearby.swift in Sources */,
 				842B8F9F22D8CD3300CD4F7F /* ProfileViewController.swift in Sources */,
 				84931BC322D8B1640002165B /* HomeViewController.swift in Sources */,
+				841D4F212301CD9800FA7E79 /* FMBlurable.swift in Sources */,
 				842B8F9B22D8CD1300CD4F7F /* ContactViewController.swift in Sources */,
 				84931BB122D89A270002165B /* MenuHostViewController.swift in Sources */,
 				8438CD9D22D9DFB00086F3D7 /* PlacesEntity.swift in Sources */,
@@ -525,10 +578,12 @@
 				843D06B922F5960B00FF039F /* OnTripCategoryCell.swift in Sources */,
 				841C60D022F5F717005D19E6 /* DriverRatingView.swift in Sources */,
 				846AA8F522FDB7FD00ADEA1A /* BookingData.swift in Sources */,
+				841D4F222301CD9800FA7E79 /* CBBaseHeader.swift in Sources */,
 				8436DFE922E197F900BEBDD2 /* RideChooser.swift in Sources */,
 				84931BB322D8A2E30002165B /* MenuListViewController.swift in Sources */,
 				844DB2FF2300472100A3B616 /* TripData.swift in Sources */,
 				84931BB922D8AA290002165B /* MenuWithImageAndTextCell.swift in Sources */,
+				841D4F2F2301CFF600FA7E79 /* ProfileSmoothViewController.swift in Sources */,
 				8438CD9822D9DC710086F3D7 /* CategoryCell.swift in Sources */,
 				8438CD9A22D9DF090086F3D7 /* PlacesCell.swift in Sources */,
 				84151DCE22DA2D0F005E7964 /* PlaceDetailViewController.swift in Sources */,
@@ -537,6 +592,7 @@
 				84931BBE22D8AA480002165B /* MenuWithImageCell.swift in Sources */,
 				843A532B22DE177A00DA9C85 /* RoundedViewWithShadow.swift in Sources */,
 				84BFE9BC22F42E5100ADA24C /* RoundedButton.swift in Sources */,
+				841D4F232301CD9800FA7E79 /* CBTitleBlock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

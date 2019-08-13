@@ -35,6 +35,7 @@ class MenuHostViewController: MenuContainerViewController {
         
         let profileStoryBoard: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
         let profileViewController = profileStoryBoard.instantiateViewController(withIdentifier: "profileView")
+        //let profileViewController = profileStoryBoard.instantiateViewController(withIdentifier: "profileSmoothView")
         contentList.append(profileViewController)
         
         let homeStoryBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
