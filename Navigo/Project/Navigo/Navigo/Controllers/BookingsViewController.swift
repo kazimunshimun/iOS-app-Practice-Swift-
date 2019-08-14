@@ -48,7 +48,7 @@ class BookingsViewController: UIViewController, SideMenuItemContent {
     }
     
     func mapCameraFocusOnFirstBooking(booking: BookingEntity) {
-        mapView.animate(to: GMSCameraPosition(latitude: booking.location.coordinate.latitude, longitude: booking.location.coordinate.longitude, zoom: 16.0))
+        mapView.animate(to: GMSCameraPosition(latitude: booking.location.coordinate.latitude, longitude: booking.location.coordinate.longitude, zoom: 18.0))
     }
     
     func addBookingPlacesInMap() {
