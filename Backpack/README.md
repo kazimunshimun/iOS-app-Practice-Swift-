@@ -17,10 +17,11 @@ UI Creation | Storyboard and Programmatically
 <img src="https://raw.githubusercontent.com/kazimunshimun/iOS-app-Practice-Swift-/master/Backpack/ScreenShots/backpack_detail.png" width="290">
 <img src="https://raw.githubusercontent.com/kazimunshimun/iOS-app-Practice-Swift-/master/Backpack/ScreenShots/backpack_profile.png" width="290">
 </p>
-
+<p><img height="40"></p>
 <p float="left">
 <img src="https://raw.githubusercontent.com/kazimunshimun/iOS-app-Practice-Swift-/master/Backpack/ScreenShots/backpack_home.gif" width="290">
 <img src="https://raw.githubusercontent.com/kazimunshimun/iOS-app-Practice-Swift-/master/Backpack/ScreenShots/backpack_search.gif" width="290">
+<img src="https://raw.githubusercontent.com/kazimunshimun/iOS-app-Practice-Swift-/master/Backpack/ScreenShots/backpack_trips.gif" width="290">
 </p>
 
 #### Developed App Simulator Video:
