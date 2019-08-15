@@ -5,7 +5,7 @@ Technology   |  Used
 ------------ | -------------
 Programming Language | Swift 
 Dependency Manager | Cocoapods 
-Architectural Pattern | View-Interactor-Presenter-Entity-Router (VIPER)
+Architectural Pattern | Model-View-Controller (MVC)
 Backend Service | Firebase 
 UI Creation | Storyboard and Programmatically
 

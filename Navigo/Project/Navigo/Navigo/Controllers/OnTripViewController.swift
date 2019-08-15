@@ -54,7 +54,7 @@ class OnTripViewController: UIViewController, Panelable {
     fileprivate func startDriverArrivalTimer() {
         timerForTrip.invalidate() // just in case this button is tapped multiple times
         // start the timer
-        timerForTrip = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(tripTimerAction), userInfo: nil, repeats: true)
+        timerForTrip = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(tripTimerAction), userInfo: nil, repeats: true)
         RunLoop.main.add(timerForTrip, forMode: RunLoop.Mode.common)
     }
     

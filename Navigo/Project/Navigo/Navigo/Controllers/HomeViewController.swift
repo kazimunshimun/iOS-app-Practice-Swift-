@@ -343,7 +343,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
                     self.driverViewHeightConstraint.constant = 304
                     self.view.layoutIfNeeded()
                     self.rideShareView.isHidden = true
-                    self.driverArrivalTimeRemainingCounter = 4
+                    self.driverArrivalTimeRemainingCounter = 8
                 })
             }
             //show driver marker on map
@@ -369,13 +369,13 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
     }
     
     //MARK: Driver
-    var driverArrivalTimeRemainingCounter = 4
+    var driverArrivalTimeRemainingCounter = 8
     var timerForDriver = Timer()
     
     fileprivate func startDriverArrivalTimer() {
         timerForDriver.invalidate() // just in case this button is tapped multiple times
         // start the timer
-        timerForDriver = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(driverTimerAction), userInfo: nil, repeats: true)
+        timerForDriver = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(driverTimerAction), userInfo: nil, repeats: true)
     }
     
     @objc func driverTimerAction() {
@@ -388,7 +388,7 @@ class HomeViewController: UIViewController, SideMenuItemContent, UITextFieldDele
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 [weak self] in
                 self?.nowShowingPanel = .onTrip
-                self?.panelForOnTrip.tripTimeRemainingCounter = 11
+                self?.panelForOnTrip.tripTimeRemainingCounter = 80
                 self?.panelForOnTrip.onTripDelegate = self
                 self?.panelManager.show(panel: self!.panelForOnTrip, config: self!.panelConfiguration)
                 self?.panelManager.expandPanel()
