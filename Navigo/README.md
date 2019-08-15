@@ -27,4 +27,4 @@ UI Creation | Storyboard and Programmatically
 
 #### Developed App Simulator Video:
 
-<!--[![Navigo video](http://img.youtube.com/vi/v3i8oToZQUA/0.jpg)](http://www.youtube.com/watch?v=v3i8oToZQUA)-->
+[![Navigo video](http://img.youtube.com/vi/4dimmOaSWZI /1.jpg)](http://www.youtube.com/watch?v=4dimmOaSWZI )
