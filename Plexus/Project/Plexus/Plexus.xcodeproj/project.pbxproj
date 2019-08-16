@@ -17,6 +17,21 @@
 		84420F5D23068303001C1A5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5723068303001C1A5E /* SignInViewController.swift */; };
 		84420F5E23068303001C1A5E /* SignInProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5823068303001C1A5E /* SignInProtocols.swift */; };
 		84420F5F23068303001C1A5E /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5923068303001C1A5E /* SignInInteractor.swift */; };
+		84E56C082306B75B00696058 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C022306B75B00696058 /* ForgotPasswordPresenter.swift */; };
+		84E56C092306B75B00696058 /* ForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C032306B75B00696058 /* ForgotPasswordRouter.swift */; };
+		84E56C0A2306B75B00696058 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C042306B75B00696058 /* ForgotPasswordViewController.swift */; };
+		84E56C0B2306B75B00696058 /* ForgotPasswordProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C052306B75B00696058 /* ForgotPasswordProtocols.swift */; };
+		84E56C0C2306B75B00696058 /* ForgotPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C062306B75B00696058 /* ForgotPasswordInteractor.swift */; };
+		84E56C162306B7CE00696058 /* WalkThroughPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C102306B7CE00696058 /* WalkThroughPresenter.swift */; };
+		84E56C172306B7CE00696058 /* WalkThroughRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C112306B7CE00696058 /* WalkThroughRouter.swift */; };
+		84E56C182306B7CE00696058 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C122306B7CE00696058 /* WalkThroughViewController.swift */; };
+		84E56C192306B7CE00696058 /* WalkThroughProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C132306B7CE00696058 /* WalkThroughProtocols.swift */; };
+		84E56C1A2306B7CE00696058 /* WalkThroughInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C142306B7CE00696058 /* WalkThroughInteractor.swift */; };
+		84E56C232306B80300696058 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C1D2306B80300696058 /* HomePresenter.swift */; };
+		84E56C242306B80300696058 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C1E2306B80300696058 /* HomeRouter.swift */; };
+		84E56C252306B80300696058 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C1F2306B80300696058 /* HomeViewController.swift */; };
+		84E56C262306B80300696058 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C202306B80300696058 /* HomeProtocols.swift */; };
+		84E56C272306B80300696058 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C212306B80300696058 /* HomeInteractor.swift */; };
 		FFE6355F23AEFB21E6D90F2A /* Pods_Plexus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846E7B686E58F63EE40282E2 /* Pods_Plexus.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +50,21 @@
 		84420F5823068303001C1A5E /* SignInProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocols.swift; sourceTree = "<group>"; };
 		84420F5923068303001C1A5E /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
 		846E7B686E58F63EE40282E2 /* Pods_Plexus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plexus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E56C022306B75B00696058 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
+		84E56C032306B75B00696058 /* ForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRouter.swift; sourceTree = "<group>"; };
+		84E56C042306B75B00696058 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		84E56C052306B75B00696058 /* ForgotPasswordProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordProtocols.swift; sourceTree = "<group>"; };
+		84E56C062306B75B00696058 /* ForgotPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordInteractor.swift; sourceTree = "<group>"; };
+		84E56C102306B7CE00696058 /* WalkThroughPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughPresenter.swift; sourceTree = "<group>"; };
+		84E56C112306B7CE00696058 /* WalkThroughRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughRouter.swift; sourceTree = "<group>"; };
+		84E56C122306B7CE00696058 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
+		84E56C132306B7CE00696058 /* WalkThroughProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughProtocols.swift; sourceTree = "<group>"; };
+		84E56C142306B7CE00696058 /* WalkThroughInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughInteractor.swift; sourceTree = "<group>"; };
+		84E56C1D2306B80300696058 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		84E56C1E2306B80300696058 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		84E56C1F2306B80300696058 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		84E56C202306B80300696058 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		84E56C212306B80300696058 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		93EF93C3F2849D6C7CD82C51 /* Pods-Plexus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plexus.release.xcconfig"; path = "Target Support Files/Pods-Plexus/Pods-Plexus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +94,6 @@
 				17A0DC175DB3D4BE1C3C509C /* Pods-Plexus.debug.xcconfig */,
 				93EF93C3F2849D6C7CD82C51 /* Pods-Plexus.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -93,7 +122,7 @@
 				84420F6423068875001C1A5E /* Application */,
 				84420F62230686A2001C1A5E /* Storyboards */,
 				84420F63230686B1001C1A5E /* Resources */,
-				84420F6123068433001C1A5E /* SignIn */,
+				84E56C0F2306B7AC00696058 /* Module */,
 			);
 			path = Plexus;
 			sourceTree = "<group>";
@@ -134,6 +163,53 @@
 				843262EA23067D7D00B4A268 /* ViewController.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		84E56C0E2306B77B00696058 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				84E56C022306B75B00696058 /* ForgotPasswordPresenter.swift */,
+				84E56C032306B75B00696058 /* ForgotPasswordRouter.swift */,
+				84E56C042306B75B00696058 /* ForgotPasswordViewController.swift */,
+				84E56C052306B75B00696058 /* ForgotPasswordProtocols.swift */,
+				84E56C062306B75B00696058 /* ForgotPasswordInteractor.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		84E56C0F2306B7AC00696058 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				84420F6123068433001C1A5E /* SignIn */,
+				84E56C0E2306B77B00696058 /* ForgotPassword */,
+				84E56C1C2306B7D400696058 /* WalkThrough */,
+				84E56C292306B80B00696058 /* Home */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		84E56C1C2306B7D400696058 /* WalkThrough */ = {
+			isa = PBXGroup;
+			children = (
+				84E56C102306B7CE00696058 /* WalkThroughPresenter.swift */,
+				84E56C112306B7CE00696058 /* WalkThroughRouter.swift */,
+				84E56C122306B7CE00696058 /* WalkThroughViewController.swift */,
+				84E56C132306B7CE00696058 /* WalkThroughProtocols.swift */,
+				84E56C142306B7CE00696058 /* WalkThroughInteractor.swift */,
+			);
+			path = WalkThrough;
+			sourceTree = "<group>";
+		};
+		84E56C292306B80B00696058 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				84E56C1D2306B80300696058 /* HomePresenter.swift */,
+				84E56C1E2306B80300696058 /* HomeRouter.swift */,
+				84E56C1F2306B80300696058 /* HomeViewController.swift */,
+				84E56C202306B80300696058 /* HomeProtocols.swift */,
+				84E56C212306B80300696058 /* HomeInteractor.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,12 +336,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E56C182306B7CE00696058 /* WalkThroughViewController.swift in Sources */,
+				84E56C272306B80300696058 /* HomeInteractor.swift in Sources */,
 				84420F5B23068303001C1A5E /* SignInPresenter.swift in Sources */,
 				843262EB23067D7D00B4A268 /* ViewController.swift in Sources */,
 				84420F5C23068303001C1A5E /* SignInRouter.swift in Sources */,
+				84E56C262306B80300696058 /* HomeProtocols.swift in Sources */,
+				84E56C242306B80300696058 /* HomeRouter.swift in Sources */,
 				84420F5D23068303001C1A5E /* SignInViewController.swift in Sources */,
+				84E56C0C2306B75B00696058 /* ForgotPasswordInteractor.swift in Sources */,
+				84E56C082306B75B00696058 /* ForgotPasswordPresenter.swift in Sources */,
+				84E56C092306B75B00696058 /* ForgotPasswordRouter.swift in Sources */,
+				84E56C0A2306B75B00696058 /* ForgotPasswordViewController.swift in Sources */,
 				843262E923067D7D00B4A268 /* AppDelegate.swift in Sources */,
+				84E56C192306B7CE00696058 /* WalkThroughProtocols.swift in Sources */,
+				84E56C172306B7CE00696058 /* WalkThroughRouter.swift in Sources */,
+				84E56C1A2306B7CE00696058 /* WalkThroughInteractor.swift in Sources */,
 				84420F5F23068303001C1A5E /* SignInInteractor.swift in Sources */,
+				84E56C252306B80300696058 /* HomeViewController.swift in Sources */,
+				84E56C0B2306B75B00696058 /* ForgotPasswordProtocols.swift in Sources */,
+				84E56C232306B80300696058 /* HomePresenter.swift in Sources */,
+				84E56C162306B7CE00696058 /* WalkThroughPresenter.swift in Sources */,
 				84420F5E23068303001C1A5E /* SignInProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
