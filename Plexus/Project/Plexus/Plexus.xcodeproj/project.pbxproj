@@ -32,6 +32,8 @@
 		84E56C252306B80300696058 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C1F2306B80300696058 /* HomeViewController.swift */; };
 		84E56C262306B80300696058 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C202306B80300696058 /* HomeProtocols.swift */; };
 		84E56C272306B80300696058 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C212306B80300696058 /* HomeInteractor.swift */; };
+		84E56C2B2306C36D00696058 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C2A2306C36D00696058 /* GradientView.swift */; };
+		84E56C2E2306C92000696058 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C2D2306C92000696058 /* ColorUtils.swift */; };
 		FFE6355F23AEFB21E6D90F2A /* Pods_Plexus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846E7B686E58F63EE40282E2 /* Pods_Plexus.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		84E56C1F2306B80300696058 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		84E56C202306B80300696058 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		84E56C212306B80300696058 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		84E56C2A2306C36D00696058 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		84E56C2D2306C92000696058 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		93EF93C3F2849D6C7CD82C51 /* Pods-Plexus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plexus.release.xcconfig"; path = "Target Support Files/Pods-Plexus/Pods-Plexus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +127,8 @@
 				84420F62230686A2001C1A5E /* Storyboards */,
 				84420F63230686B1001C1A5E /* Resources */,
 				84E56C0F2306B7AC00696058 /* Module */,
+				84E56C2C2306C44000696058 /* Views */,
+				84E56C2F2306C92500696058 /* Utils */,
 			);
 			path = Plexus;
 			sourceTree = "<group>";
@@ -210,6 +216,22 @@
 				84E56C212306B80300696058 /* HomeInteractor.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		84E56C2C2306C44000696058 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84E56C2A2306C36D00696058 /* GradientView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84E56C2F2306C92500696058 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				84E56C2D2306C92000696058 /* ColorUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +361,7 @@
 				84E56C182306B7CE00696058 /* WalkThroughViewController.swift in Sources */,
 				84E56C272306B80300696058 /* HomeInteractor.swift in Sources */,
 				84420F5B23068303001C1A5E /* SignInPresenter.swift in Sources */,
+				84E56C2E2306C92000696058 /* ColorUtils.swift in Sources */,
 				843262EB23067D7D00B4A268 /* ViewController.swift in Sources */,
 				84420F5C23068303001C1A5E /* SignInRouter.swift in Sources */,
 				84E56C262306B80300696058 /* HomeProtocols.swift in Sources */,
@@ -351,6 +374,7 @@
 				843262E923067D7D00B4A268 /* AppDelegate.swift in Sources */,
 				84E56C192306B7CE00696058 /* WalkThroughProtocols.swift in Sources */,
 				84E56C172306B7CE00696058 /* WalkThroughRouter.swift in Sources */,
+				84E56C2B2306C36D00696058 /* GradientView.swift in Sources */,
 				84E56C1A2306B7CE00696058 /* WalkThroughInteractor.swift in Sources */,
 				84420F5F23068303001C1A5E /* SignInInteractor.swift in Sources */,
 				84E56C252306B80300696058 /* HomeViewController.swift in Sources */,
