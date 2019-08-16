@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		843262E923067D7D00B4A268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843262E823067D7D00B4A268 /* AppDelegate.swift */; };
+		843262EB23067D7D00B4A268 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843262EA23067D7D00B4A268 /* ViewController.swift */; };
+		843262EE23067D7D00B4A268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843262EC23067D7D00B4A268 /* Main.storyboard */; };
+		843262F023067D7F00B4A268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843262EF23067D7F00B4A268 /* Assets.xcassets */; };
+		843262F323067D7F00B4A268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843262F123067D7F00B4A268 /* LaunchScreen.storyboard */; };
+		84420F5B23068303001C1A5E /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5523068303001C1A5E /* SignInPresenter.swift */; };
+		84420F5C23068303001C1A5E /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5623068303001C1A5E /* SignInRouter.swift */; };
+		84420F5D23068303001C1A5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5723068303001C1A5E /* SignInViewController.swift */; };
+		84420F5E23068303001C1A5E /* SignInProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5823068303001C1A5E /* SignInProtocols.swift */; };
+		84420F5F23068303001C1A5E /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5923068303001C1A5E /* SignInInteractor.swift */; };
+		FFE6355F23AEFB21E6D90F2A /* Pods_Plexus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846E7B686E58F63EE40282E2 /* Pods_Plexus.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17A0DC175DB3D4BE1C3C509C /* Pods-Plexus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plexus.debug.xcconfig"; path = "Target Support Files/Pods-Plexus/Pods-Plexus.debug.xcconfig"; sourceTree = "<group>"; };
+		843262E523067D7D00B4A268 /* Plexus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plexus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		843262E823067D7D00B4A268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		843262EA23067D7D00B4A268 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		843262ED23067D7D00B4A268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		843262EF23067D7F00B4A268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		843262F223067D7F00B4A268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		843262F423067D7F00B4A268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84420F5523068303001C1A5E /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		84420F5623068303001C1A5E /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
+		84420F5723068303001C1A5E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		84420F5823068303001C1A5E /* SignInProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocols.swift; sourceTree = "<group>"; };
+		84420F5923068303001C1A5E /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
+		846E7B686E58F63EE40282E2 /* Pods_Plexus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plexus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93EF93C3F2849D6C7CD82C51 /* Pods-Plexus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plexus.release.xcconfig"; path = "Target Support Files/Pods-Plexus/Pods-Plexus.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		843262E223067D7D00B4A268 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFE6355F23AEFB21E6D90F2A /* Pods_Plexus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		430700E2FF3745439C21A090 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				846E7B686E58F63EE40282E2 /* Pods_Plexus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7ACFD16DBF00F43C3976A4A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17A0DC175DB3D4BE1C3C509C /* Pods-Plexus.debug.xcconfig */,
+				93EF93C3F2849D6C7CD82C51 /* Pods-Plexus.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		843262DC23067D7D00B4A268 = {
+			isa = PBXGroup;
+			children = (
+				843262E723067D7D00B4A268 /* Plexus */,
+				843262E623067D7D00B4A268 /* Products */,
+				7ACFD16DBF00F43C3976A4A3 /* Pods */,
+				430700E2FF3745439C21A090 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		843262E623067D7D00B4A268 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				843262E523067D7D00B4A268 /* Plexus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		843262E723067D7D00B4A268 /* Plexus */ = {
+			isa = PBXGroup;
+			children = (
+				843262F423067D7F00B4A268 /* Info.plist */,
+				84420F6423068875001C1A5E /* Application */,
+				84420F62230686A2001C1A5E /* Storyboards */,
+				84420F63230686B1001C1A5E /* Resources */,
+				84420F6123068433001C1A5E /* SignIn */,
+			);
+			path = Plexus;
+			sourceTree = "<group>";
+		};
+		84420F6123068433001C1A5E /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				84420F5523068303001C1A5E /* SignInPresenter.swift */,
+				84420F5623068303001C1A5E /* SignInRouter.swift */,
+				84420F5723068303001C1A5E /* SignInViewController.swift */,
+				84420F5823068303001C1A5E /* SignInProtocols.swift */,
+				84420F5923068303001C1A5E /* SignInInteractor.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		84420F62230686A2001C1A5E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				843262EC23067D7D00B4A268 /* Main.storyboard */,
+				843262F123067D7F00B4A268 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		84420F63230686B1001C1A5E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				843262EF23067D7F00B4A268 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84420F6423068875001C1A5E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				843262E823067D7D00B4A268 /* AppDelegate.swift */,
+				843262EA23067D7D00B4A268 /* ViewController.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		843262E423067D7D00B4A268 /* Plexus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 843262F723067D7F00B4A268 /* Build configuration list for PBXNativeTarget "Plexus" */;
+			buildPhases = (
+				6DB952C5B0182DFA46180E5B /* [CP] Check Pods Manifest.lock */,
+				843262E123067D7D00B4A268 /* Sources */,
+				843262E223067D7D00B4A268 /* Frameworks */,
+				843262E323067D7D00B4A268 /* Resources */,
+				53F6A07DB2D338B262162438 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Plexus;
+			productName = Plexus;
+			productReference = 843262E523067D7D00B4A268 /* Plexus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		843262DD23067D7D00B4A268 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = A7Studio;
+				TargetAttributes = {
+					843262E423067D7D00B4A268 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 843262E023067D7D00B4A268 /* Build configuration list for PBXProject "Plexus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 843262DC23067D7D00B4A268;
+			productRefGroup = 843262E623067D7D00B4A268 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				843262E423067D7D00B4A268 /* Plexus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		843262E323067D7D00B4A268 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				843262F323067D7F00B4A268 /* LaunchScreen.storyboard in Resources */,
+				843262F023067D7F00B4A268 /* Assets.xcassets in Resources */,
+				843262EE23067D7D00B4A268 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53F6A07DB2D338B262162438 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plexus/Pods-Plexus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Plexus/Pods-Plexus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DB952C5B0182DFA46180E5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Plexus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		843262E123067D7D00B4A268 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84420F5B23068303001C1A5E /* SignInPresenter.swift in Sources */,
+				843262EB23067D7D00B4A268 /* ViewController.swift in Sources */,
+				84420F5C23068303001C1A5E /* SignInRouter.swift in Sources */,
+				84420F5D23068303001C1A5E /* SignInViewController.swift in Sources */,
+				843262E923067D7D00B4A268 /* AppDelegate.swift in Sources */,
+				84420F5F23068303001C1A5E /* SignInInteractor.swift in Sources */,
+				84420F5E23068303001C1A5E /* SignInProtocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		843262EC23067D7D00B4A268 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				843262ED23067D7D00B4A268 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		843262F123067D7F00B4A268 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				843262F223067D7F00B4A268 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		843262F523067D7F00B4A268 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		843262F623067D7F00B4A268 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		843262F823067D7F00B4A268 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17A0DC175DB3D4BE1C3C509C /* Pods-Plexus.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3EYUW49QFV;
+				INFOPLIST_FILE = Plexus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.A7Studio.Plexus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		843262F923067D7F00B4A268 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93EF93C3F2849D6C7CD82C51 /* Pods-Plexus.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3EYUW49QFV;
+				INFOPLIST_FILE = Plexus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.A7Studio.Plexus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		843262E023067D7D00B4A268 /* Build configuration list for PBXProject "Plexus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843262F523067D7F00B4A268 /* Debug */,
+				843262F623067D7F00B4A268 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		843262F723067D7F00B4A268 /* Build configuration list for PBXNativeTarget "Plexus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				843262F823067D7F00B4A268 /* Debug */,
+				843262F923067D7F00B4A268 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 843262DD23067D7D00B4A268 /* Project object */;
+}
