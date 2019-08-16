@@ -17,6 +17,7 @@
 		84420F5D23068303001C1A5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5723068303001C1A5E /* SignInViewController.swift */; };
 		84420F5E23068303001C1A5E /* SignInProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5823068303001C1A5E /* SignInProtocols.swift */; };
 		84420F5F23068303001C1A5E /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5923068303001C1A5E /* SignInInteractor.swift */; };
+		8489B40B2307143000BDE491 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489B40A2307143000BDE491 /* RoundedButton.swift */; };
 		84E56C082306B75B00696058 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C022306B75B00696058 /* ForgotPasswordPresenter.swift */; };
 		84E56C092306B75B00696058 /* ForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C032306B75B00696058 /* ForgotPasswordRouter.swift */; };
 		84E56C0A2306B75B00696058 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C042306B75B00696058 /* ForgotPasswordViewController.swift */; };
@@ -34,6 +35,7 @@
 		84E56C272306B80300696058 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C212306B80300696058 /* HomeInteractor.swift */; };
 		84E56C2B2306C36D00696058 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C2A2306C36D00696058 /* GradientView.swift */; };
 		84E56C2E2306C92000696058 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C2D2306C92000696058 /* ColorUtils.swift */; };
+		84E56C312306FE2500696058 /* BottomLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C302306FE2500696058 /* BottomLineTextField.swift */; };
 		FFE6355F23AEFB21E6D90F2A /* Pods_Plexus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846E7B686E58F63EE40282E2 /* Pods_Plexus.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,7 @@
 		84420F5823068303001C1A5E /* SignInProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocols.swift; sourceTree = "<group>"; };
 		84420F5923068303001C1A5E /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
 		846E7B686E58F63EE40282E2 /* Pods_Plexus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plexus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8489B40A2307143000BDE491 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		84E56C022306B75B00696058 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
 		84E56C032306B75B00696058 /* ForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRouter.swift; sourceTree = "<group>"; };
 		84E56C042306B75B00696058 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 		84E56C212306B80300696058 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		84E56C2A2306C36D00696058 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		84E56C2D2306C92000696058 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		84E56C302306FE2500696058 /* BottomLineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomLineTextField.swift; sourceTree = "<group>"; };
 		93EF93C3F2849D6C7CD82C51 /* Pods-Plexus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plexus.release.xcconfig"; path = "Target Support Files/Pods-Plexus/Pods-Plexus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +225,8 @@
 		84E56C2C2306C44000696058 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8489B40A2307143000BDE491 /* RoundedButton.swift */,
+				84E56C302306FE2500696058 /* BottomLineTextField.swift */,
 				84E56C2A2306C36D00696058 /* GradientView.swift */,
 			);
 			path = Views;
@@ -312,16 +318,20 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Plexus/Pods-Plexus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActiveLabel/ActiveLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActiveLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,10 +388,12 @@
 				84E56C1A2306B7CE00696058 /* WalkThroughInteractor.swift in Sources */,
 				84420F5F23068303001C1A5E /* SignInInteractor.swift in Sources */,
 				84E56C252306B80300696058 /* HomeViewController.swift in Sources */,
+				84E56C312306FE2500696058 /* BottomLineTextField.swift in Sources */,
 				84E56C0B2306B75B00696058 /* ForgotPasswordProtocols.swift in Sources */,
 				84E56C232306B80300696058 /* HomePresenter.swift in Sources */,
 				84E56C162306B7CE00696058 /* WalkThroughPresenter.swift in Sources */,
 				84420F5E23068303001C1A5E /* SignInProtocols.swift in Sources */,
+				8489B40B2307143000BDE491 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
