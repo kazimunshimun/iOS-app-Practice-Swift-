@@ -10,4 +10,5 @@ target 'Plexus' do
     pod 'Firebase/Auth'
     pod 'SkyFloatingLabelTextField', '~> 3.0'
     pod 'ActiveLabel'
+    pod 'TweenController', '~> 1.0'
 end
