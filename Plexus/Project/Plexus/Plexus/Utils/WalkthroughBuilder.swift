@@ -32,7 +32,8 @@ struct TutorialBuilder {
         observeEndOfScrollView(viewController, tweenController: tweenController, scrollView: scrollView)
         //describeBackgroundWithVC(viewController, tweenController: tweenController, scrollView: scrollView)
         describeTextWithVC(viewController, tweenController: tweenController, scrollView: scrollView)
-        //describeCardTextWithVC(viewController, tweenController: tweenController, scrollView: scrollView)
+        describeReaderWithVC(viewController, tweenController: tweenController, scrollView: scrollView)
+        describeCloudWithVC(viewController, tweenController: tweenController, scrollView: scrollView)
         //describeCardImageWithVC(viewController, tweenController: tweenController, scrollView: scrollView)
         //describeCardFacesWithVC(viewController, tweenController: tweenController, scrollView: scrollView)
         //describePinHillWithVC(viewController, tweenController: tweenController, scrollView: scrollView)
@@ -112,7 +113,7 @@ struct TutorialBuilder {
     
     private static func describeBackgroundWithVC(_ vc: TutorialViewController, tweenController: TweenController, scrollView: UIScrollView) {
         describeStarGradientWithVC(vc, tweenController: tweenController, scrollView: scrollView)
-        describeStarsWithVC(vc, tweenController: tweenController, scrollView: scrollView)
+        //describeStarsWithVC(vc, tweenController: tweenController, scrollView: scrollView)
         describeEiffelTowerWithVC(vc, tweenController: tweenController, scrollView: scrollView)
     }
     
@@ -142,25 +143,50 @@ struct TutorialBuilder {
             .with(action: gradientView.twc_applyAlpha)
     }
     
-    private static func describeStarsWithVC(_ vc: TutorialViewController, tweenController: TweenController, scrollView: UIScrollView) {
+    private static func describeCloudWithVC(_ vc: TutorialViewController, tweenController: TweenController, scrollView: UIScrollView) {
         let viewportSize = vc.containerView.frame.size
         let xOffset = (viewportSize.width-starsSize.width)/2.0
-        let starsFrame = CGRect(x: xOffset, y: 0.0, width: starsSize.width, height: starsSize.height)
-        let starsImageView = UIImageView(image: UIImage(named: "stars"))
+        let starsFrame = CGRect(x: xOffset, y: 200.0, width: 38, height: 24)
+        let starsImageView = UIImageView(image: UIImage(named: "cloud_medium"))
+        
+        let cloudFrame = CGRect(x: xOffset + 100, y: 150.0, width: 27, height: 16)
+        let cloudImageView = UIImageView(image: UIImage(named: "cloud_small"))
+        
+        cloudImageView.frame = cloudFrame.offsetBy(dx: viewportSize.width, dy: 0.0)
+        cloudImageView.alpha = 1.0
+        cloudImageView.contentMode = .scaleToFill
+        scrollView.insertSubview(cloudImageView, belowSubview: vc.pageControl)
         
         starsImageView.frame = starsFrame.offsetBy(dx: viewportSize.width, dy: 0.0)
         starsImageView.alpha = 0.0
         starsImageView.contentMode = .scaleToFill
-        scrollView.insertSubview(starsImageView, belowSubview: vc.pageControl)
+        scrollView.insertSubview(starsImageView, belowSubview: cloudImageView)
+        
         
         tweenController.tween(from: starsFrame, at: 1.0)
-            .thenHold(until: 3.0)
+            .thenHold(until: 4.0)
             .with(action: starsImageView.twc_slidingFrameAction(scrollView: scrollView))
         
+        /*
+        tweenController.tween(from: cloudFrame, at: 1.0)
+            .thenHold(until: 4.0)
+            .with(action: cloudImageView.twc_slidingFrameAction(scrollView: scrollView))
+        */
         tweenController.tween(from: starsImageView.alpha, at: 1.0)
             .to(1.0, at: 2.0)
-            .then(to: 0.0, at: 3.0)
+            .then(to: 0.0, at: 5.0)
             .with(action: starsImageView.twc_applyAlpha)
+        
+        let transformA = CGAffineTransform.identity
+        let transformB = CGAffineTransform(translationX: 50, y: 0)
+        let transformC = CGAffineTransform(translationX: 50, y: 10)
+        let transformD = CGAffineTransform(translationX: 50, y: 15)
+        tweenController.tween(from: transformA, at: 1.0)
+            .to(transformB, at: 2.0)
+            .then(to: transformC, at: 3.0)
+            .then(to: transformD, at: 4.0)
+            .with(action: cloudImageView.layer.twc_applyAffineTransform)
+        
     }
     
     private static func describeEiffelTowerWithVC(_ vc: TutorialViewController, tweenController: TweenController, scrollView: UIScrollView) {
@@ -179,6 +205,36 @@ struct TutorialBuilder {
             .thenHold(until: 4.0)
             .then(to: 0.0, at: 5.0)
             .with(action: imageView.twc_applyAlpha)
+    }
+    
+    private static func describeReaderWithVC(_ vc: TutorialViewController, tweenController: TweenController, scrollView: UIScrollView) {
+        let viewportFrame = CGRect(origin: CGPoint.zero, size: CGSize(width: 275, height: 300))
+        let imageView = UIImageView(image: UIImage(named: "user_reading"))
+        imageView.frame = viewportFrame.offsetBy(dx: viewportFrame.width * 2.0, dy: 150.0)
+        imageView.alpha = 0.0
+        scrollView.addSubview(imageView)
+        
+        tweenController.tween(from: viewportFrame, at: 0.0)
+            .thenHold(until: 4.0)
+            .with(action: imageView.twc_slidingFrameAction(scrollView: scrollView))
+        
+        tweenController.tween(from: imageView.alpha, at: 0.0)
+            .to(1.0, at: 1.0)
+            .thenHold(until: 4.0)
+            .then(to: 0.0, at: 5.0)
+            .with(action: imageView.twc_applyAlpha)
+        
+        let transformA = CGAffineTransform.identity
+        let transformB = CGAffineTransform(rotationAngle: -.pi/30)
+        let transformC = CGAffineTransform(rotationAngle: -.pi/18)
+        let transformD = CGAffineTransform(rotationAngle: -.pi/15)
+        
+        
+        tweenController.tween(from: transformA, at: 1.0)
+            .to(transformB, at: 2.0)
+            .then(to: transformC, at: 3.0)
+            .then(to: transformD, at: 4.0)
+            .with(action: imageView.layer.twc_applyAffineTransform)
     }
     
     private static func describeTextWithVC(_ vc: TutorialViewController, tweenController: TweenController, scrollView: UIScrollView) {

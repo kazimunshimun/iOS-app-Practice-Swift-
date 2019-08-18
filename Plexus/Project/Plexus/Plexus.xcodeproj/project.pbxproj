@@ -12,6 +12,12 @@
 		843262EE23067D7D00B4A268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843262EC23067D7D00B4A268 /* Main.storyboard */; };
 		843262F023067D7F00B4A268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843262EF23067D7F00B4A268 /* Assets.xcassets */; };
 		843262F323067D7F00B4A268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843262F123067D7F00B4A268 /* LaunchScreen.storyboard */; };
+		8439A0CA2309B0BA00E458F2 /* TabMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439A0C92309B0BA00E458F2 /* TabMenu.storyboard */; };
+		8439A0CC2309B1E200E458F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439A0CB2309B1E200E458F2 /* Home.storyboard */; };
+		8439A0CE2309B1F200E458F2 /* Exam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439A0CD2309B1F200E458F2 /* Exam.storyboard */; };
+		8439A0D02309B1FE00E458F2 /* Wishlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439A0CF2309B1FE00E458F2 /* Wishlist.storyboard */; };
+		8439A0D22309B20600E458F2 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439A0D12309B20600E458F2 /* Profile.storyboard */; };
+		8439A0D42309B21900E458F2 /* Online.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439A0D32309B21900E458F2 /* Online.storyboard */; };
 		84420F5B23068303001C1A5E /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5523068303001C1A5E /* SignInPresenter.swift */; };
 		84420F5C23068303001C1A5E /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5623068303001C1A5E /* SignInRouter.swift */; };
 		84420F5D23068303001C1A5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5723068303001C1A5E /* SignInViewController.swift */; };
@@ -49,6 +55,12 @@
 		843262EF23067D7F00B4A268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843262F223067D7F00B4A268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843262F423067D7F00B4A268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8439A0C92309B0BA00E458F2 /* TabMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabMenu.storyboard; sourceTree = "<group>"; };
+		8439A0CB2309B1E200E458F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		8439A0CD2309B1F200E458F2 /* Exam.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exam.storyboard; sourceTree = "<group>"; };
+		8439A0CF2309B1FE00E458F2 /* Wishlist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wishlist.storyboard; sourceTree = "<group>"; };
+		8439A0D12309B20600E458F2 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		8439A0D32309B21900E458F2 /* Online.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Online.storyboard; sourceTree = "<group>"; };
 		84420F5523068303001C1A5E /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		84420F5623068303001C1A5E /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
 		84420F5723068303001C1A5E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +168,12 @@
 			children = (
 				843262EC23067D7D00B4A268 /* Main.storyboard */,
 				843262F123067D7F00B4A268 /* LaunchScreen.storyboard */,
+				8439A0C92309B0BA00E458F2 /* TabMenu.storyboard */,
+				8439A0CB2309B1E200E458F2 /* Home.storyboard */,
+				8439A0CD2309B1F200E458F2 /* Exam.storyboard */,
+				8439A0CF2309B1FE00E458F2 /* Wishlist.storyboard */,
+				8439A0D12309B20600E458F2 /* Profile.storyboard */,
+				8439A0D32309B21900E458F2 /* Online.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -304,6 +322,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				843262F323067D7F00B4A268 /* LaunchScreen.storyboard in Resources */,
+				8439A0CE2309B1F200E458F2 /* Exam.storyboard in Resources */,
+				8439A0D22309B20600E458F2 /* Profile.storyboard in Resources */,
+				8439A0CC2309B1E200E458F2 /* Home.storyboard in Resources */,
+				8439A0D42309B21900E458F2 /* Online.storyboard in Resources */,
+				8439A0D02309B1FE00E458F2 /* Wishlist.storyboard in Resources */,
+				8439A0CA2309B0BA00E458F2 /* TabMenu.storyboard in Resources */,
 				843262F023067D7F00B4A268 /* Assets.xcassets in Resources */,
 				843262EE23067D7D00B4A268 /* Main.storyboard in Resources */,
 			);
