@@ -51,4 +51,11 @@ class SignInViewController: UIViewController, SignInViewProtocol {
             print("Custom type tapped: \(element)")
         }
     }
+    
+    @IBAction func facebookLoginClicked(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "TabMenu", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "tabMenuController")
+        self.show(vc, sender: nil)
+    }
+    
 }

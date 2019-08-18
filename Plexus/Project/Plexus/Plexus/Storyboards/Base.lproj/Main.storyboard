@@ -133,6 +133,9 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="facebookLoginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vEh-Lm-8J5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4N-J8-HWa" customClass="RoundedButton" customModule="Plexus" customModuleProvider="target">
                                 <rect key="frame" x="30" y="655" width="354" height="50"/>
