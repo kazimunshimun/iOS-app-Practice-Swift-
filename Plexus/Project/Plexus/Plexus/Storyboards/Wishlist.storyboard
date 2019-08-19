@@ -32,7 +32,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TOa-Zv-Khd" firstAttribute="top" secondItem="e09-SO-wjp" secondAttribute="top" constant="16" id="Elz-tK-LGN"/>
                             <constraint firstItem="TOa-Zv-Khd" firstAttribute="leading" secondItem="e09-SO-wjp" secondAttribute="leading" constant="20" id="GnV-xw-D4U"/>

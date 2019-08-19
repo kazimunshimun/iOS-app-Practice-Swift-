@@ -11,4 +11,5 @@ target 'Plexus' do
     pod 'SkyFloatingLabelTextField', '~> 3.0'
     pod 'ActiveLabel'
     pod 'TweenController', '~> 1.0'
+    pod 'Cosmos', '~> 19.0'
 end
