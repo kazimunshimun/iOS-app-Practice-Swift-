@@ -30,7 +30,7 @@ class WishlistViewController: UIViewController, WishlistViewProtocol {
 extension WishlistViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let cellWidth : CGFloat = 160.0;
+        let cellWidth : CGFloat = 166.0;
         return cellWidth;
     }
     

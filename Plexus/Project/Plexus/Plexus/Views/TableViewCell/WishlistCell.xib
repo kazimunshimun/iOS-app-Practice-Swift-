@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="363" height="163.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2n1-ZP-8qQ">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2n1-ZP-8qQ" customClass="RoundedCornersShadowView" customModule="Plexus" customModuleProvider="target">
                         <rect key="frame" x="16" y="16" width="331" height="131.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn Python like a Professional! Start from the basics and go all the way to creating your..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAf-Xv-Ql5">
@@ -66,6 +66,11 @@
                             <constraint firstItem="WAf-Xv-Ql5" firstAttribute="top" secondItem="2n1-ZP-8qQ" secondAttribute="top" constant="25" id="vuS-04-IoR"/>
                             <constraint firstItem="szf-k9-MTN" firstAttribute="leading" secondItem="WAf-Xv-Ql5" secondAttribute="leading" id="vzw-da-Amy"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
