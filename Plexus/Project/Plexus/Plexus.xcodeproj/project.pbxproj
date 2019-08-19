@@ -12,6 +12,26 @@
 		843262EE23067D7D00B4A268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843262EC23067D7D00B4A268 /* Main.storyboard */; };
 		843262F023067D7F00B4A268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843262EF23067D7F00B4A268 /* Assets.xcassets */; };
 		843262F323067D7F00B4A268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843262F123067D7F00B4A268 /* LaunchScreen.storyboard */; };
+		8438965A230AE3B400F101DF /* ExamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389654230AE3B400F101DF /* ExamPresenter.swift */; };
+		8438965B230AE3B400F101DF /* ExamRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389655230AE3B400F101DF /* ExamRouter.swift */; };
+		8438965C230AE3B400F101DF /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389656230AE3B400F101DF /* ExamViewController.swift */; };
+		8438965D230AE3B400F101DF /* ExamProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389657230AE3B400F101DF /* ExamProtocols.swift */; };
+		8438965E230AE3B400F101DF /* ExamInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389658230AE3B400F101DF /* ExamInteractor.swift */; };
+		84389667230AE3E000F101DF /* WishlistPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389661230AE3E000F101DF /* WishlistPresenter.swift */; };
+		84389668230AE3E000F101DF /* WishlistRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389662230AE3E000F101DF /* WishlistRouter.swift */; };
+		84389669230AE3E000F101DF /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389663230AE3E000F101DF /* WishlistViewController.swift */; };
+		8438966A230AE3E000F101DF /* WishlistProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389664230AE3E000F101DF /* WishlistProtocols.swift */; };
+		8438966B230AE3E000F101DF /* WishlistInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389665230AE3E000F101DF /* WishlistInteractor.swift */; };
+		84389674230AE40400F101DF /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438966E230AE40400F101DF /* ProfilePresenter.swift */; };
+		84389675230AE40400F101DF /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438966F230AE40400F101DF /* ProfileRouter.swift */; };
+		84389676230AE40400F101DF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389670230AE40400F101DF /* ProfileViewController.swift */; };
+		84389677230AE40400F101DF /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389671230AE40400F101DF /* ProfileProtocols.swift */; };
+		84389678230AE40400F101DF /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389672230AE40400F101DF /* ProfileInteractor.swift */; };
+		84389681230AE4BF00F101DF /* OnlinePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438967B230AE4BF00F101DF /* OnlinePresenter.swift */; };
+		84389682230AE4BF00F101DF /* OnlineRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438967C230AE4BF00F101DF /* OnlineRouter.swift */; };
+		84389683230AE4BF00F101DF /* OnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438967D230AE4BF00F101DF /* OnlineViewController.swift */; };
+		84389684230AE4BF00F101DF /* OnlineProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438967E230AE4BF00F101DF /* OnlineProtocols.swift */; };
+		84389685230AE4BF00F101DF /* OnlineInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438967F230AE4BF00F101DF /* OnlineInteractor.swift */; };
 		8439A0CA2309B0BA00E458F2 /* TabMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439A0C92309B0BA00E458F2 /* TabMenu.storyboard */; };
 		8439A0CC2309B1E200E458F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439A0CB2309B1E200E458F2 /* Home.storyboard */; };
 		8439A0CE2309B1F200E458F2 /* Exam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439A0CD2309B1F200E458F2 /* Exam.storyboard */; };
@@ -55,6 +75,26 @@
 		843262EF23067D7F00B4A268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843262F223067D7F00B4A268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843262F423067D7F00B4A268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84389654230AE3B400F101DF /* ExamPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamPresenter.swift; sourceTree = "<group>"; };
+		84389655230AE3B400F101DF /* ExamRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamRouter.swift; sourceTree = "<group>"; };
+		84389656230AE3B400F101DF /* ExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
+		84389657230AE3B400F101DF /* ExamProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamProtocols.swift; sourceTree = "<group>"; };
+		84389658230AE3B400F101DF /* ExamInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamInteractor.swift; sourceTree = "<group>"; };
+		84389661230AE3E000F101DF /* WishlistPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistPresenter.swift; sourceTree = "<group>"; };
+		84389662230AE3E000F101DF /* WishlistRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistRouter.swift; sourceTree = "<group>"; };
+		84389663230AE3E000F101DF /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
+		84389664230AE3E000F101DF /* WishlistProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistProtocols.swift; sourceTree = "<group>"; };
+		84389665230AE3E000F101DF /* WishlistInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistInteractor.swift; sourceTree = "<group>"; };
+		8438966E230AE40400F101DF /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		8438966F230AE40400F101DF /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		84389670230AE40400F101DF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		84389671230AE40400F101DF /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		84389672230AE40400F101DF /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		8438967B230AE4BF00F101DF /* OnlinePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlinePresenter.swift; sourceTree = "<group>"; };
+		8438967C230AE4BF00F101DF /* OnlineRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineRouter.swift; sourceTree = "<group>"; };
+		8438967D230AE4BF00F101DF /* OnlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineViewController.swift; sourceTree = "<group>"; };
+		8438967E230AE4BF00F101DF /* OnlineProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineProtocols.swift; sourceTree = "<group>"; };
+		8438967F230AE4BF00F101DF /* OnlineInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineInteractor.swift; sourceTree = "<group>"; };
 		8439A0C92309B0BA00E458F2 /* TabMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabMenu.storyboard; sourceTree = "<group>"; };
 		8439A0CB2309B1E200E458F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		8439A0CD2309B1F200E458F2 /* Exam.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Exam.storyboard; sourceTree = "<group>"; };
@@ -151,6 +191,54 @@
 			path = Plexus;
 			sourceTree = "<group>";
 		};
+		84389660230AE3C900F101DF /* Exam */ = {
+			isa = PBXGroup;
+			children = (
+				84389654230AE3B400F101DF /* ExamPresenter.swift */,
+				84389655230AE3B400F101DF /* ExamRouter.swift */,
+				84389656230AE3B400F101DF /* ExamViewController.swift */,
+				84389657230AE3B400F101DF /* ExamProtocols.swift */,
+				84389658230AE3B400F101DF /* ExamInteractor.swift */,
+			);
+			path = Exam;
+			sourceTree = "<group>";
+		};
+		8438966D230AE3EE00F101DF /* Wishlist */ = {
+			isa = PBXGroup;
+			children = (
+				84389661230AE3E000F101DF /* WishlistPresenter.swift */,
+				84389662230AE3E000F101DF /* WishlistRouter.swift */,
+				84389663230AE3E000F101DF /* WishlistViewController.swift */,
+				84389664230AE3E000F101DF /* WishlistProtocols.swift */,
+				84389665230AE3E000F101DF /* WishlistInteractor.swift */,
+			);
+			path = Wishlist;
+			sourceTree = "<group>";
+		};
+		8438967A230AE41300F101DF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8438966E230AE40400F101DF /* ProfilePresenter.swift */,
+				8438966F230AE40400F101DF /* ProfileRouter.swift */,
+				84389670230AE40400F101DF /* ProfileViewController.swift */,
+				84389671230AE40400F101DF /* ProfileProtocols.swift */,
+				84389672230AE40400F101DF /* ProfileInteractor.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		84389687230AE4D200F101DF /* Online */ = {
+			isa = PBXGroup;
+			children = (
+				8438967B230AE4BF00F101DF /* OnlinePresenter.swift */,
+				8438967C230AE4BF00F101DF /* OnlineRouter.swift */,
+				8438967D230AE4BF00F101DF /* OnlineViewController.swift */,
+				8438967E230AE4BF00F101DF /* OnlineProtocols.swift */,
+				8438967F230AE4BF00F101DF /* OnlineInteractor.swift */,
+			);
+			path = Online;
+			sourceTree = "<group>";
+		};
 		84420F6123068433001C1A5E /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +302,10 @@
 				84E56C0E2306B77B00696058 /* ForgotPassword */,
 				84E56C1C2306B7D400696058 /* WalkThrough */,
 				84E56C292306B80B00696058 /* Home */,
+				84389660230AE3C900F101DF /* Exam */,
+				8438966D230AE3EE00F101DF /* Wishlist */,
+				8438967A230AE41300F101DF /* Profile */,
+				84389687230AE4D200F101DF /* Online */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -404,26 +496,46 @@
 				843262EB23067D7D00B4A268 /* ViewController.swift in Sources */,
 				84420F5C23068303001C1A5E /* SignInRouter.swift in Sources */,
 				84E2A2CC23084A5000888EA8 /* WalkthroughBuilder.swift in Sources */,
+				84389682230AE4BF00F101DF /* OnlineRouter.swift in Sources */,
 				84E56C262306B80300696058 /* HomeProtocols.swift in Sources */,
+				84389683230AE4BF00F101DF /* OnlineViewController.swift in Sources */,
+				8438965B230AE3B400F101DF /* ExamRouter.swift in Sources */,
 				84E56C242306B80300696058 /* HomeRouter.swift in Sources */,
+				84389681230AE4BF00F101DF /* OnlinePresenter.swift in Sources */,
+				8438966B230AE3E000F101DF /* WishlistInteractor.swift in Sources */,
+				8438965A230AE3B400F101DF /* ExamPresenter.swift in Sources */,
 				84420F5D23068303001C1A5E /* SignInViewController.swift in Sources */,
 				84E56C0C2306B75B00696058 /* ForgotPasswordInteractor.swift in Sources */,
 				84E56C082306B75B00696058 /* ForgotPasswordPresenter.swift in Sources */,
+				84389667230AE3E000F101DF /* WishlistPresenter.swift in Sources */,
+				84389685230AE4BF00F101DF /* OnlineInteractor.swift in Sources */,
 				84E56C092306B75B00696058 /* ForgotPasswordRouter.swift in Sources */,
 				84E56C0A2306B75B00696058 /* ForgotPasswordViewController.swift in Sources */,
+				84389669230AE3E000F101DF /* WishlistViewController.swift in Sources */,
 				843262E923067D7D00B4A268 /* AppDelegate.swift in Sources */,
 				84E56C192306B7CE00696058 /* WalkThroughProtocols.swift in Sources */,
 				84E56C172306B7CE00696058 /* WalkThroughRouter.swift in Sources */,
+				84389676230AE40400F101DF /* ProfileViewController.swift in Sources */,
+				8438965D230AE3B400F101DF /* ExamProtocols.swift in Sources */,
 				84E56C2B2306C36D00696058 /* GradientView.swift in Sources */,
+				8438965E230AE3B400F101DF /* ExamInteractor.swift in Sources */,
 				84E56C1A2306B7CE00696058 /* WalkThroughInteractor.swift in Sources */,
 				84420F5F23068303001C1A5E /* SignInInteractor.swift in Sources */,
+				84389675230AE40400F101DF /* ProfileRouter.swift in Sources */,
+				8438966A230AE3E000F101DF /* WishlistProtocols.swift in Sources */,
 				84E56C252306B80300696058 /* HomeViewController.swift in Sources */,
+				84389677230AE40400F101DF /* ProfileProtocols.swift in Sources */,
 				84E56C312306FE2500696058 /* BottomLineTextField.swift in Sources */,
+				84389674230AE40400F101DF /* ProfilePresenter.swift in Sources */,
+				84389678230AE40400F101DF /* ProfileInteractor.swift in Sources */,
+				84389684230AE4BF00F101DF /* OnlineProtocols.swift in Sources */,
 				84E56C0B2306B75B00696058 /* ForgotPasswordProtocols.swift in Sources */,
 				84E56C232306B80300696058 /* HomePresenter.swift in Sources */,
+				84389668230AE3E000F101DF /* WishlistRouter.swift in Sources */,
 				84E56C162306B7CE00696058 /* WalkThroughPresenter.swift in Sources */,
 				84420F5E23068303001C1A5E /* SignInProtocols.swift in Sources */,
 				8489B40B2307143000BDE491 /* RoundedButton.swift in Sources */,
+				8438965C230AE3B400F101DF /* ExamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

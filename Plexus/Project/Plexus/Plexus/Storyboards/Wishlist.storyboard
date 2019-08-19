@@ -10,14 +10,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Wishlist View Controller-->
         <scene sceneID="KOJ-kP-NUJ">
             <objects>
-                <viewController id="8L7-r0-NFy" sceneMemberID="viewController">
+                <viewController id="8L7-r0-NFy" customClass="WishlistViewController" customModule="Plexus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Zz-5N-3Ss">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wishlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLf-lK-IGk">
+                                <rect key="frame" x="177" y="418" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oLf-lK-IGk" firstAttribute="centerY" secondItem="e09-SO-wjp" secondAttribute="centerY" id="cwW-3v-qvU"/>
+                            <constraint firstItem="oLf-lK-IGk" firstAttribute="centerX" secondItem="e09-SO-wjp" secondAttribute="centerX" id="e5B-KS-lho"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="e09-SO-wjp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="wishlist_unselected" selectedImage="wishlist_selected" id="R3c-25-9SF"/>

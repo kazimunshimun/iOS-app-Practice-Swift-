@@ -10,14 +10,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Online View Controller-->
         <scene sceneID="rhe-x2-6CB">
             <objects>
-                <viewController id="dSz-FG-hh5" sceneMemberID="viewController">
+                <viewController id="dSz-FG-hh5" customClass="OnlineViewController" customModule="Plexus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cl8-b8-n2S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fX6-58-6i9">
+                                <rect key="frame" x="182.5" y="418" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fX6-58-6i9" firstAttribute="centerY" secondItem="Zar-Ox-WIX" secondAttribute="centerY" id="OEX-y8-Yl5"/>
+                            <constraint firstItem="fX6-58-6i9" firstAttribute="centerX" secondItem="Zar-Ox-WIX" secondAttribute="centerX" id="zsm-Lr-Zs2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Zar-Ox-WIX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="online_courses_selected" selectedImage="online_courses_unselected" id="F2T-sa-l2a"/>

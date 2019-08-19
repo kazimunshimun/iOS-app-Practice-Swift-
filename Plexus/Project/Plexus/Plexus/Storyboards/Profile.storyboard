@@ -10,14 +10,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="YwZ-MK-ncS">
             <objects>
-                <viewController id="fwW-pd-3yd" sceneMemberID="viewController">
+                <viewController id="fwW-pd-3yd" customClass="ProfileViewController" customModule="Plexus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L99-3a-Hv8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRZ-R7-C2x">
+                                <rect key="frame" x="182.5" y="418" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wRZ-R7-C2x" firstAttribute="centerX" secondItem="LY5-Ih-wxq" secondAttribute="centerX" id="KIr-Qr-PmP"/>
+                            <constraint firstItem="wRZ-R7-C2x" firstAttribute="centerY" secondItem="LY5-Ih-wxq" secondAttribute="centerY" id="iQC-82-jfh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LY5-Ih-wxq"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="profile_unselected" selectedImage="profile_unselected" id="qnr-8r-CtG"/>

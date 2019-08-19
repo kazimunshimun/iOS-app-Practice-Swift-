@@ -10,14 +10,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Exam View Controller-->
         <scene sceneID="VyM-V5-pgU">
             <objects>
-                <viewController id="hry-hH-nX5" sceneMemberID="viewController">
+                <viewController id="hry-hH-nX5" customClass="ExamViewController" customModule="Plexus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xpI-ji-BKq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3f-Wf-str">
+                                <rect key="frame" x="186" y="418" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="v3f-Wf-str" firstAttribute="centerY" secondItem="O8v-8k-2NR" secondAttribute="centerY" id="4RO-47-Y3Q"/>
+                            <constraint firstItem="v3f-Wf-str" firstAttribute="centerX" secondItem="O8v-8k-2NR" secondAttribute="centerX" id="UAY-Vj-S0y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O8v-8k-2NR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="exams_unselected" selectedImage="exams_selected" id="pCH-tf-r8u"/>

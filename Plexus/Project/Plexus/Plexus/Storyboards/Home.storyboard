@@ -10,14 +10,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="euR-uF-wNZ">
             <objects>
-                <viewController id="y49-6w-cxr" sceneMemberID="viewController">
+                <viewController id="y49-6w-cxr" customClass="HomeViewController" customModule="Plexus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M5F-sc-aET">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdu-KR-L9G">
+                                <rect key="frame" x="184" y="418" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sdu-KR-L9G" firstAttribute="centerY" secondItem="67t-IU-BxA" secondAttribute="centerY" id="MIv-X9-A4I"/>
+                            <constraint firstItem="Sdu-KR-L9G" firstAttribute="centerX" secondItem="67t-IU-BxA" secondAttribute="centerX" id="e52-rI-pbC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="67t-IU-BxA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="home" selectedImage="home" id="mvD-o8-5H4">
