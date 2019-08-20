@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bannerCell" rowHeight="90" id="KGk-i7-Jjw" customClass="BannerCell" customModule="Plexus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkv-RM-VDw" customClass="RoundedCornersShadowView" customModule="Plexus" customModuleProvider="target">
+                        <rect key="frame" x="16" y="0.0" width="288" height="81.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signin_button_back" translatesAutoresizingMaskIntoConstraints="NO" id="LJ3-3l-eHd">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="81.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="android_studio_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Ag9-0F-hjq">
+                                <rect key="frame" x="20" y="13" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="1yq-9D-PPD"/>
+                                    <constraint firstAttribute="height" constant="56" id="w9m-pX-55e"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYB-bG-PNV">
+                                <rect key="frame" x="84" y="23.5" width="188" height="35"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Widgets are UI components such as..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2se-36-K7P">
+                                        <rect key="frame" x="8" y="22" width="187.5" height="13"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjK-rp-DkS">
+                                        <rect key="frame" x="8" y="0.0" width="54" height="14"/>
+                                        <string key="text">Android UI
+</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2se-36-K7P" firstAttribute="leading" secondItem="TjK-rp-DkS" secondAttribute="leading" id="0bI-tu-dch"/>
+                                    <constraint firstItem="TjK-rp-DkS" firstAttribute="top" secondItem="HYB-bG-PNV" secondAttribute="top" id="9bY-HI-1ki"/>
+                                    <constraint firstItem="2se-36-K7P" firstAttribute="top" secondItem="TjK-rp-DkS" secondAttribute="bottom" constant="8" id="hi7-r6-eY9"/>
+                                    <constraint firstAttribute="height" constant="35" id="pTT-9T-9zX"/>
+                                    <constraint firstItem="2se-36-K7P" firstAttribute="leading" secondItem="HYB-bG-PNV" secondAttribute="leading" constant="8" id="zsO-W2-pGn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HYB-bG-PNV" secondAttribute="trailing" constant="16" id="ESp-y1-oEw"/>
+                            <constraint firstItem="HYB-bG-PNV" firstAttribute="centerY" secondItem="Ag9-0F-hjq" secondAttribute="centerY" id="Jvz-Yi-bfq"/>
+                            <constraint firstItem="LJ3-3l-eHd" firstAttribute="leading" secondItem="nkv-RM-VDw" secondAttribute="leading" id="KDv-Uj-NkC"/>
+                            <constraint firstAttribute="trailing" secondItem="LJ3-3l-eHd" secondAttribute="trailing" id="Mg5-kL-yX1"/>
+                            <constraint firstItem="Ag9-0F-hjq" firstAttribute="leading" secondItem="nkv-RM-VDw" secondAttribute="leading" constant="20" id="ek7-55-2t9"/>
+                            <constraint firstItem="HYB-bG-PNV" firstAttribute="leading" secondItem="Ag9-0F-hjq" secondAttribute="trailing" constant="8" id="lb5-kf-nku"/>
+                            <constraint firstAttribute="bottom" secondItem="LJ3-3l-eHd" secondAttribute="bottom" id="mwN-FP-GuZ"/>
+                            <constraint firstItem="LJ3-3l-eHd" firstAttribute="top" secondItem="nkv-RM-VDw" secondAttribute="top" id="q6l-Xr-3e5"/>
+                            <constraint firstItem="Ag9-0F-hjq" firstAttribute="centerY" secondItem="nkv-RM-VDw" secondAttribute="centerY" id="uWQ-XZ-jMk"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="nkv-RM-VDw" secondAttribute="trailing" constant="16" id="7Cz-YW-kWT"/>
+                    <constraint firstAttribute="bottom" secondItem="nkv-RM-VDw" secondAttribute="bottom" constant="8" id="Uyt-iQ-hUQ"/>
+                    <constraint firstItem="nkv-RM-VDw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="i99-xF-IsL"/>
+                    <constraint firstItem="nkv-RM-VDw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pwf-jn-IyE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="131.8840579710145" y="131.25"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="android_studio_icon" width="56" height="56"/>
+        <image name="signin_button_back" width="315" height="50"/>
+    </resources>
+</document>

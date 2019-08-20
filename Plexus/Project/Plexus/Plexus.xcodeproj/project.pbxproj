@@ -12,6 +12,12 @@
 		843262EE23067D7D00B4A268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843262EC23067D7D00B4A268 /* Main.storyboard */; };
 		843262F023067D7F00B4A268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843262EF23067D7F00B4A268 /* Assets.xcassets */; };
 		843262F323067D7F00B4A268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843262F123067D7F00B4A268 /* LaunchScreen.storyboard */; };
+		8434BEB7230C573B00AD58C0 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434BEB5230C573B00AD58C0 /* BannerCell.swift */; };
+		8434BEB8230C573B00AD58C0 /* BannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8434BEB6230C573B00AD58C0 /* BannerCell.xib */; };
+		8434BEBB230C575900AD58C0 /* MostViewedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434BEB9230C575900AD58C0 /* MostViewedCell.swift */; };
+		8434BEBC230C575900AD58C0 /* MostViewedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8434BEBA230C575900AD58C0 /* MostViewedCell.xib */; };
+		8434BEBE230C5C0F00AD58C0 /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434BEBD230C5C0F00AD58C0 /* DiscoverCell.swift */; };
+		8434BEC0230C5C2900AD58C0 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434BEBF230C5C2900AD58C0 /* CourseCell.swift */; };
 		8438965A230AE3B400F101DF /* ExamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389654230AE3B400F101DF /* ExamPresenter.swift */; };
 		8438965B230AE3B400F101DF /* ExamRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389655230AE3B400F101DF /* ExamRouter.swift */; };
 		8438965C230AE3B400F101DF /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84389656230AE3B400F101DF /* ExamViewController.swift */; };
@@ -82,6 +88,12 @@
 		843262EF23067D7F00B4A268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843262F223067D7F00B4A268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843262F423067D7F00B4A268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8434BEB5230C573B00AD58C0 /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		8434BEB6230C573B00AD58C0 /* BannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCell.xib; sourceTree = "<group>"; };
+		8434BEB9230C575900AD58C0 /* MostViewedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViewedCell.swift; sourceTree = "<group>"; };
+		8434BEBA230C575900AD58C0 /* MostViewedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MostViewedCell.xib; sourceTree = "<group>"; };
+		8434BEBD230C5C0F00AD58C0 /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
+		8434BEBF230C5C2900AD58C0 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		84389654230AE3B400F101DF /* ExamPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamPresenter.swift; sourceTree = "<group>"; };
 		84389655230AE3B400F101DF /* ExamRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamRouter.swift; sourceTree = "<group>"; };
 		84389656230AE3B400F101DF /* ExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +272,11 @@
 				84389689230AE96800F101DF /* WishlistCell.xib */,
 				84389694230B0D3600F101DF /* TopRatedParentCell.swift */,
 				84389696230B0D4700F101DF /* CompletedParentCell.swift */,
+				8434BEB5230C573B00AD58C0 /* BannerCell.swift */,
+				8434BEB6230C573B00AD58C0 /* BannerCell.xib */,
+				8434BEB9230C575900AD58C0 /* MostViewedCell.swift */,
+				8434BEBA230C575900AD58C0 /* MostViewedCell.xib */,
+				8434BEBD230C5C0F00AD58C0 /* DiscoverCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -269,6 +286,7 @@
 			children = (
 				8438968F230B091400F101DF /* TopRatedCell.swift */,
 				84389691230B092500F101DF /* CompletedCell.swift */,
+				8434BEBF230C5C2900AD58C0 /* CourseCell.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -456,8 +474,10 @@
 				8439A0CC2309B1E200E458F2 /* Home.storyboard in Resources */,
 				8439A0D42309B21900E458F2 /* Online.storyboard in Resources */,
 				8439A0D02309B1FE00E458F2 /* Wishlist.storyboard in Resources */,
+				8434BEBC230C575900AD58C0 /* MostViewedCell.xib in Resources */,
 				8439A0CA2309B0BA00E458F2 /* TabMenu.storyboard in Resources */,
 				843262F023067D7F00B4A268 /* Assets.xcassets in Resources */,
+				8434BEB8230C573B00AD58C0 /* BannerCell.xib in Resources */,
 				8438968B230AE96800F101DF /* WishlistCell.xib in Resources */,
 				843262EE23067D7D00B4A268 /* Main.storyboard in Resources */,
 			);
@@ -533,6 +553,7 @@
 				84E56C272306B80300696058 /* HomeInteractor.swift in Sources */,
 				84420F5B23068303001C1A5E /* SignInPresenter.swift in Sources */,
 				84E56C2E2306C92000696058 /* ColorUtils.swift in Sources */,
+				8434BEBE230C5C0F00AD58C0 /* DiscoverCell.swift in Sources */,
 				843262EB23067D7D00B4A268 /* ViewController.swift in Sources */,
 				84420F5C23068303001C1A5E /* SignInRouter.swift in Sources */,
 				84E2A2CC23084A5000888EA8 /* WalkthroughBuilder.swift in Sources */,
@@ -561,9 +582,11 @@
 				84389676230AE40400F101DF /* ProfileViewController.swift in Sources */,
 				8438965D230AE3B400F101DF /* ExamProtocols.swift in Sources */,
 				84E56C2B2306C36D00696058 /* GradientView.swift in Sources */,
+				8434BEC0230C5C2900AD58C0 /* CourseCell.swift in Sources */,
 				8438965E230AE3B400F101DF /* ExamInteractor.swift in Sources */,
 				84E56C1A2306B7CE00696058 /* WalkThroughInteractor.swift in Sources */,
 				84420F5F23068303001C1A5E /* SignInInteractor.swift in Sources */,
+				8434BEB7230C573B00AD58C0 /* BannerCell.swift in Sources */,
 				84389675230AE40400F101DF /* ProfileRouter.swift in Sources */,
 				8438966A230AE3E000F101DF /* WishlistProtocols.swift in Sources */,
 				84E56C252306B80300696058 /* HomeViewController.swift in Sources */,
@@ -571,6 +594,7 @@
 				8438968E230AF11D00F101DF /* RoundedCornersShadowView.swift in Sources */,
 				8438968A230AE96800F101DF /* WishlistCell.swift in Sources */,
 				84E56C312306FE2500696058 /* BottomLineTextField.swift in Sources */,
+				8434BEBB230C575900AD58C0 /* MostViewedCell.swift in Sources */,
 				84389674230AE40400F101DF /* ProfilePresenter.swift in Sources */,
 				84389678230AE40400F101DF /* ProfileInteractor.swift in Sources */,
 				84389684230AE4BF00F101DF /* OnlineProtocols.swift in Sources */,

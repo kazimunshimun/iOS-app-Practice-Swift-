@@ -12,10 +12,56 @@ import UIKit
 
 class HomeViewController: UIViewController, HomeViewProtocol {
 
-	var presenter: HomePresenterProtocol?
+    @IBOutlet weak var homeTableView: UITableView!
+    var presenter: HomePresenterProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
     }
 
+    private func setupViews() {
+        homeTableView.delegate = self
+        homeTableView.dataSource = self
+        homeTableView.register(UINib(nibName: "BannerCell", bundle: nil), forCellReuseIdentifier: "bannerCell")
+        homeTableView.register(UINib(nibName: "MostViewedCell", bundle: nil), forCellReuseIdentifier: "mostViewedCell")
+    }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        var cellWidth : CGFloat = 190.0;
+        
+        if indexPath.row == 0 {
+            cellWidth = 276.0
+        } else if indexPath.row == 1 {
+            cellWidth = 90.0
+        }
+        return cellWidth;
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "discoverTableCell", for: indexPath) as! DiscoverCell
+            cell.layer.backgroundColor = UIColor.clear.cgColor
+            return cell
+        } else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "bannerCell", for: indexPath) as! BannerCell
+            cell.layer.backgroundColor = UIColor.clear.cgColor
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "mostViewedCell", for: indexPath) as! MostViewedCell
+            if indexPath.row > 2 {
+                cell.mostViewedLabelHeight.constant = 0
+            }
+            cell.layer.backgroundColor = UIColor.clear.cgColor
+            return cell
+        }
+        
+    }
 }
