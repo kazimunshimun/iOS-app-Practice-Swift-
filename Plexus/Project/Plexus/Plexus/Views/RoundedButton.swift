@@ -11,7 +11,6 @@ import UIKit
 @IBDesignable
 class RoundedButton: UIButton {
 
-    var shadowAdded: Bool = false
     @IBInspectable public var cornerRadius:CGFloat {
         get {
             return layer.cornerRadius

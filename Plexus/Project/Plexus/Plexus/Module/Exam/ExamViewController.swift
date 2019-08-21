@@ -12,10 +12,65 @@ import UIKit
 
 class ExamViewController: UIViewController, ExamViewProtocol {
 
-	var presenter: ExamPresenterProtocol?
+    @IBOutlet weak var examCollectionView: UICollectionView!
+    var presenter: ExamPresenterProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+      //  examCollectionView.register(ExamHeaderView.self,forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,withReuseIdentifier: "examHeader")
+        
+        examCollectionView.register(UINib(nibName: "HeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView")
     }
 
+    private func setupViews() {
+        let collectionViewFlowLayout = UICollectionViewFlowLayout()
+        collectionViewFlowLayout.estimatedItemSize = CGSize(width: examCollectionView.frame.width, height: 72)
+        collectionViewFlowLayout.headerReferenceSize = CGSize(width: examCollectionView.frame.width, height: 308)
+        examCollectionView.collectionViewLayout = collectionViewFlowLayout
+    }
+    
+    override func viewDidLayoutSubviews() {
+        setupViews()
+    }
 }
+
+extension ExamViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    func collectionView(_ collectionView: UICollectionView,
+                                 viewForSupplementaryElementOfKind kind: String,
+                                 at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard
+                let headerView = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: kind,
+                    withReuseIdentifier: "headerView",
+                    for: indexPath) as? HeaderView
+                else {
+                    fatalError("Invalid view type")
+            }
+            return headerView
+        default:
+            assert(false, "Invalid element type")
+        }
+    }
+    
+    /*
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        return CGSize(width: collectionView.bounds.width, height: 308)
+    }
+    */
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "lessonCell", for: indexPath) as! LessonCell
+        return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+}
+

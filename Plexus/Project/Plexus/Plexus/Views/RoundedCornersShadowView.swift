@@ -13,6 +13,16 @@ import UIKit
 class RoundedCornersShadowView: UIView {
     
     var shadowAdded: Bool = false
+    
+    @IBInspectable public var shadow: Bool {
+        get {
+            return shadowAdded
+        }
+        set {
+            shadowAdded = newValue
+            draw(self.frame)
+        }
+    }
     @IBInspectable public var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -26,8 +36,8 @@ class RoundedCornersShadowView: UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        if shadowAdded { return }
-        shadowAdded = true
+        if !shadowAdded { return }
+        //shadowAdded = true
         
         let shadowLayer = UIView(frame: self.frame)
         shadowLayer.backgroundColor = UIColor.clear

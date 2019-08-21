@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerView" id="U6b-Vx-4bR" customClass="HeaderView" customModule="Plexus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="344"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNZ-5h-6sl">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="344"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5MV-f0-8I6" customClass="RoundedCornersShadowView" customModule="Plexus" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="most_viewed_course" translatesAutoresizingMaskIntoConstraints="NO" id="0UZ-hN-Mot">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JS9-Kq-mbk">
+                                    <rect key="frame" x="0.0" y="110" width="320" height="80"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbl-y1-8Wt">
+                                            <rect key="frame" x="8" y="27" width="242" height="26.5"/>
+                                            <string key="text">The Data Science Course 2019: Complete Data 
+Science Bootcamp</string>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.72126677849999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="CNu-gx-A0D"/>
+                                        <constraint firstItem="kbl-y1-8Wt" firstAttribute="leading" secondItem="JS9-Kq-mbk" secondAttribute="leading" constant="8" id="aZ8-f5-gx9"/>
+                                        <constraint firstItem="kbl-y1-8Wt" firstAttribute="centerY" secondItem="JS9-Kq-mbk" secondAttribute="centerY" id="cwe-zO-hWE"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="0UZ-hN-Mot" firstAttribute="top" secondItem="5MV-f0-8I6" secondAttribute="top" id="2Rw-ox-o52"/>
+                                <constraint firstAttribute="trailing" secondItem="0UZ-hN-Mot" secondAttribute="trailing" id="GN5-Ym-CNP"/>
+                                <constraint firstAttribute="bottom" secondItem="JS9-Kq-mbk" secondAttribute="bottom" id="N4y-32-sDn"/>
+                                <constraint firstItem="0UZ-hN-Mot" firstAttribute="leading" secondItem="5MV-f0-8I6" secondAttribute="leading" id="TlV-LR-p4s"/>
+                                <constraint firstAttribute="trailing" secondItem="JS9-Kq-mbk" secondAttribute="trailing" id="VDV-Hr-I6V"/>
+                                <constraint firstItem="JS9-Kq-mbk" firstAttribute="leading" secondItem="5MV-f0-8I6" secondAttribute="leading" id="cJZ-yk-bVi"/>
+                                <constraint firstAttribute="bottom" secondItem="0UZ-hN-Mot" secondAttribute="bottom" id="sHe-vT-of6"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYn-8f-Igy">
+                            <rect key="frame" x="16" y="206" width="288" height="128.5"/>
+                            <mutableString key="text">Data scientist is one of the best suited professions to thrive this century. It is digital, programming-oriented, and analytical. Therefore, it comes as no surprise that the demand for data scientists has been surging in the job marketplace. However, supply has been very limited. It is difficult to acquire the skills necessary to be hired as a data scientist.  Universities have been slow at creating specialized data science programs. (not to mention that the ones that exist are very expensive and time consuming)  </mutableString>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="mYn-8f-Igy" firstAttribute="leading" secondItem="RNZ-5h-6sl" secondAttribute="leading" constant="16" id="6YC-om-Hr3"/>
+                        <constraint firstAttribute="trailing" secondItem="mYn-8f-Igy" secondAttribute="trailing" constant="16" id="8GK-53-btN"/>
+                        <constraint firstItem="5MV-f0-8I6" firstAttribute="top" secondItem="RNZ-5h-6sl" secondAttribute="top" id="Rev-2k-tTf"/>
+                        <constraint firstAttribute="trailing" secondItem="5MV-f0-8I6" secondAttribute="trailing" id="YBx-75-EBQ"/>
+                        <constraint firstItem="mYn-8f-Igy" firstAttribute="top" secondItem="5MV-f0-8I6" secondAttribute="bottom" constant="16" id="dPq-ky-uca"/>
+                        <constraint firstItem="5MV-f0-8I6" firstAttribute="leading" secondItem="RNZ-5h-6sl" secondAttribute="leading" id="gRw-y1-2s1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="RNZ-5h-6sl" secondAttribute="trailing" id="2CI-yz-iFI"/>
+                <constraint firstItem="RNZ-5h-6sl" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="CGN-N3-Tjh"/>
+                <constraint firstItem="RNZ-5h-6sl" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" constant="34" id="F6c-ga-8sg"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="top" secondItem="RNZ-5h-6sl" secondAttribute="top" constant="44" id="ZDH-Ni-ozm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <point key="canvasLocation" x="37.681159420289859" y="133.25892857142856"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="most_viewed_course" width="337" height="190"/>
+    </resources>
+</document>

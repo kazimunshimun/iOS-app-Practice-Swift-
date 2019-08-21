@@ -51,6 +51,10 @@
 		8439A0D02309B1FE00E458F2 /* Wishlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439A0CF2309B1FE00E458F2 /* Wishlist.storyboard */; };
 		8439A0D22309B20600E458F2 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439A0D12309B20600E458F2 /* Profile.storyboard */; };
 		8439A0D42309B21900E458F2 /* Online.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8439A0D32309B21900E458F2 /* Online.storyboard */; };
+		8439F8FC230D9D4200FD9EC2 /* LessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439F8FB230D9D4200FD9EC2 /* LessonCell.swift */; };
+		8439F8FE230D9D6400FD9EC2 /* ExamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439F8FD230D9D6400FD9EC2 /* ExamHeaderView.swift */; };
+		8439F903230DA83F00FD9EC2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439F901230DA83F00FD9EC2 /* HeaderView.swift */; };
+		8439F904230DA83F00FD9EC2 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439F902230DA83F00FD9EC2 /* HeaderView.xib */; };
 		84420F5B23068303001C1A5E /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5523068303001C1A5E /* SignInPresenter.swift */; };
 		84420F5C23068303001C1A5E /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5623068303001C1A5E /* SignInRouter.swift */; };
 		84420F5D23068303001C1A5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5723068303001C1A5E /* SignInViewController.swift */; };
@@ -127,6 +131,10 @@
 		8439A0CF2309B1FE00E458F2 /* Wishlist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wishlist.storyboard; sourceTree = "<group>"; };
 		8439A0D12309B20600E458F2 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		8439A0D32309B21900E458F2 /* Online.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Online.storyboard; sourceTree = "<group>"; };
+		8439F8FB230D9D4200FD9EC2 /* LessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCell.swift; sourceTree = "<group>"; };
+		8439F8FD230D9D6400FD9EC2 /* ExamHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamHeaderView.swift; sourceTree = "<group>"; };
+		8439F901230DA83F00FD9EC2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		8439F902230DA83F00FD9EC2 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		84420F5523068303001C1A5E /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		84420F5623068303001C1A5E /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
 		84420F5723068303001C1A5E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +295,10 @@
 				8438968F230B091400F101DF /* TopRatedCell.swift */,
 				84389691230B092500F101DF /* CompletedCell.swift */,
 				8434BEBF230C5C2900AD58C0 /* CourseCell.swift */,
+				8439F8FB230D9D4200FD9EC2 /* LessonCell.swift */,
+				8439F8FD230D9D6400FD9EC2 /* ExamHeaderView.swift */,
+				8439F901230DA83F00FD9EC2 /* HeaderView.swift */,
+				8439F902230DA83F00FD9EC2 /* HeaderView.xib */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -468,6 +480,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8439F904230DA83F00FD9EC2 /* HeaderView.xib in Resources */,
 				843262F323067D7F00B4A268 /* LaunchScreen.storyboard in Resources */,
 				8439A0CE2309B1F200E458F2 /* Exam.storyboard in Resources */,
 				8439A0D22309B20600E458F2 /* Profile.storyboard in Resources */,
@@ -604,6 +617,9 @@
 				84389668230AE3E000F101DF /* WishlistRouter.swift in Sources */,
 				84E56C162306B7CE00696058 /* WalkThroughPresenter.swift in Sources */,
 				84420F5E23068303001C1A5E /* SignInProtocols.swift in Sources */,
+				8439F903230DA83F00FD9EC2 /* HeaderView.swift in Sources */,
+				8439F8FC230D9D4200FD9EC2 /* LessonCell.swift in Sources */,
+				8439F8FE230D9D6400FD9EC2 /* ExamHeaderView.swift in Sources */,
 				8489B40B2307143000BDE491 /* RoundedButton.swift in Sources */,
 				8438965C230AE3B400F101DF /* ExamViewController.swift in Sources */,
 			);
