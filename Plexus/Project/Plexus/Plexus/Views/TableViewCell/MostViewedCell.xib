@@ -31,9 +31,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOz-xe-thD" customClass="RoundedCornersShadowView" customModule="Plexus" customModuleProvider="target">
                         <rect key="frame" x="16" y="33" width="288" height="157"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="most_viewed_course" translatesAutoresizingMaskIntoConstraints="NO" id="0Qs-4a-sPd">
-                                <rect key="frame" x="0.0" y="0.0" width="304" height="157"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="most_viewed_course" translatesAutoresizingMaskIntoConstraints="NO" id="0Qs-4a-sPd">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="157"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ToH-V0-BOh">
                                 <rect key="frame" x="0.0" y="77" width="288" height="80"/>
@@ -59,7 +58,11 @@ Science Bootcamp</string>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ToH-V0-BOh" secondAttribute="bottom" id="B6W-a5-QPS"/>
                             <constraint firstAttribute="trailing" secondItem="ToH-V0-BOh" secondAttribute="trailing" id="SMp-ck-MaW"/>
+                            <constraint firstItem="0Qs-4a-sPd" firstAttribute="leading" secondItem="ZOz-xe-thD" secondAttribute="leading" id="TfE-hD-KZ0"/>
                             <constraint firstItem="ToH-V0-BOh" firstAttribute="leading" secondItem="ZOz-xe-thD" secondAttribute="leading" id="Z1f-ps-6Ld"/>
+                            <constraint firstItem="0Qs-4a-sPd" firstAttribute="top" secondItem="ZOz-xe-thD" secondAttribute="top" id="bYV-gd-Vuy"/>
+                            <constraint firstAttribute="trailing" secondItem="0Qs-4a-sPd" secondAttribute="trailing" id="gdJ-GP-k2H"/>
+                            <constraint firstAttribute="bottom" secondItem="0Qs-4a-sPd" secondAttribute="bottom" id="n0p-gm-tbq"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -86,6 +89,6 @@ Science Bootcamp</string>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="most_viewed_course" width="382" height="235"/>
+        <image name="most_viewed_course" width="337" height="190"/>
     </resources>
 </document>

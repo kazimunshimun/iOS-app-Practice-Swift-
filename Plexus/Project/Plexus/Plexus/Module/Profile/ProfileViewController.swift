@@ -30,7 +30,10 @@ class ProfileViewController: UIViewController, ProfileViewProtocol {
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let cellWidth : CGFloat = 166.0;
+        var cellWidth : CGFloat = 179.0;
+        if indexPath.row == 1 {
+            cellWidth = 198.0
+        }
         return cellWidth;
     }
     

@@ -23,13 +23,13 @@
                         <rect key="frame" x="16" y="16" width="331" height="131.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn Python like a Professional! Start from the basics and go all the way to creating your..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAf-Xv-Ql5">
-                                <rect key="frame" x="16" y="25" width="196" height="38.5"/>
+                                <rect key="frame" x="16" y="25" width="180" height="38.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See full review &gt;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVj-zs-hYJ">
-                                <rect key="frame" x="16" y="69.5" width="196" height="13"/>
+                                <rect key="frame" x="16" y="69.5" width="180" height="13"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -37,19 +37,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szf-k9-MTN" customClass="CosmosView" customModule="Cosmos">
                                 <rect key="frame" x="16" y="94.5" width="120" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="ywb-CY-YZB"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="star_full"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star_empty"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="updateOnTouch" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wishlist_course_2" translatesAutoresizingMaskIntoConstraints="NO" id="6qX-jX-H8Z">
-                                <rect key="frame" x="246" y="2" width="85" height="128"/>
+                                <rect key="frame" x="230" y="5.5" width="85" height="121"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="ASJ-cl-ZbF"/>
-                                    <constraint firstAttribute="height" constant="128" id="qio-IY-Uzo"/>
+                                    <constraint firstAttribute="height" constant="121" id="qio-IY-Uzo"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -58,7 +62,7 @@
                             <constraint firstItem="ZVj-zs-hYJ" firstAttribute="top" secondItem="WAf-Xv-Ql5" secondAttribute="bottom" constant="6" id="08T-iu-aOV"/>
                             <constraint firstItem="6qX-jX-H8Z" firstAttribute="leading" secondItem="WAf-Xv-Ql5" secondAttribute="trailing" constant="34" id="EBb-z9-fzW"/>
                             <constraint firstItem="6qX-jX-H8Z" firstAttribute="centerY" secondItem="2n1-ZP-8qQ" secondAttribute="centerY" id="LgD-TW-PKi"/>
-                            <constraint firstAttribute="trailing" secondItem="6qX-jX-H8Z" secondAttribute="trailing" id="NNV-8P-DzV"/>
+                            <constraint firstAttribute="trailing" secondItem="6qX-jX-H8Z" secondAttribute="trailing" constant="16" id="NNV-8P-DzV"/>
                             <constraint firstItem="szf-k9-MTN" firstAttribute="top" secondItem="ZVj-zs-hYJ" secondAttribute="bottom" constant="12" id="XgW-Hf-AO7"/>
                             <constraint firstItem="ZVj-zs-hYJ" firstAttribute="trailing" secondItem="WAf-Xv-Ql5" secondAttribute="trailing" id="dMZ-15-M9M"/>
                             <constraint firstItem="WAf-Xv-Ql5" firstAttribute="leading" secondItem="2n1-ZP-8qQ" secondAttribute="leading" constant="16" id="gmo-ac-YBg"/>
@@ -88,6 +92,6 @@
     <resources>
         <image name="star_empty" width="15.5" height="15.5"/>
         <image name="star_full" width="15.5" height="15.5"/>
-        <image name="wishlist_course_2" width="130" height="166"/>
+        <image name="wishlist_course_2" width="85" height="121"/>
     </resources>
 </document>
