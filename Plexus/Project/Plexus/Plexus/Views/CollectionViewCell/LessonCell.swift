@@ -10,4 +10,7 @@ import UIKit
 
 class LessonCell: UICollectionViewCell {
     
+    @IBOutlet weak var lessonNumberLabel: UILabel!
+    @IBOutlet weak var gradientView: UIView!
+    @IBOutlet weak var lessonBackgroundView: RoundedCornersShadowView!
 }

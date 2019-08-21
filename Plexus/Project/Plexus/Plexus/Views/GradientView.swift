@@ -52,4 +52,17 @@ class GradientView: UIView {
         self.layer.addSublayer(gradientLayer)
     }
     
+    static func getGradientLayer (_ firstColor: String, _ lastColor: String, _ frame: CGRect) -> CAGradientLayer {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        //print("x: \(frame.origin.x) y: \(frame.origin.y)")
+        //print("w: \(frame.width) h: \(frame.height)")
+        gradientLayer.colors = [ColorUtils.hexStringToUIColor(hex: firstColor).cgColor,
+                                ColorUtils.hexStringToUIColor(hex: lastColor).cgColor]
+        
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+        return gradientLayer
+    }
+    
 }

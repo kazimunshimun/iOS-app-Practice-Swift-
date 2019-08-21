@@ -47,6 +47,10 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywy-Sm-V6z" customClass="RoundedCornersShadowView" customModule="Plexus" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="10" width="337" height="52"/>
                                                     <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlk-Ra-1tP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="337" height="52"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 Miniutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qp-RV-hOb">
                                                             <rect key="frame" x="140" y="19.5" width="57" height="13"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
@@ -78,21 +82,25 @@
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="17"/>
+                                                                    <real key="value" value="18"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="shadowAdded" value="NO"/>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.70196078429999997" green="0.1960784314" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="1qp-RV-hOb" firstAttribute="centerX" secondItem="ywy-Sm-V6z" secondAttribute="centerX" id="8D0-kh-DEH"/>
                                                         <constraint firstItem="1qp-RV-hOb" firstAttribute="centerY" secondItem="ywy-Sm-V6z" secondAttribute="centerY" id="B3B-Nu-xNt"/>
+                                                        <constraint firstItem="wlk-Ra-1tP" firstAttribute="leading" secondItem="ywy-Sm-V6z" secondAttribute="leading" id="bva-A9-mtS"/>
                                                         <constraint firstItem="Iob-rn-ate" firstAttribute="centerY" secondItem="ywy-Sm-V6z" secondAttribute="centerY" id="gdA-nV-SHc"/>
                                                         <constraint firstAttribute="trailing" secondItem="TmQ-20-VFL" secondAttribute="trailing" constant="8" id="iLW-Sv-3AU"/>
                                                         <constraint firstItem="Iob-rn-ate" firstAttribute="leading" secondItem="ywy-Sm-V6z" secondAttribute="leading" constant="20" id="rYK-UY-NTs"/>
                                                         <constraint firstItem="TmQ-20-VFL" firstAttribute="centerY" secondItem="ywy-Sm-V6z" secondAttribute="centerY" id="t9n-R5-Ybc"/>
+                                                        <constraint firstAttribute="bottom" secondItem="wlk-Ra-1tP" secondAttribute="bottom" id="wWP-yG-alb"/>
+                                                        <constraint firstItem="wlk-Ra-1tP" firstAttribute="top" secondItem="ywy-Sm-V6z" secondAttribute="top" id="xQW-l5-8ha"/>
+                                                        <constraint firstAttribute="trailing" secondItem="wlk-Ra-1tP" secondAttribute="trailing" id="zov-WR-5xc"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
@@ -110,6 +118,11 @@
                                             <constraint firstAttribute="trailing" secondItem="ywy-Sm-V6z" secondAttribute="trailing" constant="10" id="ucP-ba-SHA"/>
                                         </constraints>
                                         <size key="customSize" width="357" height="72"/>
+                                        <connections>
+                                            <outlet property="gradientView" destination="wlk-Ra-1tP" id="sCS-7K-kXR"/>
+                                            <outlet property="lessonBackgroundView" destination="ywy-Sm-V6z" id="7ou-JB-zxh"/>
+                                            <outlet property="lessonNumberLabel" destination="Iob-rn-ate" id="tQT-La-cwr"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="examHeader" id="Fb8-Mq-Z6H" customClass="ExamHeaderView" customModule="Plexus" customModuleProvider="target">
