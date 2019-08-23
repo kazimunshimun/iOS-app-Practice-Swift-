@@ -10,7 +10,7 @@
 
 import UIKit
 
-class TestViewController: UIViewController, TestViewProtocol {
+class TestViewController: UIViewController, TestViewProtocol, UITextViewDelegate {
 
 	var presenter: TestPresenterProtocol?
 
@@ -25,6 +25,7 @@ class TestViewController: UIViewController, TestViewProtocol {
 	override func viewDidLoad() {
         super.viewDidLoad()
         initialTotalTime = examTimeRemainingCounter
+        answerTextView.delegate = self
         startExamTimer()
     }
 
@@ -48,10 +49,18 @@ class TestViewController: UIViewController, TestViewProtocol {
         } else {
             timerForTest.invalidate()
             //go back to basic callback
-
+            answerTextView.isEditable = false
+            submitButton.isHidden = false
         }
     }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        submitButton.isHidden = false
+    }
+    
     @IBAction func submitAnswerClicked(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Exam", bundle: nil)
+        let congratsViewController = storyBoard.instantiateViewController(withIdentifier: "congratsView") as! CongratsViewController
+        self.show(congratsViewController, sender: nil)
     }
 }
