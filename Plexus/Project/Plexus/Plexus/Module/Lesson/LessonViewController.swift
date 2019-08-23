@@ -10,13 +10,16 @@
 
 import UIKit
 
-class LessonViewController: UIViewController, LessonViewProtocol {
-
+class LessonViewController: UIViewController, LessonViewProtocol, UITextViewDelegate {
+    
+    @IBOutlet weak var startExamButton: UIButton!
+    @IBOutlet weak var lessonTextView: UITextView!
     @IBOutlet weak var lessonBackgroundView: UIImageView!
     var presenter: LessonPresenterProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        lessonTextView.delegate = self
         resetViewTransform()
     }
     
@@ -48,6 +51,10 @@ class LessonViewController: UIViewController, LessonViewProtocol {
     func resetViewTransform() {
         self.lessonBackgroundView.alpha = 0
         self.lessonBackgroundView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        startExamButton.isHidden = scrollView.contentOffset.y + scrollView.bounds.height < scrollView.contentSize.height
     }
     
 }

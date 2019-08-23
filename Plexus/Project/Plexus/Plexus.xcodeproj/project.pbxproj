@@ -73,6 +73,16 @@
 		84420F5E23068303001C1A5E /* SignInProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5823068303001C1A5E /* SignInProtocols.swift */; };
 		84420F5F23068303001C1A5E /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5923068303001C1A5E /* SignInInteractor.swift */; };
 		8489B40B2307143000BDE491 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489B40A2307143000BDE491 /* RoundedButton.swift */; };
+		84D0D7422310446300690D92 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73C2310446300690D92 /* TestPresenter.swift */; };
+		84D0D7432310446300690D92 /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73D2310446300690D92 /* TestRouter.swift */; };
+		84D0D7442310446300690D92 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73E2310446300690D92 /* TestViewController.swift */; };
+		84D0D7452310446300690D92 /* TestProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73F2310446300690D92 /* TestProtocols.swift */; };
+		84D0D7462310446300690D92 /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D7402310446300690D92 /* TestInteractor.swift */; };
+		84D0D74F2310449D00690D92 /* CongratsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D7492310449D00690D92 /* CongratsPresenter.swift */; };
+		84D0D7502310449D00690D92 /* CongratsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D74A2310449D00690D92 /* CongratsRouter.swift */; };
+		84D0D7512310449D00690D92 /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D74B2310449D00690D92 /* CongratsViewController.swift */; };
+		84D0D7522310449D00690D92 /* CongratsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D74C2310449D00690D92 /* CongratsProtocols.swift */; };
+		84D0D7532310449D00690D92 /* CongratsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D74D2310449D00690D92 /* CongratsInteractor.swift */; };
 		84E2A2CC23084A5000888EA8 /* WalkthroughBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2A2CB23084A5000888EA8 /* WalkthroughBuilder.swift */; };
 		84E56C082306B75B00696058 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C022306B75B00696058 /* ForgotPasswordPresenter.swift */; };
 		84E56C092306B75B00696058 /* ForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E56C032306B75B00696058 /* ForgotPasswordRouter.swift */; };
@@ -166,6 +176,16 @@
 		84420F5923068303001C1A5E /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
 		846E7B686E58F63EE40282E2 /* Pods_Plexus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plexus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8489B40A2307143000BDE491 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		84D0D73C2310446300690D92 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
+		84D0D73D2310446300690D92 /* TestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
+		84D0D73E2310446300690D92 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		84D0D73F2310446300690D92 /* TestProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProtocols.swift; sourceTree = "<group>"; };
+		84D0D7402310446300690D92 /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
+		84D0D7492310449D00690D92 /* CongratsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsPresenter.swift; sourceTree = "<group>"; };
+		84D0D74A2310449D00690D92 /* CongratsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsRouter.swift; sourceTree = "<group>"; };
+		84D0D74B2310449D00690D92 /* CongratsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
+		84D0D74C2310449D00690D92 /* CongratsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsProtocols.swift; sourceTree = "<group>"; };
+		84D0D74D2310449D00690D92 /* CongratsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsInteractor.swift; sourceTree = "<group>"; };
 		84E2A2CB23084A5000888EA8 /* WalkthroughBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughBuilder.swift; sourceTree = "<group>"; };
 		84E56C022306B75B00696058 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
 		84E56C032306B75B00696058 /* ForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRouter.swift; sourceTree = "<group>"; };
@@ -397,6 +417,30 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		84D0D7482310447400690D92 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				84D0D73C2310446300690D92 /* TestPresenter.swift */,
+				84D0D73D2310446300690D92 /* TestRouter.swift */,
+				84D0D73E2310446300690D92 /* TestViewController.swift */,
+				84D0D73F2310446300690D92 /* TestProtocols.swift */,
+				84D0D7402310446300690D92 /* TestInteractor.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		84D0D755231044B000690D92 /* Congrats */ = {
+			isa = PBXGroup;
+			children = (
+				84D0D7492310449D00690D92 /* CongratsPresenter.swift */,
+				84D0D74A2310449D00690D92 /* CongratsRouter.swift */,
+				84D0D74B2310449D00690D92 /* CongratsViewController.swift */,
+				84D0D74C2310449D00690D92 /* CongratsProtocols.swift */,
+				84D0D74D2310449D00690D92 /* CongratsInteractor.swift */,
+			);
+			path = Congrats;
+			sourceTree = "<group>";
+		};
 		84E56C0E2306B77B00696058 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +466,8 @@
 				84389687230AE4D200F101DF /* Online */,
 				84380F33230F0FD6007B940B /* Lesson */,
 				843498B5230FB5F700927D84 /* UserLevel */,
+				84D0D7482310447400690D92 /* Test */,
+				84D0D755231044B000690D92 /* Congrats */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -617,18 +663,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D0D7452310446300690D92 /* TestProtocols.swift in Sources */,
 				84E56C182306B7CE00696058 /* WalkThroughViewController.swift in Sources */,
 				84E56C272306B80300696058 /* HomeInteractor.swift in Sources */,
 				84420F5B23068303001C1A5E /* SignInPresenter.swift in Sources */,
 				84E56C2E2306C92000696058 /* ColorUtils.swift in Sources */,
 				84380F2D230F0FC7007B940B /* LessonPresenter.swift in Sources */,
 				8434BEBE230C5C0F00AD58C0 /* DiscoverCell.swift in Sources */,
+				84D0D7442310446300690D92 /* TestViewController.swift in Sources */,
+				84D0D7522310449D00690D92 /* CongratsProtocols.swift in Sources */,
 				84380F2E230F0FC7007B940B /* LessonRouter.swift in Sources */,
 				84380F2F230F0FC7007B940B /* LessonViewController.swift in Sources */,
 				843262EB23067D7D00B4A268 /* ViewController.swift in Sources */,
 				84420F5C23068303001C1A5E /* SignInRouter.swift in Sources */,
 				84E2A2CC23084A5000888EA8 /* WalkthroughBuilder.swift in Sources */,
+				84D0D7512310449D00690D92 /* CongratsViewController.swift in Sources */,
 				84389682230AE4BF00F101DF /* OnlineRouter.swift in Sources */,
+				84D0D7462310446300690D92 /* TestInteractor.swift in Sources */,
 				84389695230B0D3600F101DF /* TopRatedParentCell.swift in Sources */,
 				84389690230B091400F101DF /* TopRatedCell.swift in Sources */,
 				84E56C262306B80300696058 /* HomeProtocols.swift in Sources */,
@@ -641,6 +692,7 @@
 				8438965A230AE3B400F101DF /* ExamPresenter.swift in Sources */,
 				84420F5D23068303001C1A5E /* SignInViewController.swift in Sources */,
 				84E56C0C2306B75B00696058 /* ForgotPasswordInteractor.swift in Sources */,
+				84D0D7502310449D00690D92 /* CongratsRouter.swift in Sources */,
 				843498B0230FB5E600927D84 /* UserLevelRouter.swift in Sources */,
 				84E56C082306B75B00696058 /* ForgotPasswordPresenter.swift in Sources */,
 				84389667230AE3E000F101DF /* WishlistPresenter.swift in Sources */,
@@ -671,20 +723,24 @@
 				84E56C252306B80300696058 /* HomeViewController.swift in Sources */,
 				84389677230AE40400F101DF /* ProfileProtocols.swift in Sources */,
 				8438968E230AF11D00F101DF /* RoundedCornersShadowView.swift in Sources */,
+				84D0D74F2310449D00690D92 /* CongratsPresenter.swift in Sources */,
 				8438968A230AE96800F101DF /* WishlistCell.swift in Sources */,
 				84E56C312306FE2500696058 /* BottomLineTextField.swift in Sources */,
 				8434BEBB230C575900AD58C0 /* MostViewedCell.swift in Sources */,
+				84D0D7532310449D00690D92 /* CongratsInteractor.swift in Sources */,
 				84389674230AE40400F101DF /* ProfilePresenter.swift in Sources */,
 				84389678230AE40400F101DF /* ProfileInteractor.swift in Sources */,
 				84389684230AE4BF00F101DF /* OnlineProtocols.swift in Sources */,
 				84E56C0B2306B75B00696058 /* ForgotPasswordProtocols.swift in Sources */,
 				84389692230B092500F101DF /* CompletedCell.swift in Sources */,
+				84D0D7422310446300690D92 /* TestPresenter.swift in Sources */,
 				84E56C232306B80300696058 /* HomePresenter.swift in Sources */,
 				84389668230AE3E000F101DF /* WishlistRouter.swift in Sources */,
 				84E56C162306B7CE00696058 /* WalkThroughPresenter.swift in Sources */,
 				84420F5E23068303001C1A5E /* SignInProtocols.swift in Sources */,
 				8439F903230DA83F00FD9EC2 /* HeaderView.swift in Sources */,
 				8439F8FC230D9D4200FD9EC2 /* LessonCell.swift in Sources */,
+				84D0D7432310446300690D92 /* TestRouter.swift in Sources */,
 				8439F8FE230D9D6400FD9EC2 /* ExamHeaderView.swift in Sources */,
 				8489B40B2307143000BDE491 /* RoundedButton.swift in Sources */,
 				8438965C230AE3B400F101DF /* ExamViewController.swift in Sources */,

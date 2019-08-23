@@ -73,6 +73,16 @@ extension UserLevelViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "desiredCell", for: indexPath) as! DesiredLevelCell
         cell.layer.backgroundColor = UIColor.clear.cgColor
         cell.levelTitleLabel.text = levelList[indexPath.row]
+        let startingValue = Int(UnicodeScalar("A").value)
+        let itemStr = String(UnicodeScalar(indexPath.row + startingValue) ?? "A")
+        cell.levelNumberLabel.text = itemStr
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Exam", bundle: nil)
+        let desiredLevelViewController = storyBoard.instantiateViewController(withIdentifier: "testView") as! TestViewController
+        self.show(desiredLevelViewController, sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
