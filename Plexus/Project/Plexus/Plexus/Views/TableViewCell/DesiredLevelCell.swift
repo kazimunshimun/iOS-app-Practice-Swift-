@@ -10,6 +10,10 @@ import UIKit
 
 class DesiredLevelCell: UITableViewCell {
 
+    @IBOutlet weak var levelNumberLabel: UILabel!
+    @IBOutlet weak var levelTitleLabel: UILabel!
+    
+    @IBOutlet weak var levelBackImageVIew: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

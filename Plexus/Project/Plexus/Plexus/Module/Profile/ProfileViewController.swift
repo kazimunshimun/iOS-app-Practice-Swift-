@@ -12,17 +12,39 @@ import UIKit
 
 class ProfileViewController: UIViewController, ProfileViewProtocol {
 
+    @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var profileCoursesTableview: UITableView!
     var presenter: ProfilePresenterProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        resetViewTransform()
         setupViews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 0.5, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            self.profilePictureImageView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.profilePictureImageView.alpha = 1
+            
+        }, completion: nil )
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        resetViewTransform()
     }
     
     private func setupViews() {
         profileCoursesTableview.delegate = self
         profileCoursesTableview.dataSource = self
+    }
+    
+    func resetViewTransform() {
+        self.profilePictureImageView.alpha = 0
+        self.profilePictureImageView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
     }
 
 }

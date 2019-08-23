@@ -96,6 +96,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="levelBackImageVIew" destination="pdM-Vd-YWt" id="Iel-un-SDC"/>
+                <outlet property="levelNumberLabel" destination="3da-fA-eHd" id="gfm-29-iav"/>
+                <outlet property="levelTitleLabel" destination="Kb2-L2-tAZ" id="FLS-53-12L"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="136.94196428571428"/>
         </tableViewCell>
     </objects>

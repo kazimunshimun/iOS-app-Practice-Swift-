@@ -12,10 +12,27 @@ import UIKit
 
 class LessonViewController: UIViewController, LessonViewProtocol {
 
-	var presenter: LessonPresenterProtocol?
+    @IBOutlet weak var lessonBackgroundView: UIImageView!
+    var presenter: LessonPresenterProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        resetViewTransform()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 0.5, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            self.lessonBackgroundView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.lessonBackgroundView.alpha = 1
+            
+        }, completion: nil )
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        resetViewTransform()
     }
 
     @IBAction func backButtonClicked(_ sender: Any) {
@@ -26,6 +43,11 @@ class LessonViewController: UIViewController, LessonViewProtocol {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Exam", bundle: nil)
         let desiredLevelViewController = storyBoard.instantiateViewController(withIdentifier: "userLevelView") as! UserLevelViewController
         self.show(desiredLevelViewController, sender: nil)
+    }
+    
+    func resetViewTransform() {
+        self.lessonBackgroundView.alpha = 0
+        self.lessonBackgroundView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
     }
     
 }

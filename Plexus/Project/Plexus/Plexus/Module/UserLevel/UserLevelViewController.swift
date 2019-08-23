@@ -12,12 +12,15 @@ import UIKit
 
 class UserLevelViewController: UIViewController, UserLevelViewProtocol {
 
+    let levelList = ["Beginner", "Elementary", "Intermediate", "Upper Intermediate", "Expert"]
     @IBOutlet weak var desiredLevelTableView: UITableView!
+    @IBOutlet weak var levelBackView: UIImageView!
     var presenter: UserLevelPresenterProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        resetViewTransform()
     }
     
     private func setupViews() {
@@ -28,6 +31,25 @@ class UserLevelViewController: UIViewController, UserLevelViewProtocol {
     
     @IBAction func backButtonClicked(_ sender: Any) {
         navigationController!.popViewController(animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.5, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            self.levelBackView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            self.levelBackView.alpha = 1
+            
+        }, completion: nil )
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        resetViewTransform()
+    }
+    
+    func resetViewTransform() {
+        self.levelBackView.alpha = 0
+        self.levelBackView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
     }
 
 }
@@ -44,12 +66,13 @@ extension UserLevelViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return levelList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "desiredCell", for: indexPath) as! DesiredLevelCell
         cell.layer.backgroundColor = UIColor.clear.cgColor
+        cell.levelTitleLabel.text = levelList[indexPath.row]
         return cell
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hry-hH-nX5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RJ9-74-d9h">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,16 +19,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wall" translatesAutoresizingMaskIntoConstraints="NO" id="cIk-Qu-NlC">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3f-Wf-str">
-                                <rect key="frame" x="20" y="64" width="39" height="18"/>
+                                <rect key="frame" x="20" y="108" width="39" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="F8o-4a-Gme">
-                                <rect key="frame" x="0.0" y="90" width="414" height="723"/>
+                                <rect key="frame" x="0.0" y="134" width="414" height="709"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qzs-gv-xKk">
                                     <size key="itemSize" width="357" height="72"/>
@@ -199,7 +199,7 @@ Science Bootcamp</string>
                         <constraints>
                             <constraint firstItem="O8v-8k-2NR" firstAttribute="top" secondItem="cIk-Qu-NlC" secondAttribute="top" constant="44" id="0qj-EK-GrZ"/>
                             <constraint firstItem="F8o-4a-Gme" firstAttribute="top" secondItem="v3f-Wf-str" secondAttribute="bottom" constant="8" id="AyY-Ub-TMV"/>
-                            <constraint firstItem="O8v-8k-2NR" firstAttribute="bottom" secondItem="F8o-4a-Gme" secondAttribute="bottom" id="LXc-LJ-wG9"/>
+                            <constraint firstItem="O8v-8k-2NR" firstAttribute="bottom" secondItem="F8o-4a-Gme" secondAttribute="bottom" constant="-30" id="LXc-LJ-wG9"/>
                             <constraint firstItem="cIk-Qu-NlC" firstAttribute="leading" secondItem="O8v-8k-2NR" secondAttribute="leading" id="REO-J6-hMl"/>
                             <constraint firstItem="O8v-8k-2NR" firstAttribute="trailing" secondItem="cIk-Qu-NlC" secondAttribute="trailing" id="abG-GX-A6P"/>
                             <constraint firstItem="O8v-8k-2NR" firstAttribute="trailing" secondItem="F8o-4a-Gme" secondAttribute="trailing" id="g3N-JU-Po6"/>
@@ -210,7 +210,7 @@ Science Bootcamp</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O8v-8k-2NR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="exams_unselected" selectedImage="exams_selected" id="pCH-tf-r8u"/>
+                    <navigationItem key="navigationItem" id="GuD-c5-txq"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="examCollectionView" destination="F8o-4a-Gme" id="r4A-3K-YCr"/>
@@ -218,7 +218,7 @@ Science Bootcamp</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fs-pV-f7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.724637681159422" y="57.589285714285708"/>
+            <point key="canvasLocation" x="960.86956521739137" y="57.589285714285708"/>
         </scene>
         <!--Lesson View Controller-->
         <scene sceneID="CbA-OM-15L">
@@ -282,7 +282,7 @@ Science Bootcamp</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xX-96-8gx" customClass="RoundedCornersShadowView" customModule="Plexus" customModuleProvider="target">
-                                <rect key="frame" x="20" y="335" width="374" height="527"/>
+                                <rect key="frame" x="20" y="332" width="374" height="500"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAs-Ua-0gI">
                                         <rect key="frame" x="24" y="40" width="61" height="14"/>
@@ -291,7 +291,7 @@ Science Bootcamp</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zz-lT-nTS">
-                                        <rect key="frame" x="24" y="62" width="326" height="457"/>
+                                        <rect key="frame" x="24" y="62" width="326" height="430"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Mobile applications are one of the best ways to engage with users - no wonder everyone wants to build one!
 
@@ -314,7 +314,7 @@ And which better way to learn than by building a real app? We'll build the "Awes
                                 <color key="backgroundColor" red="0.10588235294117647" green="0.12941176470588234" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="4zz-lT-nTS" firstAttribute="top" secondItem="XAs-Ua-0gI" secondAttribute="bottom" constant="8" id="4S5-xw-PYa"/>
-                                    <constraint firstAttribute="height" constant="527" id="66I-t3-PbP"/>
+                                    <constraint firstAttribute="height" constant="500" id="66I-t3-PbP"/>
                                     <constraint firstAttribute="trailing" secondItem="4zz-lT-nTS" secondAttribute="trailing" constant="24" id="8CQ-dg-NO2"/>
                                     <constraint firstAttribute="bottom" secondItem="4zz-lT-nTS" secondAttribute="bottom" constant="8" id="J4D-Si-Do8"/>
                                     <constraint firstItem="4zz-lT-nTS" firstAttribute="leading" secondItem="XAs-Ua-0gI" secondAttribute="leading" id="O77-Q1-0KC"/>
@@ -343,14 +343,17 @@ And which better way to learn than by building a real app? We'll build the "Awes
                             <constraint firstItem="RRl-d4-lTE" firstAttribute="bottom" secondItem="O9E-Zb-cM0" secondAttribute="bottom" constant="34" id="lAw-GT-K5U"/>
                             <constraint firstItem="ic1-f4-Sy6" firstAttribute="leading" secondItem="O9E-Zb-cM0" secondAttribute="leading" id="tuf-M6-RHc"/>
                             <constraint firstItem="O9E-Zb-cM0" firstAttribute="trailing" secondItem="RRl-d4-lTE" secondAttribute="trailing" id="yV3-JY-ewk"/>
-                            <constraint firstItem="O9E-Zb-cM0" firstAttribute="bottom" secondItem="7xX-96-8gx" secondAttribute="bottom" id="zhU-GJ-w61"/>
+                            <constraint firstItem="O9E-Zb-cM0" firstAttribute="bottom" secondItem="7xX-96-8gx" secondAttribute="bottom" constant="30" id="zhU-GJ-w61"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O9E-Zb-cM0"/>
                     </view>
+                    <connections>
+                        <outlet property="lessonBackgroundView" destination="Jxp-ee-HJm" id="BhA-vK-MZR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRg-GO-4vw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="914.49275362318849" y="57.589285714285708"/>
+            <point key="canvasLocation" x="1824.6376811594205" y="57.589285714285708"/>
         </scene>
         <!--User Level View Controller-->
         <scene sceneID="2eM-2V-xJl">
@@ -401,13 +404,13 @@ And which better way to learn than by building a real app? We'll build the "Awes
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3t6-an-BHy">
-                                <rect key="frame" x="0.0" y="300" width="414" height="596"/>
+                                <rect key="frame" x="0.0" y="300" width="414" height="534"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3t6-an-BHy" firstAttribute="bottom" secondItem="m0v-SV-eek" secondAttribute="bottom" constant="34" id="7Hk-IY-icV"/>
+                            <constraint firstItem="3t6-an-BHy" firstAttribute="bottom" secondItem="m0v-SV-eek" secondAttribute="bottom" constant="-28" id="7Hk-IY-icV"/>
                             <constraint firstItem="1gw-4A-Bwy" firstAttribute="top" secondItem="41z-aa-6g3" secondAttribute="bottom" id="PRl-jS-KRD"/>
                             <constraint firstItem="m0v-SV-eek" firstAttribute="top" secondItem="Qn0-Ky-0li" secondAttribute="top" constant="44" id="X4K-AW-Q1B"/>
                             <constraint firstItem="m0v-SV-eek" firstAttribute="trailing" secondItem="1gw-4A-Bwy" secondAttribute="trailing" id="X4n-e9-YQ8"/>
@@ -426,11 +429,31 @@ And which better way to learn than by building a real app? We'll build the "Awes
                     </view>
                     <connections>
                         <outlet property="desiredLevelTableView" destination="3t6-an-BHy" id="8HO-LR-gC7"/>
+                        <outlet property="levelBackView" destination="1gw-4A-Bwy" id="5UR-Qu-Ocv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8d-Wl-uhh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1760.8695652173915" y="57.589285714285708"/>
+            <point key="canvasLocation" x="2671.0144927536235" y="57.589285714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pHL-uf-F7r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RJ9-74-d9h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="exams_unselected" selectedImage="exams_selected" id="pCH-tf-r8u"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oau-wK-k2e">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hry-hH-nX5" kind="relationship" relationship="rootViewController" id="akx-So-Ojm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3P-QB-0HX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.724637681159422" y="57.589285714285708"/>
         </scene>
     </scenes>
     <resources>

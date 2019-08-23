@@ -262,6 +262,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="profileCoursesTableview" destination="pS5-Ru-zbO" id="i6j-al-fgA"/>
+                        <outlet property="profilePictureImageView" destination="7mS-J4-lxH" id="7Gl-2Z-V03"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iyg-It-gNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
