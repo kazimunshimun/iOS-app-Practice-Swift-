@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="desiredCell" rowHeight="107" id="KGk-i7-Jjw" customClass="DesiredLevelCell" customModule="Plexus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="106.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zez-ES-5fC">
+                        <rect key="frame" x="16" y="0.0" width="304" height="47"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oS-Vr-0Gt" customClass="RoundedCornersShadowView" customModule="Plexus" customModuleProvider="target">
+                                <rect key="frame" x="8" y="0.0" width="47" height="47"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signin_button_back" translatesAutoresizingMaskIntoConstraints="NO" id="pdM-Vd-YWt">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="47"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3da-fA-eHd">
+                                        <rect key="frame" x="19.5" y="15" width="8" height="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1058823529" green="0.12941176469999999" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Ftd-R1-Csv"/>
+                                    <constraint firstItem="3da-fA-eHd" firstAttribute="centerX" secondItem="1oS-Vr-0Gt" secondAttribute="centerX" id="Mrr-Hp-5uA"/>
+                                    <constraint firstAttribute="width" constant="47" id="akW-Nz-6A7"/>
+                                    <constraint firstItem="pdM-Vd-YWt" firstAttribute="leading" secondItem="1oS-Vr-0Gt" secondAttribute="leading" id="fqU-7v-4Rb"/>
+                                    <constraint firstItem="3da-fA-eHd" firstAttribute="centerY" secondItem="1oS-Vr-0Gt" secondAttribute="centerY" id="hdo-v3-4f9"/>
+                                    <constraint firstItem="pdM-Vd-YWt" firstAttribute="top" secondItem="1oS-Vr-0Gt" secondAttribute="top" id="iUj-S3-TQB"/>
+                                    <constraint firstAttribute="trailing" secondItem="pdM-Vd-YWt" secondAttribute="trailing" id="lDm-3a-00L"/>
+                                    <constraint firstAttribute="bottom" secondItem="pdM-Vd-YWt" secondAttribute="bottom" id="ufF-T8-0FV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Software Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kb2-L2-tAZ">
+                                <rect key="frame" x="63" y="0.0" width="116" height="13.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
+                                <color key="textColor" red="0.70196078429999997" green="0.1960784314" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In software engineering, a software development process is the process of... dividing software ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9x-M3-ueZ">
+                                <rect key="frame" x="63" y="17.5" width="225" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I9x-M3-ueZ" firstAttribute="top" secondItem="Kb2-L2-tAZ" secondAttribute="bottom" constant="4" id="KJ4-qQ-7mc"/>
+                            <constraint firstItem="Kb2-L2-tAZ" firstAttribute="leading" secondItem="1oS-Vr-0Gt" secondAttribute="trailing" constant="8" id="Vxy-hm-i99"/>
+                            <constraint firstItem="1oS-Vr-0Gt" firstAttribute="top" secondItem="Zez-ES-5fC" secondAttribute="top" id="X3R-eg-YFV"/>
+                            <constraint firstItem="I9x-M3-ueZ" firstAttribute="leading" secondItem="Kb2-L2-tAZ" secondAttribute="leading" id="Xya-3t-edj"/>
+                            <constraint firstItem="Kb2-L2-tAZ" firstAttribute="top" secondItem="1oS-Vr-0Gt" secondAttribute="top" id="giM-3A-bUU"/>
+                            <constraint firstItem="1oS-Vr-0Gt" firstAttribute="leading" secondItem="Zez-ES-5fC" secondAttribute="leading" constant="8" id="std-RJ-CbM"/>
+                            <constraint firstAttribute="trailing" secondItem="I9x-M3-ueZ" secondAttribute="trailing" constant="16" id="xSO-Nk-5BC"/>
+                            <constraint firstAttribute="height" constant="47" id="yQV-sK-KuC"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Xo-e9-6NB">
+                        <rect key="frame" x="47" y="47" width="3" height="59.5"/>
+                        <color key="backgroundColor" red="0.70196078429999997" green="0.1960784314" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="3" id="IKi-jT-ilP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9Xo-e9-6NB" firstAttribute="top" secondItem="Zez-ES-5fC" secondAttribute="bottom" id="271-R1-zgI"/>
+                    <constraint firstItem="Zez-ES-5fC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="D5h-LE-JFI"/>
+                    <constraint firstItem="Zez-ES-5fC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="MTD-UX-sjj"/>
+                    <constraint firstAttribute="bottom" secondItem="9Xo-e9-6NB" secondAttribute="bottom" id="Q4z-6N-jvg"/>
+                    <constraint firstItem="9Xo-e9-6NB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="47" id="X85-e3-IqK"/>
+                    <constraint firstAttribute="trailing" secondItem="Zez-ES-5fC" secondAttribute="trailing" id="kqE-8H-PWv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="131.8840579710145" y="136.94196428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="signin_button_back" width="315" height="50"/>
+    </resources>
+</document>

@@ -72,6 +72,13 @@ extension ExamViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Exam", bundle: nil)
+        let lessonViewController = storyBoard.instantiateViewController(withIdentifier: "lessonView") as! LessonViewController
+        self.show(lessonViewController, sender: nil)
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
 }
 
 public extension Int {

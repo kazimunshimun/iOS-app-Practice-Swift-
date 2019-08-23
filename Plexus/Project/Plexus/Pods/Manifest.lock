@@ -1,5 +1,6 @@
 PODS:
   - ActiveLabel (1.1.0)
+  - Alamofire (5.0.0-beta.6)
   - Cosmos (19.0.3)
   - Firebase/Analytics (6.3.0):
     - Firebase/Core
@@ -69,6 +70,7 @@ PODS:
 
 DEPENDENCIES:
   - ActiveLabel
+  - Alamofire (~> 5.0.0-beta.5)
   - Cosmos (~> 19.0)
   - Firebase/Analytics
   - Firebase/Auth
@@ -78,6 +80,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ActiveLabel
+    - Alamofire
     - Cosmos
     - Firebase
     - FirebaseAnalytics
@@ -94,6 +97,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
+  Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
   Cosmos: a6fb17284281fa12cf4c85c2efecd440a215ec44
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
   FirebaseAnalytics: 470ddab7253b21ad5a40bebd4a9903d7ae19386a
@@ -108,6 +112,6 @@ SPEC CHECKSUMS:
   SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
   TweenController: 476a70703c91483a3d9b4c91b61175784e55c0af
 
-PODFILE CHECKSUM: 850b5f2799b9c7ce999feb8fe66895c611841d89
+PODFILE CHECKSUM: cc02f642b017cdf348be807b1690237d56bed410
 
 COCOAPODS: 1.6.0

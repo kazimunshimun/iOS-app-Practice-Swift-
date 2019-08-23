@@ -30,6 +30,7 @@ class RoundedCornersShadowView: UIView {
         set {
             layer.cornerRadius = newValue
             layer.masksToBounds = newValue > 0
+            //draw(self.frame)
         }
     }
     
@@ -47,6 +48,7 @@ class RoundedCornersShadowView: UIView {
         shadowLayer.layer.shadowOpacity = 0.4
         shadowLayer.layer.shadowRadius = 3
         shadowLayer.layer.masksToBounds = true
+        shadowLayer.layer.cornerRadius = cornerRadius
         shadowLayer.clipsToBounds = false
         
         self.superview?.addSubview(shadowLayer)
