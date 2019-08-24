@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="addCell1" id="DGS-4f-5Ze" customClass="AddCell" customModule="Write" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="165" height="195"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="165" height="195"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfq-Hh-xHl" customClass="RoundedCornerView" customModule="Write" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="44" width="165" height="117"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_icon" translatesAutoresizingMaskIntoConstraints="NO" id="6Np-s6-BYc">
+                                <rect key="frame" x="62.5" y="38.5" width="40" height="40"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.15208158560000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Np-s6-BYc" firstAttribute="centerY" secondItem="yfq-Hh-xHl" secondAttribute="centerY" id="U5U-EL-VYZ"/>
+                            <constraint firstItem="6Np-s6-BYc" firstAttribute="centerX" secondItem="yfq-Hh-xHl" secondAttribute="centerX" id="br9-cv-5e0"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Sri-hP-KKZ" firstAttribute="trailing" secondItem="yfq-Hh-xHl" secondAttribute="trailing" id="J4U-IY-BMq"/>
+                <constraint firstItem="Sri-hP-KKZ" firstAttribute="top" secondItem="yfq-Hh-xHl" secondAttribute="top" id="dVj-0C-2bx"/>
+                <constraint firstItem="yfq-Hh-xHl" firstAttribute="bottom" secondItem="Sri-hP-KKZ" secondAttribute="bottom" id="j5j-c6-33d"/>
+                <constraint firstItem="yfq-Hh-xHl" firstAttribute="leading" secondItem="Sri-hP-KKZ" secondAttribute="leading" id="rz8-8G-FTS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Sri-hP-KKZ"/>
+            <point key="canvasLocation" x="-34.057971014492757" y="51.897321428571423"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="add_icon" width="40" height="40"/>
+    </resources>
+</document>
