@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import Firebase
 
 class OnlineViewController: UIViewController, OnlineViewProtocol {
 
@@ -16,6 +17,17 @@ class OnlineViewController: UIViewController, OnlineViewProtocol {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let db = Firestore.firestore()
+        db.collection("OnlineCourses").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
     }
 
 }

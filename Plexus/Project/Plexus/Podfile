@@ -8,6 +8,8 @@ target 'Plexus' do
   # Pods for Plexus
     pod 'Firebase/Analytics'
     pod 'Firebase/Auth'
+    pod 'Firebase/Core'
+    pod 'Firebase/Firestore'
     pod 'SkyFloatingLabelTextField', '~> 3.0'
     pod 'ActiveLabel'
     pod 'TweenController', '~> 1.0'
