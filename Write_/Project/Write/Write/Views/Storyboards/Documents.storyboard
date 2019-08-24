@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eKh-rr-4vv">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Documents View Controller-->
+        <scene sceneID="JnJ-Rh-mvr">
+            <objects>
+                <viewController storyboardIdentifier="documentsView" id="PD1-Ky-eSj" customClass="DocumentsViewController" customModule="Write" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kcb-CZ-8g0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" barStyle="black" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kZ-GW-IiA">
+                                <rect key="frame" x="15" y="0.0" width="345" height="56"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <offsetWrapper key="searchTextPositionAdjustment" horizontal="106" vertical="0.0"/>
+                                <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TdX-w9-H1R">
+                                <rect key="frame" x="15" y="82" width="345" height="559"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rb2-oA-id1">
+                                    <size key="itemSize" width="165" height="195"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PD1-Ky-eSj" id="BGh-SE-1G5"/>
+                                    <outlet property="delegate" destination="PD1-Ky-eSj" id="ijL-6U-MCz"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nbb-Dr-S88" firstAttribute="bottom" secondItem="TdX-w9-H1R" secondAttribute="bottom" id="587-pn-7J3"/>
+                            <constraint firstItem="7kZ-GW-IiA" firstAttribute="leading" secondItem="Nbb-Dr-S88" secondAttribute="leading" constant="15" id="5Uk-mA-yzx"/>
+                            <constraint firstItem="TdX-w9-H1R" firstAttribute="trailing" secondItem="7kZ-GW-IiA" secondAttribute="trailing" id="Dfb-D1-Xs0"/>
+                            <constraint firstItem="7kZ-GW-IiA" firstAttribute="top" secondItem="Nbb-Dr-S88" secondAttribute="top" id="XKa-6d-MTx"/>
+                            <constraint firstItem="Nbb-Dr-S88" firstAttribute="trailing" secondItem="7kZ-GW-IiA" secondAttribute="trailing" constant="15" id="ZvE-AY-yfl"/>
+                            <constraint firstItem="TdX-w9-H1R" firstAttribute="top" secondItem="7kZ-GW-IiA" secondAttribute="bottom" constant="26" id="g0C-4u-4ca"/>
+                            <constraint firstItem="TdX-w9-H1R" firstAttribute="leading" secondItem="7kZ-GW-IiA" secondAttribute="leading" id="x70-QK-Ker"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nbb-Dr-S88"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="JF3-ng-iol"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="documentCollectionView" destination="TdX-w9-H1R" id="zT1-Xh-9LI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fH3-cX-ltW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018.4" y="164.03940886699507"/>
+        </scene>
+        <!--Documents-->
+        <scene sceneID="XrJ-0I-Zne">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eKh-rr-4vv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Documents" image="document_icon_selected" id="4BY-Y6-jfP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Oda-bB-BgM">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PD1-Ky-eSj" kind="relationship" relationship="rootViewController" id="kHD-JA-E14"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6u-PR-Lsn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108.69565217391305" y="164.73214285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="document_icon_selected" width="26" height="22"/>
+    </resources>
+</document>

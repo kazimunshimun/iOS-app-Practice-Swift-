@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TAa-Ea-MI2">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reader View Controller-->
+        <scene sceneID="SfZ-hD-APF">
+            <objects>
+                <viewController id="AWW-9I-VyW" customClass="ReaderViewController" customModule="Write" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CCt-fL-8ka">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" barStyle="black" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toj-Eq-9Ja">
+                                <rect key="frame" x="16" y="0.0" width="345" height="56"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <offsetWrapper key="searchTextPositionAdjustment" horizontal="106" vertical="0.0"/>
+                                <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uw8-ey-mrg">
+                                <rect key="frame" x="16" y="82" width="345" height="549"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wjB-N7-e4A">
+                                    <size key="itemSize" width="165" height="195"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="AWW-9I-VyW" id="41o-5b-u0x"/>
+                                    <outlet property="delegate" destination="AWW-9I-VyW" id="0ZT-67-ddu"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="toj-Eq-9Ja" firstAttribute="top" secondItem="pYM-4S-eu0" secondAttribute="top" id="1M7-Ll-bI7"/>
+                            <constraint firstItem="Uw8-ey-mrg" firstAttribute="leading" secondItem="pYM-4S-eu0" secondAttribute="leading" constant="16" id="2as-HG-hHF"/>
+                            <constraint firstItem="Uw8-ey-mrg" firstAttribute="top" secondItem="toj-Eq-9Ja" secondAttribute="bottom" constant="26" id="FRE-Gn-83F"/>
+                            <constraint firstItem="pYM-4S-eu0" firstAttribute="trailing" secondItem="Uw8-ey-mrg" secondAttribute="trailing" constant="14" id="IFc-Ep-3IU"/>
+                            <constraint firstItem="toj-Eq-9Ja" firstAttribute="leading" secondItem="pYM-4S-eu0" secondAttribute="leading" constant="16" id="Vch-g5-eo1"/>
+                            <constraint firstItem="pYM-4S-eu0" firstAttribute="trailing" secondItem="toj-Eq-9Ja" secondAttribute="trailing" constant="14" id="X9u-vo-ptf"/>
+                            <constraint firstItem="Uw8-ey-mrg" firstAttribute="trailing" secondItem="toj-Eq-9Ja" secondAttribute="trailing" id="YwI-7W-sN0"/>
+                            <constraint firstItem="Uw8-ey-mrg" firstAttribute="leading" secondItem="toj-Eq-9Ja" secondAttribute="leading" id="ZZF-W8-QSH"/>
+                            <constraint firstItem="pYM-4S-eu0" firstAttribute="bottom" secondItem="Uw8-ey-mrg" secondAttribute="bottom" constant="10" id="pbz-3l-2Hx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pYM-4S-eu0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xrh-NJ-n4I"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="readerCollectionView" destination="Uw8-ey-mrg" id="Q1g-TN-qDM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFK-01-bxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="97.536945812807886"/>
+        </scene>
+        <!--Reader Mode-->
+        <scene sceneID="Wg3-n7-SSJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TAa-Ea-MI2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reader Mode" image="reader_icon_selected" id="93n-nY-u40"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="qUc-4T-6Ww">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AWW-9I-VyW" kind="relationship" relationship="rootViewController" id="PVl-cz-2Zf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOM-57-Qb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="97.536945812807886"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="reader_icon_selected" width="26" height="22"/>
+    </resources>
+</document>
