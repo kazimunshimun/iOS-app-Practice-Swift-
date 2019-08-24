@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>110112917394-4rekvki8c7t9qad1pdlq5lntes9n1oep.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.110112917394-4rekvki8c7t9qad1pdlq5lntes9n1oep</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB0ItWDOzyARU1pbjgLbMNb2lHK9_8MWOs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>110112917394</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.A7Studio.Plexus</string>
+	<key>PROJECT_ID</key>
+	<string>plexus-c3c3b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>plexus-c3c3b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:110112917394:ios:c4d286705c9a95c2</string>
+	<key>DATABASE_URL</key>
+	<string>https://plexus-c3c3b.firebaseio.com</string>
+</dict>
+</plist>

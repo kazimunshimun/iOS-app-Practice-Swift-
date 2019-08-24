@@ -1,0 +1,29 @@
+id    description title    rating image_name
+      Learn
+      Python like a
+      Professional!
+      Start from
+      the basics
+      and go all
+      the way to
+      creating
+     1your...       Python        4wishlist_course_1
+      Learn How
+      To Plan,
+      Design,
+      Create And
+      Publish Your
+      Games On
+      Any Platform
+      Using Unity
+     2Game...       Unity         3wishlist_course_3
+      Use React
+      Native and
+      your React
+      knowledge
+      and take
+      your web
+      development
+      skills to     React
+     3build...      Native        5wishlist_course_3
+
