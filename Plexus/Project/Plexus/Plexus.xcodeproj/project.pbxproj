@@ -72,6 +72,7 @@
 		84420F5D23068303001C1A5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5723068303001C1A5E /* SignInViewController.swift */; };
 		84420F5E23068303001C1A5E /* SignInProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5823068303001C1A5E /* SignInProtocols.swift */; };
 		84420F5F23068303001C1A5E /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5923068303001C1A5E /* SignInInteractor.swift */; };
+		8461E1482311069E00AB3FA1 /* OnlineCoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461E1472311069E00AB3FA1 /* OnlineCoursesCell.swift */; };
 		8489B40B2307143000BDE491 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489B40A2307143000BDE491 /* RoundedButton.swift */; };
 		84D0D7422310446300690D92 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73C2310446300690D92 /* TestPresenter.swift */; };
 		84D0D7432310446300690D92 /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73D2310446300690D92 /* TestRouter.swift */; };
@@ -174,6 +175,7 @@
 		84420F5723068303001C1A5E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		84420F5823068303001C1A5E /* SignInProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocols.swift; sourceTree = "<group>"; };
 		84420F5923068303001C1A5E /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
+		8461E1472311069E00AB3FA1 /* OnlineCoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineCoursesCell.swift; sourceTree = "<group>"; };
 		846E7B686E58F63EE40282E2 /* Pods_Plexus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plexus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8489B40A2307143000BDE491 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		84D0D73C2310446300690D92 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				8439F8FD230D9D6400FD9EC2 /* ExamHeaderView.swift */,
 				8439F901230DA83F00FD9EC2 /* HeaderView.swift */,
 				8439F902230DA83F00FD9EC2 /* HeaderView.xib */,
+				8461E1472311069E00AB3FA1 /* OnlineCoursesCell.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -712,6 +715,7 @@
 				843498B1230FB5E600927D84 /* UserLevelViewController.swift in Sources */,
 				84E56C2B2306C36D00696058 /* GradientView.swift in Sources */,
 				8434BEC0230C5C2900AD58C0 /* CourseCell.swift in Sources */,
+				8461E1482311069E00AB3FA1 /* OnlineCoursesCell.swift in Sources */,
 				8438965E230AE3B400F101DF /* ExamInteractor.swift in Sources */,
 				84E56C1A2306B7CE00696058 /* WalkThroughInteractor.swift in Sources */,
 				84420F5F23068303001C1A5E /* SignInInteractor.swift in Sources */,

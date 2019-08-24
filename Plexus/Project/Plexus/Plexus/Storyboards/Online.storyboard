@@ -18,17 +18,106 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fX6-58-6i9">
-                                <rect key="frame" x="182.5" y="418" width="49" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJU-FC-GF2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online Courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtY-sQ-8bg">
+                                        <rect key="frame" x="32" y="51" width="106" height="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1058823529" green="0.12941176469999999" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="OtY-sQ-8bg" firstAttribute="leading" secondItem="LJU-FC-GF2" secondAttribute="leading" constant="32" id="M1h-D5-ENs"/>
+                                    <constraint firstItem="OtY-sQ-8bg" firstAttribute="top" secondItem="LJU-FC-GF2" secondAttribute="top" constant="51" id="awC-O4-7kv"/>
+                                    <constraint firstAttribute="height" constant="87" id="nGI-uE-VlH"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PI7-qZ-1C7">
+                                <rect key="frame" x="0.0" y="87" width="414" height="726"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g19-p1-5mT">
+                                    <size key="itemSize" width="172" height="186"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="onlineCourseCell" id="Npg-WV-AXh" customClass="OnlineCoursesCell" customModule="Plexus" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="172" height="186"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="172" height="186"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mcf-sa-KWy" customClass="RoundedCornersShadowView" customModule="Plexus" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="186"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="completed_course_1" translatesAutoresizingMaskIntoConstraints="NO" id="pwK-Kj-MYa">
+                                                            <rect key="frame" x="0.0" y="0.0" width="172" height="186"/>
+                                                        </imageView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymx-dP-4Jc">
+                                                            <rect key="frame" x="0.0" y="119" width="172" height="67"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BR0-Ku-tdJ">
+                                                                    <rect key="frame" x="22" y="23" width="99.5" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.50526950503355705" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="BR0-Ku-tdJ" firstAttribute="leading" secondItem="ymx-dP-4Jc" secondAttribute="leading" constant="22" id="4h2-tY-6e7"/>
+                                                                <constraint firstAttribute="height" constant="67" id="BIs-jc-f1n"/>
+                                                                <constraint firstItem="BR0-Ku-tdJ" firstAttribute="centerY" secondItem="ymx-dP-4Jc" secondAttribute="centerY" id="YGh-9L-z9v"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="ymx-dP-4Jc" secondAttribute="trailing" id="8qF-p3-N7s"/>
+                                                        <constraint firstItem="pwK-Kj-MYa" firstAttribute="leading" secondItem="Mcf-sa-KWy" secondAttribute="leading" id="J53-cg-Kza"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ymx-dP-4Jc" secondAttribute="bottom" id="LZk-sb-cHF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="pwK-Kj-MYa" secondAttribute="bottom" id="YQt-le-DNX"/>
+                                                        <constraint firstAttribute="trailing" secondItem="pwK-Kj-MYa" secondAttribute="trailing" id="dJX-CU-stI"/>
+                                                        <constraint firstItem="pwK-Kj-MYa" firstAttribute="top" secondItem="Mcf-sa-KWy" secondAttribute="top" id="ktW-am-8CP"/>
+                                                        <constraint firstItem="ymx-dP-4Jc" firstAttribute="leading" secondItem="Mcf-sa-KWy" secondAttribute="leading" id="tov-MZ-WhE"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Mcf-sa-KWy" firstAttribute="leading" secondItem="Npg-WV-AXh" secondAttribute="leading" id="0gB-ct-68U"/>
+                                            <constraint firstAttribute="bottom" secondItem="Mcf-sa-KWy" secondAttribute="bottom" id="cXc-pY-Awt"/>
+                                            <constraint firstItem="Mcf-sa-KWy" firstAttribute="top" secondItem="Npg-WV-AXh" secondAttribute="top" id="m4J-gR-8yA"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mcf-sa-KWy" secondAttribute="trailing" id="mEy-Zd-eyM"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="dSz-FG-hh5" id="1A1-aE-fsa"/>
+                                    <outlet property="delegate" destination="dSz-FG-hh5" id="8Jt-GQ-zza"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fX6-58-6i9" firstAttribute="centerY" secondItem="Zar-Ox-WIX" secondAttribute="centerY" id="OEX-y8-Yl5"/>
-                            <constraint firstItem="fX6-58-6i9" firstAttribute="centerX" secondItem="Zar-Ox-WIX" secondAttribute="centerX" id="zsm-Lr-Zs2"/>
+                            <constraint firstItem="PI7-qZ-1C7" firstAttribute="top" secondItem="LJU-FC-GF2" secondAttribute="bottom" id="7Vm-Yq-mmI"/>
+                            <constraint firstItem="Zar-Ox-WIX" firstAttribute="trailing" secondItem="PI7-qZ-1C7" secondAttribute="trailing" id="9Gc-Xn-jQ5"/>
+                            <constraint firstItem="PI7-qZ-1C7" firstAttribute="leading" secondItem="Zar-Ox-WIX" secondAttribute="leading" id="Af6-2D-oWe"/>
+                            <constraint firstItem="PI7-qZ-1C7" firstAttribute="bottom" secondItem="Zar-Ox-WIX" secondAttribute="bottom" id="C89-Yb-fhd"/>
+                            <constraint firstItem="LJU-FC-GF2" firstAttribute="leading" secondItem="Zar-Ox-WIX" secondAttribute="leading" id="Uub-nx-gG4"/>
+                            <constraint firstItem="Zar-Ox-WIX" firstAttribute="trailing" secondItem="LJU-FC-GF2" secondAttribute="trailing" id="nAO-J1-knG"/>
+                            <constraint firstItem="Zar-Ox-WIX" firstAttribute="top" secondItem="LJU-FC-GF2" secondAttribute="top" constant="44" id="s6d-Nv-5WG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zar-Ox-WIX"/>
                     </view>
@@ -37,10 +126,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVl-A3-Fb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="89"/>
+            <point key="canvasLocation" x="69.565217391304358" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="completed_course_1" width="88" height="130"/>
         <image name="online_courses_selected" width="22" height="16.5"/>
         <image name="online_courses_unselected" width="22" height="16.5"/>
     </resources>

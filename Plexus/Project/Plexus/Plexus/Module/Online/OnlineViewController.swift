@@ -19,3 +19,24 @@ class OnlineViewController: UIViewController, OnlineViewProtocol {
     }
 
 }
+
+extension OnlineViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "onlineCourseCell", for: indexPath) as! OnlineCoursesCell
+        cell.alpha = 0
+        let cellDelay = UInt64((arc4random() % 600 ) / 1000 )
+        let cellDelayTime = DispatchTime(uptimeNanoseconds: cellDelay * NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: cellDelayTime) {
+            UIView.animate(withDuration: 0.8, animations: {
+                cell.alpha = 1.0
+            })
+        }
+        return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 15
+    }
+}
