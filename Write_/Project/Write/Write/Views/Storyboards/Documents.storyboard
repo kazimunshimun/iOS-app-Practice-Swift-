@@ -124,10 +124,48 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03z-0M-bGx" customClass="RoundedCornerView" customModule="Write" customModuleProvider="target">
                                 <rect key="frame" x="15" y="96" width="345" height="652"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2s2-rP-Mc8">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2s2-rP-Mc8">
                                         <rect key="frame" x="15" y="15" width="315" height="622"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Song of ice and fire
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="by Gorge R R Martin">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">There was a time of House Stark and House Lannister
+They do not quiet get along well
+So they decided to go on war
+War is like rich people playing with poor people llife</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -153,6 +191,9 @@
                                             <constraint firstAttribute="width" constant="40" id="PeT-eA-jlN"/>
                                         </constraints>
                                         <state key="normal" image="ic_bold"/>
+                                        <connections>
+                                            <action selector="boldButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="gK5-sc-VoZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkN-fl-win">
                                         <rect key="frame" x="72" y="0.0" width="40" height="42"/>
@@ -160,6 +201,9 @@
                                             <constraint firstAttribute="width" constant="40" id="tgk-3U-hqt"/>
                                         </constraints>
                                         <state key="normal" image="ic_italic"/>
+                                        <connections>
+                                            <action selector="italicButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="EGg-Ug-fMz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LES-t0-fem">
                                         <rect key="frame" x="120" y="0.0" width="40" height="42"/>
@@ -167,6 +211,9 @@
                                             <constraint firstAttribute="width" constant="40" id="s9V-1y-Y0s"/>
                                         </constraints>
                                         <state key="normal" image="ic_underlined"/>
+                                        <connections>
+                                            <action selector="underlineButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="lsy-Gn-tdb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvS-0V-uDu">
                                         <rect key="frame" x="168" y="0.0" width="40" height="42"/>
@@ -174,6 +221,9 @@
                                             <constraint firstAttribute="width" constant="40" id="7cn-J9-cqb"/>
                                         </constraints>
                                         <state key="normal" image="ic_color_text"/>
+                                        <connections>
+                                            <action selector="textColorChangeButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="xgE-OH-HbA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SII-Lm-vCD">
                                         <rect key="frame" x="232" y="0.0" width="40" height="42"/>
@@ -181,6 +231,9 @@
                                             <constraint firstAttribute="width" constant="40" id="oWf-ku-FPP"/>
                                         </constraints>
                                         <state key="normal" image="ic_align_left"/>
+                                        <connections>
+                                            <action selector="leftAlignButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="peo-PR-EMr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efO-YY-XL6">
                                         <rect key="frame" x="280" y="0.0" width="40" height="42"/>
@@ -188,6 +241,9 @@
                                             <constraint firstAttribute="width" constant="40" id="ugj-9y-kBk"/>
                                         </constraints>
                                         <state key="normal" image="ic_align_center"/>
+                                        <connections>
+                                            <action selector="centerAlignButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="Msz-FS-TD0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lug-Th-rfw">
                                         <rect key="frame" x="317" y="0.0" width="40" height="42"/>
@@ -195,6 +251,9 @@
                                             <constraint firstAttribute="width" constant="40" id="7Se-uZ-4ci"/>
                                         </constraints>
                                         <state key="normal" image="ic_align_right"/>
+                                        <connections>
+                                            <action selector="rightAlignButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="hQG-lc-hmk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
