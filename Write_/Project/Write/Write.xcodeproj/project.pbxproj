@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		842AE27B2311A9E200599EDA /* NewDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AE27A2311A9E200599EDA /* NewDocumentViewController.swift */; };
+		8438D4AF231578DE00C783D3 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438D4AE231578DE00C783D3 /* RoundedCornerButton.swift */; };
 		84A9A82023117AA200BED4EE /* Documents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A9A81C23117AA100BED4EE /* Documents.storyboard */; };
 		84A9A82123117AA200BED4EE /* ReaderMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A9A81D23117AA200BED4EE /* ReaderMode.storyboard */; };
 		84A9A82223117AA200BED4EE /* TabMenus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A9A81E23117AA200BED4EE /* TabMenus.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		842AE27A2311A9E200599EDA /* NewDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDocumentViewController.swift; sourceTree = "<group>"; };
+		8438D4AE231578DE00C783D3 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
 		84A9A81C23117AA100BED4EE /* Documents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Documents.storyboard; sourceTree = "<group>"; };
 		84A9A81D23117AA200BED4EE /* ReaderMode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReaderMode.storyboard; sourceTree = "<group>"; };
 		84A9A81E23117AA200BED4EE /* TabMenus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabMenus.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				84A9A81B23117A0200BED4EE /* Storyboards */,
 				84A9A82623117AD200BED4EE /* Controllers */,
 				84A9A82723117D0400BED4EE /* RoundedCornerView.swift */,
+				8438D4AE231578DE00C783D3 /* RoundedCornerButton.swift */,
 				84A9A82F2311854100BED4EE /* CollectionViewCell */,
 			);
 			path = Views;
@@ -235,6 +238,7 @@
 				84EABD8B2311680A006BB5CB /* ViewController.swift in Sources */,
 				84A9A82523117AC900BED4EE /* DocumentsViewController.swift in Sources */,
 				84A9A82E23117E3200BED4EE /* DocumentCell.swift in Sources */,
+				8438D4AF231578DE00C783D3 /* RoundedCornerButton.swift in Sources */,
 				84A9A82A23117E0500BED4EE /* AddCell.swift in Sources */,
 				84EABD912311680A006BB5CB /* Write.xcdatamodeld in Sources */,
 				842AE27B2311A9E200599EDA /* NewDocumentViewController.swift in Sources */,

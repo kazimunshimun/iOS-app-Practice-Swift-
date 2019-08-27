@@ -12,6 +12,17 @@ class NewDocumentViewController: UIViewController {
 
     @IBOutlet weak var documentTextView: UITextView!
     @IBOutlet weak var bottomView: UIView!
+    
+    @IBOutlet weak var boldButton: RoundedCornerButton!
+    @IBOutlet weak var italicButton: RoundedCornerButton!
+    @IBOutlet weak var underlineButton: RoundedCornerButton!
+    @IBOutlet weak var colorButton: RoundedCornerButton!
+    
+    @IBOutlet weak var leftAlignButton: RoundedCornerButton!
+    @IBOutlet weak var centerAlignButton: RoundedCornerButton!
+    @IBOutlet weak var rightAlignButton: RoundedCornerButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -77,8 +88,10 @@ class NewDocumentViewController: UIViewController {
                 let typ = documentTextView.typingAttributes[NSAttributedString.Key.font] as? UIFont
                 if ( typ == changedFontDescriptor) {
                     self.documentTextView.typingAttributes[NSAttributedString.Key.font] = UIFont.boldSystemFont(ofSize: (CGFloat)(15))
+                    boldButton.backgroundColor = .lightGray
                 }else {
                     self.documentTextView.typingAttributes[NSAttributedString.Key.font] = UIFont.systemFont(ofSize: (CGFloat)(15))
+                    boldButton.backgroundColor = .clear
                 }
             }
         }
@@ -90,8 +103,10 @@ class NewDocumentViewController: UIViewController {
         let typ = documentTextView.typingAttributes[NSAttributedString.Key.obliqueness] as? NSNumber
         if typ == 0.5 {
             documentTextView.typingAttributes[NSAttributedString.Key.obliqueness] = 0
+            italicButton.backgroundColor = .clear
         }else {
             documentTextView.typingAttributes[NSAttributedString.Key.obliqueness] = 0.5
+            italicButton.backgroundColor = .lightGray
         }
     }
     
@@ -99,8 +114,10 @@ class NewDocumentViewController: UIViewController {
         let typ = documentTextView.typingAttributes[NSAttributedString.Key.underlineStyle] as? NSNumber
         if (typ == 1) {
             self.documentTextView.typingAttributes[NSAttributedString.Key.underlineStyle] = 0
+            underlineButton.backgroundColor = .clear
         } else {
             self.documentTextView.typingAttributes[NSAttributedString.Key.underlineStyle] = 1
+            underlineButton.backgroundColor = .lightGray
         }
     }
     
@@ -123,15 +140,18 @@ class NewDocumentViewController: UIViewController {
     private func setParagraphAlignment(newAlignmnet: NSTextAlignment) {
         if let range = documentTextView.selectedTextRange {
             let selectedText = documentTextView.text(in: range)
+            
+            let newParagraphStyle = NSMutableParagraphStyle.init()
+            newParagraphStyle.alignment = newAlignmnet
+            var dict = documentTextView.typingAttributes
+            dict.updateValue(newParagraphStyle, forKey: NSAttributedString.Key.paragraphStyle)
+            
             if selectedText!.count > 0 {
-                let newParagraphStyle = NSMutableParagraphStyle.init()
-                newParagraphStyle.alignment = newAlignmnet
-                let dict = [NSAttributedString.Key.paragraphStyle: newParagraphStyle]
                 documentTextView.textStorage.beginEditing()
                 documentTextView.textStorage.setAttributes(dict, range: documentTextView.selectedRange)
                 documentTextView.textStorage.endEditing()
             } else {
-                
+                documentTextView.typingAttributes = dict
             }
         }
     }

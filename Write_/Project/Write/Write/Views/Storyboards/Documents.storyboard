@@ -185,72 +185,114 @@ War is like rich people playing with poor people llife</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ZM-aU-R0N">
                                 <rect key="frame" x="0.0" y="756" width="375" height="42"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HO4-d7-akB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HO4-d7-akB" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
                                         <rect key="frame" x="24" y="0.0" width="40" height="42"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="PeT-eA-jlN"/>
                                         </constraints>
                                         <state key="normal" image="ic_bold"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="boldButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="gK5-sc-VoZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkN-fl-win">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkN-fl-win" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
                                         <rect key="frame" x="72" y="0.0" width="40" height="42"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="tgk-3U-hqt"/>
                                         </constraints>
                                         <state key="normal" image="ic_italic"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="italicButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="EGg-Ug-fMz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LES-t0-fem">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LES-t0-fem" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
                                         <rect key="frame" x="120" y="0.0" width="40" height="42"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="s9V-1y-Y0s"/>
                                         </constraints>
                                         <state key="normal" image="ic_underlined"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="underlineButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="lsy-Gn-tdb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvS-0V-uDu">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvS-0V-uDu" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
                                         <rect key="frame" x="168" y="0.0" width="40" height="42"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="7cn-J9-cqb"/>
                                         </constraints>
                                         <state key="normal" image="ic_color_text"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="textColorChangeButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="xgE-OH-HbA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SII-Lm-vCD">
-                                        <rect key="frame" x="232" y="0.0" width="40" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SII-Lm-vCD" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
+                                        <rect key="frame" x="220" y="0.0" width="40" height="42"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="oWf-ku-FPP"/>
                                         </constraints>
                                         <state key="normal" image="ic_align_left"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="leftAlignButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="peo-PR-EMr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efO-YY-XL6">
-                                        <rect key="frame" x="280" y="0.0" width="40" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efO-YY-XL6" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
+                                        <rect key="frame" x="268" y="0.0" width="40" height="42"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="ugj-9y-kBk"/>
                                         </constraints>
                                         <state key="normal" image="ic_align_center"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="centerAlignButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="Msz-FS-TD0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lug-Th-rfw">
-                                        <rect key="frame" x="317" y="0.0" width="40" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lug-Th-rfw" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
+                                        <rect key="frame" x="316" y="0.0" width="40" height="42"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="7Se-uZ-4ci"/>
                                         </constraints>
                                         <state key="normal" image="ic_align_right"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="rightAlignButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="hQG-lc-hmk"/>
                                         </connections>
@@ -264,7 +306,7 @@ War is like rich people playing with poor people llife</string>
                                     <constraint firstItem="lug-Th-rfw" firstAttribute="bottom" secondItem="efO-YY-XL6" secondAttribute="bottom" id="4Km-aL-2Gt"/>
                                     <constraint firstItem="RkN-fl-win" firstAttribute="bottom" secondItem="HO4-d7-akB" secondAttribute="bottom" id="95I-5r-oME"/>
                                     <constraint firstItem="LES-t0-fem" firstAttribute="leading" secondItem="RkN-fl-win" secondAttribute="trailing" constant="8" id="CLO-TV-B44"/>
-                                    <constraint firstItem="lug-Th-rfw" firstAttribute="leading" secondItem="efO-YY-XL6" secondAttribute="trailing" constant="-3" id="Cfr-Te-Kxz"/>
+                                    <constraint firstItem="lug-Th-rfw" firstAttribute="leading" secondItem="efO-YY-XL6" secondAttribute="trailing" constant="8" id="Cfr-Te-Kxz"/>
                                     <constraint firstItem="QvS-0V-uDu" firstAttribute="bottom" secondItem="LES-t0-fem" secondAttribute="bottom" id="G2f-fe-xwX"/>
                                     <constraint firstItem="RkN-fl-win" firstAttribute="leading" secondItem="HO4-d7-akB" secondAttribute="trailing" constant="8" id="JLm-sq-zND"/>
                                     <constraint firstItem="efO-YY-XL6" firstAttribute="leading" secondItem="SII-Lm-vCD" secondAttribute="trailing" constant="8" id="RuZ-tK-NsO"/>
@@ -279,7 +321,7 @@ War is like rich people playing with poor people llife</string>
                                     <constraint firstItem="SII-Lm-vCD" firstAttribute="top" secondItem="QvS-0V-uDu" secondAttribute="top" id="jYJ-z1-8x0"/>
                                     <constraint firstAttribute="bottom" secondItem="HO4-d7-akB" secondAttribute="bottom" id="qxj-yd-skg"/>
                                     <constraint firstItem="efO-YY-XL6" firstAttribute="bottom" secondItem="SII-Lm-vCD" secondAttribute="bottom" id="sDD-v2-1eN"/>
-                                    <constraint firstItem="SII-Lm-vCD" firstAttribute="leading" secondItem="QvS-0V-uDu" secondAttribute="trailing" constant="24" id="zvf-VP-RYf"/>
+                                    <constraint firstItem="SII-Lm-vCD" firstAttribute="leading" secondItem="QvS-0V-uDu" secondAttribute="trailing" constant="12" id="zvf-VP-RYf"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -299,8 +341,15 @@ War is like rich people playing with poor people llife</string>
                         <viewLayoutGuide key="safeArea" id="TyK-wn-ars"/>
                     </view>
                     <connections>
+                        <outlet property="boldButton" destination="HO4-d7-akB" id="fsV-xO-3Yd"/>
                         <outlet property="bottomView" destination="1ZM-aU-R0N" id="UkY-1b-nT0"/>
+                        <outlet property="centerAlignButton" destination="efO-YY-XL6" id="Oc1-Kh-vvU"/>
+                        <outlet property="colorButton" destination="QvS-0V-uDu" id="745-9z-W8R"/>
                         <outlet property="documentTextView" destination="2s2-rP-Mc8" id="D8q-fJ-7z3"/>
+                        <outlet property="italicButton" destination="RkN-fl-win" id="08V-Yp-qHb"/>
+                        <outlet property="leftAlignButton" destination="SII-Lm-vCD" id="1gF-Bd-c6E"/>
+                        <outlet property="rightAlignButton" destination="lug-Th-rfw" id="BhI-3c-vpS"/>
+                        <outlet property="underlineButton" destination="LES-t0-fem" id="37X-I7-BF3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tKS-9L-dvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
