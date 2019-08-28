@@ -102,12 +102,18 @@
                                         <state key="normal" title="Save">
                                             <color key="titleColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="wrx-aA-JEt"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R22-2i-M3O">
                                         <rect key="frame" x="15" y="54" width="48" height="30"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.50406354865771807" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelButtonClicked:" destination="koy-Hc-r31" eventType="touchUpInside" id="vOk-3t-jRP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

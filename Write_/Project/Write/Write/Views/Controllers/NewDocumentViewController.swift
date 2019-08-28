@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NewDocumentViewController: UIViewController {
 
@@ -170,6 +171,36 @@ class NewDocumentViewController: UIViewController {
             } else {
                 documentTextView.typingAttributes = dict
             }
+        }
+    }
+    
+    @IBAction func cancelButtonClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func saveButtonClicked(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Document", in: context)
+        let newDocument = NSManagedObject(entity: entity!, insertInto: context)
+        
+        let attributedString = documentTextView.attributedText
+        var lines: [String] = documentTextView.text.components(separatedBy: NSCharacterSet.newlines)
+        //componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+        
+        let date = Date()
+        
+        //entity.transformableAttribute = attributedString
+        newDocument.setValue(attributedString, forKey: "content")
+        newDocument.setValue(date, forKey: "date")
+        newDocument.setValue(lines[0], forKey: "title")
+        newDocument.setValue(lines[1], forKey: "writer")
+        
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving")
         }
     }
 }
