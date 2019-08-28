@@ -76,13 +76,14 @@ class NewDocumentViewController: UIViewController {
         
     }
     
-    
     @IBAction func boldButtonClicked(_ sender: Any) {
         if let range = documentTextView.selectedTextRange {
             let selectedText = documentTextView.text(in: range)
             if selectedText!.count > 0 {
-               // let paragraphStyle = NSMutableParagraphStyle()
-               // paragraphStyle.alignment = NSTextAlignment.center
+                let boldFont = UIFont.boldSystemFont(ofSize: (CGFloat)(15.0))
+                var dict = documentTextView.typingAttributes
+                dict.updateValue(boldFont, forKey: NSAttributedString.Key.font)
+                documentTextView.textStorage.setAttributes(dict, range: documentTextView.selectedRange)
             } else {
                 let changedFontDescriptor = UIFont.systemFont(ofSize: (CGFloat)(15.0))
                 let typ = documentTextView.typingAttributes[NSAttributedString.Key.font] as? UIFont
@@ -95,29 +96,45 @@ class NewDocumentViewController: UIViewController {
                 }
             }
         }
-        
-        
     }
     
     @IBAction func italicButtonClicked(_ sender: Any) {
-        let typ = documentTextView.typingAttributes[NSAttributedString.Key.obliqueness] as? NSNumber
-        if typ == 0.5 {
-            documentTextView.typingAttributes[NSAttributedString.Key.obliqueness] = 0
-            italicButton.backgroundColor = .clear
-        }else {
-            documentTextView.typingAttributes[NSAttributedString.Key.obliqueness] = 0.5
-            italicButton.backgroundColor = .lightGray
+        if let range = documentTextView.selectedTextRange {
+            let selectedText = documentTextView.text(in: range)
+            if selectedText!.count > 0 {
+                var dict = documentTextView.typingAttributes
+                dict.updateValue(0.5, forKey: NSAttributedString.Key.obliqueness)
+                documentTextView.textStorage.setAttributes(dict, range: documentTextView.selectedRange)
+            } else {
+                let typ = documentTextView.typingAttributes[NSAttributedString.Key.obliqueness] as? NSNumber
+                if typ == 0.5 {
+                    documentTextView.typingAttributes[NSAttributedString.Key.obliqueness] = 0
+                    italicButton.backgroundColor = .clear
+                }else {
+                    documentTextView.typingAttributes[NSAttributedString.Key.obliqueness] = 0.5
+                    italicButton.backgroundColor = .lightGray
+                }
+            }
         }
     }
     
     @IBAction func underlineButtonClicked(_ sender: Any) {
-        let typ = documentTextView.typingAttributes[NSAttributedString.Key.underlineStyle] as? NSNumber
-        if (typ == 1) {
-            self.documentTextView.typingAttributes[NSAttributedString.Key.underlineStyle] = 0
-            underlineButton.backgroundColor = .clear
-        } else {
-            self.documentTextView.typingAttributes[NSAttributedString.Key.underlineStyle] = 1
-            underlineButton.backgroundColor = .lightGray
+        if let range = documentTextView.selectedTextRange {
+            let selectedText = documentTextView.text(in: range)
+            if selectedText!.count > 0 {
+                var dict = documentTextView.typingAttributes
+                dict.updateValue(1, forKey: NSAttributedString.Key.underlineStyle)
+                documentTextView.textStorage.setAttributes(dict, range: documentTextView.selectedRange)
+            } else {
+                let typ = documentTextView.typingAttributes[NSAttributedString.Key.underlineStyle] as? NSNumber
+                if (typ == 1) {
+                    self.documentTextView.typingAttributes[NSAttributedString.Key.underlineStyle] = 0
+                    underlineButton.backgroundColor = .clear
+                } else {
+                    self.documentTextView.typingAttributes[NSAttributedString.Key.underlineStyle] = 1
+                    underlineButton.backgroundColor = .lightGray
+                }
+            }
         }
     }
     
