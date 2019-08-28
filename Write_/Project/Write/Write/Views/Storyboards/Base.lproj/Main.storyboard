@@ -22,10 +22,10 @@
                                 <rect key="frame" x="150.5" y="372" width="113.5" height="30.5"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fal-rI-Bfe">
-                                <rect key="frame" x="0.0" y="409" width="414" height="399"/>
+                                <rect key="frame" x="0.0" y="449" width="414" height="359"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBV-l3-dcE" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="307" width="398" height="50"/>
+                                        <rect key="frame" x="8" y="267" width="398" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="zlr-ON-Gmt"/>
@@ -45,16 +45,26 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="399" id="7X7-cs-cRn"/>
+                                    <constraint firstAttribute="height" constant="359" id="7X7-cs-cRn"/>
                                     <constraint firstItem="cBV-l3-dcE" firstAttribute="leading" secondItem="Fal-rI-Bfe" secondAttribute="leading" constant="8" id="IFG-Ww-Tgq"/>
                                     <constraint firstAttribute="bottom" secondItem="cBV-l3-dcE" secondAttribute="bottom" constant="42" id="aqt-KO-jNd"/>
                                     <constraint firstAttribute="trailing" secondItem="cBV-l3-dcE" secondAttribute="trailing" constant="8" id="bvl-3j-1nB"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWS-pg-M7z">
+                                <rect key="frame" x="244.5" y="398.5" width="19.5" height="4"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="19.199999999999999" id="WX9-7Z-mG2"/>
+                                    <constraint firstAttribute="height" constant="4" id="aG4-tP-aDE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="jWS-pg-M7z" firstAttribute="bottom" secondItem="IC1-BE-VGu" secondAttribute="bottom" id="2zq-ih-0eT"/>
                             <constraint firstItem="IC1-BE-VGu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="J4h-Q4-Kpc"/>
+                            <constraint firstItem="jWS-pg-M7z" firstAttribute="trailing" secondItem="IC1-BE-VGu" secondAttribute="trailing" id="Wbr-2G-fSl"/>
                             <constraint firstItem="Fal-rI-Bfe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gQ8-5V-KvK"/>
                             <constraint firstItem="IC1-BE-VGu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="lCy-1q-Qpr"/>
                             <constraint firstItem="Fal-rI-Bfe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="mJz-mR-cmL"/>
@@ -63,6 +73,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="WBn-gc-glN"/>
+                    <connections>
+                        <outlet property="blinkView" destination="jWS-pg-M7z" id="KTd-br-dRz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
