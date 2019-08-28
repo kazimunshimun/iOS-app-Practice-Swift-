@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class ReaderViewController: UIViewController {
 
-    let documentList: [String] = ["Song for the Old Ones", "Awaking in New York", "The Heart of a Woman", "The Mothering Blackness", "Mom & Me & Mom"]
+    var documentList: [DocumentEntity] = []
     @IBOutlet weak var readerCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,33 @@ class ReaderViewController: UIViewController {
     
     private func configureCollectionView() {
         readerCollectionView.register(UINib(nibName: "DocumentCell", bundle: nil), forCellWithReuseIdentifier: "documentCell1")
+        fetchDocumentList()
+    }
+    
+    private func fetchDocumentList() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Document")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                let date = data.value(forKey: "date") as! NSDate
+                let title = data.value(forKey: "title") as! String
+                let writer = data.value(forKey: "writer") as! String
+                let content = data.value(forKey: "content") as! NSAttributedString
+                let document = DocumentEntity(date: date, title: title, writer: writer, content: content)
+                self.documentList.append(document)
+                print(date)
+                print(title)
+                print(writer)
+                print(content)
+            }
+            readerCollectionView.reloadData()
+        } catch {
+            print("Failed")
+        }
     }
     
 }
@@ -40,7 +68,7 @@ extension ReaderViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "documentCell1", for: indexPath) as! DocumentCell
         if indexPath.row < documentList.count {
             cell.dataView.isHidden = false
-            cell.titleLabel.text = documentList[indexPath.row]
+            cell.titleLabel.text = documentList[indexPath.row].title
         } else {
             cell.dataView.isHidden = true
         }

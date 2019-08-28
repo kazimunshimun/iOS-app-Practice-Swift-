@@ -23,6 +23,7 @@ class NewDocumentViewController: UIViewController {
     @IBOutlet weak var centerAlignButton: RoundedCornerButton!
     @IBOutlet weak var rightAlignButton: RoundedCornerButton!
     
+    var documentContent: NSAttributedString = NSAttributedString(string: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,7 @@ class NewDocumentViewController: UIViewController {
     
     private func setupViews() {
         documentTextView.delegate = self
-        
+        documentTextView.attributedText = documentContent
         NotificationCenter.default.addObserver(self, selector:#selector(NewDocumentViewController.keyBoardWillShow(_:)), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector:#selector(NewDocumentViewController.keyBoardWillHide(_:)), name:UIResponder.keyboardWillHideNotification, object: nil)
     }

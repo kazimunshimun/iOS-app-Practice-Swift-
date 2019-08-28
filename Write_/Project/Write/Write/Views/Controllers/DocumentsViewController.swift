@@ -95,11 +95,19 @@ extension DocumentsViewController: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("colloection view item clicked: \(indexPath.row)")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Documents", bundle: nil)
+        let newDocumentViewController = storyBoard.instantiateViewController(withIdentifier: "newDocumentView") as! NewDocumentViewController
         if indexPath.row == 0 {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Documents", bundle: nil)
-            let newDocumentViewController = storyBoard.instantiateViewController(withIdentifier: "newDocumentView") as! NewDocumentViewController
             self.present(newDocumentViewController, animated: true)
-            collectionView.deselectItem(at: indexPath, animated: true)
+        } else {
+            if indexPath.row <= documentList.count {
+                if documentList.count > 0 {
+                    //cell.titleLabel.text = documentList[indexPath.row - 1].title
+                    newDocumentViewController.documentContent = documentList[indexPath.row - 1].content
+                    self.present(newDocumentViewController, animated: true)
+                }
+            }
         }
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
 }
