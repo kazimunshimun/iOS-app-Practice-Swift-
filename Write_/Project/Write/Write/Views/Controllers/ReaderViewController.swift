@@ -85,5 +85,15 @@ extension ReaderViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("colloection view item clicked: \(indexPath.row)")
+        if indexPath.row < documentList.count {
+            if documentList.count > 0 {
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Documents", bundle: nil)
+                let newDocumentViewController = storyBoard.instantiateViewController(withIdentifier: "newDocumentView") as! NewDocumentViewController
+                newDocumentViewController.documentContent = documentList[indexPath.row].content
+                newDocumentViewController.isReaderView = true
+                self.present(newDocumentViewController, animated: true)
+                collectionView.deselectItem(at: indexPath, animated: true)
+            }
+        }
     }
 }

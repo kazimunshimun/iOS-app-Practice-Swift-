@@ -355,6 +355,7 @@ War is like rich people playing with poor people llife</string>
                         <outlet property="italicButton" destination="RkN-fl-win" id="08V-Yp-qHb"/>
                         <outlet property="leftAlignButton" destination="SII-Lm-vCD" id="1gF-Bd-c6E"/>
                         <outlet property="rightAlignButton" destination="lug-Th-rfw" id="BhI-3c-vpS"/>
+                        <outlet property="saveButton" destination="n55-pY-cGe" id="jeA-cn-d5l"/>
                         <outlet property="underlineButton" destination="LES-t0-fem" id="37X-I7-BF3"/>
                     </connections>
                 </viewController>

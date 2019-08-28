@@ -11,6 +11,7 @@ import CoreData
 
 class NewDocumentViewController: UIViewController {
 
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var documentTextView: UITextView!
     @IBOutlet weak var bottomView: UIView!
     
@@ -24,6 +25,7 @@ class NewDocumentViewController: UIViewController {
     @IBOutlet weak var rightAlignButton: RoundedCornerButton!
     
     var documentContent: NSAttributedString = NSAttributedString(string: "")
+    var isReaderView = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +37,14 @@ class NewDocumentViewController: UIViewController {
     private func setupViews() {
         documentTextView.delegate = self
         documentTextView.attributedText = documentContent
-        NotificationCenter.default.addObserver(self, selector:#selector(NewDocumentViewController.keyBoardWillShow(_:)), name:UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector:#selector(NewDocumentViewController.keyBoardWillHide(_:)), name:UIResponder.keyboardWillHideNotification, object: nil)
+        if isReaderView {
+            bottomView.isHidden = true
+            documentTextView.isEditable = false
+            saveButton.setTitle("Share", for: .normal)
+        } else {
+            NotificationCenter.default.addObserver(self, selector:#selector(NewDocumentViewController.keyBoardWillShow(_:)), name:UIResponder.keyboardWillShowNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector:#selector(NewDocumentViewController.keyBoardWillHide(_:)), name:UIResponder.keyboardWillHideNotification, object: nil)
+        }
     }
     
 
@@ -180,6 +188,14 @@ class NewDocumentViewController: UIViewController {
     }
     
     @IBAction func saveButtonClicked(_ sender: Any) {
+        if isReaderView {
+            doShareDocument()
+        } else {
+            doSaveDocument()
+        }
+    }
+    
+    private func doSaveDocument() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -188,21 +204,28 @@ class NewDocumentViewController: UIViewController {
         
         let attributedString = documentTextView.attributedText
         var lines: [String] = documentTextView.text.components(separatedBy: NSCharacterSet.newlines)
-        //componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-        
         let date = Date()
         
-        //entity.transformableAttribute = attributedString
-        newDocument.setValue(attributedString, forKey: "content")
-        newDocument.setValue(date, forKey: "date")
-        newDocument.setValue(lines[0], forKey: "title")
-        newDocument.setValue(lines[1], forKey: "writer")
-        
-        do {
-            try context.save()
-        } catch {
-            print("Failed saving")
+        if lines.count > 3 {
+            newDocument.setValue(attributedString, forKey: "content")
+            newDocument.setValue(date, forKey: "date")
+            newDocument.setValue(lines[0], forKey: "title")
+            newDocument.setValue(lines[1], forKey: "writer")
+            
+            do {
+                try context.save()
+                //show save successful message
+                self.dismiss(animated: true, completion: nil)
+            } catch {
+                print("Failed saving")
+            }
+        } else {
+            print("document is not complete")
         }
+    }
+    
+    private func doShareDocument() {
+        print("Share button tapped")
     }
 }
 
