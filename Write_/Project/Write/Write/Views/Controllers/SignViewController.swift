@@ -22,6 +22,7 @@ class SignViewController: UIViewController {
     @IBOutlet weak var signView: UIView!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var indicatorView: UIView!
     
     @IBOutlet weak var signInView: RoundedCornerView!
     @IBOutlet weak var signUpView: RoundedCornerView!
@@ -36,9 +37,9 @@ class SignViewController: UIViewController {
     private func setupViews() {
         signView.alpha = 0.0
         signView.transform = CGAffineTransform(translationX: 0, y: 359)
-        
-       // signInButton.adjustsImageWhenHighlighted = false
-       // signUpButton.adjustsImageWhenHighlighted = false
+       // indicatorView.transform = indicatorView.transform.rotated(by: CGFloat(M_PI_2))
+        //let degrees: Double = 50; //the value in degrees
+        //indicatorView.transform = CGAffineTransform(rotationAngle: CGFloat(degrees * Double.pi/180));
     }
 
     func startBlink() {
@@ -75,6 +76,7 @@ class SignViewController: UIViewController {
                        animations: {
                         self.signInButton.alpha = 1.0
                         self.signUpButton.alpha = 0.65
+                        self.indicatorView.transform = CGAffineTransform(translationX: 0, y: 0)
         }, completion: { (_: Bool) in
             self.nowSelectedTab = .signIn
             self.signInView.transform = CGAffineTransform(translationX: 0, y: 0)
@@ -93,6 +95,7 @@ class SignViewController: UIViewController {
                        animations: {
                         self.signInButton.alpha = 0.65
                         self.signUpButton.alpha = 1.0
+                        self.indicatorView.transform = CGAffineTransform(translationX: self.signInButton.frame.width, y: 0)
         }, completion: { (_: Bool) in
             self.nowSelectedTab = .signUp
             self.signInView.transform = CGAffineTransform(translationX: -self.signView.frame.width, y: 0)

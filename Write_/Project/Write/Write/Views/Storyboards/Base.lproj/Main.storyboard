@@ -55,13 +55,23 @@
                                                     <action selector="signUpTabClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCe-85-QbZ"/>
                                                 </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCu-AN-yAv" customClass="TriangleView" customModule="Write" customModuleProvider="target">
+                                                <rect key="frame" x="97.5" y="35" width="16" height="5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="16" id="YUg-95-ErJ"/>
+                                                    <constraint firstAttribute="height" constant="5" id="lUa-qt-ydR"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="bCu-AN-yAv" firstAttribute="top" secondItem="SZe-L9-4jT" secondAttribute="bottom" constant="7" id="4hc-kt-Ql3"/>
                                             <constraint firstItem="SZe-L9-4jT" firstAttribute="top" secondItem="ul5-tH-LZU" secondAttribute="top" id="DkY-o6-Fuh"/>
                                             <constraint firstItem="QDD-gx-BBm" firstAttribute="leading" secondItem="SZe-L9-4jT" secondAttribute="trailing" constant="8" id="Dx1-ru-uUQ"/>
                                             <constraint firstAttribute="height" constant="40" id="NJv-Tn-oja"/>
                                             <constraint firstItem="SZe-L9-4jT" firstAttribute="leading" secondItem="ul5-tH-LZU" secondAttribute="leading" constant="8" id="c9v-l9-J9L"/>
+                                            <constraint firstItem="bCu-AN-yAv" firstAttribute="centerX" secondItem="SZe-L9-4jT" secondAttribute="centerX" id="hBx-t3-0cu"/>
                                             <constraint firstItem="QDD-gx-BBm" firstAttribute="width" secondItem="SZe-L9-4jT" secondAttribute="width" id="idE-M6-dOJ"/>
                                             <constraint firstAttribute="trailing" secondItem="QDD-gx-BBm" secondAttribute="trailing" constant="8" id="ix8-ae-l3K"/>
                                             <constraint firstItem="QDD-gx-BBm" firstAttribute="top" secondItem="ul5-tH-LZU" secondAttribute="top" id="oHh-e6-q2E"/>
@@ -174,6 +184,7 @@
                     <navigationItem key="navigationItem" id="WBn-gc-glN"/>
                     <connections>
                         <outlet property="blinkView" destination="jWS-pg-M7z" id="KTd-br-dRz"/>
+                        <outlet property="indicatorView" destination="bCu-AN-yAv" id="szq-PD-o3k"/>
                         <outlet property="logoImageView" destination="IC1-BE-VGu" id="11l-1h-PMo"/>
                         <outlet property="signInButton" destination="SZe-L9-4jT" id="85s-ep-dsP"/>
                         <outlet property="signInView" destination="2uX-Dx-33g" id="CgC-1s-Qc4"/>
