@@ -27,6 +27,14 @@ class SignViewController: UIViewController {
     @IBOutlet weak var signInView: RoundedCornerView!
     @IBOutlet weak var signUpView: RoundedCornerView!
     
+    @IBOutlet weak var signInEmailTextField: UITextField!
+    @IBOutlet weak var signInPasswordTextField: UITextField!
+    
+    @IBOutlet weak var signUpNameTextField: UITextField!
+    @IBOutlet weak var signUpEmailTextField: UITextField!
+    @IBOutlet weak var signUpPasswordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -37,9 +45,13 @@ class SignViewController: UIViewController {
     private func setupViews() {
         signView.alpha = 0.0
         signView.transform = CGAffineTransform(translationX: 0, y: 359)
-       // indicatorView.transform = indicatorView.transform.rotated(by: CGFloat(M_PI_2))
-        //let degrees: Double = 50; //the value in degrees
-        //indicatorView.transform = CGAffineTransform(rotationAngle: CGFloat(degrees * Double.pi/180));
+        
+        signInEmailTextField.setLeftPaddingPoints(15)
+        signInPasswordTextField.setLeftPaddingPoints(15)
+        
+        signUpNameTextField.setLeftPaddingPoints(15)
+        signUpEmailTextField.setLeftPaddingPoints(15)
+        signUpPasswordTextField.setLeftPaddingPoints(15)
     }
 
     func startBlink() {
@@ -101,7 +113,19 @@ class SignViewController: UIViewController {
             self.signInView.transform = CGAffineTransform(translationX: -self.signView.frame.width, y: 0)
             self.signUpView.transform = CGAffineTransform(translationX: -self.signView.frame.width, y: 0)
         })
-        
+    }
+}
+
+extension UITextField {
+    func setLeftPaddingPoints(_ amount:CGFloat){
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.leftView = paddingView
+        self.leftViewMode = .always
+    }
+    func setRightPaddingPoints(_ amount:CGFloat) {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.rightView = paddingView
+        self.rightViewMode = .always
     }
 }
 
