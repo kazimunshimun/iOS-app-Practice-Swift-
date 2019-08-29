@@ -23,7 +23,7 @@
 		84A9A8352311905000BED4EE /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9A8342311905000BED4EE /* ReaderViewController.swift */; };
 		84A9A8372311934800BED4EE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9A8362311934800BED4EE /* SettingsViewController.swift */; };
 		84EABD892311680A006BB5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABD882311680A006BB5CB /* AppDelegate.swift */; };
-		84EABD8B2311680A006BB5CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABD8A2311680A006BB5CB /* ViewController.swift */; };
+		84EABD8B2311680A006BB5CB /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABD8A2311680A006BB5CB /* SignViewController.swift */; };
 		84EABD8E2311680A006BB5CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EABD8C2311680A006BB5CB /* Main.storyboard */; };
 		84EABD912311680A006BB5CB /* Write.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84EABD8F2311680A006BB5CB /* Write.xcdatamodeld */; };
 		84EABD932311680C006BB5CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84EABD922311680C006BB5CB /* Assets.xcassets */; };
@@ -48,7 +48,7 @@
 		84A9A8362311934800BED4EE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		84EABD852311680A006BB5CB /* Write.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Write.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EABD882311680A006BB5CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84EABD8A2311680A006BB5CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84EABD8A2311680A006BB5CB /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		84EABD8D2311680A006BB5CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84EABD902311680A006BB5CB /* Write.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Write.xcdatamodel; sourceTree = "<group>"; };
 		84EABD922311680C006BB5CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		84A9A82623117AD200BED4EE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				84EABD8A2311680A006BB5CB /* ViewController.swift */,
+				84EABD8A2311680A006BB5CB /* SignViewController.swift */,
 				84A9A82423117AC900BED4EE /* DocumentsViewController.swift */,
 				84A9A8342311905000BED4EE /* ReaderViewController.swift */,
 				84A9A8362311934800BED4EE /* SettingsViewController.swift */,
@@ -246,7 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A9A82823117D0400BED4EE /* RoundedCornerView.swift in Sources */,
-				84EABD8B2311680A006BB5CB /* ViewController.swift in Sources */,
+				84EABD8B2311680A006BB5CB /* SignViewController.swift in Sources */,
 				84A9A82523117AC900BED4EE /* DocumentsViewController.swift in Sources */,
 				84A9A82E23117E3200BED4EE /* DocumentCell.swift in Sources */,
 				8438D4AF231578DE00C783D3 /* RoundedCornerButton.swift in Sources */,
