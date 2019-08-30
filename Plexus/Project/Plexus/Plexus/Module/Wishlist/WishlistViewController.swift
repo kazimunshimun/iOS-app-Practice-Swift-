@@ -27,7 +27,9 @@ class WishlistViewController: UIViewController, WishlistViewProtocol {
         wishlistTableView.delegate = self
         wishlistTableView.dataSource = self
         wishlistTableView.register(UINib(nibName: "WishlistCell", bundle: nil), forCellReuseIdentifier: "wishlistCell")
+        self.showWaitView(onView: self.view)
         networkManager.getWishListRequest( completion: { (wishlistRequest) in
+            self.removeWaitView()
             self.wishlist = wishlistRequest!
             self.animateTable()
         })

@@ -113,16 +113,34 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="88" height="130"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="completed_course_1" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-9V-gHH">
-                                                                        <rect key="frame" x="0.0" y="2" width="88" height="128"/>
-                                                                    </imageView>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gk6-ge-8Lh" customClass="RoundedCornersShadowView" customModule="Plexus" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="130"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="completed_course_1" translatesAutoresizingMaskIntoConstraints="NO" id="q8d-9V-gHH">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="88" height="130"/>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="q8d-9V-gHH" firstAttribute="top" secondItem="gk6-ge-8Lh" secondAttribute="top" id="M2s-7K-4sT"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="q8d-9V-gHH" secondAttribute="trailing" id="c8M-G5-UOr"/>
+                                                                            <constraint firstItem="q8d-9V-gHH" firstAttribute="leading" secondItem="gk6-ge-8Lh" secondAttribute="leading" id="sFw-UR-3x9"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="q8d-9V-gHH" secondAttribute="bottom" id="xv4-yL-xbV"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="3"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
                                                                 </subviews>
                                                             </view>
                                                             <constraints>
-                                                                <constraint firstItem="q8d-9V-gHH" firstAttribute="leading" secondItem="DOo-HR-3aY" secondAttribute="leading" id="1kA-dm-o6e"/>
-                                                                <constraint firstAttribute="trailing" secondItem="q8d-9V-gHH" secondAttribute="trailing" id="Dlp-lt-sD0"/>
-                                                                <constraint firstAttribute="bottom" secondItem="q8d-9V-gHH" secondAttribute="bottom" id="Hcd-6h-Q64"/>
-                                                                <constraint firstItem="q8d-9V-gHH" firstAttribute="top" secondItem="DOo-HR-3aY" secondAttribute="top" constant="2" id="Ysr-Pa-l28"/>
+                                                                <constraint firstAttribute="trailing" secondItem="gk6-ge-8Lh" secondAttribute="trailing" id="3RA-79-sfT"/>
+                                                                <constraint firstAttribute="bottom" secondItem="gk6-ge-8Lh" secondAttribute="bottom" id="AEa-Un-7hq"/>
+                                                                <constraint firstItem="gk6-ge-8Lh" firstAttribute="leading" secondItem="DOo-HR-3aY" secondAttribute="leading" id="qeB-9C-civ"/>
+                                                                <constraint firstItem="gk6-ge-8Lh" firstAttribute="top" secondItem="DOo-HR-3aY" secondAttribute="top" id="sd0-Ny-dav"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="courseImageView" destination="q8d-9V-gHH" id="ai7-wX-hFj"/>

@@ -15,4 +15,5 @@ target 'Plexus' do
     pod 'TweenController', '~> 1.0'
     pod 'Cosmos', '~> 19.0'
     pod 'Alamofire', '~> 5.0.0-beta.5'
+    pod 'ShimmerSwift'
 end

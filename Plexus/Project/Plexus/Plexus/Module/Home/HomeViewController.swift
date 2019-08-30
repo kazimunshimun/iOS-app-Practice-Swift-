@@ -28,7 +28,9 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         homeTableView.dataSource = self
         homeTableView.register(UINib(nibName: "BannerCell", bundle: nil), forCellReuseIdentifier: "bannerCell")
         homeTableView.register(UINib(nibName: "MostViewedCell", bundle: nil), forCellReuseIdentifier: "mostViewedCell")
+        self.showWaitView(onView: self.view)
         networkManager.getHomeCourseRequest(completion: { (courses) in
+            self.removeWaitView()
             self.courseList = courses!
             self.homeTableView.reloadData()
         })

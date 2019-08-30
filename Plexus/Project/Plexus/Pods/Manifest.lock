@@ -107,6 +107,7 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.8.0)
+  - ShimmerSwift (1.0.3)
   - SkyFloatingLabelTextField (3.7.0)
   - TweenController (1.0.1)
 
@@ -118,6 +119,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - ShimmerSwift
   - SkyFloatingLabelTextField (~> 3.0)
   - TweenController (~> 1.0)
 
@@ -142,6 +144,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - ShimmerSwift
     - SkyFloatingLabelTextField
     - TweenController
 
@@ -165,9 +168,10 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
+  ShimmerSwift: 261828bd524cfe211a398cb97d01e03bc52cd395
   SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
   TweenController: 476a70703c91483a3d9b4c91b61175784e55c0af
 
-PODFILE CHECKSUM: ec8bd502361c9ee9fe67c29e2c86eec05db3c107
+PODFILE CHECKSUM: ba18cc73f6fdc5d2a860de6322ca608ec09223f2
 
 COCOAPODS: 1.6.0

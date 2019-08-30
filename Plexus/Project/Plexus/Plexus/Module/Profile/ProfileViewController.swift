@@ -28,7 +28,7 @@ class ProfileViewController: UIViewController, ProfileViewProtocol {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setupViews()
+       // setupViews()
         
     }
     
@@ -40,8 +40,9 @@ class ProfileViewController: UIViewController, ProfileViewProtocol {
     private func setupViews() {
         profileCoursesTableview.delegate = self
         profileCoursesTableview.dataSource = self
-        
+        self.showWaitView(onView: self.view)
         networkManager.getProfileRequest(completion: { (profileResponse) in
+            self.removeWaitView()
             self.profile = profileResponse!
             self.profilePictureImageView.image = UIImage(named: self.profile.profileImage!)
             self.profileCoursesTableview.reloadData()

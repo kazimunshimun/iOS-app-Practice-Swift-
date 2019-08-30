@@ -37,8 +37,10 @@ class OnlineViewController: UIViewController, OnlineViewProtocol {
     }
     
     private func setupViews() {
+        self.showWaitView(onView: self.view)
         networkManager.getOnlineRequest( completion: { (onlineRequest) in
             self.onlineCourselist = onlineRequest!
+            self.removeWaitView()
             self.courseCollectionView.reloadData()
         })
     }

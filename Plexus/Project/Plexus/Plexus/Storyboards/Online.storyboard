@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wall" translatesAutoresizingMaskIntoConstraints="NO" id="g8b-9t-RZU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJU-FC-GF2">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
                                 <subviews>
@@ -37,7 +40,7 @@
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PI7-qZ-1C7">
                                 <rect key="frame" x="0.0" y="87" width="414" height="726"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g19-p1-5mT">
                                     <size key="itemSize" width="172" height="186"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -115,12 +118,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Zar-Ox-WIX" firstAttribute="bottom" secondItem="g8b-9t-RZU" secondAttribute="bottom" id="0Dd-BD-SPl"/>
                             <constraint firstItem="PI7-qZ-1C7" firstAttribute="top" secondItem="LJU-FC-GF2" secondAttribute="bottom" id="7Vm-Yq-mmI"/>
                             <constraint firstItem="Zar-Ox-WIX" firstAttribute="trailing" secondItem="PI7-qZ-1C7" secondAttribute="trailing" id="9Gc-Xn-jQ5"/>
                             <constraint firstItem="PI7-qZ-1C7" firstAttribute="leading" secondItem="Zar-Ox-WIX" secondAttribute="leading" id="Af6-2D-oWe"/>
                             <constraint firstItem="PI7-qZ-1C7" firstAttribute="bottom" secondItem="Zar-Ox-WIX" secondAttribute="bottom" id="C89-Yb-fhd"/>
                             <constraint firstItem="LJU-FC-GF2" firstAttribute="leading" secondItem="Zar-Ox-WIX" secondAttribute="leading" id="Uub-nx-gG4"/>
+                            <constraint firstItem="Zar-Ox-WIX" firstAttribute="trailing" secondItem="g8b-9t-RZU" secondAttribute="trailing" id="gyj-wF-lOj"/>
+                            <constraint firstItem="g8b-9t-RZU" firstAttribute="top" secondItem="Zar-Ox-WIX" secondAttribute="top" id="mQN-a8-MSV"/>
                             <constraint firstItem="Zar-Ox-WIX" firstAttribute="trailing" secondItem="LJU-FC-GF2" secondAttribute="trailing" id="nAO-J1-knG"/>
+                            <constraint firstItem="g8b-9t-RZU" firstAttribute="leading" secondItem="Zar-Ox-WIX" secondAttribute="leading" id="rps-YM-h6f"/>
                             <constraint firstItem="Zar-Ox-WIX" firstAttribute="top" secondItem="LJU-FC-GF2" secondAttribute="top" constant="44" id="s6d-Nv-5WG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zar-Ox-WIX"/>
@@ -140,5 +147,6 @@
         <image name="completed_course_1" width="88" height="130"/>
         <image name="online_courses_selected" width="22" height="16.5"/>
         <image name="online_courses_unselected" width="22" height="16.5"/>
+        <image name="wall" width="375" height="812"/>
     </resources>
 </document>
