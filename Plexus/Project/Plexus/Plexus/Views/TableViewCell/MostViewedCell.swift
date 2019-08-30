@@ -12,6 +12,10 @@ class MostViewedCell: UITableViewCell {
 
     @IBOutlet weak var mostViewedLabelHeight: NSLayoutConstraint!
     @IBOutlet weak var mostViewedLabel: UILabel!
+    
+    @IBOutlet weak var courseImageView: UIImageView!
+    @IBOutlet weak var detailLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -51,6 +51,7 @@ Science Bootcamp</string>
                                     <constraint firstItem="51Q-O9-XCK" firstAttribute="centerY" secondItem="ToH-V0-BOh" secondAttribute="centerY" id="3jL-0g-XrC"/>
                                     <constraint firstAttribute="height" constant="80" id="LUs-bU-9We"/>
                                     <constraint firstItem="51Q-O9-XCK" firstAttribute="leading" secondItem="ToH-V0-BOh" secondAttribute="leading" constant="8" id="TaP-b3-lrH"/>
+                                    <constraint firstAttribute="trailing" secondItem="51Q-O9-XCK" secondAttribute="trailing" constant="38" id="c9j-ZA-YOX"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -83,6 +84,8 @@ Science Bootcamp</string>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="courseImageView" destination="0Qs-4a-sPd" id="2Fd-O7-Iec"/>
+                <outlet property="detailLabel" destination="51Q-O9-XCK" id="HrX-Y0-egA"/>
                 <outlet property="mostViewedLabel" destination="sfi-SZ-0LI" id="JCw-4N-x2w"/>
                 <outlet property="mostViewedLabelHeight" destination="4Oq-KR-tGx" id="U3V-oP-RJV"/>
             </connections>

@@ -10,4 +10,8 @@ import UIKit
 
 class CourseCell: UICollectionViewCell {
     
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var courseDetailLabel: UILabel!
+    @IBOutlet weak var courseImageView: UIImageView!
+    
 }

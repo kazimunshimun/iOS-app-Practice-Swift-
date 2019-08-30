@@ -15,6 +15,8 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     //http://www.mocky.io/v2/5d68d5153300005a00b68686
     @IBOutlet weak var homeTableView: UITableView!
     var presenter: HomePresenterProtocol?
+    private let networkManager: NetworkManager = NetworkManager()
+    private var courseList: CourseRequest = CourseRequest(discover: [], mostViews: [])
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,10 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         homeTableView.dataSource = self
         homeTableView.register(UINib(nibName: "BannerCell", bundle: nil), forCellReuseIdentifier: "bannerCell")
         homeTableView.register(UINib(nibName: "MostViewedCell", bundle: nil), forCellReuseIdentifier: "mostViewedCell")
+        networkManager.getHomeCourseRequest(completion: { (courses) in
+            self.courseList = courses!
+            self.homeTableView.reloadData()
+        })
     }
 }
 
@@ -43,12 +49,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return courseList.mostViews!.count + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "discoverTableCell", for: indexPath) as! DiscoverCell
+            if courseList.discover!.count > 0 {
+                cell.discoverList = courseList.discover!
+                cell.discoverCollectionView.reloadData()
+            }
             cell.layer.backgroundColor = UIColor.clear.cgColor
             return cell
         } else if indexPath.row == 1 {
@@ -57,6 +67,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "mostViewedCell", for: indexPath) as! MostViewedCell
+            if courseList.mostViews!.count > 0 {
+                let course = courseList.mostViews![indexPath.row - 2]
+                cell.courseImageView.image = UIImage(named: course.imageName!)
+                cell.detailLabel.text = course.description
+            }
             if indexPath.row > 2 {
                 cell.mostViewedLabelHeight.constant = 0
             }

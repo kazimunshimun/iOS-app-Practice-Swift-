@@ -79,6 +79,7 @@
 		8461E14C2311663E00AB3FA1 /* OnlineCourseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461E14B2311663E00AB3FA1 /* OnlineCourseEntity.swift */; };
 		8461E14E2311669C00AB3FA1 /* WishlistCourseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461E14D2311669C00AB3FA1 /* WishlistCourseEntity.swift */; };
 		8489B40B2307143000BDE491 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489B40A2307143000BDE491 /* RoundedButton.swift */; };
+		8491481123197D900027E29F /* CourseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491481023197D900027E29F /* CourseRequest.swift */; };
 		84D0D7422310446300690D92 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73C2310446300690D92 /* TestPresenter.swift */; };
 		84D0D7432310446300690D92 /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73D2310446300690D92 /* TestRouter.swift */; };
 		84D0D7442310446300690D92 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73E2310446300690D92 /* TestViewController.swift */; };
@@ -188,6 +189,7 @@
 		8461E14D2311669C00AB3FA1 /* WishlistCourseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistCourseEntity.swift; sourceTree = "<group>"; };
 		846E7B686E58F63EE40282E2 /* Pods_Plexus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plexus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8489B40A2307143000BDE491 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		8491481023197D900027E29F /* CourseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRequest.swift; sourceTree = "<group>"; };
 		84D0D73C2310446300690D92 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		84D0D73D2310446300690D92 /* TestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
 		84D0D73E2310446300690D92 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 				84E56C1F2306B80300696058 /* HomeViewController.swift */,
 				84E56C202306B80300696058 /* HomeProtocols.swift */,
 				84E56C212306B80300696058 /* HomeInteractor.swift */,
+				8491481023197D900027E29F /* CourseRequest.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -773,6 +776,7 @@
 				84E56C162306B7CE00696058 /* WalkThroughPresenter.swift in Sources */,
 				84420F5E23068303001C1A5E /* SignInProtocols.swift in Sources */,
 				8439F903230DA83F00FD9EC2 /* HeaderView.swift in Sources */,
+				8491481123197D900027E29F /* CourseRequest.swift in Sources */,
 				8439F8FC230D9D4200FD9EC2 /* LessonCell.swift in Sources */,
 				84D0D7432310446300690D92 /* TestRouter.swift in Sources */,
 				8439F8FE230D9D6400FD9EC2 /* ExamHeaderView.swift in Sources */,

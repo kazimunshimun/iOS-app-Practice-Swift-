@@ -13,20 +13,13 @@ class NetworkManager: NSObject {
     
     private enum NetworkPath: String {
         case wishlistRequest = "5d68b91e3300003500b685c8"
-        case postedTweet
+        case homeRequest = "5d6950c63300005800b689eb"
         
         static let baseURL = "http://www.mocky.io/v2/"
         
         var url: String {
             return NetworkPath.baseURL + self.rawValue
         }
-    }
-    
-    private struct NetworkParameter {
-        static let deviceToken = "deviceToken"
-        static let hashtags = "hashtags"
-        static let tweetRequestId = "tweetRequestId"
-        static let tweetId = "tweetId"
     }
     
     // MARK:- TweetRequest services
@@ -45,5 +38,18 @@ class NetworkManager: NSObject {
         }
     }
     
-
+    func getHomeCourseRequest(completion: @escaping (CourseRequest?) -> Void) {
+        let urlString = NetworkPath.homeRequest.url
+        AF.request(urlString).response { response in
+            guard let data = response.data else { return }
+            do {
+                let decoder = JSONDecoder()
+                let courseRequest = try decoder.decode(CourseRequest.self, from: data)
+                completion(courseRequest)
+            } catch let error {
+                print(error)
+                completion(nil)
+            }
+        }
+    }
 }

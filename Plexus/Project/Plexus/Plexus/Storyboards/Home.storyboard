@@ -121,6 +121,11 @@
                                                                 <constraint firstItem="VvS-hs-ri0" firstAttribute="leading" secondItem="LL6-PN-X34" secondAttribute="leading" id="Cb8-2v-snb"/>
                                                                 <constraint firstItem="VvS-hs-ri0" firstAttribute="top" secondItem="LL6-PN-X34" secondAttribute="top" id="wKK-ig-ejJ"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outlet property="categoryLabel" destination="dZe-ul-X4M" id="cWV-4g-OY4"/>
+                                                                <outlet property="courseDetailLabel" destination="OUZ-z4-cHX" id="5z4-Qh-0y8"/>
+                                                                <outlet property="courseImageView" destination="oDA-QQ-YTv" id="4o4-Qt-4yF"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                     <connections>
@@ -136,6 +141,9 @@
                                                 <constraint firstItem="7Yc-6Q-LyI" firstAttribute="leading" secondItem="wtl-BW-Jje" secondAttribute="leading" constant="16" id="pli-A8-3d2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="discoverCollectionView" destination="7Yc-6Q-LyI" id="uXJ-rc-cBG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
