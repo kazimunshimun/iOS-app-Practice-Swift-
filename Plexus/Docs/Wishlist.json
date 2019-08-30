@@ -1,0 +1,3 @@
+[{"id":1,"category":"Software Development","title":"Python","description":"Learn Python like a Professional! Start from the basics and go all the way to creating your...","image_name":"wishlist_course_1","rating":3,"lesson_id":1},
+{"id":2,"category":"Game Development","title":"Unity","description":"Learn How To Plan, Design, Create And Publish Your Games On Any Platform Using Unity Game...","image_name":"wishlist_course_2","rating":1,"lesson_id":2},
+{"id":3,"category":"Software Development","title":"React Native","description":"Use React Native and your React knowledge and take your web development skills to build...","image_name":"wishlist_course_3","rating":3,"lesson_id":3}]
