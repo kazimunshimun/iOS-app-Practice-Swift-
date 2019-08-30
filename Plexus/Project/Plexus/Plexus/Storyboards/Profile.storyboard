@@ -124,6 +124,9 @@
                                                                 <constraint firstAttribute="bottom" secondItem="q8d-9V-gHH" secondAttribute="bottom" id="Hcd-6h-Q64"/>
                                                                 <constraint firstItem="q8d-9V-gHH" firstAttribute="top" secondItem="DOo-HR-3aY" secondAttribute="top" constant="2" id="Ysr-Pa-l28"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outlet property="courseImageView" destination="q8d-9V-gHH" id="ai7-wX-hFj"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                     <connections>
@@ -133,6 +136,9 @@
                                                 </collectionView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="completedCollectionView" destination="hW6-h1-GhY" id="8fE-VA-r4p"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="topRatedParentCell" rowHeight="198" id="EYZ-qC-2ge" customClass="TopRatedParentCell" customModule="Plexus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="207" width="414" height="198"/>
@@ -229,6 +235,11 @@
                                                                 <constraint firstAttribute="bottom" secondItem="V9e-W2-Yvf" secondAttribute="bottom" constant="16" id="QfI-IH-s8T"/>
                                                                 <constraint firstAttribute="trailing" secondItem="V9e-W2-Yvf" secondAttribute="trailing" id="gz8-rb-zQj"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outlet property="courseDetailLabel" destination="1RG-N4-1aO" id="ycT-1Z-Vmy"/>
+                                                                <outlet property="courseImageView" destination="j9p-z7-7xg" id="0CJ-kf-ccM"/>
+                                                                <outlet property="ratingView" destination="OP0-6P-p6q" id="HNf-5B-5u1"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                     <connections>
@@ -238,6 +249,9 @@
                                                 </collectionView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="topRatedCollectionView" destination="8GL-pQ-fhB" id="NIh-8k-bL6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

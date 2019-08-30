@@ -80,6 +80,7 @@
 		8461E14E2311669C00AB3FA1 /* WishlistCourseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461E14D2311669C00AB3FA1 /* WishlistCourseEntity.swift */; };
 		8489B40B2307143000BDE491 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489B40A2307143000BDE491 /* RoundedButton.swift */; };
 		8491481123197D900027E29F /* CourseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491481023197D900027E29F /* CourseRequest.swift */; };
+		84914813231988D30027E29F /* ProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914812231988D30027E29F /* ProfileRequest.swift */; };
 		84D0D7422310446300690D92 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73C2310446300690D92 /* TestPresenter.swift */; };
 		84D0D7432310446300690D92 /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73D2310446300690D92 /* TestRouter.swift */; };
 		84D0D7442310446300690D92 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73E2310446300690D92 /* TestViewController.swift */; };
@@ -190,6 +191,7 @@
 		846E7B686E58F63EE40282E2 /* Pods_Plexus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plexus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8489B40A2307143000BDE491 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		8491481023197D900027E29F /* CourseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRequest.swift; sourceTree = "<group>"; };
+		84914812231988D30027E29F /* ProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRequest.swift; sourceTree = "<group>"; };
 		84D0D73C2310446300690D92 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		84D0D73D2310446300690D92 /* TestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
 		84D0D73E2310446300690D92 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				84389670230AE40400F101DF /* ProfileViewController.swift */,
 				84389671230AE40400F101DF /* ProfileProtocols.swift */,
 				84389672230AE40400F101DF /* ProfileInteractor.swift */,
+				84914812231988D30027E29F /* ProfileRequest.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -768,6 +771,7 @@
 				84389674230AE40400F101DF /* ProfilePresenter.swift in Sources */,
 				84389678230AE40400F101DF /* ProfileInteractor.swift in Sources */,
 				84389684230AE4BF00F101DF /* OnlineProtocols.swift in Sources */,
+				84914813231988D30027E29F /* ProfileRequest.swift in Sources */,
 				84E56C0B2306B75B00696058 /* ForgotPasswordProtocols.swift in Sources */,
 				84389692230B092500F101DF /* CompletedCell.swift in Sources */,
 				84D0D7422310446300690D92 /* TestPresenter.swift in Sources */,

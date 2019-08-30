@@ -9,5 +9,6 @@
 import UIKit
 
 class CompletedCell: UICollectionViewCell {
+    @IBOutlet weak var courseImageView: UIImageView!
     
 }

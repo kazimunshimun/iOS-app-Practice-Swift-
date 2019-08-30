@@ -10,6 +10,8 @@ import UIKit
 
 class CompletedParentCell: UITableViewCell {
 
+    @IBOutlet weak var completedCollectionView: UICollectionView!
+    var completedList: [CopmpletedCourse] = []
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,13 +28,16 @@ class CompletedParentCell: UITableViewCell {
 extension CompletedParentCell : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "completedCell", for: indexPath) as! CompletedCell
-        
+        if completedList.count > 0 {
+            let course = completedList[indexPath.row]
+            cell.courseImageView.image = UIImage(named: course.imageName!)
+        }
         return cell
     }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return completedList.count
     }
     
 }

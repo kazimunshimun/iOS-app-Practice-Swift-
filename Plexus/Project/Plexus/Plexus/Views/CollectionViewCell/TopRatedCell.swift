@@ -7,7 +7,12 @@
 //
 
 import UIKit
+import Cosmos
 
 class TopRatedCell: UICollectionViewCell {
+    
+    @IBOutlet weak var courseDetailLabel: UILabel!
+    @IBOutlet weak var ratingView: CosmosView!
+    @IBOutlet weak var courseImageView: UIImageView!
     
 }
