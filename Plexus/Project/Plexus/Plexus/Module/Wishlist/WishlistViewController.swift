@@ -12,8 +12,11 @@ import UIKit
 
 class WishlistViewController: UIViewController, WishlistViewProtocol {
 
+    //http://www.mocky.io/v2/5d68b91e3300003500b685c8
     @IBOutlet weak var wishlistTableView: UITableView!
     var presenter: WishlistPresenterProtocol?
+    private let networkManager: NetworkManager = NetworkManager()
+    private var wishlist: [WishlistRequest] = []
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +27,10 @@ class WishlistViewController: UIViewController, WishlistViewProtocol {
         wishlistTableView.delegate = self
         wishlistTableView.dataSource = self
         wishlistTableView.register(UINib(nibName: "WishlistCell", bundle: nil), forCellReuseIdentifier: "wishlistCell")
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        animateTable()
+        networkManager.getWishListRequest( completion: { (wishlistRequest) in
+            self.wishlist = wishlistRequest!
+            self.animateTable()
+        })
     }
     
     func animateTable() {
@@ -61,12 +64,18 @@ extension WishlistViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return wishlist.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wishlistCell", for: indexPath) as! WishlistCell
         cell.layer.backgroundColor = UIColor.clear.cgColor
+        if wishlist.count > 0 {
+            let course = wishlist[indexPath.row]
+            cell.detailLabel.text = course.description
+            cell.ratingView.rating = Double(course.rating!)
+            cell.courseImageView.image = UIImage(named: course.imageName!)
+        }
         return cell
     }
 }

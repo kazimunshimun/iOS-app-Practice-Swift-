@@ -87,6 +87,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="courseImageView" destination="6qX-jX-H8Z" id="EeU-as-EuF"/>
+                <outlet property="detailLabel" destination="WAf-Xv-Ql5" id="ZER-n4-hhC"/>
+                <outlet property="ratingView" destination="szf-k9-MTN" id="HAe-lI-thV"/>
+            </connections>
             <point key="canvasLocation" x="163.04347826086959" y="155.35714285714286"/>
         </tableViewCell>
     </objects>

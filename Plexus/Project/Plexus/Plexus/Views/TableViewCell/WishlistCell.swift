@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Cosmos
 
 class WishlistCell: UITableViewCell {
 
+    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var ratingView: CosmosView!
+    @IBOutlet weak var courseImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

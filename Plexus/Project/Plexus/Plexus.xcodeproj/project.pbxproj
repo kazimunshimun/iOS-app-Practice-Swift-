@@ -67,6 +67,8 @@
 		8439F8FE230D9D6400FD9EC2 /* ExamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439F8FD230D9D6400FD9EC2 /* ExamHeaderView.swift */; };
 		8439F903230DA83F00FD9EC2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439F901230DA83F00FD9EC2 /* HeaderView.swift */; };
 		8439F904230DA83F00FD9EC2 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439F902230DA83F00FD9EC2 /* HeaderView.xib */; };
+		843DD3BB231927C90072B4F5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DD3BA231927C90072B4F5 /* NetworkManager.swift */; };
+		843DD3BD2319283E0072B4F5 /* WishlistRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DD3BC2319283E0072B4F5 /* WishlistRequest.swift */; };
 		84420F5B23068303001C1A5E /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5523068303001C1A5E /* SignInPresenter.swift */; };
 		84420F5C23068303001C1A5E /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5623068303001C1A5E /* SignInRouter.swift */; };
 		84420F5D23068303001C1A5E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5723068303001C1A5E /* SignInViewController.swift */; };
@@ -173,6 +175,8 @@
 		8439F8FD230D9D6400FD9EC2 /* ExamHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamHeaderView.swift; sourceTree = "<group>"; };
 		8439F901230DA83F00FD9EC2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8439F902230DA83F00FD9EC2 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		843DD3BA231927C90072B4F5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		843DD3BC2319283E0072B4F5 /* WishlistRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistRequest.swift; sourceTree = "<group>"; };
 		84420F5523068303001C1A5E /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		84420F5623068303001C1A5E /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
 		84420F5723068303001C1A5E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -323,6 +327,7 @@
 				84389664230AE3E000F101DF /* WishlistProtocols.swift */,
 				84389665230AE3E000F101DF /* WishlistInteractor.swift */,
 				8461E14D2311669C00AB3FA1 /* WishlistCourseEntity.swift */,
+				843DD3BC2319283E0072B4F5 /* WishlistRequest.swift */,
 			);
 			path = Wishlist;
 			sourceTree = "<group>";
@@ -526,6 +531,7 @@
 			children = (
 				84E56C2D2306C92000696058 /* ColorUtils.swift */,
 				84E2A2CB23084A5000888EA8 /* WalkthroughBuilder.swift */,
+				843DD3BA231927C90072B4F5 /* NetworkManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -713,6 +719,7 @@
 				84389681230AE4BF00F101DF /* OnlinePresenter.swift in Sources */,
 				8438966B230AE3E000F101DF /* WishlistInteractor.swift in Sources */,
 				8438965A230AE3B400F101DF /* ExamPresenter.swift in Sources */,
+				843DD3BB231927C90072B4F5 /* NetworkManager.swift in Sources */,
 				84420F5D23068303001C1A5E /* SignInViewController.swift in Sources */,
 				84E56C0C2306B75B00696058 /* ForgotPasswordInteractor.swift in Sources */,
 				84D0D7502310449D00690D92 /* CongratsRouter.swift in Sources */,
@@ -721,6 +728,7 @@
 				84389667230AE3E000F101DF /* WishlistPresenter.swift in Sources */,
 				84389685230AE4BF00F101DF /* OnlineInteractor.swift in Sources */,
 				84E56C092306B75B00696058 /* ForgotPasswordRouter.swift in Sources */,
+				843DD3BD2319283E0072B4F5 /* WishlistRequest.swift in Sources */,
 				84E56C0A2306B75B00696058 /* ForgotPasswordViewController.swift in Sources */,
 				84389669230AE3E000F101DF /* WishlistViewController.swift in Sources */,
 				843262E923067D7D00B4A268 /* AppDelegate.swift in Sources */,
