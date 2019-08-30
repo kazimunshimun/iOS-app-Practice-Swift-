@@ -81,6 +81,7 @@
 		8489B40B2307143000BDE491 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489B40A2307143000BDE491 /* RoundedButton.swift */; };
 		8491481123197D900027E29F /* CourseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491481023197D900027E29F /* CourseRequest.swift */; };
 		84914813231988D30027E29F /* ProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914812231988D30027E29F /* ProfileRequest.swift */; };
+		84914815231992A00027E29F /* OnlineRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914814231992A00027E29F /* OnlineRequest.swift */; };
 		84D0D7422310446300690D92 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73C2310446300690D92 /* TestPresenter.swift */; };
 		84D0D7432310446300690D92 /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73D2310446300690D92 /* TestRouter.swift */; };
 		84D0D7442310446300690D92 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D0D73E2310446300690D92 /* TestViewController.swift */; };
@@ -192,6 +193,7 @@
 		8489B40A2307143000BDE491 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		8491481023197D900027E29F /* CourseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRequest.swift; sourceTree = "<group>"; };
 		84914812231988D30027E29F /* ProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRequest.swift; sourceTree = "<group>"; };
+		84914814231992A00027E29F /* OnlineRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineRequest.swift; sourceTree = "<group>"; };
 		84D0D73C2310446300690D92 /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		84D0D73D2310446300690D92 /* TestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
 		84D0D73E2310446300690D92 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				8438967E230AE4BF00F101DF /* OnlineProtocols.swift */,
 				8438967F230AE4BF00F101DF /* OnlineInteractor.swift */,
 				8461E14B2311663E00AB3FA1 /* OnlineCourseEntity.swift */,
+				84914814231992A00027E29F /* OnlineRequest.swift */,
 			);
 			path = Online;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 				84389678230AE40400F101DF /* ProfileInteractor.swift in Sources */,
 				84389684230AE4BF00F101DF /* OnlineProtocols.swift in Sources */,
 				84914813231988D30027E29F /* ProfileRequest.swift in Sources */,
+				84914815231992A00027E29F /* OnlineRequest.swift in Sources */,
 				84E56C0B2306B75B00696058 /* ForgotPasswordProtocols.swift in Sources */,
 				84389692230B092500F101DF /* CompletedCell.swift in Sources */,
 				84D0D7422310446300690D92 /* TestPresenter.swift in Sources */,

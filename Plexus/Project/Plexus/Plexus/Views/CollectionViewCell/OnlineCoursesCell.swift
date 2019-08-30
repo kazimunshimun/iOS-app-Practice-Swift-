@@ -9,5 +9,7 @@
 import UIKit
 
 class OnlineCoursesCell: UICollectionViewCell {
+    @IBOutlet weak var courseImageView: UIImageView!
+    @IBOutlet weak var courseTitleLabel: UILabel!
     
 }

@@ -13,11 +13,16 @@ import Firebase
 
 class OnlineViewController: UIViewController, OnlineViewProtocol {
 
-	var presenter: OnlinePresenterProtocol?
+    @IBOutlet weak var courseCollectionView: UICollectionView!
+    var presenter: OnlinePresenterProtocol?
+    private let networkManager: NetworkManager = NetworkManager()
+    private var onlineCourselist: [OnlineRequest] = []
 
 	override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViews()
+        /*
         let db = Firestore.firestore()
         db.collection("OnlineCourses").getDocuments() { (querySnapshot, err) in
             if let err = err {
@@ -28,6 +33,14 @@ class OnlineViewController: UIViewController, OnlineViewProtocol {
                 }
             }
         }
+ */
+    }
+    
+    private func setupViews() {
+        networkManager.getOnlineRequest( completion: { (onlineRequest) in
+            self.onlineCourselist = onlineRequest!
+            self.courseCollectionView.reloadData()
+        })
     }
 
 }
@@ -36,19 +49,26 @@ extension OnlineViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "onlineCourseCell", for: indexPath) as! OnlineCoursesCell
-        cell.alpha = 0
-        let cellDelay = UInt64((arc4random() % 600 ) / 1000 )
-        let cellDelayTime = DispatchTime(uptimeNanoseconds: cellDelay * NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: cellDelayTime) {
-            UIView.animate(withDuration: 0.8, animations: {
-                cell.alpha = 1.0
-            })
+        if onlineCourselist.count > 0 {
+            cell.alpha = 0
+            let cellDelay = UInt64((arc4random() % 600 ) / 1000 )
+            let cellDelayTime = DispatchTime(uptimeNanoseconds: cellDelay * NSEC_PER_SEC)
+            DispatchQueue.main.asyncAfter(deadline: cellDelayTime) {
+                UIView.animate(withDuration: 0.8, animations: {
+                    cell.alpha = 1.0
+                })
+            }
+            
+            let course = onlineCourselist[indexPath.row]
+            cell.courseImageView.image = UIImage(named: course.imageName!)
+            cell.courseTitleLabel.text = course.title
         }
+        
         return cell
     }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return onlineCourselist.count
     }
 }

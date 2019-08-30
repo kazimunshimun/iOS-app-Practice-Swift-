@@ -15,6 +15,7 @@ class NetworkManager: NSObject {
         case wishlistRequest = "5d68b91e3300003500b685c8"
         case homeRequest = "5d6950c63300005800b689eb"
         case profileRequest = "5d68cf3b3300002700b68664"
+        case onlineRequest = "5d695d4c3300006800b68a15"
         
         static let baseURL = "http://www.mocky.io/v2/"
         
@@ -23,7 +24,7 @@ class NetworkManager: NSObject {
         }
     }
     
-    // MARK:- TweetRequest services
+    // MARK:- Request services
     func getWishListRequest(completion: @escaping ([WishlistRequest]?) -> Void) {
         let urlString = NetworkPath.wishlistRequest.url
         AF.request(urlString).response { response in
@@ -62,6 +63,21 @@ class NetworkManager: NSObject {
                 let decoder = JSONDecoder()
                 let profileRequest = try decoder.decode(ProfileRequest.self, from: data)
                 completion(profileRequest)
+            } catch let error {
+                print(error)
+                completion(nil)
+            }
+        }
+    }
+    
+    func getOnlineRequest(completion: @escaping ([OnlineRequest]?) -> Void) {
+        let urlString = NetworkPath.onlineRequest.url
+        AF.request(urlString).response { response in
+            guard let data = response.data else { return }
+            do {
+                let decoder = JSONDecoder()
+                let onlineRequest = try decoder.decode([OnlineRequest].self, from: data)
+                completion(onlineRequest)
             } catch let error {
                 print(error)
                 completion(nil)

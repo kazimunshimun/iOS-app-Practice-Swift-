@@ -101,6 +101,10 @@
                                             <constraint firstItem="Mcf-sa-KWy" firstAttribute="top" secondItem="Npg-WV-AXh" secondAttribute="top" id="m4J-gR-8yA"/>
                                             <constraint firstAttribute="trailing" secondItem="Mcf-sa-KWy" secondAttribute="trailing" id="mEy-Zd-eyM"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="courseImageView" destination="pwK-Kj-MYa" id="uEK-W8-fbh"/>
+                                            <outlet property="courseTitleLabel" destination="BR0-Ku-tdJ" id="6Hf-Qb-r4A"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -123,6 +127,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="online_courses_selected" selectedImage="online_courses_unselected" id="F2T-sa-l2a"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="courseCollectionView" destination="PI7-qZ-1C7" id="lAw-Tj-em5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVl-A3-Fb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
