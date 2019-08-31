@@ -9,6 +9,20 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.otf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.otf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Exam View Controller-->
         <scene sceneID="VyM-V5-pgU">
@@ -22,13 +36,13 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3f-Wf-str">
-                                <rect key="frame" x="20" y="108" width="39" height="18"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <rect key="frame" x="20" y="108" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="F8o-4a-Gme">
-                                <rect key="frame" x="0.0" y="134" width="375" height="625"/>
+                                <rect key="frame" x="0.0" y="137" width="375" height="622"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qzs-gv-xKk">
                                     <size key="itemSize" width="357" height="72"/>
@@ -52,14 +66,14 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 Miniutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qp-RV-hOb">
-                                                            <rect key="frame" x="140" y="19.666666666666668" width="57" height="13.000000000000004"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                                            <rect key="frame" x="137.66666666666666" y="18.333333333333332" width="62" height="15.666666666666668"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iob-rn-ate">
-                                                            <rect key="frame" x="20" y="18" width="60" height="16"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="13"/>
+                                                            <rect key="frame" x="20" y="17" width="75" height="18.333333333333329"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -67,8 +81,8 @@
                                                             <rect key="frame" x="292" y="7.6666666666666679" width="37" height="37"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP0-Ud-xip">
-                                                                    <rect key="frame" x="10.666666666666686" y="10.333333333333332" width="16" height="16"/>
-                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="13"/>
+                                                                    <rect key="frame" x="8.3333333333333162" y="9.3333333333333339" width="20.666666666666671" height="18.333333333333329"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="13"/>
                                                                     <color key="textColor" red="0.99215686274509807" green="0.56862745098039214" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -130,19 +144,19 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0Y-Fl-JHD" customClass="RoundedCornersShadowView" customModule="Plexus" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="most_viewed_course" translatesAutoresizingMaskIntoConstraints="NO" id="ToA-mG-W21">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dg4-MW-wzG">
-                                                    <rect key="frame" x="0.0" y="110" width="414" height="80"/>
+                                                    <rect key="frame" x="0.0" y="110" width="375" height="80"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RW-56-8wq">
-                                                            <rect key="frame" x="8" y="27" width="242" height="26.333333333333329"/>
+                                                            <rect key="frame" x="8" y="24.666666666666657" width="257" height="31"/>
                                                             <string key="text">The Data Science Course 2019: Complete Data 
 Science Bootcamp</string>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -173,9 +187,9 @@ Science Bootcamp</string>
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REP-by-uDy">
-                                            <rect key="frame" x="16" y="206" width="382" height="90"/>
+                                            <rect key="frame" x="16" y="206" width="343" height="138.66666666666663"/>
                                             <string key="text">Data scientist is one of the best suited professions to thrive this century. It is digital, programming-oriented, and analytical. Therefore, it comes as no surprise that the demand for data scientists has been surging in the job marketplace. However, supply has been very limited. It is difficult to acquire the skills necessary to be hired as a data scientist.  Universities have been slow at creating specialized data science programs. (not to mention that the ones that exist are very expensive and time consuming)  </string>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -252,17 +266,17 @@ Science Bootcamp</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZb-b7-1Gk">
-                                        <rect key="frame" x="72" y="51" width="47" height="18"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                        <rect key="frame" x="72" y="49.666666666666664" width="50" height="20.999999999999993"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmF-LG-5gh">
-                                        <rect key="frame" x="268" y="40" width="75" height="40"/>
+                                        <rect key="frame" x="261" y="40" width="82" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="yo6-L0-Hjg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                         <state key="normal" title="Start Exam"/>
                                         <connections>
                                             <action selector="startExamButtonClicked:" destination="qdN-qC-gaW" eventType="touchUpInside" id="2fb-FL-ddi"/>
@@ -284,13 +298,13 @@ Science Bootcamp</string>
                                 <rect key="frame" x="20" y="348" width="335" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAs-Ua-0gI">
-                                        <rect key="frame" x="24" y="40" width="61" height="14"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
+                                        <rect key="frame" x="24" y="40" width="63" height="15.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="11"/>
                                         <color key="textColor" red="0.70196078429999997" green="0.1960784314" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zz-lT-nTS">
-                                        <rect key="frame" x="24" y="62" width="287" height="330"/>
+                                        <rect key="frame" x="24" y="63.666666666666686" width="287" height="328.33333333333331"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Mobile applications are one of the best ways to engage with users - no wonder everyone wants to build one!
 
@@ -306,7 +320,7 @@ You'll learn all about the theory behind React Native, its core concepts, how to
 
 And which better way to learn than by building a real app? We'll build the "Awesome Places" app in this course, an app where users can share amazing pictures and the location where they took them. This app will allow you to see things like using maps, the camera, user authentication, connecting to a server and much more in action.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -354,7 +368,7 @@ And which better way to learn than by building a real app? We'll build the "Awes
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRg-GO-4vw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1824.6376811594205" y="57.589285714285708"/>
+            <point key="canvasLocation" x="1823.2" y="56.896551724137936"/>
         </scene>
         <!--User Level View Controller-->
         <scene sceneID="2eM-2V-xJl">
@@ -388,8 +402,8 @@ And which better way to learn than by building a real app? We'll build the "Awes
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPi-nx-Qdo">
-                                        <rect key="frame" x="72" y="51" width="72" height="18"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                        <rect key="frame" x="72" y="49.666666666666664" width="76" height="20.999999999999993"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -408,10 +422,10 @@ And which better way to learn than by building a real app? We'll build the "Awes
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxk-08-5eB">
-                                <rect key="frame" x="32" y="154.33333333333334" width="167" height="54.666666666666657"/>
+                                <rect key="frame" x="32.000000000000014" y="149.33333333333334" width="214.33333333333337" height="64.666666666666657"/>
                                 <string key="text">What level do you 
 want to achieve?</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -473,17 +487,17 @@ want to achieve?</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z3-u4-a8Z">
-                                        <rect key="frame" x="72" y="51" width="39" height="18"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                        <rect key="frame" x="72" y="49.666666666666664" width="42" height="20.999999999999993"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcs-4I-65b">
-                                        <rect key="frame" x="310" y="40" width="49" height="40"/>
+                                        <rect key="frame" x="304" y="40" width="55" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ifd-Sf-I4S"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                         <state key="normal" title="Submit"/>
                                         <connections>
                                             <action selector="submitAnswerClicked:" destination="XIU-SM-6fy" eventType="touchUpInside" id="gFh-j9-DZm"/>
@@ -505,15 +519,23 @@ want to achieve?</string>
                                 <rect key="frame" x="0.0" y="95" width="375" height="116"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3g-LV-wJP">
-                                        <rect key="frame" x="16" y="16" width="343" height="74.333333333333329"/>
+                                        <rect key="frame" x="16" y="16" width="343" height="86.333333333333329"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
+                                            <fragment content="Task number one ">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="18" name="Poppins-SemiBold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
                                             <fragment>
-                                                <string key="content">Task number one 
+                                                <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                                 <attributes>
                                                     <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="18" name="HelveticaNeue-CondensedBold"/>
+                                                    <font key="NSFont" size="11" name="Poppins-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" lineHeightMultiple="0.5" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -521,14 +543,14 @@ want to achieve?</string>
                                                 <string key="content">The first task is for you to read the code below and identify the errors in the code and re-write the code in the code snippet box given below.</string>
                                                 <attributes>
                                                     <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                                    <font key="NSFont" size="11" name="Poppins-Regular"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pah-qt-35L" customClass="RoundedCornersShadowView" customModule="Plexus" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="98.333333333333343" width="339" height="9"/>
+                                        <rect key="frame" x="20" y="110.33333333333334" width="339" height="9"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressImage="signin_button_back" translatesAutoresizingMaskIntoConstraints="NO" id="8A6-5g-Mlx">
                                                 <rect key="frame" x="0.0" y="0.0" width="339" height="9"/>
@@ -575,7 +597,7 @@ want to achieve?</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kq1-6o-HsA">
-                                                        <rect key="frame" x="16" y="16" width="343" height="200"/>
+                                                        <rect key="frame" x="16" y="16" width="343" height="181"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <string key="text">const login = document.getElementById('login');
 const loginMenu = document.getElementById('loginMenu');
@@ -588,7 +610,7 @@ login.addEventListener('click', () =&gt; {
   }
 });</string>
                                                         <color key="textColor" red="0.38823529411764707" green="0.61176470588235299" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
@@ -608,7 +630,7 @@ login.addEventListener('click', () =&gt; {
                                                 </constraints>
                                                 <string key="text">In this example, JavaScript is used to apply behavior to an HTML element with id login. The behavior allows a user to click a LOGIN button that toggles a login form.</string>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HQ-a9-eeo">
@@ -622,15 +644,15 @@ login.addEventListener('click', () =&gt; {
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgJ-il-NnB">
-                                                        <rect key="frame" x="60" y="0.0" width="315" height="27"/>
+                                                        <rect key="frame" x="64" y="0.0" width="311" height="27"/>
                                                         <color key="backgroundColor" red="0.16470588235294117" green="0.15294117647058825" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="27" id="F6s-sp-hmK"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="main.js" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIg-VG-xEA">
-                                                        <rect key="frame" x="20" y="8" width="32" height="12"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                                        <rect key="frame" x="20" y="8" width="36" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -714,7 +736,7 @@ login.addEventListener('click', () =&gt; {
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKL-8v-EbL">
-                                <rect key="frame" x="67.666666666666686" y="371.33333333333331" width="240" height="79.666666666666686"/>
+                                <rect key="frame" x="67.666666666666686" y="371.33333333333331" width="240" height="79.333333333333314"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="6Uy-tn-rsq"/>
@@ -724,7 +746,7 @@ login.addEventListener('click', () =&gt; {
                                         <attributes>
                                             <color key="NSBackgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="HelveticaNeue-CondensedBold"/>
+                                            <font key="NSFont" size="18" name="Poppins-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="16" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -739,7 +761,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="16" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="You have completed all your tasks for your first course. Keep going">
+                                    <fragment content="Yo">
                                         <attributes>
                                             <color key="NSBackgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -747,15 +769,23 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
+                                    <fragment content="u have completed all your tasks for your first course. Keep going">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="11" name="Poppins-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeC-2s-XRJ" customClass="RoundedCornersShadowView" customModule="Plexus" customModuleProvider="target">
-                                <rect key="frame" x="117" y="467" width="141" height="41"/>
+                                <rect key="frame" x="117" y="466.66666666666669" width="141" height="41"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6O-ZW-6dA">
                                         <rect key="frame" x="0.0" y="0.0" width="141" height="41"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                         <state key="normal" title="Proceed" backgroundImage="signin_button_back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>

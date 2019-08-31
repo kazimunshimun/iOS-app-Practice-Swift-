@@ -9,6 +9,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.otf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Profile View Controller-->
         <scene sceneID="YwZ-MK-ncS">
@@ -25,20 +36,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="237"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRZ-R7-C2x">
-                                        <rect key="frame" x="16" y="60" width="44.5" height="18"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                        <rect key="frame" x="16" y="60" width="46.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mario Speedwagon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9K4-et-Fw6">
-                                        <rect key="frame" x="16" y="109" width="138" height="22"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
+                                        <rect key="frame" x="16" y="112" width="177" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I teach full stack development! Which means you will see tutorials regarding UI/UX, Frontend Dev, Backend Dev, Graphic and more" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52s-2v-Fzz">
-                                        <rect key="frame" x="16" y="139" width="253" height="38.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <rect key="frame" x="16" y="145.5" width="253" height="62"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -194,20 +205,23 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="132"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn Python like a Professional! Start from the basics and go all the way to creating your..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RG-N4-1aO">
-                                                                                <rect key="frame" x="16" y="25" width="184" height="38.5"/>
-                                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                                                                <rect key="frame" x="16" y="20" width="194" height="46.5"/>
+                                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See full review &gt;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjZ-rS-eKo">
-                                                                                <rect key="frame" x="16" y="69.5" width="184" height="13"/>
-                                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                                                                <rect key="frame" x="16" y="72.5" width="194" height="15.5"/>
+                                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OP0-6P-p6q" customClass="CosmosView" customModule="Cosmos">
-                                                                                <rect key="frame" x="16" y="94.5" width="120" height="20"/>
+                                                                                <rect key="frame" x="16" y="96" width="120" height="20"/>
                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="20" id="NRB-pe-z4p"/>
+                                                                                </constraints>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
                                                                                         <integer key="value" value="5"/>
@@ -231,12 +245,12 @@
                                                                             <constraint firstItem="j9p-z7-7xg" firstAttribute="centerY" secondItem="V9e-W2-Yvf" secondAttribute="centerY" id="6ZN-SW-pcp"/>
                                                                             <constraint firstAttribute="trailing" secondItem="j9p-z7-7xg" secondAttribute="trailing" constant="16" id="7Tg-DE-x7V"/>
                                                                             <constraint firstItem="OP0-6P-p6q" firstAttribute="leading" secondItem="1RG-N4-1aO" secondAttribute="leading" id="C2U-Xq-MEh"/>
-                                                                            <constraint firstItem="j9p-z7-7xg" firstAttribute="leading" secondItem="1RG-N4-1aO" secondAttribute="trailing" constant="34" id="JnO-iA-InQ"/>
+                                                                            <constraint firstItem="j9p-z7-7xg" firstAttribute="leading" secondItem="1RG-N4-1aO" secondAttribute="trailing" constant="24" id="JnO-iA-InQ"/>
                                                                             <constraint firstItem="1RG-N4-1aO" firstAttribute="leading" secondItem="V9e-W2-Yvf" secondAttribute="leading" constant="16" id="UZy-e3-Qvj"/>
                                                                             <constraint firstItem="HjZ-rS-eKo" firstAttribute="trailing" secondItem="1RG-N4-1aO" secondAttribute="trailing" id="WSp-O2-53m"/>
                                                                             <constraint firstItem="HjZ-rS-eKo" firstAttribute="top" secondItem="1RG-N4-1aO" secondAttribute="bottom" constant="6" id="gkE-bO-Jqj"/>
-                                                                            <constraint firstItem="OP0-6P-p6q" firstAttribute="top" secondItem="HjZ-rS-eKo" secondAttribute="bottom" constant="12" id="jJb-UY-OH6"/>
-                                                                            <constraint firstItem="1RG-N4-1aO" firstAttribute="top" secondItem="V9e-W2-Yvf" secondAttribute="top" constant="25" id="tgX-wL-IXr"/>
+                                                                            <constraint firstItem="OP0-6P-p6q" firstAttribute="top" secondItem="HjZ-rS-eKo" secondAttribute="bottom" constant="8" id="jJb-UY-OH6"/>
+                                                                            <constraint firstItem="1RG-N4-1aO" firstAttribute="top" secondItem="V9e-W2-Yvf" secondAttribute="top" constant="20" id="tgX-wL-IXr"/>
                                                                         </constraints>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

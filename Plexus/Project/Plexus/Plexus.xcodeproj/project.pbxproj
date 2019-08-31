@@ -67,6 +67,11 @@
 		8439F8FE230D9D6400FD9EC2 /* ExamHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439F8FD230D9D6400FD9EC2 /* ExamHeaderView.swift */; };
 		8439F903230DA83F00FD9EC2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439F901230DA83F00FD9EC2 /* HeaderView.swift */; };
 		8439F904230DA83F00FD9EC2 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8439F902230DA83F00FD9EC2 /* HeaderView.xib */; };
+		843A2EE0231A4400008AF442 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843A2EDB231A43FF008AF442 /* Poppins-Medium.otf */; };
+		843A2EE1231A4400008AF442 /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843A2EDC231A43FF008AF442 /* Poppins-Bold.otf */; };
+		843A2EE2231A4400008AF442 /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843A2EDD231A43FF008AF442 /* Poppins-Regular.otf */; };
+		843A2EE3231A4400008AF442 /* Poppins-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843A2EDE231A43FF008AF442 /* Poppins-ExtraBold.otf */; };
+		843A2EE4231A4400008AF442 /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843A2EDF231A4400008AF442 /* Poppins-SemiBold.otf */; };
 		843DD3BB231927C90072B4F5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DD3BA231927C90072B4F5 /* NetworkManager.swift */; };
 		843DD3BD2319283E0072B4F5 /* WishlistRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DD3BC2319283E0072B4F5 /* WishlistRequest.swift */; };
 		84420F5B23068303001C1A5E /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5523068303001C1A5E /* SignInPresenter.swift */; };
@@ -180,6 +185,11 @@
 		8439F8FD230D9D6400FD9EC2 /* ExamHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamHeaderView.swift; sourceTree = "<group>"; };
 		8439F901230DA83F00FD9EC2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8439F902230DA83F00FD9EC2 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		843A2EDB231A43FF008AF442 /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
+		843A2EDC231A43FF008AF442 /* Poppins-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.otf"; sourceTree = "<group>"; };
+		843A2EDD231A43FF008AF442 /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
+		843A2EDE231A43FF008AF442 /* Poppins-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.otf"; sourceTree = "<group>"; };
+		843A2EDF231A4400008AF442 /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
 		843DD3BA231927C90072B4F5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		843DD3BC2319283E0072B4F5 /* WishlistRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistRequest.swift; sourceTree = "<group>"; };
 		84420F5523068303001C1A5E /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
@@ -432,6 +442,11 @@
 		84420F63230686B1001C1A5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				843A2EDC231A43FF008AF442 /* Poppins-Bold.otf */,
+				843A2EDE231A43FF008AF442 /* Poppins-ExtraBold.otf */,
+				843A2EDB231A43FF008AF442 /* Poppins-Medium.otf */,
+				843A2EDD231A43FF008AF442 /* Poppins-Regular.otf */,
+				843A2EDF231A4400008AF442 /* Poppins-SemiBold.otf */,
 				843262EF23067D7F00B4A268 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -611,17 +626,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843A2EE4231A4400008AF442 /* Poppins-SemiBold.otf in Resources */,
+				843A2EE0231A4400008AF442 /* Poppins-Medium.otf in Resources */,
 				8439F904230DA83F00FD9EC2 /* HeaderView.xib in Resources */,
 				843262F323067D7F00B4A268 /* LaunchScreen.storyboard in Resources */,
 				8461E14A2311241A00AB3FA1 /* GoogleService-Info.plist in Resources */,
 				8439A0CE2309B1F200E458F2 /* Exam.storyboard in Resources */,
 				843498B9230FB65D00927D84 /* DesiredLevelCell.xib in Resources */,
+				843A2EE2231A4400008AF442 /* Poppins-Regular.otf in Resources */,
+				843A2EE1231A4400008AF442 /* Poppins-Bold.otf in Resources */,
 				8439A0D22309B20600E458F2 /* Profile.storyboard in Resources */,
 				8439A0CC2309B1E200E458F2 /* Home.storyboard in Resources */,
 				8439A0D42309B21900E458F2 /* Online.storyboard in Resources */,
 				8439A0D02309B1FE00E458F2 /* Wishlist.storyboard in Resources */,
 				8434BEBC230C575900AD58C0 /* MostViewedCell.xib in Resources */,
 				8439A0CA2309B0BA00E458F2 /* TabMenu.storyboard in Resources */,
+				843A2EE3231A4400008AF442 /* Poppins-ExtraBold.otf in Resources */,
 				843262F023067D7F00B4A268 /* Assets.xcassets in Resources */,
 				8434BEB8230C573B00AD58C0 /* BannerCell.xib in Resources */,
 				8438968B230AE96800F101DF /* WishlistCell.xib in Resources */,

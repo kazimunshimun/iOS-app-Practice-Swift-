@@ -38,8 +38,8 @@ class WaitView: UIView {
         shimmerView.translatesAutoresizingMaskIntoConstraints = false
         shimmerView.centerXAnchor.constraint(equalTo: waitView.centerXAnchor).isActive = true
         shimmerView.topAnchor.constraint(equalTo: waitView.topAnchor, constant: 24).isActive = true
-        shimmerView.heightAnchor.constraint(equalToConstant: 136).isActive = true
-        shimmerView.widthAnchor.constraint(equalToConstant: 136).isActive = true
+        shimmerView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        shimmerView.widthAnchor.constraint(equalToConstant: 100).isActive = true
         shimmerView.backgroundColor = .clear
         
         shimmerView.contentView = imageView
@@ -61,6 +61,7 @@ class WaitView: UIView {
         pleaseWaitLabel.text = "Please wait"
         pleaseWaitLabel.textAlignment = .center
         pleaseWaitLabel.textColor = .white
+        pleaseWaitLabel.font = UIFont(name: "Poppins-SemiBold", size: 14)
     }
     
     
