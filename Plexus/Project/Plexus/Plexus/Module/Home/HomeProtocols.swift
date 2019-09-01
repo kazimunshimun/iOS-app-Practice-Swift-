@@ -16,17 +16,52 @@ protocol HomeWireframeProtocol: class {
 }
 //MARK: Presenter -
 protocol HomePresenterProtocol: class {
-
+    func viewDidLoad()
 }
 
 //MARK: Interactor -
 protocol HomeInteractorProtocol: class {
 
-  var presenter: HomePresenterProtocol?  { get set }
+    var presenter: HomePresenterProtocol?  { get set }
+    
+    var interactorOutput: HomeInteractorOutputProtocol? { get set }
+    var datamanager: HomeDataManagerInputProtocol? { get set }
+    
+    func retrieveHomeCourses()
+}
+
+protocol HomeInteractorInputProtocol: class {
+    
+}
+
+protocol HomeInteractorOutputProtocol: class {
+    func didRetrieveHomeCourses(_ courses: CourseRequest)
+    func onError()
+}
+
+protocol HomeDataManagerInputProtocol: class {
+    var remoteRequestHandler: HomeDataManagerOutputProtocol? { get set }
+    
+    // INTERACTOR -> REMOTEDATAMANAGER
+    func retrieveHomeCourses()
+}
+
+protocol HomeDataManagerOutputProtocol: class {
+    //DataManager->Interactor
+    func onHomeCoursesRetrieved(_ courses: CourseRequest)
+    func onError()
 }
 
 //MARK: View -
 protocol HomeViewProtocol: class {
 
-  var presenter: HomePresenterProtocol?  { get set }
+    var presenter: HomePresenterProtocol?  { get set }
+    
+    func showHomeCourses(with courses: CourseRequest)
+    
+    func showError()
+    
+    func showLoading()
+    
+    func hideLoading()
 }

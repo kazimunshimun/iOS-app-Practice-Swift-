@@ -37,11 +37,6 @@ class OnlineViewController: UIViewController, OnlineViewProtocol {
  */
     }
     
-    private func setupViews() {
-        
-        
-    }
-    
     func showOnlineCourses(with courses: [OnlineRequest]) {
         self.onlineCourselist = courses
         self.courseCollectionView.reloadData()

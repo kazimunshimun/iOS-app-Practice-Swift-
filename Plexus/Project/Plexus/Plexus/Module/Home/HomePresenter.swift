@@ -21,5 +21,21 @@ class HomePresenter: HomePresenterProtocol {
         self.interactor = interactor
         self.router = router
     }
+    
+    func viewDidLoad() {
+        view?.showLoading()
+        interactor?.retrieveHomeCourses()
+    }
+}
 
+extension HomePresenter: HomeInteractorOutputProtocol {
+    func didRetrieveHomeCourses(_ courses: CourseRequest) {
+        view?.hideLoading()
+        view?.showHomeCourses(with: courses)
+    }
+    
+    func onError() {
+        view?.hideLoading()
+        view?.showError()
+    }
 }

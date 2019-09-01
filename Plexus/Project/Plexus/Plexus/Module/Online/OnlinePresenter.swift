@@ -16,7 +16,6 @@ class OnlinePresenter: OnlinePresenterProtocol {
     var interactor: OnlineInteractorProtocol?
     private let router: OnlineWireframeProtocol
 
-    
     init(interface: OnlineViewProtocol, interactor: OnlineInteractorProtocol?, router: OnlineWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
@@ -27,7 +26,6 @@ class OnlinePresenter: OnlinePresenterProtocol {
         view?.showLoading()
         interactor?.retrieveOnlineCourses()
     }
-
 }
 
 extension OnlinePresenter: OnlineInteractorOutputProtocol {
@@ -40,5 +38,4 @@ extension OnlinePresenter: OnlineInteractorOutputProtocol {
         view?.hideLoading()
         view?.showError()
     }
-    
 }

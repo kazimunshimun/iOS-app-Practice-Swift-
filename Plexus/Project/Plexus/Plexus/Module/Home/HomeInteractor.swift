@@ -11,6 +11,21 @@
 import UIKit
 
 class HomeInteractor: HomeInteractorProtocol {
-
     weak var presenter: HomePresenterProtocol?
+    var interactorOutput: HomeInteractorOutputProtocol?
+    var datamanager: HomeDataManagerInputProtocol?
+    
+    func retrieveHomeCourses() {
+        datamanager?.retrieveHomeCourses()
+    }
+}
+
+extension HomeInteractor: HomeDataManagerOutputProtocol {
+    func onHomeCoursesRetrieved(_ courses: CourseRequest) {
+        interactorOutput?.didRetrieveHomeCourses(courses)
+    }
+    
+    func onError() {
+        
+    }
 }

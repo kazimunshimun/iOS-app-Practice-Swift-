@@ -11,8 +11,7 @@
 import UIKit
 
 class HomeViewController: UIViewController, HomeViewProtocol {
-
-    //http://www.mocky.io/v2/5d68d5153300005a00b68686
+    
     @IBOutlet weak var homeTableView: UITableView!
     var presenter: HomePresenterProtocol?
     private let networkManager: NetworkManager = NetworkManager()
@@ -21,6 +20,8 @@ class HomeViewController: UIViewController, HomeViewProtocol {
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        HomeRouter.createModule(view: self)
+        presenter?.viewDidLoad()
     }
 
     private func setupViews() {
@@ -28,12 +29,23 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         homeTableView.dataSource = self
         homeTableView.register(UINib(nibName: "BannerCell", bundle: nil), forCellReuseIdentifier: "bannerCell")
         homeTableView.register(UINib(nibName: "MostViewedCell", bundle: nil), forCellReuseIdentifier: "mostViewedCell")
+    }
+    
+    func showHomeCourses(with courses: CourseRequest) {
+        self.courseList = courses
+        self.homeTableView.reloadData()
+    }
+    
+    func showError() {
+        
+    }
+    
+    func showLoading() {
         self.showWaitView(onView: self.view)
-        networkManager.getHomeCourseRequest(completion: { (courses) in
-            self.removeWaitView()
-            self.courseList = courses!
-            self.homeTableView.reloadData()
-        })
+    }
+    
+    func hideLoading() {
+        self.removeWaitView()
     }
 }
 

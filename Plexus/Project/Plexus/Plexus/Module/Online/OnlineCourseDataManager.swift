@@ -14,8 +14,6 @@ class OnlineCouseDataManager: OnlineDataManagerInputProtocol {
     
     func retrieveOnlineCourses() {
         networkManager.getOnlineRequest( completion: { (onlineRequest) in
-            //self.onlineCourselist = onlineRequest!
-            //self.courseCollectionView.reloadData()
             self.remoteRequestHandler?.onOnlineCoursesRetrieved(onlineRequest!)
         })
     }

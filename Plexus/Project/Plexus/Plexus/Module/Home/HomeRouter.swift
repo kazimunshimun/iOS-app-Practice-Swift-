@@ -14,17 +14,18 @@ class HomeRouter: HomeWireframeProtocol {
     
     weak var viewController: UIViewController?
     
-    static func createModule() -> UIViewController {
+    static func createModule(view: HomeViewController) {
         // Change to get view from storyboard if not using progammatic UI
-        let view = HomeViewController(nibName: nil, bundle: nil)
-        let interactor = HomeInteractor()
+        let interactor: HomeInteractorProtocol & HomeDataManagerOutputProtocol = HomeInteractor()
         let router = HomeRouter()
-        let presenter = HomePresenter(interface: view, interactor: interactor, router: router)
+        let presenter: HomePresenterProtocol & HomeInteractorOutputProtocol = HomePresenter(interface: view, interactor: interactor, router: router)
+        let remoteDataManager: HomeDataManagerInputProtocol = HomeDataManager()
         
         view.presenter = presenter
-        interactor.presenter = presenter
+        //interactor.presenter = presenter
+        interactor.interactorOutput = presenter
+        interactor.datamanager = remoteDataManager as? HomeDataManager
         router.viewController = view
-        
-        return view
+        remoteDataManager.remoteRequestHandler = interactor
     }
 }

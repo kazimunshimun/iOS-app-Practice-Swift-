@@ -28,7 +28,6 @@ protocol OnlineInteractorProtocol: class {
     var datamanager: OnlineDataManagerInputProtocol? { get set }
     
     func retrieveOnlineCourses()
-    
 }
 
 
@@ -57,7 +56,7 @@ protocol OnlineDataManagerOutputProtocol: class {
 //MARK: View -
 protocol OnlineViewProtocol: class {
 
-  var presenter: OnlinePresenterProtocol?  { get set }
+    var presenter: OnlinePresenterProtocol?  { get set }
     
     func showOnlineCourses(with courses: [OnlineRequest])
     

@@ -16,7 +16,6 @@ class OnlineRouter: OnlineWireframeProtocol {
     
     static func createModule(view: OnlineViewController) {
         // Change to get view from storyboard if not using progammatic UI
-       // let view = OnlineViewController(nibName: nil, bundle: nil)
         let interactor: OnlineInteractorProtocol & OnlineDataManagerOutputProtocol = OnlineInteractor()
         let router = OnlineRouter()
         let presenter: OnlinePresenterProtocol & OnlineInteractorOutputProtocol = OnlinePresenter(interface: view, interactor: interactor, router: router)
