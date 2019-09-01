@@ -12,5 +12,21 @@ import UIKit
 
 class WishlistInteractor: WishlistInteractorProtocol {
 
+    var interactorOutput: WishlistInteractorOutputProtocol?
+    var datamanager: WishlistDataManagerInputProtocol?
     weak var presenter: WishlistPresenterProtocol?
+    func retrieveWishlistCourses() {
+        datamanager?.retrieveWishlistCourses()
+    }
+    
+}
+
+extension WishlistInteractor: WishlistDataManagerOutputProtocol {
+    func onWishlistCoursesRetrieved(_ courses: [WishlistRequest]) {
+        interactorOutput?.didRetrieveWishlistCourses(courses)
+    }
+    
+    func onError() {
+        
+    }
 }

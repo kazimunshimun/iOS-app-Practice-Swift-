@@ -27,6 +27,5 @@ class OnlineRouter: OnlineWireframeProtocol {
         interactor.datamanager = remoteDataManager as? OnlineCouseDataManager
         router.viewController = view
         remoteDataManager.remoteRequestHandler = interactor
-
     }
 }

@@ -11,28 +11,38 @@
 import UIKit
 
 class WishlistViewController: UIViewController, WishlistViewProtocol {
-
-    //http://www.mocky.io/v2/5d68b91e3300003500b685c8
     @IBOutlet weak var wishlistTableView: UITableView!
     var presenter: WishlistPresenterProtocol?
-    private let networkManager: NetworkManager = NetworkManager()
     private var wishlist: [WishlistRequest] = []
 
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        WishlistRouter.createModule(view: self)
+        presenter?.viewDidLoad()
     }
 
     private func setupViews() {
         wishlistTableView.delegate = self
         wishlistTableView.dataSource = self
         wishlistTableView.register(UINib(nibName: "WishlistCell", bundle: nil), forCellReuseIdentifier: "wishlistCell")
+    }
+    
+    func showWishlistCourses(with courses: [WishlistRequest]) {
+        self.wishlist = courses
+        self.animateTable()
+    }
+    
+    func showError() {
+        
+    }
+    
+    func showLoading() {
         self.showWaitView(onView: self.view)
-        networkManager.getWishListRequest( completion: { (wishlistRequest) in
-            self.removeWaitView()
-            self.wishlist = wishlistRequest!
-            self.animateTable()
-        })
+    }
+    
+    func hideLoading() {
+        self.removeWaitView()
     }
     
     func animateTable() {

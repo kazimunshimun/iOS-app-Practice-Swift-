@@ -22,4 +22,20 @@ class WishlistPresenter: WishlistPresenterProtocol {
         self.router = router
     }
 
+    func viewDidLoad() {
+        view?.showLoading()
+        interactor?.retrieveWishlistCourses()
+    }
+}
+
+extension WishlistPresenter: WishlistInteractorOutputProtocol {
+    func didRetrieveWishlistCourses(_ courses: [WishlistRequest]) {
+        view?.hideLoading()
+        view?.showWishlistCourses(with: courses)
+    }
+    
+    func onError() {
+        view?.hideLoading()
+        view?.showError()
+    }
 }

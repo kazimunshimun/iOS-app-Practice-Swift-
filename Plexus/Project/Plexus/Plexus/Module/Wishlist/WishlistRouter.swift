@@ -14,17 +14,18 @@ class WishlistRouter: WishlistWireframeProtocol {
     
     weak var viewController: UIViewController?
     
-    static func createModule() -> UIViewController {
+    static func createModule(view: WishlistViewController) {
         // Change to get view from storyboard if not using progammatic UI
-        let view = WishlistViewController(nibName: nil, bundle: nil)
-        let interactor = WishlistInteractor()
+        let interactor: WishlistInteractorProtocol & WishlistDataManagerOutputProtocol = WishlistInteractor()
         let router = WishlistRouter()
-        let presenter = WishlistPresenter(interface: view, interactor: interactor, router: router)
+        let presenter: WishlistPresenterProtocol & WishlistInteractorOutputProtocol = WishlistPresenter(interface: view, interactor: interactor, router: router)
+        let remoteDataManager: WishlistDataManagerInputProtocol = WishlistDataManager()
         
         view.presenter = presenter
+        interactor.interactorOutput = presenter
+        interactor.datamanager = remoteDataManager as? WishlistDataManager
         interactor.presenter = presenter
         router.viewController = view
-        
-        return view
+        remoteDataManager.remoteRequestHandler = interactor
     }
 }
