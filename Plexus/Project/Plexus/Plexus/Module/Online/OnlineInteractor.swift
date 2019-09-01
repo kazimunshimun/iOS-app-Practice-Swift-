@@ -11,6 +11,21 @@
 import UIKit
 
 class OnlineInteractor: OnlineInteractorProtocol {
-
+    var interactorOutput: OnlineInteractorOutputProtocol?
+    var datamanager: OnlineDataManagerInputProtocol?
     weak var presenter: OnlinePresenterProtocol?
+    
+    func retrieveOnlineCourses() {
+        datamanager?.retrieveOnlineCourses()
+    }
+}
+
+extension OnlineInteractor: OnlineDataManagerOutputProtocol {
+    func onOnlineCoursesRetrieved(_ courses: [OnlineRequest]) {
+        interactorOutput?.didRetrieveOnlineCourses(courses)
+    }
+    
+    func onError() {
+        
+    }
 }

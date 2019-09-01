@@ -269,10 +269,10 @@ struct TutorialBuilder {
             view.textAlignment = .center
             view.textColor = .white
             view.numberOfLines = 0
-            view.font = UIFont(name: "HelveticaNeue-Regular", size: 11.0)
+            view.font = UIFont(name: "Poppins-Regular", size: 11.0)
             let size = CGSize(width: vc.containerView.frame.size.width, height: 50)
             let xOffset = (viewportFrame.width - size.width) / 2.0
-            view.frame = CGRect(x: CGFloat(i + 1) * viewportFrame.width + xOffset + 16, y: vc.containerView.frame.size.height - 50, width: size.width - 32, height: size.height)
+            view.frame = CGRect(x: CGFloat(i + 1) * viewportFrame.width + xOffset + 24, y: vc.containerView.frame.size.height - 50, width: size.width - 40, height: size.height)
             scrollView.addSubview(view)
         }
         
@@ -286,7 +286,7 @@ struct TutorialBuilder {
             let view = topViews[i]
             view.textColor = ColorUtils.hexStringToUIColor(hex: "B3327E")
             view.textAlignment = .center
-            view.font = UIFont(name: "HelveticaNeue-Bold", size: 18.0)
+            view.font = UIFont(name: "Poppins-SemiBold", size: 18.0)
             let size = CGSize(width: vc.containerView.frame.size.width, height: 40)
             let xOffset = (viewportFrame.width - size.width) / 2.0 + viewportFrame.width
             view.frame = CGRect(x: xOffset, y: vc.containerView.frame.size.height - 90, width: size.width, height: size.height)

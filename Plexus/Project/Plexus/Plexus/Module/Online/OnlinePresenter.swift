@@ -16,10 +16,29 @@ class OnlinePresenter: OnlinePresenterProtocol {
     var interactor: OnlineInteractorProtocol?
     private let router: OnlineWireframeProtocol
 
+    
     init(interface: OnlineViewProtocol, interactor: OnlineInteractorProtocol?, router: OnlineWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router
     }
+    
+    func viewDidLoad() {
+        view?.showLoading()
+        interactor?.retrieveOnlineCourses()
+    }
 
+}
+
+extension OnlinePresenter: OnlineInteractorOutputProtocol {
+    func didRetrieveOnlineCourses(_ courses: [OnlineRequest]) {
+        view?.hideLoading()
+        view?.showOnlineCourses(with: courses)
+    }
+    
+    func onError() {
+        view?.hideLoading()
+        view?.showError()
+    }
+    
 }

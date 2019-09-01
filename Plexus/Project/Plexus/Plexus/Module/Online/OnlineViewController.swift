@@ -15,13 +15,14 @@ class OnlineViewController: UIViewController, OnlineViewProtocol {
 
     @IBOutlet weak var courseCollectionView: UICollectionView!
     var presenter: OnlinePresenterProtocol?
-    private let networkManager: NetworkManager = NetworkManager()
+    
     private var onlineCourselist: [OnlineRequest] = []
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupViews()
+        OnlineRouter.createModule(view: self)
+        presenter?.viewDidLoad()
+        //setupViews()
         /*
         let db = Firestore.firestore()
         db.collection("OnlineCourses").getDocuments() { (querySnapshot, err) in
@@ -37,12 +38,25 @@ class OnlineViewController: UIViewController, OnlineViewProtocol {
     }
     
     private func setupViews() {
+        
+        
+    }
+    
+    func showOnlineCourses(with courses: [OnlineRequest]) {
+        self.onlineCourselist = courses
+        self.courseCollectionView.reloadData()
+    }
+    
+    func showError() {
+        
+    }
+    
+    func showLoading() {
         self.showWaitView(onView: self.view)
-        networkManager.getOnlineRequest( completion: { (onlineRequest) in
-            self.onlineCourselist = onlineRequest!
-            self.removeWaitView()
-            self.courseCollectionView.reloadData()
-        })
+    }
+    
+    func hideLoading() {
+        self.removeWaitView()
     }
 
 }

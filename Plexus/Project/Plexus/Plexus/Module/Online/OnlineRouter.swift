@@ -14,17 +14,20 @@ class OnlineRouter: OnlineWireframeProtocol {
     
     weak var viewController: UIViewController?
     
-    static func createModule() -> UIViewController {
+    static func createModule(view: OnlineViewController) {
         // Change to get view from storyboard if not using progammatic UI
-        let view = OnlineViewController(nibName: nil, bundle: nil)
-        let interactor = OnlineInteractor()
+       // let view = OnlineViewController(nibName: nil, bundle: nil)
+        let interactor: OnlineInteractorProtocol & OnlineDataManagerOutputProtocol = OnlineInteractor()
         let router = OnlineRouter()
-        let presenter = OnlinePresenter(interface: view, interactor: interactor, router: router)
+        let presenter: OnlinePresenterProtocol & OnlineInteractorOutputProtocol = OnlinePresenter(interface: view, interactor: interactor, router: router)
+        
+        let remoteDataManager: OnlineDataManagerInputProtocol = OnlineCouseDataManager()
         
         view.presenter = presenter
-        interactor.presenter = presenter
+        interactor.interactorOutput = presenter
+        interactor.datamanager = remoteDataManager as? OnlineCouseDataManager
         router.viewController = view
-        
-        return view
+        remoteDataManager.remoteRequestHandler = interactor
+
     }
 }

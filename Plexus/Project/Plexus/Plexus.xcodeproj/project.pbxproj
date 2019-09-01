@@ -72,6 +72,8 @@
 		843A2EE2231A4400008AF442 /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843A2EDD231A43FF008AF442 /* Poppins-Regular.otf */; };
 		843A2EE3231A4400008AF442 /* Poppins-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843A2EDE231A43FF008AF442 /* Poppins-ExtraBold.otf */; };
 		843A2EE4231A4400008AF442 /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 843A2EDF231A4400008AF442 /* Poppins-SemiBold.otf */; };
+		843A2EE6231AC2BC008AF442 /* OnlineCourseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A2EE5231AC2BC008AF442 /* OnlineCourseDataManager.swift */; };
+		843A2EE8231ADC66008AF442 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A2EE7231ADC66008AF442 /* MenuViewController.swift */; };
 		843DD3BB231927C90072B4F5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DD3BA231927C90072B4F5 /* NetworkManager.swift */; };
 		843DD3BD2319283E0072B4F5 /* WishlistRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DD3BC2319283E0072B4F5 /* WishlistRequest.swift */; };
 		84420F5B23068303001C1A5E /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5523068303001C1A5E /* SignInPresenter.swift */; };
@@ -190,6 +192,8 @@
 		843A2EDD231A43FF008AF442 /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
 		843A2EDE231A43FF008AF442 /* Poppins-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.otf"; sourceTree = "<group>"; };
 		843A2EDF231A4400008AF442 /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
+		843A2EE5231AC2BC008AF442 /* OnlineCourseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineCourseDataManager.swift; sourceTree = "<group>"; };
+		843A2EE7231ADC66008AF442 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Plexus/Application/MenuViewController.swift; sourceTree = SOURCE_ROOT; };
 		843DD3BA231927C90072B4F5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		843DD3BC2319283E0072B4F5 /* WishlistRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistRequest.swift; sourceTree = "<group>"; };
 		84420F5523068303001C1A5E /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
@@ -375,6 +379,7 @@
 				8438967F230AE4BF00F101DF /* OnlineInteractor.swift */,
 				8461E14B2311663E00AB3FA1 /* OnlineCourseEntity.swift */,
 				84914814231992A00027E29F /* OnlineRequest.swift */,
+				843A2EE5231AC2BC008AF442 /* OnlineCourseDataManager.swift */,
 			);
 			path = Online;
 			sourceTree = "<group>";
@@ -455,6 +460,7 @@
 		84420F6423068875001C1A5E /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				843A2EE7231ADC66008AF442 /* MenuViewController.swift */,
 				843262E823067D7D00B4A268 /* AppDelegate.swift */,
 				843262EA23067D7D00B4A268 /* ViewController.swift */,
 				849148182319995C0027E29F /* WaitViewControllerExtension.swift */,
@@ -736,6 +742,7 @@
 				84E56C2E2306C92000696058 /* ColorUtils.swift in Sources */,
 				84380F2D230F0FC7007B940B /* LessonPresenter.swift in Sources */,
 				8434BEBE230C5C0F00AD58C0 /* DiscoverCell.swift in Sources */,
+				843A2EE8231ADC66008AF442 /* MenuViewController.swift in Sources */,
 				84D0D7442310446300690D92 /* TestViewController.swift in Sources */,
 				84D0D7522310449D00690D92 /* CongratsProtocols.swift in Sources */,
 				84380F2E230F0FC7007B940B /* LessonRouter.swift in Sources */,
@@ -764,6 +771,7 @@
 				84E56C082306B75B00696058 /* ForgotPasswordPresenter.swift in Sources */,
 				84389667230AE3E000F101DF /* WishlistPresenter.swift in Sources */,
 				84389685230AE4BF00F101DF /* OnlineInteractor.swift in Sources */,
+				843A2EE6231AC2BC008AF442 /* OnlineCourseDataManager.swift in Sources */,
 				84E56C092306B75B00696058 /* ForgotPasswordRouter.swift in Sources */,
 				843DD3BD2319283E0072B4F5 /* WishlistRequest.swift in Sources */,
 				84914817231997D70027E29F /* WaitView.swift in Sources */,

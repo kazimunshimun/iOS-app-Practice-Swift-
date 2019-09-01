@@ -18,4 +18,7 @@ class ForgotPasswordViewController: UIViewController, ForgotPasswordViewProtocol
         super.viewDidLoad()
     }
 
+    @IBAction func backButtonClicked(_ sender: Any) {
+        navigationController!.popViewController(animated: true)
+    }
 }
