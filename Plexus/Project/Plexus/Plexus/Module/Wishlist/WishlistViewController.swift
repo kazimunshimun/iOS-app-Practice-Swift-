@@ -88,6 +88,9 @@ extension WishlistViewController: UITableViewDelegate, UITableViewDataSource {
             cell.ratingView.rating = Double(course.rating!)
             cell.courseImageView.image = UIImage(named: course.imageName!)
         }
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = .clear
+        cell.selectedBackgroundView = backgroundView
         return cell
     }
 }

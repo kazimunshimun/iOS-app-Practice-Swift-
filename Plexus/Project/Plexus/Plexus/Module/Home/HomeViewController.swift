@@ -78,6 +78,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "bannerCell", for: indexPath) as! BannerCell
             cell.layer.backgroundColor = UIColor.clear.cgColor
+            let backgroundView = UIView()
+            backgroundView.backgroundColor = .clear
+            cell.selectedBackgroundView = backgroundView
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "mostViewedCell", for: indexPath) as! MostViewedCell
@@ -90,6 +93,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.mostViewedLabelHeight.constant = 0
             }
             cell.layer.backgroundColor = UIColor.clear.cgColor
+            let backgroundView = UIView()
+            backgroundView.backgroundColor = .clear
+            cell.selectedBackgroundView = backgroundView
             return cell
         }
         
