@@ -27,6 +27,7 @@
 		8434BEC0230C5C2900AD58C0 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434BEBF230C5C2900AD58C0 /* CourseCell.swift */; };
 		8437E08A231C0C0E00CD90B2 /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437E089231C0C0E00CD90B2 /* HomeDataManager.swift */; };
 		8437E08C231C141200CD90B2 /* WishlistDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437E08B231C141200CD90B2 /* WishlistDataManager.swift */; };
+		8437E08E231C1E9300CD90B2 /* ProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437E08D231C1E9300CD90B2 /* ProfileDataManager.swift */; };
 		84380F2D230F0FC7007B940B /* LessonPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84380F27230F0FC7007B940B /* LessonPresenter.swift */; };
 		84380F2E230F0FC7007B940B /* LessonRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84380F28230F0FC7007B940B /* LessonRouter.swift */; };
 		84380F2F230F0FC7007B940B /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84380F29230F0FC7007B940B /* LessonViewController.swift */; };
@@ -85,7 +86,6 @@
 		84420F5F23068303001C1A5E /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420F5923068303001C1A5E /* SignInInteractor.swift */; };
 		8461E1482311069E00AB3FA1 /* OnlineCoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461E1472311069E00AB3FA1 /* OnlineCoursesCell.swift */; };
 		8461E14A2311241A00AB3FA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8461E1492311241A00AB3FA1 /* GoogleService-Info.plist */; };
-		8461E14C2311663E00AB3FA1 /* OnlineCourseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461E14B2311663E00AB3FA1 /* OnlineCourseEntity.swift */; };
 		8461E14E2311669C00AB3FA1 /* WishlistCourseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461E14D2311669C00AB3FA1 /* WishlistCourseEntity.swift */; };
 		8489B40B2307143000BDE491 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489B40A2307143000BDE491 /* RoundedButton.swift */; };
 		8491481123197D900027E29F /* CourseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491481023197D900027E29F /* CourseRequest.swift */; };
@@ -149,6 +149,7 @@
 		8434BEBF230C5C2900AD58C0 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		8437E089231C0C0E00CD90B2 /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
 		8437E08B231C141200CD90B2 /* WishlistDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistDataManager.swift; sourceTree = "<group>"; };
+		8437E08D231C1E9300CD90B2 /* ProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataManager.swift; sourceTree = "<group>"; };
 		84380F27230F0FC7007B940B /* LessonPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPresenter.swift; sourceTree = "<group>"; };
 		84380F28230F0FC7007B940B /* LessonRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonRouter.swift; sourceTree = "<group>"; };
 		84380F29230F0FC7007B940B /* LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
@@ -207,7 +208,6 @@
 		84420F5923068303001C1A5E /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
 		8461E1472311069E00AB3FA1 /* OnlineCoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineCoursesCell.swift; sourceTree = "<group>"; };
 		8461E1492311241A00AB3FA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8461E14B2311663E00AB3FA1 /* OnlineCourseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineCourseEntity.swift; sourceTree = "<group>"; };
 		8461E14D2311669C00AB3FA1 /* WishlistCourseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistCourseEntity.swift; sourceTree = "<group>"; };
 		846E7B686E58F63EE40282E2 /* Pods_Plexus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plexus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8489B40A2307143000BDE491 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -370,6 +370,7 @@
 				84389671230AE40400F101DF /* ProfileProtocols.swift */,
 				84389672230AE40400F101DF /* ProfileInteractor.swift */,
 				84914812231988D30027E29F /* ProfileRequest.swift */,
+				8437E08D231C1E9300CD90B2 /* ProfileDataManager.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -382,7 +383,6 @@
 				8438967D230AE4BF00F101DF /* OnlineViewController.swift */,
 				8438967E230AE4BF00F101DF /* OnlineProtocols.swift */,
 				8438967F230AE4BF00F101DF /* OnlineInteractor.swift */,
-				8461E14B2311663E00AB3FA1 /* OnlineCourseEntity.swift */,
 				84914814231992A00027E29F /* OnlineRequest.swift */,
 				843A2EE5231AC2BC008AF442 /* OnlineCourseDataManager.swift */,
 			);
@@ -788,7 +788,6 @@
 				84E56C172306B7CE00696058 /* WalkThroughRouter.swift in Sources */,
 				84380F31230F0FC7007B940B /* LessonInteractor.swift in Sources */,
 				84389676230AE40400F101DF /* ProfileViewController.swift in Sources */,
-				8461E14C2311663E00AB3FA1 /* OnlineCourseEntity.swift in Sources */,
 				843498B2230FB5E600927D84 /* UserLevelProtocols.swift in Sources */,
 				8438965D230AE3B400F101DF /* ExamProtocols.swift in Sources */,
 				843498B3230FB5E600927D84 /* UserLevelInteractor.swift in Sources */,
@@ -830,6 +829,7 @@
 				84E56C162306B7CE00696058 /* WalkThroughPresenter.swift in Sources */,
 				84420F5E23068303001C1A5E /* SignInProtocols.swift in Sources */,
 				8439F903230DA83F00FD9EC2 /* HeaderView.swift in Sources */,
+				8437E08E231C1E9300CD90B2 /* ProfileDataManager.swift in Sources */,
 				8491481123197D900027E29F /* CourseRequest.swift in Sources */,
 				8439F8FC230D9D4200FD9EC2 /* LessonCell.swift in Sources */,
 				84D0D7432310446300690D92 /* TestRouter.swift in Sources */,

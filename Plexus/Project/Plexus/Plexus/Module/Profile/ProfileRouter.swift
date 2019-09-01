@@ -14,17 +14,18 @@ class ProfileRouter: ProfileWireframeProtocol {
     
     weak var viewController: UIViewController?
     
-    static func createModule() -> UIViewController {
+    static func createModule(view: ProfileViewController) {
         // Change to get view from storyboard if not using progammatic UI
-        let view = ProfileViewController(nibName: nil, bundle: nil)
-        let interactor = ProfileInteractor()
+        let interactor: ProfileInteractorProtocol & ProfileDataManagerOutputProtocol = ProfileInteractor()
         let router = ProfileRouter()
-        let presenter = ProfilePresenter(interface: view, interactor: interactor, router: router)
+        let presenter: ProfilePresenterProtocol & ProfileInteractorOutputProtocol = ProfilePresenter(interface: view, interactor: interactor, router: router)
+        let remoteDataManager: ProfileDataManagerInputProtocol = ProfileDataManager()
         
         view.presenter = presenter
+        interactor.interactorOutput = presenter
+        interactor.datamanager = remoteDataManager as? ProfileDataManager
         interactor.presenter = presenter
         router.viewController = view
-        
-        return view
+        remoteDataManager.remoteRequestHandler = interactor
     }
 }

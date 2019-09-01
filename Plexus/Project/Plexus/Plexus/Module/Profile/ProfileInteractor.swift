@@ -13,4 +13,22 @@ import UIKit
 class ProfileInteractor: ProfileInteractorProtocol {
 
     weak var presenter: ProfilePresenterProtocol?
+    var interactorOutput: ProfileInteractorOutputProtocol?
+    var datamanager: ProfileDataManagerInputProtocol?
+    
+    func retrieveProfile() {
+        datamanager?.retrieveProfile()
+    }
+}
+
+extension ProfileInteractor: ProfileDataManagerOutputProtocol {
+    func onProfileRetrieved(_ profile: ProfileRequest) {
+        interactorOutput?.didRetrieveProfile(profile)
+    }
+    
+    
+    
+    func onError() {
+        
+    }
 }

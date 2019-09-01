@@ -11,6 +11,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController, ProfileViewProtocol {
+    
 
     //http://www.mocky.io/v2/5d68cf3b3300002700b68664
     @IBOutlet weak var profilePictureImageView: UIImageView!
@@ -24,12 +25,8 @@ class ProfileViewController: UIViewController, ProfileViewProtocol {
         super.viewDidLoad()
         resetViewTransform()
         setupViews()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-       // setupViews()
-        
+        ProfileRouter.createModule(view: self)
+        presenter?.viewDidLoad()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -37,17 +34,28 @@ class ProfileViewController: UIViewController, ProfileViewProtocol {
         resetViewTransform()
     }
     
+    func showProfile(with profile: ProfileRequest) {
+        self.profile = profile
+        self.profilePictureImageView.image = UIImage(named: self.profile.profileImage!)
+        self.profileCoursesTableview.reloadData()
+        self.animateProfileImageView()
+    }
+    
+    func showError() {
+        
+    }
+    
+    func showLoading() {
+        self.showWaitView(onView: self.view)
+    }
+    
+    func hideLoading() {
+        self.removeWaitView()
+    }
+    
     private func setupViews() {
         profileCoursesTableview.delegate = self
         profileCoursesTableview.dataSource = self
-        self.showWaitView(onView: self.view)
-        networkManager.getProfileRequest(completion: { (profileResponse) in
-            self.removeWaitView()
-            self.profile = profileResponse!
-            self.profilePictureImageView.image = UIImage(named: self.profile.profileImage!)
-            self.profileCoursesTableview.reloadData()
-            self.animateProfileImageView()
-        })
     }
     
     private func animateProfileImageView() {

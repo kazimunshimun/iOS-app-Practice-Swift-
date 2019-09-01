@@ -19,7 +19,6 @@ class OnlineRouter: OnlineWireframeProtocol {
         let interactor: OnlineInteractorProtocol & OnlineDataManagerOutputProtocol = OnlineInteractor()
         let router = OnlineRouter()
         let presenter: OnlinePresenterProtocol & OnlineInteractorOutputProtocol = OnlinePresenter(interface: view, interactor: interactor, router: router)
-        
         let remoteDataManager: OnlineDataManagerInputProtocol = OnlineCouseDataManager()
         
         view.presenter = presenter

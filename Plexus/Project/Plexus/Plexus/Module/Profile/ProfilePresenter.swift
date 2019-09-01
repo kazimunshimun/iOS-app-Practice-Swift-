@@ -21,5 +21,22 @@ class ProfilePresenter: ProfilePresenterProtocol {
         self.interactor = interactor
         self.router = router
     }
+    
+    func viewDidLoad() {
+        view?.showLoading()
+        interactor?.retrieveProfile()
+    }
 
+}
+
+extension ProfilePresenter: ProfileInteractorOutputProtocol {
+    func didRetrieveProfile(_ profile: ProfileRequest) {
+        view?.hideLoading()
+        view?.showProfile(with: profile)
+    }
+    
+    func onError() {
+        view?.hideLoading()
+        view?.showError()
+    }
 }
