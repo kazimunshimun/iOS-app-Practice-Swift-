@@ -12,11 +12,11 @@ import Foundation
 
 //MARK: Wireframe -
 protocol SignInWireframeProtocol: class {
-
+    func showTabMenuScreen(from view: SignInViewProtocol)
 }
 //MARK: Presenter -
 protocol SignInPresenterProtocol: class {
-
+    func showTabMenu()
 }
 
 //MARK: Interactor -

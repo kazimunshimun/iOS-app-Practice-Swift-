@@ -20,6 +20,7 @@ class SignInViewController: UIViewController, SignInViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SignInRouter.createModule(view: self)
         setupViews()
     }
 
@@ -53,9 +54,7 @@ class SignInViewController: UIViewController, SignInViewProtocol {
     }
     
     @IBAction func facebookLoginClicked(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "TabMenu", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "tabMenuController") as! MenuViewController
-        self.show(vc, sender: nil)
+        presenter?.showTabMenu()
     }
     
 }

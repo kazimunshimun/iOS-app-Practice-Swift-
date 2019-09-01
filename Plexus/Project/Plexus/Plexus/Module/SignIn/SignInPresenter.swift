@@ -22,4 +22,7 @@ class SignInPresenter: SignInPresenterProtocol {
         self.router = router
     }
 
+    func showTabMenu() {
+        router.showTabMenuScreen(from: view!)
+    }
 }

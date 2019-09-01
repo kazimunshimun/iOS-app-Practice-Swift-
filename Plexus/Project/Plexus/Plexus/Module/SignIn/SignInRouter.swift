@@ -14,9 +14,8 @@ class SignInRouter: SignInWireframeProtocol {
     
     weak var viewController: UIViewController?
     
-    static func createModule() -> UIViewController {
+    static func createModule(view: SignInViewController) {
         // Change to get view from storyboard if not using progammatic UI
-        let view = SignInViewController(nibName: nil, bundle: nil)
         let interactor = SignInInteractor()
         let router = SignInRouter()
         let presenter = SignInPresenter(interface: view, interactor: interactor, router: router)
@@ -24,7 +23,14 @@ class SignInRouter: SignInWireframeProtocol {
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
+    }
+    
+    func showTabMenuScreen(from view: SignInViewProtocol) {
+        let storyboard = UIStoryboard(name: "TabMenu", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "tabMenuController") as! MenuViewController
+        if let sourceView = view as? UIViewController {
+            sourceView.show(vc, sender: nil)
+        }
         
-        return view
     }
 }

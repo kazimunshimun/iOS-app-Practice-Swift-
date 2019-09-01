@@ -12,8 +12,6 @@ import UIKit
 
 class ProfileViewController: UIViewController, ProfileViewProtocol {
     
-
-    //http://www.mocky.io/v2/5d68cf3b3300002700b68664
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var profileCoursesTableview: UITableView!
     var presenter: ProfilePresenterProtocol?
