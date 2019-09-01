@@ -51,7 +51,6 @@ class UserLevelViewController: UIViewController, UserLevelViewProtocol {
         self.levelBackView.alpha = 0
         self.levelBackView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
     }
-
 }
 
 extension UserLevelViewController: UITableViewDelegate, UITableViewDataSource {
@@ -76,6 +75,11 @@ extension UserLevelViewController: UITableViewDelegate, UITableViewDataSource {
         let startingValue = Int(UnicodeScalar("A").value)
         let itemStr = String(UnicodeScalar(indexPath.row + startingValue) ?? "A")
         cell.levelNumberLabel.text = itemStr
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = .clear
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
     }
     
