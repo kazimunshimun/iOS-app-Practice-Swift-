@@ -25,6 +25,7 @@
 		8434BEBC230C575900AD58C0 /* MostViewedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8434BEBA230C575900AD58C0 /* MostViewedCell.xib */; };
 		8434BEBE230C5C0F00AD58C0 /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434BEBD230C5C0F00AD58C0 /* DiscoverCell.swift */; };
 		8434BEC0230C5C2900AD58C0 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434BEBF230C5C2900AD58C0 /* CourseCell.swift */; };
+		8436F7EE231D829F0036721F /* ProfileReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436F7ED231D829F0036721F /* ProfileReadyViewController.swift */; };
 		8437E08A231C0C0E00CD90B2 /* HomeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437E089231C0C0E00CD90B2 /* HomeDataManager.swift */; };
 		8437E08C231C141200CD90B2 /* WishlistDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437E08B231C141200CD90B2 /* WishlistDataManager.swift */; };
 		8437E08E231C1E9300CD90B2 /* ProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437E08D231C1E9300CD90B2 /* ProfileDataManager.swift */; };
@@ -147,6 +148,7 @@
 		8434BEBA230C575900AD58C0 /* MostViewedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MostViewedCell.xib; sourceTree = "<group>"; };
 		8434BEBD230C5C0F00AD58C0 /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
 		8434BEBF230C5C2900AD58C0 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		8436F7ED231D829F0036721F /* ProfileReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileReadyViewController.swift; sourceTree = "<group>"; };
 		8437E089231C0C0E00CD90B2 /* HomeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataManager.swift; sourceTree = "<group>"; };
 		8437E08B231C141200CD90B2 /* WishlistDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistDataManager.swift; sourceTree = "<group>"; };
 		8437E08D231C1E9300CD90B2 /* ProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataManager.swift; sourceTree = "<group>"; };
@@ -536,6 +538,7 @@
 				84E56C122306B7CE00696058 /* WalkThroughViewController.swift */,
 				84E56C132306B7CE00696058 /* WalkThroughProtocols.swift */,
 				84E56C142306B7CE00696058 /* WalkThroughInteractor.swift */,
+				8436F7ED231D829F0036721F /* ProfileReadyViewController.swift */,
 			);
 			path = WalkThrough;
 			sourceTree = "<group>";
@@ -805,6 +808,7 @@
 				84380F30230F0FC7007B940B /* LessonProtocols.swift in Sources */,
 				843498B8230FB65D00927D84 /* DesiredLevelCell.swift in Sources */,
 				84389675230AE40400F101DF /* ProfileRouter.swift in Sources */,
+				8436F7EE231D829F0036721F /* ProfileReadyViewController.swift in Sources */,
 				8461E14E2311669C00AB3FA1 /* WishlistCourseEntity.swift in Sources */,
 				8438966A230AE3E000F101DF /* WishlistProtocols.swift in Sources */,
 				84E56C252306B80300696058 /* HomeViewController.swift in Sources */,

@@ -13,6 +13,8 @@ protocol TutorialViewController: class {
     var containerView: UIView! { get }
     var buttonsContainerView: UIView! { get }
     var pageControl: UIPageControl! { get }
+    func didReachedLastTutorial()
+    //var delegate: TutorialProtocol? { get }
 }
 
 struct TutorialBuilder {
@@ -646,6 +648,7 @@ struct TutorialBuilder {
             tweenController?.resetProgress()
             vc?.pageControl.currentPage = 0
             //go to profile ready view
+            vc?.didReachedLastTutorial()
         }
     }
 }

@@ -36,6 +36,7 @@ class WalkThroughViewController: UIViewController, WalkThroughViewProtocol, Tuto
             self.tweenController = tc
             self.scrollView = scrollView
             self.scrollView.delegate = self
+            
         }
     }
 
@@ -46,6 +47,7 @@ class WalkThroughViewController: UIViewController, WalkThroughViewProtocol, Tuto
     @IBAction func skipButtonClicked(_ sender: Any) {
         print("skip button pressed")
         //go to profile view ready
+        didReachedLastTutorial()
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
@@ -58,6 +60,13 @@ class WalkThroughViewController: UIViewController, WalkThroughViewProtocol, Tuto
         frame.origin.y = 0;
         scrollView.scrollRectToVisible(frame, animated: true)
         pageControl.currentPage = pageControl.currentPage + 1
+    }
+    
+    func didReachedLastTutorial() {
+        print("did reached last tutorial")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let profileReadyViewController = storyBoard.instantiateViewController(withIdentifier: "profileReadyView") as! ProfileReadyViewController
+        self.show(profileReadyViewController, sender: nil)
     }
 }
 

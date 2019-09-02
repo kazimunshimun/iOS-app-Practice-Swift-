@@ -539,10 +539,10 @@
             </objects>
             <point key="canvasLocation" x="3842" y="19"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile Ready View Controller-->
         <scene sceneID="axf-la-tTF">
             <objects>
-                <viewController storyboardIdentifier="profileReadyView" id="sNw-4C-v5S" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileReadyView" id="sNw-4C-v5S" customClass="ProfileReadyViewController" customModule="Plexus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iyB-JN-6zC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -595,6 +595,7 @@
                                     <constraint firstAttribute="width" constant="141" id="aE6-kv-caH"/>
                                     <constraint firstAttribute="height" constant="46" id="rfV-Of-8sb"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                 <state key="normal" title="Get Started">
                                     <color key="titleColor" red="0.70196078429999997" green="0.1960784314" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -603,6 +604,9 @@
                                         <real key="value" value="23"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getStartedButtonClicked:" destination="sNw-4C-v5S" eventType="touchUpInside" id="9RE-ad-VBR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
