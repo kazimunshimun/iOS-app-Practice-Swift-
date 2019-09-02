@@ -162,10 +162,38 @@ struct TutorialBuilder {
         starsImageView.contentMode = .scaleToFill
         scrollView.insertSubview(starsImageView, belowSubview: cloudImageView)
         
+        let star1 = UIImageView(image: UIImage(named: "star_yellow"))
+        let star2 = UIImageView(image: UIImage(named: "stat_white"))
+        let star3 = UIImageView(image: UIImage(named: "circle"))
+        let star4 = UIImageView(image: UIImage(named: "star_yellow"))
+        let star5 = UIImageView(image: UIImage(named: "stat_white"))
+        
+        let circleFrame = CGRect(x: xOffset, y: 200.0, width: 11, height: 11)
+        let star1Frame = CGRect(x: xOffset, y: 200.0, width: 35, height: 35)
+        
+        star1.frame = star1Frame.offsetBy(dx: 100, dy: 20.0)
+        star2.frame = star1Frame.offsetBy(dx: 215, dy: 90.0)
+        star3.frame = circleFrame.offsetBy(dx: 35, dy: -38.0)
+        star4.frame = star1Frame.offsetBy(dx: 250, dy: -20.0)
+        star5.frame = star1Frame.offsetBy(dx: 64, dy: 80.0)
+        star1.contentMode = .scaleToFill
+        star2.contentMode = .scaleToFill
+        star3.contentMode = .scaleToFill
+        star4.contentMode = .scaleToFill
+        star5.contentMode = .scaleToFill
+        scrollView.addSubview(star1)
+        scrollView.addSubview(star2)
+        scrollView.addSubview(star3)
+        scrollView.addSubview(star4)
+        scrollView.addSubview(star5)
         
         tweenController.tween(from: starsFrame, at: 1.0)
             .thenHold(until: 4.0)
             .with(action: starsImageView.twc_slidingFrameAction(scrollView: scrollView))
+        
+        tweenController.tween(from: star1.frame, at: 1.0)
+            .thenHold(until: 4.0)
+            .with(action: star1.twc_slidingFrameAction(scrollView: scrollView))
         
         /*
         tweenController.tween(from: cloudFrame, at: 1.0)
@@ -177,6 +205,12 @@ struct TutorialBuilder {
             .then(to: 0.0, at: 5.0)
             .with(action: starsImageView.twc_applyAlpha)
         
+        tweenController.tween(from: star1.alpha, at: 1.0)
+            .to(1.0, at: 2.0)
+            .then(to: 0.0, at: 5.0)
+            .with(action: star1.twc_applyAlpha)
+        
+        
         let transformA = CGAffineTransform.identity
         let transformB = CGAffineTransform(translationX: 50, y: 0)
         let transformC = CGAffineTransform(translationX: 50, y: 10)
@@ -186,6 +220,31 @@ struct TutorialBuilder {
             .then(to: transformC, at: 3.0)
             .then(to: transformD, at: 4.0)
             .with(action: cloudImageView.layer.twc_applyAffineTransform)
+        
+        let starTransform = CGAffineTransform.identity
+        let star1Transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+        let star2Transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        let star3Transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
+        let star4Transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        
+        let starViews = [star1, star2, star3, star4, star5]
+        
+        for i in 1..<starViews.count {
+            let view = starViews[i]
+            
+            tweenController.tween(from: 0.0, at: 1.0)
+                .to(1.0, at: 2.0)
+                .then(to: 0.5, at: 5.0)
+                .with(action: view.twc_applyAlpha)
+            
+            tweenController.tween(from: starTransform, at: 0.0)
+                .to(star1Transform, at: 1.0)
+                //.thenHold(until: 4.0)
+                .then(to: star2Transform, at: 2.0)
+                .then(to: star3Transform, at: 3.0)
+                .then(to: star4Transform, at: 4.0)
+                .with(action: view.layer.twc_applyAffineTransform)
+        }
         
     }
     
@@ -224,10 +283,11 @@ struct TutorialBuilder {
             .then(to: 0.0, at: 5.0)
             .with(action: imageView.twc_applyAlpha)
         
+        let rotation: CGFloat = -.pi/60
         let transformA = CGAffineTransform.identity
-        let transformB = CGAffineTransform(rotationAngle: -.pi/30)
-        let transformC = CGAffineTransform(rotationAngle: -.pi/18)
-        let transformD = CGAffineTransform(rotationAngle: -.pi/15)
+        let transformB = CGAffineTransform(rotationAngle: rotation)
+        let transformC = CGAffineTransform(rotationAngle: rotation  * 2)
+        let transformD = CGAffineTransform(rotationAngle: rotation * 4)
         
         
         tweenController.tween(from: transformA, at: 1.0)
@@ -262,6 +322,14 @@ struct TutorialBuilder {
         let bottomView4 = UILabel()
         bottomView4.text = "And lastly you can overall upgrade your label."
         
+        let welcomeView = UILabel()
+        welcomeView.text = "Welcome to Plexus"
+        welcomeView.font = UIFont(name: "Poppins-SemiBold", size: 24.0)
+        welcomeView.textColor = .white
+        welcomeView.textAlignment = .center
+        let xOff = (viewportFrame.width - vc.containerView.frame.size.width) / 2.0
+        welcomeView.frame = CGRect(x: xOff + 24, y: vc.containerView.frame.size.height - 150, width: vc.containerView.frame.size.width - 40, height: 50)
+        scrollView.addSubview(welcomeView)
         
         let bottomViews = [bottomView1, bottomView2, bottomView3, bottomView4]
         for i in 0..<bottomViews.count {
@@ -577,6 +645,7 @@ struct TutorialBuilder {
             scrollView?.isScrollEnabled = true
             tweenController?.resetProgress()
             vc?.pageControl.currentPage = 0
+            //go to profile ready view
         }
     }
 }

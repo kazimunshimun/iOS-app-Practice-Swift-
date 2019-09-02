@@ -42,6 +42,23 @@ class WalkThroughViewController: UIViewController, WalkThroughViewProtocol, Tuto
     private func updatePageControl() {
         pageControl.currentPage = Int(round(scrollView.contentOffset.x / containerView.frame.width))
     }
+    
+    @IBAction func skipButtonClicked(_ sender: Any) {
+        print("skip button pressed")
+        //go to profile view ready
+    }
+    
+    @IBAction func nextButtonClicked(_ sender: Any) {
+        print("next button pressed")
+        //go to next view
+        //scrollView.twc_horizontalPageProgress = CGFloat(pageControl.currentPage + 1)
+        var frame = scrollView.frame;
+        let pageToGo = pageControl.currentPage + 1
+        frame.origin.x = frame.size.width * CGFloat(pageToGo);
+        frame.origin.y = 0;
+        scrollView.scrollRectToVisible(frame, animated: true)
+        pageControl.currentPage = pageControl.currentPage + 1
+    }
 }
 
 extension WalkThroughViewController: UIScrollViewDelegate {
