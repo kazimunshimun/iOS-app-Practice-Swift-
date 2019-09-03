@@ -70,6 +70,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="user@plexus.com"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIJ-Mv-CIV" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
@@ -103,6 +104,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="123456"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xO-oT-qdI">
@@ -169,13 +171,13 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New user? Sign up here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlT-Js-qEu" customClass="ActiveLabel" customModule="ActiveLabel">
-                                <rect key="frame" x="142.5" y="713" width="129" height="15.5"/>
+                                <rect key="frame" x="142.5" y="713" width="129" height="17"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="11"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By creating an account, you agree to our Terms of Service and Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92i-P4-SAn" customClass="ActiveLabel" customModule="ActiveLabel">
-                                <rect key="frame" x="97" y="834" width="220" height="28"/>
+                                <rect key="frame" x="97" y="832" width="220" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="KIE-PY-eoy"/>
                                 </constraints>

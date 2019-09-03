@@ -36,7 +36,6 @@ class WalkThroughViewController: UIViewController, WalkThroughViewProtocol, Tuto
             self.tweenController = tc
             self.scrollView = scrollView
             self.scrollView.delegate = self
-            
         }
     }
 

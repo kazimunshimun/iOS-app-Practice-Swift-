@@ -25,7 +25,7 @@ class SignInViewController: UIViewController, SignInViewProtocol {
     }
 
     func setupViews() {
-        let customSignUpType = ActiveType.custom(pattern: "\\sSign up\\b") //Regex that looks for "with"
+        let customSignUpType = ActiveType.custom(pattern: "\\sSign up\\b")
         signupLabel.enabledTypes = [.mention, .hashtag, .url, customSignUpType]
         signupLabel.text = "New user? Sign up here"
         signupLabel.customColor[customSignUpType] = ColorUtils.hexStringToUIColor(hex: "B3327E")
@@ -35,7 +35,7 @@ class SignInViewController: UIViewController, SignInViewProtocol {
             print("Custom type tapped: \(element)")
         }
         
-        let customTermsType = ActiveType.custom(pattern: "\\sTerms of Service\\b") //Regex that looks for "with"
+        let customTermsType = ActiveType.custom(pattern: "\\sTerms of Service\\b")
         let customPolicyType = ActiveType.custom(pattern: "\\sPrivacy Policy\\b")
         termsLabel.enabledTypes = [.mention, .hashtag, .url, customTermsType, customPolicyType]
         termsLabel.text = "By creating an account, you agree to our Terms of Service and Privacy Policy"

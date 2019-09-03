@@ -24,3 +24,7 @@ UI Creation | Storyboard and Programmatically
 <img src="https://raw.githubusercontent.com/kazimunshimun/iOS-app-Practice-Swift-/master/Plexus/Screeshots/exam.gif" width="240">
 
 </p>
+
+#### Developed App Simulator Video:
+
+[![Plexus video](http://img.youtube.com/vi/_qgv2bovm2s/3.jpg)](http://www.youtube.com/watch?v=_qgv2bovm2s)
