@@ -9,6 +9,7 @@
 import Foundation
 
 struct DocumentEntity {
+    let id: Int16
     let date: NSDate
     let title: String
     let writer: String

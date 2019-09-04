@@ -43,11 +43,12 @@ class ReaderViewController: UIViewController {
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
+                let id = data.value(forKey: "id") as! Int16
                 let date = data.value(forKey: "date") as! NSDate
                 let title = data.value(forKey: "title") as! String
                 let writer = data.value(forKey: "writer") as! String
                 let content = data.value(forKey: "content") as! NSAttributedString
-                let document = DocumentEntity(date: date, title: title, writer: writer, content: content)
+                let document = DocumentEntity(id: id, date: date, title: title, writer: writer, content: content)
                 self.documentList.append(document)
                 print(date)
                 print(title)

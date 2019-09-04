@@ -12,6 +12,7 @@ import CoreData
 class DocumentsViewController: UIViewController {
 
     var documentList: [DocumentEntity] = []
+    var lastDocumentId: Int16 = 0
     
     @IBOutlet weak var documentCollectionView: UICollectionView!
     
@@ -47,11 +48,12 @@ class DocumentsViewController: UIViewController {
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
+                let id = data.value(forKey: "id") as! Int16
                 let date = data.value(forKey: "date") as! NSDate
                 let title = data.value(forKey: "title") as! String
                 let writer = data.value(forKey: "writer") as! String
                 let content = data.value(forKey: "content") as! NSAttributedString
-                let document = DocumentEntity(date: date, title: title, writer: writer, content: content)
+                let document = DocumentEntity(id: id, date: date, title: title, writer: writer, content: content)
                 self.documentList.append(document)
                 print(date)
                 print(title)
@@ -98,12 +100,15 @@ extension DocumentsViewController: UICollectionViewDelegate, UICollectionViewDat
         let storyBoard: UIStoryboard = UIStoryboard(name: "Documents", bundle: nil)
         let newDocumentViewController = storyBoard.instantiateViewController(withIdentifier: "newDocumentView") as! NewDocumentViewController
         if indexPath.row == 0 {
+            newDocumentViewController.documentId = lastDocumentId + 1
+            newDocumentViewController.isNewDocument = true
             self.present(newDocumentViewController, animated: true)
         } else {
             if indexPath.row <= documentList.count {
                 if documentList.count > 0 {
                     //cell.titleLabel.text = documentList[indexPath.row - 1].title
                     newDocumentViewController.documentContent = documentList[indexPath.row - 1].content
+                    newDocumentViewController.documentId = documentList[indexPath.row - 1].id
                     self.present(newDocumentViewController, animated: true)
                 }
             }
