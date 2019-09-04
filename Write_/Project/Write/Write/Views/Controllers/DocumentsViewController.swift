@@ -48,7 +48,7 @@ class DocumentsViewController: UIViewController {
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject] {
-                let id = data.value(forKey: "id") as! Int16
+                let id = data.value(forKey: "docid") as! Int16
                 let date = data.value(forKey: "date") as! NSDate
                 let title = data.value(forKey: "title") as! String
                 let writer = data.value(forKey: "writer") as! String
@@ -64,6 +64,13 @@ class DocumentsViewController: UIViewController {
         } catch {
             print("Failed")
         }
+    }
+}
+
+extension DocumentsViewController: DataUpdated {
+    func documentsUpdated() {
+        self.documentList.removeAll()
+        fetchDocumentList()
     }
 }
 
@@ -99,6 +106,7 @@ extension DocumentsViewController: UICollectionViewDelegate, UICollectionViewDat
         print("colloection view item clicked: \(indexPath.row)")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Documents", bundle: nil)
         let newDocumentViewController = storyBoard.instantiateViewController(withIdentifier: "newDocumentView") as! NewDocumentViewController
+        newDocumentViewController.delegate = self
         if indexPath.row == 0 {
             newDocumentViewController.documentId = lastDocumentId + 1
             newDocumentViewController.isNewDocument = true

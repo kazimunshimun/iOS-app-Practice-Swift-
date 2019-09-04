@@ -8,9 +8,16 @@
 
 import UIKit
 import CoreData
+import PKHUD
+
+protocol DataUpdated {
+    func documentsUpdated()
+}
 
 class NewDocumentViewController: UIViewController {
 
+    var delegate: DataUpdated?
+    
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var documentTextView: UITextView!
     @IBOutlet weak var bottomView: UIView!
@@ -215,7 +222,7 @@ class NewDocumentViewController: UIViewController {
         let date = Date()
         
         if lines.count > 3 {
-            newDocument.setValue(documentId, forKey: "id")
+            newDocument.setValue(documentId, forKey: "docid")
             newDocument.setValue(attributedString, forKey: "content")
             newDocument.setValue(date, forKey: "date")
             newDocument.setValue(lines[0], forKey: "title")
@@ -224,8 +231,9 @@ class NewDocumentViewController: UIViewController {
             do {
                 try context.save()
                 //show save successful message
+                showSuccessDialog()
                 //notify parent view controller that database changed
-                self.dismiss(animated: true, completion: nil)
+                
             } catch {
                 print("Failed saving")
             }
@@ -239,35 +247,38 @@ class NewDocumentViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Document")
-        fetchRequest.predicate = NSPredicate(format: "id = %@", documentId)
+        fetchRequest.predicate = NSPredicate(format: "docid = %@", NSNumber(value: documentId))
         
         do {
             let doc = try context.fetch(fetchRequest)
             
-            var lines: [String] = documentTextView.text.components(separatedBy: NSCharacterSet.newlines)
-            
-            if lines.count > 3 {
+            if doc.count > 0 {
+                var lines: [String] = documentTextView.text.components(separatedBy: NSCharacterSet.newlines)
                 
-                let updatedDoc = doc[0] as! NSManagedObject
-                
-                let attributedString = documentTextView.attributedText
-                let date = Date()
-                updatedDoc.setValue(attributedString, forKey: "content")
-                updatedDoc.setValue(date, forKey: "date")
-                updatedDoc.setValue(lines[0], forKey: "title")
-                updatedDoc.setValue(lines[1], forKey: "writer")
-                
-                do {
-                    try context.save()
-                    //show save successful message
-                    //notify parent view controller that database changed
-                    self.dismiss(animated: true, completion: nil)
-                } catch {
-                    print("Failed saving")
+                if lines.count > 3 {
+                    
+                    let updatedDoc = doc[0] as! NSManagedObject
+                    
+                    let attributedString = documentTextView.attributedText
+                    let date = Date()
+                    updatedDoc.setValue(attributedString, forKey: "content")
+                    updatedDoc.setValue(date, forKey: "date")
+                    updatedDoc.setValue(lines[0], forKey: "title")
+                    updatedDoc.setValue(lines[1], forKey: "writer")
+                    
+                    do {
+                        try context.save()
+                        //show save successful message
+                        showSuccessDialog()
+                        //notify parent view controller that database changed
+                    } catch {
+                        print("Failed saving")
+                    }
+                } else {
+                    print("document is not complete")
                 }
-            } else {
-                print("document is not complete")
             }
+            
         } catch {
             
         }
@@ -275,6 +286,16 @@ class NewDocumentViewController: UIViewController {
     
     private func doShareDocument() {
         print("Share button tapped")
+    }
+    
+    private func showSuccessDialog() {
+        PKHUD.sharedHUD.contentView = PKHUDSuccessView()
+        PKHUD.sharedHUD.show()
+        PKHUD.sharedHUD.hide(afterDelay: 1.0) { success in
+            // Completion Handler
+            self.delegate?.documentsUpdated()
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
 

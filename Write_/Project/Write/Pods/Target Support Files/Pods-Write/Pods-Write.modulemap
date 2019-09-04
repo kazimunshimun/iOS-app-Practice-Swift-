@@ -1,0 +1,6 @@
+framework module Pods_Write {
+  umbrella header "Pods-Write-umbrella.h"
+
+  export *
+  module * { export * }
+}
