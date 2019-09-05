@@ -11,11 +11,15 @@ import CoreData
 
 class ReaderViewController: UIViewController {
 
-    var documentList: [DocumentEntity] = []
+    var documentList: [Document] = []
     @IBOutlet weak var readerCollectionView: UICollectionView!
+    let dataManager: DataManager = DataManager()
+    let formatter = DateFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        formatter.dateFormat = "dd MMMM, yyyy"
         setupNavigationView()
         configureCollectionView()
     }
@@ -35,27 +39,11 @@ class ReaderViewController: UIViewController {
     }
     
     private func fetchDocumentList() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Document")
-        request.returnsObjectsAsFaults = false
         do {
-            let result = try context.fetch(request)
-            for data in result as! [NSManagedObject] {
-                let id = data.value(forKey: "docid") as! Int16
-                let date = data.value(forKey: "date") as! NSDate
-                let title = data.value(forKey: "title") as! String
-                let writer = data.value(forKey: "writer") as! String
-                let content = data.value(forKey: "content") as! NSAttributedString
-                let document = DocumentEntity(id: id, date: date, title: title, writer: writer, content: content)
-                self.documentList.append(document)
-                print(date)
-                print(title)
-                print(writer)
-                print(content)
+            documentList = try dataManager.fetchDocument()
+            if documentList.count > 0 {
+                readerCollectionView.reloadData()
             }
-            readerCollectionView.reloadData()
         } catch {
             print("Failed")
         }
@@ -70,6 +58,16 @@ extension ReaderViewController: UICollectionViewDelegate, UICollectionViewDataSo
         if indexPath.row < documentList.count {
             cell.dataView.isHidden = false
             cell.titleLabel.text = documentList[indexPath.row].title
+            cell.dateLabel.text = formatter.string(from: documentList[indexPath.row].date!)
+            
+            var lineCount = 0
+            let content = documentList[indexPath.row].content as! NSAttributedString
+            content.string.enumerateLines { (str, _) in
+                lineCount += 1
+            }
+            print("line count \(lineCount)")
+            let pageCount = ((lineCount - 2) / 25) + 1
+            cell.pageNumberLabel.text = "\(pageCount) pages"
         } else {
             cell.dataView.isHidden = true
         }
@@ -90,7 +88,7 @@ extension ReaderViewController: UICollectionViewDelegate, UICollectionViewDataSo
             if documentList.count > 0 {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Documents", bundle: nil)
                 let newDocumentViewController = storyBoard.instantiateViewController(withIdentifier: "newDocumentView") as! NewDocumentViewController
-                newDocumentViewController.documentContent = documentList[indexPath.row].content
+                newDocumentViewController.documentContent = documentList[indexPath.row].content as! NSAttributedString
                 newDocumentViewController.isReaderView = true
                 self.present(newDocumentViewController, animated: true)
                 collectionView.deselectItem(at: indexPath, animated: true)

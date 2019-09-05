@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Write/Model/Document+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Write/Model/Document+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:Write.xcodeproj">
    </FileRef>
    <FileRef

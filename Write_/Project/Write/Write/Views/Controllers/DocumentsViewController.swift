@@ -11,8 +11,10 @@ import CoreData
 
 class DocumentsViewController: UIViewController {
 
-    var documentList: [DocumentEntity] = []
+    var documentList: [Document] = []
     var lastDocumentId: Int16 = 0
+    let dataManager: DataManager = DataManager()
+    let formatter = DateFormatter()
     
     @IBOutlet weak var documentCollectionView: UICollectionView!
     
@@ -20,6 +22,7 @@ class DocumentsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        formatter.dateFormat = "dd MMMM, yyyy"
         setupNavigationView()
         configureCollectionView()
     }
@@ -40,27 +43,12 @@ class DocumentsViewController: UIViewController {
     }
     
     private func fetchDocumentList() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Document")
-        request.returnsObjectsAsFaults = false
         do {
-            let result = try context.fetch(request)
-            for data in result as! [NSManagedObject] {
-                let id = data.value(forKey: "docid") as! Int16
-                let date = data.value(forKey: "date") as! NSDate
-                let title = data.value(forKey: "title") as! String
-                let writer = data.value(forKey: "writer") as! String
-                let content = data.value(forKey: "content") as! NSAttributedString
-                let document = DocumentEntity(id: id, date: date, title: title, writer: writer, content: content)
-                self.documentList.append(document)
-                print(date)
-                print(title)
-                print(writer)
-                print(content)
+            documentList = try dataManager.fetchDocument()
+            if documentList.count > 0 {
+                lastDocumentId = documentList[documentList.count - 1].docid
+                documentCollectionView.reloadData()
             }
-            documentCollectionView.reloadData()
         } catch {
             print("Failed")
         }
@@ -86,6 +74,15 @@ extension DocumentsViewController: UICollectionViewDelegate, UICollectionViewDat
                 cell.dataView.isHidden = false
                 if documentList.count > 0 {
                     cell.titleLabel.text = documentList[indexPath.row - 1].title
+                    cell.dateLabel.text = formatter.string(from: documentList[indexPath.row - 1].date!)
+                    var lineCount = 0
+                    let content = documentList[indexPath.row - 1].content as! NSAttributedString
+                    content.string.enumerateLines { (str, _) in
+                        lineCount += 1
+                    }
+                    print("line count \(lineCount)")
+                    let pageCount = ((lineCount - 2) / 25) + 1
+                    cell.pageNumberLabel.text = "\(pageCount) pages"
                 }
             } else {
                 cell.dataView.isHidden = true
@@ -115,8 +112,8 @@ extension DocumentsViewController: UICollectionViewDelegate, UICollectionViewDat
             if indexPath.row <= documentList.count {
                 if documentList.count > 0 {
                     //cell.titleLabel.text = documentList[indexPath.row - 1].title
-                    newDocumentViewController.documentContent = documentList[indexPath.row - 1].content
-                    newDocumentViewController.documentId = documentList[indexPath.row - 1].id
+                    newDocumentViewController.documentContent = documentList[indexPath.row - 1].content as! NSAttributedString
+                    newDocumentViewController.documentId = documentList[indexPath.row - 1].docid
                     self.present(newDocumentViewController, animated: true)
                 }
             }

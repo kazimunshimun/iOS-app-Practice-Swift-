@@ -10,7 +10,6 @@
 		842AE27B2311A9E200599EDA /* NewDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AE27A2311A9E200599EDA /* NewDocumentViewController.swift */; };
 		8438D4AF231578DE00C783D3 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438D4AE231578DE00C783D3 /* RoundedCornerButton.swift */; };
 		8443E3D02318363B00106E14 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443E3CF2318363B00106E14 /* TriangleView.swift */; };
-		847288F02316DD5700CF4CEC /* DocumentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847288EF2316DD5700CF4CEC /* DocumentEntity.swift */; };
 		84A9A82023117AA200BED4EE /* Documents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A9A81C23117AA100BED4EE /* Documents.storyboard */; };
 		84A9A82123117AA200BED4EE /* ReaderMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A9A81D23117AA200BED4EE /* ReaderMode.storyboard */; };
 		84A9A82223117AA200BED4EE /* TabMenus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A9A81E23117AA200BED4EE /* TabMenus.storyboard */; };
@@ -23,6 +22,7 @@
 		84A9A83323118F5D00BED4EE /* DocumentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A9A83223118F5D00BED4EE /* DocumentCell.xib */; };
 		84A9A8352311905000BED4EE /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9A8342311905000BED4EE /* ReaderViewController.swift */; };
 		84A9A8372311934800BED4EE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9A8362311934800BED4EE /* SettingsViewController.swift */; };
+		84C37A9823216C790008B39F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C37A9723216C790008B39F /* DataManager.swift */; };
 		84EABD892311680A006BB5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABD882311680A006BB5CB /* AppDelegate.swift */; };
 		84EABD8B2311680A006BB5CB /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EABD8A2311680A006BB5CB /* SignViewController.swift */; };
 		84EABD8E2311680A006BB5CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EABD8C2311680A006BB5CB /* Main.storyboard */; };
@@ -36,7 +36,6 @@
 		842AE27A2311A9E200599EDA /* NewDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDocumentViewController.swift; sourceTree = "<group>"; };
 		8438D4AE231578DE00C783D3 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
 		8443E3CF2318363B00106E14 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
-		847288EF2316DD5700CF4CEC /* DocumentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentEntity.swift; sourceTree = "<group>"; };
 		84A9A81C23117AA100BED4EE /* Documents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Documents.storyboard; sourceTree = "<group>"; };
 		84A9A81D23117AA200BED4EE /* ReaderMode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReaderMode.storyboard; sourceTree = "<group>"; };
 		84A9A81E23117AA200BED4EE /* TabMenus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabMenus.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		84A9A83223118F5D00BED4EE /* DocumentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentCell.xib; sourceTree = "<group>"; };
 		84A9A8342311905000BED4EE /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
 		84A9A8362311934800BED4EE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		84C37A9723216C790008B39F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		84EABD852311680A006BB5CB /* Write.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Write.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EABD882311680A006BB5CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84EABD8A2311680A006BB5CB /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
@@ -80,14 +80,13 @@
 				A61DF6B9BA0907E1138A9FA4 /* Pods-Write.debug.xcconfig */,
 				FA62BAEF9C7AFFF6D4B09F45 /* Pods-Write.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		847288F12316DD5D00CF4CEC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				847288EF2316DD5700CF4CEC /* DocumentEntity.swift */,
+				84C37A9723216C790008B39F /* DataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,13 +324,13 @@
 				84A9A82823117D0400BED4EE /* RoundedCornerView.swift in Sources */,
 				84EABD8B2311680A006BB5CB /* SignViewController.swift in Sources */,
 				8443E3D02318363B00106E14 /* TriangleView.swift in Sources */,
+				84C37A9823216C790008B39F /* DataManager.swift in Sources */,
 				84A9A82523117AC900BED4EE /* DocumentsViewController.swift in Sources */,
 				84A9A82E23117E3200BED4EE /* DocumentCell.swift in Sources */,
 				8438D4AF231578DE00C783D3 /* RoundedCornerButton.swift in Sources */,
 				84A9A82A23117E0500BED4EE /* AddCell.swift in Sources */,
 				84EABD912311680A006BB5CB /* Write.xcdatamodeld in Sources */,
 				842AE27B2311A9E200599EDA /* NewDocumentViewController.swift in Sources */,
-				847288F02316DD5700CF4CEC /* DocumentEntity.swift in Sources */,
 				84EABD892311680A006BB5CB /* AppDelegate.swift in Sources */,
 				84A9A8352311905000BED4EE /* ReaderViewController.swift in Sources */,
 				84A9A8372311934800BED4EE /* SettingsViewController.swift in Sources */,
