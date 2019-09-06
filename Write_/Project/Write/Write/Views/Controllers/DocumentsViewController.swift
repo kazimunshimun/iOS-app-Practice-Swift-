@@ -11,9 +11,11 @@ import CoreData
 
 class DocumentsViewController: UIViewController {
     
-    var lastDocumentId: Int16 = 0
-    let dataManager: DataManager = DataManager()
     let dataSource = DocumentDataSource()
+    lazy var viewModel : DocumentViewModel = {
+        let viewModel = DocumentViewModel(dataSource: dataSource)
+        return viewModel
+    }()
     
     @IBOutlet weak var documentCollectionView: UICollectionView!
     
@@ -41,26 +43,15 @@ class DocumentsViewController: UIViewController {
         self.dataSource.data.addAndNotify(observer: self) { [weak self] in
             self?.documentCollectionView.reloadData()
         }
-        fetchDocumentList()
+        self.viewModel.fetchDocumentList()
     }
     
-    private func fetchDocumentList() {
-        do {
-            self.dataSource.data.value = try dataManager.fetchDocument()
-            if self.dataSource.data.value.count > 0 {
-                lastDocumentId = self.dataSource.data.value[self.dataSource.data.value.count - 1].docid
-                documentCollectionView.reloadData()
-            }
-        } catch {
-            print("Failed")
-        }
-    }
 }
 
 extension DocumentsViewController: DataUpdated {
     func documentsUpdated() {
         self.dataSource.data.value.removeAll()
-        fetchDocumentList()
+        self.viewModel.fetchDocumentList()
     }
 }
 
@@ -72,7 +63,7 @@ extension DocumentsViewController: UICollectionViewDelegate {
         let newDocumentViewController = storyBoard.instantiateViewController(withIdentifier: "newDocumentView") as! NewDocumentViewController
         newDocumentViewController.delegate = self
         if indexPath.row == 0 {
-            newDocumentViewController.documentId = lastDocumentId + 1
+            newDocumentViewController.documentId = self.viewModel.lastDocumentId + 1
             newDocumentViewController.isNewDocument = true
             self.present(newDocumentViewController, animated: true)
         } else {

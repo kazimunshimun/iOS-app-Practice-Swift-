@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ReaderViewModel {
+class ReaderViewModel {
     
     let dataManager: DataManager = DataManager()
     weak var dataSource : GenericDataSource<Document>?

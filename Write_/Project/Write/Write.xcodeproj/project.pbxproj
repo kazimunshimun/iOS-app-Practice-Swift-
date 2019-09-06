@@ -16,6 +16,7 @@
 		844B7E46232232F600CE2CC3 /* ReaderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B7E45232232F600CE2CC3 /* ReaderDataSource.swift */; };
 		844B7E482322389600CE2CC3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B7E472322389600CE2CC3 /* Utils.swift */; };
 		844B7E4B23223C2A00CE2CC3 /* ReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B7E4A23223C2A00CE2CC3 /* ReaderViewModel.swift */; };
+		844B7E4E23223E1800CE2CC3 /* DocumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B7E4D23223E1800CE2CC3 /* DocumentViewModel.swift */; };
 		84A9A82023117AA200BED4EE /* Documents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A9A81C23117AA100BED4EE /* Documents.storyboard */; };
 		84A9A82123117AA200BED4EE /* ReaderMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A9A81D23117AA200BED4EE /* ReaderMode.storyboard */; };
 		84A9A82223117AA200BED4EE /* TabMenus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A9A81E23117AA200BED4EE /* TabMenus.storyboard */; };
@@ -48,6 +49,7 @@
 		844B7E45232232F600CE2CC3 /* ReaderDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderDataSource.swift; sourceTree = "<group>"; };
 		844B7E472322389600CE2CC3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		844B7E4A23223C2A00CE2CC3 /* ReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewModel.swift; sourceTree = "<group>"; };
+		844B7E4D23223E1800CE2CC3 /* DocumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewModel.swift; sourceTree = "<group>"; };
 		84A9A81C23117AA100BED4EE /* Documents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Documents.storyboard; sourceTree = "<group>"; };
 		84A9A81D23117AA200BED4EE /* ReaderMode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReaderMode.storyboard; sourceTree = "<group>"; };
 		84A9A81E23117AA200BED4EE /* TabMenus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabMenus.storyboard; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				844B7E4A23223C2A00CE2CC3 /* ReaderViewModel.swift */,
+				844B7E4D23223E1800CE2CC3 /* DocumentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,14 +220,14 @@
 			isa = PBXGroup;
 			children = (
 				84A9A81023116F7500BED4EE /* Application */,
+				847288F12316DD5D00CF4CEC /* Model */,
 				84A9A81123116F8100BED4EE /* Views */,
+				844B7E4C23223C3000CE2CC3 /* ViewModel */,
 				84A9A81223116F8E00BED4EE /* Resources */,
 				84EABD972311680C006BB5CB /* Info.plist */,
 				84EABD8F2311680A006BB5CB /* Write.xcdatamodeld */,
-				847288F12316DD5D00CF4CEC /* Model */,
 				844B7E422322325800CE2CC3 /* DataSource */,
 				844B7E492322393100CE2CC3 /* Utils */,
-				844B7E4C23223C3000CE2CC3 /* ViewModel */,
 			);
 			path = Write;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A9A82823117D0400BED4EE /* RoundedCornerView.swift in Sources */,
+				844B7E4E23223E1800CE2CC3 /* DocumentViewModel.swift in Sources */,
 				844B7E46232232F600CE2CC3 /* ReaderDataSource.swift in Sources */,
 				84EABD8B2311680A006BB5CB /* SignViewController.swift in Sources */,
 				8443E3D02318363B00106E14 /* TriangleView.swift in Sources */,
