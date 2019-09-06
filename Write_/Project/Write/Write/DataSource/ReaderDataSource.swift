@@ -37,19 +37,10 @@ class ReaderDataSource : GenericDataSource<Document>, UICollectionViewDataSource
             cell.dateLabel.text = formatter.string(from: data.value[indexPath.row].date!)
             
             let content = data.value[indexPath.row].content as! NSAttributedString
-            cell.pageNumberLabel.text = "\(getPageCount(forContent: content)) pages"
+            cell.pageNumberLabel.text = "\(Utils.getPageCount(forContent: content)) pages"
         } else {
             cell.dataView.isHidden = true
         }
         return cell
-    }
-    
-    private func getPageCount(forContent content: NSAttributedString) -> Int {
-        var lineCount = 0
-        content.string.enumerateLines { (str, _) in
-            lineCount += 1
-        }
-        //print("line count \(lineCount)")
-        return ((lineCount - 2) / 25) + 1
     }
 }

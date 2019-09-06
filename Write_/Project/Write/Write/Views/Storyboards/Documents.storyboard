@@ -50,7 +50,6 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="PD1-Ky-eSj" id="BGh-SE-1G5"/>
                                     <outlet property="delegate" destination="PD1-Ky-eSj" id="ijL-6U-MCz"/>
                                 </connections>
                             </collectionView>

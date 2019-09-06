@@ -10,11 +10,10 @@ import UIKit
 import CoreData
 
 class DocumentsViewController: UIViewController {
-
-    var documentList: [Document] = []
+    
     var lastDocumentId: Int16 = 0
     let dataManager: DataManager = DataManager()
-    let formatter = DateFormatter()
+    let dataSource = DocumentDataSource()
     
     @IBOutlet weak var documentCollectionView: UICollectionView!
     
@@ -22,7 +21,6 @@ class DocumentsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        formatter.dateFormat = "dd MMMM, yyyy"
         setupNavigationView()
         configureCollectionView()
     }
@@ -39,14 +37,18 @@ class DocumentsViewController: UIViewController {
     private func configureCollectionView() {
         documentCollectionView.register(UINib(nibName: "AddCell", bundle: nil), forCellWithReuseIdentifier: "addCell1")
         documentCollectionView.register(UINib(nibName: "DocumentCell", bundle: nil), forCellWithReuseIdentifier: "documentCell1")
+        documentCollectionView.dataSource = self.dataSource
+        self.dataSource.data.addAndNotify(observer: self) { [weak self] in
+            self?.documentCollectionView.reloadData()
+        }
         fetchDocumentList()
     }
     
     private func fetchDocumentList() {
         do {
-            documentList = try dataManager.fetchDocument()
-            if documentList.count > 0 {
-                lastDocumentId = documentList[documentList.count - 1].docid
+            self.dataSource.data.value = try dataManager.fetchDocument()
+            if self.dataSource.data.value.count > 0 {
+                lastDocumentId = self.dataSource.data.value[self.dataSource.data.value.count - 1].docid
                 documentCollectionView.reloadData()
             }
         } catch {
@@ -57,47 +59,12 @@ class DocumentsViewController: UIViewController {
 
 extension DocumentsViewController: DataUpdated {
     func documentsUpdated() {
-        self.documentList.removeAll()
+        self.dataSource.data.value.removeAll()
         fetchDocumentList()
     }
 }
 
-extension DocumentsViewController: UICollectionViewDelegate, UICollectionViewDataSource{
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "addCell1", for: indexPath) as! AddCell
-            return cell
-        } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "documentCell1", for: indexPath) as! DocumentCell
-            if indexPath.row <= documentList.count {
-                cell.dataView.isHidden = false
-                if documentList.count > 0 {
-                    cell.titleLabel.text = documentList[indexPath.row - 1].title
-                    cell.dateLabel.text = formatter.string(from: documentList[indexPath.row - 1].date!)
-                    var lineCount = 0
-                    let content = documentList[indexPath.row - 1].content as! NSAttributedString
-                    content.string.enumerateLines { (str, _) in
-                        lineCount += 1
-                    }
-                    print("line count \(lineCount)")
-                    let pageCount = ((lineCount - 2) / 25) + 1
-                    cell.pageNumberLabel.text = "\(pageCount) pages"
-                }
-            } else {
-                cell.dataView.isHidden = true
-            }
-            return cell
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        var neededEmptyCell = 0
-        if documentList.count < 5 {
-            neededEmptyCell = 5 - documentList.count
-        }
-        return neededEmptyCell + 1 + documentList.count
-    }
+extension DocumentsViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("colloection view item clicked: \(indexPath.row)")
@@ -109,11 +76,11 @@ extension DocumentsViewController: UICollectionViewDelegate, UICollectionViewDat
             newDocumentViewController.isNewDocument = true
             self.present(newDocumentViewController, animated: true)
         } else {
-            if indexPath.row <= documentList.count {
-                if documentList.count > 0 {
+            if indexPath.row <= self.dataSource.data.value.count {
+                if self.dataSource.data.value.count > 0 {
                     //cell.titleLabel.text = documentList[indexPath.row - 1].title
-                    newDocumentViewController.documentContent = documentList[indexPath.row - 1].content as! NSAttributedString
-                    newDocumentViewController.documentId = documentList[indexPath.row - 1].docid
+                    newDocumentViewController.documentContent = self.dataSource.data.value[indexPath.row - 1].content as! NSAttributedString
+                    newDocumentViewController.documentId = self.dataSource.data.value[indexPath.row - 1].docid
                     self.present(newDocumentViewController, animated: true)
                 }
             }
