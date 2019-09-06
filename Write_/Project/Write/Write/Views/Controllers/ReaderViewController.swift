@@ -43,7 +43,7 @@ class ReaderViewController: UIViewController {
             self?.readerCollectionView.reloadData()
         }
         //fetchDocumentList()
-        self.viewModel.fetchDocumentList()
+        self.viewModel.fetchReaderDocumentList()
     }
 }
 

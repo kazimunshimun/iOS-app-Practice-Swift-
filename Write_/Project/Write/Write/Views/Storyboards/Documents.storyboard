@@ -34,6 +34,7 @@
                             </view>
                             <searchBar contentMode="redraw" barStyle="black" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kZ-GW-IiA">
                                 <rect key="frame" x="15" y="88" width="345" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <offsetWrapper key="searchTextPositionAdjustment" horizontal="106" vertical="0.0"/>
                                 <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
@@ -135,27 +136,12 @@
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">Song of ice and fire
+by Gorge R R Martin
+
 </string>
                                                 <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="by Gorge R R Martin">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cgo
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -165,8 +151,8 @@ They do not quiet get along well
 So they decided to go on war
 War is like rich people playing with poor people llife</string>
                                                 <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -191,7 +177,7 @@ War is like rich people playing with poor people llife</string>
                                 <rect key="frame" x="0.0" y="756" width="375" height="42"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HO4-d7-akB" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="0.0" width="40" height="42"/>
+                                        <rect key="frame" x="24" y="4" width="40" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="PeT-eA-jlN"/>
@@ -207,7 +193,7 @@ War is like rich people playing with poor people llife</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkN-fl-win" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
-                                        <rect key="frame" x="72" y="0.0" width="40" height="42"/>
+                                        <rect key="frame" x="72" y="4" width="40" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="tgk-3U-hqt"/>
@@ -223,7 +209,7 @@ War is like rich people playing with poor people llife</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LES-t0-fem" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
-                                        <rect key="frame" x="120" y="0.0" width="40" height="42"/>
+                                        <rect key="frame" x="120" y="4" width="40" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="s9V-1y-Y0s"/>
@@ -239,7 +225,7 @@ War is like rich people playing with poor people llife</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvS-0V-uDu" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
-                                        <rect key="frame" x="168" y="0.0" width="40" height="42"/>
+                                        <rect key="frame" x="168" y="4" width="40" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="7cn-J9-cqb"/>
@@ -255,7 +241,7 @@ War is like rich people playing with poor people llife</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SII-Lm-vCD" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
-                                        <rect key="frame" x="220" y="0.0" width="40" height="42"/>
+                                        <rect key="frame" x="220" y="4" width="40" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="oWf-ku-FPP"/>
@@ -271,7 +257,7 @@ War is like rich people playing with poor people llife</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efO-YY-XL6" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
-                                        <rect key="frame" x="268" y="0.0" width="40" height="42"/>
+                                        <rect key="frame" x="268" y="4" width="40" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="ugj-9y-kBk"/>
@@ -287,7 +273,7 @@ War is like rich people playing with poor people llife</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lug-Th-rfw" customClass="RoundedCornerButton" customModule="Write" customModuleProvider="target">
-                                        <rect key="frame" x="316" y="0.0" width="40" height="42"/>
+                                        <rect key="frame" x="316" y="4" width="40" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="7Se-uZ-4ci"/>
@@ -319,12 +305,12 @@ War is like rich people playing with poor people llife</string>
                                     <constraint firstItem="LES-t0-fem" firstAttribute="bottom" secondItem="RkN-fl-win" secondAttribute="bottom" id="ai0-WO-ga9"/>
                                     <constraint firstItem="HO4-d7-akB" firstAttribute="leading" secondItem="1ZM-aU-R0N" secondAttribute="leading" constant="24" id="dbb-YF-7cY"/>
                                     <constraint firstItem="SII-Lm-vCD" firstAttribute="bottom" secondItem="QvS-0V-uDu" secondAttribute="bottom" id="gGc-Du-Uan"/>
-                                    <constraint firstItem="HO4-d7-akB" firstAttribute="top" secondItem="1ZM-aU-R0N" secondAttribute="top" id="gNF-z0-UMQ"/>
+                                    <constraint firstItem="HO4-d7-akB" firstAttribute="top" secondItem="1ZM-aU-R0N" secondAttribute="top" constant="4" id="gNF-z0-UMQ"/>
                                     <constraint firstItem="efO-YY-XL6" firstAttribute="top" secondItem="SII-Lm-vCD" secondAttribute="top" id="hOa-mO-Iky"/>
                                     <constraint firstItem="QvS-0V-uDu" firstAttribute="top" secondItem="LES-t0-fem" secondAttribute="top" id="hsh-o5-AUr"/>
                                     <constraint firstAttribute="height" constant="42" id="hwC-VK-lGr"/>
                                     <constraint firstItem="SII-Lm-vCD" firstAttribute="top" secondItem="QvS-0V-uDu" secondAttribute="top" id="jYJ-z1-8x0"/>
-                                    <constraint firstAttribute="bottom" secondItem="HO4-d7-akB" secondAttribute="bottom" id="qxj-yd-skg"/>
+                                    <constraint firstAttribute="bottom" secondItem="HO4-d7-akB" secondAttribute="bottom" constant="4" id="qxj-yd-skg"/>
                                     <constraint firstItem="efO-YY-XL6" firstAttribute="bottom" secondItem="SII-Lm-vCD" secondAttribute="bottom" id="sDD-v2-1eN"/>
                                     <constraint firstItem="SII-Lm-vCD" firstAttribute="leading" secondItem="QvS-0V-uDu" secondAttribute="trailing" constant="12" id="zvf-VP-RYf"/>
                                 </constraints>

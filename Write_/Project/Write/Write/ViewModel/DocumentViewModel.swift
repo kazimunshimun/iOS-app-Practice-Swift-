@@ -12,7 +12,7 @@ class DocumentViewModel: ReaderViewModel {
     
     var lastDocumentId: Int16 = 0
     
-    override func fetchDocumentList() {        
+    func fetchDocumentList() {        
         do {
             self.dataSource?.data.value = try dataManager.fetchDocument()
             if (self.dataSource?.data.value.count)! > 0 {

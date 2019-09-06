@@ -17,7 +17,7 @@ class ReaderViewModel {
         self.dataSource = dataSource
     }
     
-    func fetchDocumentList() {
+    func fetchReaderDocumentList() {
         do {
             self.dataSource?.data.value = try dataManager.fetchDocument()
         } catch {

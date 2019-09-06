@@ -203,6 +203,7 @@ class NewDocumentViewController: UIViewController {
         if isReaderView {
             doShareDocument(sender)
         } else {
+            self.view.endEditing(true)
             if isNewDocument {
                 doSaveDocument()
             } else {
