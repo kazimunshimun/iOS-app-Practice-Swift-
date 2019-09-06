@@ -37,6 +37,8 @@ class NewDocumentViewController: UIViewController {
     var documentContent: NSAttributedString = NSAttributedString(string: "")
     var isReaderView = false
     
+    let dataManager: DataManager = DataManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -211,23 +213,25 @@ class NewDocumentViewController: UIViewController {
     }
     
     private func doSaveDocument() {
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
         let entity = NSEntityDescription.entity(forEntityName: "Document", in: context)
         let newDocument = NSManagedObject(entity: entity!, insertInto: context)
-        
+ 
         let attributedString = documentTextView.attributedText
         var lines: [String] = documentTextView.text.components(separatedBy: NSCharacterSet.newlines)
         let date = Date()
         
         if lines.count > 3 {
+            
             newDocument.setValue(documentId, forKey: "docid")
             newDocument.setValue(attributedString, forKey: "content")
             newDocument.setValue(date, forKey: "date")
             newDocument.setValue(lines[0], forKey: "title")
             newDocument.setValue(lines[1], forKey: "writer")
-            
+ 
             do {
                 try context.save()
                 //show save successful message
@@ -244,23 +248,24 @@ class NewDocumentViewController: UIViewController {
     
     private func doUpdateDocument() {
         print("update document button tapped")
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Document")
-        fetchRequest.predicate = NSPredicate(format: "docid = %@", NSNumber(value: documentId))
         
         do {
-            let doc = try context.fetch(fetchRequest)
+            //let doc = try context.fetch(fetchRequest)
+            let doc = try dataManager.fetchDocuments(withId: documentId)
             
             if doc.count > 0 {
                 var lines: [String] = documentTextView.text.components(separatedBy: NSCharacterSet.newlines)
                 
                 if lines.count > 3 {
                     
-                    let updatedDoc = doc[0] as! NSManagedObject
+                    let updatedDoc = doc[0] as NSManagedObject
                     
                     let attributedString = documentTextView.attributedText
                     let date = Date()
+                    
                     updatedDoc.setValue(attributedString, forKey: "content")
                     updatedDoc.setValue(date, forKey: "date")
                     updatedDoc.setValue(lines[0], forKey: "title")
