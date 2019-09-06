@@ -13,8 +13,12 @@ class ReaderViewController: UIViewController {
 
     //var documentList: [Document] = []
     @IBOutlet weak var readerCollectionView: UICollectionView!
-    let dataManager: DataManager = DataManager()
     let dataSource = ReaderDataSource()
+    
+    lazy var viewModel : ReaderViewModel = {
+        let viewModel = ReaderViewModel(dataSource: dataSource)
+        return viewModel
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,18 +42,8 @@ class ReaderViewController: UIViewController {
         self.dataSource.data.addAndNotify(observer: self) { [weak self] in
             self?.readerCollectionView.reloadData()
         }
-        fetchDocumentList()
-    }
-    
-    private func fetchDocumentList() {
-        do {
-            self.dataSource.data.value = try dataManager.fetchDocument()
-            if self.dataSource.data.value.count > 0 {
-                readerCollectionView.reloadData()
-            }
-        } catch {
-            print("Failed")
-        }
+        //fetchDocumentList()
+        self.viewModel.fetchDocumentList()
     }
 }
 
