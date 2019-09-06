@@ -27,4 +27,4 @@ UI Creation | Storyboard and Programmatically
 
 #### Developed App Simulator Video:
 
-[![Plexus video](http://img.youtube.com/vi/_qgv2bovm2s/3.jpg)](http://www.youtube.com/watch?v=_qgv2bovm2s)
+[![Plexus video](http://img.youtube.com/vi/_qgv2bovm2s/0.jpg)](http://www.youtube.com/watch?v=_qgv2bovm2s)

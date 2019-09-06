@@ -27,6 +27,11 @@ class ReaderViewController: UIViewController {
         configureCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.viewModel.fetchReaderDocumentList()
+    }
+    
     private func setupNavigationView() {
         let logo = UIImage(named: "logo_small")
         let imageView = UIImageView(image:logo)
@@ -43,7 +48,6 @@ class ReaderViewController: UIViewController {
             self?.readerCollectionView.reloadData()
         }
         //fetchDocumentList()
-        self.viewModel.fetchReaderDocumentList()
     }
 }
 
