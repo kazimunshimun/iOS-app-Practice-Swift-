@@ -201,7 +201,7 @@ class NewDocumentViewController: UIViewController {
     
     @IBAction func saveButtonClicked(_ sender: Any) {
         if isReaderView {
-            doShareDocument()
+            doShareDocument(sender)
         } else {
             if isNewDocument {
                 doSaveDocument()
@@ -289,8 +289,27 @@ class NewDocumentViewController: UIViewController {
         }
     }
     
-    private func doShareDocument() {
+    private func doShareDocument(_ sender: Any) {
         print("Share button tapped")
+        let firstActivityItem = documentTextView.attributedText
+        
+        let activityViewController : UIActivityViewController = UIActivityViewController(
+            activityItems: [firstActivityItem?.string as Any], applicationActivities: nil)
+        
+        // This lines is for the popover you need to show in iPad
+        activityViewController.popoverPresentationController?.sourceView = (sender as! UIButton)
+        
+        // This line remove the arrow of the popover to show in iPad
+        activityViewController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
+        activityViewController.popoverPresentationController?.sourceRect = CGRect(x: 150, y: 150, width: 0, height: 0)
+        
+        // Anything you want to exclude
+        activityViewController.excludedActivityTypes = [
+            UIActivity.ActivityType.assignToContact,
+            UIActivity.ActivityType.saveToCameraRoll,
+        ]
+        
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     private func showSuccessDialog() {
