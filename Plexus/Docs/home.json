@@ -1,0 +1,5 @@
+{
+    "discover":[{"id":1,"category":"Software Development","title":"Python","description":"In software engineering, a software development process is the process of... dividing software ...","image_name":"course_one_image","rating":3,"lesson_id":1},
+    {"id":2,"category":"Game Development","title":"Data Professional","description":"Data scientist is one of the best suited professions to thrive this century.","image_name":"course_two_image","rating":1,"lesson_id":2}],
+    "mostViewed":[{"id":1,"category":"Software Development","title":"Python","description":"In software engineering, a software development process is the process of... dividing software ...","image_name":"course_one_image","rating":3,"lesson_id":1}]
+}

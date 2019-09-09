@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		843AF65E2326BC100095C718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AF65D2326BC100095C718 /* AppDelegate.swift */; };
-		843AF6602326BC100095C718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AF65F2326BC100095C718 /* ViewController.swift */; };
+		843AF6602326BC100095C718 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AF65F2326BC100095C718 /* DashboardViewController.swift */; };
 		843AF6632326BC100095C718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843AF6612326BC100095C718 /* Main.storyboard */; };
 		843AF6662326BC100095C718 /* Happ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 843AF6642326BC100095C718 /* Happ.xcdatamodeld */; };
 		843AF6682326BC120095C718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843AF6672326BC120095C718 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		843AF65A2326BC100095C718 /* Happ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843AF65D2326BC100095C718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		843AF65F2326BC100095C718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		843AF65F2326BC100095C718 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		843AF6622326BC100095C718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		843AF6652326BC100095C718 /* Happ.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Happ.xcdatamodel; sourceTree = "<group>"; };
 		843AF6672326BC120095C718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		843AF6722326BDD50095C718 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				843AF65F2326BC100095C718 /* ViewController.swift */,
+				843AF65F2326BC100095C718 /* DashboardViewController.swift */,
 				843AF6612326BC100095C718 /* Main.storyboard */,
 				843AF6692326BC120095C718 /* LaunchScreen.storyboard */,
 			);
@@ -163,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				843AF6662326BC100095C718 /* Happ.xcdatamodeld in Sources */,
-				843AF6602326BC100095C718 /* ViewController.swift in Sources */,
+				843AF6602326BC100095C718 /* DashboardViewController.swift in Sources */,
 				843AF65E2326BC100095C718 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

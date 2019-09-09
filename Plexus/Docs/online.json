@@ -1,0 +1,7 @@
+[
+    {"id":1,"title":"Python","image_name":"course_one_image"},{"id":2,"title":"Big Data", "image_name": "course_two_image"}, {"id":3,"title":"Unity","image_name":"wishlist_course_2"},{"id":4,"title":"React Native", "image_name": "wishlist_course_3"},
+    {"id":5,"title":"Android", "image_name": "completed_course_2"}, {"id":6,"title":"Accounting","image_name":"completed_course_3"},
+    {"id":7,"title":"Javascript", "image_name": "completed_course_4"},
+    {"id":8,"title":"iOS", "image_name": "wishlist_course_1"},
+    {"id":9,"title":"C#","image_name":"completed_course_1"}
+]

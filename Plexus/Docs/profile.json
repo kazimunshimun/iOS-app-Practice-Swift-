@@ -1,0 +1,12 @@
+{
+    "id":1,
+    "name":"Mario Speedwagon",
+    "detail":"I teach full stack development! Which means you will see tutorials regarding UI/UX, Frontend Dev, Backend Dev, Graphic and more",
+    "profileImage":"profile_picture",
+    "completed":[{"id":1,"image_name":"completed_course_1"},
+    {"id":2,"image_name":"completed_course_2"},
+    {"id":3,"image_name":"completed_course_3"},
+    {"id":4,"image_name":"completed_course_4"}],
+    "topRated":[{"id":1,"category":"Software Development","title":"Python","description":"Learn Python like a Professional! Start from the basics and go all the way to creating your...","image_name":"top_rated_1","rating":4},
+    {"id":2,"category":"Software Development","title":"Python","description":"In software engineering, a software development process is the process of... dividing software ...","image_name":"top_rated_2","rating":4}]
+}
