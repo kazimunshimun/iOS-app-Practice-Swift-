@@ -24,9 +24,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOq-j4-WHj">
+                                <rect key="frame" x="341" y="48" width="40" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="64z-rR-Q5l"/>
+                                    <constraint firstAttribute="width" constant="40" id="wOE-fc-3c2"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <segue destination="J0A-nA-EpC" kind="show" id="lvy-Hm-GLc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="xFa-eb-eY5" firstAttribute="trailing" secondItem="uOq-j4-WHj" secondAttribute="trailing" constant="33" id="Aze-1V-HH2"/>
+                            <constraint firstItem="uOq-j4-WHj" firstAttribute="top" secondItem="xFa-eb-eY5" secondAttribute="top" constant="4" id="Ddl-aJ-9NG"/>
                             <constraint firstItem="Czz-6h-WoR" firstAttribute="centerY" secondItem="xFa-eb-eY5" secondAttribute="centerY" id="LBf-kh-4Nj"/>
                             <constraint firstItem="Czz-6h-WoR" firstAttribute="centerX" secondItem="xFa-eb-eY5" secondAttribute="centerX" id="hPC-Cc-b0m"/>
                         </constraints>
@@ -65,4 +78,7 @@
             <point key="canvasLocation" x="975" y="140"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="19.5" height="19.5"/>
+    </resources>
 </document>
