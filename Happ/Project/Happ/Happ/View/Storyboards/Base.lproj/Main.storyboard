@@ -118,6 +118,9 @@
                                                     <state key="normal" title="See all">
                                                         <color key="titleColor" red="0.1019607843" green="0.55294117649999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="seeAllButtonClicked:" destination="o1W-Om-nka" eventType="touchUpInside" id="DeR-q5-mNZ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

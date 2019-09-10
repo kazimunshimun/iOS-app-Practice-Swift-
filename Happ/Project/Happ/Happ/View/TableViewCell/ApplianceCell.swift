@@ -8,8 +8,15 @@
 
 import UIKit
 
+protocol ApplianceSelectedDelegate {
+    func seeAllSelected()
+    func applianceSelected(name: String)
+}
+
 class ApplianceCell: UITableViewCell {
 
+    var applianceDelegate: ApplianceSelectedDelegate?
+    
     @IBOutlet weak var applianceCollectionView: UICollectionView!
     
     let items = ["Air Conditioner", "Smart Light", "Refrigerator", "LED Bulb"]
@@ -18,6 +25,7 @@ class ApplianceCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         applianceCollectionView.dataSource = self
+        applianceCollectionView.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,9 +34,12 @@ class ApplianceCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func seeAllButtonClicked(_ sender: Any) {
+        applianceDelegate?.seeAllSelected()
+    }
 }
 
-extension ApplianceCell: UICollectionViewDataSource {
+extension ApplianceCell: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
@@ -39,5 +50,8 @@ extension ApplianceCell: UICollectionViewDataSource {
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        applianceDelegate?.applianceSelected(name: items[indexPath.row])
+    }
+
 }

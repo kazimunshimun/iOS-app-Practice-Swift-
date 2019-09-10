@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Control View Controller-->
         <scene sceneID="cAa-kb-Kr2">
             <objects>
-                <viewController id="mwS-xQ-oRa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="acView" id="mwS-xQ-oRa" customClass="ACControlViewController" customModule="Happ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xkW-bt-NVn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="-359" y="129"/>
         </scene>
-        <!--View Controller-->
+        <!--Light Control View Controller-->
         <scene sceneID="MaC-H2-Z3y">
             <objects>
-                <viewController id="cIs-Yc-ztZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lightView" id="cIs-Yc-ztZ" customClass="LightControlViewController" customModule="Happ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TZB-sw-cVN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

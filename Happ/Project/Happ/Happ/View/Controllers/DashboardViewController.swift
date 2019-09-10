@@ -44,6 +44,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         } else if (indexPath.row == 1) {
             //appliance
             let cell = tableView.dequeueReusableCell(withIdentifier: "applianceCell", for: indexPath) as! ApplianceCell
+            cell.applianceDelegate = self
             return cell
         } else {
             //bill
@@ -62,6 +63,44 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             //bill
             return 186.0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Usage", bundle: nil)
+        if indexPath.row == 0 {
+            //mode
+            print("mode")
+            let timerViewController = storyBoard.instantiateViewController(withIdentifier: "timerView")
+            self.show(timerViewController, sender: nil)
+        } else if (indexPath.row == 2) {
+            //bill
+            print("bill")
+            let usageViewController = storyBoard.instantiateViewController(withIdentifier: "usageView")
+            self.show(usageViewController, sender: nil)
+        }
+    }
+}
+
+extension DashboardViewController: ApplianceSelectedDelegate {
+    
+    func seeAllSelected() {
+        print("see all selected")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Appliance", bundle: nil)
+        let applianceViewController = storyBoard.instantiateViewController(withIdentifier: "applianceView")
+        self.show(applianceViewController, sender: nil)
+    }
+    
+    func applianceSelected(name: String) {
+        print("appliance selected wiht name: \(name)")
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Controls", bundle: nil)
+        if name == "Air Conditioner" {
+            let acViewController = storyBoard.instantiateViewController(withIdentifier: "acView")
+            self.show(acViewController, sender: nil)
+        } else if name == "Smart Light" || name == "LED Bulb"{
+            let lightViewController = storyBoard.instantiateViewController(withIdentifier: "lightView")
+            self.show(lightViewController, sender: nil)
         }
     }
 }
