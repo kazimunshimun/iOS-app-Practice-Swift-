@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8437154123295640006F458B /* TactileSliderLayerRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437154023295640006F458B /* TactileSliderLayerRenderer.swift */; };
+		8437154323295661006F458B /* TactileSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437154223295661006F458B /* TactileSlider.swift */; };
 		843AF65E2326BC100095C718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AF65D2326BC100095C718 /* AppDelegate.swift */; };
 		843AF6602326BC100095C718 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AF65F2326BC100095C718 /* DashboardViewController.swift */; };
 		843AF6632326BC100095C718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843AF6612326BC100095C718 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8437154023295640006F458B /* TactileSliderLayerRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TactileSliderLayerRenderer.swift; sourceTree = "<group>"; };
+		8437154223295661006F458B /* TactileSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TactileSlider.swift; sourceTree = "<group>"; };
 		843AF65A2326BC100095C718 /* Happ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843AF65D2326BC100095C718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		843AF65F2326BC100095C718 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8437153F232954E4006F458B /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				8437154023295640006F458B /* TactileSliderLayerRenderer.swift */,
+				8437154223295661006F458B /* TactileSlider.swift */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
 		843AF6512326BC100095C718 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +113,7 @@
 				84467F0A2327A051005C04CC /* Storyboards */,
 				84E26EB52327A0C300DEAAC9 /* TableViewCell */,
 				846E9E122327DC6000A49D7B /* CollectionVIewCell */,
+				8437153F232954E4006F458B /* Slider */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +265,8 @@
 				843AF6662326BC100095C718 /* Happ.xcdatamodeld in Sources */,
 				846E9E0F2327A38800A49D7B /* ApplianceCell.swift in Sources */,
 				84E26EB82327A0DC00DEAAC9 /* BillCell.swift in Sources */,
+				8437154323295661006F458B /* TactileSlider.swift in Sources */,
+				8437154123295640006F458B /* TactileSliderLayerRenderer.swift in Sources */,
 				843AF6602326BC100095C718 /* DashboardViewController.swift in Sources */,
 				84E26EB32327A0BD00DEAAC9 /* ModeCell.swift in Sources */,
 				846E9E112327DC5C00A49D7B /* ApplianceItemCell.swift in Sources */,
