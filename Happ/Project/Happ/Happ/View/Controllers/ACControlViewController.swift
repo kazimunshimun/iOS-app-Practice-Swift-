@@ -10,13 +10,25 @@ import UIKit
 
 class ACControlViewController: UIViewController {
 
+    @IBOutlet weak var temparatureSlider: TactileSlider!
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var valueView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        temparatureSlider.setValue(23, animated: true)
     }
     
-
+    @IBAction func temparatureChanged(_ sender: TactileSlider) {
+        setTempValue(value: Int(sender.value))
+    }
+    
+    func setTempValue(value: Int) {
+        tempLabel.text = "\(value)°c"
+        valueView.frame.origin.y = temparatureSlider.frame.height - temparatureSlider.positionForValue(Float(value)) - 16
+    }
     /*
     // MARK: - Navigation
 
