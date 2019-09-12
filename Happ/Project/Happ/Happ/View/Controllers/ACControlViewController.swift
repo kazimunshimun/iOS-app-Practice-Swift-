@@ -18,9 +18,12 @@ class ACControlViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        temparatureSlider.setValue(23, animated: true)
+        //temparatureSlider.setValue(23, animated: true)
     }
     
+    @IBAction func backButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func temparatureChanged(_ sender: TactileSlider) {
         setTempValue(value: Int(sender.value))
     }

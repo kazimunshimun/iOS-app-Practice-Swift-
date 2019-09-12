@@ -47,6 +47,7 @@ internal class TactileSliderLayerRenderer {
     let trackLayer = CALayer()
     let thumbLayer = CAShapeLayer()
     let maskLayer = CAShapeLayer()
+    let circleLayer = CAShapeLayer()
     
     init() {
         trackLayer.backgroundColor = trackBackground.cgColor
@@ -55,6 +56,9 @@ internal class TactileSliderLayerRenderer {
         maskLayer.backgroundColor = UIColor.clear.cgColor
         trackLayer.mask = maskLayer
         trackLayer.masksToBounds = true
+        
+        circleLayer.fillColor = UIColor.white.cgColor
+        circleLayer.masksToBounds = true
     }
     
     private func updateThumbLayerPath() {
@@ -62,6 +66,10 @@ internal class TactileSliderLayerRenderer {
         CATransaction.setDisableActions(true)
         
         thumbLayer.path = CGPath(rect: CGRect(x: 0, y: 0, width: thumbLayer.bounds.width, height: thumbLayer.bounds.height), transform: nil)
+        
+        let maskRect = CGRect(x: 0, y: 0, width: 44, height: 44)
+        let maskPath = UIBezierPath(roundedRect: maskRect, cornerRadius: 22)
+        circleLayer.path = maskPath.cgPath
         
         CATransaction.commit()
     }
@@ -112,6 +120,9 @@ internal class TactileSliderLayerRenderer {
         thumbLayer.position = trackLayer.position
         updateThumbLayerPath()
         
+        circleLayer.bounds = trackLayer.bounds
+        circleLayer.position = trackLayer.position
+        
         CATransaction.commit()
         
         if let value = tactileSlider?.value {
@@ -130,11 +141,15 @@ internal class TactileSliderLayerRenderer {
         
         thumbLayer.transform = CATransform3DTranslate(CATransform3DIdentity, position.x, position.y, 0)
         
+        circleLayer.transform = CATransform3DTranslate(CATransform3DIdentity, position.x, position.y - 22, 0)
+        
         if animated {
             let animationAxis = tactileSlider!.vertical ? "y" : "x"
             let animation = CABasicAnimation(keyPath: "transform.translation.\(animationAxis)")
             animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
             thumbLayer.add(animation, forKey: nil)
+            
+            circleLayer.add(animation, forKey: nil)
         }
         
         CATransaction.commit()

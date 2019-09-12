@@ -206,6 +206,7 @@ import UIKit
         layer.isOpaque = false
         layer.addSublayer(renderer.trackLayer)
         renderer.trackLayer.addSublayer(renderer.thumbLayer)
+        renderer.trackLayer.addSublayer(renderer.circleLayer)
         
         updateLayerFrames()
     }
