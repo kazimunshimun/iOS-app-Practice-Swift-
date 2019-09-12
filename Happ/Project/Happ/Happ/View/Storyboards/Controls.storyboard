@@ -313,6 +313,7 @@
                                         <state key="normal" image="back"/>
                                         <connections>
                                             <action selector="backButtonClicked:" destination="mwS-xQ-oRa" eventType="touchUpInside" id="439-kr-Rkx"/>
+                                            <action selector="backButtonClicked:" destination="cIs-Yc-ztZ" eventType="touchUpInside" id="cl3-dH-SMI"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bedroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gG-Ac-IxW">
@@ -395,6 +396,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="brightnessChanged:" destination="cIs-Yc-ztZ" eventType="valueChanged" id="NRv-r2-oeK"/>
                                             <action selector="temparatureChanged:" destination="mwS-xQ-oRa" eventType="valueChanged" id="qNG-Hm-P13"/>
                                         </connections>
                                     </view>
@@ -523,27 +525,64 @@
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="m3G-b0-8tL">
                                         <rect key="frame" x="0.0" y="25" width="334" height="81"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XZ5-dv-ERP">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="15" id="XZ5-dv-ERP">
                                             <size key="itemSize" width="17" height="77"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ywk-mh-wQr">
-                                                <rect key="frame" x="0.0" y="0.0" width="17" height="77"/>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hueCell" id="Ywk-mh-wQr" customClass="HueCell" customModule="Happ" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="2" width="17" height="77"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                     <rect key="frame" x="0.0" y="0.0" width="17" height="77"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OgN-tg-IKI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="17" height="77"/>
+                                                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="8"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eq1-zt-Ea4">
+                                                            <rect key="frame" x="0.0" y="42" width="17" height="35"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.83921568629999999" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="35" id="c63-gj-gav"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="8"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
                                                 </view>
+                                                <constraints>
+                                                    <constraint firstItem="OgN-tg-IKI" firstAttribute="top" secondItem="Ywk-mh-wQr" secondAttribute="top" id="7fV-Cd-QD5"/>
+                                                    <constraint firstItem="Eq1-zt-Ea4" firstAttribute="leading" secondItem="Ywk-mh-wQr" secondAttribute="leading" id="H8c-Zm-GWo"/>
+                                                    <constraint firstAttribute="bottom" secondItem="OgN-tg-IKI" secondAttribute="bottom" id="gdH-g0-D0O"/>
+                                                    <constraint firstItem="OgN-tg-IKI" firstAttribute="leading" secondItem="Ywk-mh-wQr" secondAttribute="leading" id="jCx-ef-wes"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Eq1-zt-Ea4" secondAttribute="bottom" id="vZC-HR-rBs"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Eq1-zt-Ea4" secondAttribute="trailing" id="x9u-fY-ADZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="OgN-tg-IKI" secondAttribute="trailing" id="yT4-5X-mBw"/>
+                                                </constraints>
                                                 <size key="customSize" width="17" height="77"/>
+                                                <connections>
+                                                    <outlet property="hueColorView" destination="Eq1-zt-Ea4" id="OAv-ax-0EJ"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="m3G-b0-8tL" secondAttribute="trailing" id="0S8-6c-l8y"/>
                                     <constraint firstItem="HZu-qu-Gxk" firstAttribute="top" secondItem="E6a-AY-Z5M" secondAttribute="top" id="7GT-Zp-n4A"/>
@@ -574,6 +613,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bJA-Hh-LYJ"/>
                     </view>
+                    <connections>
+                        <outlet property="brightnessLabel" destination="X67-0E-P3W" id="r5p-ri-D8K"/>
+                        <outlet property="brightnessSlider" destination="VbB-Ya-jxc" id="Jcm-cb-iOj"/>
+                        <outlet property="hueSelectionCollectionView" destination="m3G-b0-8tL" id="ERz-5k-Tdx"/>
+                        <outlet property="valueView" destination="yNF-zm-Ff9" id="lLI-Kg-B6q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1L-mn-Ucp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

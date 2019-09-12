@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8437154123295640006F458B /* TactileSliderLayerRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437154023295640006F458B /* TactileSliderLayerRenderer.swift */; };
 		8437154323295661006F458B /* TactileSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437154223295661006F458B /* TactileSlider.swift */; };
+		84390408232ABA23007DCC5A /* HueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84390407232ABA23007DCC5A /* HueCell.swift */; };
 		843AF65E2326BC100095C718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AF65D2326BC100095C718 /* AppDelegate.swift */; };
 		843AF6602326BC100095C718 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AF65F2326BC100095C718 /* DashboardViewController.swift */; };
 		843AF6632326BC100095C718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843AF6612326BC100095C718 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		8437154023295640006F458B /* TactileSliderLayerRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TactileSliderLayerRenderer.swift; sourceTree = "<group>"; };
 		8437154223295661006F458B /* TactileSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TactileSlider.swift; sourceTree = "<group>"; };
+		84390407232ABA23007DCC5A /* HueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueCell.swift; sourceTree = "<group>"; };
 		843AF65A2326BC100095C718 /* Happ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843AF65D2326BC100095C718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		843AF65F2326BC100095C718 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				846E9E102327DC5C00A49D7B /* ApplianceItemCell.swift */,
+				84390407232ABA23007DCC5A /* HueCell.swift */,
 			);
 			path = CollectionVIewCell;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				8437154323295661006F458B /* TactileSlider.swift in Sources */,
 				8437154123295640006F458B /* TactileSliderLayerRenderer.swift in Sources */,
 				843AF6602326BC100095C718 /* DashboardViewController.swift in Sources */,
+				84390408232ABA23007DCC5A /* HueCell.swift in Sources */,
 				84E26EB32327A0BD00DEAAC9 /* ModeCell.swift in Sources */,
 				846E9E112327DC5C00A49D7B /* ApplianceItemCell.swift in Sources */,
 				846E9E1F2327E97D00A49D7B /* ACControlViewController.swift in Sources */,
