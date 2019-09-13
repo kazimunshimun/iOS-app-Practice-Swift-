@@ -15,6 +15,7 @@
 		840F9868232BE2ED0085DFE0 /* UsageLegendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F9867232BE2ED0085DFE0 /* UsageLegendCell.swift */; };
 		840F986A232BF2AE0085DFE0 /* ApplianceItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840F9869232BF2AE0085DFE0 /* ApplianceItemCell.xib */; };
 		840F986C232BF7ED0085DFE0 /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F986B232BF7ED0085DFE0 /* RoomCell.swift */; };
+		840F986E232C11880085DFE0 /* NewApplianceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F986D232C11880085DFE0 /* NewApplianceCell.swift */; };
 		8437154123295640006F458B /* TactileSliderLayerRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437154023295640006F458B /* TactileSliderLayerRenderer.swift */; };
 		8437154323295661006F458B /* TactileSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437154223295661006F458B /* TactileSlider.swift */; };
 		84390408232ABA23007DCC5A /* HueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84390407232ABA23007DCC5A /* HueCell.swift */; };
@@ -52,6 +53,7 @@
 		840F9867232BE2ED0085DFE0 /* UsageLegendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageLegendCell.swift; sourceTree = "<group>"; };
 		840F9869232BF2AE0085DFE0 /* ApplianceItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplianceItemCell.xib; sourceTree = "<group>"; };
 		840F986B232BF7ED0085DFE0 /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
+		840F986D232C11880085DFE0 /* NewApplianceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewApplianceCell.swift; sourceTree = "<group>"; };
 		8437154023295640006F458B /* TactileSliderLayerRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TactileSliderLayerRenderer.swift; sourceTree = "<group>"; };
 		8437154223295661006F458B /* TactileSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TactileSlider.swift; sourceTree = "<group>"; };
 		84390407232ABA23007DCC5A /* HueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueCell.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				840F9867232BE2ED0085DFE0 /* UsageLegendCell.swift */,
 				840F9869232BF2AE0085DFE0 /* ApplianceItemCell.xib */,
 				840F986B232BF7ED0085DFE0 /* RoomCell.swift */,
+				840F986D232C11880085DFE0 /* NewApplianceCell.swift */,
 			);
 			path = CollectionVIewCell;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				84E26EB32327A0BD00DEAAC9 /* ModeCell.swift in Sources */,
 				846E9E112327DC5C00A49D7B /* ApplianceItemCell.swift in Sources */,
 				840F9861232B75FE0085DFE0 /* ApplianceUsageCell.swift in Sources */,
+				840F986E232C11880085DFE0 /* NewApplianceCell.swift in Sources */,
 				846E9E1F2327E97D00A49D7B /* ACControlViewController.swift in Sources */,
 				846E9E212327E98A00A49D7B /* LightControlViewController.swift in Sources */,
 				840F985D232B6CCE0085DFE0 /* RoundedViewWithShadow.swift in Sources */,

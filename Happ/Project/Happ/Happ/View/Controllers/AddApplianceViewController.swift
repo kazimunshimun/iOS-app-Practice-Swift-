@@ -12,21 +12,27 @@ import Pulsator
 class AddApplianceViewController: UIViewController {
 
     @IBOutlet weak var pulseView: UIView!
+    @IBOutlet weak var applianceCollectionView: UICollectionView!
+    
     let pulsator = Pulsator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        pulsator.numPulse = 6
+        setupViews()
+    }
+    
+    private func setupViews() {
+        pulsator.numPulse = 5
         pulsator.radius = 600
-        //pulsator.position = self.pulseView.layer.position
-        //pulseView.layer.layoutIfNeeded()
-        //pulsator.position = pulseView.layer.position
-        //pulseView.layer.addSublayer(pulsator)
+        //pulsator.duration = 10
+        pulsator.pulseInterval = 0.2
+        pulsator.backgroundColor = ColorUtils.hexStringToUIColor(hex: "2894FF").cgColor
         pulseView.layer.superlayer?.insertSublayer(pulsator, below: pulseView.layer)
         pulsator.start()
+        
+        applianceCollectionView.delegate = self
+        applianceCollectionView.dataSource = self
     }
     
     override func viewDidLayoutSubviews() {
@@ -48,4 +54,28 @@ class AddApplianceViewController: UIViewController {
     }
     */
 
+}
+
+extension AddApplianceViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newApplianceCell", for: indexPath) as! NewApplianceCell
+        
+        if indexPath.row == 0 || indexPath.row == 3 || indexPath.row == 4 {
+            cell.contentsView.isHidden = false
+        } else {
+            cell.contentsView.isHidden = true
+        }
+ 
+        return cell
+    }
+    
+    /*
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+     applianceDelegate?.applianceSelected(name: items[indexPath.row])
+     }
+     */
 }
