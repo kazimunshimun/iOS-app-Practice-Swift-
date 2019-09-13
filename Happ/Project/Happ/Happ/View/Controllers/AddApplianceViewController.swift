@@ -7,13 +7,32 @@
 //
 
 import UIKit
+import Pulsator
 
 class AddApplianceViewController: UIViewController {
 
+    @IBOutlet weak var pulseView: UIView!
+    let pulsator = Pulsator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        pulsator.numPulse = 6
+        pulsator.radius = 600
+        //pulsator.position = self.pulseView.layer.position
+        //pulseView.layer.layoutIfNeeded()
+        //pulsator.position = pulseView.layer.position
+        //pulseView.layer.addSublayer(pulsator)
+        pulseView.layer.superlayer?.insertSublayer(pulsator, below: pulseView.layer)
+        pulsator.start()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        pulseView.layer.layoutIfNeeded()
+        pulsator.position = pulseView.layer.position
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {

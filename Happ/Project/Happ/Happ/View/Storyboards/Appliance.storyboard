@@ -225,10 +225,12 @@
                                 <color key="textColor" white="0.0" alpha="0.50644924499999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nu7-6w-vHQ">
-                                <rect key="frame" x="87" y="734" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lf8-pR-99z">
+                                <rect key="frame" x="0.0" y="749" width="414" height="293"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="293" id="hUf-1B-csy"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -236,18 +238,24 @@
                             <constraint firstItem="gtD-fi-QvJ" firstAttribute="top" secondItem="W6o-6d-9Rj" secondAttribute="top" constant="20" id="7iG-eb-Fki"/>
                             <constraint firstItem="dWX-EW-3df" firstAttribute="top" secondItem="8zf-fV-gp1" secondAttribute="bottom" constant="8" id="88E-6f-tt5"/>
                             <constraint firstItem="muI-yE-tGx" firstAttribute="top" secondItem="dWX-EW-3df" secondAttribute="bottom" constant="37" id="B23-Kr-h6y"/>
+                            <constraint firstItem="W6o-6d-9Rj" firstAttribute="trailing" secondItem="lf8-pR-99z" secondAttribute="trailing" id="KN0-Pc-LNk"/>
                             <constraint firstItem="dWX-EW-3df" firstAttribute="centerX" secondItem="W6o-6d-9Rj" secondAttribute="centerX" id="KZ4-d0-v0G"/>
                             <constraint firstItem="8zf-fV-gp1" firstAttribute="top" secondItem="W6o-6d-9Rj" secondAttribute="top" constant="72" id="aqc-Ze-GGV"/>
+                            <constraint firstItem="lf8-pR-99z" firstAttribute="leading" secondItem="W6o-6d-9Rj" secondAttribute="leading" id="elQ-Cz-BJO"/>
+                            <constraint firstItem="W6o-6d-9Rj" firstAttribute="bottom" secondItem="lf8-pR-99z" secondAttribute="bottom" constant="-180" id="fIX-vs-7TM"/>
                             <constraint firstItem="8zf-fV-gp1" firstAttribute="centerX" secondItem="W6o-6d-9Rj" secondAttribute="centerX" id="iTw-77-lJu"/>
                             <constraint firstItem="muI-yE-tGx" firstAttribute="centerX" secondItem="W6o-6d-9Rj" secondAttribute="centerX" id="lcz-qx-EW3"/>
                             <constraint firstItem="gtD-fi-QvJ" firstAttribute="leading" secondItem="W6o-6d-9Rj" secondAttribute="leading" constant="20" id="o6U-gI-4ch"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W6o-6d-9Rj"/>
                     </view>
+                    <connections>
+                        <outlet property="pulseView" destination="lf8-pR-99z" id="mPc-oa-ehp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIT-Rv-hH7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975" y="140"/>
+            <point key="canvasLocation" x="973.91304347826099" y="139.95535714285714"/>
         </scene>
     </scenes>
     <resources>
