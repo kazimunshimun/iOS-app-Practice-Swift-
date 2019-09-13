@@ -10,13 +10,18 @@ import UIKit
 
 class UsageViewController: UIViewController {
 
+    @IBOutlet weak var applianceUsageCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        applianceUsageCollectionView.delegate = self
+        applianceUsageCollectionView.dataSource = self
     }
     
-
+    @IBAction func backButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 
@@ -27,4 +32,22 @@ class UsageViewController: UIViewController {
     }
     */
 
+}
+
+extension UsageViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "applianceUsageCell", for: indexPath) as! ApplianceUsageCell
+        //cell.itemTitle.text = items[indexPath.row]
+        return cell
+    }
+    
+    /*
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+     applianceDelegate?.applianceSelected(name: items[indexPath.row])
+     }
+     */
 }

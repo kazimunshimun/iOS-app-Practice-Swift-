@@ -1,0 +1,6 @@
+framework module Pods_Happ {
+  umbrella header "Pods-Happ-umbrella.h"
+
+  export *
+  module * { export * }
+}

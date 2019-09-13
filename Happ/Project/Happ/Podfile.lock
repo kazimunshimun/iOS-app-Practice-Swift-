@@ -1,0 +1,22 @@
+PODS:
+  - Charts (3.3.0):
+    - Charts/Core (= 3.3.0)
+  - Charts/Core (3.3.0)
+  - Pulsator (0.6.0)
+
+DEPENDENCIES:
+  - Charts
+  - Pulsator
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Charts
+    - Pulsator
+
+SPEC CHECKSUMS:
+  Charts: e0dd4cd8f257bccf98407b58183ddca8e8d5b578
+  Pulsator: eb5a9f9be4bdcbd19903984c65deca6aabe50a17
+
+PODFILE CHECKSUM: 3553041b3181057463c653cb077f204a6fade390
+
+COCOAPODS: 1.6.0
