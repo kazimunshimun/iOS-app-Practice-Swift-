@@ -19,20 +19,61 @@
                 <rect key="frame" x="0.0" y="0.0" width="135" height="153"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Et-7j-ajj" customClass="RoundedViewWithShadow" customModule="Happ" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="135" height="153"/>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Et-7j-ajj" customClass="RoundedViewWithShadow" customModule="Happ" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="44" width="135" height="67"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiz-lq-GHw">
-                                <rect key="frame" x="46.5" y="66" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="air-conditioner" translatesAutoresizingMaskIntoConstraints="NO" id="ra5-en-xdN">
+                                <rect key="frame" x="15" y="25" width="44.5" height="19.5"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rt5-IZ-LCI">
+                                <rect key="frame" x="104" y="20" width="6" height="6"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="6" id="5Co-4D-dgn"/>
+                                    <constraint firstAttribute="height" constant="6" id="9OC-74-Xvi"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air Conditioner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBJ-zk-6wB">
+                                <rect key="frame" x="15" y="60.5" width="72" height="15"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On for last 3 Hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXr-3q-Ia1">
+                                <rect key="frame" x="15" y="87.5" width="66" height="11"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6U-Df-tDN">
+                                <rect key="frame" x="4" y="106.5" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="JM6-os-jZu"/>
+                                    <constraint firstAttribute="width" constant="36" id="fV0-q0-IPA"/>
+                                </constraints>
+                                <state key="normal" image="stop_switch"/>
+                                <connections>
+                                    <action selector="stopButtonClicked:" destination="Bo6-4y-M66" eventType="touchUpInside" id="90Q-gl-s4a"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="aiz-lq-GHw" firstAttribute="centerX" secondItem="8Et-7j-ajj" secondAttribute="centerX" id="hFs-vH-CQk"/>
-                            <constraint firstItem="aiz-lq-GHw" firstAttribute="centerY" secondItem="8Et-7j-ajj" secondAttribute="centerY" id="oLM-BX-X56"/>
+                            <constraint firstItem="WXr-3q-Ia1" firstAttribute="top" secondItem="pBJ-zk-6wB" secondAttribute="bottom" constant="12" id="3CZ-x9-LTg"/>
+                            <constraint firstAttribute="trailing" secondItem="rt5-IZ-LCI" secondAttribute="trailing" constant="25" id="3hq-gv-erH"/>
+                            <constraint firstItem="pBJ-zk-6wB" firstAttribute="top" secondItem="ra5-en-xdN" secondAttribute="bottom" constant="16" id="Div-2D-vPy"/>
+                            <constraint firstItem="ra5-en-xdN" firstAttribute="top" secondItem="8Et-7j-ajj" secondAttribute="top" constant="25" id="GFQ-qr-D8t"/>
+                            <constraint firstItem="ra5-en-xdN" firstAttribute="leading" secondItem="8Et-7j-ajj" secondAttribute="leading" constant="15" id="IrL-Cy-yf9"/>
+                            <constraint firstItem="rt5-IZ-LCI" firstAttribute="top" secondItem="8Et-7j-ajj" secondAttribute="top" constant="20" id="NcS-dT-mWa"/>
+                            <constraint firstItem="pBJ-zk-6wB" firstAttribute="leading" secondItem="ra5-en-xdN" secondAttribute="leading" id="diX-Ex-mT7"/>
+                            <constraint firstItem="N6U-Df-tDN" firstAttribute="leading" secondItem="8Et-7j-ajj" secondAttribute="leading" constant="4" id="pcO-15-MvG"/>
+                            <constraint firstItem="WXr-3q-Ia1" firstAttribute="leading" secondItem="pBJ-zk-6wB" secondAttribute="leading" id="vZI-91-wpi"/>
+                            <constraint firstItem="N6U-Df-tDN" firstAttribute="top" secondItem="WXr-3q-Ia1" secondAttribute="bottom" constant="8" id="z0i-LU-JlV"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -47,17 +88,24 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="JbF-wG-jBU" firstAttribute="top" secondItem="8Et-7j-ajj" secondAttribute="top" constant="44" id="Ddr-Y6-mhC"/>
+                <constraint firstItem="JbF-wG-jBU" firstAttribute="top" secondItem="8Et-7j-ajj" secondAttribute="top" id="Ddr-Y6-mhC"/>
                 <constraint firstItem="JbF-wG-jBU" firstAttribute="trailing" secondItem="8Et-7j-ajj" secondAttribute="trailing" id="FC0-SO-zUa"/>
-                <constraint firstItem="8Et-7j-ajj" firstAttribute="bottom" secondItem="JbF-wG-jBU" secondAttribute="bottom" constant="34" id="LLd-gY-byz"/>
+                <constraint firstItem="8Et-7j-ajj" firstAttribute="bottom" secondItem="JbF-wG-jBU" secondAttribute="bottom" constant="-8" id="LLd-gY-byz"/>
                 <constraint firstItem="8Et-7j-ajj" firstAttribute="leading" secondItem="JbF-wG-jBU" secondAttribute="leading" id="w6D-U2-yv1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="JbF-wG-jBU"/>
             <size key="customSize" width="101" height="93"/>
             <connections>
-                <outlet property="itemTitle" destination="aiz-lq-GHw" id="pQh-Kg-ybx"/>
+                <outlet property="isOnView" destination="rt5-IZ-LCI" id="AvE-Uw-cKw"/>
+                <outlet property="itemImageView" destination="ra5-en-xdN" id="NLy-i8-xB8"/>
+                <outlet property="itemTitle" destination="pBJ-zk-6wB" id="66q-GU-bfm"/>
+                <outlet property="timeLabel" destination="WXr-3q-Ia1" id="I1g-J1-b28"/>
             </connections>
             <point key="canvasLocation" x="84.782608695652186" y="59.933035714285708"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="air-conditioner" width="44.5" height="19.5"/>
+        <image name="stop_switch" width="14" height="16"/>
+    </resources>
 </document>

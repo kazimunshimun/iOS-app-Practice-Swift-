@@ -10,5 +10,13 @@ import UIKit
 
 class ApplianceItemCell: UICollectionViewCell {
     
+    @IBOutlet weak var isOnView: UIView!
+    @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var itemTitle: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    @IBAction func stopButtonClicked(_ sender: Any) {
+        
+    }
+    
 }
