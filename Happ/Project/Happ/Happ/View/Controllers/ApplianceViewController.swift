@@ -10,13 +10,28 @@ import UIKit
 
 class ApplianceViewController: UIViewController {
 
+    @IBOutlet weak var roomCollectionView: UICollectionView!
+    @IBOutlet weak var applianceCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupViews()
     }
     
-
+    private func setupViews() {
+        roomCollectionView.delegate = self
+        roomCollectionView.dataSource = self
+        
+        applianceCollectionView.register(UINib(nibName: "ApplianceItemCell", bundle: nil), forCellWithReuseIdentifier: "itemCell")
+        applianceCollectionView.delegate = self
+        applianceCollectionView.dataSource = self
+        
+    }
+    
+    @IBAction func backButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 
@@ -27,4 +42,34 @@ class ApplianceViewController: UIViewController {
     }
     */
 
+}
+
+extension ApplianceViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == self.roomCollectionView {
+            return 5
+        } else {
+            return 6
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == self.roomCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "roomCell", for: indexPath) as! RoomCell
+            //cell.itemTitle.text = items[indexPath.row]
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as! ApplianceItemCell
+            //cell.itemTitle.text = items[indexPath.row]
+            //cell.nameLabel.sizeToFit()
+            return cell
+        }
+    }
+    
+    /*
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+     applianceDelegate?.applianceSelected(name: items[indexPath.row])
+     }
+     */
 }

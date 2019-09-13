@@ -24,6 +24,7 @@ class ApplianceCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        applianceCollectionView.register(UINib(nibName: "ApplianceItemCell", bundle: nil), forCellWithReuseIdentifier: "itemCell")
         applianceCollectionView.dataSource = self
         applianceCollectionView.delegate = self
     }
