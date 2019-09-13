@@ -11,12 +11,18 @@ import UIKit
 class UsageViewController: UIViewController {
 
     @IBOutlet weak var applianceUsageCollectionView: UICollectionView!
+    @IBOutlet weak var todaysUsageView: CircularProgressBar!
+    @IBOutlet weak var overallUsageView: CircularProgressBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         applianceUsageCollectionView.delegate = self
         applianceUsageCollectionView.dataSource = self
+        
+        todaysUsageView.setProgress(to: 0.26, withAnimation: true)
+        overallUsageView.setProgress(to: 0.467, withAnimation: true)
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
