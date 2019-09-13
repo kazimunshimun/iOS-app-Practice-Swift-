@@ -22,6 +22,41 @@ class CircularProgressBar: UIView {
     
     
     //MARK: Public
+    /// The minimum value for the slider
+    ///
+    /// - Note: If you set this to above `maximum` or `value`, those values will be changed to match
+    @IBInspectable open var minimum: Float = 0 {
+        didSet {
+            if maximum < minimum { maximum = minimum }
+            if value < minimum { value = minimum }
+            //renderer.setValue(value)
+            //updateAccessibility()
+        }
+    }
+    
+    /// The maximum value for the slider
+    ///
+    /// - Note: If you set this to below `minimum` or `value`, those values will be changed to match
+    @IBInspectable open var maximum: Float = 1 {
+        didSet {
+            if minimum > maximum { minimum = maximum }
+            if value > maximum { value = maximum }
+            //renderer.setValue(value)
+            //updateAccessibility()
+        }
+    }
+    
+    /// The current (or starting) value for the slider
+    @IBInspectable open private(set) var value: Float = 0.5 {
+        didSet(oldValue) {
+            if oldValue != value {
+                if value < minimum { value = minimum }
+                if value > maximum { value = maximum }
+                //updateAccessibility()
+                setProgress(to: Double(value), withAnimation: true)
+            }
+        }
+    }
     
     @IBInspectable public var lineWidth: CGFloat = 50 {
         didSet{
@@ -68,9 +103,12 @@ class CircularProgressBar: UIView {
         
         var progress: Double {
             get {
+                return Double((value - minimum) / (maximum - minimum))
+                /*
                 if progressConstant > 1 { return 1 }
                 else if progressConstant < 0 { return 0 }
                 else { return progressConstant }
+ */
             }
         }
         
@@ -93,8 +131,9 @@ class CircularProgressBar: UIView {
                 timer.invalidate()
             } else {
                 currentTime += 0.05
-                let percent = currentTime/2 * 100
-                self.progressLabel.text = "\(Int(progress * percent))"
+                let percent = currentTime/2 //* 100
+                let roundedProgress = Int(round(progress * percent * Double(self.maximum - self.minimum)))
+                self.progressLabel.text = "\(roundedProgress)"
                 //self.setForegroundLayerColorForSafePercent()
                 self.foregroundLayer.strokeColor = self.progressBackground.cgColor
                 self.configLabel()

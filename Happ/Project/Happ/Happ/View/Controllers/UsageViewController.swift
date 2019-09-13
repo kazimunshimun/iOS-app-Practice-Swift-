@@ -21,8 +21,11 @@ class UsageViewController: UIViewController {
         applianceUsageCollectionView.delegate = self
         applianceUsageCollectionView.dataSource = self
         
-        todaysUsageView.setProgress(to: 0.26, withAnimation: true)
-        overallUsageView.setProgress(to: 0.467, withAnimation: true)
+        todaysUsageView.setProgress(to: 26, withAnimation: true)
+        
+        //overallUsageView.safePercent = 500
+        overallUsageView.maximum = 600
+        overallUsageView.setProgress(to: 467, withAnimation: true)
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
