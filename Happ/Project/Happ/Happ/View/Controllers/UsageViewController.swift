@@ -10,14 +10,26 @@ import UIKit
 
 class UsageViewController: UIViewController {
 
-    @IBOutlet weak var applianceUsageCollectionView: UICollectionView!
     @IBOutlet weak var todaysUsageView: CircularProgressBar!
     @IBOutlet weak var overallUsageView: CircularProgressBar!
+    
+    @IBOutlet weak var graphCollectionVIew: UICollectionView!
+    @IBOutlet weak var legendCollectionView: UICollectionView!
+    @IBOutlet weak var applianceUsageCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupViews()
+    }
+    
+    private func setupViews() {
+        graphCollectionVIew.delegate = self
+        graphCollectionVIew.dataSource = self
+        
+        legendCollectionView.delegate = self
+        legendCollectionView.dataSource = self
+        
         applianceUsageCollectionView.delegate = self
         applianceUsageCollectionView.dataSource = self
         
@@ -45,13 +57,32 @@ class UsageViewController: UIViewController {
 
 extension UsageViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        if collectionView == self.applianceUsageCollectionView {
+            return 5
+        } else if collectionView == self.graphCollectionVIew {
+            return 6
+        } else {
+            return 6
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "applianceUsageCell", for: indexPath) as! ApplianceUsageCell
-        //cell.itemTitle.text = items[indexPath.row]
-        return cell
+        if collectionView == self.applianceUsageCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "applianceUsageCell", for: indexPath) as! ApplianceUsageCell
+            //cell.itemTitle.text = items[indexPath.row]
+            return cell
+        } else if collectionView == self.graphCollectionVIew {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "usageBarCell", for: indexPath) as! UsageBarCell
+            //cell.itemTitle.text = items[indexPath.row]
+            cell.barHeight.constant = CGFloat(indexPath.row + 1) * CGFloat(9.0)
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "usageLegendCell", for: indexPath) as! UsageLegendCell
+            //cell.itemTitle.text = items[indexPath.row]
+            cell.nameLabel.sizeToFit()
+            return cell
+        }
     }
     
     /*
