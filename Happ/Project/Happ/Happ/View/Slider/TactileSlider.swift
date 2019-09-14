@@ -139,7 +139,7 @@ import UIKit
         }
     }
     
-    public let renderer = TactileSliderLayerRenderer()
+    private let renderer = TactileSliderLayerRenderer()
     
     // gross workaround for not being able to use @available on stored properties, from https://www.klundberg.com/blog/Swift-2-and-@available-properties/
     private var _minMaxFeedbackGenerator: AnyObject?
@@ -222,7 +222,9 @@ import UIKit
         renderer.setValue(value, animated: animated)
     }
     
-    
+    open func setThumbOpacity(opacity: Float) {
+        renderer.thumbLayer.opacity = opacity
+    }
     // MARK: - Accessibility
     
     override open func accessibilityDecrement() {

@@ -43,17 +43,20 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             //mode
             let cell = tableView.dequeueReusableCell(withIdentifier: "modeCell", for: indexPath) as! ModeCell
             cell.selectedBackgroundView = backgroundView
+            cell.backgroundColor = .clear
             return cell
         } else if (indexPath.row == 1) {
             //appliance
             let cell = tableView.dequeueReusableCell(withIdentifier: "applianceCell", for: indexPath) as! ApplianceCell
             cell.applianceDelegate = self
             cell.selectedBackgroundView = backgroundView
+            cell.backgroundColor = .clear
             return cell
         } else {
             //bill
             let cell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath) as! BillCell
             cell.selectedBackgroundView = backgroundView
+            cell.backgroundColor = .clear
             return cell
         }
     }

@@ -77,7 +77,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-Va-Cm7">
-                                                    <rect key="frame" x="20" y="37" width="334" height="154.5"/>
+                                                    <rect key="frame" x="20" y="37" width="354" height="154.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rMg-Fe-ehj">
                                                         <size key="itemSize" width="135" height="148.5"/>
@@ -127,7 +127,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="q8a-Va-Cm7" secondAttribute="bottom" constant="-0.5" id="6Uy-v8-8YG"/>
                                                 <constraint firstItem="FbX-qR-vMx" firstAttribute="top" secondItem="gWH-K3-3W7" secondAttribute="top" id="9qS-4D-KaC"/>
                                                 <constraint firstItem="q8a-Va-Cm7" firstAttribute="leading" secondItem="gWH-K3-3W7" secondAttribute="leading" constant="20" id="Ofd-Xf-LyK"/>
-                                                <constraint firstAttribute="trailing" secondItem="q8a-Va-Cm7" secondAttribute="trailing" constant="20" id="RQP-3j-Qi3"/>
+                                                <constraint firstAttribute="trailing" secondItem="q8a-Va-Cm7" secondAttribute="trailing" id="RQP-3j-Qi3"/>
                                                 <constraint firstItem="q8a-Va-Cm7" firstAttribute="top" secondItem="fmm-8a-30j" secondAttribute="bottom" constant="18" id="fgT-h3-cJa"/>
                                                 <constraint firstItem="fmm-8a-30j" firstAttribute="leading" secondItem="gWH-K3-3W7" secondAttribute="leading" constant="20" id="nvh-iD-xB7"/>
                                                 <constraint firstItem="fmm-8a-30j" firstAttribute="top" secondItem="gWH-K3-3W7" secondAttribute="top" id="sE7-Tu-nXe"/>
