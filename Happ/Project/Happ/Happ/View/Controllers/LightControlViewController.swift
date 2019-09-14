@@ -32,6 +32,7 @@ class LightControlViewController: UIViewController {
     
     func setBrightnessValue(value: Int) {
         brightnessLabel.text = "\(value)%"
+        brightnessSlider.renderer.thumbLayer.opacity = Float(Double(value)/100.0)
         valueView.frame.origin.y = brightnessSlider.frame.height - brightnessSlider.positionForValue(Float(value)) - 16
     }
 

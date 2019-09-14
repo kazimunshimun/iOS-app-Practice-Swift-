@@ -139,7 +139,7 @@ import UIKit
         }
     }
     
-    private let renderer = TactileSliderLayerRenderer()
+    public let renderer = TactileSliderLayerRenderer()
     
     // gross workaround for not being able to use @available on stored properties, from https://www.klundberg.com/blog/Swift-2-and-@available-properties/
     private var _minMaxFeedbackGenerator: AnyObject?

@@ -33,14 +33,14 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Devices" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uev-xY-6vp">
-                                        <rect key="frame" x="44" y="0.0" width="127" height="29"/>
+                                        <rect key="frame" x="52" y="0.0" width="127" height="29"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devices which linked with Happ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um0-b9-meF">
-                                        <rect key="frame" x="44" y="37" width="236" height="20"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                        <rect key="frame" x="51.999999999999986" y="37" width="205.66666666666663" height="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="0.0" alpha="0.50644924499999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -76,7 +76,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="SEh-JG-wpU" firstAttribute="centerY" secondItem="TRa-Lg-5bh" secondAttribute="centerY" id="EHN-VT-Tix"/>
-                                    <constraint firstItem="Uev-xY-6vp" firstAttribute="leading" secondItem="T6f-Af-bvv" secondAttribute="trailing" id="PLp-T5-4fU"/>
+                                    <constraint firstItem="Uev-xY-6vp" firstAttribute="leading" secondItem="T6f-Af-bvv" secondAttribute="trailing" constant="8" id="PLp-T5-4fU"/>
                                     <constraint firstAttribute="trailing" secondItem="SEh-JG-wpU" secondAttribute="trailing" id="az3-7R-bLo"/>
                                     <constraint firstItem="um0-b9-meF" firstAttribute="leading" secondItem="Uev-xY-6vp" secondAttribute="leading" id="daq-2F-quo"/>
                                     <constraint firstItem="T6f-Af-bvv" firstAttribute="top" secondItem="TRa-Lg-5bh" secondAttribute="top" id="nWM-xd-fdS"/>

@@ -514,17 +514,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFt-p0-fLk">
-                                <rect key="frame" x="187" y="442.5" width="40" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFk-KJ-ehR">
+                                <rect key="frame" x="20" y="69" width="374" height="57"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VxW-Qe-IW9">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2lT-Ur-syF"/>
+                                            <constraint firstAttribute="width" constant="44" id="R30-XX-cQk"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonClicked:" destination="WQ3-r6-3T0" eventType="touchUpInside" id="AZt-nm-UYS"/>
+                                            <action selector="backButtonClicked:" destination="tNc-jk-PI1" eventType="touchUpInside" id="Tya-q5-dVI"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garden Lights Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfv-b2-lZZ">
+                                        <rect key="frame" x="52" y="0.0" width="234" height="40"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="wfv-b2-lZZ" firstAttribute="centerY" secondItem="VxW-Qe-IW9" secondAttribute="centerY" id="3cw-m5-yQn"/>
+                                    <constraint firstAttribute="height" constant="57" id="70k-kv-Mly"/>
+                                    <constraint firstItem="VxW-Qe-IW9" firstAttribute="top" secondItem="vFk-KJ-ehR" secondAttribute="top" id="KgB-Jl-bHZ"/>
+                                    <constraint firstItem="wfv-b2-lZZ" firstAttribute="top" secondItem="vFk-KJ-ehR" secondAttribute="top" id="Obe-bP-z2Y"/>
+                                    <constraint firstItem="wfv-b2-lZZ" firstAttribute="leading" secondItem="VxW-Qe-IW9" secondAttribute="trailing" constant="8" id="UUb-YU-IQ6"/>
+                                    <constraint firstItem="VxW-Qe-IW9" firstAttribute="leading" secondItem="vFk-KJ-ehR" secondAttribute="leading" id="bfa-JB-bQ6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BFt-p0-fLk" firstAttribute="centerY" secondItem="ktH-rK-lJS" secondAttribute="centerY" id="Izv-6U-ckq"/>
-                            <constraint firstItem="BFt-p0-fLk" firstAttribute="centerX" secondItem="ktH-rK-lJS" secondAttribute="centerX" id="uBo-Oj-mXT"/>
+                            <constraint firstItem="vFk-KJ-ehR" firstAttribute="top" secondItem="ktH-rK-lJS" secondAttribute="top" constant="25" id="HJe-UQ-fKN"/>
+                            <constraint firstItem="vFk-KJ-ehR" firstAttribute="leading" secondItem="ktH-rK-lJS" secondAttribute="leading" constant="20" id="nq4-Wj-Wdh"/>
+                            <constraint firstItem="ktH-rK-lJS" firstAttribute="trailing" secondItem="vFk-KJ-ehR" secondAttribute="trailing" constant="20" id="wqB-LC-toL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ktH-rK-lJS"/>
                     </view>

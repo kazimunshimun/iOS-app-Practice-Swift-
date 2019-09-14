@@ -42,6 +42,7 @@ class AddApplianceViewController: UIViewController {
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
+        pulsator.stop()
         self.navigationController?.popViewController(animated: true)
     }
     /*

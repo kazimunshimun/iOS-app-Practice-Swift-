@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class TactileSliderLayerRenderer {
+public class TactileSliderLayerRenderer {
     
     weak var tactileSlider: TactileSlider?
     
