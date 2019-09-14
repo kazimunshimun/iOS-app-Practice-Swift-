@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840B11F6232D208E008E78F0 /* CircularTimeChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B11F5232D208E008E78F0 /* CircularTimeChooser.swift */; };
+		840B11FB232D21D0008E78F0 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B11F8232D21CF008E78F0 /* DateExtensions.swift */; };
+		840B11FC232D21D0008E78F0 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B11F9232D21CF008E78F0 /* CoreGraphicsExtensions.swift */; };
+		840B11FD232D21D0008E78F0 /* CoreAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B11FA232D21D0008E78F0 /* CoreAnimation.swift */; };
 		840F985D232B6CCE0085DFE0 /* RoundedViewWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F985C232B6CCE0085DFE0 /* RoundedViewWithShadow.swift */; };
 		840F985F232B6D520085DFE0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F985E232B6D520085DFE0 /* Utils.swift */; };
 		840F9861232B75FE0085DFE0 /* ApplianceUsageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F9860232B75FE0085DFE0 /* ApplianceUsageCell.swift */; };
@@ -46,6 +50,10 @@
 
 /* Begin PBXFileReference section */
 		0A47F074A5C8CAAC277D04A4 /* Pods-Happ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happ.release.xcconfig"; path = "Target Support Files/Pods-Happ/Pods-Happ.release.xcconfig"; sourceTree = "<group>"; };
+		840B11F5232D208E008E78F0 /* CircularTimeChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimeChooser.swift; sourceTree = "<group>"; };
+		840B11F8232D21CF008E78F0 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		840B11F9232D21CF008E78F0 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
+		840B11FA232D21D0008E78F0 /* CoreAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreAnimation.swift; sourceTree = "<group>"; };
 		840F985C232B6CCE0085DFE0 /* RoundedViewWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViewWithShadow.swift; sourceTree = "<group>"; };
 		840F985E232B6D520085DFE0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		840F9860232B75FE0085DFE0 /* ApplianceUsageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceUsageCell.swift; sourceTree = "<group>"; };
@@ -107,6 +115,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		840B11F7232D216A008E78F0 /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				840B11FA232D21D0008E78F0 /* CoreAnimation.swift */,
+				840B11F9232D21CF008E78F0 /* CoreGraphicsExtensions.swift */,
+				840B11F8232D21CF008E78F0 /* DateExtensions.swift */,
+				840B11F5232D208E008E78F0 /* CircularTimeChooser.swift */,
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
 		840F9862232B80270085DFE0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +182,7 @@
 				8437153F232954E4006F458B /* Slider */,
 				840F985C232B6CCE0085DFE0 /* RoundedViewWithShadow.swift */,
 				840F9863232B91420085DFE0 /* CircularProgressBar.swift */,
+				840B11F7232D216A008E78F0 /* Clock */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -380,14 +400,17 @@
 				846E9E1B2327E95100A49D7B /* UsageViewController.swift in Sources */,
 				840F9866232BE2DB0085DFE0 /* UsageBarCell.swift in Sources */,
 				846E9E1D2327E96900A49D7B /* TimerViewController.swift in Sources */,
+				840B11FB232D21D0008E78F0 /* DateExtensions.swift in Sources */,
 				84EBFCC1232CCA5E00A43841 /* WeekSelectionCell.swift in Sources */,
 				843AF6662326BC100095C718 /* Happ.xcdatamodeld in Sources */,
 				846E9E0F2327A38800A49D7B /* ApplianceCell.swift in Sources */,
+				840B11FD232D21D0008E78F0 /* CoreAnimation.swift in Sources */,
 				84E26EB82327A0DC00DEAAC9 /* BillCell.swift in Sources */,
 				8437154323295661006F458B /* TactileSlider.swift in Sources */,
 				8437154123295640006F458B /* TactileSliderLayerRenderer.swift in Sources */,
 				843AF6602326BC100095C718 /* DashboardViewController.swift in Sources */,
 				84390408232ABA23007DCC5A /* HueCell.swift in Sources */,
+				840B11F6232D208E008E78F0 /* CircularTimeChooser.swift in Sources */,
 				840F985F232B6D520085DFE0 /* Utils.swift in Sources */,
 				84E26EB32327A0BD00DEAAC9 /* ModeCell.swift in Sources */,
 				846E9E112327DC5C00A49D7B /* ApplianceItemCell.swift in Sources */,
@@ -398,6 +421,7 @@
 				840F985D232B6CCE0085DFE0 /* RoundedViewWithShadow.swift in Sources */,
 				843AF65E2326BC100095C718 /* AppDelegate.swift in Sources */,
 				840F9868232BE2ED0085DFE0 /* UsageLegendCell.swift in Sources */,
+				840B11FC232D21D0008E78F0 /* CoreGraphicsExtensions.swift in Sources */,
 				840F986C232BF7ED0085DFE0 /* RoomCell.swift in Sources */,
 				840F9864232B91420085DFE0 /* CircularProgressBar.swift in Sources */,
 			);
