@@ -64,13 +64,13 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             //mode
-            return 216.0
+            return 246.0
         } else if (indexPath.row == 1) {
             //appliance
             return 191.0
         } else {
             //bill
-            return 186.0
+            return 206.0
         }
     }
     
