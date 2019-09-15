@@ -44,6 +44,11 @@ open class CircularTimeChooser : UIControl{
     let topTailLayer = CAShapeLayer()
     let numeralsLayer = CALayer()
     let titleTextLayer = CATextLayer()
+    let startTimeTextLayer = CATextLayer()
+    let onTimeTextLayer = CATextLayer()
+    let offTimeTextLayer = CATextLayer()
+    let endTimeTextLayer = CATextLayer()
+    let dividerLayer = CAShapeLayer()
     let overallPathLayer = CALayer()
     let repLayer:CAReplicatorLayer = {
         var r = CAReplicatorLayer()
@@ -243,6 +248,8 @@ open class CircularTimeChooser : UIControl{
         //updateWatchFaceTicks()
         updateWatchFaceNumerals()
         updateWatchFaceTitle()
+        updateStartEndTimeTitle()
+        updateOnOfLabel()
         CATransaction.commit()
         
     }
@@ -368,7 +375,7 @@ open class CircularTimeChooser : UIControl{
             if i % 3 == 0 {
                 let l = CATextLayer()
                 l.bounds.size = CGSize(width: i > 9 ? 32 : 32, height: 15)
-                l.fontSize = f.pointSize
+                l.fontSize = 9.0
                 l.alignmentMode = CATextLayerAlignmentMode.center
                 l.contentsScale = UIScreen.main.scale
                 //            l.foregroundColor
@@ -382,6 +389,7 @@ open class CircularTimeChooser : UIControl{
             }
         }
     }
+    
     func updateWatchFaceTitle(){
         let f = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.title1)
         let cgFont = CTFontCreateWithName((f.fontName as CFString?)!, f.pointSize/2,nil)
@@ -389,7 +397,7 @@ open class CircularTimeChooser : UIControl{
         titleTextLayer.bounds.size = CGSize( width: titleTextInset.size.width, height: 50)
         titleTextLayer.fontSize = f.pointSize
         titleTextLayer.alignmentMode = CATextLayerAlignmentMode.center
-        titleTextLayer.foregroundColor = disabledFormattedColor(centerTextColor ?? tintColor).cgColor
+        titleTextLayer.foregroundColor = disabledFormattedColor(centerTextColor ?? UIColor.black).cgColor
         titleTextLayer.contentsScale = UIScreen.main.scale
         titleTextLayer.font = cgFont
         //var computedTailAngle = tailAngle //+ (headAngle > tailAngle ? twoPi : 0)
@@ -407,6 +415,76 @@ open class CircularTimeChooser : UIControl{
         titleTextLayer.position = CGPoint(x: gradientLayer.center.x, y: gradientLayer.center.y + 30) //gradientLayer.center
         
     }
+    
+    func updateStartEndTimeTitle(){
+        let f = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.callout)
+        let cgFont = CTFontCreateWithName((f.fontName as CFString?)!, f.pointSize/2,nil)
+        
+        startTimeTextLayer.bounds.size = CGSize( width: titleTextInset.size.width, height: 50)
+        startTimeTextLayer.fontSize = 14.0
+        startTimeTextLayer.alignmentMode = CATextLayerAlignmentMode.center
+        startTimeTextLayer.foregroundColor = disabledFormattedColor(numeralsColor ?? tintColor).cgColor
+        startTimeTextLayer.contentsScale = UIScreen.main.scale
+        startTimeTextLayer.font = cgFont
+        
+        let startHour = calendar.component(.hour, from: startDate)
+        let startMinutes = calendar.component(.minute, from: startDate)
+        
+        
+        let startHourString = String(format: "%02d", startHour)
+        let startMinuteString = String(format: "%02d", startMinutes)
+        startTimeTextLayer.string = "\(startHourString):\(startMinuteString)"
+        
+        startTimeTextLayer.position = CGPoint(x: gradientLayer.center.x - 40, y: gradientLayer.center.y - 30)
+        
+        endTimeTextLayer.bounds.size = CGSize( width: titleTextInset.size.width, height: 50)
+        endTimeTextLayer.fontSize = 14.0
+        endTimeTextLayer.alignmentMode = CATextLayerAlignmentMode.center
+        endTimeTextLayer.foregroundColor = disabledFormattedColor(centerTextColor ?? UIColor.black).cgColor
+        endTimeTextLayer.contentsScale = UIScreen.main.scale
+        endTimeTextLayer.font = cgFont
+        
+        let endHour = calendar.component(.hour, from: endDate)
+        let endMinutes = calendar.component(.minute, from: endDate)
+        
+        
+        let endHourString = String(format: "%02d", endHour)
+        let endMinuteString = String(format: "%02d", endMinutes)
+        endTimeTextLayer.string = "\(endHourString):\(endMinuteString)"
+        
+        endTimeTextLayer.position = CGPoint(x: gradientLayer.center.x + 40, y: gradientLayer.center.y - 30)
+    }
+    
+    func updateOnOfLabel() {
+        let f = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.footnote)
+        let cgFont = CTFontCreateWithName((f.fontName as CFString?)!, f.pointSize/2,nil)
+        onTimeTextLayer.bounds.size = CGSize(width: 40, height: 15)
+        onTimeTextLayer.fontSize = 9.0
+        onTimeTextLayer.foregroundColor =  disabledFormattedColor(UIColor.lightGray).cgColor
+        onTimeTextLayer.alignmentMode = CATextLayerAlignmentMode.center
+        onTimeTextLayer.contentsScale = UIScreen.main.scale
+        onTimeTextLayer.font = cgFont
+        onTimeTextLayer.string = "On Time"
+        onTimeTextLayer.position = CGPoint(x: gradientLayer.center.x - 40, y: gradientLayer.center.y - 28)
+        
+        offTimeTextLayer.bounds.size = CGSize(width: 40, height: 15)
+        offTimeTextLayer.fontSize = 9.0
+        offTimeTextLayer.foregroundColor =  disabledFormattedColor(UIColor.lightGray).cgColor
+        offTimeTextLayer.alignmentMode = CATextLayerAlignmentMode.center
+        offTimeTextLayer.contentsScale = UIScreen.main.scale
+        offTimeTextLayer.font = cgFont
+        offTimeTextLayer.string = "Off Time"
+        offTimeTextLayer.position = CGPoint(x: gradientLayer.center.x + 40, y: gradientLayer.center.y - 28)
+        
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 0,y: -30))
+        path.addLine(to: CGPoint(x: 0,y: 12))
+        dividerLayer.path  = path.cgPath
+        dividerLayer.bounds.size = CGSize(width: 0.5, height: 16)
+        dividerLayer.strokeColor = UIColor.lightGray.cgColor
+        dividerLayer.position = CGPoint(x: gradientLayer.center.x, y: gradientLayer.center.y - 20)
+    }
+    
     func tick() -> CAShapeLayer{
         let tick = CAShapeLayer()
         let path = UIBezierPath()
@@ -447,6 +525,11 @@ open class CircularTimeChooser : UIControl{
         overallPathLayer.addSublayer(headLayer)
         overallPathLayer.addSublayer(tailLayer)
         overallPathLayer.addSublayer(titleTextLayer)
+        overallPathLayer.addSublayer(startTimeTextLayer)
+        overallPathLayer.addSublayer(endTimeTextLayer)
+        overallPathLayer.addSublayer(onTimeTextLayer)
+        overallPathLayer.addSublayer(offTimeTextLayer)
+        overallPathLayer.addSublayer(dividerLayer)
         layer.addSublayer(overallPathLayer)
         layer.addSublayer(gradientLayer)
         gradientLayer.addSublayer(topHeadLayer)
