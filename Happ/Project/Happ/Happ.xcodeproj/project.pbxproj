@@ -33,12 +33,14 @@
 		843E9E92233634A7001E0365 /* Appliance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E9E88233634A7001E0365 /* Appliance+CoreDataProperties.swift */; };
 		843E9E93233634A7001E0365 /* Hue+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E9E89233634A7001E0365 /* Hue+CoreDataClass.swift */; };
 		843E9E94233634A7001E0365 /* Hue+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E9E8A233634A7001E0365 /* Hue+CoreDataProperties.swift */; };
-		843E9E95233634A7001E0365 /* Timer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E9E8B233634A7001E0365 /* Timer+CoreDataClass.swift */; };
-		843E9E96233634A7001E0365 /* Timer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E9E8C233634A7001E0365 /* Timer+CoreDataProperties.swift */; };
 		843E9E97233634A7001E0365 /* Settings+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E9E8D233634A7001E0365 /* Settings+CoreDataClass.swift */; };
 		843E9E98233634A7001E0365 /* Settings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E9E8E233634A7001E0365 /* Settings+CoreDataProperties.swift */; };
 		843E9E99233634A7001E0365 /* Usage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E9E8F233634A7001E0365 /* Usage+CoreDataClass.swift */; };
 		843E9E9A233634A7001E0365 /* Usage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E9E90233634A7001E0365 /* Usage+CoreDataProperties.swift */; };
+		843E9E9C23363FBD001E0365 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E9E9B23363FBD001E0365 /* DataManager.swift */; };
+		843E9EA02336430E001E0365 /* LightTimer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E9E9E2336430E001E0365 /* LightTimer+CoreDataClass.swift */; };
+		843E9EA12336430E001E0365 /* LightTimer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E9E9F2336430E001E0365 /* LightTimer+CoreDataProperties.swift */; };
+		843E9EA32336776B001E0365 /* InputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E9EA22336776B001E0365 /* InputData.swift */; };
 		846E9E0F2327A38800A49D7B /* ApplianceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E9E0E2327A38800A49D7B /* ApplianceCell.swift */; };
 		846E9E112327DC5C00A49D7B /* ApplianceItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E9E102327DC5C00A49D7B /* ApplianceItemCell.swift */; };
 		846E9E142327E42100A49D7B /* Controls.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E9E132327E42100A49D7B /* Controls.storyboard */; };
@@ -88,12 +90,14 @@
 		843E9E88233634A7001E0365 /* Appliance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Appliance+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		843E9E89233634A7001E0365 /* Hue+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hue+CoreDataClass.swift"; sourceTree = "<group>"; };
 		843E9E8A233634A7001E0365 /* Hue+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hue+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		843E9E8B233634A7001E0365 /* Timer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+CoreDataClass.swift"; sourceTree = "<group>"; };
-		843E9E8C233634A7001E0365 /* Timer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		843E9E8D233634A7001E0365 /* Settings+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+CoreDataClass.swift"; sourceTree = "<group>"; };
 		843E9E8E233634A7001E0365 /* Settings+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		843E9E8F233634A7001E0365 /* Usage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		843E9E90233634A7001E0365 /* Usage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		843E9E9B23363FBD001E0365 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		843E9E9E2336430E001E0365 /* LightTimer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightTimer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		843E9E9F2336430E001E0365 /* LightTimer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LightTimer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		843E9EA22336776B001E0365 /* InputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputData.swift; sourceTree = "<group>"; };
 		846E9E0E2327A38800A49D7B /* ApplianceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceCell.swift; sourceTree = "<group>"; };
 		846E9E102327DC5C00A49D7B /* ApplianceItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceItemCell.swift; sourceTree = "<group>"; };
 		846E9E132327E42100A49D7B /* Controls.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Controls.storyboard; sourceTree = "<group>"; };
@@ -184,8 +188,9 @@
 		843AF65C2326BC100095C718 /* Happ */ = {
 			isa = PBXGroup;
 			children = (
-				843E9E8623363487001E0365 /* Model */,
 				843AF6732326BDE00095C718 /* Application */,
+				843E9E9D23363FC3001E0365 /* Data */,
+				843E9E8623363487001E0365 /* Model */,
 				843AF6722326BDD50095C718 /* View */,
 				843AF6742326BDEE0095C718 /* Resources */,
 				840F9862232B80270085DFE0 /* Utils */,
@@ -229,18 +234,27 @@
 		843E9E8623363487001E0365 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				843E9E9E2336430E001E0365 /* LightTimer+CoreDataClass.swift */,
+				843E9E9F2336430E001E0365 /* LightTimer+CoreDataProperties.swift */,
 				843E9E87233634A7001E0365 /* Appliance+CoreDataClass.swift */,
 				843E9E88233634A7001E0365 /* Appliance+CoreDataProperties.swift */,
 				843E9E89233634A7001E0365 /* Hue+CoreDataClass.swift */,
 				843E9E8A233634A7001E0365 /* Hue+CoreDataProperties.swift */,
-				843E9E8B233634A7001E0365 /* Timer+CoreDataClass.swift */,
-				843E9E8C233634A7001E0365 /* Timer+CoreDataProperties.swift */,
 				843E9E8D233634A7001E0365 /* Settings+CoreDataClass.swift */,
 				843E9E8E233634A7001E0365 /* Settings+CoreDataProperties.swift */,
 				843E9E8F233634A7001E0365 /* Usage+CoreDataClass.swift */,
 				843E9E90233634A7001E0365 /* Usage+CoreDataProperties.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		843E9E9D23363FC3001E0365 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				843E9E9B23363FBD001E0365 /* DataManager.swift */,
+				843E9EA22336776B001E0365 /* InputData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		84467F0A2327A051005C04CC /* Storyboards */ = {
@@ -433,15 +447,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843E9EA02336430E001E0365 /* LightTimer+CoreDataClass.swift in Sources */,
 				846E9E252327E9A600A49D7B /* AddApplianceViewController.swift in Sources */,
+				843E9E9C23363FBD001E0365 /* DataManager.swift in Sources */,
 				843E9E91233634A7001E0365 /* Appliance+CoreDataClass.swift in Sources */,
 				846E9E232327E99A00A49D7B /* ApplianceViewController.swift in Sources */,
 				843E9E92233634A7001E0365 /* Appliance+CoreDataProperties.swift in Sources */,
-				843E9E96233634A7001E0365 /* Timer+CoreDataProperties.swift in Sources */,
 				846E9E1B2327E95100A49D7B /* UsageViewController.swift in Sources */,
 				840F9866232BE2DB0085DFE0 /* UsageBarCell.swift in Sources */,
 				846E9E1D2327E96900A49D7B /* TimerViewController.swift in Sources */,
 				843E9E97233634A7001E0365 /* Settings+CoreDataClass.swift in Sources */,
+				843E9EA12336430E001E0365 /* LightTimer+CoreDataProperties.swift in Sources */,
 				840B11FB232D21D0008E78F0 /* DateExtensions.swift in Sources */,
 				84EBFCC1232CCA5E00A43841 /* WeekSelectionCell.swift in Sources */,
 				843AF6662326BC100095C718 /* Happ.xcdatamodeld in Sources */,
@@ -451,7 +467,6 @@
 				8437154323295661006F458B /* TactileSlider.swift in Sources */,
 				8437154123295640006F458B /* TactileSliderLayerRenderer.swift in Sources */,
 				843E9E98233634A7001E0365 /* Settings+CoreDataProperties.swift in Sources */,
-				843E9E95233634A7001E0365 /* Timer+CoreDataClass.swift in Sources */,
 				843E9E99233634A7001E0365 /* Usage+CoreDataClass.swift in Sources */,
 				843AF6602326BC100095C718 /* DashboardViewController.swift in Sources */,
 				84390408232ABA23007DCC5A /* HueCell.swift in Sources */,
@@ -466,6 +481,7 @@
 				843E9E93233634A7001E0365 /* Hue+CoreDataClass.swift in Sources */,
 				846E9E212327E98A00A49D7B /* LightControlViewController.swift in Sources */,
 				840F985D232B6CCE0085DFE0 /* RoundedViewWithShadow.swift in Sources */,
+				843E9EA32336776B001E0365 /* InputData.swift in Sources */,
 				843AF65E2326BC100095C718 /* AppDelegate.swift in Sources */,
 				840F9868232BE2ED0085DFE0 /* UsageLegendCell.swift in Sources */,
 				840B11FC232D21D0008E78F0 /* CoreGraphicsExtensions.swift in Sources */,

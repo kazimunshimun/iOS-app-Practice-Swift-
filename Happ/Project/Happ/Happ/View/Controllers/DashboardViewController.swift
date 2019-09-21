@@ -16,10 +16,13 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var dashboardTableView: UITableView!
     
+    var applianceData: [Appliance]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setuViews()
+        getDashboardData()
     }
 
     private func setuViews() {
@@ -28,6 +31,24 @@ class DashboardViewController: UIViewController {
         //register cell
         dashboardTableView.register(UINib(nibName: "ModeCell", bundle: nil), forCellReuseIdentifier: "modeCell")
         dashboardTableView.register(UINib(nibName: "BillCell", bundle: nil), forCellReuseIdentifier: "billCell")
+    }
+    
+    private func getDashboardData() {
+        let dataManager: DataManager = DataManager()
+        do {
+            applianceData = try dataManager.fetchAppliances()
+            print("appliance count: \(applianceData!.count)")
+            if applianceData!.count == 0 {
+                //need to insert data for first time
+                let inputData = InputData()
+                inputData.insertApplianceData()
+                applianceData = try dataManager.fetchAppliances()
+                print("appliance count: \(applianceData!.count)")
+            }
+        } catch {
+            print("data fetch error")
+        }
+        
     }
 }
 

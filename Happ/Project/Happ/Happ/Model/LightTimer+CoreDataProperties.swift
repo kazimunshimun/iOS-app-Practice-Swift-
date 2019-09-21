@@ -1,5 +1,5 @@
 //
-//  Timer+CoreDataProperties.swift
+//  LightTimer+CoreDataProperties.swift
 //  Happ
 //
 //  Created by Anik on 21/9/19.
@@ -11,10 +11,10 @@ import Foundation
 import CoreData
 
 
-extension Timer {
+extension LightTimer {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Timer> {
-        return NSFetchRequest<Timer>(entityName: "Timer")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<LightTimer> {
+        return NSFetchRequest<LightTimer>(entityName: "LightTimer")
     }
 
     @NSManaged public var id: UUID?
@@ -22,12 +22,13 @@ extension Timer {
     @NSManaged public var isRepeat: Bool
     @NSManaged public var onTime: String?
     @NSManaged public var offTime: String?
+    @NSManaged public var repeatDay: Int16
     @NSManaged public var appliance: NSSet?
 
 }
 
 // MARK: Generated accessors for appliance
-extension Timer {
+extension LightTimer {
 
     @objc(addApplianceObject:)
     @NSManaged public func addToAppliance(_ value: Appliance)

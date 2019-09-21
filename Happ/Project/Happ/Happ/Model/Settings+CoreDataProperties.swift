@@ -21,23 +21,23 @@ extension Settings {
     @NSManaged public var temparature: Float
     @NSManaged public var isOn: Bool
     @NSManaged public var isPowerSaverOn: Bool
-    @NSManaged public var hueSettins: NSSet?
+    @NSManaged public var hueSettings: NSSet?
 
 }
 
-// MARK: Generated accessors for hueSettins
+// MARK: Generated accessors for hueSettings
 extension Settings {
 
-    @objc(addHueSettinsObject:)
-    @NSManaged public func addToHueSettins(_ value: Hue)
+    @objc(addHueSettingsObject:)
+    @NSManaged public func addToHueSettings(_ value: Hue)
 
-    @objc(removeHueSettinsObject:)
-    @NSManaged public func removeFromHueSettins(_ value: Hue)
+    @objc(removeHueSettingsObject:)
+    @NSManaged public func removeFromHueSettings(_ value: Hue)
 
-    @objc(addHueSettins:)
-    @NSManaged public func addToHueSettins(_ values: NSSet)
+    @objc(addHueSettings:)
+    @NSManaged public func addToHueSettings(_ values: NSSet)
 
-    @objc(removeHueSettins:)
-    @NSManaged public func removeFromHueSettins(_ values: NSSet)
+    @objc(removeHueSettings:)
+    @NSManaged public func removeFromHueSettings(_ values: NSSet)
 
 }

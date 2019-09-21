@@ -21,6 +21,7 @@ extension Usage {
     @NSManaged public var unit: Int16
     @NSManaged public var color: String?
     @NSManaged public var bill: Float
+    @NSManaged public var date: NSDate?
     @NSManaged public var appliance: Appliance?
 
 }

@@ -1,5 +1,5 @@
 //
-//  Timer+CoreDataClass.swift
+//  LightTimer+CoreDataClass.swift
 //  Happ
 //
 //  Created by Anik on 21/9/19.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Timer)
-public class Timer: NSManagedObject {
+@objc(LightTimer)
+public class LightTimer: NSManagedObject {
 
 }
