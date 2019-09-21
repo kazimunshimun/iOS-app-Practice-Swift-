@@ -18,7 +18,7 @@ class DataManager {
     
     func fetchAppliances() throws -> [Appliance] {
         let appliances = try self.context.fetch(Appliance.fetchRequest() as NSFetchRequest<Appliance>)
-        return appliances
+        return appliances.reversed()
     }
     
     func insertAppliance(appliance: Appliance) throws {
@@ -31,8 +31,8 @@ class DataManager {
     }
     
     func fetchUsages() throws -> [Usage] {
-        let appliances = try self.context.fetch(Usage.fetchRequest() as NSFetchRequest<Usage>)
-        return appliances
+        let usages = try self.context.fetch(Usage.fetchRequest() as NSFetchRequest<Usage>)
+        return usages
     }
     
     func insertUsage(usage: Usage) throws {
@@ -45,8 +45,8 @@ class DataManager {
     }
     
     func fetchLightTimer() throws -> [LightTimer] {
-        let appliances = try self.context.fetch(LightTimer.fetchRequest() as NSFetchRequest<LightTimer>)
-        return appliances
+        let lightTimers = try self.context.fetch(LightTimer.fetchRequest() as NSFetchRequest<LightTimer>)
+        return lightTimers
     }
     
     func insertLightTimer(timer: LightTimer) throws {

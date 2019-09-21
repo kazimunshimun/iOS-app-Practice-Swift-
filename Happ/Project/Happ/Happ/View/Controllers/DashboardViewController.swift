@@ -16,7 +16,7 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var dashboardTableView: UITableView!
     
-    var applianceData: [Appliance]?
+    var applianceData: [Appliance] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,14 +37,15 @@ class DashboardViewController: UIViewController {
         let dataManager: DataManager = DataManager()
         do {
             applianceData = try dataManager.fetchAppliances()
-            print("appliance count: \(applianceData!.count)")
-            if applianceData!.count == 0 {
+            print("appliance count: \(applianceData.count)")
+            if applianceData.count == 0 {
                 //need to insert data for first time
                 let inputData = InputData()
                 inputData.insertApplianceData()
                 applianceData = try dataManager.fetchAppliances()
-                print("appliance count: \(applianceData!.count)")
+                print("appliance count: \(applianceData.count)")
             }
+            dashboardTableView.reloadData()
         } catch {
             print("data fetch error")
         }
@@ -70,6 +71,9 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
             //appliance
             let cell = tableView.dequeueReusableCell(withIdentifier: "applianceCell", for: indexPath) as! ApplianceCell
             cell.applianceDelegate = self
+            if applianceData.count > 0 {
+                cell.items = applianceData
+            }
             cell.selectedBackgroundView = backgroundView
             cell.backgroundColor = .clear
             return cell
@@ -121,13 +125,13 @@ extension DashboardViewController: ApplianceSelectedDelegate {
         self.show(applianceViewController, sender: nil)
     }
     
-    func applianceSelected(name: String) {
-        print("appliance selected wiht name: \(name)")
+    func applianceSelected(appliance: Appliance) {
+        //print("appliance selected wiht name: \(appliance.name)")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Controls", bundle: nil)
-        if name == "Air Conditioner" {
+        if appliance.name == "Air Conditioner" {
             let acViewController = storyBoard.instantiateViewController(withIdentifier: "acView")
             self.show(acViewController, sender: nil)
-        } else if name == "Smart Light" || name == "LED Bulb"{
+        } else if appliance.name == "Smart Light" || appliance.name == "LED Bulb"{
             let lightViewController = storyBoard.instantiateViewController(withIdentifier: "lightView")
             self.show(lightViewController, sender: nil)
         }

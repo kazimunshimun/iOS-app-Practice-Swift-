@@ -10,7 +10,7 @@ import UIKit
 
 protocol ApplianceSelectedDelegate {
     func seeAllSelected()
-    func applianceSelected(name: String)
+    func applianceSelected(appliance: Appliance)
 }
 
 class ApplianceCell: UITableViewCell {
@@ -19,7 +19,7 @@ class ApplianceCell: UITableViewCell {
     
     @IBOutlet weak var applianceCollectionView: UICollectionView!
     
-    let items = ["Air Conditioner", "Smart Light", "Refrigerator", "LED Bulb"]
+    var items:[Appliance] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,12 +47,19 @@ extension ApplianceCell: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as! ApplianceItemCell
-        cell.itemTitle.text = items[indexPath.row]
+        if items.count > 0 {
+            let appliance = items[indexPath.row]
+            cell.itemTitle.text = appliance.name
+            cell.itemImageView.image = UIImage(named: appliance.imageName!)
+        }
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        applianceDelegate?.applianceSelected(name: items[indexPath.row])
+        if items.count > 0 {
+            applianceDelegate?.applianceSelected(appliance: items[indexPath.row])
+        }
     }
 
 }
