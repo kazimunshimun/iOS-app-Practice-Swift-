@@ -121,7 +121,7 @@ extension DashboardViewController: ApplianceSelectedDelegate {
     func seeAllSelected() {
         print("see all selected")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Appliance", bundle: nil)
-        let applianceViewController = storyBoard.instantiateViewController(withIdentifier: "applianceView")
+        let applianceViewController = storyBoard.instantiateViewController(withIdentifier: "applianceView") as! ApplianceViewController
         self.show(applianceViewController, sender: nil)
     }
     
@@ -129,10 +129,12 @@ extension DashboardViewController: ApplianceSelectedDelegate {
         //print("appliance selected wiht name: \(appliance.name)")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Controls", bundle: nil)
         if appliance.name == "Air Conditioner" {
-            let acViewController = storyBoard.instantiateViewController(withIdentifier: "acView")
+            let acViewController = storyBoard.instantiateViewController(withIdentifier: "acView") as! ACControlViewController
+            acViewController.appliance = appliance
             self.show(acViewController, sender: nil)
         } else if appliance.name == "Smart Light" || appliance.name == "LED Bulb"{
-            let lightViewController = storyBoard.instantiateViewController(withIdentifier: "lightView")
+            let lightViewController = storyBoard.instantiateViewController(withIdentifier: "lightView") as! LightControlViewController
+            lightViewController.appliance = appliance
             self.show(lightViewController, sender: nil)
         }
     }

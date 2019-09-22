@@ -284,9 +284,12 @@
                         <viewLayoutGuide key="safeArea" id="dUQ-MY-5ms"/>
                     </view>
                     <connections>
+                        <outlet property="applianceNameLabel" destination="rID-Cz-7TF" id="xbq-zx-sQc"/>
+                        <outlet property="roomNameLabel" destination="WdC-bs-A0q" id="F0t-w5-52M"/>
                         <outlet property="tempLabel" destination="7Dw-5F-eNe" id="Y1O-g0-GAQ"/>
                         <outlet property="temparatureSlider" destination="GTV-Lq-9AN" id="4Kj-MQ-LSF"/>
                         <outlet property="valueView" destination="paL-UP-VkB" id="yqb-m4-sUs"/>
+                        <outlet property="voltageLabel" destination="iMl-q0-Qub" id="Xvy-Ls-Mio"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Xk-Yf-klI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -614,10 +617,13 @@
                         <viewLayoutGuide key="safeArea" id="bJA-Hh-LYJ"/>
                     </view>
                     <connections>
+                        <outlet property="applianceNameLabel" destination="6HT-JA-myb" id="oJN-lB-Ba9"/>
                         <outlet property="brightnessLabel" destination="X67-0E-P3W" id="r5p-ri-D8K"/>
                         <outlet property="brightnessSlider" destination="VbB-Ya-jxc" id="Jcm-cb-iOj"/>
                         <outlet property="hueSelectionCollectionView" destination="m3G-b0-8tL" id="ERz-5k-Tdx"/>
+                        <outlet property="roomNameLabel" destination="9gG-Ac-IxW" id="iuW-AM-TFw"/>
                         <outlet property="valueView" destination="yNF-zm-Ff9" id="lLI-Kg-B6q"/>
+                        <outlet property="voltageLabel" destination="biO-Iv-kSH" id="HAW-eI-sbJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1L-mn-Ucp" userLabel="First Responder" sceneMemberID="firstResponder"/>

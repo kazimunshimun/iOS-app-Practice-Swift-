@@ -10,15 +10,30 @@ import UIKit
 
 class ACControlViewController: UIViewController {
 
+    @IBOutlet weak var roomNameLabel: UILabel!
+    @IBOutlet weak var voltageLabel: UILabel!
+    @IBOutlet weak var applianceNameLabel: UILabel!
+    
     @IBOutlet weak var temparatureSlider: TactileSlider!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var valueView: UIView!
     
+    var appliance: Appliance?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        //temparatureSlider.setValue(23, animated: true)
+        setupViews()
+    }
+    
+    private func setupViews() {
+        //temparature
+        setTempValue(value: Int((appliance?.settings!.temparature)!))
+        //Voltage
+        voltageLabel.text = "\(appliance?.voltage ?? 0)"
+        //room name
+        roomNameLabel.text = "\(appliance?.room ?? "")"
+        //appliance name
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
