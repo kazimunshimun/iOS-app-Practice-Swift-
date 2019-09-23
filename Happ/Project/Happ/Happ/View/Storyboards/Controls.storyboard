@@ -526,7 +526,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="m3G-b0-8tL">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="m3G-b0-8tL">
                                         <rect key="frame" x="0.0" y="25" width="334" height="81"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="15" id="XZ5-dv-ERP">
@@ -579,6 +579,7 @@
                                                 </constraints>
                                                 <size key="customSize" width="17" height="77"/>
                                                 <connections>
+                                                    <outlet property="colorViewHeight" destination="c63-gj-gav" id="fYC-KE-6bJ"/>
                                                     <outlet property="hueColorView" destination="Eq1-zt-Ea4" id="OAv-ax-0EJ"/>
                                                 </connections>
                                             </collectionViewCell>

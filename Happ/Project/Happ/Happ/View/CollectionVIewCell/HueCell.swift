@@ -11,4 +11,6 @@ import UIKit
 class HueCell: UICollectionViewCell {
     
     @IBOutlet weak var hueColorView: UIView!
+    
+    @IBOutlet weak var colorViewHeight: NSLayoutConstraint!
 }

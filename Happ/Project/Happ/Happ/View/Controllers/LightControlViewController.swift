@@ -20,6 +20,8 @@ class LightControlViewController: UIViewController {
     @IBOutlet weak var hueSelectionCollectionView: UICollectionView!
     
     var appliance: Appliance?
+    var hueSettins: [Any] = []
+    var selectedHue: Hue?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +41,19 @@ class LightControlViewController: UIViewController {
         //room name
         roomNameLabel.text = "\(appliance?.room ?? "")"
         //appliance name
+        //print("\(appliance?.settings?.hueSettings)")
+        //hueSelectionCollectionView.reloadData()
+        hueSettins = (appliance?.settings?.hueSettings!.allObjects)!
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
+        let dataManager = DataManager()
+        do {
+            try dataManager.updateAppliance(appliance: appliance!)
+        } catch {
+            print("Failed saving light appliance")
+        }
+        
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func brightnessChanged(_ sender: TactileSlider) {
@@ -50,6 +62,13 @@ class LightControlViewController: UIViewController {
     
     func setBrightnessValue(value: Int) {
         brightnessLabel.text = "\(value)%"
+        
+        if (appliance?.settings?.hueSettings?.contains(selectedHue))! {
+            //print("selected hue contains in set")
+            selectedHue?.brightness = Float(value)
+            //appliance?.settings?.hueSettings.
+        }
+ 
         brightnessSlider.setThumbOpacity(opacity: Float(Double(value)/100.0))
         valueView.frame.origin.y = brightnessSlider.frame.height - brightnessSlider.positionForValue(Float(value)) - 16
     }
@@ -58,18 +77,28 @@ class LightControlViewController: UIViewController {
 
 extension LightControlViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return hueSettins.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "hueCell", for: indexPath) as! HueCell
         //cell.itemTitle.text = items[indexPath.row]
+        if hueSettins.count > 0 {
+            let hue = hueSettins[indexPath.row] as! Hue
+            cell.hueColorView.backgroundColor = ColorUtils.hexStringToUIColor(hex: hue.color!)
+            if hue.brightness != 0 {
+                cell.colorViewHeight.constant = CGFloat((hue.brightness/77) * 100)
+            }
+        }
         return cell
     }
     
-    /*
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        applianceDelegate?.applianceSelected(name: items[indexPath.row])
+        if hueSettins.count > 0 {
+            selectedHue = hueSettins[indexPath.row] as? Hue
+            brightnessSlider.thumbTint = ColorUtils.hexStringToUIColor(hex: selectedHue!.color!)
+        }
     }
-    */
+    
 }

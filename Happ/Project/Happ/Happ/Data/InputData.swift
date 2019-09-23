@@ -55,14 +55,16 @@ struct InputData {
             settings.temparature = Float(temparature[i])
             
             let colorHues = colors[i]
-            let hues = NSSet()
+            //let hues = NSSet()
             for j in 0..<colorHues.count {
                 let hue = Hue(entity: hueEntity!, insertInto: context)
+                hue.id = UUID()
                 hue.color = colorHues[j]
                 hue.brightness = Float(brightness[i])
-                hues.adding(hue)
+                settings.addToHueSettings(hue)
+                //hues.adding(hue)
             }
-            settings.addToHueSettings(hues)
+            //settings.hueSettings = hues
             
             newAppliance.settings = settings
         }
