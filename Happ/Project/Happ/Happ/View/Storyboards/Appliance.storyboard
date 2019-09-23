@@ -86,7 +86,7 @@
                                     <constraint firstItem="um0-b9-meF" firstAttribute="top" secondItem="Uev-xY-6vp" secondAttribute="bottom" constant="8" id="zRZ-4U-5eu"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cac-Bw-0Uq">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cac-Bw-0Uq">
                                 <rect key="frame" x="40" y="131" width="315" height="66"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -135,10 +135,14 @@
                                             <constraint firstItem="2LY-Cq-AwY" firstAttribute="top" secondItem="KWu-mY-3Rn" secondAttribute="top" id="ZOH-Nq-bvK"/>
                                             <constraint firstItem="2LY-Cq-AwY" firstAttribute="leading" secondItem="KWu-mY-3Rn" secondAttribute="leading" id="baf-IB-pi0"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="QJp-aR-oSo" id="h6i-SI-e6W"/>
+                                            <outlet property="roomBackgroundView" destination="2LY-Cq-AwY" id="duh-7q-PuX"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iED-7a-JYt">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iED-7a-JYt">
                                 <rect key="frame" x="40" y="221" width="295" height="417"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="qGx-Wt-7Y7">

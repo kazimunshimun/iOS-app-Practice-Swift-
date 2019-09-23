@@ -122,6 +122,7 @@ extension DashboardViewController: ApplianceSelectedDelegate {
         print("see all selected")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Appliance", bundle: nil)
         let applianceViewController = storyBoard.instantiateViewController(withIdentifier: "applianceView") as! ApplianceViewController
+        applianceViewController.applianceData = applianceData
         self.show(applianceViewController, sender: nil)
     }
     

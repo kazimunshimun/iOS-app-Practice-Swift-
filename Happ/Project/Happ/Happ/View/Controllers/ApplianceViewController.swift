@@ -13,6 +13,11 @@ class ApplianceViewController: UIViewController {
     @IBOutlet weak var roomCollectionView: UICollectionView!
     @IBOutlet weak var applianceCollectionView: UICollectionView!
     
+    var applianceData: [Appliance] = []
+    var roomData: [String] = []
+    var roomApplianceData: [Appliance] = []
+    var selectedRoomIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +25,14 @@ class ApplianceViewController: UIViewController {
     }
     
     private func setupViews() {
+        
+        //get unique room name
+        for appliance in applianceData {
+            if !roomData.contains(appliance.room!) {
+                roomData.append(appliance.room!)
+            }
+        }
+        
         roomCollectionView.delegate = self
         roomCollectionView.dataSource = self
         
@@ -27,6 +40,7 @@ class ApplianceViewController: UIViewController {
         applianceCollectionView.delegate = self
         applianceCollectionView.dataSource = self
         
+        getApplianceForRoom(roomName: roomData[selectedRoomIndex])
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
@@ -47,9 +61,9 @@ class ApplianceViewController: UIViewController {
 extension ApplianceViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.roomCollectionView {
-            return 5
+            return roomData.count
         } else {
-            return 6
+            return roomApplianceData.count
         }
         
     }
@@ -58,18 +72,43 @@ extension ApplianceViewController: UICollectionViewDataSource, UICollectionViewD
         if collectionView == self.roomCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "roomCell", for: indexPath) as! RoomCell
             //cell.itemTitle.text = items[indexPath.row]
+            cell.nameLabel.text = roomData[indexPath.row]
+            if indexPath.row == selectedRoomIndex {
+                cell.nameLabel.textColor = .white
+                cell.roomBackgroundView.backgroundColor = ColorUtils.hexStringToUIColor(hex: "1A8DFF")
+            } else {
+                cell.nameLabel.textColor = .black
+                cell.roomBackgroundView.backgroundColor = .white
+            }
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as! ApplianceItemCell
-            //cell.itemTitle.text = items[indexPath.row]
-            //cell.nameLabel.sizeToFit()
+            cell.itemTitle.text = roomApplianceData[indexPath.row].name
+            cell.itemImageView.image = UIImage(named: roomApplianceData[indexPath.row].imageName!)
+            
             return cell
         }
     }
     
-    /*
-     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-     applianceDelegate?.applianceSelected(name: items[indexPath.row])
-     }
-     */
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == self.roomCollectionView {
+            selectedRoomIndex = indexPath.row
+            roomCollectionView.reloadData()
+            getApplianceForRoom(roomName: roomData[selectedRoomIndex])
+        } else {
+            
+        }
+    }
+    
+    private func getApplianceForRoom(roomName: String) {
+        roomApplianceData = []
+        for appliance in applianceData {
+            if appliance.room! == roomName {
+                roomApplianceData.append(appliance)
+            }
+        }
+        applianceCollectionView.reloadData()
+    }
+    
 }

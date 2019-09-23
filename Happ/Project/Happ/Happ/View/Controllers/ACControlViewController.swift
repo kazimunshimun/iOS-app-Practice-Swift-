@@ -26,9 +26,15 @@ class ACControlViewController: UIViewController {
         setupViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        temparatureSlider.setValue((appliance?.settings!.temparature)!, animated: true)
+        setTempValue(value: Int((appliance?.settings!.temparature)!))
+    }
+    
     private func setupViews() {
         //temparature
-        setTempValue(value: Int((appliance?.settings!.temparature)!))
+        //setTempValue(value: Int((appliance?.settings!.temparature)!))
         //Voltage
         voltageLabel.text = "\(appliance?.voltage ?? 0)"
         //room name
@@ -37,6 +43,12 @@ class ACControlViewController: UIViewController {
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
+        let dataManager = DataManager()
+        do {
+            try dataManager.updateAppliance(appliance: appliance!)
+        } catch {
+            print("Failed saving light appliance")
+        }
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func temparatureChanged(_ sender: TactileSlider) {
@@ -46,6 +58,7 @@ class ACControlViewController: UIViewController {
     func setTempValue(value: Int) {
         tempLabel.text = "\(value)°c"
         valueView.frame.origin.y = temparatureSlider.frame.height - temparatureSlider.positionForValue(Float(value)) - 16
+        appliance?.settings?.temparature = Float(value)
     }
     /*
     // MARK: - Navigation

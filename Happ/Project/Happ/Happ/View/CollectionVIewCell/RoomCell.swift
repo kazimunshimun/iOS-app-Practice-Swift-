@@ -10,4 +10,6 @@ import UIKit
 
 class RoomCell: UICollectionViewCell {
     
+    @IBOutlet weak var roomBackgroundView: RoundedViewWithShadow!
+    @IBOutlet weak var nameLabel: UILabel!
 }

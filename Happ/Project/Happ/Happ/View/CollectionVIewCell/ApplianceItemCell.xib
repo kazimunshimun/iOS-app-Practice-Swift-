@@ -23,9 +23,9 @@
                         <rect key="frame" x="0.0" y="44" width="143" height="155"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="air-conditioner" translatesAutoresizingMaskIntoConstraints="NO" id="ra5-en-xdN">
-                                <rect key="frame" x="15" y="25" width="44.5" height="19.5"/>
+                                <rect key="frame" x="20" y="16" width="44.5" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="MJU-pZ-Tau"/>
+                                    <constraint firstAttribute="height" constant="29" id="MJU-pZ-Tau"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rt5-IZ-LCI">
@@ -42,19 +42,19 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air Conditioner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBJ-zk-6wB">
-                                <rect key="frame" x="15" y="60.5" width="72" height="15"/>
+                                <rect key="frame" x="20" y="61" width="72" height="15"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On for last 3 Hrs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXr-3q-Ia1">
-                                <rect key="frame" x="15" y="87.5" width="66" height="11"/>
+                                <rect key="frame" x="20" y="88" width="66" height="11"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6U-Df-tDN">
-                                <rect key="frame" x="4" y="106.5" width="36" height="36"/>
+                                <rect key="frame" x="9" y="103" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="JM6-os-jZu"/>
                                     <constraint firstAttribute="width" constant="36" id="fV0-q0-IPA"/>
@@ -70,13 +70,13 @@
                             <constraint firstItem="WXr-3q-Ia1" firstAttribute="top" secondItem="pBJ-zk-6wB" secondAttribute="bottom" constant="12" id="3CZ-x9-LTg"/>
                             <constraint firstAttribute="trailing" secondItem="rt5-IZ-LCI" secondAttribute="trailing" constant="25" id="3hq-gv-erH"/>
                             <constraint firstItem="pBJ-zk-6wB" firstAttribute="top" secondItem="ra5-en-xdN" secondAttribute="bottom" constant="16" id="Div-2D-vPy"/>
-                            <constraint firstItem="ra5-en-xdN" firstAttribute="top" secondItem="8Et-7j-ajj" secondAttribute="top" constant="25" id="GFQ-qr-D8t"/>
-                            <constraint firstItem="ra5-en-xdN" firstAttribute="leading" secondItem="8Et-7j-ajj" secondAttribute="leading" constant="15" id="IrL-Cy-yf9"/>
+                            <constraint firstItem="ra5-en-xdN" firstAttribute="top" secondItem="8Et-7j-ajj" secondAttribute="top" constant="16" id="GFQ-qr-D8t"/>
+                            <constraint firstItem="ra5-en-xdN" firstAttribute="leading" secondItem="8Et-7j-ajj" secondAttribute="leading" constant="20" id="IrL-Cy-yf9"/>
                             <constraint firstItem="rt5-IZ-LCI" firstAttribute="top" secondItem="8Et-7j-ajj" secondAttribute="top" constant="20" id="NcS-dT-mWa"/>
                             <constraint firstItem="pBJ-zk-6wB" firstAttribute="leading" secondItem="ra5-en-xdN" secondAttribute="leading" id="diX-Ex-mT7"/>
-                            <constraint firstItem="N6U-Df-tDN" firstAttribute="leading" secondItem="8Et-7j-ajj" secondAttribute="leading" constant="4" id="pcO-15-MvG"/>
+                            <constraint firstItem="N6U-Df-tDN" firstAttribute="leading" secondItem="8Et-7j-ajj" secondAttribute="leading" constant="9" id="pcO-15-MvG"/>
                             <constraint firstItem="WXr-3q-Ia1" firstAttribute="leading" secondItem="pBJ-zk-6wB" secondAttribute="leading" id="vZI-91-wpi"/>
-                            <constraint firstItem="N6U-Df-tDN" firstAttribute="top" secondItem="WXr-3q-Ia1" secondAttribute="bottom" constant="8" id="z0i-LU-JlV"/>
+                            <constraint firstItem="N6U-Df-tDN" firstAttribute="top" secondItem="WXr-3q-Ia1" secondAttribute="bottom" constant="4" id="z0i-LU-JlV"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

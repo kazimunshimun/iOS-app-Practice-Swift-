@@ -33,6 +33,11 @@ class LightControlViewController: UIViewController {
         setupViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //hueSelectionCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+    }
+    
     private func setupViews() {
         //temparature
         //setBrightnessValue(value: Int((appliance?.settings!.hueSettings.)!))
