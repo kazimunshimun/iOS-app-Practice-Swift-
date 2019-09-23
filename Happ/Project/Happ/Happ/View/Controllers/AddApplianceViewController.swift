@@ -16,6 +16,12 @@ class AddApplianceViewController: UIViewController {
     
     let pulsator = Pulsator()
     
+    var timerForAppliance = Timer()
+    var timerCounter = 2
+    let updateNeededArray = [1, 4, 5]
+    
+    var applianceData: [Appliance] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +39,22 @@ class AddApplianceViewController: UIViewController {
         
         applianceCollectionView.delegate = self
         applianceCollectionView.dataSource = self
+        
+        timerForAppliance.invalidate()
+        // start the timer
+        timerForAppliance = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(applianceTimerAction), userInfo: nil, repeats: true)
+    }
+    
+    @objc func applianceTimerAction() {
+        if timerCounter >= 0 {
+            //update appliance
+            applianceData[updateNeededArray[timerCounter]].isVisible = true
+            //reload collection view
+            applianceCollectionView.reloadData()
+            timerCounter -= 1
+        } else {
+            timerForAppliance.invalidate()
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -66,7 +88,15 @@ extension AddApplianceViewController: UICollectionViewDataSource, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newApplianceCell", for: indexPath) as! NewApplianceCell
         
         if indexPath.row == 0 || indexPath.row == 3 || indexPath.row == 4 {
-            cell.contentsView.isHidden = false
+            let appliance = applianceData[indexPath.row + 1]
+            
+            if appliance.isVisible {
+                cell.contentsView.isHidden = false
+            } else {
+                cell.contentsView.isHidden = true
+            }
+            cell.itemImageView.image = UIImage(named: appliance.imageName!)
+            cell.nameLabel.text = appliance.name
         } else {
             cell.contentsView.isHidden = true
         }

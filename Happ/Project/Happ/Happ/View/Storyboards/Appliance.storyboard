@@ -55,7 +55,7 @@
                                                 </constraints>
                                                 <state key="normal" image="add"/>
                                                 <connections>
-                                                    <segue destination="J0A-nA-EpC" kind="show" id="lvy-Hm-GLc"/>
+                                                    <segue destination="J0A-nA-EpC" kind="show" identifier="addApplianceSegue" id="lvy-Hm-GLc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
