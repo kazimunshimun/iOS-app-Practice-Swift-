@@ -155,6 +155,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8Jp-Ak-RpQ"/>
                     <connections>
+                        <outlet property="ampmLabel" destination="VTN-I4-ixg" id="M9c-Zu-j2f"/>
                         <outlet property="dashboardTableView" destination="kkp-0f-8TT" id="xfR-lx-r6l"/>
                         <outlet property="partOfDayLabel" destination="MRV-fI-EEb" id="7YE-Bd-oft"/>
                         <outlet property="timeLabel" destination="Sts-XD-RzI" id="ehY-BY-g2G"/>

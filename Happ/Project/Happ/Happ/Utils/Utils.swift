@@ -43,3 +43,25 @@ public class ColorUtils {
     }
     
 }
+
+public class TimeUtils {
+    static func getTimeOfTheDay() -> String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        
+        switch hour {
+            case 6..<12 : return "Morning"
+            case 12 : return "Noon"
+            case 13..<17 : return "Afternoon"
+            case 17..<22 : return "Evening"
+            default: return "Night"
+        }
+    }
+    
+    static func getHourAndMinute() -> (Int, Int) {
+        let date = Date()
+        let hour = Calendar.current.component(.hour, from: date)
+        let minute = Calendar.current.component(.minute, from: date)
+        
+        return (hour, minute)
+    }
+}

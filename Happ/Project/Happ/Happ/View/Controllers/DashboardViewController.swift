@@ -12,11 +12,14 @@ class DashboardViewController: UIViewController {
 
     @IBOutlet weak var partOfDayLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var ampmLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     
     @IBOutlet weak var dashboardTableView: UITableView!
     
     var applianceData: [Appliance] = []
+    
+    var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,33 @@ class DashboardViewController: UIViewController {
         //register cell
         dashboardTableView.register(UINib(nibName: "ModeCell", bundle: nil), forCellReuseIdentifier: "modeCell")
         dashboardTableView.register(UINib(nibName: "BillCell", bundle: nil), forCellReuseIdentifier: "billCell")
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        timer.invalidate()
+        updateTime()
+        // start the timer
+        timer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer.invalidate()
+    }
+    
+    @objc func updateTime() {
+        partOfDayLabel.text = "Good \(TimeUtils.getTimeOfTheDay())"
+        let hourAnMinute = TimeUtils.getHourAndMinute()
+        var hour = hourAnMinute.0
+        if hourAnMinute.0 >= 12 {
+            ampmLabel.text = "PM"
+            hour = hour - 12
+        } else {
+            ampmLabel.text = "AM"
+        }
+        timeLabel.text = String(format: "%02d : %02d", hour, hourAnMinute.1)
     }
     
     private func getDashboardData() {
