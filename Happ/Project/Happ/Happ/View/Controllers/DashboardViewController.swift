@@ -42,7 +42,7 @@ class DashboardViewController: UIViewController {
         timer.invalidate()
         updateTime()
         // start the timer
-        timer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
